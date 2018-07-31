@@ -1,0 +1,19 @@
+# Johdanto
+
+**xyz** tähän siirretään disposition teksti, sopivin osin ja uudelleen kirjoitettuna
+
+**Mahdollisia lisäyksiä**
+
+1. Lyhyt esitys CA:n historiasta (vai omaksi luvuksi, luku 2)?
+
+2. Käytetyt ohjelmistot, tekninen ympäristö ml. bookdown-asetukset. Ehkä paremmin omaksi liitteeksi?
+
+3. Tavoitteet, sisältö, rajaukset (jota voi myöhemmin täydentää)
+
+4. Muutamat puutteet, onko kerrottava tässä?
+
+  - data: ei huomioida sitä, että otoskoot vaihtelevat aika paljon eli "maapainot" eri suuruisia
+  
+  - ei huomioida muitakaan otantaan liittyviä asioita (tämä ainakin mainittava data-osuudessa)
+  
+  - kuvaileva menetelmä, mutta mikä on tutkimusongelma? Sellainen pitäisi olla.
