@@ -129,14 +129,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Alkutoimia</a></li>
 <li class="chapter" data-level="1" data-path="johdanto.html"><a href="johdanto.html"><i class="fa fa-check"></i><b>1</b> Johdanto</a></li>
-<li class="chapter" data-level="2" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>2</b> Literature</a></li>
-<li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a></li>
-<li class="chapter" data-level="4" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>4</b> Applications</a><ul>
-<li class="chapter" data-level="4.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
-<li class="chapter" data-level="4.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>4.2</b> Example two</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Data</a></li>
+<li class="chapter" data-level="3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>3</b> Yksinkertainen korrespondenssianalyysi</a></li>
+<li class="chapter" data-level="4" data-path="yksinkertaisen-korrespondenssianalyysi-tulkinnan-syventaminen.html"><a href="yksinkertaisen-korrespondenssianalyysi-tulkinnan-syventaminen.html"><i class="fa fa-check"></i><b>4</b> Yksinkertaisen korrespondenssianalyysi - tulkinnan syventäminen</a></li>
+<li class="chapter" data-level="5" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia.html"><i class="fa fa-check"></i><b>5</b> Yksinkertaisen korrespondenssianalyysin laajennuksia</a></li>
+<li class="chapter" data-level="" data-path="lahteet.html"><a href="lahteet.html"><i class="fa fa-check"></i>Lähteet</a></li>
 </ul>
 
       </nav>
@@ -157,7 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</h1>
 <h4 class="author"><em>Jussi Hirvonen</em></h4>
-<h4 class="date"><em>Versio 0.01, tulostettu 2018-07-31</em></h4>
+<h4 class="date"><em>Versio 0.01, tulostettu 2018-08-01</em></h4>
 </div>
 <div id="alkutoimia" class="section level1 unnumbered">
 <h1>Alkutoimia</h1>
@@ -228,8 +225,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1"><span class="kw">library</span>(bookdown)</a>
 <a class="sourceLine" id="cb30-2" data-line-number="2"><span class="kw">library</span>(tinytex)</a></code></pre></div>
 <pre><code>## Warning: package &#39;tinytex&#39; was built under R version 3.5.1</code></pre>
-<p>** Toistaseksi viitetiedosto puuttuu **</p>
-<p>Ehkä automaattista R-kirjastojen dokumentointia voisi harkita?</p>
+<p>** Toistaiseksi viitetiedosto puuttuu **</p>
+<ol style="list-style-type: decimal">
+<li>Ehkä automaattista R-kirjastojen dokumentointia voisi harkita?</li>
+<li>Saako gitbook-tulosteessa päälle asetuksen code_folding: hide?</li>
+</ol>
 
 </div>
             </section>
@@ -271,10 +271,11 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["JH_ca.pdf"],
 "toc": {
 "collapse": "subsection"
-}
+},
+"code_folding": "hide"
 });
 });
 </script>

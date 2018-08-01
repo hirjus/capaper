@@ -1,0 +1,4 @@
+# Yksinkertainen korrespondenssianalyysi
+
+**xyz** Tässä yksi kysymys, kuusi maata, peruskäsitteet lopussa
+

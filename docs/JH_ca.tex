@@ -132,23 +132,9 @@ menetelmä}
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{Versio 0.01, tulostettu 2018-07-31}
+    \date{Versio 0.01, tulostettu 2018-08-01}
 
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\theoremstyle{definition}
-\newtheorem{example}{Example}[chapter]
-\theoremstyle{definition}
-\newtheorem{exercise}{Exercise}[chapter]
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -344,7 +330,14 @@ vielä).
 
 ** Toistaiseksi viitetiedosto puuttuu **
 
-Ehkä automaattista R-kirjastojen dokumentointia voisi harkita?
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Ehkä automaattista R-kirjastojen dokumentointia voisi harkita?
+\item
+  Saako gitbook-tulosteessa päälle asetuksen code\_folding: hide?
+\end{enumerate}
 
 \hypertarget{johdanto}{%
 \chapter{Johdanto}\label{johdanto}}
@@ -379,31 +372,34 @@ uudelleen kirjoitettuna
   olla.
 \end{itemize}
 
-\hypertarget{literature}{%
-\chapter{Literature}\label{literature}}
+\hypertarget{data}{%
+\chapter{Data}\label{data}}
 
-Here is a review of existing methods.
+\textbf{xyz} Voisi miettiä paremman otsikon
 
-\hypertarget{methods}{%
-\chapter{Methods}\label{methods}}
+\hypertarget{yksinkertainen-korrespondenssianalyysi}{%
+\chapter{Yksinkertainen
+korrespondenssianalyysi}\label{yksinkertainen-korrespondenssianalyysi}}
 
-We describe our methods in this chapter.
+\textbf{xyz} Tässä yksi kysymys, kuusi maata, peruskäsitteet lopussa
 
-\hypertarget{applications}{%
-\chapter{Applications}\label{applications}}
+\hypertarget{yksinkertaisen-korrespondenssianalyysi---tulkinnan-syventaminen}{%
+\chapter{Yksinkertaisen korrespondenssianalyysi - tulkinnan
+syventäminen}\label{yksinkertaisen-korrespondenssianalyysi---tulkinnan-syventaminen}}
 
-Some \emph{significant} applications are demonstrated in this chapter.
+\textbf{xyz} Tarkasti läpi keskeiset tulokset ja niiden tulkinta,
+kaavat, ja ytimenä eri kuvat eli kartat.
 
-\hypertarget{example-one}{%
-\section{Example one}\label{example-one}}
+\hypertarget{yksinkertaisen-korrespondenssianalyysin-laajennuksia}{%
+\chapter{Yksinkertaisen korrespondenssianalyysin
+laajennuksia}\label{yksinkertaisen-korrespondenssianalyysin-laajennuksia}}
 
-\hypertarget{example-two}{%
-\section{Example two}\label{example-two}}
-
-\hypertarget{final-words}{%
-\chapter{Final Words}\label{final-words}}
-
-We have finished a nice book.
+\textbf{xyz} Yksinkertainen korrespondenssianalyysi on menetelmän
+tulkinnan perusta. Perusasetelmaa kahden luokittelumuuttujan
+ristiintaulukoinnista voidaan laajentaa monipuolisempiin
+tutkimusasetelmiin. Varsinainen useamman muuttujan
+korrespondenssianalyysi (MCA - multiple correspondence analysis)
+esitellään seuraavassa luvussa.
 
 \bibliography{book.bib,packages.bib}
 

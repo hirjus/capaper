@@ -46,7 +46,8 @@ library(tinytex)
 
 ** Toistaiseksi viitetiedosto puuttuu **
 
-Ehkä automaattista R-kirjastojen dokumentointia voisi harkita?
+1. Ehkä automaattista R-kirjastojen dokumentointia voisi harkita?
+2. Saako gitbook-tulosteessa päälle asetuksen code_folding: hide?
 
 
 
