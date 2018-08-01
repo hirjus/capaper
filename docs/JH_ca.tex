@@ -37,46 +37,6 @@
 \fi
 \usepackage{natbib}
 \bibliographystyle{apalike}
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -146,197 +106,22 @@ menetelmä}
 \chapter*{Alkutoimia}\label{alkutoimia}}
 \addcontentsline{toc}{chapter}{Alkutoimia}
 
-Tässä ladataan vain paketit, muuten pelkkä YAML- `front matter'
-
-Lisäkonfiguroinnit tiedostoissa \_bookdown.yml ja \_output.yml
+Ladataan r-paketit, ei tulosteta dokumenttiin. Pelkkä YAML- `front
+matter', lisäkonfiguroinnit tiedostoissa \_bookdown.yml ja \_output.yml.
 
 Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti (ei
 vielä).
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{library}\NormalTok{(rgl)}
-\KeywordTok{library}\NormalTok{(ca)}
-\KeywordTok{library}\NormalTok{(haven)}
-\KeywordTok{library}\NormalTok{(dplyr)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Warning: package 'dplyr' was built under R version 3.5.1
-\end{verbatim}
-
-\begin{verbatim}
-## 
-## Attaching package: 'dplyr'
-\end{verbatim}
-
-\begin{verbatim}
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-\end{verbatim}
-
-\begin{verbatim}
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{library}\NormalTok{(knitr)}
-\KeywordTok{library}\NormalTok{(tidyverse)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## -- Attaching packages ------- tidyverse 1.2.1 --
-\end{verbatim}
-
-\begin{verbatim}
-## v ggplot2 3.0.0     v readr   1.1.1
-## v tibble  1.4.2     v purrr   0.2.5
-## v tidyr   0.8.1     v stringr 1.3.1
-## v ggplot2 3.0.0     v forcats 0.3.0
-\end{verbatim}
-
-\begin{verbatim}
-## -- Conflicts ---------- tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{library}\NormalTok{(lubridate)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## 
-## Attaching package: 'lubridate'
-\end{verbatim}
-
-\begin{verbatim}
-## The following object is masked from 'package:base':
-## 
-##     date
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{library}\NormalTok{(rmarkdown)}
-\KeywordTok{library}\NormalTok{(ggplot2)}
-\KeywordTok{library}\NormalTok{(furniture)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## furniture 1.7.9: learn more at tysonbarrett.com
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{library}\NormalTok{(likert)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Loading required package: xtable
-\end{verbatim}
-
-\begin{verbatim}
-## 
-## Attaching package: 'likert'
-\end{verbatim}
-
-\begin{verbatim}
-## The following object is masked from 'package:dplyr':
-## 
-##     recode
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{library}\NormalTok{(scales) }\CommentTok{# G_1_2 - kuva}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## 
-## Attaching package: 'scales'
-\end{verbatim}
-
-\begin{verbatim}
-## The following object is masked from 'package:purrr':
-## 
-##     discard
-\end{verbatim}
-
-\begin{verbatim}
-## The following object is masked from 'package:readr':
-## 
-##     col_factor
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{library}\NormalTok{(reshape2)  }\CommentTok{# G_1_2 - kuva}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## 
-## Attaching package: 'reshape2'
-\end{verbatim}
-
-\begin{verbatim}
-## The following object is masked from 'package:tidyr':
-## 
-##     smiths
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{library}\NormalTok{(printr) }\CommentTok{#19.5.18 taulukoiden ja matriisien tulostukseen}
-\KeywordTok{library}\NormalTok{(stargazer) }\CommentTok{# 28.5.2018 taulukoiden yms. tulostietojen siistiin tulostukseen}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## 
-## Please cite as:
-\end{verbatim}
-
-\begin{verbatim}
-##  Hlavac, Marek (2018). stargazer: Well-Formatted Regression and Summary Statistics Tables.
-\end{verbatim}
-
-\begin{verbatim}
-##  R package version 5.2.2. https://CRAN.R-project.org/package=stargazer
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{library}\NormalTok{(bookdown)}
-\KeywordTok{library}\NormalTok{(tinytex)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Warning: package 'tinytex' was built under R version 3.5.1
-\end{verbatim}
-
-** Toistaiseksi viitetiedosto puuttuu **
+\textbf{Ideoita}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   Ehkä automaattista R-kirjastojen dokumentointia voisi harkita?
 \item
-  Saako gitbook-tulosteessa päälle asetuksen code\_folding: hide?
+  Saako gitbook-tulosteessa päälle asetuksen code\_folding: hide? Vaatii
+  teeman (theme), jos tarpeen voi lisätä \_output.yml - tiedostoon esim.
+  html\_book - formaatin.
 \end{enumerate}
 
 \hypertarget{johdanto}{%
@@ -401,7 +186,7 @@ tutkimusasetelmiin. Varsinainen useamman muuttujan
 korrespondenssianalyysi (MCA - multiple correspondence analysis)
 esitellään seuraavassa luvussa.
 
-\bibliography{book.bib,packages.bib}
+\bibliography{jhca2018.bib,packages.bib}
 
 
 \end{document}

@@ -9,3 +9,5 @@ language:
       chapter_name: "Luku "
       
 output_dir: "docs"
+rmd_files: ["index.Rmd", "01-johdanto.Rmd", "02-data.Rmd", "03-simpleCA.Rmd", 
+        "04-caTulkintaa.Rmd", "05-simpleCA2.Rmd", "099-references.Rmd"]

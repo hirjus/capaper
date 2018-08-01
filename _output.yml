@@ -4,7 +4,7 @@ bookdown::gitbook:
   split_bib: false # ei lähteitä sivun alareunaan
   config:
     download: null
-    code_folding: hide # koodilohkojen koodi oletuksena piilossa - vaatii themen käyttöä, gitbookissa on jo
+    #code_folding: hide # koodilohkojen koodi oletuksena piilossa - vaatii themen käyttöä, gitbookissa on jo
 bookdown::pdf_book:
   fig_caption: true
   includes:

@@ -13,14 +13,12 @@ description: "Tutkielma korrespondenssianalyysistä graafisena data-analyysin me
 
 # Alkutoimia {-}
 
-Tässä ladataan vain paketit, muuten pelkkä YAML- 'front matter'
-
-Lisäkonfiguroinnit tiedostoissa _bookdown.yml ja _output.yml
+Ladataan r-paketit, ei tulosteta dokumenttiin. Pelkkä YAML- 'front matter', lisäkonfiguroinnit tiedostoissa _bookdown.yml ja _output.yml.
 
 Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti (ei vielä).
 
 
-```{r jhpaketit}
+```{r jhpaketit, include=FALSE}
 library(rgl)
 library(ca)
 library(haven)
@@ -40,14 +38,11 @@ library(bookdown)
 library(tinytex)
 
 ```
-
-
-
-
-** Toistaiseksi viitetiedosto puuttuu **
+**Ideoita**
 
 1. Ehkä automaattista R-kirjastojen dokumentointia voisi harkita?
-2. Saako gitbook-tulosteessa päälle asetuksen code_folding: hide?
+
+2. Saako gitbook-tulosteessa päälle asetuksen code_folding: hide? Vaatii teeman (theme), jos tarpeen voi lisätä _output.yml - tiedostoon esim. html_book - formaatin.
 
 
 
