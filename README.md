@@ -1,4 +1,4 @@
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Please see the page "Get Started" at https://bookdown.org/ for how to compile this example.
+Tutkielma R Markdownilla ja **bookdown** - paketilla. (https://github.com/rstudio/bookdown). Bookdownin ohjeet löytyvät täältä  (https://bookdown.org/). Oma testidokumentti on (https://hirjus.github.io/test1/).
 
 **31.7.2018**
 
@@ -9,6 +9,6 @@ Kopioidaan suoraan testi-projektin asetustiedostot tähän projektiin.
 **1.8.2018** pieniä korjailuja, lukujen otsikoita.
 
 - Rmd-tiedostot luetellaan _bookdown.yml-tiedostossa
-
+- kasitteet1.Rmd - df käsitteistä
 
 
