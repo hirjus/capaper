@@ -1,4 +1,4 @@
-Tutkielma R Markdownilla ja **bookdown** - paketilla. (https://github.com/rstudio/bookdown). Bookdownin ohjeet löytyvät täältä  (https://bookdown.org/). Oma testidokumentti on (https://hirjus.github.io/test1/).
+﻿Tutkielma R Markdownilla ja **bookdown** - paketilla. (https://github.com/rstudio/bookdown). Bookdownin ohjeet löytyvät täältä  (https://bookdown.org/). Oma testidokumentti on (https://hirjus.github.io/test1/).
 
 **31.7.2018**
 
@@ -10,5 +10,16 @@ Kopioidaan suoraan testi-projektin asetustiedostot tähän projektiin.
 
 - Rmd-tiedostot luetellaan _bookdown.yml-tiedostossa
 - kasitteet1.Rmd - df käsitteistä
+
+## Hakemistot - GitHub
+
+**docs** pdf- ja htlm-tulosteet
+
+**bddefaults** bookdown-paketin oletuskonfiguraatiot (YAML- front matter index.Rmd-tiedostossa, _output.yml, 		_bookdown.yml)
+
+## Muut hakemistot RStudion projektissa
+
+**data** 	SPSS-tiedosto, tekstitiedosto muuttujakuvauksista
+**ark**		arkisto 
 
 
