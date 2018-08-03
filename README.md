@@ -21,5 +21,10 @@ Kopioidaan suoraan testi-projektin asetustiedostot tähän projektiin.
 
 **data** 	SPSS-tiedosto, tekstitiedosto muuttujakuvauksista
 **ark**		arkisto 
+**test**	yksittäisiä Rmd-sivuja, joilla saan yhden Rmd-tiedoston tulostuksen toimimaan. preview_chapter() ei toimi
+		odotetulla tavalla projektin juuressa, eikä RStudion knit-nappi, vaan aina tulostuu koko dokumentti.
 
+**3.8.2018**
+
+Lisäsin test-hakemiston, jossa voi rakennella r-koodia. Siellä toimii yhden Rmd-tiedoston tulostus. output.yml - tiedostoon output-optioksi myös html_book.
 
