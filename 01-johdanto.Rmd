@@ -28,9 +28,41 @@
 
 **ks** Esitellään korrespondenssianalyysin käsitteet ja graafisen analyysin periaatteet.
 
+**zxy** -mitä ca on?
+- dimensioiden vähentäminen ja visualisointi
+- mihin dataan se soveltuu
+- määrittele graafinen, deskriptiivinen, eksploratiivinen data-analyysi
+- yksinkertainen ca, useamman muuttujan ca
+
+
+
+
+
+
+
 **ks** Tämän voi tehdä yksinkertaisen korrespondenssianalyysin avulla. Yksinkertainen kahden luokittelumuuttujan
 korrespondenssianalyysi antaa graafisen analyysin "...perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin muodot ovat saman algoritmin soveltamista toisen tyyppiisiin datamatriiseihin, ja tulkintaa sovelletaan vastaavasti
 (with the consequent adaptation of the interpretation)"[@RefWorks:doc:5a857a44e4b0ed2d44664d84 , s. 437]
 
 **zxy** Miksi eksporatiivinen (määrittele!) ja deskriptiivinen (määrittele!) menetelmä on esitettävä "in vivo", toiminnassa? Oppikirjoissa (viitteitä) erityisesti MG on havainnolistanut CA:n matemaattista ja geometristä taustaa synteettisillä aineistoilla. Turha kopioida tähän. Menetelmän ydin on yksinkertaisen graafisen esityksen -- kartan -- avulla tulkita monimutkaisen empiirisen aineiston muuttujien riippuvuuksia. Yhteyksiä ei tiivistetä todennäköisyyspäättelyn kriteereillä tilastolliseen malliin, vaan deskripriivisen analyysin hengessä esitellään koko aineisto. Mallin sijaan vähennetään ulottuvuuksia, ja siinä menetetään informaatiota. Tavoitteena on säilyttää yleensä kaksiulotteisessa kuvassa mahdollisimman suuri osa alkuperäisen datan vaihtelusta. Eksploratiivinen data-analyysi on vuoropuhelua aineiston kanssa. Analyysiä tarkennetaan, rajataan ja muokataan, kun aineisto paljastaa jotain kiinnostavaa tai yllättävää. Tästä saa jonkinlaisen aasinsillan matriisiyhtälöiden puolustukseksi. Saksan ja Belgian datan jakaminen on hyvä esimerkki, on "osattava tarttua" menetelmän tulosmatriiseihin.
 
+
+**zxy** esitystavan perustelu
+
+- kenelle kirjoitettu? Menetelmästä kiinnostuneelle tilastotieteen ja data-analyysin perusteet tuntevalle. R-ohjelmisto ei ole rajoitus, SPSS ja SAS sopivat. (SPSS - MG:llä kriittinen huomio "loose ends - paperissa" tai CAip-teorialiitteessä).
+
+## Käytetyt ohjelmistot
+
+**zxy** R, ca-paketti. löytyy myös muita paketteja. Rmarkdown[@RefWorks:doc:5b6b346fe4b0c619b11b8a3e], ja bookdown ([@RefWorks:doc:5b6b36dde4b09b7ec442bf8b] ja toinen viite [@R-bookdown]). Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.
+
+**zxy** Helposti toistettavan tutkimukset periaatteet
+
+1. Datasta (löytyy netistä, samoin kattava dokumentaatio) lyhyt matka analyysiin.
+2. Koodi selkeää ja dokumentoitua
+3. R, LaTeX, pandoc - versiot dokumentoidaan
+
+Tarkemmin liittessä.
+
+## Korrespondenssianalyysin historiaa
+
+**zxy** Tiivis esitys lähteineen. Ehkä asiaan palataan kun itse menetelmä on esitelty?

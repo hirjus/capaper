@@ -24,7 +24,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \hypersetup{unicode=true,
-            pdftitle={Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmÃƒÂ¤},
+            pdftitle={Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä},
             pdfauthor={Jussi Hirvonen},
             pdfborder={0 0 0},
             breaklinks=true}
@@ -84,7 +84,7 @@
 \setlength{\droptitle}{-2em}
 
   \title{Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin
-menetelmÃƒÂ¤}
+menetelmä}
     \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
     \author{Jussi Hirvonen}
@@ -92,7 +92,7 @@ menetelmÃƒÂ¤}
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{Versio 0.01, tulostettu 2018-08-08}
+    \date{Versio 0.02, tulostettu 2018-08-08}
 
 
 \begin{document}
@@ -164,8 +164,20 @@ kappale historiasta.
 \section{Tutkielman tavoite
 (tutkimusongelma?)}\label{tutkielman-tavoite-tutkimusongelma}}
 
+\textbf{zxy} Tässä kerrotaan, miksi tämä työ on kirjoitettu. Esitellään
+menetelmä käyttämällä oikeaa dataa. Täsmällisempi esitys sirotellaan
+esimerkkiaineiston analyysin tulosten esittelyn lomaan. Pitäisikö tässä
+tuoda esille ns. ``ranskalaisen koulukunnan'' matemaattisen perusteiden
+korostus, ja data-analyysin filosofia? Ehkä ei, koska sen pohdinta ei
+ole pääasia. Se tietysti mainitaan, ja asiaa pohditaan.
+
 \textbf{ks} Esitellään korrespondenssianalyysin käsitteet ja graafisen
 analyysin periaatteet.
+
+\textbf{zxy} -mitä ca on? - dimensioiden vähentäminen ja visualisointi -
+mihin dataan se soveltuu - määrittele graafinen, deskriptiivinen,
+eksploratiivinen data-analyysi - yksinkertainen ca, useamman muuttujan
+ca
 
 \textbf{ks} Tämän voi tehdä yksinkertaisen korrespondenssianalyysin
 avulla. Yksinkertainen kahden luokittelumuuttujan
@@ -175,6 +187,67 @@ algoritmin soveltamista toisen tyyppiisiin datamatriiseihin, ja
 tulkintaa sovelletaan vastaavasti (with the consequent adaptation of the
 interpretation)''\citep[ , s.
 437]{RefWorks:doc:5a857a44e4b0ed2d44664d84}
+
+\textbf{zxy} Miksi eksporatiivinen (määrittele!) ja deskriptiivinen
+(määrittele!) menetelmä on esitettävä ``in vivo'', toiminnassa?
+Oppikirjoissa (viitteitä) erityisesti MG on havainnolistanut CA:n
+matemaattista ja geometristä taustaa synteettisillä aineistoilla. Turha
+kopioida tähän. Menetelmän ydin on yksinkertaisen graafisen esityksen --
+kartan -- avulla tulkita monimutkaisen empiirisen aineiston muuttujien
+riippuvuuksia. Yhteyksiä ei tiivistetä todennäköisyyspäättelyn
+kriteereillä tilastolliseen malliin, vaan deskripriivisen analyysin
+hengessä esitellään koko aineisto. Mallin sijaan vähennetään
+ulottuvuuksia, ja siinä menetetään informaatiota. Tavoitteena on
+säilyttää yleensä kaksiulotteisessa kuvassa mahdollisimman suuri osa
+alkuperäisen datan vaihtelusta. Eksploratiivinen data-analyysi on
+vuoropuhelua aineiston kanssa. Analyysiä tarkennetaan, rajataan ja
+muokataan, kun aineisto paljastaa jotain kiinnostavaa tai yllättävää.
+Tästä saa jonkinlaisen aasinsillan matriisiyhtälöiden puolustukseksi.
+Saksan ja Belgian datan jakaminen on hyvä esimerkki, on ``osattava
+tarttua'' menetelmän tulosmatriiseihin.
+
+\textbf{zxy} esitystavan perustelu
+
+\begin{itemize}
+\tightlist
+\item
+  kenelle kirjoitettu? Menetelmästä kiinnostuneelle tilastotieteen ja
+  data-analyysin perusteet tuntevalle. R-ohjelmisto ei ole rajoitus,
+  SPSS ja SAS sopivat. (SPSS - MG:llä kriittinen huomio ``loose ends -
+  paperissa'' tai CAip-teorialiitteessä).
+\end{itemize}
+
+\hypertarget{kaytetyt-ohjelmistot}{%
+\section{Käytetyt ohjelmistot}\label{kaytetyt-ohjelmistot}}
+
+\textbf{zxy} R, ca-paketti. löytyy myös muita paketteja.
+Rmarkdown\citep{RefWorks:doc:5b6b346fe4b0c619b11b8a3e}, ja bookdown
+(\citep{RefWorks:doc:5b6b36dde4b09b7ec442bf8b} ja toinen viite
+\citep{R-bookdown}). Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei
+ole url-osoitteita.
+
+\textbf{zxy} Helposti toistettavan tutkimukset periaatteet
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Datasta (löytyy netistä, samoin kattava dokumentaatio) lyhyt matka
+  analyysiin.
+\item
+  Koodi selkeää ja dokumentoitua
+\item
+  R, LaTeX, pandoc - versiot dokumentoidaan
+\end{enumerate}
+
+Tarkemmin liittessä.
+
+\hypertarget{korrespondenssianalyysin-historiaa}{%
+\section{Korrespondenssianalyysin
+historiaa}\label{korrespondenssianalyysin-historiaa}}
+
+\textbf{zxy} Tiivis esitys lähteineen. Ehkä asiaan palataan kun itse
+menetelmä on esitelty?
 
 \hypertarget{data}{%
 \chapter{Data}\label{data}}

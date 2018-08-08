@@ -1,9 +1,9 @@
 ---
 title: "Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä"
 author: "Jussi Hirvonen"
-date: "Versio 0.01, tulostettu `r Sys.Date()`"
+date: "Versio 0.02, tulostettu `r Sys.Date()`"
 output: pdf_document
-description: Tutkielma korrespondenssianalyysistÃƒÂ¤ graafisena data-analyysin menetelmÃƒÂ¤nÃƒÂ¤.
+description: Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä.
 documentclass: book
 lang: fi
 link-citations: yes
@@ -36,7 +36,7 @@ library(likert)
 library(scales) # G_1_2 - kuva
 library(reshape2)  # G_1_2 - kuva
 library(printr) #19.5.18 taulukoiden ja matriisien tulostukseen
-library(stargazer) # 28.5.2018 taulukoiden yms. tulostietojen siistiin tulostukseen
+#library(stargazer) # 28.5.2018 taulukoiden yms. tulostietojen siistiin tulostukseen - 8.8.18 pois
 library(bookdown)
 library(tinytex)
 
