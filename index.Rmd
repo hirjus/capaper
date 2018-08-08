@@ -2,13 +2,16 @@
 title: "Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä"
 author: "Jussi Hirvonen"
 date: "Versio 0.01, tulostettu `r Sys.Date()`"
-lang: fi
-site: bookdown::bookdown_site
+output: pdf_document
+description: Tutkielma korrespondenssianalyysistÃƒÂ¤ graafisena data-analyysin menetelmÃƒÂ¤nÃƒÂ¤.
 documentclass: book
-bibliography: [jhca2018.bib, packages.bib]
-biblio-style: apalike
+lang: fi
 link-citations: yes
-description: "Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä."
+bibliography:
+- jhca2018.bib
+- packages.bib
+site: bookdown::bookdown_site
+biblio-style: apalike
 ---
 
 # Alkutoimia {-}
