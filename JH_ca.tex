@@ -1,0 +1,369 @@
+\documentclass[finnish,]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä},
+            pdfauthor={Jussi Hirvonen},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[shorthands=off,main=finnish]{babel}
+\else
+  \usepackage{polyglossia}
+  \setmainlanguage[]{finnish}
+\fi
+\usepackage{natbib}
+\bibliographystyle{apalike}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin
+menetelmä}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Jussi Hirvonen}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{Versio 0.02, tulostettu 2018-08-09}
+
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{alkutoimia}{%
+\chapter*{Alkutoimia}\label{alkutoimia}}
+\addcontentsline{toc}{chapter}{Alkutoimia}
+
+Ladataan r-paketit, ei tulosteta dokumenttiin. Pelkkä YAML- `front
+matter', lisäkonfiguroinnit tiedostoissa \_bookdown.yml ja \_output.yml.
+
+Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti (ei
+vielä).
+
+\textbf{Ideoita}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Ehkä automaattista R-kirjastojen dokumentointia voisi harkita?
+\item
+  Saako gitbook-tulosteessa päälle asetuksen code\_folding: hide? Vaatii
+  teeman (theme), jos tarpeen voi lisätä \_output.yml - tiedostoon esim.
+  html\_book - formaatin.
+\item
+  Lähdeviitteiden doi-linkit eivät toimi? Ja näköjään lisätyt
+  ISSP-viitteet eivät toimi PDF-tulostuksessa. ! Package natbib Error:
+  Bibliography not compatible with author-year citations.
+\end{enumerate}
+
+Error: Failed to compile JH\_ca.tex. See JH\_ca.log for more info.
+Execution halted
+
+Exited with status 1.
+
+\hypertarget{johdanto}{%
+\chapter{Johdanto}\label{johdanto}}
+
+\textbf{xyz} Kirjoitetaan disposition pohjalta, keräillään kaikki
+yleiset ca-luonnehdinnat yhteen paikkaan eli johdantoon.
+
+\textbf{Mahdollisia lisäyksiä}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Lyhyt esitys CA:n historiasta (vai omaksi luvuksi, luku 2)?
+\item
+  Käytetyt ohjelmistot, tekninen ympäristö ml. bookdown-asetukset. Ehkä
+  paremmin omaksi liitteeksi?
+\item
+  Tavoitteet, sisältö, rajaukset (jota voi myöhemmin täydentää)
+\item
+  Muutamat puutteet, onko kerrottava tässä?
+\end{enumerate}
+
+\begin{itemize}
+\item
+  data: ei huomioida sitä, että otoskoot vaihtelevat aika paljon eli
+  ``maapainot'' eri suuruisia
+\item
+  ei huomioida muitakaan otantaan liittyviä asioita (tämä ainakin
+  mainittava data-osuudessa)
+\item
+  kuvaileva menetelmä, mutta mikä on tutkimusongelma? Sellainen pitäisi
+  olla.
+\end{itemize}
+
+**zxy* Mitä on korrespondenssianalyysi? Muutamalla kappaleella. Yksi
+kappale historiasta.
+
+\hypertarget{tutkielman-tavoite-tutkimusongelma}{%
+\section{Tutkielman tavoite
+(tutkimusongelma?)}\label{tutkielman-tavoite-tutkimusongelma}}
+
+\textbf{zxy} Tässä kerrotaan, miksi tämä työ on kirjoitettu. Esitellään
+menetelmä käyttämällä oikeaa dataa. Täsmällisempi esitys sirotellaan
+esimerkkiaineiston analyysin tulosten esittelyn lomaan. Pitäisikö tässä
+tuoda esille ns. ``ranskalaisen koulukunnan'' matemaattisen perusteiden
+korostus, ja data-analyysin filosofia? Ehkä ei, koska sen pohdinta ei
+ole pääasia. Se tietysti mainitaan, ja asiaa pohditaan.
+
+\textbf{ks} Esitellään korrespondenssianalyysin käsitteet ja graafisen
+analyysin periaatteet.
+
+\textbf{zxy} -mitä ca on? - dimensioiden vähentäminen ja visualisointi -
+mihin dataan se soveltuu - määrittele graafinen, deskriptiivinen,
+eksploratiivinen data-analyysi - yksinkertainen ca, useamman muuttujan
+ca
+
+\textbf{ks} Tämän voi tehdä yksinkertaisen korrespondenssianalyysin
+avulla. Yksinkertainen kahden luokittelumuuttujan
+korrespondenssianalyysi antaa graafisen analyysin ``\ldots{}perussäännöt
+tulkinnalle. Kaikki muut korrespondenssianalyysin muodot ovat saman
+algoritmin soveltamista toisen tyyppiisiin datamatriiseihin, ja
+tulkintaa sovelletaan vastaavasti (with the consequent adaptation of the
+interpretation)''\citep[ , s.
+437]{RefWorks:doc:5a857a44e4b0ed2d44664d84}
+
+\textbf{zxy} Miksi eksporatiivinen (määrittele!) ja deskriptiivinen
+(määrittele!) menetelmä on esitettävä ``in vivo'', toiminnassa?
+Oppikirjoissa (viitteitä) erityisesti MG on havainnolistanut CA:n
+matemaattista ja geometristä taustaa synteettisillä aineistoilla. Turha
+kopioida tähän. Menetelmän ydin on yksinkertaisen graafisen esityksen --
+kartan -- avulla tulkita monimutkaisen empiirisen aineiston muuttujien
+riippuvuuksia. Yhteyksiä ei tiivistetä todennäköisyyspäättelyn
+kriteereillä tilastolliseen malliin, vaan deskripriivisen analyysin
+hengessä esitellään koko aineisto. Mallin sijaan vähennetään
+ulottuvuuksia, ja siinä menetetään informaatiota. Tavoitteena on
+säilyttää yleensä kaksiulotteisessa kuvassa mahdollisimman suuri osa
+alkuperäisen datan vaihtelusta. Eksploratiivinen data-analyysi on
+vuoropuhelua aineiston kanssa. Analyysiä tarkennetaan, rajataan ja
+muokataan, kun aineisto paljastaa jotain kiinnostavaa tai yllättävää.
+Tästä saa jonkinlaisen aasinsillan matriisiyhtälöiden puolustukseksi.
+Saksan ja Belgian datan jakaminen on hyvä esimerkki, on ``osattava
+tarttua'' menetelmän tulosmatriiseihin.
+
+\textbf{zxy} esitystavan perustelu
+
+\begin{itemize}
+\tightlist
+\item
+  kenelle kirjoitettu? Menetelmästä kiinnostuneelle tilastotieteen ja
+  data-analyysin perusteet tuntevalle. R-ohjelmisto ei ole rajoitus,
+  SPSS ja SAS sopivat. (SPSS - MG:llä kriittinen huomio ``loose ends -
+  paperissa'' tai CAip-teorialiitteessä).
+\end{itemize}
+
+\hypertarget{kaytetyt-ohjelmistot}{%
+\section{Käytetyt ohjelmistot}\label{kaytetyt-ohjelmistot}}
+
+\textbf{zxy} R, ca-paketti. löytyy myös muita paketteja.
+Rmarkdown\citep{RefWorks:doc:5b6b346fe4b0c619b11b8a3e}, ja bookdown
+(\citep{RefWorks:doc:5b6b36dde4b09b7ec442bf8b} ja toinen viite
+\citep{R-bookdown}). Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei
+ole url-osoitteita.
+
+\textbf{zxy} Helposti toistettavan tutkimukset periaatteet
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Datasta (löytyy netistä, samoin kattava dokumentaatio) lyhyt matka
+  analyysiin.
+\item
+  Koodi selkeää ja dokumentoitua
+\item
+  R, LaTeX, pandoc - versiot dokumentoidaan
+\end{enumerate}
+
+Tarkemmin liittessä.
+
+\hypertarget{korrespondenssianalyysin-historiaa}{%
+\section{Korrespondenssianalyysin
+historiaa}\label{korrespondenssianalyysin-historiaa}}
+
+\textbf{zxy} Tiivis esitys lähteineen. Ehkä asiaan palataan kun itse
+menetelmä on esitelty?
+
+\hypertarget{data}{%
+\chapter{Data}\label{data}}
+
+\textbf{zxy} Voisi miettiä paremman otsikon. Galku-paperin alusta on
+lisäilty viitteitä Refworksiin, mutta hieman hanklaa. www.gesis.org -
+sivusto on aika sekava. Virallinen (heidän määrittelemä) sitaatti
+löytyy, ja linkkejä. Tässä voisi ehkä käyttää alaviitettä, jossa
+tarjoaisi linkit? Tai ihan oma lyhyt kappale? Alla virallinen viite, ja
+tässä kaksi muuta (\citep{RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a} ja
+\citep{RefWorks:doc:5b6c7debe4b0e4e15164ab00}). LÖytyy myös
+seurantaraportti(\citep{RefWorks:doc:5b155e0ce4b044dfd738458f}).
+
+\textbf{ks} ISSP (International social survey) on tehnyt laajoja
+kansainvälisiä kyselytutkimuksia eri teemoista. Yksi teema on ollut
+perhe ja muuttuvat (sosiaalisesti määräytyvät) sukupuoliroolit
+(\citep{RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a}).
+
+\textbf{zxy} Miksi data on kiinnostava sisällöllisesti? Viite Kantola
+(HS). Lisäksi laadukas, usealta vuodelta, tarkasti dokumentoitu.
+
+\textbf{ks}
+
+\textbf{zxy} Mksi data sovelutuu korrespondenssianalyysin esittelyyn?
+
+\textbf{ks} Kokoava kappale, ja sen perään tarkentavat
+
+\textbf{ks1}
+
+\textbf{ks2}
+
+\textbf{ks-n}
+
+\textbf{zxy} Aineiston ongelmat ja puutteet (tavanomaisten
+surveyaineistojen ongelmien lisäksi, erityisesti vastauskadon). Kato
+erikseen, oikeastaan hyvä juttu koska CA soveltuu sen analyysiin.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu
+  tarkentaa tai muuten hifistellä. Osa kummallisa, erityisesti
+  neutraalin vaihtoehdon puuttuminen (Espanja). Nämä maat pitää
+  sivuuttaa.
+\item
+  Datassa painot ``maatasolle'', otanta sun muu kuvattu tarkasti
+  dokumentaatiossa. Jos tutkimusongelma on maiden erojen analyysi,
+  mitään vertailupainoja ei ole käytössä. Otoskoko on paino. Paha juttu,
+  MG oikaisee ja ja oikaisee myös sukupuolien osuudet.
+\end{enumerate}
+
+\hypertarget{aineiston-kuvailu-tietosisalto}{%
+\section{Aineiston kuvailu
+(tietosisältö)}\label{aineiston-kuvailu-tietosisalto}}
+
+\textbf{Jäsennys:}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+\item
+\item
+\end{enumerate}
+
+\hypertarget{aineiston-valinta-tutkimukseen}{%
+\section{Aineiston valinta
+tutkimukseen}\label{aineiston-valinta-tutkimukseen}}
+
+\textbf{zxy} Viitteitä myös r-ratkaisuihin, jotka selostetaan koodissa.
+Erityisesti (a) puuttuvat tiedot ja (b) likert-asteikko faktorina (ilman
+järjestystä).
+
+\textbf{zxy} Aluksi kuusi maata
+
+\textbf{zxy} Sitten monta maata
+
+\hypertarget{aineiston-kuvailu-tunnuslukuja}{%
+\section{Aineiston kuvailu
+(tunnuslukuja)}\label{aineiston-kuvailu-tunnuslukuja}}
+
+\textbf{zxy} ehkäpä taulukoiden lisäksi Likert-kuva?
+
+\hypertarget{yksinkertainen-korrespondenssianalyysi}{%
+\chapter{Yksinkertainen
+korrespondenssianalyysi}\label{yksinkertainen-korrespondenssianalyysi}}
+
+\textbf{xyz} Tässä yksi kysymys, kuusi maata, peruskäsitteet lopussa
+
+\hypertarget{yksinkertaisen-korrespondenssianalyysi---tulkinnan-syventaminen}{%
+\chapter{Yksinkertaisen korrespondenssianalyysi - tulkinnan
+syventäminen}\label{yksinkertaisen-korrespondenssianalyysi---tulkinnan-syventaminen}}
+
+\textbf{xyz} Tarkasti läpi keskeiset tulokset ja niiden tulkinta,
+kaavat, ja ytimenä eri kuvat eli kartat.
+
+\hypertarget{yksinkertaisen-korrespondenssianalyysin-laajennuksia}{%
+\chapter{Yksinkertaisen korrespondenssianalyysin
+laajennuksia}\label{yksinkertaisen-korrespondenssianalyysin-laajennuksia}}
+
+\textbf{xyz} Yksinkertainen korrespondenssianalyysi on menetelmän
+tulkinnan perusta. Perusasetelmaa kahden luokittelumuuttujan
+ristiintaulukoinnista voidaan laajentaa monipuolisempiin
+tutkimusasetelmiin. Varsinainen useamman muuttujan
+korrespondenssianalyysi (MCA - multiple correspondence analysis)
+esitellään seuraavassa luvussa.
+
+\bibliography{jhca2018.bib,packages.bib}
+
+
+\end{document}

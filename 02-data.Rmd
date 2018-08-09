@@ -1,3 +1,57 @@
 # Data
 
-**xyz** Voisi miettiä paremman otsikon
+**zxy** Voisi miettiä paremman otsikon. Galku-paperin alusta on lisäilty viitteitä Refworksiin, mutta hieman  hanklaa. www.gesis.org - sivusto on aika sekava. Virallinen (heidän määrittelemä) sitaatti löytyy, ja linkkejä. Tässä voisi ehkä käyttää alaviitettä, jossa tarjoaisi linkit? Tai ihan oma lyhyt kappale? Alla virallinen viite, ja tässä kaksi muuta ([@RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a] ja [@RefWorks:doc:5b6c7debe4b0e4e15164ab00]). LÖytyy myös seurantaraportti([@RefWorks:doc:5b155e0ce4b044dfd738458f]).
+
+
+**ks** ISSP (International social survey) on tehnyt laajoja kansainvälisiä kyselytutkimuksia eri teemoista. Yksi teema on ollut perhe ja muuttuvat (sosiaalisesti määräytyvät) sukupuoliroolit ([@RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a]).
+
+**zxy** Miksi data on kiinnostava sisällöllisesti? Viite Kantola (HS). Lisäksi laadukas, usealta vuodelta, tarkasti dokumentoitu.
+
+**ks**
+
+**zxy** Mksi data sovelutuu korrespondenssianalyysin esittelyyn?
+
+**ks** Kokoava kappale, ja sen perään tarkentavat
+
+  
+  **ks1**
+  
+  **ks2**
+  
+  **ks-n**
+  
+**zxy** Aineiston ongelmat ja puutteet (tavanomaisten surveyaineistojen ongelmien lisäksi, erityisesti vastauskadon). Kato erikseen, oikeastaan hyvä juttu koska CA soveltuu sen analyysiin.
+
+1. Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu tarkentaa tai muuten hifistellä. Osa kummallisa, erityisesti neutraalin vaihtoehdon puuttuminen (Espanja). Nämä maat pitää sivuuttaa.
+
+2. Datassa painot "maatasolle", otanta sun muu kuvattu tarkasti dokumentaatiossa. Jos tutkimusongelma on maiden erojen analyysi, mitään vertailupainoja ei ole käytössä. Otoskoko on paino. Paha juttu, MG oikaisee ja ja oikaisee myös sukupuolien osuudet.
+  
+## Aineiston kuvailu (tietosisältö)
+
+**Jäsennys:**
+
+
+1.
+
+2.
+
+3.
+
+## Aineiston valinta tutkimukseen
+
+**zxy** Viitteitä myös r-ratkaisuihin, jotka selostetaan koodissa. Erityisesti (a) puuttuvat tiedot ja (b) likert-asteikko faktorina (ilman järjestystä).
+
+**zxy** Aluksi kuusi maata
+
+**zxy** Sitten monta maata
+
+
+## Aineiston kuvailu (tunnuslukuja)
+
+
+
+**zxy** ehkäpä taulukoiden lisäksi Likert-kuva?
+
+
+
+

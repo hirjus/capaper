@@ -33,3 +33,8 @@ Lisäsin test-hakemiston, jossa voi rakennella r-koodia. Siellä toimii yhden Rm
 Lähdeviitteet toimivat, johdantoon hieman jäsentelyä. Tulostusvaihtoehtona on myös html-book, siinä saa tarvittaessa koodin piilotuksen toimimaan. Ei onnistu gitbook-formaatissa, vaatii teeman käyttöä.
 
 Versio 0.02 : lisättty lähdeviiteitä ja päivitetty bibtex-viitetiedosto.
+
+**9.8.2018 Versio 0.03**
+
+Jäsentelyä data-lukuun. Lisäsin ISSP-viitteitä RefWorksiin, ja ne rikkoivat PDF-version viitteidenhallinnan, nyt vain gitbook-tuloste. Korjaillaan,
+tai poistetaan, ISSP-dokumentaatioon on hankalaa viitata. www.gesis.org on sekava sivusto!

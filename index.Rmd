@@ -1,7 +1,7 @@
 ---
 title: "Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä"
 author: "Jussi Hirvonen"
-date: "Versio 0.02, tulostettu `r Sys.Date()`"
+date: "Versio 0.03, tulostettu `r Sys.Date()`"
 output: pdf_document
 description: Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä.
 documentclass: book
@@ -46,6 +46,15 @@ library(tinytex)
 1. Ehkä automaattista R-kirjastojen dokumentointia voisi harkita?
 
 2. Saako gitbook-tulosteessa päälle asetuksen code_folding: hide? Vaatii teeman (theme), jos tarpeen voi lisätä _output.yml - tiedostoon esim. html_book - formaatin.
+
+3. Lähdeviitteiden doi-linkit eivät toimi? Ja näköjään lisätyt ISSP-viitteet eivät toimi PDF-tulostuksessa.
+! Package natbib Error: Bibliography not compatible with author-year citations.
+
+Error: Failed to compile JH_ca.tex. See JH_ca.log for more info.
+Execution halted
+
+Exited with status 1. Koitin korjailla RefWorksiin, ei auttanut (9.8.18)
+
 
 
 
