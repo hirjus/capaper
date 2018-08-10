@@ -1,129 +1,179 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi">
+<html  lang="fi">
 
 <head>
 
-<meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="pandoc" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä" />
-<meta property="og:type" content="book" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</title>
+  <meta name="description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
+  <meta property="og:title" content="Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä." />
+  
 
-<meta property="og:description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä" />
+  
+  <meta name="twitter:description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä." />
+  
 
-
-<meta name="author" content="Jussi Hirvonen" />
-
-
-
-<meta name="description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä.">
-
-<title>Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</title>
-
-<script src="libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="libs/navigation-1.1/tabsets.js"></script>
-<script src="libs/navigation-1.1/codefolding.js"></script>
+<meta name="author" content="Jussi Hirvonen">
 
 
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="yksinkertaisen-korrespondenssianalyysin-laajennuksia.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 
 
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-  height: auto;
-}
-</style>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
 
-<div class="container-fluid main-container">
 
 
-<div class="row">
-<div class="col-sm-12">
-<div id="TOC">
-<ul>
-<li><a href="index.html#alkutoimia">Alkutoimia</a></li>
-<li class="has-sub"><a href="1-johdanto.html#johdanto"><span class="toc-section-number">1</span> Johdanto</a><ul>
-<li><a href="1-1-tutkielman-tavoite-tutkimusongelma.html#tutkielman-tavoite-tutkimusongelma"><span class="toc-section-number">1.1</span> Tutkielman tavoite (tutkimusongelma?)</a></li>
-<li><a href="1-2-kaytetyt-ohjelmistot.html#kaytetyt-ohjelmistot"><span class="toc-section-number">1.2</span> Käytetyt ohjelmistot</a></li>
-<li><a href="1-3-korrespondenssianalyysin-historiaa.html#korrespondenssianalyysin-historiaa"><span class="toc-section-number">1.3</span> Korrespondenssianalyysin historiaa</a></li>
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Alkutoimia</a></li>
+<li class="chapter" data-level="1" data-path="johdanto.html"><a href="johdanto.html"><i class="fa fa-check"></i><b>1</b> Johdanto</a><ul>
+<li class="chapter" data-level="1.1" data-path="johdanto.html"><a href="johdanto.html#tutkielman-tavoite-tutkimusongelma"><i class="fa fa-check"></i><b>1.1</b> Tutkielman tavoite (tutkimusongelma?)</a></li>
+<li class="chapter" data-level="1.2" data-path="johdanto.html"><a href="johdanto.html#kaytetyt-ohjelmistot"><i class="fa fa-check"></i><b>1.2</b> Käytetyt ohjelmistot</a></li>
+<li class="chapter" data-level="1.3" data-path="johdanto.html"><a href="johdanto.html#korrespondenssianalyysin-historiaa"><i class="fa fa-check"></i><b>1.3</b> Korrespondenssianalyysin historiaa</a></li>
 </ul></li>
-<li class="has-sub"><a href="2-data.html#data"><span class="toc-section-number">2</span> Data</a><ul>
-<li><a href="2-1-aineiston-kuvailu-tietosisalto.html#aineiston-kuvailu-tietosisalto"><span class="toc-section-number">2.1</span> Aineiston kuvailu (tietosisältö)</a></li>
-<li><a href="2-2-aineiston-valinta-tutkimukseen.html#aineiston-valinta-tutkimukseen"><span class="toc-section-number">2.2</span> Aineiston valinta tutkimukseen</a></li>
-<li><a href="2-3-aineiston-kuvailu-tunnuslukuja.html#aineiston-kuvailu-tunnuslukuja"><span class="toc-section-number">2.3</span> Aineiston kuvailu (tunnuslukuja)</a></li>
+<li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#aineiston-kuvailu-tietosisalto"><i class="fa fa-check"></i><b>2.1</b> Aineiston kuvailu (tietosisältö)</a></li>
+<li class="chapter" data-level="2.2" data-path="data.html"><a href="data.html#aineiston-rajaaminen"><i class="fa fa-check"></i><b>2.2</b> Aineiston rajaaminen</a></li>
+<li class="chapter" data-level="2.3" data-path="data.html"><a href="data.html#aineiston-kuvailu-tunnuslukuja"><i class="fa fa-check"></i><b>2.3</b> Aineiston kuvailu (tunnuslukuja)</a></li>
 </ul></li>
-<li class="has-sub"><a href="3-yksinkertainen-korrespondenssianalyysi.html#yksinkertainen-korrespondenssianalyysi"><span class="toc-section-number">3</span> Yksinkertainen korrespondenssianalyysi</a><ul>
-<li><a href="3-1-aiti-toissa.html#aiti-toissa"><span class="toc-section-number">3.1</span> Äiti töissä</a></li>
-<li><a href="3-2-kahden-muuttujan-frekvenssitaulukon-analyysi.html#kahden-muuttujan-frekvenssitaulukon-analyysi"><span class="toc-section-number">3.2</span> Kahden muuttujan frekvenssitaulukon analyysi</a></li>
+<li class="chapter" data-level="3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>3</b> Yksinkertainen korrespondenssianalyysi</a><ul>
+<li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#aiti-toissa"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä</a></li>
+<li class="chapter" data-level="3.2" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#kahden-muuttujan-frekvenssitaulukon-analyysi"><i class="fa fa-check"></i><b>3.2</b> Kahden muuttujan frekvenssitaulukon analyysi</a></li>
 </ul></li>
-<li><a href="4-yksinkertaisen-korrespondenssianalyysi-tulkinnan-syventaminen.html#yksinkertaisen-korrespondenssianalyysi---tulkinnan-syventaminen"><span class="toc-section-number">4</span> Yksinkertaisen korrespondenssianalyysi - tulkinnan syventäminen</a></li>
-<li><a href="5-yksinkertaisen-korrespondenssianalyysin-laajennuksia.html#yksinkertaisen-korrespondenssianalyysin-laajennuksia"><span class="toc-section-number">5</span> Yksinkertaisen korrespondenssianalyysin laajennuksia</a></li>
-<li><a href="lahteet.html#lahteet">Lähteet</a></li>
+<li class="chapter" data-level="4" data-path="yksinkertaisen-korrespondenssianalyysi-tulkinnan-syventaminen.html"><a href="yksinkertaisen-korrespondenssianalyysi-tulkinnan-syventaminen.html"><i class="fa fa-check"></i><b>4</b> Yksinkertaisen korrespondenssianalyysi - tulkinnan syventäminen</a></li>
+<li class="chapter" data-level="5" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia.html"><i class="fa fa-check"></i><b>5</b> Yksinkertaisen korrespondenssianalyysin laajennuksia</a></li>
+<li class="chapter" data-level="" data-path="lahteet.html"><a href="lahteet.html"><i class="fa fa-check"></i>Lähteet</a></li>
 </ul>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-sm-12">
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
 <div id="lahteet" class="section level1 unnumbered">
 <h1>Lähteet</h1>
 
 <div id="refs" class="references">
-<div>
+<div id="ref-RefWorks:doc:5b15542ee4b0e2616bc42dca">
+<p>Blasius, Jörg, ja Victor Thiessen. 2006. ”Assessing Data Quality and Construct Comparability in Cross-National Surveys”. <em>European Sociological Review</em> 22 (3): 229–42. <a href="http://www.jstor.org/stable/3806519" class="uri">http://www.jstor.org/stable/3806519</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5a857a44e4b0ed2d44664d84">
 <p>Greenacre, Michael, ja Trevor Hastie. 1987. ”The Geometric Interpretation of Correspondence Analysis”. <em>Journal of the American Statistical Association</em> 82 (398): 437–47. <a href="https://doi.org/10.1080/01621459.1987.10478446" class="uri">https://doi.org/10.1080/01621459.1987.10478446</a>.</p>
 </div>
-<div>
+<div id="ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c">
+<p>Greenacre, Michael J. 2010. <em>Biplots in Practice</em>. Bilbao, Spain: Fundacion BBVA.</p>
+</div>
+<div id="ref-RefWorks:doc:5a857a43e4b0ed2d44664d78">
+<p>———. 2017. <em>Correspondence analysis in practice</em>. Third edition. Boca Raton, Florida: CRC Press. <a href="https://helka.finna.fi/Record/helka.3029760" class="uri">https://helka.finna.fi/Record/helka.3029760</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a">
 <p>Jorat, Jorge R., Ann Evans, Franz H ollinger, Lilia Dimova, Canada Carleton University Survey Centre Ottawa, Lulu Li, Carolina Segovia, ym. 2016. ”International Social Survey Programme: Family and Changing Gender Roles IV - ISSP 2012”. <a href="https://doi.org/10.4232/1.12661&quot;" class="uri">https://doi.org/10.4232/1.12661&quot;</a>.</p>
 </div>
-<div>
+<div id="ref-RefWorks:doc:5b6b36dde4b09b7ec442bf8b">
 <p>Xie, Yihui. 2016. <em>bookdown: Authoring Books and Technical Documents with R Markdown</em>. Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/bookdown/" class="uri">https://bookdown.org/yihui/bookdown/</a>.</p>
 </div>
-<div>
+<div id="ref-R-bookdown">
 <p>———. 2018. <em>bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown" class="uri">https://CRAN.R-project.org/package=bookdown</a>.</p>
 </div>
-<div>
+<div id="ref-RefWorks:doc:5b6b346fe4b0c619b11b8a3e">
 <p>Yihui Xie, Garrett Grolemund, J. J. Allaire. 2018. <em>R Markdown: The Definitive Guide</em>. Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/rmarkdown/" class="uri">https://bookdown.org/yihui/rmarkdown/</a>.</p>
 </div>
 </div>
 </div>
-<p style="text-align: center;">
-<a href="5-yksinkertaisen-korrespondenssianalyysin-laajennuksia.html"><button class="btn btn-default">Previous</button></a>
-</p>
-</div>
-</div>
+            </section>
 
+          </div>
+        </div>
+      </div>
+<a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-</div>
-
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-
-// add bootstrap table styles to pandoc tables
-$(document).ready(function () {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
 });
-
+});
 </script>
 
 </body>
+
 </html>

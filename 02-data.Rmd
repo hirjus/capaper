@@ -22,11 +22,18 @@
   
 **zxy** Aineiston ongelmat ja puutteet (tavanomaisten surveyaineistojen ongelmien lisäksi, erityisesti vastauskadon). Kato erikseen, oikeastaan hyvä juttu koska CA soveltuu sen analyysiin.
 
+**zxy** Aineisto kuvattava **sisällön** (mitä asiaa, ilmiötä, tällä datalla halutaan valaista), **para- ja metadatan** näkökulmasta (tai ainakin kerrottava mitä on saatavilla). Kolmanneksi aineiston "tilastotieteellinen olemus": otanta-asetelmat, kansalliset versioinnit, harmonisoinnit (esim. puoluekenttä vertailukelpoiseksi).
+
+
 1. Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu tarkentaa tai muuten hifistellä. Osa kummallisa, erityisesti neutraalin vaihtoehdon puuttuminen (Espanja). Nämä maat pitää sivuuttaa.
 
 2. Datassa painot "maatasolle", otanta sun muu kuvattu tarkasti dokumentaatiossa. Jos tutkimusongelma on maiden erojen analyysi, mitään vertailupainoja ei ole käytössä. Otoskoko on paino. Paha juttu, MG oikaisee ja ja oikaisee myös sukupuolien osuudet.
+
   
+
 ## Aineiston kuvailu (tietosisältö)
+
+
 
 **Jäsennys:**
 
@@ -37,9 +44,12 @@
 
 3.
 
-## Aineiston valinta tutkimukseen
+
+## Aineiston rajaaminen
 
 **zxy** Viitteitä myös r-ratkaisuihin, jotka selostetaan koodissa. Erityisesti (a) puuttuvat tiedot ja (b) likert-asteikko faktorina (ilman järjestystä).
+
+**puuttuvat** vastaukset aluksi pois (rankka rajaus - vain yksinkertaistus, menetelmän esittelyn vuoksi)
 
 **zxy** Aluksi kuusi maata
 
@@ -49,9 +59,14 @@
 ## Aineiston kuvailu (tunnuslukuja)
 
 
-
 **zxy** ehkäpä taulukoiden lisäksi Likert-kuva?
 
 
 
+**viimeinen kappale**
+
+Miten aineistoa on käytetty? "ISSP - saitilla" löytyy bibliografia, ja hakupalveluillakin voi haravoida. Michael Greenacre on käyttänyt aineistoa luentomateriaaleissa (Helsinki 2017 MCA, viite Moodleen?) ja kahdessa oppikirjassa ([@RefWorks:doc:5a857a43e4b0ed2d44664d7c], [@RefWorks:doc:5a857a43e4b0ed2d44664d78]). Blasius ja Thiessen ([@RefWorks:doc:5b15542ee4b0e2616bc42dca]) arvioivat aineiston laatua ja ja maiden vertailtavuutta vuoden 1994 aineistolla.
+
+
+"This paper provides empirically-based criteria for selecting Items and countries to develop measures of an underlying construct of interest that are comparable in cross-national research. Using data from the 1994 International Social Survey Program and applying multiple correspondence analysis to a set of common items in each of the 24 participating countries, we show that both the quality of the data, as well as its underlying structure - and therefore meaning - vary considerably between countries. The approach we use for screening countries and items is especially useful in situations where the psychometric properties of the items have not been well established in previous research"
 
