@@ -14,3 +14,5 @@ bookdown::pdf_book:
   keep_tex: yes
 bookdown::html_book:
   fig_caption: true
+  code_folding: hide
+

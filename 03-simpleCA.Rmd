@@ -1,4 +1,18 @@
 # Yksinkertainen korrespondenssianalyysi
 
-**xyz** Tässä yksi kysymys, kuusi maata, peruskäsitteet lopussa
+**zxy** Tässä yksi kysymys, kuusi maata, peruskäsitteet lopussa
+
+**zxy** Luvun tärkeimmät asiat; mitä on luvassa?
+
+## Äiti töissä
+
+**zxy** Edellisessä luvussa on esitelyt aineisto, ja kerrottu rajaukset. Voidaan siis mennä suoraan asiaan. Luvun alussa kerrotaan, mikä juoni luvussa on.
+
+## Kahden muuttujan frekvenssitaulukon analyysi
+
+**zxy** graafiset tulokset ja niiden tulkinnan perusteet
+
+
+
+
 

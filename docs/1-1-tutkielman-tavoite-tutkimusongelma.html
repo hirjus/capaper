@@ -12,14 +12,14 @@
 <meta property="og:type" content="book" />
 
 
-<meta property="og:description" content="Tutkielma korrespondenssianalyysistÃƒÂ¤ graafisena data-analyysin menetelmÃƒÂ¤nÃƒÂ¤." />
+<meta property="og:description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä." />
 
 
 <meta name="author" content="Jussi Hirvonen" />
 
 
 
-<meta name="description" content="Tutkielma korrespondenssianalyysistÃƒÂ¤ graafisena data-analyysin menetelmÃƒÂ¤nÃƒÂ¤.">
+<meta name="description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä.">
 
 <title>Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</title>
 
@@ -30,6 +30,7 @@
 <script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="libs/navigation-1.1/tabsets.js"></script>
+<script src="libs/navigation-1.1/codefolding.js"></script>
 
 
 
@@ -64,9 +65,18 @@ img {
 <li><a href="index.html#alkutoimia">Alkutoimia</a></li>
 <li class="has-sub"><a href="1-johdanto.html#johdanto"><span class="toc-section-number">1</span> Johdanto</a><ul>
 <li><a href="1-1-tutkielman-tavoite-tutkimusongelma.html#tutkielman-tavoite-tutkimusongelma"><span class="toc-section-number">1.1</span> Tutkielman tavoite (tutkimusongelma?)</a></li>
+<li><a href="1-2-kaytetyt-ohjelmistot.html#kaytetyt-ohjelmistot"><span class="toc-section-number">1.2</span> Käytetyt ohjelmistot</a></li>
+<li><a href="1-3-korrespondenssianalyysin-historiaa.html#korrespondenssianalyysin-historiaa"><span class="toc-section-number">1.3</span> Korrespondenssianalyysin historiaa</a></li>
 </ul></li>
-<li><a href="2-data.html#data"><span class="toc-section-number">2</span> Data</a></li>
-<li><a href="3-yksinkertainen-korrespondenssianalyysi.html#yksinkertainen-korrespondenssianalyysi"><span class="toc-section-number">3</span> Yksinkertainen korrespondenssianalyysi</a></li>
+<li class="has-sub"><a href="2-data.html#data"><span class="toc-section-number">2</span> Data</a><ul>
+<li><a href="2-1-aineiston-kuvailu-tietosisalto.html#aineiston-kuvailu-tietosisalto"><span class="toc-section-number">2.1</span> Aineiston kuvailu (tietosisältö)</a></li>
+<li><a href="2-2-aineiston-valinta-tutkimukseen.html#aineiston-valinta-tutkimukseen"><span class="toc-section-number">2.2</span> Aineiston valinta tutkimukseen</a></li>
+<li><a href="2-3-aineiston-kuvailu-tunnuslukuja.html#aineiston-kuvailu-tunnuslukuja"><span class="toc-section-number">2.3</span> Aineiston kuvailu (tunnuslukuja)</a></li>
+</ul></li>
+<li class="has-sub"><a href="3-yksinkertainen-korrespondenssianalyysi.html#yksinkertainen-korrespondenssianalyysi"><span class="toc-section-number">3</span> Yksinkertainen korrespondenssianalyysi</a><ul>
+<li><a href="3-1-aiti-toissa.html#aiti-toissa"><span class="toc-section-number">3.1</span> Äiti töissä</a></li>
+<li><a href="3-2-kahden-muuttujan-frekvenssitaulukon-analyysi.html#kahden-muuttujan-frekvenssitaulukon-analyysi"><span class="toc-section-number">3.2</span> Kahden muuttujan frekvenssitaulukon analyysi</a></li>
+</ul></li>
 <li><a href="4-yksinkertaisen-korrespondenssianalyysi-tulkinnan-syventaminen.html#yksinkertaisen-korrespondenssianalyysi---tulkinnan-syventaminen"><span class="toc-section-number">4</span> Yksinkertaisen korrespondenssianalyysi - tulkinnan syventäminen</a></li>
 <li><a href="5-yksinkertaisen-korrespondenssianalyysin-laajennuksia.html#yksinkertaisen-korrespondenssianalyysin-laajennuksia"><span class="toc-section-number">5</span> Yksinkertaisen korrespondenssianalyysin laajennuksia</a></li>
 <li><a href="lahteet.html#lahteet">Lähteet</a></li>
@@ -78,13 +88,22 @@ img {
 <div class="col-sm-12">
 <div id="tutkielman-tavoite-tutkimusongelma" class="section level2">
 <h2><span class="header-section-number">1.1</span> Tutkielman tavoite (tutkimusongelma?)</h2>
+<p><strong>zxy</strong> Tässä kerrotaan, miksi tämä työ on kirjoitettu. Esitellään menetelmä käyttämällä oikeaa dataa. Täsmällisempi esitys sirotellaan esimerkkiaineiston analyysin tulosten esittelyn lomaan. Pitäisikö tässä tuoda esille ns. “ranskalaisen koulukunnan” matemaattisen perusteiden korostus, ja data-analyysin filosofia? Ehkä ei, koska sen pohdinta ei ole pääasia. Se tietysti mainitaan, ja asiaa pohditaan.</p>
 <p><strong>ks</strong> Esitellään korrespondenssianalyysin käsitteet ja graafisen analyysin periaatteet.</p>
+<p><strong>zxy</strong> -mitä ca on?
+- dimensioiden vähentäminen ja visualisointi
+- mihin dataan se soveltuu
+- määrittele graafinen, deskriptiivinen, eksploratiivinen data-analyysi
+- yksinkertainen ca, useamman muuttujan ca</p>
 <p><strong>ks</strong> Tämän voi tehdä yksinkertaisen korrespondenssianalyysin avulla. Yksinkertainen kahden luokittelumuuttujan
 korrespondenssianalyysi antaa graafisen analyysin “…perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin muodot ovat saman algoritmin soveltamista toisen tyyppiisiin datamatriiseihin, ja tulkintaa sovelletaan vastaavasti
 (with the consequent adaptation of the interpretation)”<span class="citation">(Greenacre ja Hastie <a href="#ref-RefWorks:doc:5a857a44e4b0ed2d44664d84">1987</a> , s. 437)</span></p>
-
+<p><strong>zxy</strong> Miksi eksporatiivinen (määrittele!) ja deskriptiivinen (määrittele!) menetelmä on esitettävä “in vivo”, toiminnassa? Oppikirjoissa (viitteitä) erityisesti MG on havainnolistanut CA:n matemaattista ja geometristä taustaa synteettisillä aineistoilla. Turha kopioida tähän. Menetelmän ydin on yksinkertaisen graafisen esityksen – kartan – avulla tulkita monimutkaisen empiirisen aineiston muuttujien riippuvuuksia. Yhteyksiä ei tiivistetä todennäköisyyspäättelyn kriteereillä tilastolliseen malliin, vaan deskripriivisen analyysin hengessä esitellään koko aineisto. Mallin sijaan vähennetään ulottuvuuksia, ja siinä menetetään informaatiota. Tavoitteena on säilyttää yleensä kaksiulotteisessa kuvassa mahdollisimman suuri osa alkuperäisen datan vaihtelusta. Eksploratiivinen data-analyysi on vuoropuhelua aineiston kanssa. Analyysiä tarkennetaan, rajataan ja muokataan, kun aineisto paljastaa jotain kiinnostavaa tai yllättävää. Tästä saa jonkinlaisen aasinsillan matriisiyhtälöiden puolustukseksi. Saksan ja Belgian datan jakaminen on hyvä esimerkki, on “osattava tarttua” menetelmän tulosmatriiseihin.</p>
+<p><strong>zxy</strong> esitystavan perustelu</p>
+<ul>
+<li>kenelle kirjoitettu? Menetelmästä kiinnostuneelle tilastotieteen ja data-analyysin perusteet tuntevalle. R-ohjelmisto ei ole rajoitus, SPSS ja SAS sopivat. (SPSS - MG:llä kriittinen huomio “loose ends - paperissa” tai CAip-teorialiitteessä).</li>
+</ul>
 </div>
-<!-- </div> -->
 <h3>Lähteet</h3>
 <div id="refs" class="references">
 <div id="ref-RefWorks:doc:5a857a44e4b0ed2d44664d84">
@@ -93,7 +112,7 @@ korrespondenssianalyysi antaa graafisen analyysin “…perussäännöt tulkinna
 </div>
 <p style="text-align: center;">
 <a href="1-johdanto.html"><button class="btn btn-default">Previous</button></a>
-<a href="2-data.html"><button class="btn btn-default">Next</button></a>
+<a href="1-2-kaytetyt-ohjelmistot.html"><button class="btn btn-default">Next</button></a>
 </p>
 </div>
 </div>

@@ -1,7 +1,7 @@
 ---
 title: "Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä"
 author: "Jussi Hirvonen"
-date: "Versio 0.03, tulostettu `r Sys.Date()`"
+date: "Versio 0.04, tulostettu `r Sys.Date()`"
 output: pdf_document
 description: Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä.
 documentclass: book
@@ -49,11 +49,8 @@ library(tinytex)
 
 3. Lähdeviitteiden doi-linkit eivät toimi? Ja näköjään lisätyt ISSP-viitteet eivät toimi PDF-tulostuksessa.
 ! Package natbib Error: Bibliography not compatible with author-year citations.
-
 Error: Failed to compile JH_ca.tex. See JH_ca.log for more info.
-Execution halted
-
-Exited with status 1. Koitin korjailla RefWorksiin, ei auttanut (9.8.18)
+Execution halted Exited with status 1. Koitin korjailla RefWorksiin, ei auttanut (9.8.18), lokitiedostossa listattu ref-id:t joissa ongelmia. Poistin ehkä tarpeettomat http-linkki-viitteet dokumentteihin, ne voi ehkä esittää tekstissä.
 
 
 
