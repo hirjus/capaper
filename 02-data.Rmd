@@ -67,8 +67,28 @@
 
 **viimeinen kappale**
 
-Miten aineistoa on käytetty? "ISSP - saitilla" löytyy bibliografia, ja hakupalveluillakin voi haravoida. Michael Greenacre on käyttänyt aineistoa luentomateriaaleissa (Helsinki 2017 MCA, viite Moodleen?) ja kahdessa oppikirjassa ([@RefWorks:doc:5a857a43e4b0ed2d44664d7c], [@RefWorks:doc:5a857a43e4b0ed2d44664d78]). Blasius ja Thiessen ([@RefWorks:doc:5b15542ee4b0e2616bc42dca]) arvioivat aineiston laatua ja ja maiden vertailtavuutta vuoden 1994 aineistolla.
+Miten aineistoa on käytetty? "ISSP - saitilla" löytyy bibliografia, ja hakupalveluillakin voi haravoida. Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa (Helsinki 2017 MCA, viite Moodleen?) ja kahdessa oppikirjassa ([@RefWorks:doc:5a857a43e4b0ed2d44664d7c], [@RefWorks:doc:5a857a43e4b0ed2d44664d78]).ISSP - aineisto vuodelta 1989 on käytetty myös neljän "singuaariarvohajoitelmaan perustuvan menetelmän" vertailuun[@RefWorks:doc:5b6f159ce4b0bc0f31734b76]. 
+
+ "We consider the joint analysis of two matched matrices which have common
+rows and columns, for example multivariate data observed at two time points or split
+according to a dichotomous variable. Methods of interest include principal components
+analysis for interval-scaled data, correspondence analysis for frequency data, log-ratio
+analysis of compositional data and linear biplots in general, all of which depend on the
+singular value decomposition. A simple result in matrix algebra shows that by setting up
+two matched matrices in a particular block format, matrix sum and difference components
+can be analysed using a single application of the singular value decomposition algorithm.
+The methodology is applied to data from the International Social Survey Program
+comparing male and female attitudes on working wives across eight countries. The resulting
+biplots optimally display the overall cross-cultural differences as well as the male–female
+differences. The case of more than two matched matrices is also discussed."
 
 
-"This paper provides empirically-based criteria for selecting Items and countries to develop measures of an underlying construct of interest that are comparable in cross-national research. Using data from the 1994 International Social Survey Program and applying multiple correspondence analysis to a set of common items in each of the 24 participating countries, we show that both the quality of the data, as well as its underlying structure - and therefore meaning - vary considerably between countries. The approach we use for screening countries and items is especially useful in situations where the psychometric properties of the items have not been well established in previous research"
+Blasius ja Thiessen ([@RefWorks:doc:5b15542ee4b0e2616bc42dca]) arvioivat aineiston laatua ja ja maiden vertailtavuutta vuoden 1994 aineistolla.
+
+"This paper provides empirically-based criteria for selecting Items and countries to develop measures of an underlying construct of interest that are comparable in cross-national research. Using data from the 1994 International Social Survey Program and applying multiple correspondence analysis to a set of common items in each of the 24 participating countries, we show that both the quality of the data, as well as its underlying structure - and therefore meaning - vary considerably between countries. The approach we use for screening countries and items is especially useful in situations where the psychometric properties of the items have not been well established in previous research."
+
+**zxy** www.gesis.org - sivustolta löytyy myös [julkaisuluettelo](https://search.gesis.org/research_data/ZA5900), voiko linkin laittaa alaviitteeksi tai suoraan leipätekstiin?
+
+
+
 

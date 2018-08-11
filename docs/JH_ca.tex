@@ -92,9 +92,23 @@ menetelmä}
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{Versio 0.04, tulostettu 2018-08-11}
+    \date{Versio 0.05, tulostettu 2018-08-11}
 
 
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -109,8 +123,11 @@ menetelmä}
 Ladataan r-paketit, ei tulosteta dokumenttiin. Pelkkä YAML- `front
 matter', lisäkonfiguroinnit tiedostoissa \_bookdown.yml ja \_output.yml.
 
-Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti (ei
-vielä).
+Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti
+\_bookdown.yml-tiedostossa.
+
+RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla),
+ja korjailla skandit jos niissä on vikaa.
 
 \textbf{Ideoita}
 
@@ -119,18 +136,13 @@ vielä).
 \item
   Ehkä automaattista R-kirjastojen dokumentointia voisi harkita?
 \item
-  Saako gitbook-tulosteessa päälle asetuksen code\_folding: hide? Vaatii
-  teeman (theme), jos tarpeen voi lisätä \_output.yml - tiedostoon esim.
-  html\_book - formaatin.
+  Gitbook-tulosteessa ei saa koodia ``piilotettua'', asetus
+  ``code\_folding: hide'' vaatii teeman (theme). \_output.yml -
+  tiedostoon lisätty html\_book - formaatti, siinä voi tarvittaessa
+  käyttää piilotusta.
 \item
-  Lähdeviitteiden doi-linkit eivät toimi? Ja näköjään lisätyt
-  ISSP-viitteet eivät toimi PDF-tulostuksessa. ! Package natbib Error:
-  Bibliography not compatible with author-year citations. Error: Failed
-  to compile JH\_ca.tex. See JH\_ca.log for more info. Execution halted
-  Exited with status 1. Koitin korjailla RefWorksiin, ei auttanut
-  (9.8.18), lokitiedostossa listattu ref-id:t joissa ongelmia. Poistin
-  ehkä tarpeettomat http-linkki-viitteet dokumentteihin, ne voi ehkä
-  esittää tekstissä.
+  Versiointi: 0.0n aloittelua, 0.n jäsentely koko paperille, 1.n.n
+  valmiimpaa tekstiä.
 \end{enumerate}
 
 \hypertarget{johdanto}{%
@@ -390,11 +402,32 @@ yksinkertaistus, menetelmän esittelyn vuoksi)
 
 Miten aineistoa on käytetty? ``ISSP - saitilla'' löytyy bibliografia, ja
 hakupalveluillakin voi haravoida. Michael Greenacre on käyttänyt
-aineistoa luentomateriaaleissa (Helsinki 2017 MCA, viite Moodleen?) ja
-kahdessa oppikirjassa (\citep{RefWorks:doc:5a857a43e4b0ed2d44664d7c},
-\citep{RefWorks:doc:5a857a43e4b0ed2d44664d78}). Blasius ja Thiessen
-(\citep{RefWorks:doc:5b15542ee4b0e2616bc42dca}) arvioivat aineiston
-laatua ja ja maiden vertailtavuutta vuoden 1994 aineistolla.
+aineistoa eri vuosilta luentomateriaaleissa (Helsinki 2017 MCA, viite
+Moodleen?) ja kahdessa oppikirjassa
+(\citep{RefWorks:doc:5a857a43e4b0ed2d44664d7c},
+\citep{RefWorks:doc:5a857a43e4b0ed2d44664d78}).ISSP - aineisto vuodelta
+1989 on käytetty myös neljän ``singuaariarvohajoitelmaan perustuvan
+menetelmän'' vertailuun\citep{RefWorks:doc:5b6f159ce4b0bc0f31734b76}.
+
+``We consider the joint analysis of two matched matrices which have
+common rows and columns, for example multivariate data observed at two
+time points or split according to a dichotomous variable. Methods of
+interest include principal components analysis for interval-scaled data,
+correspondence analysis for frequency data, log-ratio analysis of
+compositional data and linear biplots in general, all of which depend on
+the singular value decomposition. A simple result in matrix algebra
+shows that by setting up two matched matrices in a particular block
+format, matrix sum and difference components can be analysed using a
+single application of the singular value decomposition algorithm. The
+methodology is applied to data from the International Social Survey
+Program comparing male and female attitudes on working wives across
+eight countries. The resulting biplots optimally display the overall
+cross-cultural differences as well as the male--female differences. The
+case of more than two matched matrices is also discussed.''
+
+Blasius ja Thiessen (\citep{RefWorks:doc:5b15542ee4b0e2616bc42dca})
+arvioivat aineiston laatua ja ja maiden vertailtavuutta vuoden 1994
+aineistolla.
 
 ``This paper provides empirically-based criteria for selecting Items and
 countries to develop measures of an underlying construct of interest
@@ -405,7 +438,11 @@ countries, we show that both the quality of the data, as well as its
 underlying structure - and therefore meaning - vary considerably between
 countries. The approach we use for screening countries and items is
 especially useful in situations where the psychometric properties of the
-items have not been well established in previous research''
+items have not been well established in previous research.''
+
+\textbf{zxy} www.gesis.org - sivustolta löytyy myös
+\href{https://search.gesis.org/research_data/ZA5900}{julkaisuluettelo},
+voiko linkin laittaa alaviitteeksi tai suoraan leipätekstiin?
 
 \hypertarget{yksinkertainen-korrespondenssianalyysi}{%
 \chapter{Yksinkertainen
