@@ -38,3 +38,7 @@ Versio 0.02 : lisättty lähdeviiteitä ja päivitetty bibtex-viitetiedosto.
 
 Jäsentelyä data-lukuun. Lisäsin ISSP-viitteitä RefWorksiin, ja ne rikkoivat PDF-version viitteidenhallinnan, nyt vain gitbook-tuloste. Korjaillaan,
 tai poistetaan, ISSP-dokumentaatioon on hankalaa viitata. www.gesis.org on sekava sivusto!
+
+**11.8.2018**
+
+Pieniä lisäyksiä tekstiin, lähdeviitteitä, skandien aiheuttamia ongelmia kummasteltu bibtex - viitekannan pdf-käsittelyssä. PDF ja gitbook toimivat, tallennetaan ark-hakemistoon nämä.

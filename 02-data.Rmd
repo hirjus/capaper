@@ -9,7 +9,9 @@
 
 **ks**
 
-**zxy** Mksi data sovelutuu korrespondenssianalyysin esittelyyn?
+**zxy** Miksi data sovelutuu korrespondenssianalyysin esittelyyn? Iso ja monimutkainen (kansainvälinen, datan laaut? kts. Blasius-viite alempana), sisällölliset muuttuja nominaaliasteikolla (kysymyspatterit, Likert), laadukas hyvin dokumentoitu aineisto.
+
+**zxy** Onko itse asia kiinnostava? (Kantolan kolumni, HS).
 
 **ks** Kokoava kappale, ja sen perään tarkentavat
 

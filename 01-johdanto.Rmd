@@ -51,6 +51,20 @@ korrespondenssianalyysi antaa graafisen analyysin "...perussäännöt tulkinnall
 
 - kenelle kirjoitettu? Menetelmästä kiinnostuneelle tilastotieteen ja data-analyysin perusteet tuntevalle. R-ohjelmisto ei ole rajoitus, SPSS ja SAS sopivat. (SPSS - MG:llä kriittinen huomio "loose ends - paperissa" tai CAip-teorialiitteessä).
 
+## Tärkeimmät lähteet ja ohjelmistot
+
+**zxy** Tarvitaanko tämä, perustelu? Muutamat lähteet aivan keskeisiä, ja MG:n kurssi pitää mainita.
+
+## Lähteet
+
+Michael Greenacre luennoi lyhyen kurssin korrespondenssianalyysistä Helsingin yliopistossa keväällä 2017[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca]. Luennot ja laskuharjoitukset perehdyttivät minut ensimmäistä kertaa tähän menetelmään, ja kurssin materiaaleihin olen usein palannut. Niihin voi tutustua Helsingin yliopiston [Moodle-palvelussa] (https://moodle.helsinki.fi) (käyttäjätunnus vaaditaan). Greenacren kärsivällisesti kirjoitetut perusoppikirjat ovat tehneet menetelmää laajasti tunnetuksi englantia lukeville.
+
+Ranskalaisen lähestymistan perusoppikirja[@RefWorks:doc:5a857a43e4b0ed2d44664d75] esittelee menetelmän matemaattiset perusteet. Lyhyt historiallinen katsaus ja menetelmä soveltamisen perusajatusten esittely valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita. Kirjoittajat esittelevät perusteellisesti joitain empiirisiä tutkimuksia, ja lyhyt mutta naseva matriisilaskennan kritiikki on hyvä panna merkille.
+
+Korrespondenssianalyysi tuli osaksi suomalaista Survo-ohjelmistoa jo vuonna (**????**), ja menetelmää on esitelty ainakin kahdessa oppikirjassa[@RefWorks:doc:5a857a44e4b0ed2d44664d95] ja [@RefWorks:doc:5a857a44e4b0ed2d44664da4].
+
+
+
 ## Käytetyt ohjelmistot
 
 **zxy** R, ca-paketti. löytyy myös muita paketteja. Rmarkdown[@RefWorks:doc:5b6b346fe4b0c619b11b8a3e], ja bookdown ([@RefWorks:doc:5b6b36dde4b09b7ec442bf8b] ja toinen viite [@R-bookdown]). Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.
