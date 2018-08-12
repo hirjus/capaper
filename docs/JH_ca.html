@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä" />
+<meta property="og:type" content="book" />
+
+
+<meta property="og:description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä." />
+
+
+<meta name="author" content="Jussi Hirvonen" />
+
+
+
+<meta name="description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä.">
+
+<title>Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script src="libs/navigation-1.1/codefolding.js"></script>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="#alkutoimia">Alkutoimia</a></li>
+<li class="has-sub"><a href="#johdanto"><span class="toc-section-number">1</span> Johdanto</a><ul>
+<li><a href="#tutkielman-tavoite-tutkimusongelma"><span class="toc-section-number">1.1</span> Tutkielman tavoite (tutkimusongelma?)</a></li>
+<li class="has-sub"><a href="#tarkeimmat-lahteet-ja-ohjelmistot"><span class="toc-section-number">1.2</span> Tärkeimmät lähteet ja ohjelmistot</a><ul>
+<li><a href="#lahteet"><span class="toc-section-number">1.2.1</span> Lähteet</a></li>
+<li><a href="#kaytetyt-ohjelmistot"><span class="toc-section-number">1.2.2</span> Käytetyt ohjelmistot</a></li>
+</ul></li>
+<li><a href="#korrespondenssianalyysin-historiaa"><span class="toc-section-number">1.3</span> Korrespondenssianalyysin historiaa</a></li>
+</ul></li>
+<li class="has-sub"><a href="#data"><span class="toc-section-number">2</span> Data</a><ul>
+<li><a href="#aineiston-kuvailu-tietosisalto"><span class="toc-section-number">2.1</span> Aineiston kuvailu (tietosisältö)</a></li>
+<li><a href="#aineiston-rajaaminen"><span class="toc-section-number">2.2</span> Aineiston rajaaminen</a></li>
+<li><a href="#aineiston-kuvailu-tunnuslukuja"><span class="toc-section-number">2.3</span> Aineiston kuvailu (tunnuslukuja)</a></li>
+</ul></li>
+<li class="has-sub"><a href="#yksinkertainen-korrespondenssianalyysi"><span class="toc-section-number">3</span> Yksinkertainen korrespondenssianalyysi</a><ul>
+<li><a href="#aiti-toissa"><span class="toc-section-number">3.1</span> Äiti töissä</a></li>
+<li><a href="#kahden-muuttujan-frekvenssitaulukon-analyysi"><span class="toc-section-number">3.2</span> Kahden muuttujan frekvenssitaulukon analyysi</a></li>
+</ul></li>
+<li><a href="#yksinkertaisen-korrespondenssianalyysi---tulkinnan-syventaminen"><span class="toc-section-number">4</span> Yksinkertaisen korrespondenssianalyysi - tulkinnan syventäminen</a></li>
+<li><a href="#yksinkertaisen-korrespondenssianalyysin-laajennuksia"><span class="toc-section-number">5</span> Yksinkertaisen korrespondenssianalyysin laajennuksia</a></li>
+<li><a href="#lahteet-1">Lähteet</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="header">
+<h1 class="title">Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</h1>
+<h4 class="author"><em>Jussi Hirvonen</em></h4>
+<h4 class="date"><em>Versio 0.06, tulostettu 2018-08-12</em></h4>
+</div>
+<div id="alkutoimia" class="section level1 unnumbered">
+<h1>Alkutoimia</h1>
+<p>Ladataan r-paketit, ei tulosteta dokumenttiin. Pelkkä YAML- ‘front matter’, lisäkonfiguroinnit tiedostoissa _bookdown.yml ja _output.yml.</p>
+<p>Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti _bookdown.yml-tiedostossa.</p>
+<p>RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla), ja korjailla skandit jos niissä on vikaa.</p>
+<p><strong>Ideoita</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Ehkä automaattista R-kirjastojen dokumentointia voisi harkita?</p></li>
+<li><p>Gitbook-tulosteessa ei saa koodia “piilotettua”, asetus “code_folding: hide” vaatii teeman (theme). _output.yml - tiedostoon lisätty html_book - formaatti, siinä voi tarvittaessa käyttää piilotusta.</p></li>
+<li><p>Versiointi: 0.0n aloittelua, 0.n jäsentely koko paperille, 1.n.n valmiimpaa tekstiä.</p></li>
+</ol>
+
+</div>
+<div id="johdanto" class="section level1">
+<h1><span class="header-section-number">Luku 1</span> Johdanto</h1>
+<p><strong>xyz</strong> Kirjoitetaan disposition pohjalta, keräillään kaikki yleiset ca-luonnehdinnat yhteen paikkaan eli johdantoon.</p>
+<p><strong>Mahdollisia lisäyksiä</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Lyhyt esitys CA:n historiasta (vai omaksi luvuksi, luku 2)?</p></li>
+<li><p>Käytetyt ohjelmistot, tekninen ympäristö ml. bookdown-asetukset. Ehkä paremmin omaksi liitteeksi?</p></li>
+<li><p>Tavoitteet, sisältö, rajaukset (jota voi myöhemmin täydentää)</p></li>
+<li><p>Muutamat puutteet, onko kerrottava tässä?</p></li>
+</ol>
+<ul>
+<li><p>data: ei huomioida sitä, että otoskoot vaihtelevat aika paljon eli “maapainot” eri suuruisia</p></li>
+<li><p>ei huomioida muitakaan otantaan liittyviä asioita (tämä ainakin mainittava data-osuudessa)</p></li>
+<li><p>kuvaileva menetelmä, mutta mikä on tutkimusongelma? Sellainen pitäisi olla.</p></li>
+</ul>
+<p>**zxy* Mitä on korrespondenssianalyysi? Muutamalla kappaleella. Yksi kappale historiasta.</p>
+<div id="tutkielman-tavoite-tutkimusongelma" class="section level2">
+<h2><span class="header-section-number">1.1</span> Tutkielman tavoite (tutkimusongelma?)</h2>
+<p><strong>zxy</strong> Tässä kerrotaan, miksi tämä työ on kirjoitettu. Esitellään menetelmä käyttämällä oikeaa dataa. Täsmällisempi esitys sirotellaan esimerkkiaineiston analyysin tulosten esittelyn lomaan. Pitäisikö tässä tuoda esille ns. “ranskalaisen koulukunnan” matemaattisen perusteiden korostus, ja data-analyysin filosofia? Ehkä ei, koska sen pohdinta ei ole pääasia. Se tietysti mainitaan, ja asiaa pohditaan.</p>
+<p><strong>ks</strong> Esitellään korrespondenssianalyysin käsitteet ja graafisen analyysin periaatteet.</p>
+<p><strong>zxy</strong> -mitä ca on?
+- dimensioiden vähentäminen ja visualisointi
+- mihin dataan se soveltuu
+- määrittele graafinen, deskriptiivinen, eksploratiivinen data-analyysi
+- yksinkertainen ca, useamman muuttujan ca</p>
+<p><strong>ks</strong> Tämän voi tehdä yksinkertaisen korrespondenssianalyysin avulla. Yksinkertainen kahden luokittelumuuttujan
+korrespondenssianalyysi antaa graafisen analyysin “…perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin muodot ovat saman algoritmin soveltamista toisen tyyppiisiin datamatriiseihin, ja tulkintaa sovelletaan vastaavasti
+(with the consequent adaptation of the interpretation)”<span class="citation">(Greenacre ja Hastie <a href="#ref-RefWorks:doc:5a857a44e4b0ed2d44664d84">1987</a> , s. 437)</span></p>
+<p><strong>zxy</strong> Miksi eksporatiivinen (määrittele!) ja deskriptiivinen (määrittele!) menetelmä on esitettävä “in vivo”, toiminnassa? Oppikirjoissa (viitteitä) erityisesti MG on havainnolistanut CA:n matemaattista ja geometristä taustaa synteettisillä aineistoilla. Turha kopioida tähän. Menetelmän ydin on yksinkertaisen graafisen esityksen – kartan – avulla tulkita monimutkaisen empiirisen aineiston muuttujien riippuvuuksia. Yhteyksiä ei tiivistetä todennäköisyyspäättelyn kriteereillä tilastolliseen malliin, vaan deskripriivisen analyysin hengessä esitellään koko aineisto. Mallin sijaan vähennetään ulottuvuuksia, ja siinä menetetään informaatiota. Tavoitteena on säilyttää yleensä kaksiulotteisessa kuvassa mahdollisimman suuri osa alkuperäisen datan vaihtelusta. Eksploratiivinen data-analyysi on vuoropuhelua aineiston kanssa. Analyysiä tarkennetaan, rajataan ja muokataan, kun aineisto paljastaa jotain kiinnostavaa tai yllättävää. Tästä saa jonkinlaisen aasinsillan matriisiyhtälöiden puolustukseksi. Saksan ja Belgian datan jakaminen on hyvä esimerkki, on “osattava tarttua” menetelmän tulosmatriiseihin.</p>
+<p><strong>zxy</strong> esitystavan perustelu</p>
+<ul>
+<li>kenelle kirjoitettu? Menetelmästä kiinnostuneelle tilastotieteen ja data-analyysin perusteet tuntevalle. R-ohjelmisto ei ole rajoitus, SPSS ja SAS sopivat. (SPSS - MG:llä kriittinen huomio “loose ends - paperissa” tai CAip-teorialiitteessä).</li>
+</ul>
+</div>
+<div id="tarkeimmat-lahteet-ja-ohjelmistot" class="section level2">
+<h2><span class="header-section-number">1.2</span> Tärkeimmät lähteet ja ohjelmistot</h2>
+<p><strong>zxy</strong> Tarvitaanko tämä, perustelu? Muutamat lähteet aivan keskeisiä, ja MG:n kurssi pitää mainita.</p>
+<div id="lahteet" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Lähteet</h3>
+<p>Michael Greenacre luennoi lyhyen kurssin korrespondenssianalyysistä Helsingin yliopistossa keväällä 2017<span class="citation">(M. Greenacre <a href="#ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca">2017</a>)</span>. Luennot ja laskuharjoitukset perehdyttivät minut ensimmäistä kertaa tähän menetelmään, ja kurssin materiaaleihin olen usein palannut. Niihin voi tutustua Helsingin yliopiston [Moodle-palvelussa] (<a href="https://moodle.helsinki.fi" class="uri">https://moodle.helsinki.fi</a>) (käyttäjätunnus vaaditaan). Greenacren kärsivällisesti kirjoitetut perusoppikirjat ovat tehneet menetelmää laajasti tunnetuksi englantia lukeville.</p>
+<p>Ranskalaisen lähestymistan perusoppikirja<span class="citation">(Roux ja Rouanet <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75">2004</a>)</span> esittelee menetelmän matemaattiset perusteet. Lyhyt historiallinen katsaus ja menetelmä soveltamisen perusajatusten esittely valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita. Kirjoittajat esittelevät perusteellisesti joitain empiirisiä tutkimuksia, ja lyhyt mutta naseva matriisilaskennan kritiikki on hyvä panna merkille.</p>
+<p>Korrespondenssianalyysi tuli osaksi suomalaista Survo-ohjelmistoa jo vuonna (<strong>????</strong>), ja menetelmää on esitelty ainakin kahdessa oppikirjassa<span class="citation">(Mustonen <a href="#ref-RefWorks:doc:5a857a44e4b0ed2d44664d95">1995</a>)</span> ja <span class="citation">(Vehkalahti <a href="#ref-RefWorks:doc:5a857a44e4b0ed2d44664da4">2008</a>)</span>.</p>
+</div>
+<div id="kaytetyt-ohjelmistot" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Käytetyt ohjelmistot</h3>
+<p><strong>zxy</strong> R, ca-paketti. löytyy myös muita paketteja. Rmarkdown<span class="citation">(Yihui Xie <a href="#ref-RefWorks:doc:5b6b346fe4b0c619b11b8a3e">2018</a>)</span>, ja bookdown (<span class="citation">(Xie <a href="#ref-RefWorks:doc:5b6b36dde4b09b7ec442bf8b">2016</a>)</span> ja toinen viite <span class="citation">(Xie <a href="#ref-R-bookdown">2018</a>)</span>). Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.</p>
+<p><strong>zxy</strong> Helposti toistettavan tutkimukset periaatteet</p>
+<ol style="list-style-type: decimal">
+<li>Datasta (löytyy netistä, samoin kattava dokumentaatio) lyhyt matka analyysiin.</li>
+<li>Koodi selkeää ja dokumentoitua</li>
+<li>R, LaTeX, pandoc - versiot dokumentoidaan</li>
+</ol>
+<p>Tarkemmin liittessä.</p>
+</div>
+</div>
+<div id="korrespondenssianalyysin-historiaa" class="section level2">
+<h2><span class="header-section-number">1.3</span> Korrespondenssianalyysin historiaa</h2>
+<p><strong>zxy</strong> Tiivis esitys lähteineen. Ehkä asiaan palataan kun itse menetelmä on esitelty?</p>
+
+</div>
+</div>
+<div id="data" class="section level1">
+<h1><span class="header-section-number">Luku 2</span> Data</h1>
+<p><strong>zxy</strong> Voisi miettiä paremman otsikon. Galku-paperin alusta on lisäilty viitteitä Refworksiin, mutta hieman hanklaa. www.gesis.org - sivusto on aika sekava. Virallinen (heidän määrittelemä) sitaatti löytyy, ja linkkejä. Tässä voisi ehkä käyttää alaviitettä, jossa tarjoaisi linkit? Tai ihan oma lyhyt kappale? Alla virallinen viite, ja tässä kaksi muuta ([RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a] ja [RefWorks:doc:5b6c7debe4b0e4e15164ab00]). Löytyy myös seurantaraportti([RefWorks:doc:5b155e0ce4b044dfd738458f]). <strong>viitteet pois- ehkä tekstiin linkkeinä?</strong></p>
+<p><strong>ks</strong> ISSP (International social survey) on tehnyt laajoja kansainvälisiä kyselytutkimuksia eri teemoista. Yksi teemoista on perhe ja muuttuvat (sosiaalisesti määräytyvät) sukupuoliroolit <span class="citation">(Jorat ym. <a href="#ref-RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a">2016</a>)</span>.</p>
+<p><strong>zxy</strong> Miksi data on kiinnostava sisällöllisesti? Viite Kantola (HS). Lisäksi laadukas, usealta vuodelta, tarkasti dokumentoitu.</p>
+<p><strong>ks</strong></p>
+<p><strong>zxy</strong> Miksi data sovelutuu korrespondenssianalyysin esittelyyn? Iso ja monimutkainen (kansainvälinen, datan laaut? kts. Blasius-viite alempana), sisällölliset muuttuja nominaaliasteikolla (kysymyspatterit, Likert), laadukas hyvin dokumentoitu aineisto.</p>
+<p><strong>zxy</strong> Onko itse asia kiinnostava? (Kantolan kolumni, HS).</p>
+<p><strong>ks</strong> Kokoava kappale, ja sen perään tarkentavat</p>
+<p><strong>ks1</strong></p>
+<p><strong>ks2</strong></p>
+<p><strong>ks-n</strong></p>
+<p><strong>zxy</strong> Aineiston ongelmat ja puutteet (tavanomaisten surveyaineistojen ongelmien lisäksi, erityisesti vastauskadon). Kato erikseen, oikeastaan hyvä juttu koska CA soveltuu sen analyysiin.</p>
+<p><strong>zxy</strong> Aineisto kuvattava <strong>sisällön</strong> (mitä asiaa, ilmiötä, tällä datalla halutaan valaista), <strong>para- ja metadatan</strong> näkökulmasta (tai ainakin kerrottava mitä on saatavilla). Kolmanneksi aineiston “tilastotieteellinen olemus”: otanta-asetelmat, kansalliset versioinnit, harmonisoinnit (esim. puoluekenttä vertailukelpoiseksi).</p>
+<ol style="list-style-type: decimal">
+<li><p>Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu tarkentaa tai muuten hifistellä. Osa kummallisa, erityisesti neutraalin vaihtoehdon puuttuminen (Espanja). Nämä maat pitää sivuuttaa.</p></li>
+<li><p>Datassa painot “maatasolle”, otanta sun muu kuvattu tarkasti dokumentaatiossa. Jos tutkimusongelma on maiden erojen analyysi, mitään vertailupainoja ei ole käytössä. Otoskoko on paino. Paha juttu, MG oikaisee ja ja oikaisee myös sukupuolien osuudet.</p></li>
+</ol>
+<div id="aineiston-kuvailu-tietosisalto" class="section level2">
+<h2><span class="header-section-number">2.1</span> Aineiston kuvailu (tietosisältö)</h2>
+<p><strong>Jäsennys:</strong></p>
+<ol style="list-style-type: decimal">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</div>
+<div id="aineiston-rajaaminen" class="section level2">
+<h2><span class="header-section-number">2.2</span> Aineiston rajaaminen</h2>
+<p><strong>zxy</strong> Viitteitä myös r-ratkaisuihin, jotka selostetaan koodissa. Erityisesti (a) puuttuvat tiedot ja (b) likert-asteikko faktorina (ilman järjestystä).</p>
+<p><strong>puuttuvat</strong> vastaukset aluksi pois (rankka rajaus - vain yksinkertaistus, menetelmän esittelyn vuoksi)</p>
+<p><strong>zxy</strong> Aluksi kuusi maata</p>
+<p><strong>zxy</strong> Sitten monta maata</p>
+</div>
+<div id="aineiston-kuvailu-tunnuslukuja" class="section level2">
+<h2><span class="header-section-number">2.3</span> Aineiston kuvailu (tunnuslukuja)</h2>
+<p><strong>zxy</strong> ehkäpä taulukoiden lisäksi Likert-kuva?</p>
+<p><strong>viimeinen kappale</strong></p>
+<p>Miten aineistoa on käytetty? “ISSP - saitilla” löytyy bibliografia, ja hakupalveluillakin voi haravoida. Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa (Helsinki 2017 MCA, viite Moodleen?) ja kahdessa oppikirjassa (<span class="citation">(Greenacre <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c">2010</a>)</span>, <span class="citation">(M. J. Greenacre <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78">2017</a>)</span>).ISSP - aineisto vuodelta 1989 on käytetty myös neljän “singuaariarvohajoitelmaan perustuvan menetelmän” vertailuun<span class="citation">(Greenacre <a href="#ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76">2003</a>)</span>.</p>
+<p>“We consider the joint analysis of two matched matrices which have common
+rows and columns, for example multivariate data observed at two time points or split
+according to a dichotomous variable. Methods of interest include principal components
+analysis for interval-scaled data, correspondence analysis for frequency data, log-ratio
+analysis of compositional data and linear biplots in general, all of which depend on the
+singular value decomposition. A simple result in matrix algebra shows that by setting up
+two matched matrices in a particular block format, matrix sum and difference components
+can be analysed using a single application of the singular value decomposition algorithm.
+The methodology is applied to data from the International Social Survey Program
+comparing male and female attitudes on working wives across eight countries. The resulting
+biplots optimally display the overall cross-cultural differences as well as the male–female
+differences. The case of more than two matched matrices is also discussed.”</p>
+<p>Blasius ja Thiessen (<span class="citation">(Blasius ja Thiessen <a href="#ref-RefWorks:doc:5b15542ee4b0e2616bc42dca">2006</a>)</span>) arvioivat aineiston laatua ja ja maiden vertailtavuutta vuoden 1994 aineistolla.</p>
+<p>“This paper provides empirically-based criteria for selecting Items and countries to develop measures of an underlying construct of interest that are comparable in cross-national research. Using data from the 1994 International Social Survey Program and applying multiple correspondence analysis to a set of common items in each of the 24 participating countries, we show that both the quality of the data, as well as its underlying structure - and therefore meaning - vary considerably between countries. The approach we use for screening countries and items is especially useful in situations where the psychometric properties of the items have not been well established in previous research.”</p>
+<p><strong>zxy</strong> www.gesis.org - sivustolta löytyy myös <a href="https://search.gesis.org/research_data/ZA5900">julkaisuluettelo</a>, voiko linkin laittaa alaviitteeksi tai suoraan leipätekstiin?</p>
+
+</div>
+</div>
+<div id="yksinkertainen-korrespondenssianalyysi" class="section level1">
+<h1><span class="header-section-number">Luku 3</span> Yksinkertainen korrespondenssianalyysi</h1>
+<p><strong>zxy</strong> Tässä yksi kysymys, kuusi maata, peruskäsitteet lopussa</p>
+<p><strong>zxy</strong> Luvun tärkeimmät asiat; mitä on luvassa?</p>
+<div id="aiti-toissa" class="section level2">
+<h2><span class="header-section-number">3.1</span> Äiti töissä</h2>
+<p><strong>zxy</strong> Edellisessä luvussa on esitelyt aineisto, ja kerrottu rajaukset. Voidaan siis mennä suoraan asiaan. Luvun alussa kerrotaan, mikä juoni luvussa on.</p>
+</div>
+<div id="kahden-muuttujan-frekvenssitaulukon-analyysi" class="section level2">
+<h2><span class="header-section-number">3.2</span> Kahden muuttujan frekvenssitaulukon analyysi</h2>
+<p><strong>zxy</strong> graafiset tulokset ja niiden tulkinnan perusteet</p>
+
+</div>
+</div>
+<div id="yksinkertaisen-korrespondenssianalyysi---tulkinnan-syventaminen" class="section level1">
+<h1><span class="header-section-number">Luku 4</span> Yksinkertaisen korrespondenssianalyysi - tulkinnan syventäminen</h1>
+<p><strong>xyz</strong> Tarkasti läpi keskeiset tulokset ja niiden tulkinta, kaavat, ja ytimenä eri kuvat eli kartat.</p>
+
+</div>
+<div id="yksinkertaisen-korrespondenssianalyysin-laajennuksia" class="section level1">
+<h1><span class="header-section-number">Luku 5</span> Yksinkertaisen korrespondenssianalyysin laajennuksia</h1>
+<p><strong>xyz</strong> Yksinkertainen korrespondenssianalyysi on menetelmän tulkinnan perusta. Perusasetelmaa kahden luokittelumuuttujan ristiintaulukoinnista voidaan laajentaa monipuolisempiin tutkimusasetelmiin. Varsinainen useamman muuttujan korrespondenssianalyysi (MCA - multiple correspondence analysis) esitellään seuraavassa luvussa.</p>
+
+</div>
+<div id="lahteet-1" class="section level1 unnumbered">
+<h1>Lähteet</h1>
+
+<div id="refs" class="references">
+<div id="ref-RefWorks:doc:5b15542ee4b0e2616bc42dca">
+<p>Blasius, Jörg, ja Victor Thiessen. 2006. ”Assessing Data Quality and Construct Comparability in Cross-National Surveys”. <em>European Sociological Review</em> 22 (3): 229–42. <a href="http://www.jstor.org/stable/3806519" class="uri">http://www.jstor.org/stable/3806519</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76">
+<p>Greenacre, Michael. 2003. ”Singular value decomposition of matched matrices”. <em>Journal of Applied Statistics</em> 30 (10): 1101–13. <a href="https://doi.org/10.1080/0266476032000107132" class="uri">https://doi.org/10.1080/0266476032000107132</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca">
+<p>———. 2017. ”Multiple Correspondence Analysis (MCA): Theory and Practice, spring 2017 (University of Helsinki )”. <a href="https://moodle.helsinki.fi/course/search.php?search=correspondence+analysis" class="uri">https://moodle.helsinki.fi/course/search.php?search=correspondence+analysis</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5a857a44e4b0ed2d44664d84">
+<p>Greenacre, Michael, ja Trevor Hastie. 1987. ”The Geometric Interpretation of Correspondence Analysis”. <em>Journal of the American Statistical Association</em> 82 (398): 437–47. <a href="https://doi.org/10.1080/01621459.1987.10478446" class="uri">https://doi.org/10.1080/01621459.1987.10478446</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c">
+<p>Greenacre, Michael J. 2010. <em>Biplots in Practice</em>. Bilbao, Spain: Fundacion BBVA.</p>
+</div>
+<div id="ref-RefWorks:doc:5a857a43e4b0ed2d44664d78">
+<p>———. 2017. <em>Correspondence analysis in practice</em>. Third edition. Boca Raton, Florida: CRC Press. <a href="https://helka.finna.fi/Record/helka.3029760" class="uri">https://helka.finna.fi/Record/helka.3029760</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a">
+<p>Jorat, Jorge R., Ann Evans, Franz H ollinger, Lilia Dimova, Canada Carleton University Survey Centre Ottawa, Lulu Li, Carolina Segovia, ym. 2016. ”International Social Survey Programme: Family and Changing Gender Roles IV - ISSP 2012”. <a href="https://doi.org/10.4232/1.12661&quot;" class="uri">https://doi.org/10.4232/1.12661&quot;</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5a857a44e4b0ed2d44664d95">
+<p>Mustonen, Seppo. 1995. <em>Tilastolliset monimuuttujamenetelmät</em>. Helsinki: Survo Systems. <a href="http://www.survo.fi/mustonen/monim.pdf" class="uri">http://www.survo.fi/mustonen/monim.pdf</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5a857a43e4b0ed2d44664d75">
+<p>Roux, Brigitte Le, ja Henry Rouanet. 2004. <em>Geometric data analysis: from correspondence analysis to structured data analysis</em>. Dordrecht: Kluwer Academic Publishers.</p>
+</div>
+<div id="ref-RefWorks:doc:5a857a44e4b0ed2d44664da4">
+<p>Vehkalahti, Kimmo. 2008. <em>Kyselytutkimuksen mittarit ja menetelmät</em>. Helsinki: Tammi. <a href="https://helka.finna.fi/Record/helka.2120450" class="uri">https://helka.finna.fi/Record/helka.2120450</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5b6b36dde4b09b7ec442bf8b">
+<p>Xie, Yihui. 2016. <em>bookdown: Authoring Books and Technical Documents with R Markdown</em>. Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/bookdown/" class="uri">https://bookdown.org/yihui/bookdown/</a>.</p>
+</div>
+<div id="ref-R-bookdown">
+<p>———. 2018. <em>bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown" class="uri">https://CRAN.R-project.org/package=bookdown</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5b6b346fe4b0c619b11b8a3e">
+<p>Yihui Xie, Garrett Grolemund, J. J. Allaire. 2018. <em>R Markdown: The Definitive Guide</em>. Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/rmarkdown/" class="uri">https://bookdown.org/yihui/rmarkdown/</a>.</p>
+</div>
+</div>
+</div>
+<p style="text-align: center;">
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

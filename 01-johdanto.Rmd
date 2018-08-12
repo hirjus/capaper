@@ -55,7 +55,7 @@ korrespondenssianalyysi antaa graafisen analyysin "...perussäännöt tulkinnall
 
 **zxy** Tarvitaanko tämä, perustelu? Muutamat lähteet aivan keskeisiä, ja MG:n kurssi pitää mainita.
 
-## Lähteet
+### Lähteet
 
 Michael Greenacre luennoi lyhyen kurssin korrespondenssianalyysistä Helsingin yliopistossa keväällä 2017[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca]. Luennot ja laskuharjoitukset perehdyttivät minut ensimmäistä kertaa tähän menetelmään, ja kurssin materiaaleihin olen usein palannut. Niihin voi tutustua Helsingin yliopiston [Moodle-palvelussa] (https://moodle.helsinki.fi) (käyttäjätunnus vaaditaan). Greenacren kärsivällisesti kirjoitetut perusoppikirjat ovat tehneet menetelmää laajasti tunnetuksi englantia lukeville.
 
@@ -65,7 +65,7 @@ Korrespondenssianalyysi tuli osaksi suomalaista Survo-ohjelmistoa jo vuonna (**?
 
 
 
-## Käytetyt ohjelmistot
+### Käytetyt ohjelmistot
 
 **zxy** R, ca-paketti. löytyy myös muita paketteja. Rmarkdown[@RefWorks:doc:5b6b346fe4b0c619b11b8a3e], ja bookdown ([@RefWorks:doc:5b6b36dde4b09b7ec442bf8b] ja toinen viite [@R-bookdown]). Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.
 

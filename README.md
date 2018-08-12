@@ -1,4 +1,4 @@
-﻿Tutkielma R Markdownilla ja **bookdown** - paketilla. (https://github.com/rstudio/bookdown). Bookdownin ohjeet löytyvät täältä  (https://bookdown.org/). Oma testidokumentti on (https://hirjus.github.io/test1/).
+Tutkielma R Markdownilla ja **bookdown** - paketilla. (https://github.com/rstudio/bookdown). Bookdownin ohjeet löytyvät täältä  (https://bookdown.org/). Oma testidokumentti on (https://hirjus.github.io/test1/).
 
 **31.7.2018**
 
@@ -42,3 +42,8 @@ tai poistetaan, ISSP-dokumentaatioon on hankalaa viitata. www.gesis.org on sekav
 **11.8.2018**
 
 Pieniä lisäyksiä tekstiin, lähdeviitteitä, skandien aiheuttamia ongelmia kummasteltu bibtex - viitekannan pdf-käsittelyssä. PDF ja gitbook toimivat, tallennetaan ark-hakemistoon nämä.
+
+Versio 0.05, pieniä lisäyksiä (viitteitä, pari artiikelin abstraktia kopsattu). Versionnin idea: 0.0n alustavaa hahmottelua, 0.n koko paperin jäsentelyjä, 1.n.n valmiimpaa tekstiä.
+
+**12.8.2018** Pieniä korjailuja sisällysluetteloon. Kolmas tulostusvaihtoehto html_book(), yhteen html-tiedostoon (/docs/JH_ca.html), helpompi printata. output.yml - tiedostossa asetus code_folding: show, voi muuttaa
+'hide' (jolloin koodi piilossa "napin alla").
