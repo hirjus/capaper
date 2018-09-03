@@ -3,9 +3,9 @@ title: "Kaavat bookdown-paketilla"
 author: "Jussi Hirvonen"
 date: "3.8.2018"
 output:
-  pdf_document: default
   html_document:
     df_print: paged
+  pdf_document: default
 lang: fi
 site: bookdown::bookdown_site
 documentclass: article

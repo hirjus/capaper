@@ -1,4 +1,5 @@
 bookdown::gitbook:
+  #toc-depth: 2
   css: style.css
   fig_caption: true
   split_bib: false # ei lähteitä sivun alareunaan
@@ -6,6 +7,7 @@ bookdown::gitbook:
     download: null
     #code_folding: hide # koodilohkojen koodi oletuksena piilossa - vaatii themen käyttöä, gitbookissa on jo
 bookdown::pdf_book:
+  #toc-depth: 2
   fig_caption: true
   includes:
      #in_header: test1_preamble.tex - ei käytössä vielä
@@ -13,6 +15,7 @@ bookdown::pdf_book:
   citation_package: natbib
   keep_tex: yes
 bookdown::html_book:
+  #toc_depth: 2
   fig_caption: true
   code_folding: show
   split_by: none

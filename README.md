@@ -47,3 +47,5 @@ Versio 0.05, pieniä lisäyksiä (viitteitä, pari artiikelin abstraktia kopsatt
 
 **12.8.2018** Pieniä korjailuja sisällysluetteloon. Kolmas tulostusvaihtoehto html_book(), yhteen html-tiedostoon (/docs/JH_ca.html), helpompi printata. output.yml - tiedostossa asetus code_folding: show, voi muuttaa
 'hide' (jolloin koodi piilossa "napin alla").
+
+**3.9.2018** Lisättiin asetus 'doc-depth: 2' YAML-headeriin (index.Rdm). Dokumentinti on tässä hyvin hämärää, mutta toimii.
