@@ -50,4 +50,4 @@ Versio 0.05, pieniä lisäyksiä (viitteitä, pari artiikelin abstraktia kopsatt
 
 **3.9.2018** Lisättiin asetus 'doc-depth: 2' YAML-headeriin (index.Rdm). Dokumentointi on tässä hyvin hämärää, mutta toimii.
 
-**24.10.2018** Aloitetaan sisällön lisääminen, kehyityshaara **dev**. Ensin sisällysluettelo ajan tasalle jäsentelydokumentin (word) pohjalta.
+**24.10.2018** Aloitetaan sisällön lisääminen, kehyityshaara **dev**. Ensin sisällysluettelo ajan tasalle jäsentelydokumentin (word) pohjalta. Docs-hakemiston pdf- ja html- tulosteista arkistoversiot hakemistossa **ark**.
