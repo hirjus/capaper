@@ -98,7 +98,7 @@ Blasius ja Thiessen ([@RefWorks:doc:5b15542ee4b0e2616bc42dca]) arvioivat aineist
 "ISSP - saitilla" löytyy bibliografia, ja hakupalveluillakin voi haravoida.
 **zxy** www.gesis.org - sivustolta löytyy myös [julkaisuluettelo](https://search.gesis.org/research_data/ZA5900), voiko linkin laittaa alaviitteeksi tai suoraan leipätekstiin?
 
-
+Sukupuoliroolien (gender roles) ja niihin liittyvien asenteiden vertailevaa kansainvälistä (cross-cultural) tutkimusta on tehty paljon. Tutkimusongelman sisällöllisten ja teoreettisen kysymysten nykytilaa kuvaa Walterin[@RefWorks:doc:5bd08fb6e4b05c5447c9a9f9] tuore artikkeli. Omnibus surveys ?
 
 
 

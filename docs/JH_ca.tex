@@ -37,6 +37,46 @@
 \fi
 \usepackage{natbib}
 \bibliographystyle{apalike}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -400,13 +440,15 @@ yksinkertaistus, menetelmän esittelyn vuoksi)
 
 \textbf{zxy} ehkäpä taulukoiden lisäksi Likert-kuva?
 
-\textbf{viimeinen kappale}
+\textbf{viimeiset kappaleet}
 
-Miten aineistoa on käytetty? ``ISSP - saitilla'' löytyy bibliografia, ja
-hakupalveluillakin voi haravoida. Michael Greenacre on käyttänyt
-aineistoa eri vuosilta luentomateriaaleissa (Helsinki 2017 MCA, viite
-Moodleen?) ja kahdessa oppikirjassa
-(\citep{RefWorks:doc:5a857a43e4b0ed2d44664d7c},
+\textbf{Miten aineistoa on käytetty?}.
+
+\textbf{Korrespondenssianalyysin esimerkkiaineistona}
+
+Michael Greenacre on käyttänyt aineistoa eri vuosilta
+luentomateriaaleissa (Helsinki 2017 MCA, viite Moodleen?) ja kahdessa
+oppikirjassa (\citep{RefWorks:doc:5a857a43e4b0ed2d44664d7c},
 \citep{RefWorks:doc:5a857a43e4b0ed2d44664d78}).ISSP - aineisto vuodelta
 1989 on käytetty myös neljän ``singuaariarvohajoitelmaan perustuvan
 menetelmän'' vertailuun\citep{RefWorks:doc:5b6f159ce4b0bc0f31734b76}.
@@ -442,9 +484,18 @@ countries. The approach we use for screening countries and items is
 especially useful in situations where the psychometric properties of the
 items have not been well established in previous research.''
 
-\textbf{zxy} www.gesis.org - sivustolta löytyy myös
+\textbf{tärkeä rajaus} Substanssitutkimusta ei tässä käsitellä.
+
+``ISSP - saitilla'' löytyy bibliografia, ja hakupalveluillakin voi
+haravoida. \textbf{zxy} www.gesis.org - sivustolta löytyy myös
 \href{https://search.gesis.org/research_data/ZA5900}{julkaisuluettelo},
 voiko linkin laittaa alaviitteeksi tai suoraan leipätekstiin?
+
+Sukupuoliroolien (gender roles) ja niihin liittyvien asenteiden
+vertailevaa kansainvälistä (cross-cultural) tutkimusta on tehty paljon.
+Tutkimusongelman sisällöllisten ja teoreettisen kysymysten nykytilaa
+kuvaa Walterin\citep{RefWorks:doc:5bd08fb6e4b05c5447c9a9f9} tuore
+artikkeli. Omnibus surveys ?
 
 \hypertarget{yksinkertainen-korrespondenssianalyysi}{%
 \chapter{Yksinkertainen
@@ -493,6 +544,23 @@ esitellään seuraavassa luvussa.
 \section{Suomenkielinen lomake
 (esimerkki)}\label{suomenkielinen-lomake-esimerkki}}
 
+Yksi kysymys suomenkielisestä lomakkeesta.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/substvarfiQ1Q2.png'}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{img/substvarfiQ1Q2} 
+
+}
+
+\caption{Esimerkki suomenkielisestä lomakkeesta}\label{fig:L1suomlom1}
+\end{figure}
+
 \hypertarget{r---koodi}{%
 \section{R - koodi}\label{r---koodi}}
 
@@ -502,7 +570,23 @@ Jotenkin tänne.
 \section{Tekninen ympäristö ja
 Bookdown-paketti}\label{tekninen-ymparisto-ja-bookdown-paketti}}
 
-Muokataan tiiviimpi pätkä esimerkkiprojektista.
+Muokataan tiiviimpi pätkä esimerkkireposta bookdown-testi1. Tämä kuva
+kertoo vain julkaisutekniikan ympäristön.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/BookdownProc.png'}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{img/BookdownProc} 
+
+}
+
+\caption{Tulostiedoston prosessointi}\label{fig:L3bdprocess1}
+\end{figure}
 
 \bibliography{jhca2018.bib,packages.bib}
 
