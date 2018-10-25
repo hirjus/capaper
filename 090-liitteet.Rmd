@@ -1,0 +1,13 @@
+# Liitteet {-}
+
+## Suomenkielinen lomake (esimerkki)
+
+
+
+## R - koodi
+
+Jotenkin tänne.
+
+## Tekninen ympäristö ja Bookdown-paketti
+
+Muokataan tiiviimpi pätkä esimerkkiprojektista.
