@@ -23,7 +23,7 @@ Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti _bookdown.yml-ti
 
 RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla), ja korjailla skandit jos niissä on vikaa.
 
-**24.10.2018 pdf-tulostus lakkasi taas toimimasta. Ongelmia luultavasti MikTeX- asennuksen ja tinytex- r-paketin "lennossa" lataamien latex-pakettien kanssa.**
+**25.10.18**
 
 
 ```{r jhpaketit, include=FALSE}
