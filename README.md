@@ -53,3 +53,8 @@ Versio 0.05, pieniä lisäyksiä (viitteitä, pari artiikelin abstraktia kopsatt
 **24.10.2018** Aloitetaan sisällön lisääminen, kehyityshaara **dev**. Ensin sisällysluettelo ajan tasalle jäsentelydokumentin (word) pohjalta. Docs-hakemiston pdf- ja html- tulosteista arkistoversiot hakemistossa **ark**.
 
 **25.10.2018** PDF-tulostus lakkasi toimimasta. Syy on luultavasti omalle koneelle paikallisesti asennetun MikTeX:hin ja tinytex- r-paketin "lennossa" asentamien (user-hakemistoon, Appdata-roaming - haaraan) tex-pakettien yhteensovittamisessa. Käytetään html-tulostetta (yksi tiedosto). **Korjattu, pientä editointia.** Lisätty muutama kuva.
+
+**26.10.2019** R-paketti rgl ei toimi, ei suostu latautumaan. Kolmiulotteista grafiikkaa, tuskin tarvitaan. Pientä editointia test-hakemiston kaavat1.Rmd - tiedostossa.
+
+**14.12.2019** Testataan toiminta R- ja MikTeX - päivitysten jälkeen. Tarkistettiin ja korjailtiin test-hakemiston kasitteet1.Rmd ja kaavat1.Rmd, tulostettiin pdf- ja html-muodossa.
+Kaavoissa korjattavaa.

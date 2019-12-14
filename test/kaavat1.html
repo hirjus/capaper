@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi">
+<html lang="fi" xml:lang="fi">
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Jussi Hirvonen" />
@@ -236,7 +236,7 @@ display: none;
 padding: 0 4px 0 4px;
 }
 .pagedtable .even {
-background-color: #fcfcfc;
+background-color: rgba(140, 140, 140, 0.1);
 }
 .pagedtable-padding-col {
 display: none;
@@ -1526,9 +1526,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type="text/css">
 .main-container {
@@ -1542,7 +1540,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -1553,22 +1550,81 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -1578,13 +1634,13 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Kaavat bookdown-paketilla</h1>
-<h4 class="author"><em>Jussi Hirvonen</em></h4>
-<h4 class="date"><em>3.8.2018</em></h4>
+<h4 class="author">Jussi Hirvonen</h4>
+<h4 class="date">3.8.2018</h4>
 
 </div>
 
 
-<div id="kaavat-ja-matemattiset-merkinnat" class="section level1">
+<div id="kaavat-ja-matemattiset-merkinnät" class="section level1">
 <h1>Kaavat ja matemattiset merkinnät</h1>
 <p>Kaavat on esitettävä bookdown-paketin määrityksillä. Viittausnimien on oltava yksikäsitteisiä koko dokumentissa, jos käytetään “merge and knit” menetelmää. Jos taas jokainen lapsidokumentti on “itsenäinen” (“knit and merge”), tämä koskee vain kyseistä dokumenttia (kts. Bookdown - webkirja).</p>
 <div id="kahden-luokittelumuuttuja-taulukko" class="section level2">
@@ -1634,7 +1690,7 @@ $(document).ready(function () {
 <p>Teknisesti analyysi on yksinkertainen korrespondenssianalyysi, miten tämä tulkitaan?</p>
 <p><strong>drawmatrix - kaavoja</strong></p>
 </div>
-<div id="korrespondenssianalyysin-perusyhtalot-ja-kaavat" class="section level2">
+<div id="korrespondenssianalyysin-perusyhtälöt-ja-kaavat" class="section level2">
 <h2>Korrespondenssianalyysin perusyhtälöt ja kaavat</h2>
 <p><strong>viitetiedot puuttuvat kaavoista</strong></p>
 <p>Tässä lähteenä Greenacren kirja (ca in practice) ja sen liite Theory of CA. Muistiinpanoja löytyy, joissa viitataan myös Biplots in practice - kirjaan. Kevään 2017 kurssin luentokalvoja on myös käytetty. Lisäillään vielä käsitteitä LeRouxin ja Rouanetin kirjasta.</p>
@@ -1663,12 +1719,12 @@ s_{ij} = \sqrt{r_{i}} \left( \frac{p_{ij}}{r_{i}c_{j}} \right) \sqrt{c_{j}} \;\;
 <p><span class="math display">\[ 
 \boldsymbol{S} = \boldsymbol{U} \boldsymbol{D_{\alpha}} \boldsymbol{V}^{T}
 \]</span></p>
-<p>missä <span class="math inline">\(\boldsymbol{D_{\alpha}}\)</span> on diagonaalimatriisi, jonka alkiot ovat singulaariarvot suuruusjärjestyksessä <span class="math inline">\(\alpha_{1}\geq \alpha_{1} \geq \hdots\)</span></p>
+<p>missä <span class="math inline">\(\boldsymbol{D_{\alpha}}\)</span> on diagonaalimatriisi, jonka alkiot ovat singulaariarvot suuruusjärjestyksessä <span class="math inline">\(\alpha_{1}\geq \alpha_{1} \geq \cdots\)</span></p>
 <p>Matriisit <span class="math inline">\(\boldsymbol{U}\)</span> ja <span class="math inline">\(\boldsymbol{V}\)</span> ovat ortogonaalisia singulaarivektoreiden matriiseja. Singulaariarvohajoitelman merkitys dimensioiden vähentämiselle perustuu Eckart - Young - teoreemaan. Teoreema (30-luvulta?) kertoo, että saamme pienimmän neliösumman <span class="math inline">\(m\)</span> - ulotteisen approksimaation matriisille <span class="math inline">\(\boldsymbol{S}\)</span> (CAinP, ss. 244) matriisien <span class="math inline">\(\boldsymbol{U}\)</span> ja <span class="math inline">\(\boldsymbol{V}\)</span> ensimmäisten sarakkeiden ja ensimmäisten singulaariarvojen avulla.</p>
 <p><span class="math display">\[
 \boldsymbol{S}_{(m)} = \boldsymbol{U}_{(m)} \boldsymbol{D}_{\alpha(m)} \boldsymbol{V}_{(m)}^{T}
 \]</span></p>
-<p>Korrrespondenssianalyysin ratkaisualgoritmissa tätä tulosta on muokattava niin, että rivien ja sarakkeiden massat huomioidaan pienimmän neliösumman approksimaatiossa painoina.</p>
+<p>Korrespondenssianalyysin ratkaisualgoritmissa tätä tulosta on muokattava niin, että rivien ja sarakkeiden massat huomioidaan pienimmän neliösumman approksimaatiossa painoina.</p>
 <p>Näin saadaan standardikoordinaatit ja principal-koordinaatit riveille ja sarakkeille.</p>
 <p>Rivien standardikoordinaatit <span class="math display">\[\begin{equation}
 \boldsymbol{\Phi} = \boldsymbol{D_r}^{-\frac{1}{2}} \boldsymbol{U} \label{B} 
@@ -1733,6 +1789,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

@@ -27,7 +27,10 @@ RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla), ja korj
 
 
 ```{r jhpaketit, include=FALSE}
-library(rgl)
+## library(rgl) ei toimi 26.10.2019
+## Error: package or namespace load failed for ‘rgl’: .onLoad failed in loadNamespace() for 'shiny', 
+## details: call: get0(oNam, envir = ns) error: lazy-load database 
+## 'C:/Program Files/R/R-3.6.1/library/httpuv/R/httpuv.rdb' is corrupt
 library(ca)
 library(haven)
 library(dplyr)
