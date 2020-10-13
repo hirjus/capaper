@@ -47,6 +47,7 @@ library(printr) #19.5.18 taulukoiden ja matriisien tulostukseen
 #library(stargazer) # 28.5.2018 taulukoiden yms. tulostietojen siistiin tulostukseen - 8.8.18 pois
 library(bookdown)
 library(tinytex)
+library(rgl) # kokeillaan 18.2.20
 
 ```
 **Ideoita**

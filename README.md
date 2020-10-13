@@ -36,25 +36,45 @@ Versio 0.02 : lisättty lähdeviiteitä ja päivitetty bibtex-viitetiedosto.
 
 **9.8.2018 Versio 0.03**
 
-Jäsentelyä data-lukuun. Lisäsin ISSP-viitteitä RefWorksiin, ja ne rikkoivat PDF-version viitteidenhallinnan, nyt vain gitbook-tuloste. Korjaillaan,
-tai poistetaan, ISSP-dokumentaatioon on hankalaa viitata. www.gesis.org on sekava sivusto!
+Jäsentelyä data-lukuun. Lisäsin ISSP-viitteitä RefWorksiin, ja ne rikkoivat
+PDF-version viitteidenhallinnan, nyt vain gitbook-tuloste. Korjaillaan,tai
+poistetaan, ISSP-dokumentaatioon on hankalaa viitata. www.gesis.org on sekava
+sivusto!
 
 **11.8.2018**
 
-Pieniä lisäyksiä tekstiin, lähdeviitteitä, skandien aiheuttamia ongelmia kummasteltu bibtex - viitekannan pdf-käsittelyssä. PDF ja gitbook toimivat, tallennetaan ark-hakemistoon nämä.
+Pieniä lisäyksiä tekstiin, lähdeviitteitä, skandien aiheuttamia ongelmia
+kummasteltu bibtex - viitekannan pdf-käsittelyssä. PDF ja gitbook toimivat,
+tallennetaan ark-hakemistoon nämä.
 
-Versio 0.05, pieniä lisäyksiä (viitteitä, pari artiikelin abstraktia kopsattu). Versionnin idea: 0.0n alustavaa hahmottelua, 0.n koko paperin jäsentelyjä, 1.n.n valmiimpaa tekstiä.
+Versio 0.05, pieniä lisäyksiä (viitteitä, pari artiikelin abstraktia kopsattu).
+Versionnin idea: 0.0n alustavaa hahmottelua, 0.n koko paperin jäsentelyjä, 1.n.n
+valmiimpaa tekstiä.
 
-**12.8.2018** Pieniä korjailuja sisällysluetteloon. Kolmas tulostusvaihtoehto html_book(), yhteen html-tiedostoon (/docs/JH_ca.html), helpompi printata. output.yml - tiedostossa asetus code_folding: show, voi muuttaa
-'hide' (jolloin koodi piilossa "napin alla").
+**12.8.2018** Pieniä korjailuja sisällysluetteloon. Kolmas tulostusvaihtoehto
+html_book(), yhteen html-tiedostoon (/docs/JH_ca.html), helpompi printata.
+ output.yml - tiedostossa asetus code_folding: show, voi muuttaa 'hide'
+ (jolloin koodi piilossa "napin alla").
 
-**3.9.2018** Lisättiin asetus 'doc-depth: 2' YAML-headeriin (index.Rdm). Dokumentointi on tässä hyvin hämärää, mutta toimii.
+**3.9.2018** Lisättiin asetus 'doc-depth: 2' YAML-headeriin (index.Rdm).
+Dokumentointi on tässä hyvin hämärää, mutta toimii.
 
-**24.10.2018** Aloitetaan sisällön lisääminen, kehyityshaara **dev**. Ensin sisällysluettelo ajan tasalle jäsentelydokumentin (word) pohjalta. Docs-hakemiston pdf- ja html- tulosteista arkistoversiot hakemistossa **ark**.
+**24.10.2018** Aloitetaan sisällön lisääminen, kehyityshaara **dev**.
+Ensin sisällysluettelo ajan tasalle jäsentelydokumentin (word) pohjalta.
+Docs-hakemiston pdf- ja html- tulosteista arkistoversiot hakemistossa **ark**.
 
-**25.10.2018** PDF-tulostus lakkasi toimimasta. Syy on luultavasti omalle koneelle paikallisesti asennetun MikTeX:hin ja tinytex- r-paketin "lennossa" asentamien (user-hakemistoon, Appdata-roaming - haaraan) tex-pakettien yhteensovittamisessa. Käytetään html-tulostetta (yksi tiedosto). **Korjattu, pientä editointia.** Lisätty muutama kuva.
+**25.10.2018** PDF-tulostus lakkasi toimimasta. Syy on luultavasti omalle
+koneelle paikallisesti asennetun MikTeX:hin ja tinytex- r-paketin "lennossa"
+asentamien (user-hakemistoon, Appdata-roaming - haaraan) tex-pakettien
+yhteensovittamisessa. Käytetään html-tulostetta (yksi tiedosto).
+**Korjattu, pientä editointia.** Lisätty muutama kuva.
 
-**26.10.2019** R-paketti rgl ei toimi, ei suostu latautumaan. Kolmiulotteista grafiikkaa, tuskin tarvitaan. Pientä editointia test-hakemiston kaavat1.Rmd - tiedostossa.
+**26.10.2019** R-paketti rgl ei toimi, ei suostu latautumaan. Kolmiulotteista
+grafiikkaa, tuskin tarvitaan. Pientä editointia test-hakemiston kaavat1.Rmd - tiedostossa.
 
-**14.12.2019** Testataan toiminta R- ja MikTeX - päivitysten jälkeen. Tarkistettiin ja korjailtiin test-hakemiston kasitteet1.Rmd ja kaavat1.Rmd, tulostettiin pdf- ja html-muodossa.
-Kaavoissa korjattavaa.
+**14.12.2019** Testataan toiminta R- ja MikTeX - päivitysten jälkeen.
+ Tarkistettiin ja korjailtiin test-hakemiston kasitteet1.Rmd ja kaavat1.Rmd,
+ tulostettiin pdf- ja html-muodossa. Kaavoissa korjattavaa.
+
+**13.10.2020**
+simple_preamble.tex - luvun otsikko pois sivun yläreunasta.

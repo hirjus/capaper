@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi">
+<html lang="fi" xml:lang="fi">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Luku 2 Data | Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</title>
   <meta name="description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä." />
-  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Luku 2 Data | Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä" />
   <meta property="og:type" content="book" />
@@ -49,12 +49,13 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -63,14 +64,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -79,9 +82,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -152,7 +155,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>5.2</b> R - koodi</a></li>
 <li class="chapter" data-level="5.3" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>5.3</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="lähteet-1.html"><a href="lähteet-1.html"><i class="fa fa-check"></i>Lähteet</a></li>
+<li class="chapter" data-level="" data-path="johdanto.html"><a href="johdanto.html#lähteet"><i class="fa fa-check"></i>Lähteet</a></li>
 </ul>
 
       </nav>
@@ -173,7 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="data" class="section level1">
 <h1><span class="header-section-number">Luku 2</span> Data</h1>
 <p><strong>zxy</strong> Voisi miettiä paremman otsikon. Galku-paperin alusta on lisäilty viitteitä Refworksiin, mutta hieman hanklaa. www.gesis.org - sivusto on aika sekava. Virallinen (heidän määrittelemä) sitaatti löytyy, ja linkkejä. Tässä voisi ehkä käyttää alaviitettä, jossa tarjoaisi linkit? Tai ihan oma lyhyt kappale? Alla virallinen viite, ja tässä kaksi muuta ([RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a] ja [RefWorks:doc:5b6c7debe4b0e4e15164ab00]). Löytyy myös seurantaraportti([RefWorks:doc:5b155e0ce4b044dfd738458f]). <strong>viitteet pois- ehkä tekstiin linkkeinä?</strong></p>
-<p><strong>ks</strong> ISSP (International social survey) on tehnyt laajoja kansainvälisiä kyselytutkimuksia eri teemoista. Yksi teemoista on perhe ja muuttuvat (sosiaalisesti määräytyvät) sukupuoliroolit <span class="citation">((2016) <a href="lähteet-1.html#ref-RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a" role="doc-biblioref">2016</a>)</span>.</p>
+<p><strong>ks</strong> ISSP (International social survey) on tehnyt laajoja kansainvälisiä kyselytutkimuksia eri teemoista. Yksi teemoista on perhe ja muuttuvat (sosiaalisesti määräytyvät) sukupuoliroolit <span class="citation">((2016) <a href="lähteet.html#ref-RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a" role="doc-biblioref">2016</a>)</span>.</p>
 <p><strong>zxy</strong> Miksi data on kiinnostava sisällöllisesti? Viite Kantola (HS). Lisäksi laadukas, usealta vuodelta, tarkasti dokumentoitu.</p>
 <p><strong>ks</strong></p>
 <p><strong>zxy</strong> Miksi data sovelutuu korrespondenssianalyysin esittelyyn? Iso ja monimutkainen (kansainvälinen, datan laaut? kts. Blasius-viite alempana), sisällölliset muuttuja nominaaliasteikolla (kysymyspatterit, Likert), laadukas hyvin dokumentoitu aineisto.</p>
@@ -210,7 +213,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>viimeiset kappaleet</strong></p>
 <p><strong>Miten aineistoa on käytetty?</strong>.</p>
 <p><strong>Korrespondenssianalyysin esimerkkiaineistona</strong></p>
-<p>Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa (Helsinki 2017 MCA, viite Moodleen?) ja kahdessa oppikirjassa (<span class="citation">(Greenacre <a href="lähteet-1.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span>, <span class="citation">(M. J. Greenacre <a href="lähteet-1.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>).ISSP - aineisto vuodelta 1989 on käytetty myös neljän “singuaariarvohajoitelmaan perustuvan menetelmän” vertailuun<span class="citation">(Greenacre <a href="lähteet-1.html#ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76" role="doc-biblioref">2003</a>)</span>.</p>
+<p>Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa (Helsinki 2017 MCA, viite Moodleen?) ja kahdessa oppikirjassa (<span class="citation">(Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span>, <span class="citation">(M. J. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>).ISSP - aineisto vuodelta 1989 on käytetty myös neljän “singuaariarvohajoitelmaan perustuvan menetelmän” vertailuun<span class="citation">(Greenacre <a href="lähteet.html#ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76" role="doc-biblioref">2003</a>)</span>.</p>
 <p>“We consider the joint analysis of two matched matrices which have common
 rows and columns, for example multivariate data observed at two time points or split
 according to a dichotomous variable. Methods of interest include principal components
@@ -223,12 +226,12 @@ The methodology is applied to data from the International Social Survey Program
 comparing male and female attitudes on working wives across eight countries. The resulting
 biplots optimally display the overall cross-cultural differences as well as the male–female
 differences. The case of more than two matched matrices is also discussed.”</p>
-<p>Blasius ja Thiessen (<span class="citation">(Blasius ja Thiessen <a href="lähteet-1.html#ref-RefWorks:doc:5b15542ee4b0e2616bc42dca" role="doc-biblioref">2006</a>)</span>) arvioivat aineiston laatua ja ja maiden vertailtavuutta vuoden 1994 aineistolla.</p>
+<p>Blasius ja Thiessen (<span class="citation">(Blasius ja Thiessen <a href="lähteet.html#ref-RefWorks:doc:5b15542ee4b0e2616bc42dca" role="doc-biblioref">2006</a>)</span>) arvioivat aineiston laatua ja ja maiden vertailtavuutta vuoden 1994 aineistolla.</p>
 <p>“This paper provides empirically-based criteria for selecting Items and countries to develop measures of an underlying construct of interest that are comparable in cross-national research. Using data from the 1994 International Social Survey Program and applying multiple correspondence analysis to a set of common items in each of the 24 participating countries, we show that both the quality of the data, as well as its underlying structure - and therefore meaning - vary considerably between countries. The approach we use for screening countries and items is especially useful in situations where the psychometric properties of the items have not been well established in previous research.”</p>
 <p><strong>tärkeä rajaus</strong> Substanssitutkimusta ei tässä käsitellä.</p>
 <p>“ISSP - saitilla” löytyy bibliografia, ja hakupalveluillakin voi haravoida.
 <strong>zxy</strong> www.gesis.org - sivustolta löytyy myös <a href="https://search.gesis.org/research_data/ZA5900">julkaisuluettelo</a>, voiko linkin laittaa alaviitteeksi tai suoraan leipätekstiin?</p>
-<p>Sukupuoliroolien (gender roles) ja niihin liittyvien asenteiden vertailevaa kansainvälistä (cross-cultural) tutkimusta on tehty paljon. Tutkimusongelman sisällöllisten ja teoreettisen kysymysten nykytilaa kuvaa Walterin<span class="citation">(Walter <a href="lähteet-1.html#ref-RefWorks:doc:5bd08fb6e4b05c5447c9a9f9" role="doc-biblioref">2018</a>)</span> tuore artikkeli. Omnibus surveys ?</p>
+<p>Sukupuoliroolien (gender roles) ja niihin liittyvien asenteiden vertailevaa kansainvälistä (cross-cultural) tutkimusta on tehty paljon. Tutkimusongelman sisällöllisten ja teoreettisen kysymysten nykytilaa kuvaa Walterin<span class="citation">(Walter <a href="lähteet.html#ref-RefWorks:doc:5bd08fb6e4b05c5447c9a9f9" role="doc-biblioref">2018</a>)</span> tuore artikkeli. Omnibus surveys ?</p>
 
 </div>
 </div>

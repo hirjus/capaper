@@ -39,6 +39,7 @@
 \hypersetup{
   pdftitle={Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä},
   pdfauthor={Jussi Hirvonen},
+  pdflang={fi},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
@@ -108,22 +109,41 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
-% https://github.com/rstudio/rmarkdown/issues/337
-\let\rmarkdownfootnote\footnote%
-\def\footnote{\protect\rmarkdownfootnote}
+% Yksinkertaistettu versio - vain sivutyyli
+%\documentclass[12pt,a4paper,leqno]{book}
+% dispositiopaperista, poistettiin ekalta riviltä {article}
+%%
+%% Poistetaan sellaisia, jotka näköjään saadaan automaattisesti
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+%\usepackage[finnish]{babel}
+%\usepackage{amsthm}
+%\usepackage{amsfonts}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{graphicx}
+%\usepackage{float}
+%\usepackage{lipsum}
+%%
+%tämä kopioitu bookdown-demo - esimerkistä
+%%
+%\usepackage{booktabs}
+%\usepackage{amsthm} on jo yllä
+%lisää dispopaperista
+\pagestyle{plain}
+%\setcounter{page}{1}
+%\addtolength{\hoffset}{-1.15cm}
+%\addtolength{\textwidth}{2.3cm}
+%\addtolength{\voffset}{0.45cm}
+%\addtolength{\textheight}{-0.9cm}
 
-% https://github.com/rstudio/rmarkdown/pull/252
-\usepackage{titling}
-\setlength{\droptitle}{-2em}
-
-\pretitle{\vspace{\droptitle}\centering\huge}
-\posttitle{\par}
-
-\preauthor{\centering\large\emph}
-\postauthor{\par}
-
-\predate{\centering\large\emph}
-\postdate{\par}
+%tämä kopioitu bookdown-demo - esimerkistä
+%\makeatletter
+%\def\thm@space@setup{%
+%  \thm@preskip=8pt plus 2pt minus 4pt
+%  \thm@postskip=\thm@preskip
+%}
+%\makeatother
 \ifxetex
   % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
   \usepackage{polyglossia}
@@ -136,17 +156,15 @@
 
 \title{Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä}
 \author{Jussi Hirvonen}
-\date{Versio 0.07, tulostettu 2019-12-15}
+\date{Versio 0.07, tulostettu 2020-10-13}
 
 \begin{document}
-\frontmatter
 \maketitle
 
 {
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
-\mainmatter
 \hypertarget{alkutoimia}{%
 \chapter*{Alkutoimia}\label{alkutoimia}}
 \addcontentsline{toc}{chapter}{Alkutoimia}
@@ -439,7 +457,6 @@ julkaisutekniikan ympäristön.
 \caption{Tulostiedoston prosessointi}\label{fig:L3bdprocess1}
 \end{figure}
 
-\backmatter
   \bibliography{jhca2018.bib,packages.bib}
 
 \end{document}
