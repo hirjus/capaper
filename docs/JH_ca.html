@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi">
+<html lang="fi" xml:lang="fi">
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä" />
@@ -29,13 +28,14 @@
 <script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="libs/navigation-1.1/tabsets.js"></script>
 <script src="libs/navigation-1.1/codefolding.js"></script>
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -45,14 +45,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -61,9 +63,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -164,7 +166,7 @@ img {
 <div id="header">
 <h1 class="title">Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</h1>
 <h4 class="author"><em>Jussi Hirvonen</em></h4>
-<h4 class="date"><em>Versio 0.07, tulostettu 2019-10-26</em></h4>
+<h4 class="date"><em>Versio 0.07, tulostettu 2020-10-18</em></h4>
 </div>
 <div id="alkutoimia" class="section level1 unnumbered">
 <h1>Alkutoimia</h1>
@@ -225,7 +227,7 @@ korrespondenssianalyysi antaa graafisen analyysin “…perussäännöt tulkinna
 </div>
 <div id="käytetyt-ohjelmistot" class="section level3">
 <h3><span class="header-section-number">1.2.2</span> Käytetyt ohjelmistot</h3>
-<p><strong>zxy</strong> R, ca-paketti. löytyy myös muita paketteja. Rmarkdown<span class="citation">(Yihui Xie <a href="#ref-RefWorks:doc:5b6b346fe4b0c619b11b8a3e" role="doc-biblioref">2018</a>)</span>, ja bookdown (<span class="citation">(Xie <a href="#ref-RefWorks:doc:5b6b36dde4b09b7ec442bf8b" role="doc-biblioref">2016</a>)</span> ja toinen viite <span class="citation">(Xie <a href="#ref-R-bookdown" role="doc-biblioref">2019</a>)</span>). Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.</p>
+<p><strong>zxy</strong> R, ca-paketti. löytyy myös muita paketteja. Rmarkdown<span class="citation">(Yihui Xie <a href="#ref-RefWorks:doc:5b6b346fe4b0c619b11b8a3e" role="doc-biblioref">2018</a>)</span>, ja bookdown (<span class="citation">(Xie <a href="#ref-RefWorks:doc:5b6b36dde4b09b7ec442bf8b" role="doc-biblioref">2016</a>)</span> ja toinen viite <span class="citation">(Xie <a href="#ref-R-bookdown" role="doc-biblioref">2020</a>)</span>). Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.</p>
 <p><strong>zxy</strong> Helposti toistettavan tutkimukset periaatteet</p>
 <ol style="list-style-type: decimal">
 <li>Datasta (löytyy netistä, samoin kattava dokumentaatio) lyhyt matka analyysiin.</li>
@@ -332,7 +334,7 @@ differences. The case of more than two matched matrices is also discussed.”</p
 <div id="suomenkielinen-lomake-esimerkki" class="section level2">
 <h2><span class="header-section-number">5.1</span> Suomenkielinen lomake (esimerkki)</h2>
 <p>Yksi kysymys suomenkielisestä lomakkeesta.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/substvarfiQ1Q2.png&#39;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/substvarfiQ1Q2.png&#39;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:L1suomlom1"></span>
 <img src="img/substvarfiQ1Q2.png" alt="Esimerkki suomenkielisestä lomakkeesta" width="60%" />
 <p class="caption">
@@ -348,7 +350,7 @@ Kuva 5.1: Esimerkki suomenkielisestä lomakkeesta
 <h2><span class="header-section-number">5.3</span> Tekninen ympäristö ja Bookdown-paketti</h2>
 <p>Muokataan tiiviimpi pätkä esimerkkireposta bookdown-testi1. Tämä kuva kertoo vain
 julkaisutekniikan ympäristön.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/BookdownProc.png&#39;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/BookdownProc.png&#39;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:L3bdprocess1"></span>
 <img src="img/BookdownProc.png" alt="Tulostiedoston prosessointi" width="60%" />
 <p class="caption">
@@ -399,7 +401,7 @@ Kuva 5.2: Tulostiedoston prosessointi
 <p>Xie, Yihui. 2016. <em>bookdown: Authoring Books and Technical Documents with R Markdown</em>. Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/bookdown/">https://bookdown.org/yihui/bookdown/</a>.</p>
 </div>
 <div id="ref-R-bookdown">
-<p>———. 2019. <em>bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown">https://CRAN.R-project.org/package=bookdown</a>.</p>
+<p>———. 2020. <em>bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a>.</p>
 </div>
 <div id="ref-RefWorks:doc:5b6b346fe4b0c619b11b8a3e">
 <p>Yihui Xie, Garrett Grolemund, J. J. Allaire. 2018. <em>R Markdown: The Definitive Guide</em>. Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/rmarkdown/">https://bookdown.org/yihui/rmarkdown/</a>.</p>

@@ -1,0 +1,14 @@
+vaihtoehto,koodi,lyhenne
+Täysin samaa mieltä,1,ts
+Samaa mieltä,2,s
+En samaa enkä eri mieltä,3,ese
+Eri mieltä,4, e
+Täysin eri mieltä,5,te
+En osaa sanoa,8,eos
+
+Kysymys 23, V5 - V9 datassa
+a) Työssäkäyvä äiti pystyy luomaan lapsiinsa aivan yhtä lämpimän ja turvallisen suhteen kuin äiti, joka ei käy työssä 
+b) Alle kouluikäinen lapsi todennäköisesti kärsii, jos hänen äitinsä käy työssä 
+c) Kaiken kaikkiaan perhe-elämä kärsii, kun naisella on kokopäivätyö 
+d) On hyvä käydä töissä mutta tosiasiassa useimmat naiset haluavat ensisijaisesti kodin ja lapsia 
+e) Kotirouvana oleminen on aivan yhtä antoisaa kuin ansiotyön tekeminen 

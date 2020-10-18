@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Luku 2 Data | Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</title>
   <meta name="description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Luku 2 Data | Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä" />
   <meta property="og:type" content="book" />
@@ -140,9 +140,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3" data-path="johdanto.html"><a href="johdanto.html#korrespondenssianalyysin-historiaa"><i class="fa fa-check"></i><b>1.3</b> Korrespondenssianalyysin historiaa</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Data</a><ul>
-<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#aineiston-kuvailu-tietosisältö"><i class="fa fa-check"></i><b>2.1</b> Aineiston kuvailu (tietosisältö)</a></li>
-<li class="chapter" data-level="2.2" data-path="data.html"><a href="data.html#aineiston-rajaaminen"><i class="fa fa-check"></i><b>2.2</b> Aineiston rajaaminen</a></li>
-<li class="chapter" data-level="2.3" data-path="data.html"><a href="data.html#aineiston-kuvailu-tunnuslukuja"><i class="fa fa-check"></i><b>2.3</b> Aineiston kuvailu (tunnuslukuja)</a></li>
+<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#datan-luku-ja-perusmuokkaukset-testailua"><i class="fa fa-check"></i><b>2.1</b> Datan luku ja perusmuokkaukset: testailua</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="data.html"><a href="data.html#maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.1.1</b> Maat ja muuttujat</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="data.html"><a href="data.html#aineiston-kuvailu-tietosisältö"><i class="fa fa-check"></i><b>2.2</b> Aineiston kuvailu (tietosisältö)</a></li>
+<li class="chapter" data-level="2.3" data-path="data.html"><a href="data.html#aineiston-rajaaminen"><i class="fa fa-check"></i><b>2.3</b> Aineiston rajaaminen</a></li>
+<li class="chapter" data-level="2.4" data-path="data.html"><a href="data.html#aineiston-kuvailu-tunnuslukuja"><i class="fa fa-check"></i><b>2.4</b> Aineiston kuvailu (tunnuslukuja)</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>3</b> Yksinkertainen korrespondenssianalyysi</a><ul>
 <li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä</a></li>
@@ -155,7 +158,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>5.2</b> R - koodi</a></li>
 <li class="chapter" data-level="5.3" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>5.3</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="johdanto.html"><a href="johdanto.html#lähteet"><i class="fa fa-check"></i>Lähteet</a></li>
+<li class="chapter" data-level="" data-path="lähteet-1.html"><a href="lähteet-1.html"><i class="fa fa-check"></i>Lähteet</a></li>
 </ul>
 
       </nav>
@@ -175,8 +178,167 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="data" class="section level1">
 <h1><span class="header-section-number">Luku 2</span> Data</h1>
-<p><strong>zxy</strong> Voisi miettiä paremman otsikon. Galku-paperin alusta on lisäilty viitteitä Refworksiin, mutta hieman hanklaa. www.gesis.org - sivusto on aika sekava. Virallinen (heidän määrittelemä) sitaatti löytyy, ja linkkejä. Tässä voisi ehkä käyttää alaviitettä, jossa tarjoaisi linkit? Tai ihan oma lyhyt kappale? Alla virallinen viite, ja tässä kaksi muuta ([RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a] ja [RefWorks:doc:5b6c7debe4b0e4e15164ab00]). Löytyy myös seurantaraportti([RefWorks:doc:5b155e0ce4b044dfd738458f]). <strong>viitteet pois- ehkä tekstiin linkkeinä?</strong></p>
-<p><strong>ks</strong> ISSP (International social survey) on tehnyt laajoja kansainvälisiä kyselytutkimuksia eri teemoista. Yksi teemoista on perhe ja muuttuvat (sosiaalisesti määräytyvät) sukupuoliroolit <span class="citation">((2016) <a href="lähteet.html#ref-RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a" role="doc-biblioref">2016</a>)</span>.</p>
+<div id="datan-luku-ja-perusmuokkaukset-testailua" class="section level2">
+<h2><span class="header-section-number">2.1</span> Datan luku ja perusmuokkaukset: testailua</h2>
+<div id="maat-ja-muuttujat" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Maat ja muuttujat</h3>
+<p><strong>maat luettu, sitten muuttujat</strong></p>
+<p>Perusmuunnokset -useita vaiheita.</p>
+<p>Muunnosten testaus, varmistetaan että muuttujat ovat sitä mitä halutaan.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="data.html#cb1-1"></a><span class="co"># (16.9.2020) Testaus uusille muuttujille</span></span>
+<span id="cb1-2"><a href="data.html#cb1-2"></a><span class="co"># Koodilohkoissa on jo testattu taulukoimalla muuttujia. Tässä varmistetaan, että</span></span>
+<span id="cb1-3"><a href="data.html#cb1-3"></a><span class="co"># muuttujat pysyvät sellaisina millaisiksi ne on luotu.</span></span>
+<span id="cb1-4"><a href="data.html#cb1-4"></a></span>
+<span id="cb1-5"><a href="data.html#cb1-5"></a><span class="co"># ika - onpas hankala testata !</span></span>
+<span id="cb1-6"><a href="data.html#cb1-6"></a><span class="co"># Min. 1st Qu.  Median    Mean 3rd Qu.    Max.</span></span>
+<span id="cb1-7"><a href="data.html#cb1-7"></a><span class="co"># 15.00   36.00   50.00   49.52   63.00  102.00</span></span>
+<span id="cb1-8"><a href="data.html#cb1-8"></a><span class="co"># ikatest &lt;- ISSP2012jh1d.dat$ika %&gt;% summary()</span></span>
+<span id="cb1-9"><a href="data.html#cb1-9"></a><span class="co">#   ikatest &lt;- ikatest[2,]</span></span>
+<span id="cb1-10"><a href="data.html#cb1-10"></a><span class="co">#validate_that(are_equal(ikatest, c(15, 36, 50, 49.5, 63, 102)))</span></span>
+<span id="cb1-11"><a href="data.html#cb1-11"></a><span class="co">#str(ISSP2012jh1d.dat)</span></span>
+<span id="cb1-12"><a href="data.html#cb1-12"></a><span class="co">#ISSP2012jh1d.dat %&gt;% </span></span>
+<span id="cb1-13"><a href="data.html#cb1-13"></a></span>
+<span id="cb1-14"><a href="data.html#cb1-14"></a><span class="co"># substanssimuuttujat 1</span></span>
+<span id="cb1-15"><a href="data.html#cb1-15"></a><span class="co"># Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b, Q3a, Q3b (r. 423-&gt;)</span></span>
+<span id="cb1-16"><a href="data.html#cb1-16"></a></span>
+<span id="cb1-17"><a href="data.html#cb1-17"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1a)) <span class="op">==</span><span class="st"> </span><span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="data.html#cb3-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1a),</span>
+<span id="cb3-2"><a href="data.html#cb3-2"></a>               <span class="kw">c</span>(<span class="st">&quot;S&quot;</span>, <span class="st">&quot;s&quot;</span>, <span class="st">&quot;?&quot;</span>, <span class="st">&quot;e&quot;</span>, <span class="st">&quot;E&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="data.html#cb5-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1b)) <span class="op">==</span><span class="st"> </span><span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="data.html#cb7-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1b),</span>
+<span id="cb7-2"><a href="data.html#cb7-2"></a>               <span class="kw">c</span>(<span class="st">&quot;S&quot;</span>, <span class="st">&quot;s&quot;</span>, <span class="st">&quot;?&quot;</span>, <span class="st">&quot;e&quot;</span>, <span class="st">&quot;E&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="data.html#cb9-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1c)) <span class="op">==</span><span class="st"> </span><span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="data.html#cb11-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1c),</span>
+<span id="cb11-2"><a href="data.html#cb11-2"></a>               <span class="kw">c</span>(<span class="st">&quot;S&quot;</span>, <span class="st">&quot;s&quot;</span>, <span class="st">&quot;?&quot;</span>, <span class="st">&quot;e&quot;</span>, <span class="st">&quot;E&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="data.html#cb13-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1d)) <span class="op">==</span><span class="st"> </span><span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="data.html#cb15-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1d),</span>
+<span id="cb15-2"><a href="data.html#cb15-2"></a>               <span class="kw">c</span>(<span class="st">&quot;S&quot;</span>, <span class="st">&quot;s&quot;</span>, <span class="st">&quot;?&quot;</span>, <span class="st">&quot;e&quot;</span>, <span class="st">&quot;E&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="data.html#cb17-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1e)) <span class="op">==</span><span class="st"> </span><span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="data.html#cb19-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1e),</span>
+<span id="cb19-2"><a href="data.html#cb19-2"></a>               <span class="kw">c</span>(<span class="st">&quot;S&quot;</span>, <span class="st">&quot;s&quot;</span>, <span class="st">&quot;?&quot;</span>, <span class="st">&quot;e&quot;</span>, <span class="st">&quot;E&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="data.html#cb21-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q2a)) <span class="op">==</span><span class="st"> </span><span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="data.html#cb23-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q2a),</span>
+<span id="cb23-2"><a href="data.html#cb23-2"></a>               <span class="kw">c</span>(<span class="st">&quot;S&quot;</span>, <span class="st">&quot;s&quot;</span>, <span class="st">&quot;?&quot;</span>, <span class="st">&quot;e&quot;</span>, <span class="st">&quot;E&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="data.html#cb25-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q2b)) <span class="op">==</span><span class="st"> </span><span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="data.html#cb27-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q2b),</span>
+<span id="cb27-2"><a href="data.html#cb27-2"></a>               <span class="kw">c</span>(<span class="st">&quot;S&quot;</span>, <span class="st">&quot;s&quot;</span>, <span class="st">&quot;?&quot;</span>, <span class="st">&quot;e&quot;</span>, <span class="st">&quot;E&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="data.html#cb29-1"></a><span class="co"># substanssimuuttujat 2</span></span>
+<span id="cb29-2"><a href="data.html#cb29-2"></a></span>
+<span id="cb29-3"><a href="data.html#cb29-3"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q3a)) <span class="op">==</span><span class="st"> </span><span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="data.html#cb31-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q3a),</span>
+<span id="cb31-2"><a href="data.html#cb31-2"></a>               <span class="kw">c</span>(<span class="st">&quot;W&quot;</span>, <span class="st">&quot;w&quot;</span>, <span class="st">&quot;H&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="data.html#cb33-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q3b)) <span class="op">==</span><span class="st"> </span><span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="data.html#cb35-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q3b),</span>
+<span id="cb35-2"><a href="data.html#cb35-2"></a>               <span class="kw">c</span>(<span class="st">&quot;W&quot;</span>, <span class="st">&quot;w&quot;</span>, <span class="st">&quot;H&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="data.html#cb37-1"></a><span class="co"># substanssimuuttujat, puuttuva tieto muuttujan arvona</span></span>
+<span id="cb37-2"><a href="data.html#cb37-2"></a><span class="co"># Q1am, Q1bm, Q1cm, Q1dm, Q1em, Q2am, Q2bm, Q3am, Q3bm</span></span>
+<span id="cb37-3"><a href="data.html#cb37-3"></a></span>
+<span id="cb37-4"><a href="data.html#cb37-4"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1am)) <span class="op">==</span><span class="st"> </span><span class="dv">6</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="data.html#cb39-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1am),</span>
+<span id="cb39-2"><a href="data.html#cb39-2"></a>               <span class="kw">c</span>(<span class="st">&quot;S&quot;</span>, <span class="st">&quot;s&quot;</span>, <span class="st">&quot;?&quot;</span>, <span class="st">&quot;e&quot;</span>, <span class="st">&quot;E&quot;</span>, <span class="st">&quot;P&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="data.html#cb41-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1bm)) <span class="op">==</span><span class="st"> </span><span class="dv">6</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="data.html#cb43-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1bm),</span>
+<span id="cb43-2"><a href="data.html#cb43-2"></a>               <span class="kw">c</span>(<span class="st">&quot;S&quot;</span>, <span class="st">&quot;s&quot;</span>, <span class="st">&quot;?&quot;</span>, <span class="st">&quot;e&quot;</span>, <span class="st">&quot;E&quot;</span>, <span class="st">&quot;P&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="data.html#cb45-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1cm)) <span class="op">==</span><span class="st"> </span><span class="dv">6</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="data.html#cb47-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1cm),</span>
+<span id="cb47-2"><a href="data.html#cb47-2"></a>               <span class="kw">c</span>(<span class="st">&quot;S&quot;</span>, <span class="st">&quot;s&quot;</span>, <span class="st">&quot;?&quot;</span>, <span class="st">&quot;e&quot;</span>, <span class="st">&quot;E&quot;</span>, <span class="st">&quot;P&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="data.html#cb49-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1dm)) <span class="op">==</span><span class="st"> </span><span class="dv">6</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="data.html#cb51-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1dm),</span>
+<span id="cb51-2"><a href="data.html#cb51-2"></a>               <span class="kw">c</span>(<span class="st">&quot;S&quot;</span>, <span class="st">&quot;s&quot;</span>, <span class="st">&quot;?&quot;</span>, <span class="st">&quot;e&quot;</span>, <span class="st">&quot;E&quot;</span>, <span class="st">&quot;P&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="data.html#cb53-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1em)) <span class="op">==</span><span class="st"> </span><span class="dv">6</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="data.html#cb55-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q1em),</span>
+<span id="cb55-2"><a href="data.html#cb55-2"></a>               <span class="kw">c</span>(<span class="st">&quot;S&quot;</span>, <span class="st">&quot;s&quot;</span>, <span class="st">&quot;?&quot;</span>, <span class="st">&quot;e&quot;</span>, <span class="st">&quot;E&quot;</span>, <span class="st">&quot;P&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="data.html#cb57-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q2am)) <span class="op">==</span><span class="st"> </span><span class="dv">6</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="data.html#cb59-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q2am),</span>
+<span id="cb59-2"><a href="data.html#cb59-2"></a>               <span class="kw">c</span>(<span class="st">&quot;S&quot;</span>, <span class="st">&quot;s&quot;</span>, <span class="st">&quot;?&quot;</span>, <span class="st">&quot;e&quot;</span>, <span class="st">&quot;E&quot;</span>, <span class="st">&quot;P&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="data.html#cb61-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q2bm)) <span class="op">==</span><span class="st"> </span><span class="dv">6</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="data.html#cb63-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q2bm),</span>
+<span id="cb63-2"><a href="data.html#cb63-2"></a>               <span class="kw">c</span>(<span class="st">&quot;S&quot;</span>, <span class="st">&quot;s&quot;</span>, <span class="st">&quot;?&quot;</span>, <span class="st">&quot;e&quot;</span>, <span class="st">&quot;E&quot;</span>, <span class="st">&quot;P&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="data.html#cb65-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q3am)) <span class="op">==</span><span class="st"> </span><span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="data.html#cb67-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q3am),</span>
+<span id="cb67-2"><a href="data.html#cb67-2"></a>               <span class="kw">c</span>(<span class="st">&quot;W&quot;</span>, <span class="st">&quot;w&quot;</span>, <span class="st">&quot;H&quot;</span>, <span class="st">&quot;P&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="data.html#cb69-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q3bm)) <span class="op">==</span><span class="st"> </span><span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="data.html#cb71-1"></a><span class="kw">validate_that</span>(<span class="kw">are_equal</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>Q3bm),</span>
+<span id="cb71-2"><a href="data.html#cb71-2"></a>               <span class="kw">c</span>(<span class="st">&quot;W&quot;</span>, <span class="st">&quot;w&quot;</span>, <span class="st">&quot;H&quot;</span>, <span class="st">&quot;P&quot;</span>)))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="data.html#cb73-1"></a><span class="co"># taustamuuttujat puuttuvilla tiedoilla ja ilman</span></span>
+<span id="cb73-2"><a href="data.html#cb73-2"></a><span class="co"># testataan vain tasojen määrä, ei labeleita jotka ovat </span></span>
+<span id="cb73-3"><a href="data.html#cb73-3"></a><span class="co"># alkuperäisestä datasta.</span></span>
+<span id="cb73-4"><a href="data.html#cb73-4"></a></span>
+<span id="cb73-5"><a href="data.html#cb73-5"></a><span class="co"># edu, edum</span></span>
+<span id="cb73-6"><a href="data.html#cb73-6"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>edu)) <span class="op">==</span><span class="st"> </span><span class="dv">7</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="data.html#cb75-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>edum)) <span class="op">==</span><span class="st"> </span><span class="dv">8</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="data.html#cb77-1"></a><span class="co"># msta, mstam</span></span>
+<span id="cb77-2"><a href="data.html#cb77-2"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>msta)) <span class="op">==</span><span class="st"> </span><span class="dv">9</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="data.html#cb79-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>mstam)) <span class="op">==</span><span class="st"> </span><span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="data.html#cb81-1"></a><span class="co"># sosta, sostam</span></span>
+<span id="cb81-2"><a href="data.html#cb81-2"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>sosta)) <span class="op">==</span><span class="st"> </span><span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="data.html#cb83-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>sostam)) <span class="op">==</span><span class="st"> </span><span class="dv">11</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="data.html#cb85-1"></a><span class="co"># nchild, ncildm</span></span>
+<span id="cb85-2"><a href="data.html#cb85-2"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>nchild)) <span class="op">==</span><span class="st"> </span><span class="dv">11</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="data.html#cb87-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>nchildm)) <span class="op">==</span><span class="st"> </span><span class="dv">12</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="data.html#cb89-1"></a><span class="co"># lifsta, lifstam</span></span>
+<span id="cb89-2"><a href="data.html#cb89-2"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>lifsta)) <span class="op">==</span><span class="st"> </span><span class="dv">6</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="data.html#cb91-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>lifstam)) <span class="op">==</span><span class="st"> </span><span class="dv">7</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="data.html#cb93-1"></a><span class="co"># urbru, urbrum</span></span>
+<span id="cb93-2"><a href="data.html#cb93-2"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>urbru)) <span class="op">==</span><span class="st"> </span><span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="data.html#cb95-1"></a><span class="kw">validate_that</span>(<span class="kw">length</span>(<span class="kw">levels</span>(ISSP2012jh1d.dat<span class="op">$</span>urbrum)) <span class="op">==</span><span class="st"> </span><span class="dv">6</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p><strong>zxy</strong> Voisi miettiä paremman otsikon. Galku-paperin alusta on lisäilty
+viitteitä Refworksiin, mutta hieman hanklaa. www.gesis.org - sivusto on aika
+sekava. Virallinen (heidän määrittelemä) sitaatti löytyy, ja linkkejä. Tässä
+voisi ehkä käyttää alaviitettä, jossa tarjoaisi linkit? Tai ihan oma lyhyt kappale?
+Alla virallinen viite, ja tässä kaksi muuta ([RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a]
+ja [RefWorks:doc:5b6c7debe4b0e4e15164ab00]). Löytyy myös
+seurantaraportti([RefWorks:doc:5b155e0ce4b044dfd738458f]).
+<strong>viitteet pois- ehkä tekstiin linkkeinä?</strong></p>
+<p><strong>ks</strong> ISSP (International social survey) on tehnyt laajoja kansainvälisiä kyselytutkimuksia eri teemoista. Yksi teemoista on perhe ja muuttuvat (sosiaalisesti määräytyvät) sukupuoliroolit <span class="citation">((2016) <a href="lähteet-1.html#ref-RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a" role="doc-biblioref">2016</a>)</span>.</p>
 <p><strong>zxy</strong> Miksi data on kiinnostava sisällöllisesti? Viite Kantola (HS). Lisäksi laadukas, usealta vuodelta, tarkasti dokumentoitu.</p>
 <p><strong>ks</strong></p>
 <p><strong>zxy</strong> Miksi data sovelutuu korrespondenssianalyysin esittelyyn? Iso ja monimutkainen (kansainvälinen, datan laaut? kts. Blasius-viite alempana), sisällölliset muuttuja nominaaliasteikolla (kysymyspatterit, Likert), laadukas hyvin dokumentoitu aineisto.</p>
@@ -191,8 +353,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu tarkentaa tai muuten hifistellä. Osa kummallisa, erityisesti neutraalin vaihtoehdon puuttuminen (Espanja). Nämä maat pitää sivuuttaa.</p></li>
 <li><p>Datassa painot “maatasolle”, otanta sun muu kuvattu tarkasti dokumentaatiossa. Jos tutkimusongelma on maiden erojen analyysi, mitään vertailupainoja ei ole käytössä. Otoskoko on paino. Paha juttu, MG oikaisee ja ja oikaisee myös sukupuolien osuudet.</p></li>
 </ol>
+</div>
+</div>
 <div id="aineiston-kuvailu-tietosisältö" class="section level2">
-<h2><span class="header-section-number">2.1</span> Aineiston kuvailu (tietosisältö)</h2>
+<h2><span class="header-section-number">2.2</span> Aineiston kuvailu (tietosisältö)</h2>
 <p><strong>Jäsennys:</strong></p>
 <ol style="list-style-type: decimal">
 <li></li>
@@ -201,19 +365,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 </div>
 <div id="aineiston-rajaaminen" class="section level2">
-<h2><span class="header-section-number">2.2</span> Aineiston rajaaminen</h2>
+<h2><span class="header-section-number">2.3</span> Aineiston rajaaminen</h2>
 <p><strong>zxy</strong> Viitteitä myös r-ratkaisuihin, jotka selostetaan koodissa. Erityisesti (a) puuttuvat tiedot ja (b) likert-asteikko faktorina (ilman järjestystä).</p>
 <p><strong>puuttuvat</strong> vastaukset aluksi pois (rankka rajaus - vain yksinkertaistus, menetelmän esittelyn vuoksi)</p>
 <p><strong>zxy</strong> Aluksi kuusi maata</p>
 <p><strong>zxy</strong> Sitten monta maata</p>
 </div>
 <div id="aineiston-kuvailu-tunnuslukuja" class="section level2">
-<h2><span class="header-section-number">2.3</span> Aineiston kuvailu (tunnuslukuja)</h2>
+<h2><span class="header-section-number">2.4</span> Aineiston kuvailu (tunnuslukuja)</h2>
 <p><strong>zxy</strong> ehkäpä taulukoiden lisäksi Likert-kuva?</p>
 <p><strong>viimeiset kappaleet</strong></p>
 <p><strong>Miten aineistoa on käytetty?</strong>.</p>
 <p><strong>Korrespondenssianalyysin esimerkkiaineistona</strong></p>
-<p>Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa (Helsinki 2017 MCA, viite Moodleen?) ja kahdessa oppikirjassa (<span class="citation">(Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span>, <span class="citation">(M. J. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>).ISSP - aineisto vuodelta 1989 on käytetty myös neljän “singuaariarvohajoitelmaan perustuvan menetelmän” vertailuun<span class="citation">(Greenacre <a href="lähteet.html#ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76" role="doc-biblioref">2003</a>)</span>.</p>
+<p>Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa (Helsinki 2017 MCA, viite Moodleen?) ja kahdessa oppikirjassa (<span class="citation">(Greenacre <a href="lähteet-1.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span>, <span class="citation">(M. J. Greenacre <a href="lähteet-1.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>).ISSP - aineisto vuodelta 1989 on käytetty myös neljän “singuaariarvohajoitelmaan perustuvan menetelmän” vertailuun<span class="citation">(Greenacre <a href="lähteet-1.html#ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76" role="doc-biblioref">2003</a>)</span>.</p>
 <p>“We consider the joint analysis of two matched matrices which have common
 rows and columns, for example multivariate data observed at two time points or split
 according to a dichotomous variable. Methods of interest include principal components
@@ -226,12 +390,12 @@ The methodology is applied to data from the International Social Survey Program
 comparing male and female attitudes on working wives across eight countries. The resulting
 biplots optimally display the overall cross-cultural differences as well as the male–female
 differences. The case of more than two matched matrices is also discussed.”</p>
-<p>Blasius ja Thiessen (<span class="citation">(Blasius ja Thiessen <a href="lähteet.html#ref-RefWorks:doc:5b15542ee4b0e2616bc42dca" role="doc-biblioref">2006</a>)</span>) arvioivat aineiston laatua ja ja maiden vertailtavuutta vuoden 1994 aineistolla.</p>
+<p>Blasius ja Thiessen (<span class="citation">(Blasius ja Thiessen <a href="lähteet-1.html#ref-RefWorks:doc:5b15542ee4b0e2616bc42dca" role="doc-biblioref">2006</a>)</span>) arvioivat aineiston laatua ja ja maiden vertailtavuutta vuoden 1994 aineistolla.</p>
 <p>“This paper provides empirically-based criteria for selecting Items and countries to develop measures of an underlying construct of interest that are comparable in cross-national research. Using data from the 1994 International Social Survey Program and applying multiple correspondence analysis to a set of common items in each of the 24 participating countries, we show that both the quality of the data, as well as its underlying structure - and therefore meaning - vary considerably between countries. The approach we use for screening countries and items is especially useful in situations where the psychometric properties of the items have not been well established in previous research.”</p>
 <p><strong>tärkeä rajaus</strong> Substanssitutkimusta ei tässä käsitellä.</p>
 <p>“ISSP - saitilla” löytyy bibliografia, ja hakupalveluillakin voi haravoida.
 <strong>zxy</strong> www.gesis.org - sivustolta löytyy myös <a href="https://search.gesis.org/research_data/ZA5900">julkaisuluettelo</a>, voiko linkin laittaa alaviitteeksi tai suoraan leipätekstiin?</p>
-<p>Sukupuoliroolien (gender roles) ja niihin liittyvien asenteiden vertailevaa kansainvälistä (cross-cultural) tutkimusta on tehty paljon. Tutkimusongelman sisällöllisten ja teoreettisen kysymysten nykytilaa kuvaa Walterin<span class="citation">(Walter <a href="lähteet.html#ref-RefWorks:doc:5bd08fb6e4b05c5447c9a9f9" role="doc-biblioref">2018</a>)</span> tuore artikkeli. Omnibus surveys ?</p>
+<p>Sukupuoliroolien (gender roles) ja niihin liittyvien asenteiden vertailevaa kansainvälistä (cross-cultural) tutkimusta on tehty paljon. Tutkimusongelman sisällöllisten ja teoreettisen kysymysten nykytilaa kuvaa Walterin<span class="citation">(Walter <a href="lähteet-1.html#ref-RefWorks:doc:5bd08fb6e4b05c5447c9a9f9" role="doc-biblioref">2018</a>)</span> tuore artikkeli. Omnibus surveys ?</p>
 
 </div>
 </div>

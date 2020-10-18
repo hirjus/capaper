@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Luku 1 Johdanto | Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</title>
   <meta name="description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Luku 1 Johdanto | Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä" />
   <meta property="og:type" content="book" />
@@ -140,9 +140,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3" data-path="johdanto.html"><a href="johdanto.html#korrespondenssianalyysin-historiaa"><i class="fa fa-check"></i><b>1.3</b> Korrespondenssianalyysin historiaa</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Data</a><ul>
-<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#aineiston-kuvailu-tietosisältö"><i class="fa fa-check"></i><b>2.1</b> Aineiston kuvailu (tietosisältö)</a></li>
-<li class="chapter" data-level="2.2" data-path="data.html"><a href="data.html#aineiston-rajaaminen"><i class="fa fa-check"></i><b>2.2</b> Aineiston rajaaminen</a></li>
-<li class="chapter" data-level="2.3" data-path="data.html"><a href="data.html#aineiston-kuvailu-tunnuslukuja"><i class="fa fa-check"></i><b>2.3</b> Aineiston kuvailu (tunnuslukuja)</a></li>
+<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#datan-luku-ja-perusmuokkaukset-testailua"><i class="fa fa-check"></i><b>2.1</b> Datan luku ja perusmuokkaukset: testailua</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="data.html"><a href="data.html#maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.1.1</b> Maat ja muuttujat</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="data.html"><a href="data.html#aineiston-kuvailu-tietosisältö"><i class="fa fa-check"></i><b>2.2</b> Aineiston kuvailu (tietosisältö)</a></li>
+<li class="chapter" data-level="2.3" data-path="data.html"><a href="data.html#aineiston-rajaaminen"><i class="fa fa-check"></i><b>2.3</b> Aineiston rajaaminen</a></li>
+<li class="chapter" data-level="2.4" data-path="data.html"><a href="data.html#aineiston-kuvailu-tunnuslukuja"><i class="fa fa-check"></i><b>2.4</b> Aineiston kuvailu (tunnuslukuja)</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>3</b> Yksinkertainen korrespondenssianalyysi</a><ul>
 <li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä</a></li>
@@ -155,7 +158,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>5.2</b> R - koodi</a></li>
 <li class="chapter" data-level="5.3" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>5.3</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="johdanto.html"><a href="johdanto.html#lähteet"><i class="fa fa-check"></i>Lähteet</a></li>
+<li class="chapter" data-level="" data-path="lähteet-1.html"><a href="lähteet-1.html"><i class="fa fa-check"></i>Lähteet</a></li>
 </ul>
 
       </nav>
@@ -200,7 +203,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 - yksinkertainen ca, useamman muuttujan ca</p>
 <p><strong>ks</strong> Tämän voi tehdä yksinkertaisen korrespondenssianalyysin avulla. Yksinkertainen kahden luokittelumuuttujan
 korrespondenssianalyysi antaa graafisen analyysin “…perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin muodot ovat saman algoritmin soveltamista toisen tyyppiisiin datamatriiseihin, ja tulkintaa sovelletaan vastaavasti
-(with the consequent adaptation of the interpretation)”<span class="citation">(Greenacre ja Hastie <a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d84" role="doc-biblioref">1987</a> , s. 437)</span></p>
+(with the consequent adaptation of the interpretation)”<span class="citation">(Greenacre ja Hastie <a href="lähteet-1.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d84" role="doc-biblioref">1987</a> , s. 437)</span></p>
 <p><strong>zxy</strong> Miksi eksporatiivinen (määrittele!) ja deskriptiivinen (määrittele!) menetelmä on esitettävä “in vivo”, toiminnassa? Oppikirjoissa (viitteitä) erityisesti MG on havainnolistanut CA:n matemaattista ja geometristä taustaa synteettisillä aineistoilla. Turha kopioida tähän. Menetelmän ydin on yksinkertaisen graafisen esityksen – kartan – avulla tulkita monimutkaisen empiirisen aineiston muuttujien riippuvuuksia. Yhteyksiä ei tiivistetä todennäköisyyspäättelyn kriteereillä tilastolliseen malliin, vaan deskripriivisen analyysin hengessä esitellään koko aineisto. Mallin sijaan vähennetään ulottuvuuksia, ja siinä menetetään informaatiota. Tavoitteena on säilyttää yleensä kaksiulotteisessa kuvassa mahdollisimman suuri osa alkuperäisen datan vaihtelusta. Eksploratiivinen data-analyysi on vuoropuhelua aineiston kanssa. Analyysiä tarkennetaan, rajataan ja muokataan, kun aineisto paljastaa jotain kiinnostavaa tai yllättävää. Tästä saa jonkinlaisen aasinsillan matriisiyhtälöiden puolustukseksi. Saksan ja Belgian datan jakaminen on hyvä esimerkki, on “osattava tarttua” menetelmän tulosmatriiseihin.</p>
 <p><strong>zxy</strong> esitystavan perustelu</p>
 <ul>
@@ -212,13 +215,13 @@ korrespondenssianalyysi antaa graafisen analyysin “…perussäännöt tulkinna
 <p><strong>zxy</strong> Tarvitaanko tämä, perustelu? Muutamat lähteet aivan keskeisiä, ja MG:n kurssi pitää mainita.</p>
 <div id="lähteet" class="section level3">
 <h3><span class="header-section-number">1.2.1</span> Lähteet</h3>
-<p>Michael Greenacre luennoi lyhyen kurssin korrespondenssianalyysistä Helsingin yliopistossa keväällä 2017<span class="citation">(M. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca" role="doc-biblioref">2017</a>)</span>. Luennot ja laskuharjoitukset perehdyttivät minut ensimmäistä kertaa tähän menetelmään, ja kurssin materiaaleihin olen usein palannut. Niihin voi tutustua Helsingin yliopiston [Moodle-palvelussa] (<a href="https://moodle.helsinki.fi" class="uri">https://moodle.helsinki.fi</a>) (käyttäjätunnus vaaditaan). Greenacren kärsivällisesti kirjoitetut perusoppikirjat ovat tehneet menetelmää laajasti tunnetuksi englantia lukeville.</p>
-<p>Ranskalaisen lähestymistan perusoppikirja<span class="citation">(Roux ja Rouanet <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>)</span> esittelee menetelmän matemaattiset perusteet. Lyhyt historiallinen katsaus ja menetelmä soveltamisen perusajatusten esittely valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita. Kirjoittajat esittelevät perusteellisesti joitain empiirisiä tutkimuksia, ja lyhyt mutta naseva matriisilaskennan kritiikki on hyvä panna merkille.</p>
-<p>Korrespondenssianalyysi tuli osaksi suomalaista Survo-ohjelmistoa jo vuonna (<strong>????</strong>), ja menetelmää on esitelty ainakin kahdessa oppikirjassa<span class="citation">(Mustonen <a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d95" role="doc-biblioref">1995</a>)</span> ja <span class="citation">(Vehkalahti <a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664da4" role="doc-biblioref">2008</a>)</span>.</p>
+<p>Michael Greenacre luennoi lyhyen kurssin korrespondenssianalyysistä Helsingin yliopistossa keväällä 2017<span class="citation">(M. Greenacre <a href="lähteet-1.html#ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca" role="doc-biblioref">2017</a>)</span>. Luennot ja laskuharjoitukset perehdyttivät minut ensimmäistä kertaa tähän menetelmään, ja kurssin materiaaleihin olen usein palannut. Niihin voi tutustua Helsingin yliopiston [Moodle-palvelussa] (<a href="https://moodle.helsinki.fi" class="uri">https://moodle.helsinki.fi</a>) (käyttäjätunnus vaaditaan). Greenacren kärsivällisesti kirjoitetut perusoppikirjat ovat tehneet menetelmää laajasti tunnetuksi englantia lukeville.</p>
+<p>Ranskalaisen lähestymistan perusoppikirja<span class="citation">(Roux ja Rouanet <a href="lähteet-1.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>)</span> esittelee menetelmän matemaattiset perusteet. Lyhyt historiallinen katsaus ja menetelmä soveltamisen perusajatusten esittely valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita. Kirjoittajat esittelevät perusteellisesti joitain empiirisiä tutkimuksia, ja lyhyt mutta naseva matriisilaskennan kritiikki on hyvä panna merkille.</p>
+<p>Korrespondenssianalyysi tuli osaksi suomalaista Survo-ohjelmistoa jo vuonna (<strong>????</strong>), ja menetelmää on esitelty ainakin kahdessa oppikirjassa<span class="citation">(Mustonen <a href="lähteet-1.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d95" role="doc-biblioref">1995</a>)</span> ja <span class="citation">(Vehkalahti <a href="lähteet-1.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664da4" role="doc-biblioref">2008</a>)</span>.</p>
 </div>
 <div id="käytetyt-ohjelmistot" class="section level3">
 <h3><span class="header-section-number">1.2.2</span> Käytetyt ohjelmistot</h3>
-<p><strong>zxy</strong> R, ca-paketti. löytyy myös muita paketteja. Rmarkdown<span class="citation">(Yihui Xie <a href="lähteet.html#ref-RefWorks:doc:5b6b346fe4b0c619b11b8a3e" role="doc-biblioref">2018</a>)</span>, ja bookdown (<span class="citation">(Xie <a href="lähteet.html#ref-RefWorks:doc:5b6b36dde4b09b7ec442bf8b" role="doc-biblioref">2016</a>)</span> ja toinen viite <span class="citation">(Xie <a href="lähteet.html#ref-R-bookdown" role="doc-biblioref">2020</a>)</span>). Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.</p>
+<p><strong>zxy</strong> R, ca-paketti. löytyy myös muita paketteja. Rmarkdown<span class="citation">(Yihui Xie <a href="lähteet-1.html#ref-RefWorks:doc:5b6b346fe4b0c619b11b8a3e" role="doc-biblioref">2018</a>)</span>, ja bookdown (<span class="citation">(Xie <a href="lähteet-1.html#ref-RefWorks:doc:5b6b36dde4b09b7ec442bf8b" role="doc-biblioref">2016</a>)</span> ja toinen viite <span class="citation">(Xie <a href="lähteet-1.html#ref-R-bookdown" role="doc-biblioref">2020</a>)</span>). Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.</p>
 <p><strong>zxy</strong> Helposti toistettavan tutkimukset periaatteet</p>
 <ol style="list-style-type: decimal">
 <li>Datasta (löytyy netistä, samoin kattava dokumentaatio) lyhyt matka analyysiin.</li>
