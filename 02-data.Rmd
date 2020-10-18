@@ -306,13 +306,13 @@ ISSP2012jh1b.data <- select(ISSP2012jh1a.data, all_of(jhvars1))
 ISSP2012jh1c.data <- filter(ISSP2012jh1b.data, (!is.na(SEX) & !is.na(AGE)))
 
 str(ISSP2012jh1c.data) # 32823 obs. of  23 variables, 32969-32823 = 146
-# TARKISTUS 8.6.20 dplyr 1.0.0 havaintojen ja muuttujien määrä ok.
-
-# ISSP2012jh1c.data %>% summary() %>% kable()
+# TARKISTUS 8.6.20 dplyr 1.0.0-päivitys: havaintojen ja muuttujien määrä ok.
 
 ```
 
-Perusmuunnokset -useita vaiheita.
+Perusmuunnokset - viisi koodilohkoa
+
+Vaihe 1
 
 ```{r fct-vaihe1, echo = FALSE,include = FALSE}
 # VAIHE 1 - muuttujat joissa ei ole puuttuvia tietoja
@@ -380,54 +380,52 @@ ISSP2012jh1d.dat <- ISSP2012jh1c.data %>%
 
 ISSP2012jh1d.dat <- ISSP2012jh1d.dat %>%
     mutate(sp = fct_drop(sp1),
-           maa3 = fct_drop(maa3))
-# Poistetaan maa3-muuttujan tyhjät luokat (3.2.20)
+           maa3 = fct_drop(maa3)
+           )
 
 #  maa3 - tarkistuksia
 
 # str(ISSP2012jh1d.dat$maa3)  # 29 levels
-
-# attributes(ISSP2012jh1d.dat$maa3) #
+# attributes(ISSP2012jh1d.dat$maa3)
 #sum(is.na(ISSP2012jh1d.dat$maa3)) # nolla ei ole puuttuva tieto! (3.2.20)
 # ISSP2012jh1d.dat$maa3 %>% summary()
 # ISSP2012jh1d.dat$maa3 %>% fct_unique()
-
-# ISSP2012jh1d.dat$maa3 %>% fct_count() # miksi ei tulosta? Tulostaa komentoriviltä!
+# ISSP2012jh1d.dat$maa3 %>% fct_count()
 #
 # str(ISSP2012jh1d.dat$C_ALPHAN)
 # attributes(ISSP2012jh1d.dat$C_ALPHAN)
 
 # TESTAUKSIA
 # 
-ISSP2012jh1d.dat %>% tableX(C_ALPHAN, maa)
-ISSP2012jh1d.dat %>% tableX(C_ALPHAN, maa3)
-ISSP2012jh1d.dat %>% tableX(maa, maa3)
-ISSP2012jh1d.dat %>% tableX(V3, maa3)
+# ISSP2012jh1d.dat %>% tableX(C_ALPHAN, maa)
+# ISSP2012jh1d.dat %>% tableX(C_ALPHAN, maa3)
+# ISSP2012jh1d.dat %>% tableX(maa, maa3)
+# ISSP2012jh1d.dat %>% tableX(V3, maa3)
 
 # sp, sp1, SEX - tarkistuksia
-
-ISSP2012jh1d.dat$sp %>% fct_count()
-ISSP2012jh1d.dat$sp %>% fct_count()
-ISSP2012jh1d.dat %>% tableX(SEX,sp1)
-ISSP2012jh1d.dat %>% tableX(SEX,sp)
-ISSP2012jh1d.dat %>% tableX(sp1,sp)
+# 
+# ISSP2012jh1d.dat$sp %>% fct_count()
+# ISSP2012jh1d.dat$sp %>% fct_count()
+# ISSP2012jh1d.dat %>% tableX(SEX,sp1)
+# ISSP2012jh1d.dat %>% tableX(SEX,sp)
+# ISSP2012jh1d.dat %>% tableX(sp1,sp)
 
 # vaihe 1.3 uudet "faktorilabelit"
 ISSP2012jh1d.dat <- ISSP2012jh1d.dat %>%
     mutate(sp =
-               fct_recode(sp,
-                          "m" = "Male",
-                          "f" = "Female")
+          fct_recode(sp,
+            "m" = "Male",
+            "f" = "Female")
             )
 
 # Tarkistuksia
 
-ISSP2012jh1d.dat$sp %>% fct_unique()
-ISSP2012jh1d.dat$sp %>% fct_count()
-ISSP2012jh1d.dat$sp %>% summary()
+# ISSP2012jh1d.dat$sp %>% fct_unique()
+# ISSP2012jh1d.dat$sp %>% fct_count()
+# ISSP2012jh1d.dat$sp %>% summary()
 
 # AGE -> ika
-# ISSP2012jh1d.dat$ika <- ISSP2012jh1d.dat$AGE
+ISSP2012jh1d.dat$ika <- ISSP2012jh1d.dat$AGE
 
 # Tarkistuksia
 attributes(ISSP2012jh1d.dat$ika) # tyhjä level "No answer"
@@ -439,13 +437,14 @@ tableC(AGE, ika,cor_type = "pearson", na.rm = FALSE, rounding = 5,
        output = "text", booktabs = TRUE, caption = NULL, align = NULL,
        float = "htb") %>% kable()
 
-ISSP2012jh1d.dat$ika %>% hist(main = "ISSP 2012: vastaajan ikä")
-
-# str(ISSP2012jh1d.dat) - tarkistus
-
+# Ikäjakauma - ei tarvita (18.10.2020)
+#
+# ISSP2012jh1d.dat$ika %>% hist(main = "ISSP 2012: vastaajan ikä")
 
 ```
 
+Vaihe 2
+Vaihe 2.1
 
 ```{r fct-vaihe21, echo = FALSE, include = FALSE}
 # Substanssi- ja taustamuuttujat R-faktoreiksi
@@ -465,8 +464,7 @@ ISSP2012jh1d.dat <- ISSP2012jh1d.dat %>%
             nchild1 = as_factor(HHCHILDR),
             lifsta1 = as_factor(MARITAL),
             urbru1 = as_factor(URBRURAL)
-
-    )
+           )
 
 # Muuttujat Q1a1...urbru1 ovat apumuuttujia, joissa on periaatteessa kaikki SPSS-
 # tiedostosta siirtyvä metatieto. Poikkeus on SPSS:n kolme tarkentavaa koodia
@@ -476,13 +474,13 @@ ISSP2012jh1d.dat <- ISSP2012jh1d.dat %>%
 # Tarkistusksia
 # ISSP2012jh1d.dat %>% summary()
 
-ISSP2012jh1d.dat %>%
-    select(Q1a1, Q1b1, Q1c1,Q1d1,Q1e1, Q2a1, Q2b1, Q3a1,Q3b1) %>%
-    summary()
-
-ISSP2012jh1d.dat %>%
-    select(edu1,msta1, sosta1, nchild1, lifsta1, urbru1) %>%
-    summary()
+# ISSP2012jh1d.dat %>%
+#    select(Q1a1, Q1b1, Q1c1,Q1d1,Q1e1, Q2a1, Q2b1, Q3a1,Q3b1) %>%
+#    summary()
+#
+# ISSP2012jh1d.dat %>%
+#    select(edu1,msta1, sosta1, nchild1, lifsta1, urbru1) %>%
+#    summary()
 
 
 # Substanssimuuttujat - ristiintaulukoinnit riittävät (6.2.20)
@@ -508,7 +506,7 @@ ISSP2012jh1d.dat %>%
 
 ```
 
-
+Vaihe 2.2
 
 ```{r fct-vaihe22, echo = FALSE, include = FALSE}
 # Poistetaan tyhjät luokat muuttujista
@@ -533,23 +531,21 @@ ISSP2012jh1d.dat <- ISSP2012jh1d.dat %>%
     )
 # Tarkistuksia 1
 
-ISSP2012jh1d.dat %>% summary()
-ISSP2012jh1d.dat %>%
-    select(Q1a, Q1b, Q1c, Q1d, Q1e,Q2a,Q2b,Q3a, Q3b) %>%
-    str()
-ISSP2012jh1d.dat %>%
-    select(Q1a1, Q1b1, Q1c1, Q1d1, Q1e1,Q2a1,Q2b1,Q3a1, Q3b1) %>%
-    str()
-ISSP2012jh1d.dat %>%
-    select(edu, msta, sosta, nchild,lifsta, urbru) %>%
-    str()
-ISSP2012jh1d.dat %>%
-    select(edu1, msta1, sosta1, nchild1,lifsta1, urbru1) %>%
-    str()
+# ISSP2012jh1d.dat %>% summary()
+# ISSP2012jh1d.dat %>%
+#    select(Q1a, Q1b, Q1c, Q1d, Q1e,Q2a,Q2b,Q3a, Q3b) %>%
+#    str()
+#ISSP2012jh1d.dat %>%
+#    select(Q1a1, Q1b1, Q1c1, Q1d1, Q1e1,Q2a1,Q2b1,Q3a1, Q3b1) %>%
+#    str()
+#ISSP2012jh1d.dat %>%
+#    select(edu, msta, sosta, nchild,lifsta, urbru) %>%
+#    str()
+#ISSP2012jh1d.dat %>%
+#    select(edu1, msta1, sosta1, nchild1,lifsta1, urbru1) %>%
+#    str()
 
-
-# Tarkistuksia 2 - ristiintaulukointi Q1a/Q1am riittää (6.2.20)
-
+# Tarkistuksia 2 - ristiintaulukointeja
 # Substanssimuuttujat
 
 # ISSP2012jh1d.dat %>% tableX(Q1a,Q1a1)
@@ -571,9 +567,9 @@ ISSP2012jh1d.dat %>%
 # ISSP2012jh1d.dat %>% tableX(lifsta,lifsta1)
 # ISSP2012jh1d.dat %>% tableX(urbru,urbru1)
 
-
 ```
 
+Vaihe 2.3
 
 ```{r fct-vaihe23, echo = FALSE, include = FALSE}
 # Uusi muuttuja, jossa NA-arvot ovat mukana muuttujan uutena luokkana. Muuttujat
@@ -598,23 +594,23 @@ ISSP2012jh1d.dat <- ISSP2012jh1d.dat %>%
            )
 # Tarkistuksia 3
 
-ISSP2012jh1d.dat %>%
-    select(Q1am, Q1bm, Q1cm, Q1dm, Q1em, Q2am, Q2bm, Q3am, Q3bm) %>%
-    summary()
+# ISSP2012jh1d.dat %>%
+#    select(Q1am, Q1bm, Q1cm, Q1dm, Q1em, Q2am, Q2bm, Q3am, Q3bm) %>%
+#    summary()
+#
+#ISSP2012jh1d.dat %>%
+#    select(edum,mstam, sostam,nchildm,lifstam, urbrum) %>%
+#    summary()
+#
+#ISSP2012jh1d.dat %>%
+#    select(Q1am, Q1bm, Q1cm, Q1dm, Q1em, Q2am, Q2bm, Q3am, Q3bm) %>%
+#    str()
+#
+#ISSP2012jh1d.dat %>%
+#    select(edum,mstam, sostam,nchildm,lifstam, urbrum) %>%
+#    str()
 
-ISSP2012jh1d.dat %>%
-    select(edum,mstam, sostam,nchildm,lifstam, urbrum) %>%
-    summary()
-
-ISSP2012jh1d.dat %>%
-    select(Q1am, Q1bm, Q1cm, Q1dm, Q1em, Q2am, Q2bm, Q3am, Q3bm) %>%
-    str()
-
-ISSP2012jh1d.dat %>%
-    select(edum,mstam, sostam,nchildm,lifstam, urbrum) %>%
-    str()
-
-# Taustamuuttuja, puuttuva tieto mukana - ristiintaulkointi riittää (6.2.20)
+# Taustamuuttuja, puuttuva tieto mukana - ristiintaulkointeja
 
 # ISSP2012jh1d.dat$edum %>% fct_count()
 # ISSP2012jh1d.dat$mstam %>% fct_count()
@@ -623,7 +619,7 @@ ISSP2012jh1d.dat %>%
 # ISSP2012jh1d.dat$lifstam %>% fct_count()
 # ISSP2012jh1d.dat$urbrum %>% fct_count()
 
-# Substanssimuuttujat, puuttuva tieto mukana  - ristiintaulkointi riittää (6.2.20)
+# Substanssimuuttujat, puuttuva tieto mukana  - ristiintaulkointeja
 
 # ISSP2012jh1d.dat$Q1am %>% fct_count()
 # ISSP2012jh1d.dat$Q1bm %>% fct_count()
@@ -637,6 +633,7 @@ ISSP2012jh1d.dat %>%
 
 ```
 
+Vaihe 2.4
 
 ```{r fct-vaihe24, echo = FALSE, include = FALSE}
 # Vaihe 2.4.1
@@ -699,9 +696,9 @@ ISSP2012jh1d.dat <- ISSP2012jh1d.dat %>%
 
 
 # Tarkistuksia 1
-ISSP2012jh1d.dat %>%
-    select(Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b, Q3a, Q3b) %>%
-    summary()
+# ISSP2012jh1d.dat %>%
+#    select(Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b, Q3a, Q3b) %>%
+#    summary()
 
 
 # Vaihe 2.4.2 - muuttujassa eksplisiittinen NA-tieto
@@ -769,68 +766,67 @@ ISSP2012jh1d.dat <- ISSP2012jh1d.dat %>%
 
 # Tarkistuksia 4
 
-ISSP2012jh1d.dat %>%
-    select(Q1am, Q1bm, Q1cm, Q1dm, Q1em, Q2am, Q2bm, Q3am, Q3bm) %>%
-    summary()
+# ISSP2012jh1d.dat %>%
+#    select(Q1am, Q1bm, Q1cm, Q1dm, Q1em, Q2am, Q2bm, Q3am, Q3bm) %>%
+#    summary()
 
 # Tarkistuksia 5
 
 # Substanssimuuttuja
 
-ISSP2012jh1d.dat %>%
-    tableX(Q1a,Q1am)
+# ISSP2012jh1d.dat %>%
+#    tableX(Q1a,Q1am)
+#
+# ISSP2012jh1d.dat %>%
+#    tableX(Q1b,Q1bm)
+#
+# ISSP2012jh1d.dat %>%
+#    tableX(Q1c,Q1cm)
+#
+# ISSP2012jh1d.dat %>%
+#    tableX(Q1d,Q1dm)
+#
+# ISSP2012jh1d.dat %>%
+#    tableX(Q1e,Q1em)
+#
+# ISSP2012jh1d.dat %>%
+#    tableX(Q2a,Q2am)
+#
+# ISSP2012jh1d.dat %>%
+#    tableX(Q2b,Q2bm)
+#
+# ISSP2012jh1d.dat %>%
+#    tableX(Q3a,Q3am)
+#
+# ISSP2012jh1d.dat %>%
+#    tableX(Q3b,Q3bm)
+#
+# ISSP2012jh1d.dat %>% 
+#    tableX(Q3am,Q3a)
+#
+# ISSP2012jh1d.dat$Q3a %>% levels()
+# ISSP2012jh1d.dat$Q3am %>% levels()
 
-ISSP2012jh1d.dat %>%
-    tableX(Q1b,Q1bm)
+# Taustamuuttujat - ristiintaulukointeja
 
-ISSP2012jh1d.dat %>%
-    tableX(Q1c,Q1cm)
-
-ISSP2012jh1d.dat %>%
-    tableX(Q1d,Q1dm)
-
-ISSP2012jh1d.dat %>%
-    tableX(Q1e,Q1em)
-
-ISSP2012jh1d.dat %>%
-    tableX(Q2a,Q2am)
-
-ISSP2012jh1d.dat %>%
-    tableX(Q2b,Q2bm)
-
-ISSP2012jh1d.dat %>%
-    tableX(Q3a,Q3am)
-
-ISSP2012jh1d.dat %>%
-    tableX(Q3b,Q3bm)
-
-ISSP2012jh1d.dat %>%  # tableX muotoilee taulukkoa!
-    tableX(Q3am,Q3a)
-
-ISSP2012jh1d.dat$Q3a %>% levels()
-ISSP2012jh1d.dat$Q3am %>% levels()
-
-# Taustamuuttujat
-
-ISSP2012jh1d.dat %>%
-    tableX(edu, edum)
-ISSP2012jh1d.dat %>%
-    tableX(msta, mstam)
-ISSP2012jh1d.dat %>%
-    tableX(sosta, sostam)
-ISSP2012jh1d.dat %>%
-    tableX(nchild,nchildm)
-ISSP2012jh1d.dat %>%
-    tableX(lifsta, lifstam)
-ISSP2012jh1d.dat %>%
-    tableX(urbru, urbrum)
+# ISSP2012jh1d.dat %>%
+#    tableX(edu, edum)
+# ISSP2012jh1d.dat %>%
+#    tableX(msta, mstam)
+# ISSP2012jh1d.dat %>%
+#    tableX(sosta, sostam)
+# ISSP2012jh1d.dat %>%
+#    tableX(nchild,nchildm)
+# ISSP2012jh1d.dat %>%
+#    tableX(lifsta, lifstam)
+# ISSP2012jh1d.dat %>%
+#    tableX(urbru, urbrum)
 
 ```
 
 Muunnosten testaus, varmistetaan että muuttujat ovat sitä mitä halutaan.
 
-
-```{r fct-testaus1}
+```{r fct-testaus1, warning=TRUE,echo=FALSE,include=FALSE}
 # (16.9.2020) Testaus uusille muuttujille
 # Koodilohkoissa on jo testattu taulukoimalla muuttujia. Tässä varmistetaan, että
 # muuttujat pysyvät sellaisina millaisiksi ne on luotu.

@@ -156,7 +156,7 @@
 
 \title{Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä}
 \author{Jussi Hirvonen}
-\date{Versio 0.07, tulostettu 2020-10-18}
+\date{Versio 0.08, tulostettu 2020-10-18}
 
 \begin{document}
 \maketitle
@@ -169,11 +169,14 @@
 \chapter*{Alkutoimia}\label{alkutoimia}}
 \addcontentsline{toc}{chapter}{Alkutoimia}
 
-Ladataan r-paketit, ei tulosteta dokumenttiin. Pelkkä YAML- `front matter', lisäkonfiguroinnit tiedostoissa \_bookdown.yml ja \_output.yml.
+Ladataan r-paketit, ei tulosteta dokumenttiin. Pelkkä YAML- `front matter',
+lisäkonfiguroinnit tiedostoissa \_bookdown.yml ja \_output.yml.
 
-Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti \_bookdown.yml-tiedostossa.
+Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti
+\_bookdown.yml-tiedostossa.
 
-RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla), ja korjailla skandit jos niissä on vikaa.
+RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla),
+ja korjailla skandit jos niissä on vikaa.
 
 \textbf{25.10.18}
 
@@ -222,9 +225,14 @@ RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla), ja korj
 \hypertarget{tutkielman-tavoite-tutkimusongelma}{%
 \section{Tutkielman tavoite (tutkimusongelma?)}\label{tutkielman-tavoite-tutkimusongelma}}
 
-\textbf{zxy} Tässä kerrotaan, miksi tämä työ on kirjoitettu. Esitellään menetelmä käyttämällä oikeaa dataa. Täsmällisempi esitys sirotellaan esimerkkiaineiston analyysin tulosten esittelyn lomaan. Pitäisikö tässä tuoda esille ns. ``ranskalaisen koulukunnan'' matemaattisen perusteiden korostus, ja data-analyysin filosofia? Ehkä ei, koska sen pohdinta ei ole pääasia. Se tietysti mainitaan, ja asiaa pohditaan.
+\textbf{zxy} Tässä kerrotaan, miksi tämä työ on kirjoitettu. Esitellään menetelmä
+käyttämällä oikeaa dataa. Täsmällisempi esitys sirotellaan esimerkkiaineiston
+analyysin tulosten esittelyn lomaan. Pitäisikö tässä tuoda esille ns. ``ranskalaisen
+koulukunnan'' matemaattisen perusteiden korostus, ja data-analyysin filosofia?
+Ehkä ei, koska sen pohdinta ei ole pääasia. Se tietysti mainitaan, ja asiaa pohditaan.
 
-\textbf{ks} Esitellään korrespondenssianalyysin käsitteet ja graafisen analyysin periaatteet.
+\textbf{ks} Esitellään korrespondenssianalyysin käsitteet ja graafisen analyysin
+periaatteet.
 
 \textbf{zxy} -mitä ca on?
 - dimensioiden vähentäminen ja visualisointi
@@ -232,33 +240,65 @@ RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla), ja korj
 - määrittele graafinen, deskriptiivinen, eksploratiivinen data-analyysi
 - yksinkertainen ca, useamman muuttujan ca
 
-\textbf{ks} Tämän voi tehdä yksinkertaisen korrespondenssianalyysin avulla. Yksinkertainen kahden luokittelumuuttujan
-korrespondenssianalyysi antaa graafisen analyysin ``\ldots perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin muodot ovat saman algoritmin soveltamista toisen tyyppiisiin datamatriiseihin, ja tulkintaa sovelletaan vastaavasti
-(with the consequent adaptation of the interpretation)''\citep[ , s. 437]{RefWorks:doc:5a857a44e4b0ed2d44664d84}
+\textbf{ks} Tämän voi tehdä yksinkertaisen korrespondenssianalyysin avulla. Yksinkertainen
+kahden luokittelumuuttujan korrespondenssianalyysi antaa graafisen analyysin
+``\ldots perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin muodot ovat
+saman algoritmin soveltamista toisen tyyppiisiin datamatriiseihin, ja tulkintaa
+sovelletaan vastaavasti (with the consequent adaptation of the interpretation)''
+\citep[ , s. 437]{RefWorks:doc:5a857a44e4b0ed2d44664d84} (MG ja Hastie, JASA?)
 
-\textbf{zxy} Miksi eksporatiivinen (määrittele!) ja deskriptiivinen (määrittele!) menetelmä on esitettävä ``in vivo'', toiminnassa? Oppikirjoissa (viitteitä) erityisesti MG on havainnolistanut CA:n matemaattista ja geometristä taustaa synteettisillä aineistoilla. Turha kopioida tähän. Menetelmän ydin on yksinkertaisen graafisen esityksen -- kartan -- avulla tulkita monimutkaisen empiirisen aineiston muuttujien riippuvuuksia. Yhteyksiä ei tiivistetä todennäköisyyspäättelyn kriteereillä tilastolliseen malliin, vaan deskripriivisen analyysin hengessä esitellään koko aineisto. Mallin sijaan vähennetään ulottuvuuksia, ja siinä menetetään informaatiota. Tavoitteena on säilyttää yleensä kaksiulotteisessa kuvassa mahdollisimman suuri osa alkuperäisen datan vaihtelusta. Eksploratiivinen data-analyysi on vuoropuhelua aineiston kanssa. Analyysiä tarkennetaan, rajataan ja muokataan, kun aineisto paljastaa jotain kiinnostavaa tai yllättävää. Tästä saa jonkinlaisen aasinsillan matriisiyhtälöiden puolustukseksi. Saksan ja Belgian datan jakaminen on hyvä esimerkki, on ``osattava tarttua'' menetelmän tulosmatriiseihin.
+\textbf{zxy} Miksi eksporatiivinen (määrittele!) ja deskriptiivinen (määrittele!)
+menetelmä on esitettävä ``in vivo'', toiminnassa? Oppikirjoissa (viitteitä)
+erityisesti MG on havainnolistanut CA:n matemaattista ja geometristä taustaa
+synteettisillä aineistoilla. Turha kopioida tähän. Menetelmän ydin on
+yksinkertaisen graafisen esityksen -- kartan -- avulla tulkita monimutkaisen
+empiirisen aineiston muuttujien riippuvuuksia. Yhteyksiä ei tiivistetä
+todennäköisyyspäättelyn kriteereillä tilastolliseen malliin, vaan deskripriivisen
+analyysin hengessä esitellään koko aineisto. Mallin sijaan vähennetään ulottuvuuksia,
+ja siinä menetetään informaatiota. Tavoitteena on säilyttää yleensä kaksiulotteisessa
+kuvassa mahdollisimman suuri osa alkuperäisen datan vaihtelusta. Eksploratiivinen
+data-analyysi on vuoropuhelua aineiston kanssa. Analyysiä tarkennetaan, rajataan
+ja muokataan, kun aineisto paljastaa jotain kiinnostavaa tai yllättävää. Tästä
+saa jonkinlaisen aasinsillan matriisiyhtälöiden puolustukseksi.
+Saksan ja Belgian datan jakaminen on hyvä esimerkki, on ``osattava tarttua''
+menetelmän tulosmatriiseihin.
 
 \textbf{zxy} esitystavan perustelu
 
 \begin{itemize}
 \tightlist
 \item
-  kenelle kirjoitettu? Menetelmästä kiinnostuneelle tilastotieteen ja data-analyysin perusteet tuntevalle. R-ohjelmisto ei ole rajoitus, SPSS ja SAS sopivat. (SPSS - MG:llä kriittinen huomio ``loose ends - paperissa'' tai CAip-teorialiitteessä).
+  kenelle kirjoitettu? Menetelmästä kiinnostuneelle tilastotieteen ja data-analyysin
+  perusteet tuntevalle. R-ohjelmisto ei ole rajoitus, SPSS ja SAS sopivat
+  (SPSS - MG:llä kriittinen huomio ``loose ends - paperissa'' tai CAip-teorialiitteessä).
 \end{itemize}
 
 \hypertarget{tuxe4rkeimmuxe4t-luxe4hteet-ja-ohjelmistot}{%
 \section{Tärkeimmät lähteet ja ohjelmistot}\label{tuxe4rkeimmuxe4t-luxe4hteet-ja-ohjelmistot}}
 
-\textbf{zxy} Tarvitaanko tämä, perustelu? Muutamat lähteet aivan keskeisiä, ja MG:n kurssi pitää mainita.
+\textbf{zxy} Tarvitaanko tämä, perustelu? Muutamat lähteet aivan keskeisiä, ja MG:n
+kurssi pitää mainita.
 
 \hypertarget{luxe4hteet}{%
 \subsection{Lähteet}\label{luxe4hteet}}
 
-Michael Greenacre luennoi lyhyen kurssin korrespondenssianalyysistä Helsingin yliopistossa keväällä 2017\citep{RefWorks:doc:5b6ef091e4b0984fd9b8c0ca}. Luennot ja laskuharjoitukset perehdyttivät minut ensimmäistä kertaa tähän menetelmään, ja kurssin materiaaleihin olen usein palannut. Niihin voi tutustua Helsingin yliopiston {[}Moodle-palvelussa{]} (\url{https://moodle.helsinki.fi}) (käyttäjätunnus vaaditaan). Greenacren kärsivällisesti kirjoitetut perusoppikirjat ovat tehneet menetelmää laajasti tunnetuksi englantia lukeville.
+Michael Greenacre luennoi lyhyen kurssin korrespondenssianalyysistä Helsingin
+yliopistossa keväällä 2017\citep{RefWorks:doc:5b6ef091e4b0984fd9b8c0ca}. Luennot ja
+laskuharjoitukset perehdyttivät minut ensimmäistä kertaa tähän menetelmään, ja
+kurssin materiaaleihin olen usein palannut. Niihin voi tutustua
+{[}Moodle-palvelussa{]} (\url{https://moodle.helsinki.fi}) (käyttäjätunnus vaaditaan).
+Greenacren kärsivällisesti kirjoitetut perusoppikirjat ovat tehneet menetelmää
+laajasti tunnetuksi englantia lukeville.
 
-Ranskalaisen lähestymistan perusoppikirja\citep{RefWorks:doc:5a857a43e4b0ed2d44664d75} esittelee menetelmän matemaattiset perusteet. Lyhyt historiallinen katsaus ja menetelmä soveltamisen perusajatusten esittely valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita. Kirjoittajat esittelevät perusteellisesti joitain empiirisiä tutkimuksia, ja lyhyt mutta naseva matriisilaskennan kritiikki on hyvä panna merkille.
+Ranskalaisen lähestymistan perusoppikirja\citep{RefWorks:doc:5a857a43e4b0ed2d44664d75} (GDA-kirja?)
+esittelee menetelmän matemaattiset perusteet.
+Lyhyt historiallinen katsaus ja menetelmä soveltamisen perusajatusten esittely
+valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita.
+Kirjoittajat esittelevät perusteellisesti joitain empiirisiä tutkimuksia, ja
+lyhyt mutta naseva matriisilaskennan kritiikki on hyvä panna merkille.
 
-Korrespondenssianalyysi tuli osaksi suomalaista Survo-ohjelmistoa jo vuonna (\textbf{????}), ja menetelmää on esitelty ainakin kahdessa oppikirjassa\citep{RefWorks:doc:5a857a44e4b0ed2d44664d95} ja \citep{RefWorks:doc:5a857a44e4b0ed2d44664da4}.
+Korrespondenssianalyysi tuli osaksi suomalaista Survo-ohjelmistoa jo vuonna (\textbf{????}),
+ja menetelmää on esitelty ainakin kahdessa oppikirjassa\citep{RefWorks:doc:5a857a44e4b0ed2d44664d95} ja \citep{RefWorks:doc:5a857a44e4b0ed2d44664da4}.
 
 \hypertarget{kuxe4ytetyt-ohjelmistot}{%
 \subsection{Käytetyt ohjelmistot}\label{kuxe4ytetyt-ohjelmistot}}
@@ -288,7 +328,37 @@ Tarkemmin liittessä.
 \hypertarget{data}{%
 \chapter{Data}\label{data}}
 
-\textbf{zxy} Voisi miettiä paremman otsikon. Galku-paperin alusta on lisäilty viitteitä Refworksiin, mutta hieman hanklaa. www.gesis.org - sivusto on aika sekava. Virallinen (heidän määrittelemä) sitaatti löytyy, ja linkkejä. Tässä voisi ehkä käyttää alaviitettä, jossa tarjoaisi linkit? Tai ihan oma lyhyt kappale? Alla virallinen viite, ja tässä kaksi muuta ({[}RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a{]} ja {[}RefWorks:doc:5b6c7debe4b0e4e15164ab00{]}). Löytyy myös seurantaraportti({[}RefWorks:doc:5b155e0ce4b044dfd738458f{]}). \textbf{viitteet pois- ehkä tekstiin linkkeinä?}
+\hypertarget{datan-luku-ja-perusmuokkaukset-testailua}{%
+\section{Datan luku ja perusmuokkaukset: testailua}\label{datan-luku-ja-perusmuokkaukset-testailua}}
+
+\hypertarget{maat-ja-muuttujat}{%
+\subsection{Maat ja muuttujat}\label{maat-ja-muuttujat}}
+
+\textbf{maat luettu, sitten muuttujat}
+
+Perusmuunnokset - viisi koodilohkoa
+
+Vaihe 1
+
+Vaihe 2
+Vaihe 2.1
+
+Vaihe 2.2
+
+Vaihe 2.3
+
+Vaihe 2.4
+
+Muunnosten testaus, varmistetaan että muuttujat ovat sitä mitä halutaan.
+
+\textbf{zxy} Voisi miettiä paremman otsikon. Galku-paperin alusta on lisäilty
+viitteitä Refworksiin, mutta hieman hanklaa. www.gesis.org - sivusto on aika
+sekava. Virallinen (heidän määrittelemä) sitaatti löytyy, ja linkkejä. Tässä
+voisi ehkä käyttää alaviitettä, jossa tarjoaisi linkit? Tai ihan oma lyhyt kappale?
+Alla virallinen viite, ja tässä kaksi muuta ({[}RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a{]}
+ja {[}RefWorks:doc:5b6c7debe4b0e4e15164ab00{]}). Löytyy myös
+seurantaraportti({[}RefWorks:doc:5b155e0ce4b044dfd738458f{]}).
+\textbf{viitteet pois- ehkä tekstiin linkkeinä?}
 
 \textbf{ks} ISSP (International social survey) on tehnyt laajoja kansainvälisiä kyselytutkimuksia eri teemoista. Yksi teemoista on perhe ja muuttuvat (sosiaalisesti määräytyvät) sukupuoliroolit \citep{RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a}.
 

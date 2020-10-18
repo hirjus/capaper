@@ -78,3 +78,10 @@ grafiikkaa, tuskin tarvitaan. Pientä editointia test-hakemiston kaavat1.Rmd - t
 
 **13.10.2020**
 simple_preamble.tex - luvun otsikko pois sivun yläreunasta.
+
+**18.10.2020** Päivitettiin jhca2020.bib, tarkistettiin index.Rmd-tiedoston paketit.
+Samat kuin Galku-projektissa, käyttämättömät poistettu. Lisätty datan
+peruskäsittelyn R-koodilohkot. Versionumero 0.08. PDF-tulostus ei toimi.
+
+**18.10.2020** Kommentoitiin pois muunnosten laveita ristiintaulkointeja,
+ testauskoodilohko jätetiin. PDF-tulostus toimii.

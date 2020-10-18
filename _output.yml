@@ -8,9 +8,9 @@ bookdown::gitbook:
     #code_folding: hide # koodilohkojen koodi oletuksena piilossa - vaatii themen käyttöä, gitbookissa on jo
 bookdown::pdf_book:
   #toc-depth: 2
-  fig_caption: true
   includes:
       in_header: simple_preamble.tex
+  fig_caption: true
   latex_engine: pdflatex
   citation_package: natbib
   keep_tex: yes
