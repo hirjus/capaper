@@ -1901,9 +1901,11 @@ versiot.
 \CommentTok{#muokataan 'long data' - muotoon}
 \NormalTok{apu1b_df <-}\StringTok{ }\KeywordTok{melt}\NormalTok{(}\KeywordTok{cbind}\NormalTok{(apu1_df, }\DataTypeTok{ind =} \KeywordTok{rownames}\NormalTok{(apu1_df)), }\DataTypeTok{id.vars =} \KeywordTok{c}\NormalTok{(}\StringTok{'ind'}\NormalTok{))}
 
-\KeywordTok{ggplot}\NormalTok{(apu1b_df, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ variable, }\DataTypeTok{y =}\NormalTok{ value, }\DataTypeTok{fill =}\NormalTok{ ind)) }\OperatorTok{+}
+\NormalTok{p <-}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(apu1b_df, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ variable, }\DataTypeTok{y =}\NormalTok{ value, }\DataTypeTok{fill =}\NormalTok{ ind)) }\OperatorTok{+}
 \StringTok{         }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{position =} \StringTok{"fill"}\NormalTok{, }\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{) }\OperatorTok{+}
-\StringTok{         }\KeywordTok{scale_y_continuous}\NormalTok{(}\DataTypeTok{labels =} \KeywordTok{percent_format}\NormalTok{())}
+\StringTok{         }\KeywordTok{scale_y_continuous}\NormalTok{(}\DataTypeTok{name =} \StringTok{" "}\NormalTok{,}\DataTypeTok{labels =} \KeywordTok{percent_format}\NormalTok{())}
+\NormalTok{p <-}\StringTok{ }\NormalTok{p }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{fill =} \StringTok{"maa"}\NormalTok{) }
+\NormalTok{p }\OperatorTok{+}\StringTok{ }\KeywordTok{scale_x_discrete}\NormalTok{(}\DataTypeTok{name =} \StringTok{"Q1b - vastauskategoriat"}\NormalTok{)}
 \CommentTok{# apu1_df}
 \CommentTok{# apu1b_df}
 \CommentTok{# riviprofiilit ja keskiarvorivi -  18.9.2018}
@@ -1934,10 +1936,12 @@ versiot.
 
 \CommentTok{#versio2 toimii (18.9.2018)}
 
-\KeywordTok{ggplot}\NormalTok{(apu2b_df, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ ind, }\DataTypeTok{y =}\NormalTok{ value, }\DataTypeTok{fill =}\NormalTok{ variable)) }\OperatorTok{+}
+\NormalTok{p <-}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(apu2b_df, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ ind, }\DataTypeTok{y =}\NormalTok{ value, }\DataTypeTok{fill =}\NormalTok{ variable)) }\OperatorTok{+}
 \StringTok{       }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{position =} \StringTok{"fill"}\NormalTok{, }\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{) }\OperatorTok{+}
 \StringTok{       }\KeywordTok{coord_flip}\NormalTok{() }\OperatorTok{+}
-\StringTok{        }\KeywordTok{scale_y_continuous}\NormalTok{(}\DataTypeTok{labels =} \KeywordTok{percent_format}\NormalTok{())}
+\StringTok{        }\KeywordTok{scale_y_continuous}\NormalTok{(}\DataTypeTok{name =} \StringTok{" "}\NormalTok{,}\DataTypeTok{labels =} \KeywordTok{percent_format}\NormalTok{())}
+\NormalTok{p <-}\StringTok{ }\NormalTok{p }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{fill =} \StringTok{"Q1b"}\NormalTok{) }
+\NormalTok{p }\OperatorTok{+}\StringTok{ }\KeywordTok{scale_x_discrete}\NormalTok{(}\DataTypeTok{name =} \StringTok{" "}\NormalTok{)}
 
 
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/substvar_fi_Q1Q2.png'}\NormalTok{)}

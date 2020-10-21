@@ -330,9 +330,11 @@ apu1_df$ka_sarake <- rowSums(apu1_df)
 #muokataan 'long data' - muotoon
 apu1b_df <- melt(cbind(apu1_df, ind = rownames(apu1_df)), id.vars = c('ind'))
 
-ggplot(apu1b_df, aes(x = variable, y = value, fill = ind)) +
+p <- ggplot(apu1b_df, aes(x = variable, y = value, fill = ind)) +
          geom_bar(position = "fill", stat = "identity") +
-         scale_y_continuous(labels = percent_format())
+         scale_y_continuous(name = " ",labels = percent_format())
+p <- p + labs(fill = "maa") 
+p + scale_x_discrete(name = "Q1b - vastauskategoriat")
 # apu1_df
 # apu1b_df
 ```
@@ -366,10 +368,12 @@ apu2b_df <- melt(cbind(apu2_df, ind = rownames(apu2_df)), id.vars = c('ind'))
 
 #versio2 toimii (18.9.2018)
 
-ggplot(apu2b_df, aes(x = ind, y = value, fill = variable)) +
+p <- ggplot(apu2b_df, aes(x = ind, y = value, fill = variable)) +
        geom_bar(position = "fill", stat = "identity") +
        coord_flip() +
-        scale_y_continuous(labels = percent_format())
+        scale_y_continuous(name = " ",labels = percent_format())
+p <- p + labs(fill = "Q1b") 
+p + scale_x_discrete(name = " ")
 
 
 ```

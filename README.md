@@ -89,3 +89,4 @@ peruskäsittelyn R-koodilohkot. Versionumero 0.08. PDF-tulostus ei toimi.
  **21.10.2020 Versio 0.10** Johdatteleva esimerkin koodia, datan luonti ja profiilikuvat.
  Lisätty muuttujataulukko kysymyksistä ja suomenkielisen lomakkeen kuva. R- koodi
  liitteksi.
+ Rivi- ja sarakeprofiilikuvien tekstit korjattu.

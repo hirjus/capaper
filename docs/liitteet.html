@@ -1433,49 +1433,53 @@ Kuva 5.1: Esimerkki suomenkielisestä lomakkeesta
 <span id="cb3-1240"><a href="liitteet.html#cb3-1240"></a><span class="co">#muokataan &#39;long data&#39; - muotoon</span></span>
 <span id="cb3-1241"><a href="liitteet.html#cb3-1241"></a>apu1b_df &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="kw">cbind</span>(apu1_df, <span class="dt">ind =</span> <span class="kw">rownames</span>(apu1_df)), <span class="dt">id.vars =</span> <span class="kw">c</span>(<span class="st">&#39;ind&#39;</span>))</span>
 <span id="cb3-1242"><a href="liitteet.html#cb3-1242"></a></span>
-<span id="cb3-1243"><a href="liitteet.html#cb3-1243"></a><span class="kw">ggplot</span>(apu1b_df, <span class="kw">aes</span>(<span class="dt">x =</span> variable, <span class="dt">y =</span> value, <span class="dt">fill =</span> ind)) <span class="op">+</span></span>
+<span id="cb3-1243"><a href="liitteet.html#cb3-1243"></a>p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(apu1b_df, <span class="kw">aes</span>(<span class="dt">x =</span> variable, <span class="dt">y =</span> value, <span class="dt">fill =</span> ind)) <span class="op">+</span></span>
 <span id="cb3-1244"><a href="liitteet.html#cb3-1244"></a><span class="st">         </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;fill&quot;</span>, <span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span></span>
-<span id="cb3-1245"><a href="liitteet.html#cb3-1245"></a><span class="st">         </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> <span class="kw">percent_format</span>())</span>
-<span id="cb3-1246"><a href="liitteet.html#cb3-1246"></a><span class="co"># apu1_df</span></span>
-<span id="cb3-1247"><a href="liitteet.html#cb3-1247"></a><span class="co"># apu1b_df</span></span>
-<span id="cb3-1248"><a href="liitteet.html#cb3-1248"></a><span class="co"># riviprofiilit ja keskiarvorivi -  18.9.2018</span></span>
-<span id="cb3-1249"><a href="liitteet.html#cb3-1249"></a>apu2_df &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(apu1)</span>
-<span id="cb3-1250"><a href="liitteet.html#cb3-1250"></a>apu2_df &lt;-<span class="st"> </span><span class="kw">rbind</span>(apu2_df, <span class="dt">ka_rivi =</span> <span class="kw">colSums</span>(apu2_df))</span>
-<span id="cb3-1251"><a href="liitteet.html#cb3-1251"></a></span>
-<span id="cb3-1252"><a href="liitteet.html#cb3-1252"></a><span class="co">#apu2_df</span></span>
-<span id="cb3-1253"><a href="liitteet.html#cb3-1253"></a><span class="co">#str(apu2_df)</span></span>
-<span id="cb3-1254"><a href="liitteet.html#cb3-1254"></a><span class="co">## typeof(apu2_df) # what is it?</span></span>
-<span id="cb3-1255"><a href="liitteet.html#cb3-1255"></a><span class="co">## class(apu2_df) # what is it? (sorry)</span></span>
-<span id="cb3-1256"><a href="liitteet.html#cb3-1256"></a><span class="co">## storage.mode(apu2_df) # what is it? (very sorry)</span></span>
-<span id="cb3-1257"><a href="liitteet.html#cb3-1257"></a><span class="co">## length(apu2_df) # how long is it? What about two dimensional</span></span>
-<span id="cb3-1258"><a href="liitteet.html#cb3-1258"></a><span class="co">## objects?</span></span>
-<span id="cb3-1259"><a href="liitteet.html#cb3-1259"></a><span class="co"># attributes(apu2_df)</span></span>
-<span id="cb3-1260"><a href="liitteet.html#cb3-1260"></a></span>
-<span id="cb3-1261"><a href="liitteet.html#cb3-1261"></a><span class="co"># temp1 &lt;- cbind(apu2_df, ind = rownames(apu2_df))</span></span>
-<span id="cb3-1262"><a href="liitteet.html#cb3-1262"></a><span class="co"># temp1</span></span>
-<span id="cb3-1263"><a href="liitteet.html#cb3-1263"></a><span class="co">##muokataan &#39;long data&#39; - muotoon</span></span>
-<span id="cb3-1264"><a href="liitteet.html#cb3-1264"></a>apu2b_df &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="kw">cbind</span>(apu2_df, <span class="dt">ind =</span> <span class="kw">rownames</span>(apu2_df)), <span class="dt">id.vars =</span> <span class="kw">c</span>(<span class="st">&#39;ind&#39;</span>))</span>
-<span id="cb3-1265"><a href="liitteet.html#cb3-1265"></a><span class="co"># str(apu2b_df)</span></span>
-<span id="cb3-1266"><a href="liitteet.html#cb3-1266"></a><span class="co"># glimpse(apu2b_df)</span></span>
-<span id="cb3-1267"><a href="liitteet.html#cb3-1267"></a></span>
-<span id="cb3-1268"><a href="liitteet.html#cb3-1268"></a><span class="co">#</span></span>
-<span id="cb3-1269"><a href="liitteet.html#cb3-1269"></a><span class="co">#ggplot(apu2b_df, aes(x = value, y = ind, fill = variable)) +</span></span>
-<span id="cb3-1270"><a href="liitteet.html#cb3-1270"></a><span class="co">#       geom_bar(position = &quot;fill&quot;, stat =&quot;identity&quot;) +</span></span>
-<span id="cb3-1271"><a href="liitteet.html#cb3-1271"></a><span class="co">#       #coord_flip() +</span></span>
-<span id="cb3-1272"><a href="liitteet.html#cb3-1272"></a><span class="co">#        scale_x_continuous(labels = percent_format())</span></span>
-<span id="cb3-1273"><a href="liitteet.html#cb3-1273"></a></span>
-<span id="cb3-1274"><a href="liitteet.html#cb3-1274"></a><span class="co">#versio2 toimii (18.9.2018)</span></span>
+<span id="cb3-1245"><a href="liitteet.html#cb3-1245"></a><span class="st">         </span><span class="kw">scale_y_continuous</span>(<span class="dt">name =</span> <span class="st">&quot; &quot;</span>,<span class="dt">labels =</span> <span class="kw">percent_format</span>())</span>
+<span id="cb3-1246"><a href="liitteet.html#cb3-1246"></a>p &lt;-<span class="st"> </span>p <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">fill =</span> <span class="st">&quot;maa&quot;</span>) </span>
+<span id="cb3-1247"><a href="liitteet.html#cb3-1247"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">scale_x_discrete</span>(<span class="dt">name =</span> <span class="st">&quot;Q1b - vastauskategoriat&quot;</span>)</span>
+<span id="cb3-1248"><a href="liitteet.html#cb3-1248"></a><span class="co"># apu1_df</span></span>
+<span id="cb3-1249"><a href="liitteet.html#cb3-1249"></a><span class="co"># apu1b_df</span></span>
+<span id="cb3-1250"><a href="liitteet.html#cb3-1250"></a><span class="co"># riviprofiilit ja keskiarvorivi -  18.9.2018</span></span>
+<span id="cb3-1251"><a href="liitteet.html#cb3-1251"></a>apu2_df &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(apu1)</span>
+<span id="cb3-1252"><a href="liitteet.html#cb3-1252"></a>apu2_df &lt;-<span class="st"> </span><span class="kw">rbind</span>(apu2_df, <span class="dt">ka_rivi =</span> <span class="kw">colSums</span>(apu2_df))</span>
+<span id="cb3-1253"><a href="liitteet.html#cb3-1253"></a></span>
+<span id="cb3-1254"><a href="liitteet.html#cb3-1254"></a><span class="co">#apu2_df</span></span>
+<span id="cb3-1255"><a href="liitteet.html#cb3-1255"></a><span class="co">#str(apu2_df)</span></span>
+<span id="cb3-1256"><a href="liitteet.html#cb3-1256"></a><span class="co">## typeof(apu2_df) # what is it?</span></span>
+<span id="cb3-1257"><a href="liitteet.html#cb3-1257"></a><span class="co">## class(apu2_df) # what is it? (sorry)</span></span>
+<span id="cb3-1258"><a href="liitteet.html#cb3-1258"></a><span class="co">## storage.mode(apu2_df) # what is it? (very sorry)</span></span>
+<span id="cb3-1259"><a href="liitteet.html#cb3-1259"></a><span class="co">## length(apu2_df) # how long is it? What about two dimensional</span></span>
+<span id="cb3-1260"><a href="liitteet.html#cb3-1260"></a><span class="co">## objects?</span></span>
+<span id="cb3-1261"><a href="liitteet.html#cb3-1261"></a><span class="co"># attributes(apu2_df)</span></span>
+<span id="cb3-1262"><a href="liitteet.html#cb3-1262"></a></span>
+<span id="cb3-1263"><a href="liitteet.html#cb3-1263"></a><span class="co"># temp1 &lt;- cbind(apu2_df, ind = rownames(apu2_df))</span></span>
+<span id="cb3-1264"><a href="liitteet.html#cb3-1264"></a><span class="co"># temp1</span></span>
+<span id="cb3-1265"><a href="liitteet.html#cb3-1265"></a><span class="co">##muokataan &#39;long data&#39; - muotoon</span></span>
+<span id="cb3-1266"><a href="liitteet.html#cb3-1266"></a>apu2b_df &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="kw">cbind</span>(apu2_df, <span class="dt">ind =</span> <span class="kw">rownames</span>(apu2_df)), <span class="dt">id.vars =</span> <span class="kw">c</span>(<span class="st">&#39;ind&#39;</span>))</span>
+<span id="cb3-1267"><a href="liitteet.html#cb3-1267"></a><span class="co"># str(apu2b_df)</span></span>
+<span id="cb3-1268"><a href="liitteet.html#cb3-1268"></a><span class="co"># glimpse(apu2b_df)</span></span>
+<span id="cb3-1269"><a href="liitteet.html#cb3-1269"></a></span>
+<span id="cb3-1270"><a href="liitteet.html#cb3-1270"></a><span class="co">#</span></span>
+<span id="cb3-1271"><a href="liitteet.html#cb3-1271"></a><span class="co">#ggplot(apu2b_df, aes(x = value, y = ind, fill = variable)) +</span></span>
+<span id="cb3-1272"><a href="liitteet.html#cb3-1272"></a><span class="co">#       geom_bar(position = &quot;fill&quot;, stat =&quot;identity&quot;) +</span></span>
+<span id="cb3-1273"><a href="liitteet.html#cb3-1273"></a><span class="co">#       #coord_flip() +</span></span>
+<span id="cb3-1274"><a href="liitteet.html#cb3-1274"></a><span class="co">#        scale_x_continuous(labels = percent_format())</span></span>
 <span id="cb3-1275"><a href="liitteet.html#cb3-1275"></a></span>
-<span id="cb3-1276"><a href="liitteet.html#cb3-1276"></a><span class="kw">ggplot</span>(apu2b_df, <span class="kw">aes</span>(<span class="dt">x =</span> ind, <span class="dt">y =</span> value, <span class="dt">fill =</span> variable)) <span class="op">+</span></span>
-<span id="cb3-1277"><a href="liitteet.html#cb3-1277"></a><span class="st">       </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;fill&quot;</span>, <span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span></span>
-<span id="cb3-1278"><a href="liitteet.html#cb3-1278"></a><span class="st">       </span><span class="kw">coord_flip</span>() <span class="op">+</span></span>
-<span id="cb3-1279"><a href="liitteet.html#cb3-1279"></a><span class="st">        </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> <span class="kw">percent_format</span>())</span>
-<span id="cb3-1280"><a href="liitteet.html#cb3-1280"></a></span>
-<span id="cb3-1281"><a href="liitteet.html#cb3-1281"></a></span>
-<span id="cb3-1282"><a href="liitteet.html#cb3-1282"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/substvar_fi_Q1Q2.png&#39;</span>)</span>
-<span id="cb3-1283"><a href="liitteet.html#cb3-1283"></a><span class="co">#Testataan koodilohkojen listausta, näyttää toimivan mutta vaatii vielä säätämistä. #Ohje löytyi [Yihui Xienin blogista](https://yihui.name/en/2018/09/code-appendix/) #(luettu 26.10.2018).</span></span>
+<span id="cb3-1276"><a href="liitteet.html#cb3-1276"></a><span class="co">#versio2 toimii (18.9.2018)</span></span>
+<span id="cb3-1277"><a href="liitteet.html#cb3-1277"></a></span>
+<span id="cb3-1278"><a href="liitteet.html#cb3-1278"></a>p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(apu2b_df, <span class="kw">aes</span>(<span class="dt">x =</span> ind, <span class="dt">y =</span> value, <span class="dt">fill =</span> variable)) <span class="op">+</span></span>
+<span id="cb3-1279"><a href="liitteet.html#cb3-1279"></a><span class="st">       </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;fill&quot;</span>, <span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span></span>
+<span id="cb3-1280"><a href="liitteet.html#cb3-1280"></a><span class="st">       </span><span class="kw">coord_flip</span>() <span class="op">+</span></span>
+<span id="cb3-1281"><a href="liitteet.html#cb3-1281"></a><span class="st">        </span><span class="kw">scale_y_continuous</span>(<span class="dt">name =</span> <span class="st">&quot; &quot;</span>,<span class="dt">labels =</span> <span class="kw">percent_format</span>())</span>
+<span id="cb3-1282"><a href="liitteet.html#cb3-1282"></a>p &lt;-<span class="st"> </span>p <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">fill =</span> <span class="st">&quot;Q1b&quot;</span>) </span>
+<span id="cb3-1283"><a href="liitteet.html#cb3-1283"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">scale_x_discrete</span>(<span class="dt">name =</span> <span class="st">&quot; &quot;</span>)</span>
 <span id="cb3-1284"><a href="liitteet.html#cb3-1284"></a></span>
-<span id="cb3-1285"><a href="liitteet.html#cb3-1285"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/BookdownProc.png&#39;</span>)</span></code></pre></div>
+<span id="cb3-1285"><a href="liitteet.html#cb3-1285"></a></span>
+<span id="cb3-1286"><a href="liitteet.html#cb3-1286"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/substvar_fi_Q1Q2.png&#39;</span>)</span>
+<span id="cb3-1287"><a href="liitteet.html#cb3-1287"></a><span class="co">#Testataan koodilohkojen listausta, näyttää toimivan mutta vaatii vielä säätämistä. #Ohje löytyi [Yihui Xienin blogista](https://yihui.name/en/2018/09/code-appendix/) #(luettu 26.10.2018).</span></span>
+<span id="cb3-1288"><a href="liitteet.html#cb3-1288"></a></span>
+<span id="cb3-1289"><a href="liitteet.html#cb3-1289"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/BookdownProc.png&#39;</span>)</span></code></pre></div>
 </div>
 <div id="tekninen-ympäristö-ja-bookdown-paketti" class="section level2">
 <h2><span class="header-section-number">5.3</span> Tekninen ympäristö ja Bookdown-paketti</h2>
