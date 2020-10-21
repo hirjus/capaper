@@ -86,4 +86,6 @@ peruskäsittelyn R-koodilohkot. Versionumero 0.08. PDF-tulostus ei toimi.
 **18.10.2020** Kommentoitiin pois muunnosten laveita ristiintaulkointeja,
  testauskoodilohko jätetiin. PDF-tulostus toimii.
 
- **21.10.2020 Versio 0.10** Johdatteleva esimerkin koodia, datan luonti ja profiilikuvat. 
+ **21.10.2020 Versio 0.10** Johdatteleva esimerkin koodia, datan luonti ja profiilikuvat.
+ Lisätty muuttujataulukko kysymyksistä ja suomenkielisen lomakkeen kuva. R- koodi
+ liitteksi.

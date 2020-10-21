@@ -144,8 +144,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1.1" data-path="data.html"><a href="data.html#maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.1.1</b> Maat ja muuttujat</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="data.html"><a href="data.html#aineiston-kuvailu-tietosisältö"><i class="fa fa-check"></i><b>2.2</b> Aineiston kuvailu (tietosisältö)</a></li>
-<li class="chapter" data-level="2.3" data-path="data.html"><a href="data.html#aineiston-rajaaminen"><i class="fa fa-check"></i><b>2.3</b> Aineiston rajaaminen</a></li>
-<li class="chapter" data-level="2.4" data-path="data.html"><a href="data.html#aineiston-kuvailu-tunnuslukuja"><i class="fa fa-check"></i><b>2.4</b> Aineiston kuvailu (tunnuslukuja)</a></li>
+<li class="chapter" data-level="2.3" data-path="data.html"><a href="data.html#aineiston-rajaaminen-maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.3</b> Aineiston rajaaminen maat ja muuttujat</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>3</b> Yksinkertainen korrespondenssianalyysi</a><ul>
 <li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä</a></li>
@@ -191,9 +190,6 @@ MG havainnut ne poikkeaviksi (<strong>#V ?</strong>).
 <div id="kahden-muuttujan-frekvenssitaulukon-analyysi" class="section level2">
 <h2><span class="header-section-number">3.2</span> Kahden muuttujan frekvenssitaulukon analyysi</h2>
 <p><strong>k</strong> Kolme taulukkoa: frekvenssitaulukko, riviprosentit ja sarakeprosentit</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="yksinkertainen-korrespondenssianalyysi.html#cb1-1"></a>taulu2 &lt;-<span class="st"> </span>ISSP2012esim1.dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">tableX</span>(maa, Q1b, <span class="dt">type =</span> <span class="st">&quot;count&quot;</span>)</span>
-<span id="cb1-2"><a href="yksinkertainen-korrespondenssianalyysi.html#cb1-2"></a>knitr<span class="op">::</span><span class="kw">kable</span>(taulu2,<span class="dt">digits =</span> <span class="dv">2</span>, <span class="dt">booktabs =</span> <span class="ot">TRUE</span>,</span>
-<span id="cb1-3"><a href="yksinkertainen-korrespondenssianalyysi.html#cb1-3"></a>             <span class="dt">caption =</span> <span class="st">&quot;Kysymyksen Q1b vastaukset maittain&quot;</span>)</span></code></pre></div>
 <table>
 <caption><span id="tab:simpeCA-frekTa1">Taulukko 3.1: </span>Kysymyksen Q1b vastaukset maittain</caption>
 <thead>
@@ -273,10 +269,6 @@ MG havainnut ne poikkeaviksi (<strong>#V ?</strong>).
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="yksinkertainen-korrespondenssianalyysi.html#cb2-1"></a>taulu3 &lt;-<span class="st"> </span>ISSP2012esim1.dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">tableX</span>(maa,Q1b,<span class="dt">type =</span> <span class="st">&quot;row_perc&quot;</span>)</span>
-<span id="cb2-2"><a href="yksinkertainen-korrespondenssianalyysi.html#cb2-2"></a></span>
-<span id="cb2-3"><a href="yksinkertainen-korrespondenssianalyysi.html#cb2-3"></a>knitr<span class="op">::</span><span class="kw">kable</span>(taulu3,<span class="dt">digits =</span> <span class="dv">2</span>, <span class="dt">booktabs =</span> <span class="ot">TRUE</span>,</span>
-<span id="cb2-4"><a href="yksinkertainen-korrespondenssianalyysi.html#cb2-4"></a>             <span class="dt">caption =</span> <span class="st">&quot;Kysymyksen Q1b vastaukset, riviprosentit&quot;</span>)</span></code></pre></div>
 <table>
 <caption><span id="tab:simpeCA-rprosTa1">Taulukko 3.2: </span>Kysymyksen Q1b vastaukset, riviprosentit</caption>
 <thead>
@@ -356,10 +348,6 @@ MG havainnut ne poikkeaviksi (<strong>#V ?</strong>).
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="yksinkertainen-korrespondenssianalyysi.html#cb3-1"></a>taulu4 &lt;-<span class="st"> </span>ISSP2012esim1.dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">tableX</span>(maa,Q1b,<span class="dt">type =</span> <span class="st">&quot;col_perc&quot;</span>)</span>
-<span id="cb3-2"><a href="yksinkertainen-korrespondenssianalyysi.html#cb3-2"></a></span>
-<span id="cb3-3"><a href="yksinkertainen-korrespondenssianalyysi.html#cb3-3"></a>knitr<span class="op">::</span><span class="kw">kable</span>(taulu4,<span class="dt">digits =</span> <span class="dv">2</span>, <span class="dt">booktabs =</span> <span class="ot">TRUE</span>,</span>
-<span id="cb3-4"><a href="yksinkertainen-korrespondenssianalyysi.html#cb3-4"></a>             <span class="dt">caption =</span> <span class="st">&quot;Kysymyksen Q1b vastaukset, sarakeprosentit&quot;</span>)</span></code></pre></div>
 <table>
 <caption><span id="tab:simpeCA-cprosTa1">Taulukko 3.3: </span>Kysymyksen Q1b vastaukset, sarakeprosentit</caption>
 <thead>

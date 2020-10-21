@@ -14,13 +14,16 @@ Ehkä tekniseen liitteeseen?
 
 4. Muutamat puutteet, onko kerrottava tässä?
 
-  - data: ei huomioida sitä, että otoskoot vaihtelevat aika paljon eli "maapainot" eri suuruisia
+- data: ei huomioida sitä, että otoskoot vaihtelevat aika paljon eli
+"maapainot" eri suuruisia
   
-  - ei huomioida muitakaan otantaan liittyviä asioita (tämä ainakin mainittava data-osuudessa)
+- ei huomioida muitakaan otantaan liittyviä asioita (tämä ainakin
+mainittava data-osuudessa)
   
-  - kuvaileva menetelmä, mutta mikä on tutkimusongelma? Sellainen pitäisi olla.
+- kuvaileva menetelmä, mutta mikä on tutkimusongelma? Sellainen pitäisi olla.
 
-**zxy* Mitä on korrespondenssianalyysi? Muutamalla kappaleella. Yksi kappale historiasta.
+**zxy* Mitä on korrespondenssianalyysi? Muutamalla kappaleella. Yksi kappale
+historiasta.
 
 
 ## Tutkielman tavoite (tutkimusongelma?)

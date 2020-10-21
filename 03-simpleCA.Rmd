@@ -228,14 +228,14 @@ validate_that(are_equal(levels(ISSP2012esim1.dat$Q1b),
 
 **k** Kolme taulukkoa: frekvenssitaulukko, riviprosentit ja sarakeprosentit
 
-```{r simpeCA-frekTa1}
+```{r simpeCA-frekTa1, echo = FALSE}
 taulu2 <- ISSP2012esim1.dat %>% tableX(maa, Q1b, type = "count")
 knitr::kable(taulu2,digits = 2, booktabs = TRUE,
              caption = "Kysymyksen Q1b vastaukset maittain")
 ```
 
 
-```{r simpeCA-rprosTa1}
+```{r simpeCA-rprosTa1, echo = FALSE}
 taulu3 <- ISSP2012esim1.dat %>% tableX(maa,Q1b,type = "row_perc")
 
 knitr::kable(taulu3,digits = 2, booktabs = TRUE,
@@ -243,7 +243,7 @@ knitr::kable(taulu3,digits = 2, booktabs = TRUE,
 ```
 
 
-```{r  simpeCA-cprosTa1}
+```{r  simpeCA-cprosTa1, echo = FALSE}
 taulu4 <- ISSP2012esim1.dat %>% tableX(maa,Q1b,type = "col_perc")
 
 knitr::kable(taulu4,digits = 2, booktabs = TRUE,
