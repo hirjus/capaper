@@ -1,12 +1,14 @@
 # Johdanto
 
-**xyz** Kirjoitetaan disposition pohjalta, keräillään kaikki yleiset ca-luonnehdinnat yhteen paikkaan eli johdantoon.
+**xyz** Kirjoitetaan disposition pohjalta, keräillään kaikki yleiset
+ca-luonnehdinnat yhteen paikkaan eli johdantoon.
 
 **Mahdollisia lisäyksiä**
 
 1. Lyhyt esitys CA:n historiasta (vai omaksi luvuksi, luku 2)?
 
-2. Käytetyt ohjelmistot, tekninen ympäristö ml. bookdown-asetukset. Ehkä paremmin omaksi liitteeksi?
+2. Käytetyt ohjelmistot, tekninen ympäristö ml. bookdown-asetukset.
+Ehkä tekniseen liitteeseen?
 
 3. Tavoitteet, sisältö, rajaukset (jota voi myöhemmin täydentää)
 
@@ -93,13 +95,17 @@ Kirjoittajat esittelevät perusteellisesti joitain empiirisiä tutkimuksia, ja
 lyhyt mutta naseva matriisilaskennan kritiikki on hyvä panna merkille.
 
 Korrespondenssianalyysi tuli osaksi suomalaista Survo-ohjelmistoa jo vuonna (**????**),
-ja menetelmää on esitelty ainakin kahdessa oppikirjassa[@RefWorks:doc:5a857a44e4b0ed2d44664d95] ja [@RefWorks:doc:5a857a44e4b0ed2d44664da4].
+ja menetelmää on esitelty ainakin kahdessa oppikirjassa[@RefWorks:doc:5a857a44e4b0ed2d44664d95]
+ja [@RefWorks:doc:5a857a44e4b0ed2d44664da4].
 
 
 
 ### Käytetyt ohjelmistot
 
-**zxy** R, ca-paketti. löytyy myös muita paketteja. Rmarkdown[@RefWorks:doc:5b6b346fe4b0c619b11b8a3e], ja bookdown ([@RefWorks:doc:5b6b36dde4b09b7ec442bf8b] ja toinen viite [@R-bookdown]). Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.
+**zxy** R, ca-paketti. löytyy myös muita paketteja.
+Rmarkdown[@RefWorks:doc:5b6b346fe4b0c619b11b8a3e], ja
+bookdown ([@RefWorks:doc:5b6b36dde4b09b7ec442bf8b] ja toinen viite [@R-bookdown]).
+Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.
 
 **zxy** Helposti toistettavan tutkimukset periaatteet
 
