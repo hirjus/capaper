@@ -971,21 +971,32 @@ seurantaraportti([RefWorks:doc:5b155e0ce4b044dfd738458f]).
   
   **ks-n**
   
-**zxy** Aineiston ongelmat ja puutteet (tavanomaisten surveyaineistojen ongelmien lisäksi, erityisesti vastauskadon). Kato erikseen, oikeastaan hyvä juttu koska CA soveltuu sen analyysiin.
+**zxy** Aineiston ongelmat ja puutteet (tavanomaisten surveyaineistojen ongelmien
+lisäksi, erityisesti vastauskadon). Kato erikseen, oikeastaan hyvä juttu koska
+CA soveltuu sen analyysiin.
 
-**zxy** Aineisto kuvattava **sisällön** (mitä asiaa, ilmiötä, tällä datalla halutaan valaista), **para- ja metadatan** näkökulmasta (tai ainakin kerrottava mitä on saatavilla). Kolmanneksi aineiston "tilastotieteellinen olemus": otanta-asetelmat, kansalliset versioinnit, harmonisoinnit (esim. puoluekenttä vertailukelpoiseksi).
+**zxy** Aineisto kuvattava **sisällön** (mitä asiaa, ilmiötä, tällä datalla
+halutaan valaista), **para- ja metadatan** näkökulmasta (tai ainakin kerrottava
+mitä on saatavilla). Kolmanneksi aineiston "tilastotieteellinen olemus":
+otanta-asetelmat, kansalliset versioinnit, harmonisoinnit (esim. puoluekenttä
+vertailukelpoiseksi).
 
 
-1. Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu tarkentaa tai muuten hifistellä. Osa kummallisa, erityisesti neutraalin vaihtoehdon puuttuminen (Espanja). Nämä maat pitää sivuuttaa.
+1. Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu tarkentaa tai
+muuten hifistellä. Osa kummallisa, erityisesti neutraalin vaihtoehdon puuttuminen
+(Espanja). Nämä maat jätetään pois.
 
-2. Datassa painot "maatasolle", otanta sun muu kuvattu tarkasti dokumentaatiossa. Jos tutkimusongelma on maiden erojen analyysi, mitään vertailupainoja ei ole käytössä. Otoskoko on paino. Paha juttu, MG oikaisee ja ja oikaisee myös sukupuolien osuudet.
+2. Datassa painot "maatasolle", otanta sun muu kuvattu tarkasti dokumentaatiossa.
+Jos tutkimusongelma on maiden erojen analyysi, mitään vertailupainoja ei ole
+käytössä. Otoskoko on paino. MG oikaisee ja ja oikaisee myös sukupuolien osuudet.
 
   
 
 ## Aineiston kuvailu (tietosisältö)
 
 **ks** "Perhe, työ ja sukupuoliroolit" tutkimuksen teemat, tarkoitus. **Paras**
-lähde Yhteiskuntatieteellisen tietoarkiston palvelu (https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&study_language=fi).
+lähde Yhteiskuntatieteellisen tietoarkiston palvelu
+(https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&study_language=fi).
 
 
 
@@ -1001,9 +1012,10 @@ aineiston analyysiin: monimutkainen ja laaaja, paljon luokitteluasteikon muuttuj
 
 **kysymykset**
 
-**k** Kysymykset: lyhyt versio datassa mukana, englanniksi koska viitataan sillä 
-kielellä julkaistuihin tutkimuksiin. Muuttuja viittaa alkuperäisen aineiston
-muuttujanimeen (esim. V5), kysymyksen tunnus on muuttujanimi valitussa datassa.
+**k** Taulukon \@ref(tab:vartable1) kysymysten lyhyet versiot ovat datassa mukana.
+Sarakkeessa "muuttuja" on alkuperäisen aineiston muuttujanimi,
+kysymyksen tunnus on valittuun dataan luotu muuttujanimi. Auttaa vertailemaan tätä
+tutkielmaa moniin ISSP-datalla tehtyihin analyyseihin.
 
 
 ```{r vartable1, echo=FALSE, include=TRUE}
@@ -1051,8 +1063,8 @@ knitr::kable(jhVarTable1.tbl, booktab = TRUE,
 
 ```
 
-**k** Kyselylomakkeilla kysymykset olivat hieman pidempiä, kuvassa Z osa suomenkielistä
-lomaketta.
+**k** Kyselylomakkeilla kysymykset olivat hieman pidempiä, kuvassa \@ref(fig:suom-kys) osa suomenkielistä lomaketta.
+
 ```{r suom-kys, out.width='50%', fig.align='center',fig.cap='Suomenkielinen lomake'}
 knitr::include_graphics('img/substvar_fi_Q1Q2.png')
 ```

@@ -5,6 +5,7 @@ date: "Versio 0.1, tulostettu `r Sys.Date()`"
 output: pdf_document
 description: Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä.
 documentclass: book
+github-repo: hirjus/capaper
 lang: fi
 link-citations: yes
 bibliography:

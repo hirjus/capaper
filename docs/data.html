@@ -13,7 +13,7 @@
   
   
   <meta property="og:description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä." />
-  
+  <meta name="github-repo" content="hirjus/capaper" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Luku 2 Data | Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä" />
@@ -207,18 +207,29 @@ seurantaraportti([RefWorks:doc:5b155e0ce4b044dfd738458f]).
 <p><strong>ks1</strong></p>
 <p><strong>ks2</strong></p>
 <p><strong>ks-n</strong></p>
-<p><strong>zxy</strong> Aineiston ongelmat ja puutteet (tavanomaisten surveyaineistojen ongelmien lisäksi, erityisesti vastauskadon). Kato erikseen, oikeastaan hyvä juttu koska CA soveltuu sen analyysiin.</p>
-<p><strong>zxy</strong> Aineisto kuvattava <strong>sisällön</strong> (mitä asiaa, ilmiötä, tällä datalla halutaan valaista), <strong>para- ja metadatan</strong> näkökulmasta (tai ainakin kerrottava mitä on saatavilla). Kolmanneksi aineiston “tilastotieteellinen olemus”: otanta-asetelmat, kansalliset versioinnit, harmonisoinnit (esim. puoluekenttä vertailukelpoiseksi).</p>
+<p><strong>zxy</strong> Aineiston ongelmat ja puutteet (tavanomaisten surveyaineistojen ongelmien
+lisäksi, erityisesti vastauskadon). Kato erikseen, oikeastaan hyvä juttu koska
+CA soveltuu sen analyysiin.</p>
+<p><strong>zxy</strong> Aineisto kuvattava <strong>sisällön</strong> (mitä asiaa, ilmiötä, tällä datalla
+halutaan valaista), <strong>para- ja metadatan</strong> näkökulmasta (tai ainakin kerrottava
+mitä on saatavilla). Kolmanneksi aineiston “tilastotieteellinen olemus”:
+otanta-asetelmat, kansalliset versioinnit, harmonisoinnit (esim. puoluekenttä
+vertailukelpoiseksi).</p>
 <ol style="list-style-type: decimal">
-<li><p>Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu tarkentaa tai muuten hifistellä. Osa kummallisa, erityisesti neutraalin vaihtoehdon puuttuminen (Espanja). Nämä maat pitää sivuuttaa.</p></li>
-<li><p>Datassa painot “maatasolle”, otanta sun muu kuvattu tarkasti dokumentaatiossa. Jos tutkimusongelma on maiden erojen analyysi, mitään vertailupainoja ei ole käytössä. Otoskoko on paino. Paha juttu, MG oikaisee ja ja oikaisee myös sukupuolien osuudet.</p></li>
+<li><p>Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu tarkentaa tai
+muuten hifistellä. Osa kummallisa, erityisesti neutraalin vaihtoehdon puuttuminen
+(Espanja). Nämä maat jätetään pois.</p></li>
+<li><p>Datassa painot “maatasolle”, otanta sun muu kuvattu tarkasti dokumentaatiossa.
+Jos tutkimusongelma on maiden erojen analyysi, mitään vertailupainoja ei ole
+käytössä. Otoskoko on paino. MG oikaisee ja ja oikaisee myös sukupuolien osuudet.</p></li>
 </ol>
 </div>
 </div>
 <div id="aineiston-kuvailu-tietosisältö" class="section level2">
 <h2><span class="header-section-number">2.2</span> Aineiston kuvailu (tietosisältö)</h2>
 <p><strong>ks</strong> “Perhe, työ ja sukupuoliroolit” tutkimuksen teemat, tarkoitus. <strong>Paras</strong>
-lähde Yhteiskuntatieteellisen tietoarkiston palvelu (<a href="https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&amp;study_language=fi" class="uri">https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&amp;study_language=fi</a>).</p>
+lähde Yhteiskuntatieteellisen tietoarkiston palvelu
+(<a href="https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&amp;study_language=fi" class="uri">https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&amp;study_language=fi</a>).</p>
 </div>
 <div id="aineiston-rajaaminen-maat-ja-muuttujat" class="section level2">
 <h2><span class="header-section-number">2.3</span> Aineiston rajaaminen maat ja muuttujat</h2>
@@ -228,9 +239,10 @@ työssäkäyntiin ja joitain taustamuuttujia. Korrespondenssianalyysi on hyvä m
 aineiston analyysiin: monimutkainen ja laaaja, paljon luokitteluasteikon muuttujia,
 “akvaariositaatti” tähän.</p>
 <p><strong>kysymykset</strong></p>
-<p><strong>k</strong> Kysymykset: lyhyt versio datassa mukana, englanniksi koska viitataan sillä
-kielellä julkaistuihin tutkimuksiin. Muuttuja viittaa alkuperäisen aineiston
-muuttujanimeen (esim. V5), kysymyksen tunnus on muuttujanimi valitussa datassa.</p>
+<p><strong>k</strong> Taulukon <a href="data.html#tab:vartable1">2.1</a> kysymysten lyhyet versiot ovat datassa mukana.
+Sarakkeessa “muuttuja” on alkuperäisen aineiston muuttujanimi,
+kysymyksen tunnus on valittuun dataan luotu muuttujanimi. Auttaa vertailemaan tätä
+tutkielmaa moniin ISSP-datalla tehtyihin analyyseihin.</p>
 <table>
 <caption><span id="tab:vartable1">Taulukko 2.1: </span>ISSP2012:Työelämä ja perhearvot - kysymykset</caption>
 <colgroup>
@@ -314,8 +326,7 @@ muuttujanimeen (esim. V5), kysymyksen tunnus on muuttujanimi valitussa datassa.<
 </tr>
 </tbody>
 </table>
-<p><strong>k</strong> Kyselylomakkeilla kysymykset olivat hieman pidempiä, kuvassa Z osa suomenkielistä
-lomaketta.</p>
+<p><strong>k</strong> Kyselylomakkeilla kysymykset olivat hieman pidempiä, kuvassa <a href="data.html#fig:suom-kys">2.1</a> osa suomenkielistä lomaketta.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="data.html#cb1-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/substvar_fi_Q1Q2.png&#39;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:suom-kys"></span>
 <img src="img/substvar_fi_Q1Q2.png" alt="Suomenkielinen lomake" width="50%" />

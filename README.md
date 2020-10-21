@@ -90,3 +90,4 @@ peruskäsittelyn R-koodilohkot. Versionumero 0.08. PDF-tulostus ei toimi.
  Lisätty muuttujataulukko kysymyksistä ja suomenkielisen lomakkeen kuva. R- koodi
  liitteksi.
  Rivi- ja sarakeprofiilikuvien tekstit korjattu.
+ Kaksi ensimmäistä karttaa.

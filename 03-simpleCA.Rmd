@@ -340,6 +340,7 @@ p + scale_x_discrete(name = "Q1b - vastauskategoriat")
 ```
 
 ```{r g1-2kuva2, fig.cap = "Q1b: riviprofiilit ja keskiarvorivi", echo = FALSE, include = TRUE}
+
 # riviprofiilit ja keskiarvorivi -  18.9.2018
 apu2_df <- as.data.frame(apu1)
 apu2_df <- rbind(apu2_df, ka_rivi = colSums(apu2_df))
@@ -378,4 +379,47 @@ p + scale_x_discrete(name = " ")
 
 ```
 
+**Ensimmäiset kartat**
+
+```{r simpleCA1map1, echo=FALSE, fig.cap= "Q1b: lapsi kärsii jos äiti on töissä",fig.asp = 1, out.width = "90%",fig.align = "center"}
+
+# simpleCA1 luotu aikaisemmin profiilikuvia varten koodilohkossa EkaCA
+# HUOM! xlab ja ylab, prosenttiosuudet ensin katsottu ja sitten kirjoitettu
+# tässä. Vertaa scree-plot - tietoon!
+
+
+par(cex = 0.7)
+plot(simpleCA1, map = "symmetric", mass = c(TRUE,TRUE),
+     xlab = "Dimensio 1: moderni/liberaali - perinteinen/konservatiivinen (76%)",
+     ylab = "Dimensio 2: maltillinen/epävarma - radikaali/jyrkkä/varma (15.1%)",
+     main = "symmetrinen kartta 1",
+     sub = "Maiden massat eri suuruisia (otoskoko)")
+```
+
+**k** Kartan tulkinta
+
+**k**
+
+
+
+
+**edit1** jatkossa plot - main on kuvan tyyppi (symmetrinen, kontribuutio jne),
+koodilohkon fig.cap "ylimmän tason" otsikko.
+
+**edit2** Akseleiden tekstit (Dimensio 1....jne) asetettu käsin, ikävä kyllä myös 
+selitetyn inertian osuus.
+
+**edit3** Onko tämä kartta liian aikaisin? Tämä ei ole pääasia, vaan selvennys.
+
+```{r simpleCA3map1, echo=FALSE, fig.cap= "Q1b: lapsi kärsii jos äiti on töissä",fig.asp = 1, out.width = "90%",fig.align = "center"}
+ 
+# Sama kartta - maiden massat vakiotu - simpleCA3 luotu koodilohkossa EkaCA
+# CA:n lähtötietona riviprofiilit
+
+par(cex = 0.6)
+plot(simpleCA3, map = "symmetric", mass = c(TRUE,TRUE),
+main = "symmetrinen kartta 2 ",
+sub = "Maidet massat vakioitu (riviprofiilidata)")
+
+```
 
