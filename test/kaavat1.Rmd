@@ -11,7 +11,7 @@ site: bookdown::bookdown_site
 documentclass: article
 ---
 ```{r include=FALSE}
-library(rgl)
+## library(rgl)
 library(ca)
 library(haven)
 library(dplyr)
@@ -159,7 +159,8 @@ Singulaariarvohajoitelma (singular value decomposition, SVD) matriisille $\bolds
 \boldsymbol{S} = \boldsymbol{U} \boldsymbol{D_{\alpha}} \boldsymbol{V}^{T}
 \]
 
-missä $\boldsymbol{D_{\alpha}}$ on diagonaalimatriisi, jonka alkiot ovat singulaariarvot suuruusjärjestyksessä $\alpha_{1}\geq \alpha_{1} \geq \hdots$
+missä $\boldsymbol{D_{\alpha}}$ on diagonaalimatriisi, jonka alkiot ovat singulaariarvot 
+suuruusjärjestyksessä $\alpha_{1}\geq \alpha_{1} \geq \cdots$
 
 Matriisit $\boldsymbol{U}$ ja $\boldsymbol{V}$ ovat ortogonaalisia singulaarivektoreiden matriiseja. Singulaariarvohajoitelman merkitys dimensioiden vähentämiselle perustuu Eckart - Young - teoreemaan. Teoreema (30-luvulta?) kertoo, että saamme pienimmän neliösumman $m$ - ulotteisen approksimaation matriisille $\boldsymbol{S}$ (CAinP, ss. 244) matriisien 
 $\boldsymbol{U}$ ja $\boldsymbol{V}$ ensimmäisten sarakkeiden ja ensimmäisten singulaariarvojen avulla.
@@ -168,7 +169,7 @@ $\boldsymbol{U}$ ja $\boldsymbol{V}$ ensimmäisten sarakkeiden ja ensimmäisten 
 \boldsymbol{S}_{(m)} = \boldsymbol{U}_{(m)} \boldsymbol{D}_{\alpha(m)} \boldsymbol{V}_{(m)}^{T}
 \] 
 
-Korrrespondenssianalyysin ratkaisualgoritmissa tätä tulosta on muokattava niin, että rivien ja sarakkeiden massat huomioidaan pienimmän neliösumman approksimaatiossa painoina.
+Korrespondenssianalyysin ratkaisualgoritmissa tätä tulosta on muokattava niin, että rivien ja sarakkeiden massat huomioidaan pienimmän neliösumman approksimaatiossa painoina.
 
 Näin saadaan standardikoordinaatit ja principal-koordinaatit riveille ja sarakkeille.
 

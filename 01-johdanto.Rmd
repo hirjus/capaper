@@ -1,12 +1,14 @@
 # Johdanto
 
-**xyz** Kirjoitetaan disposition pohjalta, keräillään kaikki yleiset ca-luonnehdinnat yhteen paikkaan eli johdantoon.
+**xyz** Kirjoitetaan disposition pohjalta, keräillään kaikki yleiset
+ca-luonnehdinnat yhteen paikkaan eli johdantoon.
 
 **Mahdollisia lisäyksiä**
 
 1. Lyhyt esitys CA:n historiasta (vai omaksi luvuksi, luku 2)?
 
-2. Käytetyt ohjelmistot, tekninen ympäristö ml. bookdown-asetukset. Ehkä paremmin omaksi liitteeksi?
+2. Käytetyt ohjelmistot, tekninen ympäristö ml. bookdown-asetukset.
+Ehkä tekniseen liitteeseen?
 
 3. Tavoitteet, sisältö, rajaukset (jota voi myöhemmin täydentää)
 
@@ -23,10 +25,15 @@
 
 ## Tutkielman tavoite (tutkimusongelma?)
 
-**zxy** Tässä kerrotaan, miksi tämä työ on kirjoitettu. Esitellään menetelmä käyttämällä oikeaa dataa. Täsmällisempi esitys sirotellaan esimerkkiaineiston analyysin tulosten esittelyn lomaan. Pitäisikö tässä tuoda esille ns. "ranskalaisen koulukunnan" matemaattisen perusteiden korostus, ja data-analyysin filosofia? Ehkä ei, koska sen pohdinta ei ole pääasia. Se tietysti mainitaan, ja asiaa pohditaan. 
+**zxy** Tässä kerrotaan, miksi tämä työ on kirjoitettu. Esitellään menetelmä
+käyttämällä oikeaa dataa. Täsmällisempi esitys sirotellaan esimerkkiaineiston
+analyysin tulosten esittelyn lomaan. Pitäisikö tässä tuoda esille ns. "ranskalaisen
+koulukunnan" matemaattisen perusteiden korostus, ja data-analyysin filosofia?
+Ehkä ei, koska sen pohdinta ei ole pääasia. Se tietysti mainitaan, ja asiaa pohditaan. 
 
 
-**ks** Esitellään korrespondenssianalyysin käsitteet ja graafisen analyysin periaatteet.
+**ks** Esitellään korrespondenssianalyysin käsitteet ja graafisen analyysin
+periaatteet.
 
 **zxy** -mitä ca on?
 - dimensioiden vähentäminen ja visualisointi
@@ -35,39 +42,70 @@
 - yksinkertainen ca, useamman muuttujan ca
 
 
+**ks** Tämän voi tehdä yksinkertaisen korrespondenssianalyysin avulla. Yksinkertainen
+kahden luokittelumuuttujan korrespondenssianalyysi antaa graafisen analyysin
+"...perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin muodot ovat
+saman algoritmin soveltamista toisen tyyppiisiin datamatriiseihin, ja tulkintaa
+sovelletaan vastaavasti (with the consequent adaptation of the interpretation)"
+[@RefWorks:doc:5a857a44e4b0ed2d44664d84 , s. 437] (MG ja Hastie, JASA?)
 
-
-
-
-
-**ks** Tämän voi tehdä yksinkertaisen korrespondenssianalyysin avulla. Yksinkertainen kahden luokittelumuuttujan
-korrespondenssianalyysi antaa graafisen analyysin "...perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin muodot ovat saman algoritmin soveltamista toisen tyyppiisiin datamatriiseihin, ja tulkintaa sovelletaan vastaavasti
-(with the consequent adaptation of the interpretation)"[@RefWorks:doc:5a857a44e4b0ed2d44664d84 , s. 437]
-
-**zxy** Miksi eksporatiivinen (määrittele!) ja deskriptiivinen (määrittele!) menetelmä on esitettävä "in vivo", toiminnassa? Oppikirjoissa (viitteitä) erityisesti MG on havainnolistanut CA:n matemaattista ja geometristä taustaa synteettisillä aineistoilla. Turha kopioida tähän. Menetelmän ydin on yksinkertaisen graafisen esityksen -- kartan -- avulla tulkita monimutkaisen empiirisen aineiston muuttujien riippuvuuksia. Yhteyksiä ei tiivistetä todennäköisyyspäättelyn kriteereillä tilastolliseen malliin, vaan deskripriivisen analyysin hengessä esitellään koko aineisto. Mallin sijaan vähennetään ulottuvuuksia, ja siinä menetetään informaatiota. Tavoitteena on säilyttää yleensä kaksiulotteisessa kuvassa mahdollisimman suuri osa alkuperäisen datan vaihtelusta. Eksploratiivinen data-analyysi on vuoropuhelua aineiston kanssa. Analyysiä tarkennetaan, rajataan ja muokataan, kun aineisto paljastaa jotain kiinnostavaa tai yllättävää. Tästä saa jonkinlaisen aasinsillan matriisiyhtälöiden puolustukseksi. Saksan ja Belgian datan jakaminen on hyvä esimerkki, on "osattava tarttua" menetelmän tulosmatriiseihin.
+**zxy** Miksi eksporatiivinen (määrittele!) ja deskriptiivinen (määrittele!)
+menetelmä on esitettävä "in vivo", toiminnassa? Oppikirjoissa (viitteitä)
+erityisesti MG on havainnolistanut CA:n matemaattista ja geometristä taustaa
+synteettisillä aineistoilla. Turha kopioida tähän. Menetelmän ydin on
+yksinkertaisen graafisen esityksen -- kartan -- avulla tulkita monimutkaisen
+empiirisen aineiston muuttujien riippuvuuksia. Yhteyksiä ei tiivistetä
+todennäköisyyspäättelyn kriteereillä tilastolliseen malliin, vaan deskripriivisen
+analyysin hengessä esitellään koko aineisto. Mallin sijaan vähennetään ulottuvuuksia,
+ja siinä menetetään informaatiota. Tavoitteena on säilyttää yleensä kaksiulotteisessa
+kuvassa mahdollisimman suuri osa alkuperäisen datan vaihtelusta. Eksploratiivinen
+data-analyysi on vuoropuhelua aineiston kanssa. Analyysiä tarkennetaan, rajataan
+ja muokataan, kun aineisto paljastaa jotain kiinnostavaa tai yllättävää. Tästä
+saa jonkinlaisen aasinsillan matriisiyhtälöiden puolustukseksi.
+Saksan ja Belgian datan jakaminen on hyvä esimerkki, on "osattava tarttua"
+menetelmän tulosmatriiseihin.
 
 
 **zxy** esitystavan perustelu
 
-- kenelle kirjoitettu? Menetelmästä kiinnostuneelle tilastotieteen ja data-analyysin perusteet tuntevalle. R-ohjelmisto ei ole rajoitus, SPSS ja SAS sopivat. (SPSS - MG:llä kriittinen huomio "loose ends - paperissa" tai CAip-teorialiitteessä).
+- kenelle kirjoitettu? Menetelmästä kiinnostuneelle tilastotieteen ja data-analyysin
+perusteet tuntevalle. R-ohjelmisto ei ole rajoitus, SPSS ja SAS sopivat
+(SPSS - MG:llä kriittinen huomio "loose ends - paperissa" tai CAip-teorialiitteessä).
 
 ## Tärkeimmät lähteet ja ohjelmistot
 
-**zxy** Tarvitaanko tämä, perustelu? Muutamat lähteet aivan keskeisiä, ja MG:n kurssi pitää mainita.
+**zxy** Tarvitaanko tämä, perustelu? Muutamat lähteet aivan keskeisiä, ja MG:n
+kurssi pitää mainita.
 
 ### Lähteet
 
-Michael Greenacre luennoi lyhyen kurssin korrespondenssianalyysistä Helsingin yliopistossa keväällä 2017[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca]. Luennot ja laskuharjoitukset perehdyttivät minut ensimmäistä kertaa tähän menetelmään, ja kurssin materiaaleihin olen usein palannut. Niihin voi tutustua Helsingin yliopiston [Moodle-palvelussa] (https://moodle.helsinki.fi) (käyttäjätunnus vaaditaan). Greenacren kärsivällisesti kirjoitetut perusoppikirjat ovat tehneet menetelmää laajasti tunnetuksi englantia lukeville.
+Michael Greenacre luennoi lyhyen kurssin korrespondenssianalyysistä Helsingin
+yliopistossa keväällä 2017[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca]. Luennot ja
+laskuharjoitukset perehdyttivät minut ensimmäistä kertaa tähän menetelmään, ja
+kurssin materiaaleihin olen usein palannut. Niihin voi tutustua
+[Moodle-palvelussa] (https://moodle.helsinki.fi) (käyttäjätunnus vaaditaan).
+Greenacren kärsivällisesti kirjoitetut perusoppikirjat ovat tehneet menetelmää
+laajasti tunnetuksi englantia lukeville.
 
-Ranskalaisen lähestymistan perusoppikirja[@RefWorks:doc:5a857a43e4b0ed2d44664d75] esittelee menetelmän matemaattiset perusteet. Lyhyt historiallinen katsaus ja menetelmä soveltamisen perusajatusten esittely valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita. Kirjoittajat esittelevät perusteellisesti joitain empiirisiä tutkimuksia, ja lyhyt mutta naseva matriisilaskennan kritiikki on hyvä panna merkille.
+Ranskalaisen lähestymistan perusoppikirja[@RefWorks:doc:5a857a43e4b0ed2d44664d75] (GDA-kirja?)
+esittelee menetelmän matemaattiset perusteet.
+Lyhyt historiallinen katsaus ja menetelmä soveltamisen perusajatusten esittely
+valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita.
+Kirjoittajat esittelevät perusteellisesti joitain empiirisiä tutkimuksia, ja
+lyhyt mutta naseva matriisilaskennan kritiikki on hyvä panna merkille.
 
-Korrespondenssianalyysi tuli osaksi suomalaista Survo-ohjelmistoa jo vuonna (**????**), ja menetelmää on esitelty ainakin kahdessa oppikirjassa[@RefWorks:doc:5a857a44e4b0ed2d44664d95] ja [@RefWorks:doc:5a857a44e4b0ed2d44664da4].
+Korrespondenssianalyysi tuli osaksi suomalaista Survo-ohjelmistoa jo vuonna (**????**),
+ja menetelmää on esitelty ainakin kahdessa oppikirjassa[@RefWorks:doc:5a857a44e4b0ed2d44664d95]
+ja [@RefWorks:doc:5a857a44e4b0ed2d44664da4].
 
 
 
 ### Käytetyt ohjelmistot
 
-**zxy** R, ca-paketti. löytyy myös muita paketteja. Rmarkdown[@RefWorks:doc:5b6b346fe4b0c619b11b8a3e], ja bookdown ([@RefWorks:doc:5b6b36dde4b09b7ec442bf8b] ja toinen viite [@R-bookdown]). Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.
+**zxy** R, ca-paketti. löytyy myös muita paketteja.
+Rmarkdown[@RefWorks:doc:5b6b346fe4b0c619b11b8a3e], ja
+bookdown ([@RefWorks:doc:5b6b36dde4b09b7ec442bf8b] ja toinen viite [@R-bookdown]).
+Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.
 
 **zxy** Helposti toistettavan tutkimukset periaatteet
 

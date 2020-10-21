@@ -1,14 +1,14 @@
 ---
 title: "Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä"
 author: "Jussi Hirvonen"
-date: "Versio 0.06, tulostettu `r Sys.Date()`"
+date: "Versio 0.1, tulostettu `r Sys.Date()`"
 output: pdf_document
 description: Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä.
 documentclass: book
 lang: fi
 link-citations: yes
 bibliography:
-- jhca2018.bib
+- jhca2020.bib
 - packages.bib
 site: bookdown::bookdown_site
 biblio-style: apalike
@@ -17,14 +17,20 @@ toc-depth: 2
 
 # Alkutoimia {-}
 
-Ladataan r-paketit, ei tulosteta dokumenttiin. Pelkkä YAML- 'front matter', lisäkonfiguroinnit tiedostoissa _bookdown.yml ja _output.yml.
+Ladataan r-paketit, ei tulosteta dokumenttiin. Pelkkä YAML- 'front matter',
+lisäkonfiguroinnit tiedostoissa _bookdown.yml ja _output.yml.
 
-Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti _bookdown.yml-tiedostossa.
+Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti
+_bookdown.yml-tiedostossa.
 
-RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla), ja korjailla skandit jos niissä on vikaa.
+RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla),
+ja korjailla skandit jos niissä on vikaa.
+
+**25.10.18**
 
 
 ```{r jhpaketit, include=FALSE}
+# 18.10.2020
 library(rgl)
 library(ca)
 library(haven)
@@ -35,13 +41,12 @@ library(lubridate)
 library(rmarkdown)
 library(ggplot2)
 library(furniture)
-library(likert)
 library(scales) # G_1_2 - kuva
 library(reshape2)  # G_1_2 - kuva
 library(printr) #19.5.18 taulukoiden ja matriisien tulostukseen
-#library(stargazer) # 28.5.2018 taulukoiden yms. tulostietojen siistiin tulostukseen - 8.8.18 pois
 library(bookdown)
 library(tinytex)
+library(assertthat)
 
 ```
 **Ideoita**

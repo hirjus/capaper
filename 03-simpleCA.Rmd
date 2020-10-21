@@ -1,18 +1,377 @@
 # Yksinkertainen korrespondenssianalyysi
 
-**zxy** Tässä yksi kysymys, kuusi maata, peruskäsitteet lopussa
+**k1** Yksi kysymys, kuusi maata, peruskäsitteet
 
-**zxy** Luvun tärkeimmät asiat; mitä on luvassa?
+
+
+
+**k2** Luvun tärkeimmät asiat; mitä on luvassa?
 
 ## Äiti töissä
+**k1**"Alle kouluikäinen lapsi todennäköisesti kärsii, jos hänen äitinsä käy työssä".
+Lyhennän muotoon äiti töissä. ISSP-tutkimuksissa kaksi kysymystä, joissa sana "äiti",
+MG havainnut ne poikkeaviksi (**#V ?**).
+**zxy** Edellisessä luvussa on esitelyt aineisto, ja kerrottu rajaukset.
+```{r esim1data1, echo = FALSE, include = FALSE}
+# UUSI DATA 30.1.20
+#
+# LUETAAN DATA G1_1_data2.Rmd - tiedostossa, luodaan faktorimuuttujat
+# G1_1_data_fct1.Rmd-tiedostossa -> ISSP2012jh1d.dat (df)
+# 23 muuttujaa (9 substanssimuuttujaa, 8 taustamuuttujaa, 3 maa-muuttujaa, 3 metadatamuuttujaa)
+# 25 maata.
+# Poistettu 146 havaintoa, joilla SEX tai AGE puuttuu
+# Johdattelevassa esimerkissä kuusi maata, kaksi taustamuuttujaa ja yksi kysymys
+# (V6/Q1b)
 
-**zxy** Edellisessä luvussa on esitelyt aineisto, ja kerrottu rajaukset. Voidaan siis mennä suoraan asiaan. Luvun alussa kerrotaan, mikä juoni luvussa on.
+
+# Kuusi maata
+
+countries_esim1 <- c(56, 100, 208, 246, 276, 348) #BE,BG,DK,FI,DE,HU
+ISSP2012esim3.dat <- filter(ISSP2012jh1d.dat, V4 %in% countries_esim1)
+# str(ISSP2012esim3.dat) - pitkä listaus pois (24.2.20)
+
+#neljä maamuuttujaa, kysymys Q1b, ikä ja sukupuoli
+
+vars_esim1 <- c("C_ALPHAN", "V3", "maa","maa3", "Q1b", "sp", "ika")
+ISSP2012esim2.dat <- select(ISSP2012esim3.dat, all_of(vars_esim1))
+
+str(ISSP2012esim2.dat) # 8542 obs. of  7 variables, ja sama 8.6.2020
+# C_ALPHAN: chr, maa: Factor w/ 25
+
+# Poistetaan havainnot, joilla Q1b - muuttujassa puuttuva tieto 'NA'
+# sum(is.na(ISSP2012esim2.dat$Q1b)) = 399
+
+ISSP2012esim1.dat <- filter(ISSP2012esim2.dat, !is.na(Q1b))
+
+#str(ISSP2012esim1.dat) # 8143 obs. of  6 variable
+
+# Tarkistuksia (3.2.20)
+#
+#fct_count(ISSP2012esim1.dat$sp)
+#fct_count(ISSP2012esim1.dat$Q1b)
+#fct_count(ISSP2012esim1.dat$maa)
+#fct_count(ISSP2012esim1.dat$maa3)
+#
+#summary(ISSP2012esim1.dat$sp)
+#sp: 3799 + 4344 = 8143
+#summary(ISSP2012esim1.dat$Q1b)
+#  S      s      ?     e      E
+# 810 + 1935 + 1367 + 2125 + 1906 = 8143
+#
+# EDELLINEN DATA - havaintojen määrät samat kuin uudella datalla (31.1.20)
+#
+# 8557 obs. ennen kuin sexagemissing poistettiin, nyt 8542, 8557-8542 = 15
+#
+# Poistetaan havainnot joissa puuttuva tieto muuttujassa V6 (Q1b) n = 399
+# 8542-399 = 8143
+
+# Tyhjät "faktorilabelit" on poistettava
+
+ ISSP2012esim1.dat <- ISSP2012esim1.dat %>%
+     mutate(maa = fct_drop(maa),
+            maa3 = fct_drop(maa3)
+            )
+
+#summary(ISSP2012esim1.dat$maa)
+#summary(ISSP2012esim1.dat$maa3)
+#
+# str(ISSP2012esim1.dat$maa)
+# attributes(ISSP2012esim1.dat$maa)
+#
+# str(ISSP2012esim1.dat$maa3)
+# attributes(ISSP2012esim1.dat$maa3)
+#
+#ISSP2012esim1.dat %>% tableX(maa, Q1b, type = "count")
+#fct_count(ISSP2012esim1.dat$Q1b)
+# fct_count(ISSP2012esim1.dat$sp)
+# fct_unique(ISSP2012esim1.dat$maa)
+# fct_count(ISSP2012esim1.dat$maa)
+#ISSP2012esim1.dat %>% tableX(maa, C_ALPHAN, type = "count")
+#
+# maa3 - siistitään "faktorilabelit" kaksikirjaimisiksi
+#
+# ISO 3166 Code V3 - maiden jaot
+#  5601     BE-FLA-Belgium/ Flanders
+#  5602     BE-WAL-Belgium/ Wallonia
+#  5603     BE-BRU-Belgium/ Brussels
+# 27601     DE-W-Germany-West
+# 27602     DE-E-Germany-East
+# Tähän pitäisi päästä
+# levels = c("100","208","246","348","5601","5602","5603","27601","27602"),
+# labels = c("BG","DK","FI","HU","bF","bW","bB","dW","dE"))
+# levels(ISSP2012esim1.dat$maa3)
+ 
+ISSP2012esim1.dat <- ISSP2012esim1.dat %>%
+        mutate(maa3 =
+                fct_recode(maa3,
+                 "BG" = "BG-Bulgaria",
+                 "DK" = "DK-Denmark",
+                 "FI" = "FI-Finland",
+                 "HU" = "HU-Hungary",
+                 "bF" = "BE-FLA-Belgium/ Flanders",
+                 "bW" = "BE-WAL-Belgium/ Wallonia",
+                 "bB" = "BE-BRU-Belgium/ Brussels",
+                 "dW" = "DE-W-Germany-West",
+                 "dE" = "DE-E-Germany-East")
+               )
+# tarkistuksia
+#levels(ISSP2012esim1.dat$maa3)
+# str(ISSP2012esim1.dat$maa3) # 9 levels
+#summary(ISSP2012esim1.dat$maa3)
+#
+# TÄSSÄ TOISTOA! (4.2.20)
+# Muutetaan muuttujien "maa" ja "maa3" arvojen (levels) järjestys samaksi kuin
+# alkuperäisen muuttujan C_ALPHAN. Helpomi verrata aikaisempiin tuloksiin.
+
+# "alkuperäinen" maa talteen
+ISSP2012esim1.dat$maa2 <- ISSP2012esim1.dat$maa
+
+ISSP2012esim1.dat <- ISSP2012esim1.dat %>%
+        mutate(maa =
+                fct_relevel(maa,
+                            "BE",
+                            "BG",
+                            "DE",
+                            "DK",
+                            "FI",
+                            "HU"))
+ISSP2012esim1.dat <- ISSP2012esim1.dat %>%
+        mutate(maa3 =
+                fct_relevel(maa3,
+                        "bF",
+                        "bW",
+                        "bB",
+                        "BG",
+                        "dW",
+                        "dE",
+                        "DK",
+                        "FI",
+                        "HU"))
+
+# Tarkistus
+#ISSP2012esim1.dat %>% tableX(maa2,maa, type = "count")
+# "alkuperäinen" maa talteenISSP2012esim1.dat %>% tableX(maa,C_ALPHAN, type = "count")
+# "alkuperäinen" maa talteenstr(ISSP2012esim1.dat)
+
+```
+
+Tarkistetaan uudet muuttujat (koodilohkon tulostus pois tarvittaessa).
+
+```{r r esim1data2, echo = FALSE, include = FALSE, message=TRUE, warning=TRUE}
+# Taulukoita (31.1.2020) ja tarkistuksia
+#
+# toinen maa-muuttuja, jossa Saksan ja Belgian jako
+#  V3
+#  5601     BE-FLA-Belgium/ Flanders
+#  5602     BE-WAL-Belgium/ Wallonia
+#  5603     BE-BRU-Belgium/ Brussels
+# 27601     DE-W-Germany-West
+# 27602     DE-E-Germany-East
+
+# Tarkastuksia
+
+# assert_that ehkä tarpeeton - expect_equivalet testaa levelien
+# järjestyksen ja määrän (20.2.20)
+
+validate_that(length(levels(ISSP2012esim1.dat$sp)) == 2)
+validate_that(are_equal(levels(ISSP2012esim1.dat$sp),
+                c("m", "f")))
+
+validate_that(length(levels(ISSP2012esim1.dat$maa)) == 6)
+
+validate_that(are_equal(levels(ISSP2012esim1.dat$maa),
+                  c("BE", "BG", "DE", "DK", "FI", "HU")))
+
+validate_that(length(levels(ISSP2012esim1.dat$maa3)) == 9)
+
+validate_that(are_equal(levels(ISSP2012esim1.dat$maa3),
+                 c("bF","bW","bB", "BG","dW","dE","DK", "FI", "HU")))
+
+validate_that(length(levels(ISSP2012esim1.dat$Q1b)) == 5)
+validate_that(are_equal(levels(ISSP2012esim1.dat$Q1b),
+               c("S", "s", "?", "e", "E")))
+
+# testthat - paketti - pois käytöstä 16.9.20
+# expect_ ei anna ok-ilmoitusta, ainoastaan virheilmoituksen? (11.4.20)
+# expect_equivalent(levels(ISSP2012esim1.dat$maa),
+#                  c("BE", "BG", "DE", "DK", "FI", "HU"))
+# expect_equivalent(levels(ISSP2012esim1.dat$maa3),
+#                  c("bF","bW","bB", "BG","dW","dE","DK", "FI", "HU"))
+# expect_equivalent(levels(ISSP2012esim1.dat$sp), c("m", "f"))
+# expect_equivalent(levels(ISSP2012esim1.dat$Q1b),
+#                  c("S", "s", "?", "e", "E"))
+#
+# ISSP2012esim1.dat %>% tableX(maa,ika,type = "row_perc")
+#
+# Riviprofiilit
+#
+# ISSP2012esim1.dat %>% tableX(maa,ika,type = "row_perc")
+# ISSP2012esim1.dat %>% tableX(maa,sp ,type = "row_perc")
+#
+#
+# Kysymyksen Q1b vastaukset
+#
+#ISSP2012esim1.dat %>% tableX(maa,Q1b,type = "row_perc")
+#
+#ISSP2012esim1.dat %>% tableX(maa3,Q1b,type = "row_perc")
+#
+# str(ISSP2012esim1.dat) # 8143 obs. of  7 variable,
+# sama kuin vanhassa Galku-koodissa.
+#
+# str(ISSP2012esim1.dat) # 8143 obs. of  7 variable,
+# sama kuin vanhassa Galku-koodissa.
+
+```
+
 
 ## Kahden muuttujan frekvenssitaulukon analyysi
 
-**zxy** graafiset tulokset ja niiden tulkinnan perusteet
+**k** Kolme taulukkoa: frekvenssitaulukko, riviprosentit ja sarakeprosentit
+
+```{r simpeCA-frekTa1}
+taulu2 <- ISSP2012esim1.dat %>% tableX(maa, Q1b, type = "count")
+knitr::kable(taulu2,digits = 2, booktabs = TRUE,
+             caption = "Kysymyksen Q1b vastaukset maittain")
+```
 
 
+```{r simpeCA-rprosTa1}
+taulu3 <- ISSP2012esim1.dat %>% tableX(maa,Q1b,type = "row_perc")
 
+knitr::kable(taulu3,digits = 2, booktabs = TRUE,
+             caption = "Kysymyksen Q1b vastaukset, riviprosentit")
+```
+
+
+```{r  simpeCA-cprosTa1}
+taulu4 <- ISSP2012esim1.dat %>% tableX(maa,Q1b,type = "col_perc")
+
+knitr::kable(taulu4,digits = 2, booktabs = TRUE,
+             caption = "Kysymyksen Q1b vastaukset, sarakeprosentit")
+
+```
+
+**k** **Taulkoista**
+
+Ensimmäinen taulukko on data, lukumäärädataa. Toinen ja kolmas kaksi näkökulmaa
+samaan taulukkoon. Sarakkeilla ja riveillä on erilainen rooli, tässä riviprosentit
+ovat luonteva tapa verrata "riippuvaa muuttujaa", eri maita.
+
+**k** Rivit on saatu alkuperäisestä aineistosta osajoukkojen summina. MG:n
+terminologialla "samples".
+
+```{r  EkaCA, echo = FALSE, include = FALSE}
+# CA tässä, jotta saadaan rivi- ja sarakeprofiilikuvat
+# Lasketaan samalla CA-ratkaisu riviprofiilitaulkolle (maille samat painot)
+
+simpleCA1 <- ca(~maa + Q1b,ISSP2012esim1.dat)
+
+# Maiden järjestys kääntää kuvan (1.2.20) - esimerkki on
+# vähän kuriositeetti. Kartta voi tietysti "flipata" koordintaattien suhteen ainakin
+# neljällä tavalla (? 180 astetta molempien akseleiden ympäri molempiin suuntiin?)
+# (18.2.20). Tämän maa2-muuttujaa käyttävän kuvan voi jättää pois (8.4.20)
+
+# simpleCA2 <- ca(~maa2 + Q1b,ISSP2012esim1.dat)
+
+# Oikeastaan maiden vertailussa pitäisi niiden massat skaalata yhtä suuriksi, tässä
+# pikainen kokeilu (20.2.20)
+# Riviprosentit taulukoksi, nimet sarakkeille ja riveille (ei kovin robustia...)
+
+
+johdesim1_rowproc.tab <- simpleCA1$N / rowSums(simpleCA1$N)
+colnames(johdesim1_rowproc.tab) <- c("S" ,"s" ,"?","e", "E")
+rownames(johdesim1_rowproc.tab) <- c("BE", "BG", "DE", "DK", "FI", "HU")
+
+# Miten tibblenä? Ei toimi, ei maa-muuttujaa ollenkaan
+# johdesim1_rowproc.tbl <- as_tibble(johdesim1_rowproc.tab)
+# str(johdesim1_rowproc.tbl)
+
+# TARKISTUKSIA (20.2.20)
+# johdesim1_rowproc.tab
+# rowSums(johdesim1_rowproc.tab)
+# str(johdesim1_rowproc.tab)
+
+
+simpleCA3 <- ca(johdesim1_rowproc.tab)
+
+
+# Kartta piirretään koodilohkossa simpleCAmap1, r. 773 noin.
+
+# Riviprosentit tarkistusta varten
+#        S	s	?	e	E
+#BE	9.49	22.40	21.76	27.42	18.93
+#BG	12.81	42.89	22.26	20.63	1.41
+#DE	9.63	21.88	11.55	31.39	25.55
+#DK	5.04	17.15	10.95	16.71	50.14
+#FI	4.23	16.94	13.42	38.11	27.30
+#HU	21.97	28.89	22.57	19.06	7.52
+#
+# Ja datan saa leikepöydän kautta, jos on tarve pikatarkistuksiin
+# read <- read.table("clipboard")
+
+```
+
+**Kuvat**
+
+```{r g1-2kuva1, fig.cap = "Q1b:Sarakeprofiilit ja keskiarvoprofiili", echo = FALSE, include = TRUE}
+#mutkikas kuvan piirto - sarakeprofiilit vertailussa
+#ggplot vaatii df-rakenteen ja 'long data' - muotoon
+##https://stackoverflow.com/questions/9563368/create-stacked-barplot
+# -where-each-stack-is-scaled-to-sum-to
+# Pitkä https-linkki kahdella rivillä
+#
+# käytetään ca - tuloksia
+apu1 <- (simpleCA1$N)
+colnames(apu1) <- c("S", "s", "?", "e", "E")
+rownames(apu1) <- c("BE", "BG", "DE", "DK", "FI", "HU")
+apu1_df <- as.data.frame(apu1)
+#lasketan rivien reunajakauma
+apu1_df$ka_sarake <- rowSums(apu1_df)
+#muokataan 'long data' - muotoon
+apu1b_df <- melt(cbind(apu1_df, ind = rownames(apu1_df)), id.vars = c('ind'))
+
+ggplot(apu1b_df, aes(x = variable, y = value, fill = ind)) +
+         geom_bar(position = "fill", stat = "identity") +
+         scale_y_continuous(labels = percent_format())
+# apu1_df
+# apu1b_df
+```
+
+```{r g1-2kuva2, fig.cap = "Q1b: riviprofiilit ja keskiarvorivi", echo = FALSE, include = TRUE}
+# riviprofiilit ja keskiarvorivi -  18.9.2018
+apu2_df <- as.data.frame(apu1)
+apu2_df <- rbind(apu2_df, ka_rivi = colSums(apu2_df))
+
+#apu2_df
+#str(apu2_df)
+## typeof(apu2_df) # what is it?
+## class(apu2_df) # what is it? (sorry)
+## storage.mode(apu2_df) # what is it? (very sorry)
+## length(apu2_df) # how long is it? What about two dimensional
+## objects?
+# attributes(apu2_df)
+
+# temp1 <- cbind(apu2_df, ind = rownames(apu2_df))
+# temp1
+##muokataan 'long data' - muotoon
+apu2b_df <- melt(cbind(apu2_df, ind = rownames(apu2_df)), id.vars = c('ind'))
+# str(apu2b_df)
+# glimpse(apu2b_df)
+
+#
+#ggplot(apu2b_df, aes(x = value, y = ind, fill = variable)) +
+#       geom_bar(position = "fill", stat ="identity") +
+#       #coord_flip() +
+#        scale_x_continuous(labels = percent_format())
+
+#versio2 toimii (18.9.2018)
+
+ggplot(apu2b_df, aes(x = ind, y = value, fill = variable)) +
+       geom_bar(position = "fill", stat = "identity") +
+       coord_flip() +
+        scale_y_continuous(labels = percent_format())
+
+
+```
 
 
