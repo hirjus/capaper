@@ -156,7 +156,7 @@
 
 \title{Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä}
 \author{Jussi Hirvonen}
-\date{Versio 0.1, tulostettu 2020-10-22}
+\date{Versio 0.2, tulostettu 2020-10-23}
 
 \begin{document}
 \maketitle
@@ -178,19 +178,16 @@ Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti
 RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla),
 ja korjailla skandit jos niissä on vikaa.
 
-\textbf{25.10.18}
+Koodi näkyy Galkun tulosteessa (\url{https://hirjus.github.io/Galku}), jossa on myös
+pitkiä listauksia muunnosten tarkistuksista ja kuvia eri versioina.
 
-\textbf{Ideoita}
+Koodi kopiodaan Galkusta, kommentoidaan pois tarkistuksia ja muita välitulostuksia.
+Koodin ydinasiat koitetaan pitää samana kuin Galkussa, isommat muuutoksen ensin siellä
+ja sitten tähän projektiin.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Ehkä automaattista R-kirjastojen dokumentointia voisi harkita?
-\item
-  Gitbook-tulosteessa ei saa koodia ``piilotettua'', asetus ``code\_folding: hide'' vaatii teeman (theme). \_output.yml - tiedostoon lisätty html\_book - formaatti, siinä voi tarvittaessa käyttää piilotusta.
-\item
-  Versiointi: 0.0n aloittelua, 0.n jäsentely koko paperille, 1.n.n valmiimpaa tekstiä.
-\end{enumerate}
+Gitbook-tulosteessa ei saa koodia ``piilotettua'', asetus ``code\_folding: hide'' vaatii teeman (theme). \_output.yml - tiedostoon lisätty html\_book - formaatti, siinä voi tarvittaessa käyttää piilotusta.
+
+Versiointi: 0.0n aloittelua, 0.n jäsentely koko paperille, 1.n.n valmiimpaa tekstiä.
 
 \hypertarget{johdanto}{%
 \chapter{Johdanto}\label{johdanto}}
@@ -489,6 +486,8 @@ pääasiallinen toimi (töissä, eläkkeellä jne), lasten lukumäärä perheess
 suurkaupunki jne.), oma arvio sosiaalisesta asemasta (1-10). Kysymyksiä, tiedot tosin
 kerätty eri tavoin eri maissa.
 
+Vastaajan ikä
+
 \textbf{K} Aineistossa mukana puuttuvat vastaukset, puuttuvia ei ole kolmessa muuttujassa
 (maa, ikä ja sukupuoli). Muutamilla havainnoilla puuttui tieto iästä tai sukupuolesta,
 ja ne rajattiin pois.
@@ -532,12 +531,13 @@ Sukupuoliroolien (gender roles) ja niihin liittyvien asenteiden vertailevaa kans
 
 \textbf{k2} Luvun tärkeimmät asiat; mitä on luvassa?
 
-\hypertarget{uxe4iti-tuxf6issuxe4}{%
-\section{Äiti töissä}\label{uxe4iti-tuxf6issuxe4}}
+\hypertarget{uxe4iti-tuxf6issuxe4--kuxe4rsiikuxf6-lapsi}{%
+\section{Äiti töissä -kärsiikö lapsi?}\label{uxe4iti-tuxf6issuxe4--kuxe4rsiikuxf6-lapsi}}
 
 \textbf{k1}``Alle kouluikäinen lapsi todennäköisesti kärsii, jos hänen äitinsä käy työssä''.
 Lyhennän muotoon äiti töissä. ISSP-tutkimuksissa kaksi kysymystä, joissa sana ``äiti'',
 MG havainnut ne poikkeaviksi (\textbf{\#V ?}).
+
 \textbf{zxy} Edellisessä luvussa on esitelyt aineisto, ja kerrottu rajaukset.
 
 Tarkistetaan uudet muuttujat (koodilohkon tulostus pois tarvittaessa).
@@ -630,7 +630,8 @@ terminologialla ``samples''.
 \caption{\label{fig:g1-2kuva2}Q1b: riviprofiilit ja keskiarvorivi}
 \end{figure}
 
-\textbf{Ensimmäiset kartat}
+\hypertarget{ca---esimerkki}{%
+\section{CA - esimerkki}\label{ca---esimerkki}}
 
 \begin{figure}
 
@@ -662,19 +663,142 @@ selitetyn inertian osuus.
 \caption{Q1b: lapsi kärsii jos äiti on töissä}\label{fig:simpleCA3map1}
 \end{figure}
 
-\hypertarget{yksinkertaisen-korrespondenssianalyysi---tulkinnan-syventuxe4minen}{%
-\chapter{Yksinkertaisen korrespondenssianalyysi - tulkinnan syventäminen}\label{yksinkertaisen-korrespondenssianalyysi---tulkinnan-syventuxe4minen}}
+\hypertarget{yksinkertaisen-korrespondenssianalyysin-laajennuksia-1---tuxe4ydentuxe4vuxe4t-pisteet}{%
+\chapter{Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet}\label{yksinkertaisen-korrespondenssianalyysin-laajennuksia-1---tuxe4ydentuxe4vuxe4t-pisteet}}
 
-\textbf{xyz} Tarkasti läpi keskeiset tulokset ja niiden tulkinta, kaavat, ja ytimenä eri kuvat eli kartat.
+\textbf{edit} Edellisssä luvussa selitetty barysentrinen keskiarvopiste;
+teorialiitteessä hieman laveammin.
 
-\hypertarget{yksinkertaisen-korrespondenssianalyysin-laajennuksia}{%
-\chapter{Yksinkertaisen korrespondenssianalyysin laajennuksia}\label{yksinkertaisen-korrespondenssianalyysin-laajennuksia}}
+\textbf{edit} CA:n joustava käyttö vaatii matriisioperaatioita, ja muuta datan rakenteen
+muokkausta (rivien lisääminen input-dataan jne.).
 
-\textbf{xyz} Yksinkertainen korrespondenssianalyysi on menetelmän tulkinnan perusta. Perusasetelmaa kahden luokittelumuuttujan ristiintaulukoinnista voidaan laajentaa monipuolisempiin tutkimusasetelmiin. Varsinainen useamman muuttujan korrespondenssianalyysi (MCA - multiple correspondence analysis) esitellään seuraavassa luvussa.
+\hypertarget{tuxe4ydentuxe4vuxe4t-pisteet-supplementary-points}{%
+\section{Täydentävät pisteet (supplementary points)}\label{tuxe4ydentuxe4vuxe4t-pisteet-supplementary-points}}
+
+Tekstistä oma dokkari, eri käyttötapaukset lyhyesti. Edellisen luvun asymmetrisen
+kartan avulla perustellaan, miten pisteitä voidaaan lisätä.
+
+\hypertarget{saksan-ja-belgian-alueet}{%
+\section{Saksan ja Belgian alueet}\label{saksan-ja-belgian-alueet}}
+
+\hypertarget{data-ja-taulukko-aluejaosta}{%
+\subsection{Data ja taulukko aluejaosta}\label{data-ja-taulukko-aluejaosta}}
+
+\hypertarget{symmetrinen-kartta}{%
+\subsection{Symmetrinen kartta}\label{symmetrinen-kartta}}
+
+\textbf{k} Kuvassa myös kontribuutiot ja massat värisävyinä ja pisteiden kokona. Yleiskuvaan
+riittävä, ei kovin selkeä yksityiskohdissa. Motivaatio seuraavalle jaksolle.
+
+\textbf{k} Kaukana on kaukana, mutta lähellä voi olla myös kaukana.
+
+\hypertarget{can-numeeriset-tulokset}{%
+\section{CA:n numeeriset tulokset}\label{can-numeeriset-tulokset}}
+
+\textbf{edit} Teorialiitteessä selitetään tarkemmin numeeristen tulosten tausta, tässä
+apuneuvo (a) kuvan tulkinnan varmistamiseen ja (b) approksimaation laadun
+tarkistamiseen.
+
+\#\#\# kontribuutiokartta**
+
+\textbf{k} Kartan tarkoitus lyhetää skaalaamalla asymm. kuvan sarakevektoreita
+
+\#\#\# esimerkki 3d- kartasta - Saksan ja Belgian dimensiot
+
+\textbf{k} Ei kovin hyviä kuvia, mutta periaate on tärkeä. Kartta on approksimaatio,
+pitää päättää milloin se on tarpeeksi hyvä. Tai mille pisteille hyvä, mille huonompi.
+
+\hypertarget{yksinkertaisen-korrespondenssianalyysin-laajennuksia-2---yhteisvaikutusmuuttujat}{%
+\chapter{Yksinkertaisen korrespondenssianalyysin laajennuksia 2 - yhteisvaikutusmuuttujat}\label{yksinkertaisen-korrespondenssianalyysin-laajennuksia-2---yhteisvaikutusmuuttujat}}
+
+\textbf{edit} Yksinkertaisin tapa ottaa muita muuttujia mukaan analyysiin.
+
+\textbf{k} Kaksi yhteisvaikutusmuuttujaan (MG ``interactive coding''), sukupuoli ja
+ikäluokka/kohortti
+
+\textbf{k} Poikkileikkausaineistossa vastaajaan ikä kuvaa sekä ikää että mitä erilaisimipia
+sukupolvivaikutuksia. Ei voi oikein erottaa toisistaan. Vastaajat ovat elämänsä eri
+vaiheissa kohdanneet lukuisia rajuja muutoksia toisen maailmansodan jälkeen. Nähtiin
+jo edellisessä jaksossa!
+
+\textbf{k} Poikkileikkausaineistossa vastaajan ikä kertoo ikäluokan (kohortin), vastaajat ovat
+kokeen esim. kaksi mullistusten vuotta elämänsä eri vaiheissa. Kaksin nuorinta ikäluokka
+on ollut 1990 alle 14-vuotiaita ja vanhin ikäluokka yli 44-vuotiaita. Finannsikriisin
+vuonna 2008 toiseksi nuorin ikäluokka on ollut 22-31 vuotiaita, ja kaksi vanhinta
+yli 51-vuotiaita.
+
+\hypertarget{ikuxe4-ja-sukupuoli}{%
+\section{Ikä ja sukupuoli}\label{ikuxe4-ja-sukupuoli}}
+
+\textbf{edit} Lyhyesti tämä, aineisto aggregoitu ikä- ja sukupuoliryhmiin.
+\textbf{edit} Voi myös lisätä täydentävinä pisteinä ``peruskarttaan'', ei tehdä.
+
+\hypertarget{ikuxe4-sukupuoli-ja-maa}{%
+\section{Ikä, sukupuoli ja maa}\label{ikuxe4-sukupuoli-ja-maa}}
+
+\textbf{edit} Yksi vaikeaselkoinen kartta täynnä pisteitä, tihrustellaan.
+
+\textbf{edit} Stabiilius - teorialiitteessä laajemmin mutta tässä lyhyt vilkaisu.
+Taulukko alkaa harveta, jo edellä kerrottiin että aineisto painottuu kaikissa maissa
+vanhempiin ikäluokkiin.
+
+\textbf{yksinkertainen tarkistus} Löytyykö riviproviileja joilla pieni massa ja suuri
+kontribuutio? Ei löydy, mutta jo kuvan tukkoisuus vaatii luokkien yhdistelyä.
+Aika työlästä!
+
+\hypertarget{yksinkertaisen-korrespondenssianalyysin-laajennuksia-3---osajoukon-ca}{%
+\chapter{Yksinkertaisen korrespondenssianalyysin laajennuksia 3 - osajoukon CA}\label{yksinkertaisen-korrespondenssianalyysin-laajennuksia-3---osajoukon-ca}}
+
+\textbf{xyz} Yksinkertainen korrespondenssianalyysi on menetelmän tulkinnan perusta.
+laajentaa monipuolisempiin tutkimusasetelmiin. Varsinainen useamman muuttujan
+korrespondenssianalyysi / monimuuttuja-CA (MCA - multiple correspondence analysis)
+esitellään seuraavassa luvussa.
+
+\hypertarget{monimuuttuja-korrespondenssianalyysi-mca-ja-yhdistetyt-taulukot}{%
+\chapter{Monimuuttuja-korrespondenssianalyysi (MCA) ja yhdistetyt taulukot}\label{monimuuttuja-korrespondenssianalyysi-mca-ja-yhdistetyt-taulukot}}
+
+\textbf{edit} Kaksi tutkimusasetelmaa: kahden muuttujajoukon väliset yhteydet ja
+muuttujajoukon sisäiset yhteydet.
+
+\textbf{edit} Matemaattisesti kaikki muuttuu paljon mutkikkaammaksi, ja yksinkertaisen
+perustapauksen selkeät tulkinnat eivät toimi. Tärkeä asia: CA:n skaalausominaisuudet ja
+visuaalinen tulkinta pätevät edelleen.
+
+\textbf{edit} Teorialiitteessä tästä enemmän, ranskalaiset edelleen eri mieltä.
+
+\textbf{edit} CA on hajonnan (intertian) dekomponoinnin menetelmä.
+
+\hypertarget{pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables}{%
+\section{Pinotut ja yhdistetyt taulukot (stacked and concatenated tables)}\label{pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables}}
+
+Hyvin yksinkertainen esimerkki.
+
+\textbf{edit} Mutta tässä esimerkkiaineisto, jossa ei puuttuvia tietoja. Ne olisivatkin
+aika pulmallisia, varianssin dekomponointi vaatii samat reunajakaumat.
+
+\hypertarget{mca---monimuuttujakorrespondenssianalyysi}{%
+\section{MCA - monimuuttujakorrespondenssianalyysi}\label{mca---monimuuttujakorrespondenssianalyysi}}
+
+\textbf{k} Terminologiasta: monta muuttujaa on jo ollut käytössä. MCA on monimuuttujamenetelmä
+samassa mielessä kuin faktorianalyysi. Analysoidaan usean statukseltaan samanlaisen
+muuttujan välisiä suhteita, ja myös niiden yhteyksiä tutkimusongelman kannalta
+``eksogeenisiin'' taustamuuttujiin tai ``selittäjiin''. Surveytutkimuksen kyselylomakkeen
+kysymyspatterit luotaavat tietoa joistain taustalla olevista asenteista.
+
+\textbf{edit} yksi kappale, jossa tutkimusasetelmaa verrataan tilastollisten mallien
+asetelmaan? Jako ``selittäjiin'' ja selitettävään, moniyhtälömallit?
+Faktorianalyysi tässä selkein vertailukohde
+
+\textbf{k} Data
+
+\textbf{k} Puuttuvat havainnot
 
 \hypertarget{liitteet}{%
 \chapter*{Liitteet}\label{liitteet}}
 \addcontentsline{toc}{chapter}{Liitteet}
+
+\hypertarget{korrespondenssianalyysin-teoriaa}{%
+\section{Korrespondenssianalyysin teoriaa}\label{korrespondenssianalyysin-teoriaa}}
 
 \hypertarget{suomenkielinen-lomake-esimerkki}{%
 \section{Suomenkielinen lomake (esimerkki)}\label{suomenkielinen-lomake-esimerkki}}
@@ -1752,7 +1876,7 @@ versiot.
 \CommentTok{# levels = c("100","208","246","348","5601","5602","5603","27601","27602"),}
 \CommentTok{# labels = c("BG","DK","FI","HU","bF","bW","bB","dW","dE"))}
 \CommentTok{# levels(ISSP2012esim1.dat$maa3)}
- 
+
 \NormalTok{ISSP2012esim1.dat <-}\StringTok{ }\NormalTok{ISSP2012esim1.dat }\OperatorTok{%>%}
 \StringTok{        }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{maa3 =}
                 \KeywordTok{fct_recode}\NormalTok{(maa3,}
@@ -1947,7 +2071,7 @@ versiot.
 \NormalTok{p <-}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(apu1b_df, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ variable, }\DataTypeTok{y =}\NormalTok{ value, }\DataTypeTok{fill =}\NormalTok{ ind)) }\OperatorTok{+}
 \StringTok{         }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{position =} \StringTok{"fill"}\NormalTok{, }\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{) }\OperatorTok{+}
 \StringTok{         }\KeywordTok{scale_y_continuous}\NormalTok{(}\DataTypeTok{name =} \StringTok{" "}\NormalTok{,}\DataTypeTok{labels =} \KeywordTok{percent_format}\NormalTok{())}
-\NormalTok{p <-}\StringTok{ }\NormalTok{p }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{fill =} \StringTok{"maa"}\NormalTok{) }
+\NormalTok{p <-}\StringTok{ }\NormalTok{p }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{fill =} \StringTok{"maa"}\NormalTok{)}
 \NormalTok{p }\OperatorTok{+}\StringTok{ }\KeywordTok{scale_x_discrete}\NormalTok{(}\DataTypeTok{name =} \StringTok{"Q1b - vastauskategoriat"}\NormalTok{)}
 \CommentTok{# apu1_df}
 \CommentTok{# apu1b_df}
@@ -1984,7 +2108,7 @@ versiot.
 \StringTok{       }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{position =} \StringTok{"fill"}\NormalTok{, }\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{) }\OperatorTok{+}
 \StringTok{       }\KeywordTok{coord_flip}\NormalTok{() }\OperatorTok{+}
 \StringTok{        }\KeywordTok{scale_y_continuous}\NormalTok{(}\DataTypeTok{name =} \StringTok{" "}\NormalTok{,}\DataTypeTok{labels =} \KeywordTok{percent_format}\NormalTok{())}
-\NormalTok{p <-}\StringTok{ }\NormalTok{p }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{fill =} \StringTok{"Q1b"}\NormalTok{) }
+\NormalTok{p <-}\StringTok{ }\NormalTok{p }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{fill =} \StringTok{"Q1b"}\NormalTok{)}
 \NormalTok{p }\OperatorTok{+}\StringTok{ }\KeywordTok{scale_x_discrete}\NormalTok{(}\DataTypeTok{name =} \StringTok{" "}\NormalTok{)}
 
 
@@ -2000,7 +2124,7 @@ versiot.
      \DataTypeTok{ylab =} \StringTok{"Dimensio 2: maltillinen/epävarma - radikaali/jyrkkä/varma (15.1%)"}\NormalTok{,}
      \DataTypeTok{main =} \StringTok{"symmetrinen kartta 1"}\NormalTok{,}
      \DataTypeTok{sub =} \StringTok{"Maiden massat eri suuruisia (otoskoko)"}\NormalTok{)}
- 
+
 \CommentTok{# Sama kartta - maiden massat vakiotu - simpleCA3 luotu koodilohkossa EkaCA}
 \CommentTok{# CA:n lähtötietona riviprofiilit}
 
@@ -2010,8 +2134,9 @@ versiot.
 \DataTypeTok{sub =} \StringTok{"Maidet massat vakioitu (riviprofiilidata)"}\NormalTok{)}
 
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/substvar_fi_Q1Q2.png'}\NormalTok{)}
-\CommentTok{#Testataan koodilohkojen listausta, näyttää toimivan mutta vaatii vielä säätämistä. #Ohje löytyi [Yihui Xienin blogista](https://yihui.name/en/2018/09/code-appendix/) #(luettu 26.10.2018).}
-
+\CommentTok{#Testataan koodilohkojen listausta, näyttää toimivan mutta vaatii vielä säätämistä.}
+\CommentTok{#Ohje löytyi [Yihui Xienin blogista](https://yihui.name/en/2018/09/code-appendix/)}
+\CommentTok{#(luettu 26.10.2018).}
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/BookdownProc.png'}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}

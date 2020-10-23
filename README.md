@@ -91,3 +91,8 @@ peruskäsittelyn R-koodilohkot. Versionumero 0.08. PDF-tulostus ei toimi.
  liitteksi.
  Rivi- ja sarakeprofiilikuvien tekstit korjattu.
  Kaksi ensimmäistä karttaa.
+
+ **23.20.2020** Ikäluokat syntmävuosina, ca-numeerisia tuloksia tekstiin.
+
+ **23.10.2020 Versio 0.20** Karkea sisällysluettelo, hieman **k**appaleiden sisältöjä
+ ja muistiinpanoja rakenteesta.

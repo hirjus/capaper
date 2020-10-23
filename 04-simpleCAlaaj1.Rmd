@@ -1,0 +1,40 @@
+# Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet
+
+**edit** Edellisssä luvussa selitetty barysentrinen keskiarvopiste;
+ teorialiitteessä hieman laveammin.
+
+ **edit** CA:n joustava käyttö vaatii matriisioperaatioita, ja muuta datan rakenteen
+ muokkausta (rivien lisääminen input-dataan jne.).
+
+## Täydentävät pisteet (supplementary points)
+
+Tekstistä oma dokkari, eri käyttötapaukset lyhyesti. Edellisen luvun asymmetrisen
+kartan avulla perustellaan, miten pisteitä voidaaan lisätä.
+
+## Saksan ja Belgian alueet
+
+### Data ja taulukko aluejaosta
+
+### Symmetrinen kartta
+
+**k** Kuvassa myös kontribuutiot ja massat värisävyinä ja pisteiden kokona. Yleiskuvaan
+riittävä, ei kovin selkeä yksityiskohdissa. Motivaatio seuraavalle jaksolle.
+
+**k** Kaukana on kaukana, mutta lähellä voi olla myös kaukana.
+
+## CA:n numeeriset tulokset
+
+**edit** Teorialiitteessä selitetään tarkemmin numeeristen tulosten tausta, tässä
+apuneuvo (a) kuvan tulkinnan varmistamiseen ja (b) approksimaation laadun
+ tarkistamiseen.
+
+ ### kontribuutiokartta**
+
+ **k** Kartan tarkoitus lyhetää skaalaamalla asymm. kuvan sarakevektoreita
+
+ ### esimerkki 3d- kartasta - Saksan ja Belgian dimensiot
+
+ **k** Ei kovin hyviä kuvia, mutta periaate on tärkeä. Kartta on approksimaatio,
+ pitää päättää milloin se on tarpeeksi hyvä. Tai mille pisteille hyvä, mille huonompi.
+
+ 

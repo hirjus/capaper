@@ -7,10 +7,12 @@
 
 **k2** Luvun tärkeimmät asiat; mitä on luvassa?
 
-## Äiti töissä
+## Äiti töissä -kärsiikö lapsi?
+
 **k1**"Alle kouluikäinen lapsi todennäköisesti kärsii, jos hänen äitinsä käy työssä".
 Lyhennän muotoon äiti töissä. ISSP-tutkimuksissa kaksi kysymystä, joissa sana "äiti",
 MG havainnut ne poikkeaviksi (**#V ?**).
+
 **zxy** Edellisessä luvussa on esitelyt aineisto, ja kerrottu rajaukset.
 ```{r esim1data1, echo = FALSE, include = FALSE}
 # UUSI DATA 30.1.20
@@ -100,7 +102,7 @@ ISSP2012esim1.dat <- filter(ISSP2012esim2.dat, !is.na(Q1b))
 # levels = c("100","208","246","348","5601","5602","5603","27601","27602"),
 # labels = c("BG","DK","FI","HU","bF","bW","bB","dW","dE"))
 # levels(ISSP2012esim1.dat$maa3)
- 
+
 ISSP2012esim1.dat <- ISSP2012esim1.dat %>%
         mutate(maa3 =
                 fct_recode(maa3,
@@ -333,7 +335,7 @@ apu1b_df <- melt(cbind(apu1_df, ind = rownames(apu1_df)), id.vars = c('ind'))
 p <- ggplot(apu1b_df, aes(x = variable, y = value, fill = ind)) +
          geom_bar(position = "fill", stat = "identity") +
          scale_y_continuous(name = " ",labels = percent_format())
-p <- p + labs(fill = "maa") 
+p <- p + labs(fill = "maa")
 p + scale_x_discrete(name = "Q1b - vastauskategoriat")
 # apu1_df
 # apu1b_df
@@ -373,13 +375,13 @@ p <- ggplot(apu2b_df, aes(x = ind, y = value, fill = variable)) +
        geom_bar(position = "fill", stat = "identity") +
        coord_flip() +
         scale_y_continuous(name = " ",labels = percent_format())
-p <- p + labs(fill = "Q1b") 
+p <- p + labs(fill = "Q1b")
 p + scale_x_discrete(name = " ")
 
 
 ```
 
-**Ensimmäiset kartat**
+## CA - esimerkki
 
 ```{r simpleCA1map1, echo=FALSE, fig.cap= "Q1b: lapsi kärsii jos äiti on töissä",fig.asp = 1, out.width = "90%",fig.align = "center"}
 
@@ -406,13 +408,13 @@ plot(simpleCA1, map = "symmetric", mass = c(TRUE,TRUE),
 **edit1** jatkossa plot - main on kuvan tyyppi (symmetrinen, kontribuutio jne),
 koodilohkon fig.cap "ylimmän tason" otsikko.
 
-**edit2** Akseleiden tekstit (Dimensio 1....jne) asetettu käsin, ikävä kyllä myös 
+**edit2** Akseleiden tekstit (Dimensio 1....jne) asetettu käsin, ikävä kyllä myös
 selitetyn inertian osuus.
 
 **edit3** Onko tämä kartta liian aikaisin? Tämä ei ole pääasia, vaan selvennys.
 
 ```{r simpleCA3map1, echo=FALSE, fig.cap= "Q1b: lapsi kärsii jos äiti on töissä",fig.asp = 1, out.width = "90%",fig.align = "center"}
- 
+
 # Sama kartta - maiden massat vakiotu - simpleCA3 luotu koodilohkossa EkaCA
 # CA:n lähtötietona riviprofiilit
 
@@ -422,4 +424,3 @@ main = "symmetrinen kartta 2 ",
 sub = "Maidet massat vakioitu (riviprofiilidata)")
 
 ```
-

@@ -1,0 +1,34 @@
+# Yksinkertaisen korrespondenssianalyysin laajennuksia 2 - yhteisvaikutusmuuttujat
+
+**edit** Yksinkertaisin tapa ottaa muita muuttujia mukaan analyysiin.
+
+**k** Kaksi yhteisvaikutusmuuttujaan (MG "interactive coding"), sukupuoli ja
+ ikäluokka/kohortti
+
+**k** Poikkileikkausaineistossa vastaajaan ikä kuvaa sekä ikää että mitä erilaisimipia
+sukupolvivaikutuksia. Ei voi oikein erottaa toisistaan. Vastaajat ovat elämänsä eri
+vaiheissa kohdanneet lukuisia rajuja muutoksia toisen maailmansodan jälkeen. Nähtiin
+jo edellisessä jaksossa!
+
+**k** Poikkileikkausaineistossa vastaajan ikä kertoo ikäluokan (kohortin), vastaajat ovat
+kokeen esim. kaksi mullistusten vuotta elämänsä eri vaiheissa. Kaksin nuorinta ikäluokka
+on ollut 1990 alle 14-vuotiaita ja vanhin ikäluokka yli 44-vuotiaita. Finannsikriisin
+vuonna 2008 toiseksi nuorin ikäluokka on ollut 22-31 vuotiaita, ja kaksi vanhinta
+yli 51-vuotiaita.
+
+## Ikä ja sukupuoli
+
+**edit** Lyhyesti tämä, aineisto aggregoitu ikä- ja sukupuoliryhmiin.
+**edit** Voi myös lisätä täydentävinä pisteinä "peruskarttaan", ei tehdä.
+
+## Ikä, sukupuoli ja maa
+
+**edit** Yksi vaikeaselkoinen kartta täynnä pisteitä, tihrustellaan.
+
+**edit** Stabiilius - teorialiitteessä laajemmin mutta tässä lyhyt vilkaisu.
+Taulukko alkaa harveta, jo edellä kerrottiin että aineisto painottuu kaikissa maissa
+vanhempiin ikäluokkiin.
+
+**yksinkertainen tarkistus** Löytyykö riviproviileja joilla pieni massa ja suuri
+kontribuutio? Ei löydy, mutta jo kuvan tukkoisuus vaatii luokkien yhdistelyä.
+Aika työlästä!

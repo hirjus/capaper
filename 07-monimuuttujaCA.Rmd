@@ -1,0 +1,35 @@
+# Monimuuttuja-korrespondenssianalyysi (MCA) ja yhdistetyt taulukot
+
+**edit** Kaksi tutkimusasetelmaa: kahden muuttujajoukon väliset yhteydet ja
+muuttujajoukon sisäiset yhteydet.
+
+**edit** Matemaattisesti kaikki muuttuu paljon mutkikkaammaksi, ja yksinkertaisen
+perustapauksen selkeät tulkinnat eivät toimi. Tärkeä asia: CA:n skaalausominaisuudet ja
+visuaalinen tulkinta pätevät edelleen.
+
+**edit** Teorialiitteessä tästä enemmän, ranskalaiset edelleen eri mieltä.
+
+**edit** CA on hajonnan (intertian) dekomponoinnin menetelmä.
+
+## Pinotut ja yhdistetyt taulukot (stacked and concatenated tables)
+
+Hyvin yksinkertainen esimerkki.
+
+**edit** Mutta tässä esimerkkiaineisto, jossa ei puuttuvia tietoja. Ne olisivatkin
+aika pulmallisia, varianssin dekomponointi vaatii samat reunajakaumat.
+
+## MCA - monimuuttujakorrespondenssianalyysi
+
+**k** Terminologiasta: monta muuttujaa on jo ollut käytössä. MCA on monimuuttujamenetelmä
+samassa mielessä kuin faktorianalyysi. Analysoidaan usean statukseltaan samanlaisen
+muuttujan välisiä suhteita, ja myös niiden yhteyksiä tutkimusongelman kannalta
+"eksogeenisiin" taustamuuttujiin tai "selittäjiin". Surveytutkimuksen kyselylomakkeen
+kysymyspatterit luotaavat tietoa joistain taustalla olevista asenteista.
+
+**edit** yksi kappale, jossa tutkimusasetelmaa verrataan tilastollisten mallien
+asetelmaan? Jako "selittäjiin" ja selitettävään, moniyhtälömallit?
+Faktorianalyysi tässä selkein vertailukohde
+
+**k** Data
+
+**k** Puuttuvat havainnot

@@ -1078,6 +1078,8 @@ pääasiallinen toimi (töissä, eläkkeellä jne), lasten lukumäärä perheess
 suurkaupunki jne.), oma arvio sosiaalisesta asemasta (1-10). Kysymyksiä, tiedot tosin 
 kerätty eri tavoin eri maissa.
 
+Vastaajan ikä
+
 **K** Aineistossa mukana puuttuvat vastaukset, puuttuvia ei ole kolmessa muuttujassa
 (maa, ikä ja sukupuoli). Muutamilla havainnoilla puuttui tieto iästä tai sukupuolesta,
 ja ne rajattiin pois.

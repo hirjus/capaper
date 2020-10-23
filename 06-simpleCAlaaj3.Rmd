@@ -1,0 +1,6 @@
+# Yksinkertaisen korrespondenssianalyysin laajennuksia 3 - osajoukon CA
+
+**xyz** Yksinkertainen korrespondenssianalyysi on menetelmän tulkinnan perusta.
+laajentaa monipuolisempiin tutkimusasetelmiin. Varsinainen useamman muuttujan
+korrespondenssianalyysi / monimuuttuja-CA (MCA - multiple correspondence analysis)
+esitellään seuraavassa luvussa.
