@@ -150,6 +150,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä--kärsiikö-lapsi"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä -kärsiikö lapsi?</a></li>
 <li class="chapter" data-level="3.2" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#kahden-muuttujan-frekvenssitaulukon-analyysi"><i class="fa fa-check"></i><b>3.2</b> Kahden muuttujan frekvenssitaulukon analyysi</a></li>
 <li class="chapter" data-level="3.3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#ca---esimerkki"><i class="fa fa-check"></i><b>3.3</b> CA - esimerkki</a></li>
+<li class="chapter" data-level="3.4" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#korrespondenssianalyysin-peruskäsitteet"><i class="fa fa-check"></i><b>3.4</b> Korrespondenssianalyysin peruskäsitteet</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#asymmetrinen-kartta-ja-ideaalipisteet"><i class="fa fa-check"></i><b>3.4.1</b> Asymmetrinen kartta ja ideaalipisteet</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#kontribuutiot-kartalla"><i class="fa fa-check"></i><b>3.5</b> Kontribuutiot kartalla</a></li>
+<li class="chapter" data-level="3.6" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#massat"><i class="fa fa-check"></i><b>3.6</b> Massat</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><i class="fa fa-check"></i><b>4</b> Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet</a><ul>
 <li class="chapter" data-level="4.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#täydentävät-pisteet-supplementary-points"><i class="fa fa-check"></i><b>4.1</b> Täydentävät pisteet (supplementary points)</a></li>
@@ -1503,26 +1508,67 @@ Kuva 7.1: Esimerkki suomenkielisestä lomakkeesta
 <span id="cb3-1290"><a href="liitteet.html#cb3-1290"></a><span class="co"># tässä. Vertaa scree-plot - tietoon!</span></span>
 <span id="cb3-1291"><a href="liitteet.html#cb3-1291"></a></span>
 <span id="cb3-1292"><a href="liitteet.html#cb3-1292"></a></span>
-<span id="cb3-1293"><a href="liitteet.html#cb3-1293"></a><span class="kw">par</span>(<span class="dt">cex =</span> <span class="fl">0.7</span>)</span>
+<span id="cb3-1293"><a href="liitteet.html#cb3-1293"></a><span class="kw">par</span>(<span class="dt">cex =</span> <span class="dv">1</span>)</span>
 <span id="cb3-1294"><a href="liitteet.html#cb3-1294"></a><span class="kw">plot</span>(simpleCA1, <span class="dt">map =</span> <span class="st">&quot;symmetric&quot;</span>, <span class="dt">mass =</span> <span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">TRUE</span>),</span>
 <span id="cb3-1295"><a href="liitteet.html#cb3-1295"></a>     <span class="dt">xlab =</span> <span class="st">&quot;Dimensio 1: moderni/liberaali - perinteinen/konservatiivinen (76%)&quot;</span>,</span>
 <span id="cb3-1296"><a href="liitteet.html#cb3-1296"></a>     <span class="dt">ylab =</span> <span class="st">&quot;Dimensio 2: maltillinen/epävarma - radikaali/jyrkkä/varma (15.1%)&quot;</span>,</span>
 <span id="cb3-1297"><a href="liitteet.html#cb3-1297"></a>     <span class="dt">main =</span> <span class="st">&quot;symmetrinen kartta 1&quot;</span>,</span>
-<span id="cb3-1298"><a href="liitteet.html#cb3-1298"></a>     <span class="dt">sub =</span> <span class="st">&quot;Maiden massat eri suuruisia (otoskoko)&quot;</span>)</span>
-<span id="cb3-1299"><a href="liitteet.html#cb3-1299"></a></span>
-<span id="cb3-1300"><a href="liitteet.html#cb3-1300"></a><span class="co"># Sama kartta - maiden massat vakiotu - simpleCA3 luotu koodilohkossa EkaCA</span></span>
-<span id="cb3-1301"><a href="liitteet.html#cb3-1301"></a><span class="co"># CA:n lähtötietona riviprofiilit</span></span>
-<span id="cb3-1302"><a href="liitteet.html#cb3-1302"></a></span>
-<span id="cb3-1303"><a href="liitteet.html#cb3-1303"></a><span class="kw">par</span>(<span class="dt">cex =</span> <span class="fl">0.6</span>)</span>
-<span id="cb3-1304"><a href="liitteet.html#cb3-1304"></a><span class="kw">plot</span>(simpleCA3, <span class="dt">map =</span> <span class="st">&quot;symmetric&quot;</span>, <span class="dt">mass =</span> <span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">TRUE</span>),</span>
-<span id="cb3-1305"><a href="liitteet.html#cb3-1305"></a><span class="dt">main =</span> <span class="st">&quot;symmetrinen kartta 2 &quot;</span>,</span>
-<span id="cb3-1306"><a href="liitteet.html#cb3-1306"></a><span class="dt">sub =</span> <span class="st">&quot;Maidet massat vakioitu (riviprofiilidata)&quot;</span>)</span>
+<span id="cb3-1298"><a href="liitteet.html#cb3-1298"></a>     <span class="dt">sub =</span> <span class="st">&quot;Maiden massat eri suuruisia (otoskoko), pisteiden koko suhteessa massaan&quot;</span>)</span>
+<span id="cb3-1299"><a href="liitteet.html#cb3-1299"></a><span class="co"># asymmetrinen kartta - rivit pc ja sarakkeet sc</span></span>
+<span id="cb3-1300"><a href="liitteet.html#cb3-1300"></a><span class="co"># sarakkeet vektorikuvina</span></span>
+<span id="cb3-1301"><a href="liitteet.html#cb3-1301"></a></span>
+<span id="cb3-1302"><a href="liitteet.html#cb3-1302"></a><span class="kw">par</span>(<span class="dt">cex =</span> <span class="fl">0.7</span>)</span>
+<span id="cb3-1303"><a href="liitteet.html#cb3-1303"></a><span class="kw">plot</span>(simpleCA1, <span class="dt">map =</span> <span class="st">&quot;rowprincipal&quot;</span>, </span>
+<span id="cb3-1304"><a href="liitteet.html#cb3-1304"></a>     <span class="dt">arrows =</span> <span class="kw">c</span>(<span class="ot">FALSE</span>,<span class="ot">TRUE</span>), </span>
+<span id="cb3-1305"><a href="liitteet.html#cb3-1305"></a>     <span class="dt">main =</span> <span class="st">&quot;asymmetrinen kartta 1&quot;</span></span>
+<span id="cb3-1306"><a href="liitteet.html#cb3-1306"></a>    )</span>
 <span id="cb3-1307"><a href="liitteet.html#cb3-1307"></a></span>
-<span id="cb3-1308"><a href="liitteet.html#cb3-1308"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/substvar_fi_Q1Q2.png&#39;</span>)</span>
-<span id="cb3-1309"><a href="liitteet.html#cb3-1309"></a><span class="co">#Testataan koodilohkojen listausta, näyttää toimivan mutta vaatii vielä säätämistä.</span></span>
-<span id="cb3-1310"><a href="liitteet.html#cb3-1310"></a><span class="co">#Ohje löytyi [Yihui Xienin blogista](https://yihui.name/en/2018/09/code-appendix/)</span></span>
-<span id="cb3-1311"><a href="liitteet.html#cb3-1311"></a><span class="co">#(luettu 26.10.2018).</span></span>
-<span id="cb3-1312"><a href="liitteet.html#cb3-1312"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/BookdownProc.png&#39;</span>)</span></code></pre></div>
+<span id="cb3-1308"><a href="liitteet.html#cb3-1308"></a><span class="co"># Piirretään Suomen riviprofiilista janat sarakepisteisiin - barysentinen keskiarvo</span></span>
+<span id="cb3-1309"><a href="liitteet.html#cb3-1309"></a><span class="co"># Rivipisteet pääkoordinaatteina (principal coordinates)</span></span>
+<span id="cb3-1310"><a href="liitteet.html#cb3-1310"></a></span>
+<span id="cb3-1311"><a href="liitteet.html#cb3-1311"></a>simpleCA1.rpc &lt;-<span class="st"> </span>simpleCA1<span class="op">$</span>rowcoord <span class="op">%*%</span><span class="st"> </span><span class="kw">diag</span>(simpleCA1<span class="op">$</span>sv)</span>
+<span id="cb3-1312"><a href="liitteet.html#cb3-1312"></a></span>
+<span id="cb3-1313"><a href="liitteet.html#cb3-1313"></a><span class="co"># X11()</span></span>
+<span id="cb3-1314"><a href="liitteet.html#cb3-1314"></a><span class="kw">par</span>(<span class="dt">cex =</span> <span class="dv">1</span>)</span>
+<span id="cb3-1315"><a href="liitteet.html#cb3-1315"></a><span class="kw">plot</span>(simpleCA1, <span class="dt">map =</span> <span class="st">&quot;rowprincipal&quot;</span>, </span>
+<span id="cb3-1316"><a href="liitteet.html#cb3-1316"></a>     <span class="dt">arrows =</span> <span class="kw">c</span>(<span class="ot">FALSE</span>,<span class="ot">FALSE</span>),</span>
+<span id="cb3-1317"><a href="liitteet.html#cb3-1317"></a>     <span class="co"># main = &quot;barysentrinen periaate - asymmetrinen kartta 2&quot;,</span></span>
+<span id="cb3-1318"><a href="liitteet.html#cb3-1318"></a>     <span class="dt">sub =</span> <span class="st">&quot;Suomen profiili sarakkeiden barysentrisenä keskiarvona&quot;</span>)</span>
+<span id="cb3-1319"><a href="liitteet.html#cb3-1319"></a>     <span class="kw">segments</span>(simpleCA1.rpc[<span class="dv">5</span>,<span class="dv">1</span>],simpleCA1.rpc[<span class="dv">5</span>,<span class="dv">2</span>],simpleCA1<span class="op">$</span>colcoord[, <span class="dv">1</span>],</span>
+<span id="cb3-1320"><a href="liitteet.html#cb3-1320"></a>         simpleCA1<span class="op">$</span>colcoord[, <span class="dv">2</span>], <span class="dt">col =</span> <span class="st">&quot;pink&quot;</span>)</span>
+<span id="cb3-1321"><a href="liitteet.html#cb3-1321"></a></span>
+<span id="cb3-1322"><a href="liitteet.html#cb3-1322"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/simpleCAasymmTulk2.png&#39;</span>)</span>
+<span id="cb3-1323"><a href="liitteet.html#cb3-1323"></a><span class="co">#par(cex = 0.6)</span></span>
+<span id="cb3-1324"><a href="liitteet.html#cb3-1324"></a><span class="kw">plot</span>(simpleCA1, <span class="dt">map =</span> <span class="st">&quot;rowgreen&quot;</span>,</span>
+<span id="cb3-1325"><a href="liitteet.html#cb3-1325"></a>     <span class="dt">contrib =</span> <span class="kw">c</span>(<span class="st">&quot;absolute&quot;</span>, <span class="st">&quot;absolute&quot;</span>),</span>
+<span id="cb3-1326"><a href="liitteet.html#cb3-1326"></a>     <span class="dt">mass =</span> <span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">TRUE</span>),</span>
+<span id="cb3-1327"><a href="liitteet.html#cb3-1327"></a>     <span class="dt">arrows =</span> <span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>),</span>
+<span id="cb3-1328"><a href="liitteet.html#cb3-1328"></a>     <span class="dt">main =</span> <span class="st">&quot;kontribuutiokartta 1&quot;</span>,</span>
+<span id="cb3-1329"><a href="liitteet.html#cb3-1329"></a>     <span class="dt">sub =</span> <span class="st">&quot;sarakevektorin ja rivipisteiden värin tummuus = absoluuttinen kontribuutio&quot;</span>)</span>
+<span id="cb3-1330"><a href="liitteet.html#cb3-1330"></a></span>
+<span id="cb3-1331"><a href="liitteet.html#cb3-1331"></a></span>
+<span id="cb3-1332"><a href="liitteet.html#cb3-1332"></a><span class="co">#par(cex = 0.7)</span></span>
+<span id="cb3-1333"><a href="liitteet.html#cb3-1333"></a><span class="kw">plot</span>(simpleCA1, <span class="dt">map =</span> <span class="st">&quot;rowgreen&quot;</span>,</span>
+<span id="cb3-1334"><a href="liitteet.html#cb3-1334"></a>     <span class="dt">contrib =</span> <span class="kw">c</span>(<span class="st">&quot;relative&quot;</span>, <span class="st">&quot;relative&quot;</span>),</span>
+<span id="cb3-1335"><a href="liitteet.html#cb3-1335"></a>     <span class="dt">mass =</span> <span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">TRUE</span>),</span>
+<span id="cb3-1336"><a href="liitteet.html#cb3-1336"></a>     <span class="dt">arrows =</span> <span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>),</span>
+<span id="cb3-1337"><a href="liitteet.html#cb3-1337"></a>     <span class="dt">main =</span> <span class="st">&quot;kontribuutiokartta 2&quot;</span>,</span>
+<span id="cb3-1338"><a href="liitteet.html#cb3-1338"></a>     <span class="dt">sub =</span> <span class="st">&quot;sarakevektorin ja pisteen värin tummuus = suhteellinen kontribuutio&quot;</span>)</span>
+<span id="cb3-1339"><a href="liitteet.html#cb3-1339"></a></span>
+<span id="cb3-1340"><a href="liitteet.html#cb3-1340"></a></span>
+<span id="cb3-1341"><a href="liitteet.html#cb3-1341"></a><span class="co"># Sama kartta - maiden massat vakiotu - simpleCA3 luotu koodilohkossa EkaCA</span></span>
+<span id="cb3-1342"><a href="liitteet.html#cb3-1342"></a><span class="co"># CA:n lähtötietona riviprofiilit</span></span>
+<span id="cb3-1343"><a href="liitteet.html#cb3-1343"></a></span>
+<span id="cb3-1344"><a href="liitteet.html#cb3-1344"></a><span class="kw">par</span>(<span class="dt">cex =</span> <span class="fl">0.6</span>)</span>
+<span id="cb3-1345"><a href="liitteet.html#cb3-1345"></a><span class="kw">plot</span>(simpleCA3, <span class="dt">map =</span> <span class="st">&quot;symmetric&quot;</span>, <span class="dt">mass =</span> <span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">TRUE</span>),</span>
+<span id="cb3-1346"><a href="liitteet.html#cb3-1346"></a><span class="dt">main =</span> <span class="st">&quot;symmetrinen kartta 2 &quot;</span>,</span>
+<span id="cb3-1347"><a href="liitteet.html#cb3-1347"></a><span class="dt">sub =</span> <span class="st">&quot;Maidet massat vakioitu (riviprofiilidata)&quot;</span>)</span>
+<span id="cb3-1348"><a href="liitteet.html#cb3-1348"></a></span>
+<span id="cb3-1349"><a href="liitteet.html#cb3-1349"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/substvar_fi_Q1Q2.png&#39;</span>)</span>
+<span id="cb3-1350"><a href="liitteet.html#cb3-1350"></a><span class="co">#Testataan koodilohkojen listausta, näyttää toimivan mutta vaatii vielä säätämistä.</span></span>
+<span id="cb3-1351"><a href="liitteet.html#cb3-1351"></a><span class="co">#Ohje löytyi [Yihui Xienin blogista](https://yihui.name/en/2018/09/code-appendix/)</span></span>
+<span id="cb3-1352"><a href="liitteet.html#cb3-1352"></a><span class="co">#(luettu 26.10.2018).</span></span>
+<span id="cb3-1353"><a href="liitteet.html#cb3-1353"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/BookdownProc.png&#39;</span>)</span></code></pre></div>
 </div>
 <div id="tekninen-ympäristö-ja-bookdown-paketti" class="section level2">
 <h2><span class="header-section-number">7.6</span> Tekninen ympäristö ja Bookdown-paketti</h2>
@@ -1586,7 +1632,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["JH_ca.pdf"],
+"download": ["JH_capaper.pdf"],
 "toc": {
 "collapse": "subsection"
 }

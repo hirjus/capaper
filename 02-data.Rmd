@@ -310,7 +310,13 @@ str(ISSP2012jh1c.data) # 32823 obs. of  23 variables, 32969-32823 = 146
 
 ```
 
-Perusmuunnokset - viisi koodilohkoa
+Substanssimuuttujat (9). Jos sukupuoli tai ikä puuttuu, havainto jätetään pois
+(32969-32823 = 146), maa-muuttujassa ei puuttuvia tietoja ole. Lisäksi kuusi
+taustamuuttujaa ( "SEX","AGE","DEGREE", "MAINSTAT", "TOPBOT", "HHCHILDR",
+"MARITAL", "URBRURAL").
+
+
+**Perusmuunnokset - viisi koodilohkoa**
 
 Vaihe 1
 
@@ -1073,10 +1079,10 @@ knitr::include_graphics('img/substvar_fi_Q1Q2.png')
 
 **taustamuuttujat**
 
-**k** maa, sukupuoli, haastateltavan ikä, koulutustaso, "virallinen" juridinen parisuhdestatus,
-pääasiallinen toimi (töissä, eläkkeellä jne), lasten lukumäärä perheessä ja asuinpaikka (maaseutu,
-suurkaupunki jne.), oma arvio sosiaalisesta asemasta (1-10). Kysymyksiä, tiedot tosin 
-kerätty eri tavoin eri maissa.
+**k** maa, sukupuoli, haastateltavan ikä, koulutustaso, "virallinen" juridinen
+parisuhdestatus, pääasiallinen toimi (töissä, eläkkeellä jne), lasten lukumäärä
+perheessä ja asuinpaikka (maaseutu,suurkaupunki jne.), oma arvio sosiaalisesta
+asemasta (1-10). Kysymyksiä, tiedot tosin kerätty eri tavoin eri maissa.
 
 Vastaajan ikä
 
@@ -1084,7 +1090,7 @@ Vastaajan ikä
 (maa, ikä ja sukupuoli). Muutamilla havainnoilla puuttui tieto iästä tai sukupuolesta,
 ja ne rajattiin pois.
 
-Kuvataan tarkemmin, kun käytetään.
+Kuvataan tarkemmin, kun käytetään luvussa 7.
 
 
 
@@ -1093,6 +1099,7 @@ Kuvataan tarkemmin, kun käytetään.
 **Miten aineistoa on käytetty?**. 
 
 **Korrespondenssianalyysin esimerkkiaineistona**
+
 
 Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa (Helsinki 2017 MCA, viite Moodleen?) ja kahdessa oppikirjassa ([@RefWorks:doc:5a857a43e4b0ed2d44664d7c], [@RefWorks:doc:5a857a43e4b0ed2d44664d78]).ISSP - aineisto vuodelta 1989 on käytetty myös neljän "singuaariarvohajoitelmaan perustuvan menetelmän" vertailuun[@RefWorks:doc:5b6f159ce4b0bc0f31734b76]. 
 

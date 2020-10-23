@@ -390,28 +390,164 @@ p + scale_x_discrete(name = " ")
 # tässä. Vertaa scree-plot - tietoon!
 
 
-par(cex = 0.7)
+par(cex = 1)
 plot(simpleCA1, map = "symmetric", mass = c(TRUE,TRUE),
      xlab = "Dimensio 1: moderni/liberaali - perinteinen/konservatiivinen (76%)",
      ylab = "Dimensio 2: maltillinen/epävarma - radikaali/jyrkkä/varma (15.1%)",
      main = "symmetrinen kartta 1",
-     sub = "Maiden massat eri suuruisia (otoskoko)")
+     sub = "Maiden massat eri suuruisia (otoskoko), pisteiden koko suhteessa massaan")
 ```
-
-**k** Kartan tulkinta
-
-**k**
-
-
-
 
 **edit1** jatkossa plot - main on kuvan tyyppi (symmetrinen, kontribuutio jne),
 koodilohkon fig.cap "ylimmän tason" otsikko.
 
 **edit2** Akseleiden tekstit (Dimensio 1....jne) asetettu käsin, ikävä kyllä myös
-selitetyn inertian osuus.
+selitetyn inertian osuus. Ainakin tästä ensimmäisestä kuvasta ne kannattaa jättää
+pois, spoileri!
 
-**edit3** Onko tämä kartta liian aikaisin? Tämä ei ole pääasia, vaan selvennys.
+**edit3** par(cex = 1) ennen plot-komenota muuttaa valitettavasti "kaiken" kokoa.
+Antaa olla, kun on graafista data-analyysiä. Selkeys tärkeämpää kuin ulkoasu.
+
+
+**k** Kartan tulkinta
+
+**k** Prosentit - kuinka paljon kokonaisinertiasta saadaan kuvattua ("selitettyä").
+
+**k** Dimenisoiden tulkinta sarakepisteiden avulla: mitä on oikealla ja vasemmalla?
+Kaukana on kaukana, mutta lähellä voi olla täydessä sarake- tai riviavaruudessa
+kaukana. Siksi tulkinta kontrastien avulla - mikä piste on suhteellisesti kauimpana?
+
+**k** Rivipisteiden tulkinta kartalla - järjestys vasemmalta oikealle ja alhaalta
+ylös. Pisteiden etäisyydet toisistaan.
+
+**k** Origo on aineiston keskipiste, "riippumattomuushypoteesi" (kts. teorialiite).
+
+**k** Sarakepisteiden erot ja rivipisteiden erot ovat suhteellisia, approksimoivat 
+khii2-etäisyyksiä.
+
+**k** Rivi- ja sarakepisteiden etäisyyksillä ei suoraan mitään tulkintaa!
+
+**k** Lista: mitä muuta, johon palataan seuraavassa luvussa?
+
+- kuinka hyvin pisteet on esitetty tasossa?
+- esim. x-akseli kuvaa ("nappaa") 76% kokonaisinertiasta. Pisteiden
+inertiakontribuutiot
+
+
+
+
+
+## Korrespondenssianalyysin peruskäsitteet
+
+**ks** Mitä käsitteitä tässä esitellään? Viittaukset teorialiitteeseen, ja
+tulkinnan hankaluudet (MG "loose ends" - paperi) käsitellään siellä.
+
+**edit** Sulava kuvaus tulkinnasta, painotus kuvien tulkinnassa. CA:n numeeriset
+tulokset vasta seuraavassa luvussa. Tässä "mitä kuvasta näkee", ei muuta (paitsi
+varoitukset - mitä ei näe). Idea koko ajan taulukon sarakkeiden ja riveien yhteyksien
+visualisointi.
+
+**edit** Tärkeää selkeä kuvaus pääkoordinaattien ja standardikoordinaattien 
+suhteesta. Tarkemmin teorialiitteessä, tässä heuristisesti jotta kuvia osaa tulkita.
+
+### Asymmetrinen kartta ja ideaalipisteet
+
+```{r G1-3asymm2,echo = FALSE, fig.cap= "Q1b: lapsi kärsii jos äiti on töissä",fig.asp = 1, out.width = "90%",fig.align = "center"}
+# asymmetrinen kartta - rivit pc ja sarakkeet sc
+# sarakkeet vektorikuvina
+
+par(cex = 0.7)
+plot(simpleCA1, map = "rowprincipal", 
+     arrows = c(FALSE,TRUE), 
+     main = "asymmetrinen kartta 1"
+    )
+```
+
+
+**Barysentrinen periaate**
+
+**edit** kuva ei ehkä tarpeen? Tehdään vähän pienempi (out.width = 70%, muuten 90%).
+```{r G1-3asymm3,echo = FALSE,fig.cap= "Q1b: lapsi kärsii jos äiti on töissä",fig.asp = 1, out.width = "70%",fig.align = "center"}
+
+# Piirretään Suomen riviprofiilista janat sarakepisteisiin - barysentinen keskiarvo
+# Rivipisteet pääkoordinaatteina (principal coordinates)
+
+simpleCA1.rpc <- simpleCA1$rowcoord %*% diag(simpleCA1$sv)
+
+# X11()
+par(cex = 1)
+plot(simpleCA1, map = "rowprincipal", 
+     arrows = c(FALSE,FALSE),
+     # main = "barysentrinen periaate - asymmetrinen kartta 2",
+     sub = "Suomen profiili sarakkeiden barysentrisenä keskiarvona")
+     segments(simpleCA1.rpc[5,1],simpleCA1.rpc[5,2],simpleCA1$colcoord[, 1],
+         simpleCA1$colcoord[, 2], col = "pink")
+
+```
+
+**edit** Perustelu kuvalle: barysentrinen periaate on kuvien tulkinnassa ydinasioita.
+
+**Akseleiden tulkinta** tai tulkinnan varmistaminen akseli kerrallaan. Ortogonaaliset
+projektion piirretty käsin, havainnollistetaan periaatetta.
+
+```{r G1_3_asymmtulk2, echo = FALSE, out.width='90%', fig.align='center'}
+knitr::include_graphics('img/simpleCAasymmTulk2.png')
+```
+
+
+## Kontribuutiot kartalla
+
+Kaksi kuvaa, joissa pisteiden massat on kuvattu pisteiden koolla (ei juuri eroa
+huomaa) ja rivi- ja sarekepisteiden kontribuutiot värisävyllä. Mitä tummempi sitä
+suurempi kontribuutio. Absoluuttiset ja suhteelliset kontribuutiot.
+
+**edit** Pitäisikö kuvissa olla aina toinen absolute, toinen relative? Selvitetään
+teorialiittessä?
+
+Toinen kuva riittää, tässä esitellään kartta jossa on eniten informaatiota.
+
+**Absoluuttiset kontribuutiot** Oletuspistekoko ok, mutta html- ja pdf-tulostus
+on erilainen!
+
+```{r G1-3asymmContrib1,echo = FALSE,fig.cap= "Q1b: lapsi kärsii jos äiti on töissä",fig.asp = 1, out.width = "90%",fig.align = "center"}
+#par(cex = 0.6)
+plot(simpleCA1, map = "rowgreen",
+     contrib = c("absolute", "absolute"),
+     mass = c(TRUE,TRUE),
+     arrows = c(FALSE, TRUE),
+     main = "kontribuutiokartta 1",
+     sub = "sarakevektorin ja rivipisteiden värin tummuus = absoluuttinen kontribuutio")
+
+```
+
+
+**Suhteelliset kontribuutiot**  Oletuspistekoko ok.
+
+```{r G1-3asymmContrib2,echo = FALSE,fig.cap= "Q1b: lapsi kärsii jos äiti on töissä",fig.asp = 1, out.width = "90%",fig.align = "center"}
+
+#par(cex = 0.7)
+plot(simpleCA1, map = "rowgreen",
+     contrib = c("relative", "relative"),
+     mass = c(TRUE,TRUE),
+     arrows = c(FALSE, TRUE),
+     main = "kontribuutiokartta 2",
+     sub = "sarakevektorin ja pisteen värin tummuus = suhteellinen kontribuutio")
+
+```
+
+
+## Massat
+
+**edit3** Onko vakioitujen massojen kartta liian aikaisin? Tämä ei ole pääasia, vaan selvennys.
+Miksi tässä? Perusteltava, miksi en vakioi massoja maille, sukupuolille jne. (a)
+perusteltua kun tarkempi tutkimusongelma, esim. erottelut maiden ja sukupuolten
+välillä. Varianssianalyysin tapaan varianssin hajoittaminen ryhmisen sisäiseen ja
+ryhmien väliseen. Kts. teorialiitteestä esim. ABBA. (b) CA "perusmuodossa", massa
+on yksi kolmesta tärkeimmästä käsitteestä. (c) on aika työlästä!
+
+**edit4** Galkussa verrattu molempien painotusten khii2-etäisyyksiä, jos tarpeen
+niin teoria-liitteeseen.
+
 
 ```{r simpleCA3map1, echo=FALSE, fig.cap= "Q1b: lapsi kärsii jos äiti on töissä",fig.asp = 1, out.width = "90%",fig.align = "center"}
 
@@ -424,3 +560,5 @@ main = "symmetrinen kartta 2 ",
 sub = "Maidet massat vakioitu (riviprofiilidata)")
 
 ```
+
+Ei kovin isoja eroja, tässä datassa.

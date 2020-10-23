@@ -94,5 +94,6 @@ peruskäsittelyn R-koodilohkot. Versionumero 0.08. PDF-tulostus ei toimi.
 
  **23.20.2020** Ikäluokat syntmävuosina, ca-numeerisia tuloksia tekstiin.
 
- **23.10.2020 Versio 0.20** Karkea sisällysluettelo, hieman **k**appaleiden sisältöjä
- ja muistiinpanoja rakenteesta.
+ **23.10.2020 Versio 0.20** Karkea sisällysluettelo, hieman **k**appaleiden sisältöjä ja muistiinpanoja rakenteesta.
+
+ **23.10.2020 Versio 0.30**  Karttoja yksinkertaisen ca-esimerkin loppuun asti. Muutettiin pdf-dokumentin nimi JH_ca.pdf -> JH_capaper.

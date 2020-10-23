@@ -150,6 +150,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä--kärsiikö-lapsi"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä -kärsiikö lapsi?</a></li>
 <li class="chapter" data-level="3.2" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#kahden-muuttujan-frekvenssitaulukon-analyysi"><i class="fa fa-check"></i><b>3.2</b> Kahden muuttujan frekvenssitaulukon analyysi</a></li>
 <li class="chapter" data-level="3.3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#ca---esimerkki"><i class="fa fa-check"></i><b>3.3</b> CA - esimerkki</a></li>
+<li class="chapter" data-level="3.4" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#korrespondenssianalyysin-peruskäsitteet"><i class="fa fa-check"></i><b>3.4</b> Korrespondenssianalyysin peruskäsitteet</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#asymmetrinen-kartta-ja-ideaalipisteet"><i class="fa fa-check"></i><b>3.4.1</b> Asymmetrinen kartta ja ideaalipisteet</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#kontribuutiot-kartalla"><i class="fa fa-check"></i><b>3.5</b> Kontribuutiot kartalla</a></li>
+<li class="chapter" data-level="3.6" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#massat"><i class="fa fa-check"></i><b>3.6</b> Massat</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><i class="fa fa-check"></i><b>4</b> Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet</a><ul>
 <li class="chapter" data-level="4.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#täydentävät-pisteet-supplementary-points"><i class="fa fa-check"></i><b>4.1</b> Täydentävät pisteet (supplementary points)</a></li>
@@ -199,7 +204,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="maat-ja-muuttujat" class="section level3">
 <h3><span class="header-section-number">2.1.1</span> Maat ja muuttujat</h3>
 <p><strong>maat luettu, sitten muuttujat</strong></p>
-<p>Perusmuunnokset - viisi koodilohkoa</p>
+<p>Substanssimuuttujat (9). Jos sukupuoli tai ikä puuttuu, havainto jätetään pois
+(32969-32823 = 146), maa-muuttujassa ei puuttuvia tietoja ole. Lisäksi kuusi
+taustamuuttujaa ( “SEX”,“AGE”,“DEGREE”, “MAINSTAT”, “TOPBOT”, “HHCHILDR”,
+“MARITAL”, “URBRURAL”).</p>
+<p><strong>Perusmuunnokset - viisi koodilohkoa</strong></p>
 <p>Vaihe 1</p>
 <p>Vaihe 2
 Vaihe 2.1</p>
@@ -352,15 +361,15 @@ Kuva 2.1: Suomenkielinen lomake
 </p>
 </div>
 <p><strong>taustamuuttujat</strong></p>
-<p><strong>k</strong> maa, sukupuoli, haastateltavan ikä, koulutustaso, “virallinen” juridinen parisuhdestatus,
-pääasiallinen toimi (töissä, eläkkeellä jne), lasten lukumäärä perheessä ja asuinpaikka (maaseutu,
-suurkaupunki jne.), oma arvio sosiaalisesta asemasta (1-10). Kysymyksiä, tiedot tosin
-kerätty eri tavoin eri maissa.</p>
+<p><strong>k</strong> maa, sukupuoli, haastateltavan ikä, koulutustaso, “virallinen” juridinen
+parisuhdestatus, pääasiallinen toimi (töissä, eläkkeellä jne), lasten lukumäärä
+perheessä ja asuinpaikka (maaseutu,suurkaupunki jne.), oma arvio sosiaalisesta
+asemasta (1-10). Kysymyksiä, tiedot tosin kerätty eri tavoin eri maissa.</p>
 <p>Vastaajan ikä</p>
 <p><strong>K</strong> Aineistossa mukana puuttuvat vastaukset, puuttuvia ei ole kolmessa muuttujassa
 (maa, ikä ja sukupuoli). Muutamilla havainnoilla puuttui tieto iästä tai sukupuolesta,
 ja ne rajattiin pois.</p>
-<p>Kuvataan tarkemmin, kun käytetään.</p>
+<p>Kuvataan tarkemmin, kun käytetään luvussa 7.</p>
 <p><strong>Miten aineistoa on käytetty?</strong>.</p>
 <p><strong>Korrespondenssianalyysin esimerkkiaineistona</strong></p>
 <p>Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa (Helsinki 2017 MCA, viite Moodleen?) ja kahdessa oppikirjassa (<span class="citation">(Greenacre <a href="lähteet-1.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span>, <span class="citation">(M. J. Greenacre <a href="lähteet-1.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>).ISSP - aineisto vuodelta 1989 on käytetty myös neljän “singuaariarvohajoitelmaan perustuvan menetelmän” vertailuun<span class="citation">(Greenacre <a href="lähteet-1.html#ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76" role="doc-biblioref">2003</a>)</span>.</p>
@@ -433,7 +442,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["JH_ca.pdf"],
+"download": ["JH_capaper.pdf"],
 "toc": {
 "collapse": "subsection"
 }
