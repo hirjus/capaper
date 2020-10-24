@@ -50,10 +50,10 @@ Taulukko, Saksan ja Belgian alueet ja maaprofiilit.
 ```{r BeDealueTable1, echo=TRUE, eval=FALSE, include=FALSE}
 ## riviprofiilitaulukko aiheuttaa virheen PDF-tulostuksessa
 
-BeDealueTable <- ISSP2012esim1.dat %>% tableX(maa3, Q1b, type = "row_perc")
+#BeDealueTable <- ISSP2012esim1.dat %>% tableX(maa3, Q1b, type = "row_perc")
 
-knitr::kable(BeDealueTable , digits = 2, booktabs = TRUE,
-             caption = "Q1b vastaukset, Saksan ja Belgian alueet")
+#knitr::kable(BeDealueTable , digits = 2, booktabs = TRUE,
+#             caption = "Q1b vastaukset, Saksan ja Belgian alueet")
 
 # Q1b vastaukset, Saksan ja Belgian alueet
 # S	s	?	e	E	Total

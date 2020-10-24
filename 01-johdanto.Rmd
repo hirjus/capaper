@@ -1,18 +1,14 @@
 # Johdanto
 
-**xyz** Kirjoitetaan disposition pohjalta, keräillään kaikki yleiset
+**edit** Kirjoitetaan disposition pohjalta, keräillään kaikki yleiset
 ca-luonnehdinnat yhteen paikkaan eli johdantoon.
 
 **Mahdollisia lisäyksiä**
 
-1. Lyhyt esitys CA:n historiasta (vai omaksi luvuksi, luku 2)?
 
-2. Käytetyt ohjelmistot, tekninen ympäristö ml. bookdown-asetukset.
-Ehkä tekniseen liitteeseen?
+1. Tavoitteet, sisältö, rajaukset (jota voi myöhemmin täydentää)
 
-3. Tavoitteet, sisältö, rajaukset (jota voi myöhemmin täydentää)
-
-4. Muutamat puutteet, onko kerrottava tässä?
+2. Muutamat puutteet/rajaukset, onko kerrottava tässä?
 
 - data: ei huomioida sitä, että otoskoot vaihtelevat aika paljon eli
 "maapainot" eri suuruisia
@@ -26,9 +22,9 @@ mainittava data-osuudessa)
 historiasta.
 
 
-## Tutkielman tavoite (tutkimusongelma?)
+## Tutkielman tavoite)
 
-**zxy** Tässä kerrotaan, miksi tämä työ on kirjoitettu. Esitellään menetelmä
+**k** Tässä kerrotaan, miksi tämä työ on kirjoitettu. Esitellään menetelmä
 käyttämällä oikeaa dataa. Täsmällisempi esitys sirotellaan esimerkkiaineiston
 analyysin tulosten esittelyn lomaan. Pitäisikö tässä tuoda esille ns. "ranskalaisen
 koulukunnan" matemaattisen perusteiden korostus, ja data-analyysin filosofia?
@@ -69,7 +65,7 @@ Saksan ja Belgian datan jakaminen on hyvä esimerkki, on "osattava tarttua"
 menetelmän tulosmatriiseihin.
 
 
-**zxy** esitystavan perustelu
+**k** esitystavan perustelu
 
 - kenelle kirjoitettu? Menetelmästä kiinnostuneelle tilastotieteen ja data-analyysin
 perusteet tuntevalle. R-ohjelmisto ei ole rajoitus, SPSS ja SAS sopivat
@@ -105,6 +101,8 @@ ja [@RefWorks:doc:5a857a44e4b0ed2d44664da4].
 
 ### Käytetyt ohjelmistot
 
+**edit** Hyvin lyhyesti, lause tai pari. On oma liite tekneisestä ympäristöstä.
+
 **zxy** R, ca-paketti. löytyy myös muita paketteja.
 Rmarkdown[@RefWorks:doc:5b6b346fe4b0c619b11b8a3e], ja
 bookdown ([@RefWorks:doc:5b6b36dde4b09b7ec442bf8b] ja toinen viite [@R-bookdown]).
@@ -122,4 +120,27 @@ Tarkemmin liittessä.
 
 ## Korrespondenssianalyysin historiaa
 
-**zxy** Tiivis esitys lähteineen. Ehkä asiaan palataan kun itse menetelmä on esitelty?
+**k1** Tiivis esitys lähteineen. Historian voi aloittaa jo pari vuosikymmentä
+vallineesta tilanteesta. CA on yksi deskriptiivinen (ei-tn-teoriaan perustuvaa
+päättelyä) menetelmä muiden joukossa, eristyneisyys murtui hitaasti 80-luvun aikana.
+
+**k2** Historialla on vain historiallista merkitystä. Kiinnostava juttu, mutta
+aika laaja ja lavea.
+
+**k3** Peruskäsitys monessa lähteessä (vihreä kirja, GDA-kirja jne.): synty ja
+kukoistus Ranskassa, loistava eristys (splendid isolation), pikku hiljaa hyväksyntä.
+
+Syiksi esitetään kaksoismuuria: abstrakti matemaattinen ("bourbakilainen") perusta
+ja esitystapa ja kieli.
+
+**k4** Mitä historiasta on hyvä tietää.
+1. Matemaattinen perusta on "tosi", mutta onko menetelmän soveltaminen riippuvainen
+siitä? Ei ole ollut.
+
+2. Ristiriita data-analyyttisen/kuvailevan jne. lähestymistavan ja tilastollisen
+mallintamisen välillä - on läsnä edelleen mutta turha korostaa. Myös tilastollisen
+mallintamisen ja päättelyn sisällä on kiistoja, erilaisia näkemysiä ja kuiluja.
+
+3. "Esoteerinen tieteenfilosofia"? Kiinnostava aihe, ehkä. Murgtag-sitaatti.
+
+

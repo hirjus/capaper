@@ -132,7 +132,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Alkutoimia</a></li>
 <li class="chapter" data-level="1" data-path="johdanto.html"><a href="johdanto.html"><i class="fa fa-check"></i><b>1</b> Johdanto</a><ul>
-<li class="chapter" data-level="1.1" data-path="johdanto.html"><a href="johdanto.html#tutkielman-tavoite-tutkimusongelma"><i class="fa fa-check"></i><b>1.1</b> Tutkielman tavoite (tutkimusongelma?)</a></li>
+<li class="chapter" data-level="1.1" data-path="johdanto.html"><a href="johdanto.html#tutkielman-tavoite"><i class="fa fa-check"></i><b>1.1</b> Tutkielman tavoite)</a></li>
 <li class="chapter" data-level="1.2" data-path="johdanto.html"><a href="johdanto.html#tärkeimmät-lähteet-ja-ohjelmistot"><i class="fa fa-check"></i><b>1.2</b> Tärkeimmät lähteet ja ohjelmistot</a><ul>
 <li class="chapter" data-level="1.2.1" data-path="johdanto.html"><a href="johdanto.html#lähteet"><i class="fa fa-check"></i><b>1.2.1</b> Lähteet</a></li>
 <li class="chapter" data-level="1.2.2" data-path="johdanto.html"><a href="johdanto.html#käytetyt-ohjelmistot"><i class="fa fa-check"></i><b>1.2.2</b> Käytetyt ohjelmistot</a></li>
@@ -165,7 +165,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#esimerkki-3d--kartasta---saksan-ja-belgian-dimensiot"><i class="fa fa-check"></i><b>4.4</b> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><i class="fa fa-check"></i><b>5</b> Yksinkertaisen korrespondenssianalyysin laajennuksia 2 - yhteisvaikutusmuuttujat</a><ul>
-<li class="chapter" data-level="5.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#ikä-ja-sukupuoli"><i class="fa fa-check"></i><b>5.1</b> Ikä ja sukupuoli</a></li>
+<li class="chapter" data-level="5.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#ikä-ja-sukupuoli"><i class="fa fa-check"></i><b>5.1</b> Ikä ja sukupuoli</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#ikä-ja-sukupuoli-1"><i class="fa fa-check"></i><b>5.1.1</b> Ikä ja sukupuoli</a></li>
+</ul></li>
 <li class="chapter" data-level="5.2" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#ikä-sukupuoli-ja-maa"><i class="fa fa-check"></i><b>5.2</b> Ikä, sukupuoli ja maa</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-3-osajoukon-ca.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-3-osajoukon-ca.html"><i class="fa fa-check"></i><b>6</b> Yksinkertaisen korrespondenssianalyysin laajennuksia 3 - osajoukon CA</a></li>
@@ -212,25 +214,6 @@ kartan avulla perustellaan, miten pisteitä voidaaan lisätä.</p>
 <h2><span class="header-section-number">4.2</span> Saksan ja Belgian alueet</h2>
 <p><strong>Data ja taulukko aluejaosta</strong></p>
 <p>Taulukko, Saksan ja Belgian alueet ja maaprofiilit.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-1"></a><span class="co">## riviprofiilitaulukko aiheuttaa virheen PDF-tulostuksessa</span></span>
-<span id="cb2-2"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-2"></a></span>
-<span id="cb2-3"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-3"></a>BeDealueTable &lt;-<span class="st"> </span>ISSP2012esim1.dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">tableX</span>(maa3, Q1b, <span class="dt">type =</span> <span class="st">&quot;row_perc&quot;</span>)</span>
-<span id="cb2-4"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-4"></a></span>
-<span id="cb2-5"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-5"></a>knitr<span class="op">::</span><span class="kw">kable</span>(BeDealueTable , <span class="dt">digits =</span> <span class="dv">2</span>, <span class="dt">booktabs =</span> <span class="ot">TRUE</span>,</span>
-<span id="cb2-6"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-6"></a>             <span class="dt">caption =</span> <span class="st">&quot;Q1b vastaukset, Saksan ja Belgian alueet&quot;</span>)</span>
-<span id="cb2-7"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-7"></a></span>
-<span id="cb2-8"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-8"></a><span class="co"># Q1b vastaukset, Saksan ja Belgian alueet</span></span>
-<span id="cb2-9"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-9"></a><span class="co"># S s   ?   e   E   Total</span></span>
-<span id="cb2-10"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-10"></a><span class="co"># bF    5.04    23.81   25.89   30.83   14.43   100.00</span></span>
-<span id="cb2-11"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-11"></a><span class="co"># bW    10.82   21.02   18.57   24.08   25.51   100.00</span></span>
-<span id="cb2-12"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-12"></a><span class="co"># bB    17.03   20.94   16.63   23.87   21.53   100.00</span></span>
-<span id="cb2-13"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-13"></a><span class="co"># BG    12.81   42.89   22.26   20.63   1.41    100.00</span></span>
-<span id="cb2-14"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-14"></a><span class="co"># dW    11.40   26.82   11.83   32.13   17.82   100.00</span></span>
-<span id="cb2-15"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-15"></a><span class="co"># dE    5.85    11.33   10.97   29.80   42.05   100.00</span></span>
-<span id="cb2-16"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-16"></a><span class="co"># DK    5.04    17.15   10.95   16.71   50.14   100.00</span></span>
-<span id="cb2-17"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-17"></a><span class="co"># FI    4.23    16.94   13.42   38.11   27.30   100.00</span></span>
-<span id="cb2-18"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-18"></a><span class="co"># HU    21.97   28.89   22.57   19.06   7.52    100.00</span></span>
-<span id="cb2-19"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-19"></a><span class="co"># All   9.95    23.76   16.79   26.10   23.41   100.00</span></span></code></pre></div>
 <p><strong>edit</strong> Riviprofiilitaulukko, kuvataan alueiden eroja. CA-analyysi kuitenkin koko
 aineiston frekfvenssitaululla, jossa rivien massat eivät ole samat.</p>
 <div id="symmetrinen-kartta" class="section level3">
@@ -260,7 +243,7 @@ hieman lähemmäs origoa.</p>
 <p><strong>edit</strong> Teorialiitteessä selitetään tarkemmin numeeristen tulosten tausta, tässä
 apuneuvo (a) kuvan tulkinnan varmistamiseen ja (b) approksimaation laadun
 tarkistamiseen.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb3-1"></a>suppointCA2</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-1"></a>suppointCA2</span></code></pre></div>
 <pre><code>## 
 ##  Principal inertias (eigenvalues):
 ##            1        2        3        4       
@@ -291,7 +274,7 @@ tarkistamiseen.</p>
 ## Dim. 1  1.073310 0.787257  0.649789 -0.029859 -1.688108
 ## Dim. 2  1.835133 0.290929 -0.119934 -1.451548  0.629110</code></pre>
 <p><strong>k</strong> Lyhyt selostus - nämä aika selkeitä</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb5-1"></a><span class="kw">summary</span>(suppointCA2)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb4-1"></a><span class="kw">summary</span>(suppointCA2)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -333,10 +316,10 @@ kartat ovat sellaisia kuin ovat.</p>
 <h2><span class="header-section-number">4.4</span> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</h2>
 <p><strong>k</strong> Ei kovin hyviä kuvia, mutta periaate on tärkeä. Kartta on approksimaatio,
 pitää päättää milloin se on tarpeeksi hyvä. Tai mille pisteille hyvä, mille huonompi.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb7-1"></a>suppointCA3 &lt;-<span class="st"> </span><span class="kw">ca</span>(<span class="op">~</span>maa3 <span class="op">+</span><span class="st"> </span>Q1b,ISSP2012esim1.dat, <span class="dt">nd =</span> <span class="dv">3</span>)</span>
-<span id="cb7-2"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb7-2"></a></span>
-<span id="cb7-3"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb7-3"></a><span class="co"># summary(suppointCA3)</span></span>
-<span id="cb7-4"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb7-4"></a><span class="co"># Error in rsc %*% diag(sv) : non-conformable arguments</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb6-1"></a>suppointCA3 &lt;-<span class="st"> </span><span class="kw">ca</span>(<span class="op">~</span>maa3 <span class="op">+</span><span class="st"> </span>Q1b,ISSP2012esim1.dat, <span class="dt">nd =</span> <span class="dv">3</span>)</span>
+<span id="cb6-2"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb6-2"></a></span>
+<span id="cb6-3"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb6-3"></a><span class="co"># summary(suppointCA3)</span></span>
+<span id="cb6-4"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb6-4"></a><span class="co"># Error in rsc %*% diag(sv) : non-conformable arguments</span></span></code></pre></div>
 <strong>Kolme karttaa</strong>
 <div class="figure" style="text-align: center"><span id="fig:suppointCA3map1"></span>
 <img src="JH_capaper_files/figure-html/suppointCA3map1-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />

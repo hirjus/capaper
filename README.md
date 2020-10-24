@@ -99,6 +99,9 @@ peruskäsittelyn R-koodilohkot. Versionumero 0.08. PDF-tulostus ei toimi.
  **23.10.2020 Versio 0.30**  Karttoja yksinkertaisen ca-esimerkin loppuun asti. Muutettiin pdf-dokumentin nimi JH_ca.pdf -> JH_capaper.
 
  **24.10.2020** Belgian ja saksan jako, symmetrinen ja kontribuutiokartta. Uusi
-  bib-tiedosto (RefWorks-lähteet). PDF-tulostus kaatuu aluejako-taulukkoon,
-	"unused argument". CA-numeeriset tulokset ja kolmiulotteinen ratkaisu.
-	summary() - funktio ei toimi 3d-ca-objektilla.
+  bib-tiedosto (RefWorks-lähteet). PDF-tulostus kaatuu aluejako-taulukkoon tai
+	sitä edeltävään koodilohkoon. CA-numeeriset tulokset ja kolmiulotteinen ratkaisu.
+	summary() - funktio ei toimi 3d-ca-objektilla jostain syystä.
+
+	Ikä-sukupuoli ja ikä-sukupuoli-maa yhdysvaikutusmuuttujat luotu, molemmilla
+	yksi kartta.

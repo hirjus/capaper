@@ -1,6 +1,6 @@
 # Data
 
-**edit** Teksti vielä ihan muistiinpanoja.
+**edit** Teksti vielä vanhoja muistiinpanoja.
 
 ## Datan luku ja perusmuokkaukset
 

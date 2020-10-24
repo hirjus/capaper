@@ -3,27 +3,204 @@
 **edit** Yksinkertaisin tapa ottaa muita muuttujia mukaan analyysiin.
 
 **k** Kaksi yhteisvaikutusmuuttujaan (MG "interactive coding"), sukupuoli ja
- ikäluokka/kohortti
+ ikäluokka/kohortti ja tämän muuttujan yhdistäminen maa-muuttujaan.
 
 **k** Poikkileikkausaineistossa vastaajaan ikä kuvaa sekä ikää että mitä erilaisimipia
 sukupolvivaikutuksia. Ei voi oikein erottaa toisistaan. Vastaajat ovat elämänsä eri
 vaiheissa kohdanneet lukuisia rajuja muutoksia toisen maailmansodan jälkeen. Nähtiin
 jo edellisessä jaksossa!
 
-**k** Poikkileikkausaineistossa vastaajan ikä kertoo ikäluokan (kohortin), vastaajat ovat
+Poikkileikkausaineistossa vastaajan ikä kertoo ikäluokan (kohortin), vastaajat ovat
 kokeen esim. kaksi mullistusten vuotta elämänsä eri vaiheissa. Kaksin nuorinta ikäluokka
 on ollut 1990 alle 14-vuotiaita ja vanhin ikäluokka yli 44-vuotiaita. Finannsikriisin
 vuonna 2008 toiseksi nuorin ikäluokka on ollut 22-31 vuotiaita, ja kaksi vanhinta
 yli 51-vuotiaita.
+
 
 ## Ikä ja sukupuoli
 
 **edit** Lyhyesti tämä, aineisto aggregoitu ikä- ja sukupuoliryhmiin.
 **edit** Voi myös lisätä täydentävinä pisteinä "peruskarttaan", ei tehdä.
 
+Ikäluokat ovat (1=15-25, 2 =26-35, 3=36-45, 4=46-55, 5=56-65, 6= 66 tai vanhempi).
+Vuorovaikutusmuuttuja ga koodataan f1,..., f6 ja m1,...,m6. Muuttujien nimet
+kannattaa pitää mahdollisimman lyhyinä.
+```{r CAlaaj2-4agecat, echo=FALSE}
+# Iän ja sukupuolen vuorovaikutusmuuttujia
+#
+# Uusi R-data: ISSP2012esim1b.dat2esim1b)
+#
+# Ikäluokat age_cat
+# AGE 1=15-25, 2 =26-35, 3=36-45, 4=46-55, 5=56-65, 6= 66 and older
+#
+# summary(ISSP2012esim1.dat$AGE)
+# hist(ISSP2012esim1.dat$ika)
+
+ISSP2012esim1b.dat <- mutate(ISSP2012esim1.dat,
+                      age_cat = ifelse(ika %in% 15:25, "1",
+                        ifelse(ika %in% 26:35, "2",
+                        ifelse(ika %in% 36:45, "3",
+                        ifelse(ika %in% 46:55, "4",
+                        ifelse(ika %in% 56:65, "5", "6"))))))
+
+
+ISSP2012esim1b.dat <- ISSP2012esim1b.dat %>%  
+        mutate(age_cat = as_factor(age_cat)) # järjestys omituinen!(4.2.20)
+
+# Tarkistuksia
+# str(ISSP2012esim2.dat$age_cat)
+# levels(ISSP2012esim2.dat$age_cat)
+# ISSP2012esim2.dat$age_cat %>% summary()
+
+# Järjestetään ikäluokat uudelleen
+
+ISSP2012esim1b.dat <- ISSP2012esim1b.dat %>%
+        mutate(age_cat =
+                fct_relevel(age_cat,
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "5",
+                            "6")
+               )
+
+# Tarkistuksia
+
+# Iso taulukko, voi tarkistaa että muunnos ok.
+# test6 %>% tableX(AGE, age_cat, type = "count")
+# taulu42 <- ISSP2012esim2.dat %>% tableX(maa,age_cat,type = "count")
+# kable(taulu42,digits = 2, caption = "Ikäluokka age_cat")
+#
+
+# Taulukoita (4.2.20)
+
+#ISSP2012esim1b.dat %>%
+#    tableX(maa,age_cat,type = "count") %>%
+#    kable(digits = 2, caption = "Ikäluokka age_cat")
+#
+#ISSP2012esim1b.dat %>%
+#    tableX(maa,age_cat,type = "row_perc") %>%
+#    kable(digits = 2, caption = "age_cat: suhteelliset frekvenssit")
+
+```
+
+Ikäjäkauma painottuu kaikissa maissa jonkinverran vanhempiin ikäluokkiin.
+Nuorempien ikäluokkien osuus on (alle 26-vuotiaat ja alle 26-35 - vuotiaat)
+varsinkin Bulgariassa (BG) ja Unkarissa (HU) pieni.
+
+```{r CAlaaj2-ga, echo=FALSE}
+# ga - ikäluokka ja sukupuoli
+
+ISSP2012esim1b.dat <- mutate(ISSP2012esim1b.dat,
+                        ga = case_when((age_cat == "1")&(sp == "m") ~ "m1",
+                                       (age_cat == "2")&(sp == "m") ~ "m2",
+                                       (age_cat == "3")&(sp == "m") ~ "m3",
+                                       (age_cat == "4")&(sp == "m") ~ "m4",
+                                       (age_cat == "5")&(sp == "m") ~ "m5",
+                                       (age_cat == "6")&(sp == "m") ~ "m6",
+                                       (age_cat == "1")&(sp == "f") ~ "f1",
+                                       (age_cat == "2")&(sp == "f") ~ "f2",
+                                       (age_cat == "3")&(sp == "f") ~ "f3",
+                                       (age_cat == "4")&(sp == "f") ~ "f4",
+                                       (age_cat == "4")&(sp == "f") ~ "f4",
+                                       (age_cat == "5")&(sp == "f") ~ "f5",
+                                       (age_cat == "6")&(sp == "f") ~ "f6",
+                                       TRUE ~ "missing"
+                                  ))
+
+#ISSP2012esim1.dat %>% tableX(ga,ga2) # tarkistus
+# muuttujien tarkistuksia 19.9.2018
+# str(ISSP2012esim1b.dat$ga) # chr-muuttuja, mutta toimii (4.2.20)
+
+#Tulostetaan taulukkoina ga - muuttuja
+
+#ISSP2012esim1b.dat %>% tableX(maa,ga,type = "count") %>%
+#kable(digits = 2, caption = "Ikäluokka ja sukupuoli ga")
+
+#ISSP2012esim1b.dat %>% tableX(maa,ga,type = "row_perc") %>%
+#kable(digits = 2, caption = "ga: suhteelliset frekvenssit")
+
+
+```
+
+### Ikä ja sukupuoli
+
+**k** Ikä- ja sukupuoliryhmät yli kaikkien maiden; profiilit keskiarvoja. Ei kovin
+pätevää analyysiä, yleiskuva muuttujasta.
+
+```{r gaCA1, echo=FALSE}
+gaTestCA1 <- ca(~ga + Q1b,ISSP2012esim1b.dat)
+
+```
+
+```{r gaCA1map,echo=FALSE  ,fig.cap = "Q1b: ikäluokka ja sukupuoli",fig.asp = 1, out.width = "90%",fig.align = "center"}
+
+# Maapisteiden pääkoordinaatit janojen piirtämiseen
+
+gaTestCA1.rpc <- gaTestCA1$rowcoord %*% diag(gaTestCA1$sv)
+
+# par(cex = 0.6)
+plot(gaTestCA1, main = "symmetrinen kartta, m = mies, f = nainen",
+     sub = "1=15-25, 2 =26-35, 3=36-45, 4=46-55, 5=56-65, 6= 66 tai vanhempi ")
+# naiset
+lines(gaTestCA1.rpc[1:6,1],gaTestCA1.rpc[1:6,2])
+#miehet
+lines(gaTestCA1.rpc[7:12,1],gaTestCA1.rpc[7:12,2], col = "red")
+
+summary(gaTestCA1)
+
+```
+**k** Kommentteja Galkusta:
+Aika yksiuloitteinen (87 prosenttia ensimmäisellä dimensiolla!). Data on
+"as it is", ei ole vakioitu ga-luokkien kokoja (massat max(f4 101), min (m1 57)).
+
+Miten pitäisi tulkita "oikealle kaatunut U - muoto" miehillä ja naisilla?
+Järjestys ei toimi, S s-sarakkeen vasemmalla puolella. Miehet konservatiivisempia,
+mutta maltillisempia? Nuorin ikäluokka on poikkeava. Epävarmoja tai maltillisesti
+e, sitten loikka vasemmalle ja sieltä konservatiiviseen suuntaa oikealle. Naisilla
+poikkeama f3 - f4. VAnhimmat ikäluokat tiukemmin konservatiivisa (f6, m6). Jos
+vertaa sukupuolten eroja samassa ikäluokassa, on aika samanlainen (miehet
+konservatiivisia, naiset liberaaleja). Naisista vain vanhin ikäluokka oikealla,
+miehistä nuorin ja kolme vanhinta.
+
+Tulkinnassa muistettava, että ikäluokat yli maiden. Voi verrata sekä
+edellisiin maa-vertailuihin että maan, ikäluokan ja sukupuolen yhteisvaikutusmuuttujan
+tuloksiin. MG tutkailee eri kysymyksellä tätä samaa asiaa, ja havaitsee että
+(a) maiden erot suuria ja sukupuolten pieniä (b) naiset liberaalimpia kuin miehet.
+** Viite?**
+
+Numeeriset tulokset: nuorimpien miesten (qlt 659) ja erityisesti
+keski-ikäisten miestén m3 (qlt 457) pisteet huonosti esitetty kartalla. Tulkitaan
+myös cor ja ctr, riveille ja sarakkeille.
+
+
 ## Ikä, sukupuoli ja maa
 
+```{r maaga1}
+ISSP2012esim1b.dat <- mutate(ISSP2012esim1b.dat,
+                             maaga = paste(maa, ga, sep = ""))
+
+# tarkistus, muunnos ok
+# ISSP2012esim1b.dat %>% tableX(maa, maaga)
+# head(ISSP2012esim2.dat)
+# str(ISSP2012esim2.dat)
+
+```
+
+
 **edit** Yksi vaikeaselkoinen kartta täynnä pisteitä, tihrustellaan.
+```{r maagaCAeka, echo=FALSE}
+maagaCA1 <- ca(~maaga + Q1b,ISSP2012esim1b.dat)
+```
+
+```{r maagaCA1map1,echo=FALSE, fig.cap = "Q1b: ikäluokka ja sukupuoli maittain",fig.asp = 1, out.width = "90%",fig.align = "center"}
+par(cex = 0.5)
+plot(maagaCA1, main = "symmetrinen kartta 1",
+                sub = "cex=0.5")
+
+```
+
 
 **edit** Stabiilius - teorialiitteessä laajemmin mutta tässä lyhyt vilkaisu.
 Taulukko alkaa harveta, jo edellä kerrottiin että aineisto painottuu kaikissa maissa
