@@ -100,4 +100,5 @@ peruskäsittelyn R-koodilohkot. Versionumero 0.08. PDF-tulostus ei toimi.
 
  **24.10.2020** Belgian ja saksan jako, symmetrinen ja kontribuutiokartta. Uusi
   bib-tiedosto (RefWorks-lähteet). PDF-tulostus kaatuu aluejako-taulukkoon,
-	"unused argument".
+	"unused argument". CA-numeeriset tulokset ja kolmiulotteinen ratkaisu.
+	summary() - funktio ei toimi 3d-ca-objektilla.
