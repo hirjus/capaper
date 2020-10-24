@@ -1,6 +1,8 @@
 # Data
 
-## Datan luku ja perusmuokkaukset: testailua
+**edit** Teksti vielä ihan muistiinpanoja.
+
+## Datan luku ja perusmuokkaukset
 
 ### Maat ja muuttujat
 
@@ -958,7 +960,7 @@ seurantaraportti([RefWorks:doc:5b155e0ce4b044dfd738458f]).
 **viitteet pois- ehkä tekstiin linkkeinä?**
 
 
-**ks** ISSP (International social survey) on tehnyt laajoja kansainvälisiä kyselytutkimuksia eri teemoista. Yksi teemoista on perhe ja muuttuvat (sosiaalisesti määräytyvät) sukupuoliroolit [@RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a].
+**k** ISSP (International social survey) on tehnyt laajoja kansainvälisiä kyselytutkimuksia eri teemoista. Yksi teemoista on perhe ja muuttuvat (sosiaalisesti määräytyvät) sukupuoliroolit [@RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a].
 
 **zxy** Miksi data on kiinnostava sisällöllisesti? Viite Kantola (HS). Lisäksi laadukas, usealta vuodelta, tarkasti dokumentoitu.
 

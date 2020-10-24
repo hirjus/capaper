@@ -140,7 +140,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3" data-path="johdanto.html"><a href="johdanto.html#korrespondenssianalyysin-historiaa"><i class="fa fa-check"></i><b>1.3</b> Korrespondenssianalyysin historiaa</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Data</a><ul>
-<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#datan-luku-ja-perusmuokkaukset-testailua"><i class="fa fa-check"></i><b>2.1</b> Datan luku ja perusmuokkaukset: testailua</a><ul>
+<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#datan-luku-ja-perusmuokkaukset"><i class="fa fa-check"></i><b>2.1</b> Datan luku ja perusmuokkaukset</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="data.html"><a href="data.html#maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.1.1</b> Maat ja muuttujat</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="data.html"><a href="data.html#aineiston-kuvailu-tietosisältö"><i class="fa fa-check"></i><b>2.2</b> Aineiston kuvailu (tietosisältö)</a></li>
@@ -159,8 +159,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><i class="fa fa-check"></i><b>4</b> Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet</a><ul>
 <li class="chapter" data-level="4.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#täydentävät-pisteet-supplementary-points"><i class="fa fa-check"></i><b>4.1</b> Täydentävät pisteet (supplementary points)</a></li>
 <li class="chapter" data-level="4.2" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#saksan-ja-belgian-alueet"><i class="fa fa-check"></i><b>4.2</b> Saksan ja Belgian alueet</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#data-ja-taulukko-aluejaosta"><i class="fa fa-check"></i><b>4.2.1</b> Data ja taulukko aluejaosta</a></li>
-<li class="chapter" data-level="4.2.2" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#symmetrinen-kartta"><i class="fa fa-check"></i><b>4.2.2</b> Symmetrinen kartta</a></li>
+<li class="chapter" data-level="4.2.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#symmetrinen-kartta"><i class="fa fa-check"></i><b>4.2.1</b> Symmetrinen kartta</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#can-numeeriset-tulokset"><i class="fa fa-check"></i><b>4.3</b> CA:n numeeriset tulokset</a></li>
 </ul></li>
@@ -1564,11 +1563,58 @@ Kuva 7.1: Esimerkki suomenkielisestä lomakkeesta
 <span id="cb3-1346"><a href="liitteet.html#cb3-1346"></a><span class="dt">main =</span> <span class="st">&quot;symmetrinen kartta 2 &quot;</span>,</span>
 <span id="cb3-1347"><a href="liitteet.html#cb3-1347"></a><span class="dt">sub =</span> <span class="st">&quot;Maidet massat vakioitu (riviprofiilidata)&quot;</span>)</span>
 <span id="cb3-1348"><a href="liitteet.html#cb3-1348"></a></span>
-<span id="cb3-1349"><a href="liitteet.html#cb3-1349"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/substvar_fi_Q1Q2.png&#39;</span>)</span>
-<span id="cb3-1350"><a href="liitteet.html#cb3-1350"></a><span class="co">#Testataan koodilohkojen listausta, näyttää toimivan mutta vaatii vielä säätämistä.</span></span>
-<span id="cb3-1351"><a href="liitteet.html#cb3-1351"></a><span class="co">#Ohje löytyi [Yihui Xienin blogista](https://yihui.name/en/2018/09/code-appendix/)</span></span>
-<span id="cb3-1352"><a href="liitteet.html#cb3-1352"></a><span class="co">#(luettu 26.10.2018).</span></span>
-<span id="cb3-1353"><a href="liitteet.html#cb3-1353"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/BookdownProc.png&#39;</span>)</span></code></pre></div>
+<span id="cb3-1349"><a href="liitteet.html#cb3-1349"></a><span class="co"># Belgian ja Saksan aluejako maa3-muuttujassa</span></span>
+<span id="cb3-1350"><a href="liitteet.html#cb3-1350"></a><span class="co"># str(ISSP2012esim1.dat$maa3)</span></span>
+<span id="cb3-1351"><a href="liitteet.html#cb3-1351"></a><span class="co"># attributes(ISSP2012esim1.dat$maa3)</span></span>
+<span id="cb3-1352"><a href="liitteet.html#cb3-1352"></a></span>
+<span id="cb3-1353"><a href="liitteet.html#cb3-1353"></a>suppoint1_df1 &lt;-<span class="st"> </span><span class="kw">select</span>(ISSP2012esim1.dat, maa3,Q1b)</span>
+<span id="cb3-1354"><a href="liitteet.html#cb3-1354"></a></span>
+<span id="cb3-1355"><a href="liitteet.html#cb3-1355"></a><span class="co"># Taulukoksi jotta saadaan lisättyä Saksan ja Belgian maa-profiilit täydentäviksi</span></span>
+<span id="cb3-1356"><a href="liitteet.html#cb3-1356"></a><span class="co"># pisteiksi.</span></span>
+<span id="cb3-1357"><a href="liitteet.html#cb3-1357"></a></span>
+<span id="cb3-1358"><a href="liitteet.html#cb3-1358"></a>suppoint1_tab1 &lt;-<span class="st"> </span><span class="kw">table</span>(suppoint1_df1<span class="op">$</span>maa3, suppoint1_df1<span class="op">$</span>Q1b)</span>
+<span id="cb3-1359"><a href="liitteet.html#cb3-1359"></a></span>
+<span id="cb3-1360"><a href="liitteet.html#cb3-1360"></a><span class="co"># Maaprofiilit</span></span>
+<span id="cb3-1361"><a href="liitteet.html#cb3-1361"></a>suppoint2_df &lt;-<span class="st"> </span><span class="kw">filter</span>(ISSP2012esim1.dat, (maa <span class="op">==</span><span class="st"> &quot;BE&quot;</span> <span class="op">|</span><span class="st"> </span>maa <span class="op">==</span><span class="st"> &quot;DE&quot;</span>))</span>
+<span id="cb3-1362"><a href="liitteet.html#cb3-1362"></a>suppoint2_df &lt;-<span class="st"> </span><span class="kw">select</span>(suppoint2_df, maa, Q1b)</span>
+<span id="cb3-1363"><a href="liitteet.html#cb3-1363"></a></span>
+<span id="cb3-1364"><a href="liitteet.html#cb3-1364"></a><span class="co">#glimpse(suppoint2_df)</span></span>
+<span id="cb3-1365"><a href="liitteet.html#cb3-1365"></a>suppoint2_tab1 &lt;-<span class="st"> </span><span class="kw">table</span>(suppoint2_df<span class="op">$</span>maa, suppoint2_df<span class="op">$</span>Q1b)</span>
+<span id="cb3-1366"><a href="liitteet.html#cb3-1366"></a>suppoint2_tab1 <span class="co"># tarkistus 1</span></span>
+<span id="cb3-1367"><a href="liitteet.html#cb3-1367"></a><span class="co"># Huom! tämä komento vain kerran - tai koko Rmd-tiedosto uudestaan (17.10.20)</span></span>
+<span id="cb3-1368"><a href="liitteet.html#cb3-1368"></a>suppoint2_tab1 &lt;-<span class="st"> </span>suppoint2_tab1[<span class="op">-</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">4</span><span class="op">:</span><span class="dv">6</span>) ,]</span>
+<span id="cb3-1369"><a href="liitteet.html#cb3-1369"></a><span class="co">#suppoint2_tab1 # tarkistus 2</span></span>
+<span id="cb3-1370"><a href="liitteet.html#cb3-1370"></a></span>
+<span id="cb3-1371"><a href="liitteet.html#cb3-1371"></a><span class="co"># lisätään rivit maa3-muuttujan taulukkoon</span></span>
+<span id="cb3-1372"><a href="liitteet.html#cb3-1372"></a>suppoint1_tab1 &lt;-<span class="st"> </span><span class="kw">rbind</span>(suppoint1_tab1, suppoint2_tab1)</span>
+<span id="cb3-1373"><a href="liitteet.html#cb3-1373"></a><span class="co">#suppoint1_tab1 # tarkistus 3</span></span>
+<span id="cb3-1374"><a href="liitteet.html#cb3-1374"></a></span>
+<span id="cb3-1375"><a href="liitteet.html#cb3-1375"></a><span class="co">## riviprofiilitaulukko joteskin (18.9.20)</span></span>
+<span id="cb3-1376"><a href="liitteet.html#cb3-1376"></a>BeDealueTable &lt;-<span class="st"> </span>ISSP2012esim1.dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">tableX</span>(maa3, Q1b, <span class="dt">type =</span> <span class="st">&quot;row_perc&quot;</span>)</span>
+<span id="cb3-1377"><a href="liitteet.html#cb3-1377"></a></span>
+<span id="cb3-1378"><a href="liitteet.html#cb3-1378"></a></span>
+<span id="cb3-1379"><a href="liitteet.html#cb3-1379"></a>knitr<span class="op">::</span><span class="kw">kable</span>(BeDealueTable,<span class="dt">digits =</span> <span class="dv">2</span>, <span class="dt">booktabs =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb3-1380"><a href="liitteet.html#cb3-1380"></a>             <span class="dt">caption =</span> <span class="st">&quot;Q1b vastaukset, Saksan ja Belgian alueet&quot;</span>)</span>
+<span id="cb3-1381"><a href="liitteet.html#cb3-1381"></a>suppointCA2 &lt;-<span class="st"> </span><span class="kw">ca</span>(suppoint1_tab1[,<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>], <span class="dt">suprow =</span> <span class="dv">10</span><span class="op">:</span><span class="dv">11</span>)</span>
+<span id="cb3-1382"><a href="liitteet.html#cb3-1382"></a></span>
+<span id="cb3-1383"><a href="liitteet.html#cb3-1383"></a><span class="co"># par(cex = 0.6)</span></span>
+<span id="cb3-1384"><a href="liitteet.html#cb3-1384"></a><span class="kw">plot</span>(suppointCA2, <span class="dt">main =</span> <span class="st">&quot;Symmetrinen kartta 1 &quot;</span>,</span>
+<span id="cb3-1385"><a href="liitteet.html#cb3-1385"></a>     <span class="co"># mass = c(TRUE, TRUE),</span></span>
+<span id="cb3-1386"><a href="liitteet.html#cb3-1386"></a>     <span class="co"># contrib = c(TRUE, TRUE),</span></span>
+<span id="cb3-1387"><a href="liitteet.html#cb3-1387"></a>     <span class="dt">sub =</span> <span class="st">&quot;Täydentävät pisteet DE ja BE&quot;</span> )</span>
+<span id="cb3-1388"><a href="liitteet.html#cb3-1388"></a></span>
+<span id="cb3-1389"><a href="liitteet.html#cb3-1389"></a><span class="kw">plot</span>(suppointCA2, <span class="dt">main =</span> <span class="st">&quot;kontribuutiokartta &quot;</span>,</span>
+<span id="cb3-1390"><a href="liitteet.html#cb3-1390"></a>        <span class="dt">map =</span> <span class="st">&quot;rowgreen&quot;</span>,</span>
+<span id="cb3-1391"><a href="liitteet.html#cb3-1391"></a>        <span class="dt">arrows =</span> <span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>),</span>
+<span id="cb3-1392"><a href="liitteet.html#cb3-1392"></a>        <span class="dt">mass =</span> <span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>),</span>
+<span id="cb3-1393"><a href="liitteet.html#cb3-1393"></a>        <span class="dt">contrib =</span> <span class="kw">c</span>(<span class="st">&quot;absolute&quot;</span>,<span class="st">&quot;absolute&quot;</span>),</span>
+<span id="cb3-1394"><a href="liitteet.html#cb3-1394"></a>        <span class="dt">sub =</span> <span class="st">&quot;Täydentävät pisteet DE ja BE&quot;</span> )</span>
+<span id="cb3-1395"><a href="liitteet.html#cb3-1395"></a></span>
+<span id="cb3-1396"><a href="liitteet.html#cb3-1396"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/substvar_fi_Q1Q2.png&#39;</span>)</span>
+<span id="cb3-1397"><a href="liitteet.html#cb3-1397"></a><span class="co">#Testataan koodilohkojen listausta, näyttää toimivan mutta vaatii vielä säätämistä.</span></span>
+<span id="cb3-1398"><a href="liitteet.html#cb3-1398"></a><span class="co">#Ohje löytyi [Yihui Xienin blogista](https://yihui.name/en/2018/09/code-appendix/)</span></span>
+<span id="cb3-1399"><a href="liitteet.html#cb3-1399"></a><span class="co">#(luettu 26.10.2018).</span></span>
+<span id="cb3-1400"><a href="liitteet.html#cb3-1400"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/BookdownProc.png&#39;</span>)</span></code></pre></div>
 </div>
 <div id="tekninen-ympäristö-ja-bookdown-paketti" class="section level2">
 <h2><span class="header-section-number">7.6</span> Tekninen ympäristö ja Bookdown-paketti</h2>

@@ -16,10 +16,10 @@ Ehkä tekniseen liitteeseen?
 
 - data: ei huomioida sitä, että otoskoot vaihtelevat aika paljon eli
 "maapainot" eri suuruisia
-  
+
 - ei huomioida muitakaan otantaan liittyviä asioita (tämä ainakin
 mainittava data-osuudessa)
-  
+
 - kuvaileva menetelmä, mutta mikä on tutkimusongelma? Sellainen pitäisi olla.
 
 **zxy* Mitä on korrespondenssianalyysi? Muutamalla kappaleella. Yksi kappale
@@ -32,7 +32,7 @@ historiasta.
 käyttämällä oikeaa dataa. Täsmällisempi esitys sirotellaan esimerkkiaineiston
 analyysin tulosten esittelyn lomaan. Pitäisikö tässä tuoda esille ns. "ranskalaisen
 koulukunnan" matemaattisen perusteiden korostus, ja data-analyysin filosofia?
-Ehkä ei, koska sen pohdinta ei ole pääasia. Se tietysti mainitaan, ja asiaa pohditaan. 
+Ehkä ei, koska sen pohdinta ei ole pääasia. Se tietysti mainitaan, ja asiaa pohditaan.
 
 
 **ks** Esitellään korrespondenssianalyysin käsitteet ja graafisen analyysin
@@ -50,7 +50,7 @@ kahden luokittelumuuttujan korrespondenssianalyysi antaa graafisen analyysin
 "...perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin muodot ovat
 saman algoritmin soveltamista toisen tyyppiisiin datamatriiseihin, ja tulkintaa
 sovelletaan vastaavasti (with the consequent adaptation of the interpretation)"
-[@RefWorks:doc:5a857a44e4b0ed2d44664d84 , s. 437] (MG ja Hastie, JASA?)
+[@RefWorks:doc:5a857a44e4b0ed2d44664d84 , s. 437] .
 
 **zxy** Miksi eksporatiivinen (määrittele!) ja deskriptiivinen (määrittele!)
 menetelmä on esitettävä "in vivo", toiminnassa? Oppikirjoissa (viitteitä)
@@ -110,10 +110,12 @@ Rmarkdown[@RefWorks:doc:5b6b346fe4b0c619b11b8a3e], ja
 bookdown ([@RefWorks:doc:5b6b36dde4b09b7ec442bf8b] ja toinen viite [@R-bookdown]).
 Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.
 
-**zxy** Helposti toistettavan tutkimukset periaatteet
 
-1. Datasta (löytyy netistä, samoin kattava dokumentaatio) lyhyt matka analyysiin.
-2. Koodi selkeää ja dokumentoitua
+**k** Helposti toistettavan tutkimukset periaatteet
+
+1. Datastan perusmuunnokset ja muuttujatyypit tehdään kun data luetaan
+R-ohjelmistoon.
+2. Koodi selkeää ja dokumentoitua. Tärkeä lähde [@RefWorks:doc:5c3759c2e4b0085b307c82b5]
 3. R, LaTeX, pandoc - versiot dokumentoidaan
 
 Tarkemmin liittessä.
