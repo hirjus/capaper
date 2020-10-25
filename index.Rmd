@@ -37,6 +37,8 @@ ja sitten tähän projektiin.
 **PDF-tulostus oikuttelee Saksan ja Belgian aluejako-datan tai profiilitaulukon
 luonnissa - toistaiseksi vain html-tuloste (24.10.2020)**
 
+Raportti yhtenä html-tiedostona (https://hirjus.github.io/capaper/JH_capaper.html).
+
 **
 
 ```{r jhpaketit, include=FALSE}
