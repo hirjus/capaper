@@ -34,8 +34,10 @@ Koodi kopiodaan Galkusta, kommentoidaan pois tarkistuksia ja muita välitulostuk
 Koodin ydinasiat koitetaan pitää samana kuin Galkussa, isommat muuutoksen ensin siellä
 ja sitten tähän projektiin.
 
-**PDF-tulostust oikuttelee Saksan ja Belgian aluejako-datan tai profiilitaulukon
+**PDF-tulostus oikuttelee Saksan ja Belgian aluejako-datan tai profiilitaulukon
 luonnissa - toistaiseksi vain html-tuloste (24.10.2020)**
+
+**
 
 ```{r jhpaketit, include=FALSE}
 # 18.10.2020

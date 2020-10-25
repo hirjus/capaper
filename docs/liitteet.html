@@ -50,6 +50,8 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -1593,190 +1595,191 @@ Kuva 7.1: Esimerkki suomenkielisestä lomakkeesta
 <span id="cb10-1373"><a href="liitteet.html#cb10-1373"></a>suppoint1_tab1 &lt;-<span class="st"> </span><span class="kw">rbind</span>(suppoint1_tab1, suppoint2_tab1)</span>
 <span id="cb10-1374"><a href="liitteet.html#cb10-1374"></a><span class="co">#suppoint1_tab1 # tarkistus 3</span></span>
 <span id="cb10-1375"><a href="liitteet.html#cb10-1375"></a></span>
-<span id="cb10-1376"><a href="liitteet.html#cb10-1376"></a><span class="co">## riviprofiilitaulukko aiheuttaa virheen PDF-tulostuksessa</span></span>
-<span id="cb10-1377"><a href="liitteet.html#cb10-1377"></a></span>
-<span id="cb10-1378"><a href="liitteet.html#cb10-1378"></a><span class="co">#BeDealueTable &lt;- ISSP2012esim1.dat %&gt;% tableX(maa3, Q1b, type = &quot;row_perc&quot;)</span></span>
-<span id="cb10-1379"><a href="liitteet.html#cb10-1379"></a></span>
-<span id="cb10-1380"><a href="liitteet.html#cb10-1380"></a><span class="co">#knitr::kable(BeDealueTable , digits = 2, booktabs = TRUE,</span></span>
-<span id="cb10-1381"><a href="liitteet.html#cb10-1381"></a><span class="co">#             caption = &quot;Q1b vastaukset, Saksan ja Belgian alueet&quot;)</span></span>
-<span id="cb10-1382"><a href="liitteet.html#cb10-1382"></a></span>
-<span id="cb10-1383"><a href="liitteet.html#cb10-1383"></a><span class="co"># Q1b vastaukset, Saksan ja Belgian alueet</span></span>
-<span id="cb10-1384"><a href="liitteet.html#cb10-1384"></a><span class="co"># S s   ?   e   E   Total</span></span>
-<span id="cb10-1385"><a href="liitteet.html#cb10-1385"></a><span class="co"># bF    5.04    23.81   25.89   30.83   14.43   100.00</span></span>
-<span id="cb10-1386"><a href="liitteet.html#cb10-1386"></a><span class="co"># bW    10.82   21.02   18.57   24.08   25.51   100.00</span></span>
-<span id="cb10-1387"><a href="liitteet.html#cb10-1387"></a><span class="co"># bB    17.03   20.94   16.63   23.87   21.53   100.00</span></span>
-<span id="cb10-1388"><a href="liitteet.html#cb10-1388"></a><span class="co"># BG    12.81   42.89   22.26   20.63   1.41    100.00</span></span>
-<span id="cb10-1389"><a href="liitteet.html#cb10-1389"></a><span class="co"># dW    11.40   26.82   11.83   32.13   17.82   100.00</span></span>
-<span id="cb10-1390"><a href="liitteet.html#cb10-1390"></a><span class="co"># dE    5.85    11.33   10.97   29.80   42.05   100.00</span></span>
-<span id="cb10-1391"><a href="liitteet.html#cb10-1391"></a><span class="co"># DK    5.04    17.15   10.95   16.71   50.14   100.00</span></span>
-<span id="cb10-1392"><a href="liitteet.html#cb10-1392"></a><span class="co"># FI    4.23    16.94   13.42   38.11   27.30   100.00</span></span>
-<span id="cb10-1393"><a href="liitteet.html#cb10-1393"></a><span class="co"># HU    21.97   28.89   22.57   19.06   7.52    100.00</span></span>
-<span id="cb10-1394"><a href="liitteet.html#cb10-1394"></a><span class="co"># All   9.95    23.76   16.79   26.10   23.41   100.00</span></span>
-<span id="cb10-1395"><a href="liitteet.html#cb10-1395"></a></span>
-<span id="cb10-1396"><a href="liitteet.html#cb10-1396"></a>suppointCA2 &lt;-<span class="st"> </span><span class="kw">ca</span>(suppoint1_tab1[,<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>], <span class="dt">suprow =</span> <span class="dv">10</span><span class="op">:</span><span class="dv">11</span>)</span>
-<span id="cb10-1397"><a href="liitteet.html#cb10-1397"></a></span>
-<span id="cb10-1398"><a href="liitteet.html#cb10-1398"></a><span class="co"># par(cex = 0.6)</span></span>
-<span id="cb10-1399"><a href="liitteet.html#cb10-1399"></a><span class="kw">plot</span>(suppointCA2, <span class="dt">main =</span> <span class="st">&quot;Symmetrinen kartta 1 &quot;</span>,</span>
-<span id="cb10-1400"><a href="liitteet.html#cb10-1400"></a>     <span class="co"># mass = c(TRUE, TRUE),</span></span>
-<span id="cb10-1401"><a href="liitteet.html#cb10-1401"></a>     <span class="co"># contrib = c(TRUE, TRUE),</span></span>
-<span id="cb10-1402"><a href="liitteet.html#cb10-1402"></a>     <span class="dt">sub =</span> <span class="st">&quot;Täydentävät pisteet DE ja BE&quot;</span> )</span>
-<span id="cb10-1403"><a href="liitteet.html#cb10-1403"></a></span>
-<span id="cb10-1404"><a href="liitteet.html#cb10-1404"></a><span class="kw">plot</span>(suppointCA2, <span class="dt">main =</span> <span class="st">&quot;kontribuutiokartta &quot;</span>,</span>
-<span id="cb10-1405"><a href="liitteet.html#cb10-1405"></a>        <span class="dt">map =</span> <span class="st">&quot;rowgreen&quot;</span>,</span>
-<span id="cb10-1406"><a href="liitteet.html#cb10-1406"></a>        <span class="dt">arrows =</span> <span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>),</span>
-<span id="cb10-1407"><a href="liitteet.html#cb10-1407"></a>        <span class="dt">mass =</span> <span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>),</span>
-<span id="cb10-1408"><a href="liitteet.html#cb10-1408"></a>        <span class="dt">contrib =</span> <span class="kw">c</span>(<span class="st">&quot;absolute&quot;</span>,<span class="st">&quot;absolute&quot;</span>),</span>
-<span id="cb10-1409"><a href="liitteet.html#cb10-1409"></a>        <span class="dt">sub =</span> <span class="st">&quot;Täydentävät pisteet DE ja BE&quot;</span> )</span>
-<span id="cb10-1410"><a href="liitteet.html#cb10-1410"></a></span>
+<span id="cb10-1376"><a href="liitteet.html#cb10-1376"></a><span class="co"># riviprofiilitaulukko aiheuttaa virheen PDF-tulostuksessa </span></span>
+<span id="cb10-1377"><a href="liitteet.html#cb10-1377"></a><span class="co"># </span></span>
+<span id="cb10-1378"><a href="liitteet.html#cb10-1378"></a></span>
+<span id="cb10-1379"><a href="liitteet.html#cb10-1379"></a>BeDealueTable &lt;-<span class="st"> </span>ISSP2012esim1.dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">tableX</span>(maa3, Q1b, <span class="dt">type =</span> <span class="st">&quot;row_perc&quot;</span>)</span>
+<span id="cb10-1380"><a href="liitteet.html#cb10-1380"></a></span>
+<span id="cb10-1381"><a href="liitteet.html#cb10-1381"></a>knitr<span class="op">::</span><span class="kw">kable</span>(BeDealueTable , <span class="dt">digits =</span> <span class="dv">2</span>, <span class="dt">booktabs =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb10-1382"><a href="liitteet.html#cb10-1382"></a>            <span class="dt">caption =</span> <span class="st">&quot;Q1b vastaukset, Saksan ja Belgian alueet&quot;</span>)</span>
+<span id="cb10-1383"><a href="liitteet.html#cb10-1383"></a></span>
+<span id="cb10-1384"><a href="liitteet.html#cb10-1384"></a><span class="co"># Q1b vastaukset, Saksan ja Belgian alueet</span></span>
+<span id="cb10-1385"><a href="liitteet.html#cb10-1385"></a><span class="co"># S s   ?   e   E   Total</span></span>
+<span id="cb10-1386"><a href="liitteet.html#cb10-1386"></a><span class="co"># bF    5.04    23.81   25.89   30.83   14.43   100.00</span></span>
+<span id="cb10-1387"><a href="liitteet.html#cb10-1387"></a><span class="co"># bW    10.82   21.02   18.57   24.08   25.51   100.00</span></span>
+<span id="cb10-1388"><a href="liitteet.html#cb10-1388"></a><span class="co"># bB    17.03   20.94   16.63   23.87   21.53   100.00</span></span>
+<span id="cb10-1389"><a href="liitteet.html#cb10-1389"></a><span class="co"># BG    12.81   42.89   22.26   20.63   1.41    100.00</span></span>
+<span id="cb10-1390"><a href="liitteet.html#cb10-1390"></a><span class="co"># dW    11.40   26.82   11.83   32.13   17.82   100.00</span></span>
+<span id="cb10-1391"><a href="liitteet.html#cb10-1391"></a><span class="co"># dE    5.85    11.33   10.97   29.80   42.05   100.00</span></span>
+<span id="cb10-1392"><a href="liitteet.html#cb10-1392"></a><span class="co"># DK    5.04    17.15   10.95   16.71   50.14   100.00</span></span>
+<span id="cb10-1393"><a href="liitteet.html#cb10-1393"></a><span class="co"># FI    4.23    16.94   13.42   38.11   27.30   100.00</span></span>
+<span id="cb10-1394"><a href="liitteet.html#cb10-1394"></a><span class="co"># HU    21.97   28.89   22.57   19.06   7.52    100.00</span></span>
+<span id="cb10-1395"><a href="liitteet.html#cb10-1395"></a><span class="co"># All   9.95    23.76   16.79   26.10   23.41   100.00</span></span>
+<span id="cb10-1396"><a href="liitteet.html#cb10-1396"></a></span>
+<span id="cb10-1397"><a href="liitteet.html#cb10-1397"></a>suppointCA2 &lt;-<span class="st"> </span><span class="kw">ca</span>(suppoint1_tab1[,<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>], <span class="dt">suprow =</span> <span class="dv">10</span><span class="op">:</span><span class="dv">11</span>)</span>
+<span id="cb10-1398"><a href="liitteet.html#cb10-1398"></a></span>
+<span id="cb10-1399"><a href="liitteet.html#cb10-1399"></a><span class="co"># par(cex = 0.6)</span></span>
+<span id="cb10-1400"><a href="liitteet.html#cb10-1400"></a><span class="kw">plot</span>(suppointCA2, <span class="dt">main =</span> <span class="st">&quot;Symmetrinen kartta 1 &quot;</span>,</span>
+<span id="cb10-1401"><a href="liitteet.html#cb10-1401"></a>     <span class="co"># mass = c(TRUE, TRUE),</span></span>
+<span id="cb10-1402"><a href="liitteet.html#cb10-1402"></a>     <span class="co"># contrib = c(TRUE, TRUE),</span></span>
+<span id="cb10-1403"><a href="liitteet.html#cb10-1403"></a>     <span class="dt">sub =</span> <span class="st">&quot;Täydentävät pisteet DE ja BE&quot;</span> )</span>
+<span id="cb10-1404"><a href="liitteet.html#cb10-1404"></a></span>
+<span id="cb10-1405"><a href="liitteet.html#cb10-1405"></a><span class="kw">plot</span>(suppointCA2, <span class="dt">main =</span> <span class="st">&quot;kontribuutiokartta &quot;</span>,</span>
+<span id="cb10-1406"><a href="liitteet.html#cb10-1406"></a>        <span class="dt">map =</span> <span class="st">&quot;rowgreen&quot;</span>,</span>
+<span id="cb10-1407"><a href="liitteet.html#cb10-1407"></a>        <span class="dt">arrows =</span> <span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>),</span>
+<span id="cb10-1408"><a href="liitteet.html#cb10-1408"></a>        <span class="dt">mass =</span> <span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>),</span>
+<span id="cb10-1409"><a href="liitteet.html#cb10-1409"></a>        <span class="dt">contrib =</span> <span class="kw">c</span>(<span class="st">&quot;absolute&quot;</span>,<span class="st">&quot;absolute&quot;</span>),</span>
+<span id="cb10-1410"><a href="liitteet.html#cb10-1410"></a>        <span class="dt">sub =</span> <span class="st">&quot;Täydentävät pisteet DE ja BE&quot;</span> )</span>
 <span id="cb10-1411"><a href="liitteet.html#cb10-1411"></a></span>
-<span id="cb10-1412"><a href="liitteet.html#cb10-1412"></a>suppointCA2</span>
-<span id="cb10-1413"><a href="liitteet.html#cb10-1413"></a></span>
-<span id="cb10-1414"><a href="liitteet.html#cb10-1414"></a><span class="kw">summary</span>(suppointCA2)</span>
-<span id="cb10-1415"><a href="liitteet.html#cb10-1415"></a></span>
-<span id="cb10-1416"><a href="liitteet.html#cb10-1416"></a>suppointCA3 &lt;-<span class="st"> </span><span class="kw">ca</span>(<span class="op">~</span>maa3 <span class="op">+</span><span class="st"> </span>Q1b,ISSP2012esim1.dat, <span class="dt">nd =</span> <span class="dv">3</span>)</span>
-<span id="cb10-1417"><a href="liitteet.html#cb10-1417"></a></span>
-<span id="cb10-1418"><a href="liitteet.html#cb10-1418"></a><span class="co"># summary(suppointCA3)</span></span>
-<span id="cb10-1419"><a href="liitteet.html#cb10-1419"></a><span class="co"># Error in rsc %*% diag(sv) : non-conformable arguments</span></span>
-<span id="cb10-1420"><a href="liitteet.html#cb10-1420"></a><span class="kw">plot</span>(suppointCA3, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),</span>
-<span id="cb10-1421"><a href="liitteet.html#cb10-1421"></a>                <span class="dt">main =</span> <span class="st">&quot;Kolmen dimension ratkaisu&quot;</span>,</span>
-<span id="cb10-1422"><a href="liitteet.html#cb10-1422"></a>                <span class="dt">sub =</span> <span class="st">&quot;symmetrinen kartta - 1. ja 2. dimensio&quot;</span>)</span>
-<span id="cb10-1423"><a href="liitteet.html#cb10-1423"></a></span>
+<span id="cb10-1412"><a href="liitteet.html#cb10-1412"></a></span>
+<span id="cb10-1413"><a href="liitteet.html#cb10-1413"></a>suppointCA2</span>
+<span id="cb10-1414"><a href="liitteet.html#cb10-1414"></a></span>
+<span id="cb10-1415"><a href="liitteet.html#cb10-1415"></a><span class="kw">summary</span>(suppointCA2)</span>
+<span id="cb10-1416"><a href="liitteet.html#cb10-1416"></a></span>
+<span id="cb10-1417"><a href="liitteet.html#cb10-1417"></a>suppointCA3 &lt;-<span class="st"> </span><span class="kw">ca</span>(<span class="op">~</span>maa3 <span class="op">+</span><span class="st"> </span>Q1b,ISSP2012esim1.dat, <span class="dt">nd =</span> <span class="dv">3</span>)</span>
+<span id="cb10-1418"><a href="liitteet.html#cb10-1418"></a></span>
+<span id="cb10-1419"><a href="liitteet.html#cb10-1419"></a><span class="co"># summary(suppointCA3)</span></span>
+<span id="cb10-1420"><a href="liitteet.html#cb10-1420"></a><span class="co"># Error in rsc %*% diag(sv) : non-conformable arguments</span></span>
+<span id="cb10-1421"><a href="liitteet.html#cb10-1421"></a><span class="kw">plot</span>(suppointCA3, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),</span>
+<span id="cb10-1422"><a href="liitteet.html#cb10-1422"></a>                <span class="dt">main =</span> <span class="st">&quot;Kolmen dimension ratkaisu&quot;</span>,</span>
+<span id="cb10-1423"><a href="liitteet.html#cb10-1423"></a>                <span class="dt">sub =</span> <span class="st">&quot;symmetrinen kartta - 1. ja 2. dimensio&quot;</span>)</span>
 <span id="cb10-1424"><a href="liitteet.html#cb10-1424"></a></span>
-<span id="cb10-1425"><a href="liitteet.html#cb10-1425"></a><span class="kw">plot</span>(suppointCA3, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>),</span>
-<span id="cb10-1426"><a href="liitteet.html#cb10-1426"></a>                <span class="dt">main =</span> <span class="st">&quot;Kolmen dimension ratkaisu&quot;</span>,</span>
-<span id="cb10-1427"><a href="liitteet.html#cb10-1427"></a>                <span class="dt">sub =</span> <span class="st">&quot;symmetrinen kartta - 1. ja 3. dimensio&quot;</span>)</span>
-<span id="cb10-1428"><a href="liitteet.html#cb10-1428"></a></span>
+<span id="cb10-1425"><a href="liitteet.html#cb10-1425"></a></span>
+<span id="cb10-1426"><a href="liitteet.html#cb10-1426"></a><span class="kw">plot</span>(suppointCA3, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>),</span>
+<span id="cb10-1427"><a href="liitteet.html#cb10-1427"></a>                <span class="dt">main =</span> <span class="st">&quot;Kolmen dimension ratkaisu&quot;</span>,</span>
+<span id="cb10-1428"><a href="liitteet.html#cb10-1428"></a>                <span class="dt">sub =</span> <span class="st">&quot;symmetrinen kartta - 1. ja 3. dimensio&quot;</span>)</span>
 <span id="cb10-1429"><a href="liitteet.html#cb10-1429"></a></span>
-<span id="cb10-1430"><a href="liitteet.html#cb10-1430"></a><span class="kw">plot</span>(suppointCA3, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>),</span>
-<span id="cb10-1431"><a href="liitteet.html#cb10-1431"></a>                <span class="dt">main =</span> <span class="st">&quot;Kolmen dimension ratkaisu&quot;</span>,</span>
-<span id="cb10-1432"><a href="liitteet.html#cb10-1432"></a>                <span class="dt">sub =</span> <span class="st">&quot;symmetrinen kartta - 2. ja 3. dimensio&quot;</span>)</span>
-<span id="cb10-1433"><a href="liitteet.html#cb10-1433"></a></span>
-<span id="cb10-1434"><a href="liitteet.html#cb10-1434"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/3dSymMap_1.PNG&#39;</span>)</span>
-<span id="cb10-1435"><a href="liitteet.html#cb10-1435"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/3dSymMap_2.PNG&#39;</span>)</span>
-<span id="cb10-1436"><a href="liitteet.html#cb10-1436"></a><span class="co"># Iän ja sukupuolen vuorovaikutusmuuttujia</span></span>
-<span id="cb10-1437"><a href="liitteet.html#cb10-1437"></a><span class="co">#</span></span>
-<span id="cb10-1438"><a href="liitteet.html#cb10-1438"></a><span class="co"># Uusi R-data: ISSP2012esim1b.dat2esim1b)</span></span>
-<span id="cb10-1439"><a href="liitteet.html#cb10-1439"></a><span class="co">#</span></span>
-<span id="cb10-1440"><a href="liitteet.html#cb10-1440"></a><span class="co"># Ikäluokat age_cat</span></span>
-<span id="cb10-1441"><a href="liitteet.html#cb10-1441"></a><span class="co"># AGE 1=15-25, 2 =26-35, 3=36-45, 4=46-55, 5=56-65, 6= 66 and older</span></span>
-<span id="cb10-1442"><a href="liitteet.html#cb10-1442"></a><span class="co">#</span></span>
-<span id="cb10-1443"><a href="liitteet.html#cb10-1443"></a><span class="co"># summary(ISSP2012esim1.dat$AGE)</span></span>
-<span id="cb10-1444"><a href="liitteet.html#cb10-1444"></a><span class="co"># hist(ISSP2012esim1.dat$ika)</span></span>
-<span id="cb10-1445"><a href="liitteet.html#cb10-1445"></a></span>
-<span id="cb10-1446"><a href="liitteet.html#cb10-1446"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span><span class="kw">mutate</span>(ISSP2012esim1.dat,</span>
-<span id="cb10-1447"><a href="liitteet.html#cb10-1447"></a>                      <span class="dt">age_cat =</span> <span class="kw">ifelse</span>(ika <span class="op">%in%</span><span class="st"> </span><span class="dv">15</span><span class="op">:</span><span class="dv">25</span>, <span class="st">&quot;1&quot;</span>,</span>
-<span id="cb10-1448"><a href="liitteet.html#cb10-1448"></a>                        <span class="kw">ifelse</span>(ika <span class="op">%in%</span><span class="st"> </span><span class="dv">26</span><span class="op">:</span><span class="dv">35</span>, <span class="st">&quot;2&quot;</span>,</span>
-<span id="cb10-1449"><a href="liitteet.html#cb10-1449"></a>                        <span class="kw">ifelse</span>(ika <span class="op">%in%</span><span class="st"> </span><span class="dv">36</span><span class="op">:</span><span class="dv">45</span>, <span class="st">&quot;3&quot;</span>,</span>
-<span id="cb10-1450"><a href="liitteet.html#cb10-1450"></a>                        <span class="kw">ifelse</span>(ika <span class="op">%in%</span><span class="st"> </span><span class="dv">46</span><span class="op">:</span><span class="dv">55</span>, <span class="st">&quot;4&quot;</span>,</span>
-<span id="cb10-1451"><a href="liitteet.html#cb10-1451"></a>                        <span class="kw">ifelse</span>(ika <span class="op">%in%</span><span class="st"> </span><span class="dv">56</span><span class="op">:</span><span class="dv">65</span>, <span class="st">&quot;5&quot;</span>, <span class="st">&quot;6&quot;</span>))))))</span>
-<span id="cb10-1452"><a href="liitteet.html#cb10-1452"></a></span>
+<span id="cb10-1430"><a href="liitteet.html#cb10-1430"></a></span>
+<span id="cb10-1431"><a href="liitteet.html#cb10-1431"></a><span class="kw">plot</span>(suppointCA3, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>),</span>
+<span id="cb10-1432"><a href="liitteet.html#cb10-1432"></a>                <span class="dt">main =</span> <span class="st">&quot;Kolmen dimension ratkaisu&quot;</span>,</span>
+<span id="cb10-1433"><a href="liitteet.html#cb10-1433"></a>                <span class="dt">sub =</span> <span class="st">&quot;symmetrinen kartta - 2. ja 3. dimensio&quot;</span>)</span>
+<span id="cb10-1434"><a href="liitteet.html#cb10-1434"></a></span>
+<span id="cb10-1435"><a href="liitteet.html#cb10-1435"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/3dSymMap_1.PNG&#39;</span>)</span>
+<span id="cb10-1436"><a href="liitteet.html#cb10-1436"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/3dSymMap_2.PNG&#39;</span>)</span>
+<span id="cb10-1437"><a href="liitteet.html#cb10-1437"></a><span class="co"># Iän ja sukupuolen vuorovaikutusmuuttujia</span></span>
+<span id="cb10-1438"><a href="liitteet.html#cb10-1438"></a><span class="co">#</span></span>
+<span id="cb10-1439"><a href="liitteet.html#cb10-1439"></a><span class="co"># Uusi R-data: ISSP2012esim1b.dat2esim1b)</span></span>
+<span id="cb10-1440"><a href="liitteet.html#cb10-1440"></a><span class="co">#</span></span>
+<span id="cb10-1441"><a href="liitteet.html#cb10-1441"></a><span class="co"># Ikäluokat age_cat</span></span>
+<span id="cb10-1442"><a href="liitteet.html#cb10-1442"></a><span class="co"># AGE 1=15-25, 2 =26-35, 3=36-45, 4=46-55, 5=56-65, 6= 66 and older</span></span>
+<span id="cb10-1443"><a href="liitteet.html#cb10-1443"></a><span class="co">#</span></span>
+<span id="cb10-1444"><a href="liitteet.html#cb10-1444"></a><span class="co"># summary(ISSP2012esim1.dat$AGE)</span></span>
+<span id="cb10-1445"><a href="liitteet.html#cb10-1445"></a><span class="co"># hist(ISSP2012esim1.dat$ika)</span></span>
+<span id="cb10-1446"><a href="liitteet.html#cb10-1446"></a></span>
+<span id="cb10-1447"><a href="liitteet.html#cb10-1447"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span><span class="kw">mutate</span>(ISSP2012esim1.dat,</span>
+<span id="cb10-1448"><a href="liitteet.html#cb10-1448"></a>                      <span class="dt">age_cat =</span> <span class="kw">ifelse</span>(ika <span class="op">%in%</span><span class="st"> </span><span class="dv">15</span><span class="op">:</span><span class="dv">25</span>, <span class="st">&quot;1&quot;</span>,</span>
+<span id="cb10-1449"><a href="liitteet.html#cb10-1449"></a>                        <span class="kw">ifelse</span>(ika <span class="op">%in%</span><span class="st"> </span><span class="dv">26</span><span class="op">:</span><span class="dv">35</span>, <span class="st">&quot;2&quot;</span>,</span>
+<span id="cb10-1450"><a href="liitteet.html#cb10-1450"></a>                        <span class="kw">ifelse</span>(ika <span class="op">%in%</span><span class="st"> </span><span class="dv">36</span><span class="op">:</span><span class="dv">45</span>, <span class="st">&quot;3&quot;</span>,</span>
+<span id="cb10-1451"><a href="liitteet.html#cb10-1451"></a>                        <span class="kw">ifelse</span>(ika <span class="op">%in%</span><span class="st"> </span><span class="dv">46</span><span class="op">:</span><span class="dv">55</span>, <span class="st">&quot;4&quot;</span>,</span>
+<span id="cb10-1452"><a href="liitteet.html#cb10-1452"></a>                        <span class="kw">ifelse</span>(ika <span class="op">%in%</span><span class="st"> </span><span class="dv">56</span><span class="op">:</span><span class="dv">65</span>, <span class="st">&quot;5&quot;</span>, <span class="st">&quot;6&quot;</span>))))))</span>
 <span id="cb10-1453"><a href="liitteet.html#cb10-1453"></a></span>
-<span id="cb10-1454"><a href="liitteet.html#cb10-1454"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span>ISSP2012esim1b.dat <span class="op">%&gt;%</span><span class="st">  </span></span>
-<span id="cb10-1455"><a href="liitteet.html#cb10-1455"></a><span class="st">        </span><span class="kw">mutate</span>(<span class="dt">age_cat =</span> <span class="kw">as_factor</span>(age_cat)) <span class="co"># järjestys omituinen!(4.2.20)</span></span>
-<span id="cb10-1456"><a href="liitteet.html#cb10-1456"></a></span>
-<span id="cb10-1457"><a href="liitteet.html#cb10-1457"></a><span class="co"># Tarkistuksia</span></span>
-<span id="cb10-1458"><a href="liitteet.html#cb10-1458"></a><span class="co"># str(ISSP2012esim2.dat$age_cat)</span></span>
-<span id="cb10-1459"><a href="liitteet.html#cb10-1459"></a><span class="co"># levels(ISSP2012esim2.dat$age_cat)</span></span>
-<span id="cb10-1460"><a href="liitteet.html#cb10-1460"></a><span class="co"># ISSP2012esim2.dat$age_cat %&gt;% summary()</span></span>
-<span id="cb10-1461"><a href="liitteet.html#cb10-1461"></a></span>
-<span id="cb10-1462"><a href="liitteet.html#cb10-1462"></a><span class="co"># Järjestetään ikäluokat uudelleen</span></span>
-<span id="cb10-1463"><a href="liitteet.html#cb10-1463"></a></span>
-<span id="cb10-1464"><a href="liitteet.html#cb10-1464"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span>ISSP2012esim1b.dat <span class="op">%&gt;%</span></span>
-<span id="cb10-1465"><a href="liitteet.html#cb10-1465"></a><span class="st">        </span><span class="kw">mutate</span>(<span class="dt">age_cat =</span></span>
-<span id="cb10-1466"><a href="liitteet.html#cb10-1466"></a>                <span class="kw">fct_relevel</span>(age_cat,</span>
-<span id="cb10-1467"><a href="liitteet.html#cb10-1467"></a>                            <span class="st">&quot;1&quot;</span>,</span>
-<span id="cb10-1468"><a href="liitteet.html#cb10-1468"></a>                            <span class="st">&quot;2&quot;</span>,</span>
-<span id="cb10-1469"><a href="liitteet.html#cb10-1469"></a>                            <span class="st">&quot;3&quot;</span>,</span>
-<span id="cb10-1470"><a href="liitteet.html#cb10-1470"></a>                            <span class="st">&quot;4&quot;</span>,</span>
-<span id="cb10-1471"><a href="liitteet.html#cb10-1471"></a>                            <span class="st">&quot;5&quot;</span>,</span>
-<span id="cb10-1472"><a href="liitteet.html#cb10-1472"></a>                            <span class="st">&quot;6&quot;</span>)</span>
-<span id="cb10-1473"><a href="liitteet.html#cb10-1473"></a>               )</span>
-<span id="cb10-1474"><a href="liitteet.html#cb10-1474"></a></span>
-<span id="cb10-1475"><a href="liitteet.html#cb10-1475"></a><span class="co"># Tarkistuksia</span></span>
-<span id="cb10-1476"><a href="liitteet.html#cb10-1476"></a></span>
-<span id="cb10-1477"><a href="liitteet.html#cb10-1477"></a><span class="co"># Iso taulukko, voi tarkistaa että muunnos ok.</span></span>
-<span id="cb10-1478"><a href="liitteet.html#cb10-1478"></a><span class="co"># test6 %&gt;% tableX(AGE, age_cat, type = &quot;count&quot;)</span></span>
-<span id="cb10-1479"><a href="liitteet.html#cb10-1479"></a><span class="co"># taulu42 &lt;- ISSP2012esim2.dat %&gt;% tableX(maa,age_cat,type = &quot;count&quot;)</span></span>
-<span id="cb10-1480"><a href="liitteet.html#cb10-1480"></a><span class="co"># kable(taulu42,digits = 2, caption = &quot;Ikäluokka age_cat&quot;)</span></span>
-<span id="cb10-1481"><a href="liitteet.html#cb10-1481"></a><span class="co">#</span></span>
-<span id="cb10-1482"><a href="liitteet.html#cb10-1482"></a></span>
-<span id="cb10-1483"><a href="liitteet.html#cb10-1483"></a><span class="co"># Taulukoita (4.2.20)</span></span>
-<span id="cb10-1484"><a href="liitteet.html#cb10-1484"></a></span>
-<span id="cb10-1485"><a href="liitteet.html#cb10-1485"></a><span class="co">#ISSP2012esim1b.dat %&gt;%</span></span>
-<span id="cb10-1486"><a href="liitteet.html#cb10-1486"></a><span class="co">#    tableX(maa,age_cat,type = &quot;count&quot;) %&gt;%</span></span>
-<span id="cb10-1487"><a href="liitteet.html#cb10-1487"></a><span class="co">#    kable(digits = 2, caption = &quot;Ikäluokka age_cat&quot;)</span></span>
-<span id="cb10-1488"><a href="liitteet.html#cb10-1488"></a><span class="co">#</span></span>
-<span id="cb10-1489"><a href="liitteet.html#cb10-1489"></a><span class="co">#ISSP2012esim1b.dat %&gt;%</span></span>
-<span id="cb10-1490"><a href="liitteet.html#cb10-1490"></a><span class="co">#    tableX(maa,age_cat,type = &quot;row_perc&quot;) %&gt;%</span></span>
-<span id="cb10-1491"><a href="liitteet.html#cb10-1491"></a><span class="co">#    kable(digits = 2, caption = &quot;age_cat: suhteelliset frekvenssit&quot;)</span></span>
-<span id="cb10-1492"><a href="liitteet.html#cb10-1492"></a></span>
-<span id="cb10-1493"><a href="liitteet.html#cb10-1493"></a><span class="co"># ga - ikäluokka ja sukupuoli</span></span>
-<span id="cb10-1494"><a href="liitteet.html#cb10-1494"></a></span>
-<span id="cb10-1495"><a href="liitteet.html#cb10-1495"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span><span class="kw">mutate</span>(ISSP2012esim1b.dat,</span>
-<span id="cb10-1496"><a href="liitteet.html#cb10-1496"></a>                        <span class="dt">ga =</span> <span class="kw">case_when</span>((age_cat <span class="op">==</span><span class="st"> &quot;1&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;m&quot;</span>) <span class="op">~</span><span class="st"> &quot;m1&quot;</span>,</span>
-<span id="cb10-1497"><a href="liitteet.html#cb10-1497"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;2&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;m&quot;</span>) <span class="op">~</span><span class="st"> &quot;m2&quot;</span>,</span>
-<span id="cb10-1498"><a href="liitteet.html#cb10-1498"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;3&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;m&quot;</span>) <span class="op">~</span><span class="st"> &quot;m3&quot;</span>,</span>
-<span id="cb10-1499"><a href="liitteet.html#cb10-1499"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;4&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;m&quot;</span>) <span class="op">~</span><span class="st"> &quot;m4&quot;</span>,</span>
-<span id="cb10-1500"><a href="liitteet.html#cb10-1500"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;5&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;m&quot;</span>) <span class="op">~</span><span class="st"> &quot;m5&quot;</span>,</span>
-<span id="cb10-1501"><a href="liitteet.html#cb10-1501"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;6&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;m&quot;</span>) <span class="op">~</span><span class="st"> &quot;m6&quot;</span>,</span>
-<span id="cb10-1502"><a href="liitteet.html#cb10-1502"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;1&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;f&quot;</span>) <span class="op">~</span><span class="st"> &quot;f1&quot;</span>,</span>
-<span id="cb10-1503"><a href="liitteet.html#cb10-1503"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;2&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;f&quot;</span>) <span class="op">~</span><span class="st"> &quot;f2&quot;</span>,</span>
-<span id="cb10-1504"><a href="liitteet.html#cb10-1504"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;3&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;f&quot;</span>) <span class="op">~</span><span class="st"> &quot;f3&quot;</span>,</span>
-<span id="cb10-1505"><a href="liitteet.html#cb10-1505"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;4&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;f&quot;</span>) <span class="op">~</span><span class="st"> &quot;f4&quot;</span>,</span>
+<span id="cb10-1454"><a href="liitteet.html#cb10-1454"></a></span>
+<span id="cb10-1455"><a href="liitteet.html#cb10-1455"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span>ISSP2012esim1b.dat <span class="op">%&gt;%</span><span class="st">  </span></span>
+<span id="cb10-1456"><a href="liitteet.html#cb10-1456"></a><span class="st">        </span><span class="kw">mutate</span>(<span class="dt">age_cat =</span> <span class="kw">as_factor</span>(age_cat)) <span class="co"># järjestys omituinen!(4.2.20)</span></span>
+<span id="cb10-1457"><a href="liitteet.html#cb10-1457"></a></span>
+<span id="cb10-1458"><a href="liitteet.html#cb10-1458"></a><span class="co"># Tarkistuksia</span></span>
+<span id="cb10-1459"><a href="liitteet.html#cb10-1459"></a><span class="co"># str(ISSP2012esim2.dat$age_cat)</span></span>
+<span id="cb10-1460"><a href="liitteet.html#cb10-1460"></a><span class="co"># levels(ISSP2012esim2.dat$age_cat)</span></span>
+<span id="cb10-1461"><a href="liitteet.html#cb10-1461"></a><span class="co"># ISSP2012esim2.dat$age_cat %&gt;% summary()</span></span>
+<span id="cb10-1462"><a href="liitteet.html#cb10-1462"></a></span>
+<span id="cb10-1463"><a href="liitteet.html#cb10-1463"></a><span class="co"># Järjestetään ikäluokat uudelleen</span></span>
+<span id="cb10-1464"><a href="liitteet.html#cb10-1464"></a></span>
+<span id="cb10-1465"><a href="liitteet.html#cb10-1465"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span>ISSP2012esim1b.dat <span class="op">%&gt;%</span></span>
+<span id="cb10-1466"><a href="liitteet.html#cb10-1466"></a><span class="st">        </span><span class="kw">mutate</span>(<span class="dt">age_cat =</span></span>
+<span id="cb10-1467"><a href="liitteet.html#cb10-1467"></a>                <span class="kw">fct_relevel</span>(age_cat,</span>
+<span id="cb10-1468"><a href="liitteet.html#cb10-1468"></a>                            <span class="st">&quot;1&quot;</span>,</span>
+<span id="cb10-1469"><a href="liitteet.html#cb10-1469"></a>                            <span class="st">&quot;2&quot;</span>,</span>
+<span id="cb10-1470"><a href="liitteet.html#cb10-1470"></a>                            <span class="st">&quot;3&quot;</span>,</span>
+<span id="cb10-1471"><a href="liitteet.html#cb10-1471"></a>                            <span class="st">&quot;4&quot;</span>,</span>
+<span id="cb10-1472"><a href="liitteet.html#cb10-1472"></a>                            <span class="st">&quot;5&quot;</span>,</span>
+<span id="cb10-1473"><a href="liitteet.html#cb10-1473"></a>                            <span class="st">&quot;6&quot;</span>)</span>
+<span id="cb10-1474"><a href="liitteet.html#cb10-1474"></a>               )</span>
+<span id="cb10-1475"><a href="liitteet.html#cb10-1475"></a></span>
+<span id="cb10-1476"><a href="liitteet.html#cb10-1476"></a><span class="co"># Tarkistuksia</span></span>
+<span id="cb10-1477"><a href="liitteet.html#cb10-1477"></a></span>
+<span id="cb10-1478"><a href="liitteet.html#cb10-1478"></a><span class="co"># Iso taulukko, voi tarkistaa että muunnos ok.</span></span>
+<span id="cb10-1479"><a href="liitteet.html#cb10-1479"></a><span class="co"># test6 %&gt;% tableX(AGE, age_cat, type = &quot;count&quot;)</span></span>
+<span id="cb10-1480"><a href="liitteet.html#cb10-1480"></a><span class="co"># taulu42 &lt;- ISSP2012esim2.dat %&gt;% tableX(maa,age_cat,type = &quot;count&quot;)</span></span>
+<span id="cb10-1481"><a href="liitteet.html#cb10-1481"></a><span class="co"># kable(taulu42,digits = 2, caption = &quot;Ikäluokka age_cat&quot;)</span></span>
+<span id="cb10-1482"><a href="liitteet.html#cb10-1482"></a><span class="co">#</span></span>
+<span id="cb10-1483"><a href="liitteet.html#cb10-1483"></a></span>
+<span id="cb10-1484"><a href="liitteet.html#cb10-1484"></a><span class="co"># Taulukoita (4.2.20)</span></span>
+<span id="cb10-1485"><a href="liitteet.html#cb10-1485"></a></span>
+<span id="cb10-1486"><a href="liitteet.html#cb10-1486"></a><span class="co">#ISSP2012esim1b.dat %&gt;%</span></span>
+<span id="cb10-1487"><a href="liitteet.html#cb10-1487"></a><span class="co">#    tableX(maa,age_cat,type = &quot;count&quot;) %&gt;%</span></span>
+<span id="cb10-1488"><a href="liitteet.html#cb10-1488"></a><span class="co">#    kable(digits = 2, caption = &quot;Ikäluokka age_cat&quot;)</span></span>
+<span id="cb10-1489"><a href="liitteet.html#cb10-1489"></a><span class="co">#</span></span>
+<span id="cb10-1490"><a href="liitteet.html#cb10-1490"></a><span class="co">#ISSP2012esim1b.dat %&gt;%</span></span>
+<span id="cb10-1491"><a href="liitteet.html#cb10-1491"></a><span class="co">#    tableX(maa,age_cat,type = &quot;row_perc&quot;) %&gt;%</span></span>
+<span id="cb10-1492"><a href="liitteet.html#cb10-1492"></a><span class="co">#    kable(digits = 2, caption = &quot;age_cat: suhteelliset frekvenssit&quot;)</span></span>
+<span id="cb10-1493"><a href="liitteet.html#cb10-1493"></a></span>
+<span id="cb10-1494"><a href="liitteet.html#cb10-1494"></a><span class="co"># ga - ikäluokka ja sukupuoli</span></span>
+<span id="cb10-1495"><a href="liitteet.html#cb10-1495"></a></span>
+<span id="cb10-1496"><a href="liitteet.html#cb10-1496"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span><span class="kw">mutate</span>(ISSP2012esim1b.dat,</span>
+<span id="cb10-1497"><a href="liitteet.html#cb10-1497"></a>                        <span class="dt">ga =</span> <span class="kw">case_when</span>((age_cat <span class="op">==</span><span class="st"> &quot;1&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;m&quot;</span>) <span class="op">~</span><span class="st"> &quot;m1&quot;</span>,</span>
+<span id="cb10-1498"><a href="liitteet.html#cb10-1498"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;2&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;m&quot;</span>) <span class="op">~</span><span class="st"> &quot;m2&quot;</span>,</span>
+<span id="cb10-1499"><a href="liitteet.html#cb10-1499"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;3&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;m&quot;</span>) <span class="op">~</span><span class="st"> &quot;m3&quot;</span>,</span>
+<span id="cb10-1500"><a href="liitteet.html#cb10-1500"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;4&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;m&quot;</span>) <span class="op">~</span><span class="st"> &quot;m4&quot;</span>,</span>
+<span id="cb10-1501"><a href="liitteet.html#cb10-1501"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;5&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;m&quot;</span>) <span class="op">~</span><span class="st"> &quot;m5&quot;</span>,</span>
+<span id="cb10-1502"><a href="liitteet.html#cb10-1502"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;6&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;m&quot;</span>) <span class="op">~</span><span class="st"> &quot;m6&quot;</span>,</span>
+<span id="cb10-1503"><a href="liitteet.html#cb10-1503"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;1&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;f&quot;</span>) <span class="op">~</span><span class="st"> &quot;f1&quot;</span>,</span>
+<span id="cb10-1504"><a href="liitteet.html#cb10-1504"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;2&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;f&quot;</span>) <span class="op">~</span><span class="st"> &quot;f2&quot;</span>,</span>
+<span id="cb10-1505"><a href="liitteet.html#cb10-1505"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;3&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;f&quot;</span>) <span class="op">~</span><span class="st"> &quot;f3&quot;</span>,</span>
 <span id="cb10-1506"><a href="liitteet.html#cb10-1506"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;4&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;f&quot;</span>) <span class="op">~</span><span class="st"> &quot;f4&quot;</span>,</span>
-<span id="cb10-1507"><a href="liitteet.html#cb10-1507"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;5&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;f&quot;</span>) <span class="op">~</span><span class="st"> &quot;f5&quot;</span>,</span>
-<span id="cb10-1508"><a href="liitteet.html#cb10-1508"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;6&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;f&quot;</span>) <span class="op">~</span><span class="st"> &quot;f6&quot;</span>,</span>
-<span id="cb10-1509"><a href="liitteet.html#cb10-1509"></a>                                       <span class="ot">TRUE</span> <span class="op">~</span><span class="st"> &quot;missing&quot;</span></span>
-<span id="cb10-1510"><a href="liitteet.html#cb10-1510"></a>                                  ))</span>
-<span id="cb10-1511"><a href="liitteet.html#cb10-1511"></a></span>
-<span id="cb10-1512"><a href="liitteet.html#cb10-1512"></a><span class="co">#ISSP2012esim1.dat %&gt;% tableX(ga,ga2) # tarkistus</span></span>
-<span id="cb10-1513"><a href="liitteet.html#cb10-1513"></a><span class="co"># muuttujien tarkistuksia 19.9.2018</span></span>
-<span id="cb10-1514"><a href="liitteet.html#cb10-1514"></a><span class="co"># str(ISSP2012esim1b.dat$ga) # chr-muuttuja, mutta toimii (4.2.20)</span></span>
-<span id="cb10-1515"><a href="liitteet.html#cb10-1515"></a></span>
-<span id="cb10-1516"><a href="liitteet.html#cb10-1516"></a><span class="co">#Tulostetaan taulukkoina ga - muuttuja</span></span>
-<span id="cb10-1517"><a href="liitteet.html#cb10-1517"></a></span>
-<span id="cb10-1518"><a href="liitteet.html#cb10-1518"></a><span class="co">#ISSP2012esim1b.dat %&gt;% tableX(maa,ga,type = &quot;count&quot;) %&gt;%</span></span>
-<span id="cb10-1519"><a href="liitteet.html#cb10-1519"></a><span class="co">#kable(digits = 2, caption = &quot;Ikäluokka ja sukupuoli ga&quot;)</span></span>
-<span id="cb10-1520"><a href="liitteet.html#cb10-1520"></a></span>
-<span id="cb10-1521"><a href="liitteet.html#cb10-1521"></a><span class="co">#ISSP2012esim1b.dat %&gt;% tableX(maa,ga,type = &quot;row_perc&quot;) %&gt;%</span></span>
-<span id="cb10-1522"><a href="liitteet.html#cb10-1522"></a><span class="co">#kable(digits = 2, caption = &quot;ga: suhteelliset frekvenssit&quot;)</span></span>
-<span id="cb10-1523"><a href="liitteet.html#cb10-1523"></a></span>
+<span id="cb10-1507"><a href="liitteet.html#cb10-1507"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;4&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;f&quot;</span>) <span class="op">~</span><span class="st"> &quot;f4&quot;</span>,</span>
+<span id="cb10-1508"><a href="liitteet.html#cb10-1508"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;5&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;f&quot;</span>) <span class="op">~</span><span class="st"> &quot;f5&quot;</span>,</span>
+<span id="cb10-1509"><a href="liitteet.html#cb10-1509"></a>                                       (age_cat <span class="op">==</span><span class="st"> &quot;6&quot;</span>)<span class="op">&amp;</span>(sp <span class="op">==</span><span class="st"> &quot;f&quot;</span>) <span class="op">~</span><span class="st"> &quot;f6&quot;</span>,</span>
+<span id="cb10-1510"><a href="liitteet.html#cb10-1510"></a>                                       <span class="ot">TRUE</span> <span class="op">~</span><span class="st"> &quot;missing&quot;</span></span>
+<span id="cb10-1511"><a href="liitteet.html#cb10-1511"></a>                                  ))</span>
+<span id="cb10-1512"><a href="liitteet.html#cb10-1512"></a></span>
+<span id="cb10-1513"><a href="liitteet.html#cb10-1513"></a><span class="co">#ISSP2012esim1.dat %&gt;% tableX(ga,ga2) # tarkistus</span></span>
+<span id="cb10-1514"><a href="liitteet.html#cb10-1514"></a><span class="co"># muuttujien tarkistuksia 19.9.2018</span></span>
+<span id="cb10-1515"><a href="liitteet.html#cb10-1515"></a><span class="co"># str(ISSP2012esim1b.dat$ga) # chr-muuttuja, mutta toimii (4.2.20)</span></span>
+<span id="cb10-1516"><a href="liitteet.html#cb10-1516"></a></span>
+<span id="cb10-1517"><a href="liitteet.html#cb10-1517"></a><span class="co">#Tulostetaan taulukkoina ga - muuttuja</span></span>
+<span id="cb10-1518"><a href="liitteet.html#cb10-1518"></a></span>
+<span id="cb10-1519"><a href="liitteet.html#cb10-1519"></a><span class="co">#ISSP2012esim1b.dat %&gt;% tableX(maa,ga,type = &quot;count&quot;) %&gt;%</span></span>
+<span id="cb10-1520"><a href="liitteet.html#cb10-1520"></a><span class="co">#kable(digits = 2, caption = &quot;Ikäluokka ja sukupuoli ga&quot;)</span></span>
+<span id="cb10-1521"><a href="liitteet.html#cb10-1521"></a></span>
+<span id="cb10-1522"><a href="liitteet.html#cb10-1522"></a><span class="co">#ISSP2012esim1b.dat %&gt;% tableX(maa,ga,type = &quot;row_perc&quot;) %&gt;%</span></span>
+<span id="cb10-1523"><a href="liitteet.html#cb10-1523"></a><span class="co">#kable(digits = 2, caption = &quot;ga: suhteelliset frekvenssit&quot;)</span></span>
 <span id="cb10-1524"><a href="liitteet.html#cb10-1524"></a></span>
-<span id="cb10-1525"><a href="liitteet.html#cb10-1525"></a>gaTestCA1 &lt;-<span class="st"> </span><span class="kw">ca</span>(<span class="op">~</span>ga <span class="op">+</span><span class="st"> </span>Q1b,ISSP2012esim1b.dat)</span>
-<span id="cb10-1526"><a href="liitteet.html#cb10-1526"></a></span>
+<span id="cb10-1525"><a href="liitteet.html#cb10-1525"></a></span>
+<span id="cb10-1526"><a href="liitteet.html#cb10-1526"></a>gaTestCA1 &lt;-<span class="st"> </span><span class="kw">ca</span>(<span class="op">~</span>ga <span class="op">+</span><span class="st"> </span>Q1b,ISSP2012esim1b.dat)</span>
 <span id="cb10-1527"><a href="liitteet.html#cb10-1527"></a></span>
-<span id="cb10-1528"><a href="liitteet.html#cb10-1528"></a><span class="co"># Maapisteiden pääkoordinaatit janojen piirtämiseen</span></span>
-<span id="cb10-1529"><a href="liitteet.html#cb10-1529"></a></span>
-<span id="cb10-1530"><a href="liitteet.html#cb10-1530"></a>gaTestCA1.rpc &lt;-<span class="st"> </span>gaTestCA1<span class="op">$</span>rowcoord <span class="op">%*%</span><span class="st"> </span><span class="kw">diag</span>(gaTestCA1<span class="op">$</span>sv)</span>
-<span id="cb10-1531"><a href="liitteet.html#cb10-1531"></a></span>
-<span id="cb10-1532"><a href="liitteet.html#cb10-1532"></a><span class="co"># par(cex = 0.6)</span></span>
-<span id="cb10-1533"><a href="liitteet.html#cb10-1533"></a><span class="kw">plot</span>(gaTestCA1, <span class="dt">main =</span> <span class="st">&quot;symmetrinen kartta, m = mies, f = nainen&quot;</span>,</span>
-<span id="cb10-1534"><a href="liitteet.html#cb10-1534"></a>     <span class="dt">sub =</span> <span class="st">&quot;1=15-25, 2 =26-35, 3=36-45, 4=46-55, 5=56-65, 6= 66 tai vanhempi &quot;</span>)</span>
-<span id="cb10-1535"><a href="liitteet.html#cb10-1535"></a><span class="co"># naiset</span></span>
-<span id="cb10-1536"><a href="liitteet.html#cb10-1536"></a><span class="kw">lines</span>(gaTestCA1.rpc[<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>,<span class="dv">1</span>],gaTestCA1.rpc[<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>,<span class="dv">2</span>])</span>
-<span id="cb10-1537"><a href="liitteet.html#cb10-1537"></a><span class="co">#miehet</span></span>
-<span id="cb10-1538"><a href="liitteet.html#cb10-1538"></a><span class="kw">lines</span>(gaTestCA1.rpc[<span class="dv">7</span><span class="op">:</span><span class="dv">12</span>,<span class="dv">1</span>],gaTestCA1.rpc[<span class="dv">7</span><span class="op">:</span><span class="dv">12</span>,<span class="dv">2</span>], <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>)</span>
-<span id="cb10-1539"><a href="liitteet.html#cb10-1539"></a></span>
-<span id="cb10-1540"><a href="liitteet.html#cb10-1540"></a><span class="kw">summary</span>(gaTestCA1)</span>
-<span id="cb10-1541"><a href="liitteet.html#cb10-1541"></a></span>
-<span id="cb10-1542"><a href="liitteet.html#cb10-1542"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span><span class="kw">mutate</span>(ISSP2012esim1b.dat,</span>
-<span id="cb10-1543"><a href="liitteet.html#cb10-1543"></a>                             <span class="dt">maaga =</span> <span class="kw">paste</span>(maa, ga, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>))</span>
-<span id="cb10-1544"><a href="liitteet.html#cb10-1544"></a></span>
-<span id="cb10-1545"><a href="liitteet.html#cb10-1545"></a><span class="co"># tarkistus, muunnos ok</span></span>
-<span id="cb10-1546"><a href="liitteet.html#cb10-1546"></a><span class="co"># ISSP2012esim1b.dat %&gt;% tableX(maa, maaga)</span></span>
-<span id="cb10-1547"><a href="liitteet.html#cb10-1547"></a><span class="co"># head(ISSP2012esim2.dat)</span></span>
-<span id="cb10-1548"><a href="liitteet.html#cb10-1548"></a><span class="co"># str(ISSP2012esim2.dat)</span></span>
-<span id="cb10-1549"><a href="liitteet.html#cb10-1549"></a></span>
-<span id="cb10-1550"><a href="liitteet.html#cb10-1550"></a>maagaCA1 &lt;-<span class="st"> </span><span class="kw">ca</span>(<span class="op">~</span>maaga <span class="op">+</span><span class="st"> </span>Q1b,ISSP2012esim1b.dat)</span>
-<span id="cb10-1551"><a href="liitteet.html#cb10-1551"></a><span class="kw">par</span>(<span class="dt">cex =</span> <span class="fl">0.5</span>)</span>
-<span id="cb10-1552"><a href="liitteet.html#cb10-1552"></a><span class="kw">plot</span>(maagaCA1, <span class="dt">main =</span> <span class="st">&quot;symmetrinen kartta 1&quot;</span>,</span>
-<span id="cb10-1553"><a href="liitteet.html#cb10-1553"></a>                <span class="dt">sub =</span> <span class="st">&quot;cex=0.5&quot;</span>)</span>
-<span id="cb10-1554"><a href="liitteet.html#cb10-1554"></a></span>
-<span id="cb10-1555"><a href="liitteet.html#cb10-1555"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/substvar_fi_Q1Q2.png&#39;</span>)</span>
-<span id="cb10-1556"><a href="liitteet.html#cb10-1556"></a><span class="co">#Testataan koodilohkojen listausta, näyttää toimivan mutta vaatii vielä säätämistä.</span></span>
-<span id="cb10-1557"><a href="liitteet.html#cb10-1557"></a><span class="co">#Ohje löytyi [Yihui Xienin blogista](https://yihui.name/en/2018/09/code-appendix/)</span></span>
-<span id="cb10-1558"><a href="liitteet.html#cb10-1558"></a><span class="co">#(luettu 26.10.2018).</span></span>
-<span id="cb10-1559"><a href="liitteet.html#cb10-1559"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/BookdownProc.png&#39;</span>)</span></code></pre></div>
+<span id="cb10-1528"><a href="liitteet.html#cb10-1528"></a></span>
+<span id="cb10-1529"><a href="liitteet.html#cb10-1529"></a><span class="co"># Maapisteiden pääkoordinaatit janojen piirtämiseen</span></span>
+<span id="cb10-1530"><a href="liitteet.html#cb10-1530"></a></span>
+<span id="cb10-1531"><a href="liitteet.html#cb10-1531"></a>gaTestCA1.rpc &lt;-<span class="st"> </span>gaTestCA1<span class="op">$</span>rowcoord <span class="op">%*%</span><span class="st"> </span><span class="kw">diag</span>(gaTestCA1<span class="op">$</span>sv)</span>
+<span id="cb10-1532"><a href="liitteet.html#cb10-1532"></a></span>
+<span id="cb10-1533"><a href="liitteet.html#cb10-1533"></a><span class="co"># par(cex = 0.6)</span></span>
+<span id="cb10-1534"><a href="liitteet.html#cb10-1534"></a><span class="kw">plot</span>(gaTestCA1, <span class="dt">main =</span> <span class="st">&quot;symmetrinen kartta, m = mies, f = nainen&quot;</span>,</span>
+<span id="cb10-1535"><a href="liitteet.html#cb10-1535"></a>     <span class="dt">sub =</span> <span class="st">&quot;1=15-25, 2 =26-35, 3=36-45, 4=46-55, 5=56-65, 6= 66 tai vanhempi &quot;</span>)</span>
+<span id="cb10-1536"><a href="liitteet.html#cb10-1536"></a><span class="co"># naiset</span></span>
+<span id="cb10-1537"><a href="liitteet.html#cb10-1537"></a><span class="kw">lines</span>(gaTestCA1.rpc[<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>,<span class="dv">1</span>],gaTestCA1.rpc[<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>,<span class="dv">2</span>])</span>
+<span id="cb10-1538"><a href="liitteet.html#cb10-1538"></a><span class="co">#miehet</span></span>
+<span id="cb10-1539"><a href="liitteet.html#cb10-1539"></a><span class="kw">lines</span>(gaTestCA1.rpc[<span class="dv">7</span><span class="op">:</span><span class="dv">12</span>,<span class="dv">1</span>],gaTestCA1.rpc[<span class="dv">7</span><span class="op">:</span><span class="dv">12</span>,<span class="dv">2</span>], <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>)</span>
+<span id="cb10-1540"><a href="liitteet.html#cb10-1540"></a></span>
+<span id="cb10-1541"><a href="liitteet.html#cb10-1541"></a><span class="kw">summary</span>(gaTestCA1)</span>
+<span id="cb10-1542"><a href="liitteet.html#cb10-1542"></a></span>
+<span id="cb10-1543"><a href="liitteet.html#cb10-1543"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span><span class="kw">mutate</span>(ISSP2012esim1b.dat,</span>
+<span id="cb10-1544"><a href="liitteet.html#cb10-1544"></a>                             <span class="dt">maaga =</span> <span class="kw">paste</span>(maa, ga, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>))</span>
+<span id="cb10-1545"><a href="liitteet.html#cb10-1545"></a></span>
+<span id="cb10-1546"><a href="liitteet.html#cb10-1546"></a><span class="co"># tarkistus, muunnos ok</span></span>
+<span id="cb10-1547"><a href="liitteet.html#cb10-1547"></a><span class="co"># ISSP2012esim1b.dat %&gt;% tableX(maa, maaga)</span></span>
+<span id="cb10-1548"><a href="liitteet.html#cb10-1548"></a><span class="co"># head(ISSP2012esim2.dat)</span></span>
+<span id="cb10-1549"><a href="liitteet.html#cb10-1549"></a><span class="co"># str(ISSP2012esim2.dat)</span></span>
+<span id="cb10-1550"><a href="liitteet.html#cb10-1550"></a></span>
+<span id="cb10-1551"><a href="liitteet.html#cb10-1551"></a>maagaCA1 &lt;-<span class="st"> </span><span class="kw">ca</span>(<span class="op">~</span>maaga <span class="op">+</span><span class="st"> </span>Q1b,ISSP2012esim1b.dat)</span>
+<span id="cb10-1552"><a href="liitteet.html#cb10-1552"></a><span class="kw">par</span>(<span class="dt">cex =</span> <span class="fl">0.5</span>)</span>
+<span id="cb10-1553"><a href="liitteet.html#cb10-1553"></a><span class="kw">plot</span>(maagaCA1, <span class="dt">main =</span> <span class="st">&quot;symmetrinen kartta 1&quot;</span>,</span>
+<span id="cb10-1554"><a href="liitteet.html#cb10-1554"></a>                <span class="dt">sub =</span> <span class="st">&quot;cex=0.5&quot;</span>)</span>
+<span id="cb10-1555"><a href="liitteet.html#cb10-1555"></a></span>
+<span id="cb10-1556"><a href="liitteet.html#cb10-1556"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/substvar_fi_Q1Q2.png&#39;</span>)</span>
+<span id="cb10-1557"><a href="liitteet.html#cb10-1557"></a><span class="co">#Testataan koodilohkojen listausta, näyttää toimivan mutta vaatii vielä säätämistä.</span></span>
+<span id="cb10-1558"><a href="liitteet.html#cb10-1558"></a><span class="co">#Ohje löytyi [Yihui Xienin blogista](https://yihui.name/en/2018/09/code-appendix/)</span></span>
+<span id="cb10-1559"><a href="liitteet.html#cb10-1559"></a><span class="co">#(luettu 26.10.2018).</span></span>
+<span id="cb10-1560"><a href="liitteet.html#cb10-1560"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/BookdownProc.png&#39;</span>)</span></code></pre></div>
 </div>
 <div id="tekninen-ympäristö-ja-bookdown-paketti" class="section level2">
 <h2><span class="header-section-number">7.6</span> Tekninen ympäristö ja Bookdown-paketti</h2>

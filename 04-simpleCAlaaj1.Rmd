@@ -16,7 +16,7 @@ kartan avulla perustellaan, miten pisteitä voidaaan lisätä.
 
 **Data ja taulukko aluejaosta**
 
-```{r BeDeAluedat1, echo = FALSE, include=FALSE}
+```{r BeDeAluedat1, echo = FALSE}
 
 # Belgian ja Saksan aluejako maa3-muuttujassa
 # str(ISSP2012esim1.dat$maa3)
@@ -47,13 +47,14 @@ suppoint1_tab1 <- rbind(suppoint1_tab1, suppoint2_tab1)
 ```
 
 Taulukko, Saksan ja Belgian alueet ja maaprofiilit.
-```{r BeDealueTable1, echo=TRUE, eval=FALSE, include=FALSE}
-## riviprofiilitaulukko aiheuttaa virheen PDF-tulostuksessa
+```{r BeDealueTable1, echo=TRUE, eval=TRUE, include=FALSE}
+# riviprofiilitaulukko aiheuttaa virheen PDF-tulostuksessa 
+# 
 
-#BeDealueTable <- ISSP2012esim1.dat %>% tableX(maa3, Q1b, type = "row_perc")
+BeDealueTable <- ISSP2012esim1.dat %>% tableX(maa3, Q1b, type = "row_perc")
 
-#knitr::kable(BeDealueTable , digits = 2, booktabs = TRUE,
-#             caption = "Q1b vastaukset, Saksan ja Belgian alueet")
+knitr::kable(BeDealueTable , digits = 2, booktabs = TRUE,
+            caption = "Q1b vastaukset, Saksan ja Belgian alueet")
 
 # Q1b vastaukset, Saksan ja Belgian alueet
 # S	s	?	e	E	Total
