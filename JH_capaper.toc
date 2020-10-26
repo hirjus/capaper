@@ -1,0 +1,40 @@
+\babel@toc {finnish}{}
+\contentsline {chapter}{Alkutoimia}{5}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Johdanto}{7}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Tutkielman tavoite)}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Tärkeimmät lähteet ja ohjelmistot}{8}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Lähteet}{8}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Käytetyt ohjelmistot}{9}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Korrespondenssianalyysin historiaa}{9}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Data}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Datan luku ja perusmuokkaukset}{11}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Maat ja muuttujat}{11}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Aineiston kuvailu (tietosisältö)}{12}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Aineiston rajaaminen maat ja muuttujat}{13}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Yksinkertainen korrespondenssianalyysi}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Äiti töissä -kärsiikö lapsi?}{17}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Kahden muuttujan frekvenssitaulukon analyysi}{17}{section.3.2}%
+\contentsline {section}{\numberline {3.3}CA - esimerkki}{20}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Korrespondenssianalyysin peruskäsitteet}{21}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Asymmetrinen kartta ja ideaalipisteet}{21}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.5}Kontribuutiot kartalla}{23}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Massat}{24}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Täydentävät pisteet (supplementary points)}{27}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Saksan ja Belgian alueet}{27}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Symmetrinen kartta}{29}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}CA:n numeeriset tulokset}{29}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot}{31}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Yksinkertaisen korrespondenssianalyysin laajennuksia 2 - yhteisvaikutusmuuttujat}{37}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Ikä ja sukupuoli}{37}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Ikä ja sukupuoli}{38}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Ikä, sukupuoli ja maa}{40}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Korrespondenssianalyysin laajennuksia 3 - osajoukon CA}{43}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Monimuuttuja-korrespondenssianalyysi (MCA) ja yhdistetyt taulukot}{45}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Pinotut ja yhdistetyt taulukot (stacked and concatenated tables)}{45}{section.7.1}%
+\contentsline {section}{\numberline {7.2}MCA - monimuuttujakorrespondenssianalyysi}{46}{section.7.2}%
+\contentsline {chapter}{Liitteet}{47}{chapter*.3}%
+\contentsline {section}{\numberline {7.3}Korrespondenssianalyysin teoriaa}{47}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Suomenkielinen lomake (esimerkki)}{47}{section.7.4}%
+\contentsline {section}{\numberline {7.5}R - koodi}{48}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Tekninen ympäristö ja Bookdown-paketti}{82}{section.7.6}%

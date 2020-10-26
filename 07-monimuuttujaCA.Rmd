@@ -1,15 +1,51 @@
-# Monimuuttuja-korrespondenssianalyysi (MCA) ja yhdistetyt taulukot
+# Monimuuttuja-korrespondenssianalyysi (MCA)
 
-**edit** Kaksi tutkimusasetelmaa: kahden muuttujajoukon väliset yhteydet ja
-muuttujajoukon sisäiset yhteydet.
+**k** MG:n jäsentely CA:n  tutkimusasetelmista (within - between), kokoaan myös 
+edeltävät analyysit "saman katon alle".
 
-**edit** Matemaattisesti kaikki muuttuu paljon mutkikkaammaksi, ja yksinkertaisen
-perustapauksen selkeät tulkinnat eivät toimi. Tärkeä asia: CA:n skaalausominaisuudet ja
-visuaalinen tulkinta pätevät edelleen.
+**k1** kahden muuttujuajoukon väliset yhteydet
 
-**edit** Teorialiitteessä tästä enemmän, ranskalaiset edelleen eri mieltä.
+**k2** yhden muuttujajoukon muuttujien väliset yhteydet
 
-**edit** CA on hajonnan (intertian) dekomponoinnin menetelmä.
+**k3** wrt samples ja wrt variables
+
+**k4** Yksinkertaisesta monimutkaisempaan
+0. Täydentävät pisteet tulkinnan apuna, yleistyökaluna ("jack of all trades but
+master of none") esitelty ensimmäisenä. Tärkeä lisä kaikissa analyyseissä.
+
+1. yhteisvaikutusmuuttujat **K4-1**
+-max kolmen muuttujan yhtesivaikutusmuuttuja - taulukko harsoontuu
+
+
+2. Yksi "selitettävä" muuttuja, useampi "selittävä" **K4-2"**
+- pinotut taulukot (käytännössä matriisit, helpompi pinota R:ssä, Burtin taulun käyttö)
+
+3. Taulukoiden yhdistäminen yleisemmin  **K4-3**
+
+- monta "selittäjää" ja "selitettävää": taulukoita päällekkäin ja rinnakkain, lohkomatriisi
+- ABBA: voidaan esim. jakaa taulukko (viite) osatauluiksi
+- tästä hieman tarkemmin teorialiitteessä;symmetriset taulut (esim. vastaukset
+eri vuosina, isän ja pojan ammatti), matched matrices
+
+4. MCA **K4-4**
+
+**K-n**
+
+**tulkinnan tärkeimmät periaatteet**
+
+- kaikki erot suhteellisia eroja
+- ca-ratkaisu approksimaatio; voi olla hyvä, mutta myös huono
+-CA on hajonnan (intertian) dekomponoinnin menetelmä. 
+- Toiset (esim. MG,"ranskalaiset") painottavat graafista menetelmää ja kuvien oikeaa tulkintaa),
+voi ymmärtää myös moniulotteisenä skaalauksena (MDS: etsi skaalaus, joka maksimoi
+korrelaation) tai moniulotteisena varianssianalyysinä (ANOVA)
+- tulkinnan tarkennus molemmissa alaluvuissa
+
+**edit* Tässä jaksossa korostuu data-analyyin eksplotatiivinen luonne, datan kaivelu
+ja näkökulmien muuntelu. Missä dimensiossa yhteydet ja riippuvuudet piileksivät?
+Kartta on tässä mielessä kartta(vaikka hieman outo), osoittaa yhdessä numeeristen
+tulosten kanssa suuntaa.
+
 
 ## Pinotut ja yhdistetyt taulukot (stacked and concatenated tables)
 
@@ -29,6 +65,12 @@ kysymyspatterit luotaavat tietoa joistain taustalla olevista asenteista.
 **edit** yksi kappale, jossa tutkimusasetelmaa verrataan tilastollisten mallien
 asetelmaan? Jako "selittäjiin" ja selitettävään, moniyhtälömallit?
 Faktorianalyysi tässä selkein vertailukohde
+
+**k** Matemaattisesti kaikki muuttuu paljon mutkikkaammaksi, ja yksinkertaisen
+perustapauksen selkeät tulkinnat eivät toimi. Tärkeä asia: CA:n skaalausominaisuudet ja
+visuaalinen tulkinta pätevät edelleen.
+
+**edit** Teorialiitteessä tästä enemmän, ranskalaiset hieman eri mieltä
 
 **k** Data
 

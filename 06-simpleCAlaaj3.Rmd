@@ -1,6 +1,34 @@
-# Yksinkertaisen korrespondenssianalyysin laajennuksia 3 - osajoukon CA
+# Korrespondenssianalyysin laajennuksia 3 - osajoukon CA
 
-**xyz** Yksinkertainen korrespondenssianalyysi on menetelmän tulkinnan perusta.
-laajentaa monipuolisempiin tutkimusasetelmiin. Varsinainen useamman muuttujan
-korrespondenssianalyysi / monimuuttuja-CA (MCA - multiple correspondence analysis)
-esitellään seuraavassa luvussa.
+**k** Osajoukon korrespondenssianalyysin tarve: kuvat menevät tukkoon. Kun muuttujia
+on paljon, kartat kertovat vain hyvin yleisiä ja tunnettuja asioita (MG).
+
+**k** Teoreettinen idea: inertian dekomoponointi (taas). Lasketaan ensin 
+ca-ratkaisu ja rajataan aineisto. Yksinkertainen toteuttaa. Massat ja reunajakaumat
+säilyvä, ja siksi aineiston ("pilven") kokonaisinertia voidaan jakaa osiin
+osajoukkojen inertiaksi. Uusia yhteyksiä näkyviin, tarkempi kuva datasta.
+
+**k** Subset-CA:n vaihtoehdot 
+1. Kuvan suurentaminen (png, pdf vektorigrafiikka) näytöllä - hyvä ensiaskel
+2. Kuva-alueen rajaaminen R-koodissa toimii hyvin, jos pitää tarkentaa kuvaa origon
+lähelle.
+
+Ongelma: kaikki havainnot ja muuttujien kategoriat määräävät edelleen koordinaatiston.
+
+
+Lähteet MG ja Prado (2006)[@RefWorks:doc:5a857a44e4b0ed2d44664d87], 
+"vihreä kirja" [@RefWorks:doc:5ab76b43e4b003f4468d1f07],
+CAiP [@RefWorks:doc:5a857a43e4b0ed2d44664d78].
+
+**k** Simple CA subset
+
+**k1** Täydentävät pisteet voi ottaa mukaan jos ne eivät ole rajatusta "pilvestä".
+Esim. rivien osajoukon analyysiin voi ottaa sarakepisteitä täydeäntvinä pisteinä
+normaalisti. Osajoukon profiilit muuttuvat, niiden summa ei enään ole yksi,
+barysentristä ominaisuutta ei voi suoraan käyttää täydentävien rivipisteiden
+koordinaattien laskemiseen.
+
+
+
+
+

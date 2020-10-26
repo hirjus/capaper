@@ -107,3 +107,10 @@ peruskäsittelyn R-koodilohkot. Versionumero 0.08. PDF-tulostus ei toimi.
 	yksi kartta.
 
 	**25.10.2020** PDF-tulostus ei toimi, julkaistan myös "html_book" yhtenä tiedostona, voi tulostaa selaimella pdf-muotoon.
+	
+	**26.10.2020**
+	
+	PDF-tulostus ei toimi, ei välitetä tästä. Lokitiedot ja tex-tiedosto, josta saan
+	"suoraan" renderöityä jonkinlaisen pdf-tulosteen, mutta ilman lähdeviitteitä jne.
+	
+	Editointia, jäsentelyä loppulukuihin.
