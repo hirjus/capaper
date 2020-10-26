@@ -113,6 +113,10 @@ peruskäsittelyn R-koodilohkot. Versionumero 0.08. PDF-tulostus ei toimi.
 	PDF-tulostus ei toimi, ei välitetä tästä. Lokitiedot ja tex-tiedosto, josta saan
 	"suoraan" renderöityä jonkinlaisen pdf-tulosteen, mutta ilman lähdeviitteitä jne.
 	Editointia, jäsentelyä loppulukuihin.
-	**26.10.2020**
+
+**26.10.2020**
 	Analyysi ja kommenteja lisätty subsetCA-jakson loppuun. Muutama tulostus mukana
 	CA:n numerisista tuloksista, poistetaan niistä suurin osa kun teksti on valmis.
+
+**26.10.2020 Versio 0.4**
+Koodi siirretty capaperiin, jonkin verran kommentteja lisäilty. Outo ilmiö, koodiliitteeseen tulostuu myös koodilohkojen output?

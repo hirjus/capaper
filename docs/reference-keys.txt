@@ -23,6 +23,12 @@ fig:maagaCA2sub2map1
 fig:maagaCA2sub2map2
 fig:maagaCA2sub2map3
 fig:maagaCA2sub3map1
+fig:concat1map1
+fig:concat1map2
+fig:MCA1map1
+fig:MCA1map2
+fig:subsetMCA1map1
+fig:subsetMCA1map2
 fig:L1suomlom1
 tab:unnamed-chunk-2
 fig:L3bdprocess1
@@ -58,6 +64,7 @@ ikä-sukupuoli-ja-maa
 korrespondenssianalyysin-laajennuksia-3---osajoukon-ca
 monimuuttuja-korrespondenssianalyysi-mca
 pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables
+matched-matrices
 mca---monimuuttujakorrespondenssianalyysi
 korrespondenssianalyysin-teoriaa
 suomenkielinen-lomake-esimerkki
