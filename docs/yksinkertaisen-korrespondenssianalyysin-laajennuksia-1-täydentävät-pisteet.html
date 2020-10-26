@@ -424,6 +424,9 @@ kartat ovat sellaisia kuin ovat.</p>
 <h2><span class="header-section-number">4.4</span> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</h2>
 <p><strong>k</strong> Ei kovin hyviä kuvia, mutta periaate on tärkeä. Kartta on approksimaatio,
 pitää päättää milloin se on tarpeeksi hyvä. Tai mille pisteille hyvä, mille huonompi.</p>
+<p><strong>edit 26.10.2020</strong> summary-funktio ei toimi, kun dimensioita CA-ratkaisussa kolme.
+Numeeriset tulokset voisi laskea “käsityönä”. Kehno kvalitetti 2d-ratkaisussa saa
+kuvissa selityksen.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb6-1"></a>suppointCA3 &lt;-<span class="st"> </span><span class="kw">ca</span>(<span class="op">~</span>maa3 <span class="op">+</span><span class="st"> </span>Q1b,ISSP2012esim1.dat, <span class="dt">nd =</span> <span class="dv">3</span>)</span>
 <span id="cb6-2"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb6-2"></a></span>
 <span id="cb6-3"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb6-3"></a><span class="co"># summary(suppointCA3)</span></span>

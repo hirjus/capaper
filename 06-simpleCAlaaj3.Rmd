@@ -10,6 +10,7 @@ osajoukkojen inertiaksi. Uusia yhteyksiä näkyviin, tarkempi kuva datasta.
 
 **k** Subset-CA:n vaihtoehdot 
 1. Kuvan suurentaminen (png, pdf vektorigrafiikka) näytöllä - hyvä ensiaskel
+
 2. Kuva-alueen rajaaminen R-koodissa toimii hyvin, jos pitää tarkentaa kuvaa origon
 lähelle.
 
@@ -28,7 +29,125 @@ normaalisti. Osajoukon profiilit muuttuvat, niiden summa ei enään ole yksi,
 barysentristä ominaisuutta ei voi suoraan käyttää täydentävien rivipisteiden
 koordinaattien laskemiseen.
 
+**edit** tarina jatkuu MCA-jaksossa, jossa subset aivan oleellinen asia.
+
+```{r maagaSubDKDEFI, echo=F}
+# Osajoukon CA: Tanska, Saksa ja Suomi
+maagaCA2sub2 <- ca(~maaga + Q1b,ISSP2012esim1b.dat,subsetrow = 25:60)
+
+```
+
+```{r maagaCA2sub2map1, echo=F, fig.cap= "Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi", fig.asp = 1, out.width = "90%",fig.align = "center"}
+par(cex = 0.8)
+plot(maagaCA2sub2, main = "Q1b: Lapsi kärsii jos äiti käy töissä",
+     sub = "symmetrinen kartta - Tanska, Saksa ja Suomi (subset ca), cex = 0.7")
+
+```
+
+```{r maagaCA2sub2map2,echo=F, fig.cap= "Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi", fig.asp = 1, out.width = "90%",fig.align = "center"}
+# ca-tulosobjekti maagaCA2sub2, DK DE FI
+
+maagaLinesDKDEFI <- cacoord(maagaCA2sub2, type = "symmetric")
+maagaLinesDKDEFI <- maagaLinesDKDEFI$rows[ , 1:2]
+# maagaLinesDKDEFI # tarkistus
+par(cex = 0.6)
+plot(maagaCA2sub2,
+     sub = "symmetrinen kartta - Tanska, Saksa ja Suomi (subset ca)")
+lines(maagaLinesDKDEFI[1:6,1],maagaLinesDKDEFI[1:6,2], col="blue") #DEf
+lines(maagaLinesDKDEFI[7:12,1],maagaLinesDKDEFI[7:12,2], col="red")  #DEm
+lines(maagaLinesDKDEFI[13:18,1],maagaLinesDKDEFI[13:18,2], col="blue") #DKf
+lines(maagaLinesDKDEFI[19:24,1],maagaLinesDKDEFI[19:24,2], col="red")  #DKm
+lines(maagaLinesDKDEFI[25:30,1],maagaLinesDKDEFI[25:30,2], col="blue") #FIf
+lines(maagaLinesDKDEFI[31:36,1],maagaLinesDKDEFI[31:36,2], col="red")  #FIm
+
+```
+
+```{r maagaCA2sub2map3,echo=F, fig.cap= "Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi", fig.asp = 1, out.width = "90%",fig.align = "center"}
+par(cex = 0.6)
+plot(maagaCA2sub2, map = "rowgreen",
+     mass = c(TRUE, TRUE),
+     contrib =c("relative", "absolute"),
+     arrows = c(FALSE, TRUE),
+     main = "Kontribuutiokartta: sarakkeiden(abs.) ja rivien(rel.) värisävy",
+     sub = "massat pisteiden kokoina, cex=0.06"
+      )
+```
 
 
 
+```{r maagaCA2sub2num1, echo=F}
+# Tarkastetaan numeeriset tulokset
+summary(maagaCA2sub2)
 
+```
+
+**Tulkintaa**
+
+Kolmen maan osajoukon ratkaisussa 2. dimensiolla (maltillinen liberaali?) on
+inertiasta 17 prosenttia, edellä ollut paljon yksiulotteisempia ratkaisuja. Huono kvaliteetti
+on DEf1 (467) ja DEf6 (48!), DEm4 (285). Tanskan havainnoista vanhimmat miehet
+(DKm6,291) ovat kaikkein huonoimmin esitettyjä ratkaisussa, ja hieman nuoremmatkin
+(DKm5, 682). Suomen aineistossa vain nuoret miehet (FIm1, 624) on esitetty kartalla
+huonosti. Kaksi dimensiot selittävät osajoukon kokonaishajonnasta 92%, mutta muutaman
+ryhmän hajonta on muissa dimensioissa. Saksan naisten iäkkäin ikäluokka (DEf6)
+ja keski-ikäisen miehet (DEm4) vain näyttävät olevan lähekkäin origon tuntumassa,
+samoin muutama muu huonosti tasoon sijoitettu piste.
+
+Huonosti kuvatuista pisteistä ei kuva ei siis kerro oikeastaan mitään muuta.
+
+Sarakkeet on esitetty kohtalaisen hyvin, ja symmetrisessä kartassa tärkeimmälle
+dimensioille projisodut sarakepisteet ovat odotetussa järjestyksessä.
+
+Kontribuutiokartasta nähdään, että tärkein kontrasti on tiukan erimielisyyden (E)
+ja kaikkien muiden vastausvaihtoehtojen välillä. Epävarmojen tai maltillisten (e)
+kontrasti hallitsee toista dimensiota, erityisesti S- ja s- kategorioiden kanssa.
+Samalla kuvasta näkee (ja numeerisist tuloksista voi vahvistaa), että S-piste on
+on lähempänä (kulma on pienempi) pystyakselia. Kontribuutio on suurempi (147 vs.
+71 x-akselille). Toisaalta x-akseli selittää selvästi suurimman osan kaikkien muiden
+sarakepisteiden inertiasta, ja y-akseli taas lähes täysin e-pisteen inertian.
+
+```{r maagaBEBGHU, echo=T}
+# Belgia, Bulgaria ja Unkari analysoidaan tiiviisti
+# Belgia on vähän välitapaus Bulgarian ja Unkarin ja kolmen ensimmäisen maan
+# kanssa. Kokeiluja voi tehdä neljällä maaryhmällä, kuvan lukukelpoisuus
+# ratkaisee.
+
+#BGHUsubset <- c(13:24,61:72)
+#BEDEDKFIsubset <- c(1:12, 25:36, 37:48, 49:60)
+#DEDKFIsubset <- c(25:36, 37:48, 49:60)
+
+BEBGHUsubset <- c(1:12,13:24,61:72)
+maagaCA2sub3 <- ca(~maaga + Q1b,ISSP2012esim1b.dat,subsetrow = BEBGHUsubset)
+
+```
+
+
+```{r  maagaCA2sub3map1,echo=F, fig.cap= "Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari", fig.asp = 1, out.width = "90%",fig.align = "center"}
+
+par(cex = 0.6)
+plot(maagaCA2sub3, map = "rowgreen",
+     mass = c(TRUE, TRUE),
+     contrib =c("relative", "absolute"),
+     arrows = c(FALSE, TRUE),
+     main = "Kontribuutiokartta: sarakkeiden(abs.) ja rivien(rel.) värisävy",
+     sub = "massat pisteiden kokoina, cex=0.06"
+      )
+
+
+```
+
+```{r maagaCA2sub3num1}
+# Vilkaistaa numeerisia tuloksia, kopioidaan tekstiin jos on tarpeen
+# maagaCA2sub3
+ summary(maagaCA2sub3)
+
+# kahden osaratkaisun kokonaisinertia
+
+# 0.143551 + 0.119602 = 0.263153
+# koko datalla 0.263154
+
+```
+
+
+Kahden osajoukon inertioiden summa on sama kuin koko aineiston, Selitysasteet
+kuitenkin nousevat, mutta vielä oleellisempaa on kahden aika erilaisen ryhmän havaitseminen. Belgian jotkun pisteet: huono kvaliteetti (BEf1, BEf5,BEm1, BEm2). Bulgaria ja Unkari hyvin esitetty. Belgia on pulmallinen tapaus, omissa dimensioissaan.

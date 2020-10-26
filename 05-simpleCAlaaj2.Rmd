@@ -201,11 +201,16 @@ plot(maagaCA1, main = "symmetrinen kartta 1",
 
 ```
 
+```{r maagaCA1num}
+# Vilkaistaan numeerisia tuloksia, kopioidaan tekstiin jos on tarpeellista
+summary(maagaCA1)
 
-**edit** Stabiilius - teorialiitteessä laajemmin mutta tässä lyhyt vilkaisu.
-Taulukko alkaa harveta, jo edellä kerrottiin että aineisto painottuu kaikissa maissa
-vanhempiin ikäluokkiin.
+```
 
-**yksinkertainen tarkistus** Löytyykö riviproviileja joilla pieni massa ja suuri
-kontribuutio? Ei löydy, mutta jo kuvan tukkoisuus vaatii luokkien yhdistelyä.
-Aika työlästä!
+
+**k** Stabiilius - teorialiitteessä laajemmin mutta tässä lyhyt vilkaisu.
+Taulukko alkaa harveta, edellä kerrottiin että aineisto painottuu kaikissa maissa
+vanhempiin ikäluokkiin. 
+
+**yksinkertainen tarkistus?** Löytyykö riviproviileja joilla pieni massa ja suuri
+kontribuutio? Ei löydy (Galkussa tuloksia), mutta jo kuvan tukkoisuus vaatii luokkien yhdistelyä. Aika työlästä!

@@ -19,6 +19,10 @@ fig:suppointCA3map2
 fig:suppointCA3map3
 fig:gaCA1map
 fig:maagaCA1map1
+fig:maagaCA2sub2map1
+fig:maagaCA2sub2map2
+fig:maagaCA2sub2map3
+fig:maagaCA2sub3map1
 fig:L1suomlom1
 tab:unnamed-chunk-2
 fig:L3bdprocess1
