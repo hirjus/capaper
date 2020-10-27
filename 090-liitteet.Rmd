@@ -16,7 +16,7 @@ knitr::include_graphics('img/substvar_fi_Q1Q2.png')
 
 
 
-```{r ref.label=knitr::all_labels(), echo = FALSE, eval = TRUE}
+```{r ref.label=knitr::all_labels(), echo = T, eval=F}
 #Testataan koodilohkojen listausta, näyttää toimivan mutta vaatii vielä säätämistä.
 #Ohje löytyi [Yihui Xienin blogista](https://yihui.name/en/2018/09/code-appendix/)
 #(luettu 26.10.2018).

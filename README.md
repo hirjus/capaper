@@ -120,3 +120,5 @@ peruskäsittelyn R-koodilohkot. Versionumero 0.08. PDF-tulostus ei toimi.
 
 **26.10.2020 Versio 0.4**
 Koodi siirretty capaperiin, jonkin verran kommentteja lisäilty. Outo ilmiö, koodiliitteeseen tulostuu myös koodilohkojen output?
+
+**27.10.2020** R-koodi tulostuu ok.
