@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fi" xml:lang="fi">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Luku 4 Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet | Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</title>
+  <meta name="description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Luku 4 Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet | Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä." />
+  <meta name="github-repo" content="hirjus/capaper" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Luku 4 Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet | Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä" />
+  
+  <meta name="twitter:description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä." />
+  
+
+<meta name="author" content="Jussi Hirvonen" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="yksinkertainen-korrespondenssianalyysi.html"/>
+<link rel="next" href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Alkutoimia</a></li>
+<li class="chapter" data-level="1" data-path="johdanto.html"><a href="johdanto.html"><i class="fa fa-check"></i><b>1</b> Johdanto</a><ul>
+<li class="chapter" data-level="1.1" data-path="johdanto.html"><a href="johdanto.html#tutkielman-tavoite"><i class="fa fa-check"></i><b>1.1</b> Tutkielman tavoite)</a></li>
+<li class="chapter" data-level="1.2" data-path="johdanto.html"><a href="johdanto.html#tärkeimmät-lähteet-ja-ohjelmistot"><i class="fa fa-check"></i><b>1.2</b> Tärkeimmät lähteet ja ohjelmistot</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="johdanto.html"><a href="johdanto.html#lähteet"><i class="fa fa-check"></i><b>1.2.1</b> Lähteet</a></li>
+<li class="chapter" data-level="1.2.2" data-path="johdanto.html"><a href="johdanto.html#käytetyt-ohjelmistot"><i class="fa fa-check"></i><b>1.2.2</b> Käytetyt ohjelmistot</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="johdanto.html"><a href="johdanto.html#korrespondenssianalyysin-historiaa"><i class="fa fa-check"></i><b>1.3</b> Korrespondenssianalyysin historiaa</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#datan-luku-ja-perusmuokkaukset"><i class="fa fa-check"></i><b>2.1</b> Datan luku ja perusmuokkaukset</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="data.html"><a href="data.html#maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.1.1</b> Maat ja muuttujat</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="data.html"><a href="data.html#aineiston-kuvailu-tietosisältö"><i class="fa fa-check"></i><b>2.2</b> Aineiston kuvailu (tietosisältö)</a></li>
+<li class="chapter" data-level="2.3" data-path="data.html"><a href="data.html#aineiston-rajaaminen-maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.3</b> Aineiston rajaaminen maat ja muuttujat</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>3</b> Yksinkertainen korrespondenssianalyysi</a><ul>
+<li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä--kärsiikö-lapsi"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä -kärsiikö lapsi?</a></li>
+<li class="chapter" data-level="3.2" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#kahden-muuttujan-frekvenssitaulukon-analyysi"><i class="fa fa-check"></i><b>3.2</b> Kahden muuttujan frekvenssitaulukon analyysi</a></li>
+<li class="chapter" data-level="3.3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#ca---esimerkki"><i class="fa fa-check"></i><b>3.3</b> CA - esimerkki</a></li>
+<li class="chapter" data-level="3.4" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#korrespondenssianalyysin-peruskäsitteet"><i class="fa fa-check"></i><b>3.4</b> Korrespondenssianalyysin peruskäsitteet</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#asymmetrinen-kartta-ja-ideaalipisteet"><i class="fa fa-check"></i><b>3.4.1</b> Asymmetrinen kartta ja ideaalipisteet</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#kontribuutiot-kartalla"><i class="fa fa-check"></i><b>3.5</b> Kontribuutiot kartalla</a></li>
+<li class="chapter" data-level="3.6" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#massat"><i class="fa fa-check"></i><b>3.6</b> Massat</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><i class="fa fa-check"></i><b>4</b> Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet</a><ul>
+<li class="chapter" data-level="4.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#täydentävät-pisteet-supplementary-points"><i class="fa fa-check"></i><b>4.1</b> Täydentävät pisteet (supplementary points)</a></li>
+<li class="chapter" data-level="4.2" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#saksan-ja-belgian-alueet"><i class="fa fa-check"></i><b>4.2</b> Saksan ja Belgian alueet</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#symmetrinen-kartta"><i class="fa fa-check"></i><b>4.2.1</b> Symmetrinen kartta</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#can-numeeriset-tulokset"><i class="fa fa-check"></i><b>4.3</b> CA:n numeeriset tulokset</a></li>
+<li class="chapter" data-level="4.4" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#esimerkki-3d--kartasta---saksan-ja-belgian-dimensiot"><i class="fa fa-check"></i><b>4.4</b> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><i class="fa fa-check"></i><b>5</b> Yksinkertaisen korrespondenssianalyysin laajennuksia 2 - yhteisvaikutusmuuttujat</a><ul>
+<li class="chapter" data-level="5.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#ikä-ja-sukupuoli"><i class="fa fa-check"></i><b>5.1</b> Ikä ja sukupuoli</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#ikä-ja-sukupuoli-1"><i class="fa fa-check"></i><b>5.1.1</b> Ikä ja sukupuoli</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#ikä-sukupuoli-ja-maa"><i class="fa fa-check"></i><b>5.2</b> Ikä, sukupuoli ja maa</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="korrespondenssianalyysin-laajennuksia-3-osajoukon-ca.html"><a href="korrespondenssianalyysin-laajennuksia-3-osajoukon-ca.html"><i class="fa fa-check"></i><b>6</b> Korrespondenssianalyysin laajennuksia 3 - osajoukon CA</a></li>
+<li class="chapter" data-level="7" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html"><i class="fa fa-check"></i><b>7</b> Monimuuttuja-korrespondenssianalyysi (MCA)</a><ul>
+<li class="chapter" data-level="7.1" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables"><i class="fa fa-check"></i><b>7.1</b> Pinotut ja yhdistetyt taulukot (stacked and concatenated tables)</a></li>
+<li class="chapter" data-level="7.2" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#matched-matrices"><i class="fa fa-check"></i><b>7.2</b> Matched matrices</a></li>
+<li class="chapter" data-level="7.3" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#mca---monimuuttujakorrespondenssianalyysi"><i class="fa fa-check"></i><b>7.3</b> MCA - monimuuttujakorrespondenssianalyysi</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="liitteet.html"><a href="liitteet.html"><i class="fa fa-check"></i>Liitteet</a><ul>
+<li class="chapter" data-level="7.4" data-path="liitteet.html"><a href="liitteet.html#korrespondenssianalyysin-teoriaa"><i class="fa fa-check"></i><b>7.4</b> Korrespondenssianalyysin teoriaa</a></li>
+<li class="chapter" data-level="7.5" data-path="liitteet.html"><a href="liitteet.html#suomenkielinen-lomake-esimerkki"><i class="fa fa-check"></i><b>7.5</b> Suomenkielinen lomake (esimerkki)</a></li>
+<li class="chapter" data-level="7.6" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>7.6</b> R - koodi</a></li>
+<li class="chapter" data-level="7.7" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>7.7</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lähteet-1.html"><a href="lähteet-1.html"><i class="fa fa-check"></i>Lähteet</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1---täydentävät-pisteet" class="section level1">
+<h1><span class="header-section-number">Luku 4</span> Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet</h1>
+<p><strong>edit</strong> Edellisssä luvussa selitetty barysentrinen keskiarvopiste;
+teorialiitteessä hieman laveammin.</p>
+<p><strong>edit</strong> CA:n joustava käyttö vaatii matriisioperaatioita, ja muuta datan rakenteen
+muokkausta (rivien lisääminen input-dataan jne.).</p>
+<div id="täydentävät-pisteet-supplementary-points" class="section level2">
+<h2><span class="header-section-number">4.1</span> Täydentävät pisteet (supplementary points)</h2>
+<p>Tekstistä oma dokkari, eri käyttötapaukset lyhyesti. Edellisen luvun asymmetrisen
+kartan avulla perustellaan, miten pisteitä voidaaan lisätä.</p>
+</div>
+<div id="saksan-ja-belgian-alueet" class="section level2">
+<h2><span class="header-section-number">4.2</span> Saksan ja Belgian alueet</h2>
+<p><strong>Data ja taulukko aluejaosta</strong></p>
+<p>Taulukko, Saksan ja Belgian alueet ja maaprofiilit.</p>
+<table>
+<caption><span id="tab:BeDealueTable1">Taulukko 4.1: </span>Q1b vastaukset, Saksan ja Belgian alueet</caption>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">S</th>
+<th align="left">s</th>
+<th align="left">?</th>
+<th align="left">e</th>
+<th align="left">E</th>
+<th align="left">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">bF</td>
+<td align="left">5.04</td>
+<td align="left">23.81</td>
+<td align="left">25.89</td>
+<td align="left">30.83</td>
+<td align="left">14.43</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">bW</td>
+<td align="left">10.82</td>
+<td align="left">21.02</td>
+<td align="left">18.57</td>
+<td align="left">24.08</td>
+<td align="left">25.51</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">bB</td>
+<td align="left">17.03</td>
+<td align="left">20.94</td>
+<td align="left">16.63</td>
+<td align="left">23.87</td>
+<td align="left">21.53</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">BG</td>
+<td align="left">12.81</td>
+<td align="left">42.89</td>
+<td align="left">22.26</td>
+<td align="left">20.63</td>
+<td align="left">1.41</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">dW</td>
+<td align="left">11.40</td>
+<td align="left">26.82</td>
+<td align="left">11.83</td>
+<td align="left">32.13</td>
+<td align="left">17.82</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">dE</td>
+<td align="left">5.85</td>
+<td align="left">11.33</td>
+<td align="left">10.97</td>
+<td align="left">29.80</td>
+<td align="left">42.05</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">DK</td>
+<td align="left">5.04</td>
+<td align="left">17.15</td>
+<td align="left">10.95</td>
+<td align="left">16.71</td>
+<td align="left">50.14</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">FI</td>
+<td align="left">4.23</td>
+<td align="left">16.94</td>
+<td align="left">13.42</td>
+<td align="left">38.11</td>
+<td align="left">27.30</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">HU</td>
+<td align="left">21.97</td>
+<td align="left">28.89</td>
+<td align="left">22.57</td>
+<td align="left">19.06</td>
+<td align="left">7.52</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">All</td>
+<td align="left">9.95</td>
+<td align="left">23.76</td>
+<td align="left">16.79</td>
+<td align="left">26.10</td>
+<td align="left">23.41</td>
+<td align="left">100.00</td>
+</tr>
+</tbody>
+</table>
+<p><strong>edit</strong> Riviprofiilitaulukko, kuvataan alueiden eroja. CA-analyysi kuitenkin koko
+aineiston frekfvenssitaululla, jossa rivien massat eivät ole samat.</p>
+<div id="symmetrinen-kartta" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Symmetrinen kartta</h3>
+<div class="figure" style="text-align: center"><span id="fig:suppointCA2map1"></span>
+<img src="JH_capaper_files/figure-html/suppointCA2map1-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
+<p class="caption">
+Kuva 4.1: Q1b: Saksan ja Belgian aluejako
+</p>
+</div>
+<p><strong>k</strong> Maaåpisteet alueiden barysentrinen keskiarvo. Tulkinta.</p>
+<div class="figure" style="text-align: center"><span id="fig:suppointCA2map2"></span>
+<img src="JH_capaper_files/figure-html/suppointCA2map2-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
+<p class="caption">
+Kuva 4.2: Q1b: Saksan ja Belgian aluejako
+</p>
+</div>
+<p><strong>k</strong> Kontribuutiokartta, kontribuutio värisävyinä ja massat pisteiden kokona.
+Yleiskuvaan riittävä, ei kovin selkeä yksityiskohdissa. Motivaatio seuraavalle
+jaksolle.Skaalataan asymmetrisen kuvan sarakevektoreita (jotka standardikoordinaateissa)
+hieman lähemmäs origoa.</p>
+<p><strong>k</strong> Kaukana on kaukana, mutta lähellä voi olla myös kaukana.</p>
+</div>
+</div>
+<div id="can-numeeriset-tulokset" class="section level2">
+<h2><span class="header-section-number">4.3</span> CA:n numeeriset tulokset</h2>
+<p><strong>edit</strong> Teorialiitteessä selitetään tarkemmin numeeristen tulosten tausta, tässä
+apuneuvo (a) kuvan tulkinnan varmistamiseen ja (b) approksimaation laadun
+tarkistamiseen.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb2-1"></a>suppointCA2</span></code></pre></div>
+<pre><code>## 
+##  Principal inertias (eigenvalues):
+##            1        2        3        4       
+## Value      0.154101 0.032489 0.014294 0.008944
+## Percentage 73.44%   15.48%   6.81%    4.26%   
+## 
+## 
+##  Rows:
+##                bF        bW       bB       BG        dW        dE        DK
+## Mass     0.124279  0.060174 0.062753 0.113103  0.143313  0.067174  0.170453
+## ChiDist  0.341469  0.096258 0.239034 0.630991  0.219094  0.505720  0.634063
+## Inertia  0.014491  0.000558 0.003586 0.045032  0.006879  0.017180  0.068528
+## Dim. 1   0.400065 -0.090631 0.216912 1.502458  0.254323 -1.262007 -1.506022
+## Dim. 2  -1.254042  0.267998 0.789358 0.236498 -0.451124 -0.226595  1.121468
+##                FI       HU    BE (*)    DE (*)
+## Mass     0.136313 0.122436        NA        NA
+## ChiDist  0.347733 0.550404  0.157974  0.175013
+## Inertia  0.016483 0.037091        NA        NA
+## Dim. 1  -0.525222 1.215462  0.234127 -0.229593
+## Dim. 2  -1.500986 1.280342 -0.364834 -0.379468
+## 
+## 
+##  Columns:
+##                S        s         ?         e         E
+## Mass    0.099472 0.237627  0.167874  0.260960  0.234066
+## ChiDist 0.592824 0.354761  0.332288  0.280549  0.672594
+## Inertia 0.034959 0.029907  0.018536  0.020540  0.105887
+## Dim. 1  1.073310 0.787257  0.649789 -0.029859 -1.688108
+## Dim. 2  1.835133 0.290929 -0.119934 -1.451548  0.629110</code></pre>
+<p><strong>k</strong> Lyhyt selostus - nämä aika selkeitä</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb4-1"></a><span class="kw">summary</span>(suppointCA2)</span></code></pre></div>
+<pre><code>## 
+## Principal inertias (eigenvalues):
+## 
+##  dim    value      %   cum%   scree plot               
+##  1      0.154101  73.4  73.4  ******************       
+##  2      0.032489  15.5  88.9  ****                     
+##  3      0.014294   6.8  95.7  **                       
+##  4      0.008944   4.3 100.0  *                        
+##         -------- -----                                 
+##  Total: 0.209828 100.0                                 
+## 
+## 
+## Rows:
+##       name   mass  qlt  inr    k=1 cor  ctr    k=2 cor  ctr  
+## 1  |    bF |  124  650   69 |  157 212   20 | -226 438  195 |
+## 2  |    bW |   60  388    3 |  -36 137    0 |   48 252    4 |
+## 3  |    bB |   63  481   17 |   85 127    3 |  142 354   39 |
+## 4  |    BG |  113  878  215 |  590 874  255 |   43   5    6 |
+## 5  |    dW |  143  345   33 |  100 208    9 |  -81 138   29 |
+## 6  |    dE |   67  966   82 | -495 960  107 |  -41   7    3 |
+## 7  |    DK |  170  971  327 | -591 869  387 |  202 102  214 |
+## 8  |    FI |  136  957   79 | -206 352   38 | -271 605  307 |
+## 9  |    HU |  122  927  177 |  477 751  181 |  231 176  201 |
+## 10 | (*)BE | &lt;NA&gt;  512 &lt;NA&gt; |   92 338 &lt;NA&gt; |  -66 173 &lt;NA&gt; |
+## 11 | (*)DE | &lt;NA&gt;  418 &lt;NA&gt; |  -90 265 &lt;NA&gt; |  -68 153 &lt;NA&gt; |
+## 
+## Columns:
+##     name   mass  qlt  inr    k=1 cor ctr    k=2 cor ctr  
+## 1 |    S |   99  816  167 |  421 505 115 |  331 311 335 |
+## 2 |    s |  238  781  143 |  309 759 147 |   52  22  20 |
+## 3 |      |  168  594   88 |  255 589  71 |  -22   4   2 |
+## 4 |    e |  261  871   98 |  -12   2   0 | -262 870 550 |
+## 5 |    E |  234  999  505 | -663 971 667 |  113  28  93 |</code></pre>
+<p><strong>k</strong> Tulosteen käsitteiden esittely - tavoite kuvan laadun varmistus, akselien
+tulkinnan tarkistus. Tarkemmin teorialiitteessä. Tästä pitäisi nähdä, miksi seuraavat
+kartat ovat sellaisia kuin ovat.</p>
+</div>
+<div id="esimerkki-3d--kartasta---saksan-ja-belgian-dimensiot" class="section level2">
+<h2><span class="header-section-number">4.4</span> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</h2>
+<p><strong>k</strong> Ei kovin hyviä kuvia, mutta periaate on tärkeä. Kartta on approksimaatio,
+pitää päättää milloin se on tarpeeksi hyvä. Tai mille pisteille hyvä, mille huonompi.</p>
+<p><strong>edit 26.10.2020</strong> summary-funktio ei toimi, kun dimensioita CA-ratkaisussa kolme.
+Numeeriset tulokset voisi laskea “käsityönä”. Kehno kvalitetti 2d-ratkaisussa saa
+kuvissa selityksen.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb6-1"></a>suppointCA3 &lt;-<span class="st"> </span><span class="kw">ca</span>(<span class="op">~</span>maa3 <span class="op">+</span><span class="st"> </span>Q1b,ISSP2012esim1.dat, <span class="dt">nd =</span> <span class="dv">3</span>)</span>
+<span id="cb6-2"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb6-2"></a></span>
+<span id="cb6-3"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb6-3"></a><span class="co"># summary(suppointCA3)</span></span>
+<span id="cb6-4"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#cb6-4"></a><span class="co"># Error in rsc %*% diag(sv) : non-conformable arguments</span></span></code></pre></div>
+<strong>Kolme karttaa</strong>
+<div class="figure" style="text-align: center"><span id="fig:suppointCA3map1"></span>
+<img src="JH_capaper_files/figure-html/suppointCA3map1-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
+<p class="caption">
+Kuva 4.3: Q1b: Saksan ja Belgian aluejako
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:suppointCA3map2"></span>
+<img src="JH_capaper_files/figure-html/suppointCA3map2-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
+<p class="caption">
+Kuva 4.4: Q1b: Saksan ja Belgian aluejako
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:suppointCA3map3"></span>
+<img src="JH_capaper_files/figure-html/suppointCA3map3-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
+<p class="caption">
+Kuva 4.5: Q1b: Saksan ja Belgian aluejako
+</p>
+</div>
+<p><strong>k</strong> Tulkinta.</p>
+<p><strong>k</strong> kokeilu 3d-grafiikalla - toinen riittää</p>
+<p><img src="img/3dSymMap_1.PNG" width="398" /><img src="img/3dSymMap_2.PNG" width="445" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="yksinkertainen-korrespondenssianalyysi.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["JH_capaper.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

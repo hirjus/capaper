@@ -13,7 +13,7 @@
   
   
   <meta property="og:description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä." />
-  
+  <meta name="github-repo" content="hirjus/capaper" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä" />
@@ -50,6 +50,8 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -132,7 +134,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Alkutoimia</a></li>
 <li class="chapter" data-level="1" data-path="johdanto.html"><a href="johdanto.html"><i class="fa fa-check"></i><b>1</b> Johdanto</a><ul>
-<li class="chapter" data-level="1.1" data-path="johdanto.html"><a href="johdanto.html#tutkielman-tavoite-tutkimusongelma"><i class="fa fa-check"></i><b>1.1</b> Tutkielman tavoite (tutkimusongelma?)</a></li>
+<li class="chapter" data-level="1.1" data-path="johdanto.html"><a href="johdanto.html#tutkielman-tavoite"><i class="fa fa-check"></i><b>1.1</b> Tutkielman tavoite)</a></li>
 <li class="chapter" data-level="1.2" data-path="johdanto.html"><a href="johdanto.html#tärkeimmät-lähteet-ja-ohjelmistot"><i class="fa fa-check"></i><b>1.2</b> Tärkeimmät lähteet ja ohjelmistot</a><ul>
 <li class="chapter" data-level="1.2.1" data-path="johdanto.html"><a href="johdanto.html#lähteet"><i class="fa fa-check"></i><b>1.2.1</b> Lähteet</a></li>
 <li class="chapter" data-level="1.2.2" data-path="johdanto.html"><a href="johdanto.html#käytetyt-ohjelmistot"><i class="fa fa-check"></i><b>1.2.2</b> Käytetyt ohjelmistot</a></li>
@@ -140,23 +142,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3" data-path="johdanto.html"><a href="johdanto.html#korrespondenssianalyysin-historiaa"><i class="fa fa-check"></i><b>1.3</b> Korrespondenssianalyysin historiaa</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Data</a><ul>
-<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#datan-luku-ja-perusmuokkaukset-testailua"><i class="fa fa-check"></i><b>2.1</b> Datan luku ja perusmuokkaukset: testailua</a><ul>
+<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#datan-luku-ja-perusmuokkaukset"><i class="fa fa-check"></i><b>2.1</b> Datan luku ja perusmuokkaukset</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="data.html"><a href="data.html#maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.1.1</b> Maat ja muuttujat</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="data.html"><a href="data.html#aineiston-kuvailu-tietosisältö"><i class="fa fa-check"></i><b>2.2</b> Aineiston kuvailu (tietosisältö)</a></li>
-<li class="chapter" data-level="2.3" data-path="data.html"><a href="data.html#aineiston-rajaaminen"><i class="fa fa-check"></i><b>2.3</b> Aineiston rajaaminen</a></li>
-<li class="chapter" data-level="2.4" data-path="data.html"><a href="data.html#aineiston-kuvailu-tunnuslukuja"><i class="fa fa-check"></i><b>2.4</b> Aineiston kuvailu (tunnuslukuja)</a></li>
+<li class="chapter" data-level="2.3" data-path="data.html"><a href="data.html#aineiston-rajaaminen-maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.3</b> Aineiston rajaaminen maat ja muuttujat</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>3</b> Yksinkertainen korrespondenssianalyysi</a><ul>
-<li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä</a></li>
+<li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä--kärsiikö-lapsi"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä -kärsiikö lapsi?</a></li>
 <li class="chapter" data-level="3.2" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#kahden-muuttujan-frekvenssitaulukon-analyysi"><i class="fa fa-check"></i><b>3.2</b> Kahden muuttujan frekvenssitaulukon analyysi</a></li>
+<li class="chapter" data-level="3.3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#ca---esimerkki"><i class="fa fa-check"></i><b>3.3</b> CA - esimerkki</a></li>
+<li class="chapter" data-level="3.4" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#korrespondenssianalyysin-peruskäsitteet"><i class="fa fa-check"></i><b>3.4</b> Korrespondenssianalyysin peruskäsitteet</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#asymmetrinen-kartta-ja-ideaalipisteet"><i class="fa fa-check"></i><b>3.4.1</b> Asymmetrinen kartta ja ideaalipisteet</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="yksinkertaisen-korrespondenssianalyysi-tulkinnan-syventäminen.html"><a href="yksinkertaisen-korrespondenssianalyysi-tulkinnan-syventäminen.html"><i class="fa fa-check"></i><b>4</b> Yksinkertaisen korrespondenssianalyysi - tulkinnan syventäminen</a></li>
-<li class="chapter" data-level="5" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia.html"><i class="fa fa-check"></i><b>5</b> Yksinkertaisen korrespondenssianalyysin laajennuksia</a></li>
+<li class="chapter" data-level="3.5" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#kontribuutiot-kartalla"><i class="fa fa-check"></i><b>3.5</b> Kontribuutiot kartalla</a></li>
+<li class="chapter" data-level="3.6" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#massat"><i class="fa fa-check"></i><b>3.6</b> Massat</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><i class="fa fa-check"></i><b>4</b> Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet</a><ul>
+<li class="chapter" data-level="4.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#täydentävät-pisteet-supplementary-points"><i class="fa fa-check"></i><b>4.1</b> Täydentävät pisteet (supplementary points)</a></li>
+<li class="chapter" data-level="4.2" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#saksan-ja-belgian-alueet"><i class="fa fa-check"></i><b>4.2</b> Saksan ja Belgian alueet</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#symmetrinen-kartta"><i class="fa fa-check"></i><b>4.2.1</b> Symmetrinen kartta</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#can-numeeriset-tulokset"><i class="fa fa-check"></i><b>4.3</b> CA:n numeeriset tulokset</a></li>
+<li class="chapter" data-level="4.4" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#esimerkki-3d--kartasta---saksan-ja-belgian-dimensiot"><i class="fa fa-check"></i><b>4.4</b> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><i class="fa fa-check"></i><b>5</b> Yksinkertaisen korrespondenssianalyysin laajennuksia 2 - yhteisvaikutusmuuttujat</a><ul>
+<li class="chapter" data-level="5.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#ikä-ja-sukupuoli"><i class="fa fa-check"></i><b>5.1</b> Ikä ja sukupuoli</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#ikä-ja-sukupuoli-1"><i class="fa fa-check"></i><b>5.1.1</b> Ikä ja sukupuoli</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#ikä-sukupuoli-ja-maa"><i class="fa fa-check"></i><b>5.2</b> Ikä, sukupuoli ja maa</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="korrespondenssianalyysin-laajennuksia-3-osajoukon-ca.html"><a href="korrespondenssianalyysin-laajennuksia-3-osajoukon-ca.html"><i class="fa fa-check"></i><b>6</b> Korrespondenssianalyysin laajennuksia 3 - osajoukon CA</a></li>
+<li class="chapter" data-level="7" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html"><i class="fa fa-check"></i><b>7</b> Monimuuttuja-korrespondenssianalyysi (MCA)</a><ul>
+<li class="chapter" data-level="7.1" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables"><i class="fa fa-check"></i><b>7.1</b> Pinotut ja yhdistetyt taulukot (stacked and concatenated tables)</a></li>
+<li class="chapter" data-level="7.2" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#matched-matrices"><i class="fa fa-check"></i><b>7.2</b> Matched matrices</a></li>
+<li class="chapter" data-level="7.3" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#mca---monimuuttujakorrespondenssianalyysi"><i class="fa fa-check"></i><b>7.3</b> MCA - monimuuttujakorrespondenssianalyysi</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="liitteet.html"><a href="liitteet.html"><i class="fa fa-check"></i>Liitteet</a><ul>
-<li class="chapter" data-level="5.1" data-path="liitteet.html"><a href="liitteet.html#suomenkielinen-lomake-esimerkki"><i class="fa fa-check"></i><b>5.1</b> Suomenkielinen lomake (esimerkki)</a></li>
-<li class="chapter" data-level="5.2" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>5.2</b> R - koodi</a></li>
-<li class="chapter" data-level="5.3" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>5.3</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
+<li class="chapter" data-level="7.4" data-path="liitteet.html"><a href="liitteet.html#korrespondenssianalyysin-teoriaa"><i class="fa fa-check"></i><b>7.4</b> Korrespondenssianalyysin teoriaa</a></li>
+<li class="chapter" data-level="7.5" data-path="liitteet.html"><a href="liitteet.html#suomenkielinen-lomake-esimerkki"><i class="fa fa-check"></i><b>7.5</b> Suomenkielinen lomake (esimerkki)</a></li>
+<li class="chapter" data-level="7.6" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>7.6</b> R - koodi</a></li>
+<li class="chapter" data-level="7.7" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>7.7</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="lähteet-1.html"><a href="lähteet-1.html"><i class="fa fa-check"></i>Lähteet</a></li>
 </ul>
@@ -179,7 +205,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</h1>
 <p class="author"><em>Jussi Hirvonen</em></p>
-<p class="date"><em>Versio 0.1, tulostettu 2020-10-21</em></p>
+<p class="date"><em>Versio 0.4, tulostettu 2020-10-26</em></p>
 </div>
 <div id="alkutoimia" class="section level1 unnumbered">
 <h1>Alkutoimia</h1>
@@ -189,13 +215,17 @@ lisäkonfiguroinnit tiedostoissa _bookdown.yml ja _output.yml.</p>
 _bookdown.yml-tiedostossa.</p>
 <p>RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla),
 ja korjailla skandit jos niissä on vikaa.</p>
-<p><strong>25.10.18</strong></p>
-<p><strong>Ideoita</strong></p>
-<ol style="list-style-type: decimal">
-<li><p>Ehkä automaattista R-kirjastojen dokumentointia voisi harkita?</p></li>
-<li><p>Gitbook-tulosteessa ei saa koodia “piilotettua”, asetus “code_folding: hide” vaatii teeman (theme). _output.yml - tiedostoon lisätty html_book - formaatti, siinä voi tarvittaessa käyttää piilotusta.</p></li>
-<li><p>Versiointi: 0.0n aloittelua, 0.n jäsentely koko paperille, 1.n.n valmiimpaa tekstiä.</p></li>
-</ol>
+<p>Koodi näkyy Galkun tulosteessa (<a href="https://hirjus.github.io/Galku" class="uri">https://hirjus.github.io/Galku</a>), jossa on myös
+pitkiä listauksia muunnosten tarkistuksista ja kuvia eri versioina.</p>
+<p>Koodi kopiodaan Galkusta, kommentoidaan pois tarkistuksia ja muita välitulostuksia.
+Koodin ydinasiat koitetaan pitää samana kuin Galkussa, isommat muuutoksen ensin siellä
+ja sitten tähän projektiin.</p>
+<p><strong>PDF-tulostus oikuttelee Saksan ja Belgian aluejako-datan tai profiilitaulukon
+luonnissa - toistaiseksi vain html-tuloste (24.10.2020)</strong></p>
+<p>Raportti yhtenä html-tiedostona (<a href="https://hirjus.github.io/capaper/JH_capaper.html" class="uri">https://hirjus.github.io/capaper/JH_capaper.html</a>).</p>
+<p>**</p>
+<p>Gitbook-tulosteessa ei saa koodia “piilotettua”, asetus “code_folding: hide” vaatii teeman (theme). _output.yml - tiedostoon lisätty html_book - formaatti, siinä voi tarvittaessa käyttää piilotusta.</p>
+<p>Versiointi: 0.0n aloittelua, 0.n jäsentely koko paperille, 1.n.n valmiimpaa tekstiä.</p>
 
 </div>
             </section>
@@ -246,7 +276,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["JH_ca.pdf"],
+"download": ["JH_capaper.pdf"],
 "toc": {
 "collapse": "subsection"
 }

@@ -1,6 +1,8 @@
 # Data
 
-## Datan luku ja perusmuokkaukset: testailua
+**edit** Teksti vielä vanhoja muistiinpanoja.
+
+## Datan luku ja perusmuokkaukset
 
 ### Maat ja muuttujat
 
@@ -310,7 +312,13 @@ str(ISSP2012jh1c.data) # 32823 obs. of  23 variables, 32969-32823 = 146
 
 ```
 
-Perusmuunnokset - viisi koodilohkoa
+Substanssimuuttujat (9). Jos sukupuoli tai ikä puuttuu, havainto jätetään pois
+(32969-32823 = 146), maa-muuttujassa ei puuttuvia tietoja ole. Lisäksi kuusi
+taustamuuttujaa ( "SEX","AGE","DEGREE", "MAINSTAT", "TOPBOT", "HHCHILDR",
+"MARITAL", "URBRURAL").
+
+
+**Perusmuunnokset - viisi koodilohkoa**
 
 Vaihe 1
 
@@ -912,7 +920,10 @@ validate_that(are_equal(levels(ISSP2012jh1d.dat$Q3bm),
 # testataan vain tasojen määrä, ei labeleita jotka ovat 
 # alkuperäisestä datasta.
 
-# edu, edum
+# edu, edum Huom! Koulutustasoluokitus alkuperäisessä
+# datassa 0-6 (ei muodollista koulusta - korkeampi kolmas aste (maisteri, tohtori)
+# R-faktorissa 1-7
+
 validate_that(length(levels(ISSP2012jh1d.dat$edu)) == 7)
 validate_that(length(levels(ISSP2012jh1d.dat$edum)) == 8)
 
@@ -949,7 +960,7 @@ seurantaraportti([RefWorks:doc:5b155e0ce4b044dfd738458f]).
 **viitteet pois- ehkä tekstiin linkkeinä?**
 
 
-**ks** ISSP (International social survey) on tehnyt laajoja kansainvälisiä kyselytutkimuksia eri teemoista. Yksi teemoista on perhe ja muuttuvat (sosiaalisesti määräytyvät) sukupuoliroolit [@RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a].
+**k** ISSP (International social survey) on tehnyt laajoja kansainvälisiä kyselytutkimuksia eri teemoista. Yksi teemoista on perhe ja muuttuvat (sosiaalisesti määräytyvät) sukupuoliroolit [@RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a].
 
 **zxy** Miksi data on kiinnostava sisällöllisesti? Viite Kantola (HS). Lisäksi laadukas, usealta vuodelta, tarkasti dokumentoitu.
 
@@ -968,56 +979,129 @@ seurantaraportti([RefWorks:doc:5b155e0ce4b044dfd738458f]).
   
   **ks-n**
   
-**zxy** Aineiston ongelmat ja puutteet (tavanomaisten surveyaineistojen ongelmien lisäksi, erityisesti vastauskadon). Kato erikseen, oikeastaan hyvä juttu koska CA soveltuu sen analyysiin.
+**zxy** Aineiston ongelmat ja puutteet (tavanomaisten surveyaineistojen ongelmien
+lisäksi, erityisesti vastauskadon). Kato erikseen, oikeastaan hyvä juttu koska
+CA soveltuu sen analyysiin.
 
-**zxy** Aineisto kuvattava **sisällön** (mitä asiaa, ilmiötä, tällä datalla halutaan valaista), **para- ja metadatan** näkökulmasta (tai ainakin kerrottava mitä on saatavilla). Kolmanneksi aineiston "tilastotieteellinen olemus": otanta-asetelmat, kansalliset versioinnit, harmonisoinnit (esim. puoluekenttä vertailukelpoiseksi).
+**zxy** Aineisto kuvattava **sisällön** (mitä asiaa, ilmiötä, tällä datalla
+halutaan valaista), **para- ja metadatan** näkökulmasta (tai ainakin kerrottava
+mitä on saatavilla). Kolmanneksi aineiston "tilastotieteellinen olemus":
+otanta-asetelmat, kansalliset versioinnit, harmonisoinnit (esim. puoluekenttä
+vertailukelpoiseksi).
 
 
-1. Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu tarkentaa tai muuten hifistellä. Osa kummallisa, erityisesti neutraalin vaihtoehdon puuttuminen (Espanja). Nämä maat pitää sivuuttaa.
+1. Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu tarkentaa tai
+muuten hifistellä. Osa kummallisa, erityisesti neutraalin vaihtoehdon puuttuminen
+(Espanja). Nämä maat jätetään pois.
 
-2. Datassa painot "maatasolle", otanta sun muu kuvattu tarkasti dokumentaatiossa. Jos tutkimusongelma on maiden erojen analyysi, mitään vertailupainoja ei ole käytössä. Otoskoko on paino. Paha juttu, MG oikaisee ja ja oikaisee myös sukupuolien osuudet.
+2. Datassa painot "maatasolle", otanta sun muu kuvattu tarkasti dokumentaatiossa.
+Jos tutkimusongelma on maiden erojen analyysi, mitään vertailupainoja ei ole
+käytössä. Otoskoko on paino. MG oikaisee ja ja oikaisee myös sukupuolien osuudet.
 
   
 
 ## Aineiston kuvailu (tietosisältö)
 
+**ks** "Perhe, työ ja sukupuoliroolit" tutkimuksen teemat, tarkoitus. **Paras**
+lähde Yhteiskuntatieteellisen tietoarkiston palvelu
+(https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&study_language=fi).
 
 
 
 
-**Jäsennys:**
+## Aineiston rajaaminen maat ja muuttujat
+
+**k** maat, samankaltaisia, data saatavilla kiinnostavista muuttujista
+
+**k** muuttujat. Laajasti käyetty, valittu sopiva kysymyspatteri asenteista naisten
+työssäkäyntiin ja joitain taustamuuttujia. Korrespondenssianalyysi on hyvä menetelmä
+aineiston analyysiin: monimutkainen ja laaaja, paljon luokitteluasteikon muuttujia,
+"akvaariositaatti" tähän.
+
+**kysymykset**
+
+**k** Taulukon \@ref(tab:vartable1) kysymysten lyhyet versiot ovat datassa mukana.
+Sarakkeessa "muuttuja" on alkuperäisen aineiston muuttujanimi,
+kysymyksen tunnus on valittuun dataan luotu muuttujanimi. Auttaa vertailemaan tätä
+tutkielmaa moniin ISSP-datalla tehtyihin analyyseihin.
 
 
-1.
+```{r vartable1, echo=FALSE, include=TRUE}
+# Muuttuja taulukkona - karkea tapa
+# HUOM! Taulkot ovat hankalia, kun tulostus halutaan pdf- ja html- formaattiin
+# Kysymyste pitkät versiot on siksi esitetty suomenkielisen lomakkeen kuvana.
 
-2.
+tabVarnames <- c(substvars1,bgvars1) # muuttujanimet muuttujille
 
-3.
+# Kysymysten lyhyet versiot englanniksi
+tabVarDesc <- c("Q1a Working mother can have warm relation with child ",
+                "Q1b Pre-school child suffers through working mother",
+                "Q1c Family life suffers through working mother",
+                "Q1d Women’s preference: home and children",
+                "Q1e Being housewife is satisfying",
+                "Q2a Both should contribute to household income",
+                "Q2b Men’s job is earn money, women’s job household",
+                "Q3a Should women work: Child under school age",
+                "Q3b Should women work: Youngest kid at school",
+                "Respondents age ",
+                "Respondents gender",
+                "Highest completed degree of education: Categories for international comparison",
+                "Main status: work, unemployed, in education...",
+                "Top-Bottom self-placement (10 pt scale)",
+                "How many children in household: children between [school age] and 17 years of age",
+                "Legal partnership status: married, civil partership...",
+                "Place of living: urban - rural"
+              )
+#tabVarDesc
+
+# Taulukko
+
+# luodaan df - varoitus: data_frame() is deprecated, use tibble” (4.2.20),
+# vaihdetaan tibbleen (21.2.20)
+
+# jhVarTable1.df <- data_frame(tabVarnames,tabVarDesc) OLD
+jhVarTable1.tbl <- tibble(tabVarnames,tabVarDesc)
+cols_jhVarTable1 <- c("muuttuja","kysymyksen tunnus, lyhennetty kysymys")
+colnames(jhVarTable1.tbl) <- cols_jhVarTable1
+#str(jhVarTable1.tbl)
+# Lyhyet kysymykset englanniksi
+
+knitr::kable(jhVarTable1.tbl, booktab = TRUE,
+               caption = "ISSP2012:Työelämä ja perhearvot - kysymykset")
+
+```
+
+**k** Kyselylomakkeilla kysymykset olivat hieman pidempiä, kuvassa \@ref(fig:suom-kys) osa suomenkielistä lomaketta.
+
+```{r suom-kys, out.width='50%', fig.align='center',fig.cap='Suomenkielinen lomake'}
+knitr::include_graphics('img/substvar_fi_Q1Q2.png')
+```
 
 
-## Aineiston rajaaminen
 
-**zxy** Viitteitä myös r-ratkaisuihin, jotka selostetaan koodissa. Erityisesti (a) puuttuvat tiedot ja (b) likert-asteikko faktorina (ilman järjestystä).
+**taustamuuttujat**
 
-**puuttuvat** vastaukset aluksi pois (rankka rajaus - vain yksinkertaistus, menetelmän esittelyn vuoksi)
+**k** maa, sukupuoli, haastateltavan ikä, koulutustaso, "virallinen" juridinen
+parisuhdestatus, pääasiallinen toimi (töissä, eläkkeellä jne), lasten lukumäärä
+perheessä ja asuinpaikka (maaseutu,suurkaupunki jne.), oma arvio sosiaalisesta
+asemasta (1-10). Kysymyksiä, tiedot tosin kerätty eri tavoin eri maissa.
 
-**zxy** Aluksi kuusi maata
+Vastaajan ikä
 
-**zxy** Sitten monta maata
+**K** Aineistossa mukana puuttuvat vastaukset, puuttuvia ei ole kolmessa muuttujassa
+(maa, ikä ja sukupuoli). Muutamilla havainnoilla puuttui tieto iästä tai sukupuolesta,
+ja ne rajattiin pois.
 
-
-## Aineiston kuvailu (tunnuslukuja)
-
-
-**zxy** ehkäpä taulukoiden lisäksi Likert-kuva?
+Kuvataan tarkemmin, kun käytetään luvussa 7.
 
 
 
-**viimeiset kappaleet**
+
 
 **Miten aineistoa on käytetty?**. 
 
 **Korrespondenssianalyysin esimerkkiaineistona**
+
 
 Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa (Helsinki 2017 MCA, viite Moodleen?) ja kahdessa oppikirjassa ([@RefWorks:doc:5a857a43e4b0ed2d44664d7c], [@RefWorks:doc:5a857a43e4b0ed2d44664d78]).ISSP - aineisto vuodelta 1989 on käytetty myös neljän "singuaariarvohajoitelmaan perustuvan menetelmän" vertailuun[@RefWorks:doc:5b6f159ce4b0bc0f31734b76]. 
 
@@ -1045,6 +1129,7 @@ Blasius ja Thiessen ([@RefWorks:doc:5b15542ee4b0e2616bc42dca]) arvioivat aineist
 **zxy** www.gesis.org - sivustolta löytyy myös [julkaisuluettelo](https://search.gesis.org/research_data/ZA5900), voiko linkin laittaa alaviitteeksi tai suoraan leipätekstiin?
 
 Sukupuoliroolien (gender roles) ja niihin liittyvien asenteiden vertailevaa kansainvälistä (cross-cultural) tutkimusta on tehty paljon. Tutkimusongelman sisällöllisten ja teoreettisen kysymysten nykytilaa kuvaa Walterin[@RefWorks:doc:5bd08fb6e4b05c5447c9a9f9] tuore artikkeli. Omnibus surveys ?
+
 
 
 

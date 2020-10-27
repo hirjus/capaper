@@ -1,17 +1,28 @@
 # Liitteet {-}
 
+## Korrespondenssianalyysin teoriaa
+
 ## Suomenkielinen lomake (esimerkki)
 
-Yksi kysymys suomenkielisestä lomakkeesta.
+Tämä kuva on myös tekstissä, kätevä tapa esittää siististi kysymysten pitkät
+versiot.
 
 ```{r L1suomlom1, out.width='60%', fig.align='center',fig.cap='Esimerkki suomenkielisestä lomakkeesta'}
-knitr::include_graphics('img/substvarfiQ1Q2.png')
+knitr::include_graphics('img/substvar_fi_Q1Q2.png')
 ```
 
 
 ## R - koodi
 
-Jotenkin tänne.
+
+
+```{r ref.label=knitr::all_labels(), echo = FALSE, eval = TRUE}
+#Testataan koodilohkojen listausta, näyttää toimivan mutta vaatii vielä säätämistä.
+#Ohje löytyi [Yihui Xienin blogista](https://yihui.name/en/2018/09/code-appendix/)
+#(luettu 26.10.2018).
+```
+
+
 
 ## Tekninen ympäristö ja Bookdown-paketti
 
@@ -21,4 +32,3 @@ julkaisutekniikan ympäristön.
 ```{r L3bdprocess1, out.width='60%', fig.align='center',fig.cap='Tulostiedoston prosessointi'}
 knitr::include_graphics('img/BookdownProc.png')
 ```
-

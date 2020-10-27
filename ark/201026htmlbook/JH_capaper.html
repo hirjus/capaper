@@ -1,0 +1,2445 @@
+<!DOCTYPE html>
+<html lang="fi" xml:lang="fi">
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä" />
+<meta property="og:type" content="book" />
+
+
+<meta property="og:description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä." />
+<meta name="github-repo" content="hirjus/capaper" />
+
+<meta name="author" content="Jussi Hirvonen" />
+
+
+
+<meta name="description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä.">
+
+<title>Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script src="libs/navigation-1.1/codefolding.js"></script>
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="#alkutoimia">Alkutoimia</a></li>
+<li class="has-sub"><a href="#johdanto"><span class="toc-section-number">1</span> Johdanto</a><ul>
+<li><a href="#tutkielman-tavoite"><span class="toc-section-number">1.1</span> Tutkielman tavoite)</a></li>
+<li class="has-sub"><a href="#tärkeimmät-lähteet-ja-ohjelmistot"><span class="toc-section-number">1.2</span> Tärkeimmät lähteet ja ohjelmistot</a><ul>
+<li><a href="#lähteet"><span class="toc-section-number">1.2.1</span> Lähteet</a></li>
+<li><a href="#käytetyt-ohjelmistot"><span class="toc-section-number">1.2.2</span> Käytetyt ohjelmistot</a></li>
+</ul></li>
+<li><a href="#korrespondenssianalyysin-historiaa"><span class="toc-section-number">1.3</span> Korrespondenssianalyysin historiaa</a></li>
+</ul></li>
+<li class="has-sub"><a href="#data"><span class="toc-section-number">2</span> Data</a><ul>
+<li class="has-sub"><a href="#datan-luku-ja-perusmuokkaukset"><span class="toc-section-number">2.1</span> Datan luku ja perusmuokkaukset</a><ul>
+<li><a href="#maat-ja-muuttujat"><span class="toc-section-number">2.1.1</span> Maat ja muuttujat</a></li>
+</ul></li>
+<li><a href="#aineiston-kuvailu-tietosisältö"><span class="toc-section-number">2.2</span> Aineiston kuvailu (tietosisältö)</a></li>
+<li><a href="#aineiston-rajaaminen-maat-ja-muuttujat"><span class="toc-section-number">2.3</span> Aineiston rajaaminen maat ja muuttujat</a></li>
+</ul></li>
+<li class="has-sub"><a href="#yksinkertainen-korrespondenssianalyysi"><span class="toc-section-number">3</span> Yksinkertainen korrespondenssianalyysi</a><ul>
+<li><a href="#äiti-töissä--kärsiikö-lapsi"><span class="toc-section-number">3.1</span> Äiti töissä -kärsiikö lapsi?</a></li>
+<li><a href="#kahden-muuttujan-frekvenssitaulukon-analyysi"><span class="toc-section-number">3.2</span> Kahden muuttujan frekvenssitaulukon analyysi</a></li>
+<li><a href="#ca---esimerkki"><span class="toc-section-number">3.3</span> CA - esimerkki</a></li>
+<li class="has-sub"><a href="#korrespondenssianalyysin-peruskäsitteet"><span class="toc-section-number">3.4</span> Korrespondenssianalyysin peruskäsitteet</a><ul>
+<li><a href="#asymmetrinen-kartta-ja-ideaalipisteet"><span class="toc-section-number">3.4.1</span> Asymmetrinen kartta ja ideaalipisteet</a></li>
+</ul></li>
+<li><a href="#kontribuutiot-kartalla"><span class="toc-section-number">3.5</span> Kontribuutiot kartalla</a></li>
+<li><a href="#massat"><span class="toc-section-number">3.6</span> Massat</a></li>
+</ul></li>
+<li class="has-sub"><a href="#yksinkertaisen-korrespondenssianalyysin-laajennuksia-1---täydentävät-pisteet"><span class="toc-section-number">4</span> Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet</a><ul>
+<li><a href="#täydentävät-pisteet-supplementary-points"><span class="toc-section-number">4.1</span> Täydentävät pisteet (supplementary points)</a></li>
+<li class="has-sub"><a href="#saksan-ja-belgian-alueet"><span class="toc-section-number">4.2</span> Saksan ja Belgian alueet</a><ul>
+<li><a href="#symmetrinen-kartta"><span class="toc-section-number">4.2.1</span> Symmetrinen kartta</a></li>
+</ul></li>
+<li><a href="#can-numeeriset-tulokset"><span class="toc-section-number">4.3</span> CA:n numeeriset tulokset</a></li>
+<li><a href="#esimerkki-3d--kartasta---saksan-ja-belgian-dimensiot"><span class="toc-section-number">4.4</span> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</a></li>
+</ul></li>
+<li class="has-sub"><a href="#yksinkertaisen-korrespondenssianalyysin-laajennuksia-2---yhteisvaikutusmuuttujat"><span class="toc-section-number">5</span> Yksinkertaisen korrespondenssianalyysin laajennuksia 2 - yhteisvaikutusmuuttujat</a><ul>
+<li class="has-sub"><a href="#ikä-ja-sukupuoli"><span class="toc-section-number">5.1</span> Ikä ja sukupuoli</a><ul>
+<li><a href="#ikä-ja-sukupuoli-1"><span class="toc-section-number">5.1.1</span> Ikä ja sukupuoli</a></li>
+</ul></li>
+<li><a href="#ikä-sukupuoli-ja-maa"><span class="toc-section-number">5.2</span> Ikä, sukupuoli ja maa</a></li>
+</ul></li>
+<li><a href="#korrespondenssianalyysin-laajennuksia-3---osajoukon-ca"><span class="toc-section-number">6</span> Korrespondenssianalyysin laajennuksia 3 - osajoukon CA</a></li>
+<li class="has-sub"><a href="#monimuuttuja-korrespondenssianalyysi-mca"><span class="toc-section-number">7</span> Monimuuttuja-korrespondenssianalyysi (MCA)</a><ul>
+<li><a href="#pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables"><span class="toc-section-number">7.1</span> Pinotut ja yhdistetyt taulukot (stacked and concatenated tables)</a></li>
+<li><a href="#mca---monimuuttujakorrespondenssianalyysi"><span class="toc-section-number">7.2</span> MCA - monimuuttujakorrespondenssianalyysi</a></li>
+</ul></li>
+<li class="has-sub"><a href="#liitteet">Liitteet</a><ul>
+<li><a href="#korrespondenssianalyysin-teoriaa"><span class="toc-section-number">7.3</span> Korrespondenssianalyysin teoriaa</a></li>
+<li><a href="#suomenkielinen-lomake-esimerkki"><span class="toc-section-number">7.4</span> Suomenkielinen lomake (esimerkki)</a></li>
+<li><a href="#r---koodi"><span class="toc-section-number">7.5</span> R - koodi</a></li>
+<li><a href="#tekninen-ympäristö-ja-bookdown-paketti"><span class="toc-section-number">7.6</span> Tekninen ympäristö ja Bookdown-paketti</a></li>
+</ul></li>
+<li><a href="#lähteet-1">Lähteet</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="header">
+<h1 class="title">Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</h1>
+<h4 class="author"><em>Jussi Hirvonen</em></h4>
+<h4 class="date"><em>Versio 0.3, tulostettu 2020-10-26</em></h4>
+</div>
+<div id="alkutoimia" class="section level1 unnumbered">
+<h1>Alkutoimia</h1>
+<p>Ladataan r-paketit, ei tulosteta dokumenttiin. Pelkkä YAML- ‘front matter’,
+lisäkonfiguroinnit tiedostoissa _bookdown.yml ja _output.yml.</p>
+<p>Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti
+_bookdown.yml-tiedostossa.</p>
+<p>RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla),
+ja korjailla skandit jos niissä on vikaa.</p>
+<p>Koodi näkyy Galkun tulosteessa (<a href="https://hirjus.github.io/Galku" class="uri">https://hirjus.github.io/Galku</a>), jossa on myös
+pitkiä listauksia muunnosten tarkistuksista ja kuvia eri versioina.</p>
+<p>Koodi kopiodaan Galkusta, kommentoidaan pois tarkistuksia ja muita välitulostuksia.
+Koodin ydinasiat koitetaan pitää samana kuin Galkussa, isommat muuutoksen ensin siellä
+ja sitten tähän projektiin.</p>
+<p><strong>PDF-tulostus oikuttelee Saksan ja Belgian aluejako-datan tai profiilitaulukon
+luonnissa - toistaiseksi vain html-tuloste (24.10.2020)</strong></p>
+<p>Raportti yhtenä html-tiedostona (<a href="https://hirjus.github.io/capaper/JH_capaper.html" class="uri">https://hirjus.github.io/capaper/JH_capaper.html</a>).</p>
+<p>**</p>
+<p>Gitbook-tulosteessa ei saa koodia “piilotettua”, asetus “code_folding: hide” vaatii teeman (theme). _output.yml - tiedostoon lisätty html_book - formaatti, siinä voi tarvittaessa käyttää piilotusta.</p>
+<p>Versiointi: 0.0n aloittelua, 0.n jäsentely koko paperille, 1.n.n valmiimpaa tekstiä.</p>
+
+</div>
+<div id="johdanto" class="section level1">
+<h1><span class="header-section-number">Luku 1</span> Johdanto</h1>
+<p><strong>edit</strong> Kirjoitetaan disposition pohjalta, keräillään kaikki yleiset
+ca-luonnehdinnat yhteen paikkaan eli johdantoon.</p>
+<p><strong>Mahdollisia lisäyksiä</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Tavoitteet, sisältö, rajaukset (jota voi myöhemmin täydentää)</p></li>
+<li><p>Muutamat puutteet/rajaukset, onko kerrottava tässä?</p></li>
+</ol>
+<ul>
+<li><p>data: ei huomioida sitä, että otoskoot vaihtelevat aika paljon eli
+“maapainot” eri suuruisia</p></li>
+<li><p>ei huomioida muitakaan otantaan liittyviä asioita (tämä ainakin
+mainittava data-osuudessa)</p></li>
+<li><p>kuvaileva menetelmä, mutta mikä on tutkimusongelma? Sellainen pitäisi olla.</p></li>
+</ul>
+<p>**zxy* Mitä on korrespondenssianalyysi? Muutamalla kappaleella. Yksi kappale
+historiasta.</p>
+<div id="tutkielman-tavoite" class="section level2">
+<h2><span class="header-section-number">1.1</span> Tutkielman tavoite)</h2>
+<p><strong>k</strong> Tässä kerrotaan, miksi tämä työ on kirjoitettu. Esitellään menetelmä
+käyttämällä oikeaa dataa. Täsmällisempi esitys sirotellaan esimerkkiaineiston
+analyysin tulosten esittelyn lomaan. Pitäisikö tässä tuoda esille ns. “ranskalaisen
+koulukunnan” matemaattisen perusteiden korostus, ja data-analyysin filosofia?
+Ehkä ei, koska sen pohdinta ei ole pääasia. Se tietysti mainitaan, ja asiaa pohditaan.</p>
+<p><strong>ks</strong> Esitellään korrespondenssianalyysin käsitteet ja graafisen analyysin
+periaatteet.</p>
+<p><strong>zxy</strong> -mitä ca on?
+- dimensioiden vähentäminen ja visualisointi
+- mihin dataan se soveltuu
+- määrittele graafinen, deskriptiivinen, eksploratiivinen data-analyysi
+- yksinkertainen ca, useamman muuttujan ca</p>
+<p><strong>ks</strong> Tämän voi tehdä yksinkertaisen korrespondenssianalyysin avulla. Yksinkertainen
+kahden luokittelumuuttujan korrespondenssianalyysi antaa graafisen analyysin
+“…perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin muodot ovat
+saman algoritmin soveltamista toisen tyyppiisiin datamatriiseihin, ja tulkintaa
+sovelletaan vastaavasti (with the consequent adaptation of the interpretation)”
+<span class="citation">(Greenacre ja Hastie <a href="#ref-RefWorks:doc:5a857a44e4b0ed2d44664d84" role="doc-biblioref">1987</a> , s. 437)</span> .</p>
+<p><strong>zxy</strong> Miksi eksporatiivinen (määrittele!) ja deskriptiivinen (määrittele!)
+menetelmä on esitettävä “in vivo”, toiminnassa? Oppikirjoissa (viitteitä)
+erityisesti MG on havainnolistanut CA:n matemaattista ja geometristä taustaa
+synteettisillä aineistoilla. Turha kopioida tähän. Menetelmän ydin on
+yksinkertaisen graafisen esityksen – kartan – avulla tulkita monimutkaisen
+empiirisen aineiston muuttujien riippuvuuksia. Yhteyksiä ei tiivistetä
+todennäköisyyspäättelyn kriteereillä tilastolliseen malliin, vaan deskripriivisen
+analyysin hengessä esitellään koko aineisto. Mallin sijaan vähennetään ulottuvuuksia,
+ja siinä menetetään informaatiota. Tavoitteena on säilyttää yleensä kaksiulotteisessa
+kuvassa mahdollisimman suuri osa alkuperäisen datan vaihtelusta. Eksploratiivinen
+data-analyysi on vuoropuhelua aineiston kanssa. Analyysiä tarkennetaan, rajataan
+ja muokataan, kun aineisto paljastaa jotain kiinnostavaa tai yllättävää. Tästä
+saa jonkinlaisen aasinsillan matriisiyhtälöiden puolustukseksi.
+Saksan ja Belgian datan jakaminen on hyvä esimerkki, on “osattava tarttua”
+menetelmän tulosmatriiseihin.</p>
+<p><strong>k</strong> esitystavan perustelu</p>
+<ul>
+<li>kenelle kirjoitettu? Menetelmästä kiinnostuneelle tilastotieteen ja data-analyysin
+perusteet tuntevalle. R-ohjelmisto ei ole rajoitus, SPSS ja SAS sopivat
+(SPSS - MG:llä kriittinen huomio “loose ends - paperissa” tai CAip-teorialiitteessä).</li>
+</ul>
+</div>
+<div id="tärkeimmät-lähteet-ja-ohjelmistot" class="section level2">
+<h2><span class="header-section-number">1.2</span> Tärkeimmät lähteet ja ohjelmistot</h2>
+<p><strong>zxy</strong> Tarvitaanko tämä, perustelu? Muutamat lähteet aivan keskeisiä, ja MG:n
+kurssi pitää mainita.</p>
+<div id="lähteet" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Lähteet</h3>
+<p>Michael Greenacre luennoi lyhyen kurssin korrespondenssianalyysistä Helsingin
+yliopistossa keväällä 2017<span class="citation">(M. Greenacre <a href="#ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca" role="doc-biblioref">2017</a>)</span>. Luennot ja
+laskuharjoitukset perehdyttivät minut ensimmäistä kertaa tähän menetelmään, ja
+kurssin materiaaleihin olen usein palannut. Niihin voi tutustua
+[Moodle-palvelussa] (<a href="https://moodle.helsinki.fi" class="uri">https://moodle.helsinki.fi</a>) (käyttäjätunnus vaaditaan).
+Greenacren kärsivällisesti kirjoitetut perusoppikirjat ovat tehneet menetelmää
+laajasti tunnetuksi englantia lukeville.</p>
+<p>Ranskalaisen lähestymistan perusoppikirja<span class="citation">(Roux ja Rouanet <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>)</span> (GDA-kirja?)
+esittelee menetelmän matemaattiset perusteet.
+Lyhyt historiallinen katsaus ja menetelmä soveltamisen perusajatusten esittely
+valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita.
+Kirjoittajat esittelevät perusteellisesti joitain empiirisiä tutkimuksia, ja
+lyhyt mutta naseva matriisilaskennan kritiikki on hyvä panna merkille.</p>
+<p>Korrespondenssianalyysi tuli osaksi suomalaista Survo-ohjelmistoa jo vuonna (<strong>????</strong>),
+ja menetelmää on esitelty ainakin kahdessa oppikirjassa<span class="citation">(Mustonen <a href="#ref-RefWorks:doc:5a857a44e4b0ed2d44664d95" role="doc-biblioref">1995</a>)</span>
+ja <span class="citation">(Vehkalahti <a href="#ref-RefWorks:doc:5a857a44e4b0ed2d44664da4" role="doc-biblioref">2008</a>)</span>.</p>
+</div>
+<div id="käytetyt-ohjelmistot" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Käytetyt ohjelmistot</h3>
+<p><strong>edit</strong> Hyvin lyhyesti, lause tai pari. On oma liite tekneisestä ympäristöstä.</p>
+<p><strong>zxy</strong> R, ca-paketti. löytyy myös muita paketteja.
+Rmarkdown<span class="citation">(Yihui Xie <a href="#ref-RefWorks:doc:5b6b346fe4b0c619b11b8a3e" role="doc-biblioref">2018</a>)</span>, ja
+bookdown (<span class="citation">(Xie <a href="#ref-RefWorks:doc:5b6b36dde4b09b7ec442bf8b" role="doc-biblioref">2016</a>)</span> ja toinen viite <span class="citation">(Xie <a href="#ref-R-bookdown" role="doc-biblioref">2020</a>)</span>).
+Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.</p>
+<p><strong>k</strong> Helposti toistettavan tutkimukset periaatteet</p>
+<ol style="list-style-type: decimal">
+<li>Datastan perusmuunnokset ja muuttujatyypit tehdään kun data luetaan
+R-ohjelmistoon.</li>
+<li>Koodi selkeää ja dokumentoitua. Tärkeä lähde <span class="citation">(McNamara ja Horton <a href="#ref-RefWorks:doc:5c3759c2e4b0085b307c82b5" role="doc-biblioref">2018</a>)</span></li>
+<li>R, LaTeX, pandoc - versiot dokumentoidaan</li>
+</ol>
+<p>Tarkemmin liittessä.</p>
+</div>
+</div>
+<div id="korrespondenssianalyysin-historiaa" class="section level2">
+<h2><span class="header-section-number">1.3</span> Korrespondenssianalyysin historiaa</h2>
+<p><strong>k1</strong> Tiivis esitys lähteineen. Historian voi aloittaa jo pari vuosikymmentä
+vallineesta tilanteesta. CA on yksi deskriptiivinen (ei-tn-teoriaan perustuvaa
+päättelyä) menetelmä muiden joukossa, eristyneisyys murtui hitaasti 80-luvun aikana.</p>
+<p><strong>k2</strong> Historialla on vain historiallista merkitystä. Kiinnostava juttu, mutta
+aika laaja ja lavea.</p>
+<p><strong>k3</strong> Peruskäsitys monessa lähteessä (vihreä kirja, GDA-kirja jne.): synty ja
+kukoistus Ranskassa, loistava eristys (splendid isolation), pikku hiljaa hyväksyntä.</p>
+<p>Syiksi esitetään kaksoismuuria: abstrakti matemaattinen (“bourbakilainen”) perusta
+ja esitystapa ja kieli.</p>
+<p><strong>k4</strong> Mitä historiasta on hyvä tietää.
+1. Matemaattinen perusta on “tosi”, mutta onko menetelmän soveltaminen riippuvainen
+siitä? Ei ole ollut.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Ristiriita data-analyyttisen/kuvailevan jne. lähestymistavan ja tilastollisen
+mallintamisen välillä - on läsnä edelleen mutta turha korostaa. Myös tilastollisen
+mallintamisen ja päättelyn sisällä on kiistoja, erilaisia näkemysiä ja kuiluja.</p></li>
+<li><p>“Esoteerinen tieteenfilosofia”? Kiinnostava aihe, ehkä. Murgtag-sitaatti.</p></li>
+</ol>
+
+</div>
+</div>
+<div id="data" class="section level1">
+<h1><span class="header-section-number">Luku 2</span> Data</h1>
+<p><strong>edit</strong> Teksti vielä vanhoja muistiinpanoja.</p>
+<div id="datan-luku-ja-perusmuokkaukset" class="section level2">
+<h2><span class="header-section-number">2.1</span> Datan luku ja perusmuokkaukset</h2>
+<div id="maat-ja-muuttujat" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Maat ja muuttujat</h3>
+<p><strong>maat luettu, sitten muuttujat</strong></p>
+<p>Substanssimuuttujat (9). Jos sukupuoli tai ikä puuttuu, havainto jätetään pois
+(32969-32823 = 146), maa-muuttujassa ei puuttuvia tietoja ole. Lisäksi kuusi
+taustamuuttujaa ( “SEX”,“AGE”,“DEGREE”, “MAINSTAT”, “TOPBOT”, “HHCHILDR”,
+“MARITAL”, “URBRURAL”).</p>
+<p><strong>Perusmuunnokset - viisi koodilohkoa</strong></p>
+<p>Vaihe 1</p>
+<p>Vaihe 2
+Vaihe 2.1</p>
+<p>Vaihe 2.2</p>
+<p>Vaihe 2.3</p>
+<p>Vaihe 2.4</p>
+<p>Muunnosten testaus, varmistetaan että muuttujat ovat sitä mitä halutaan.</p>
+<p><strong>zxy</strong> Voisi miettiä paremman otsikon. Galku-paperin alusta on lisäilty
+viitteitä Refworksiin, mutta hieman hanklaa. www.gesis.org - sivusto on aika
+sekava. Virallinen (heidän määrittelemä) sitaatti löytyy, ja linkkejä. Tässä
+voisi ehkä käyttää alaviitettä, jossa tarjoaisi linkit? Tai ihan oma lyhyt kappale?
+Alla virallinen viite, ja tässä kaksi muuta ([RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a]
+ja [RefWorks:doc:5b6c7debe4b0e4e15164ab00]). Löytyy myös
+seurantaraportti([RefWorks:doc:5b155e0ce4b044dfd738458f]).
+<strong>viitteet pois- ehkä tekstiin linkkeinä?</strong></p>
+<p><strong>k</strong> ISSP (International social survey) on tehnyt laajoja kansainvälisiä kyselytutkimuksia eri teemoista. Yksi teemoista on perhe ja muuttuvat (sosiaalisesti määräytyvät) sukupuoliroolit <span class="citation">((2016) <a href="#ref-RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a" role="doc-biblioref">2016</a>)</span>.</p>
+<p><strong>zxy</strong> Miksi data on kiinnostava sisällöllisesti? Viite Kantola (HS). Lisäksi laadukas, usealta vuodelta, tarkasti dokumentoitu.</p>
+<p><strong>ks</strong></p>
+<p><strong>zxy</strong> Miksi data sovelutuu korrespondenssianalyysin esittelyyn? Iso ja monimutkainen (kansainvälinen, datan laaut? kts. Blasius-viite alempana), sisällölliset muuttuja nominaaliasteikolla (kysymyspatterit, Likert), laadukas hyvin dokumentoitu aineisto.</p>
+<p><strong>zxy</strong> Onko itse asia kiinnostava? (Kantolan kolumni, HS).</p>
+<p><strong>ks</strong> Kokoava kappale, ja sen perään tarkentavat</p>
+<p><strong>ks1</strong></p>
+<p><strong>ks2</strong></p>
+<p><strong>ks-n</strong></p>
+<p><strong>zxy</strong> Aineiston ongelmat ja puutteet (tavanomaisten surveyaineistojen ongelmien
+lisäksi, erityisesti vastauskadon). Kato erikseen, oikeastaan hyvä juttu koska
+CA soveltuu sen analyysiin.</p>
+<p><strong>zxy</strong> Aineisto kuvattava <strong>sisällön</strong> (mitä asiaa, ilmiötä, tällä datalla
+halutaan valaista), <strong>para- ja metadatan</strong> näkökulmasta (tai ainakin kerrottava
+mitä on saatavilla). Kolmanneksi aineiston “tilastotieteellinen olemus”:
+otanta-asetelmat, kansalliset versioinnit, harmonisoinnit (esim. puoluekenttä
+vertailukelpoiseksi).</p>
+<ol style="list-style-type: decimal">
+<li><p>Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu tarkentaa tai
+muuten hifistellä. Osa kummallisa, erityisesti neutraalin vaihtoehdon puuttuminen
+(Espanja). Nämä maat jätetään pois.</p></li>
+<li><p>Datassa painot “maatasolle”, otanta sun muu kuvattu tarkasti dokumentaatiossa.
+Jos tutkimusongelma on maiden erojen analyysi, mitään vertailupainoja ei ole
+käytössä. Otoskoko on paino. MG oikaisee ja ja oikaisee myös sukupuolien osuudet.</p></li>
+</ol>
+</div>
+</div>
+<div id="aineiston-kuvailu-tietosisältö" class="section level2">
+<h2><span class="header-section-number">2.2</span> Aineiston kuvailu (tietosisältö)</h2>
+<p><strong>ks</strong> “Perhe, työ ja sukupuoliroolit” tutkimuksen teemat, tarkoitus. <strong>Paras</strong>
+lähde Yhteiskuntatieteellisen tietoarkiston palvelu
+(<a href="https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&amp;study_language=fi" class="uri">https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&amp;study_language=fi</a>).</p>
+</div>
+<div id="aineiston-rajaaminen-maat-ja-muuttujat" class="section level2">
+<h2><span class="header-section-number">2.3</span> Aineiston rajaaminen maat ja muuttujat</h2>
+<p><strong>k</strong> maat, samankaltaisia, data saatavilla kiinnostavista muuttujista</p>
+<p><strong>k</strong> muuttujat. Laajasti käyetty, valittu sopiva kysymyspatteri asenteista naisten
+työssäkäyntiin ja joitain taustamuuttujia. Korrespondenssianalyysi on hyvä menetelmä
+aineiston analyysiin: monimutkainen ja laaaja, paljon luokitteluasteikon muuttujia,
+“akvaariositaatti” tähän.</p>
+<p><strong>kysymykset</strong></p>
+<p><strong>k</strong> Taulukon <a href="#tab:vartable1">2.1</a> kysymysten lyhyet versiot ovat datassa mukana.
+Sarakkeessa “muuttuja” on alkuperäisen aineiston muuttujanimi,
+kysymyksen tunnus on valittuun dataan luotu muuttujanimi. Auttaa vertailemaan tätä
+tutkielmaa moniin ISSP-datalla tehtyihin analyyseihin.</p>
+<table>
+<caption><span id="tab:vartable1">Taulukko 2.1: </span>ISSP2012:Työelämä ja perhearvot - kysymykset</caption>
+<colgroup>
+<col width="9%" />
+<col width="90%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">muuttuja</th>
+<th align="left">kysymyksen tunnus, lyhennetty kysymys</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">V5</td>
+<td align="left">Q1a Working mother can have warm relation with child</td>
+</tr>
+<tr class="even">
+<td align="left">V6</td>
+<td align="left">Q1b Pre-school child suffers through working mother</td>
+</tr>
+<tr class="odd">
+<td align="left">V7</td>
+<td align="left">Q1c Family life suffers through working mother</td>
+</tr>
+<tr class="even">
+<td align="left">V8</td>
+<td align="left">Q1d Women’s preference: home and children</td>
+</tr>
+<tr class="odd">
+<td align="left">V9</td>
+<td align="left">Q1e Being housewife is satisfying</td>
+</tr>
+<tr class="even">
+<td align="left">V10</td>
+<td align="left">Q2a Both should contribute to household income</td>
+</tr>
+<tr class="odd">
+<td align="left">V11</td>
+<td align="left">Q2b Men’s job is earn money, women’s job household</td>
+</tr>
+<tr class="even">
+<td align="left">V12</td>
+<td align="left">Q3a Should women work: Child under school age</td>
+</tr>
+<tr class="odd">
+<td align="left">V13</td>
+<td align="left">Q3b Should women work: Youngest kid at school</td>
+</tr>
+<tr class="even">
+<td align="left">SEX</td>
+<td align="left">Respondents age</td>
+</tr>
+<tr class="odd">
+<td align="left">AGE</td>
+<td align="left">Respondents gender</td>
+</tr>
+<tr class="even">
+<td align="left">DEGREE</td>
+<td align="left">Highest completed degree of education: Categories for international comparison</td>
+</tr>
+<tr class="odd">
+<td align="left">MAINSTAT</td>
+<td align="left">Main status: work, unemployed, in education…</td>
+</tr>
+<tr class="even">
+<td align="left">TOPBOT</td>
+<td align="left">Top-Bottom self-placement (10 pt scale)</td>
+</tr>
+<tr class="odd">
+<td align="left">HHCHILDR</td>
+<td align="left">How many children in household: children between [school age] and 17 years of age</td>
+</tr>
+<tr class="even">
+<td align="left">MARITAL</td>
+<td align="left">Legal partnership status: married, civil partership…</td>
+</tr>
+<tr class="odd">
+<td align="left">URBRURAL</td>
+<td align="left">Place of living: urban - rural</td>
+</tr>
+</tbody>
+</table>
+<p><strong>k</strong> Kyselylomakkeilla kysymykset olivat hieman pidempiä, kuvassa <a href="#fig:suom-kys">2.1</a> osa suomenkielistä lomaketta.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/substvar_fi_Q1Q2.png&#39;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:suom-kys"></span>
+<img src="img/substvar_fi_Q1Q2.png" alt="Suomenkielinen lomake" width="50%" />
+<p class="caption">
+Kuva 2.1: Suomenkielinen lomake
+</p>
+</div>
+<p><strong>taustamuuttujat</strong></p>
+<p><strong>k</strong> maa, sukupuoli, haastateltavan ikä, koulutustaso, “virallinen” juridinen
+parisuhdestatus, pääasiallinen toimi (töissä, eläkkeellä jne), lasten lukumäärä
+perheessä ja asuinpaikka (maaseutu,suurkaupunki jne.), oma arvio sosiaalisesta
+asemasta (1-10). Kysymyksiä, tiedot tosin kerätty eri tavoin eri maissa.</p>
+<p>Vastaajan ikä</p>
+<p><strong>K</strong> Aineistossa mukana puuttuvat vastaukset, puuttuvia ei ole kolmessa muuttujassa
+(maa, ikä ja sukupuoli). Muutamilla havainnoilla puuttui tieto iästä tai sukupuolesta,
+ja ne rajattiin pois.</p>
+<p>Kuvataan tarkemmin, kun käytetään luvussa 7.</p>
+<p><strong>Miten aineistoa on käytetty?</strong>.</p>
+<p><strong>Korrespondenssianalyysin esimerkkiaineistona</strong></p>
+<p>Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa (Helsinki 2017 MCA, viite Moodleen?) ja kahdessa oppikirjassa (<span class="citation">(Greenacre <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span>, <span class="citation">(M. J. Greenacre <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>).ISSP - aineisto vuodelta 1989 on käytetty myös neljän “singuaariarvohajoitelmaan perustuvan menetelmän” vertailuun<span class="citation">(Greenacre <a href="#ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76" role="doc-biblioref">2003</a>)</span>.</p>
+<p>“We consider the joint analysis of two matched matrices which have common
+rows and columns, for example multivariate data observed at two time points or split
+according to a dichotomous variable. Methods of interest include principal components
+analysis for interval-scaled data, correspondence analysis for frequency data, log-ratio
+analysis of compositional data and linear biplots in general, all of which depend on the
+singular value decomposition. A simple result in matrix algebra shows that by setting up
+two matched matrices in a particular block format, matrix sum and difference components
+can be analysed using a single application of the singular value decomposition algorithm.
+The methodology is applied to data from the International Social Survey Program
+comparing male and female attitudes on working wives across eight countries. The resulting
+biplots optimally display the overall cross-cultural differences as well as the male–female
+differences. The case of more than two matched matrices is also discussed.”</p>
+<p>Blasius ja Thiessen (<span class="citation">(Blasius ja Thiessen <a href="#ref-RefWorks:doc:5b15542ee4b0e2616bc42dca" role="doc-biblioref">2006</a>)</span>) arvioivat aineiston laatua ja ja maiden vertailtavuutta vuoden 1994 aineistolla.</p>
+<p>“This paper provides empirically-based criteria for selecting Items and countries to develop measures of an underlying construct of interest that are comparable in cross-national research. Using data from the 1994 International Social Survey Program and applying multiple correspondence analysis to a set of common items in each of the 24 participating countries, we show that both the quality of the data, as well as its underlying structure - and therefore meaning - vary considerably between countries. The approach we use for screening countries and items is especially useful in situations where the psychometric properties of the items have not been well established in previous research.”</p>
+<p><strong>tärkeä rajaus</strong> Substanssitutkimusta ei tässä käsitellä.</p>
+<p>“ISSP - saitilla” löytyy bibliografia, ja hakupalveluillakin voi haravoida.
+<strong>zxy</strong> www.gesis.org - sivustolta löytyy myös <a href="https://search.gesis.org/research_data/ZA5900">julkaisuluettelo</a>, voiko linkin laittaa alaviitteeksi tai suoraan leipätekstiin?</p>
+<p>Sukupuoliroolien (gender roles) ja niihin liittyvien asenteiden vertailevaa kansainvälistä (cross-cultural) tutkimusta on tehty paljon. Tutkimusongelman sisällöllisten ja teoreettisen kysymysten nykytilaa kuvaa Walterin<span class="citation">(Walter <a href="#ref-RefWorks:doc:5bd08fb6e4b05c5447c9a9f9" role="doc-biblioref">2018</a>)</span> tuore artikkeli. Omnibus surveys ?</p>
+
+</div>
+</div>
+<div id="yksinkertainen-korrespondenssianalyysi" class="section level1">
+<h1><span class="header-section-number">Luku 3</span> Yksinkertainen korrespondenssianalyysi</h1>
+<p><strong>k1</strong> Yksi kysymys, kuusi maata, peruskäsitteet</p>
+<p><strong>k2</strong> Luvun tärkeimmät asiat; mitä on luvassa?</p>
+<div id="äiti-töissä--kärsiikö-lapsi" class="section level2">
+<h2><span class="header-section-number">3.1</span> Äiti töissä -kärsiikö lapsi?</h2>
+<p><strong>k1</strong>“Alle kouluikäinen lapsi todennäköisesti kärsii, jos hänen äitinsä käy työssä”.
+Lyhennän muotoon äiti töissä. ISSP-tutkimuksissa kaksi kysymystä, joissa sana “äiti”,
+MG havainnut ne poikkeaviksi (<strong>#V ?</strong>).</p>
+<p><strong>zxy</strong> Edellisessä luvussa on esitelyt aineisto, ja kerrottu rajaukset.</p>
+<p>Tarkistetaan uudet muuttujat (koodilohkon tulostus pois tarvittaessa).</p>
+</div>
+<div id="kahden-muuttujan-frekvenssitaulukon-analyysi" class="section level2">
+<h2><span class="header-section-number">3.2</span> Kahden muuttujan frekvenssitaulukon analyysi</h2>
+<p><strong>k</strong> Kolme taulukkoa: frekvenssitaulukko, riviprosentit ja sarakeprosentit</p>
+<table>
+<caption><span id="tab:simpeCA-frekTa1">Taulukko 3.1: </span>Kysymyksen Q1b vastaukset maittain</caption>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">S</th>
+<th align="left">s</th>
+<th align="left">?</th>
+<th align="left">e</th>
+<th align="left">E</th>
+<th align="left">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">BE</td>
+<td align="left">191</td>
+<td align="left">451</td>
+<td align="left">438</td>
+<td align="left">552</td>
+<td align="left">381</td>
+<td align="left">2013</td>
+</tr>
+<tr class="even">
+<td align="left">BG</td>
+<td align="left">118</td>
+<td align="left">395</td>
+<td align="left">205</td>
+<td align="left">190</td>
+<td align="left">13</td>
+<td align="left">921</td>
+</tr>
+<tr class="odd">
+<td align="left">DE</td>
+<td align="left">165</td>
+<td align="left">375</td>
+<td align="left">198</td>
+<td align="left">538</td>
+<td align="left">438</td>
+<td align="left">1714</td>
+</tr>
+<tr class="even">
+<td align="left">DK</td>
+<td align="left">70</td>
+<td align="left">238</td>
+<td align="left">152</td>
+<td align="left">232</td>
+<td align="left">696</td>
+<td align="left">1388</td>
+</tr>
+<tr class="odd">
+<td align="left">FI</td>
+<td align="left">47</td>
+<td align="left">188</td>
+<td align="left">149</td>
+<td align="left">423</td>
+<td align="left">303</td>
+<td align="left">1110</td>
+</tr>
+<tr class="even">
+<td align="left">HU</td>
+<td align="left">219</td>
+<td align="left">288</td>
+<td align="left">225</td>
+<td align="left">190</td>
+<td align="left">75</td>
+<td align="left">997</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">810</td>
+<td align="left">1935</td>
+<td align="left">1367</td>
+<td align="left">2125</td>
+<td align="left">1906</td>
+<td align="left">8143</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption><span id="tab:simpeCA-rprosTa1">Taulukko 3.2: </span>Kysymyksen Q1b vastaukset, riviprosentit</caption>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">S</th>
+<th align="left">s</th>
+<th align="left">?</th>
+<th align="left">e</th>
+<th align="left">E</th>
+<th align="left">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">BE</td>
+<td align="left">9.49</td>
+<td align="left">22.40</td>
+<td align="left">21.76</td>
+<td align="left">27.42</td>
+<td align="left">18.93</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">BG</td>
+<td align="left">12.81</td>
+<td align="left">42.89</td>
+<td align="left">22.26</td>
+<td align="left">20.63</td>
+<td align="left">1.41</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">DE</td>
+<td align="left">9.63</td>
+<td align="left">21.88</td>
+<td align="left">11.55</td>
+<td align="left">31.39</td>
+<td align="left">25.55</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">DK</td>
+<td align="left">5.04</td>
+<td align="left">17.15</td>
+<td align="left">10.95</td>
+<td align="left">16.71</td>
+<td align="left">50.14</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">FI</td>
+<td align="left">4.23</td>
+<td align="left">16.94</td>
+<td align="left">13.42</td>
+<td align="left">38.11</td>
+<td align="left">27.30</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">HU</td>
+<td align="left">21.97</td>
+<td align="left">28.89</td>
+<td align="left">22.57</td>
+<td align="left">19.06</td>
+<td align="left">7.52</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">All</td>
+<td align="left">9.95</td>
+<td align="left">23.76</td>
+<td align="left">16.79</td>
+<td align="left">26.10</td>
+<td align="left">23.41</td>
+<td align="left">100.00</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption><span id="tab:simpeCA-cprosTa1">Taulukko 3.3: </span>Kysymyksen Q1b vastaukset, sarakeprosentit</caption>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">S</th>
+<th align="left">s</th>
+<th align="left">?</th>
+<th align="left">e</th>
+<th align="left">E</th>
+<th align="left">All</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">BE</td>
+<td align="left">23.58</td>
+<td align="left">23.31</td>
+<td align="left">32.04</td>
+<td align="left">25.98</td>
+<td align="left">19.99</td>
+<td align="left">24.72</td>
+</tr>
+<tr class="even">
+<td align="left">BG</td>
+<td align="left">14.57</td>
+<td align="left">20.41</td>
+<td align="left">15.00</td>
+<td align="left">8.94</td>
+<td align="left">0.68</td>
+<td align="left">11.31</td>
+</tr>
+<tr class="odd">
+<td align="left">DE</td>
+<td align="left">20.37</td>
+<td align="left">19.38</td>
+<td align="left">14.48</td>
+<td align="left">25.32</td>
+<td align="left">22.98</td>
+<td align="left">21.05</td>
+</tr>
+<tr class="even">
+<td align="left">DK</td>
+<td align="left">8.64</td>
+<td align="left">12.30</td>
+<td align="left">11.12</td>
+<td align="left">10.92</td>
+<td align="left">36.52</td>
+<td align="left">17.05</td>
+</tr>
+<tr class="odd">
+<td align="left">FI</td>
+<td align="left">5.80</td>
+<td align="left">9.72</td>
+<td align="left">10.90</td>
+<td align="left">19.91</td>
+<td align="left">15.90</td>
+<td align="left">13.63</td>
+</tr>
+<tr class="even">
+<td align="left">HU</td>
+<td align="left">27.04</td>
+<td align="left">14.88</td>
+<td align="left">16.46</td>
+<td align="left">8.94</td>
+<td align="left">3.93</td>
+<td align="left">12.24</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+</tr>
+</tbody>
+</table>
+<p><strong>k</strong> <strong>Taulkoista</strong></p>
+<p>Ensimmäinen taulukko on data, lukumäärädataa. Toinen ja kolmas kaksi näkökulmaa
+samaan taulukkoon. Sarakkeilla ja riveillä on erilainen rooli, tässä riviprosentit
+ovat luonteva tapa verrata “riippuvaa muuttujaa”, eri maita.</p>
+<p><strong>k</strong> Rivit on saatu alkuperäisestä aineistosta osajoukkojen summina. MG:n
+terminologialla “samples”.</p>
+<p><strong>Kuvat</strong></p>
+<div class="figure"><span id="fig:g1-2kuva1"></span>
+<img src="JH_capaper_files/figure-html/g1-2kuva1-1.png" alt="Q1b:Sarakeprofiilit ja keskiarvoprofiili" width="672" />
+<p class="caption">
+Kuva 3.1: Q1b:Sarakeprofiilit ja keskiarvoprofiili
+</p>
+</div>
+<div class="figure"><span id="fig:g1-2kuva2"></span>
+<img src="JH_capaper_files/figure-html/g1-2kuva2-1.png" alt="Q1b: riviprofiilit ja keskiarvorivi" width="672" />
+<p class="caption">
+Kuva 3.2: Q1b: riviprofiilit ja keskiarvorivi
+</p>
+</div>
+</div>
+<div id="ca---esimerkki" class="section level2">
+<h2><span class="header-section-number">3.3</span> CA - esimerkki</h2>
+<div class="figure" style="text-align: center"><span id="fig:simpleCA1map1"></span>
+<img src="JH_capaper_files/figure-html/simpleCA1map1-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
+<p class="caption">
+Kuva 3.3: Q1b: lapsi kärsii jos äiti on töissä
+</p>
+</div>
+<p><strong>edit1</strong> jatkossa plot - main on kuvan tyyppi (symmetrinen, kontribuutio jne),
+koodilohkon fig.cap “ylimmän tason” otsikko.</p>
+<p><strong>edit2</strong> Akseleiden tekstit (Dimensio 1….jne) asetettu käsin, ikävä kyllä myös
+selitetyn inertian osuus. Ainakin tästä ensimmäisestä kuvasta ne kannattaa jättää
+pois, spoileri!</p>
+<p><strong>edit3</strong> par(cex = 1) ennen plot-komenota muuttaa valitettavasti “kaiken” kokoa.
+Antaa olla, kun on graafista data-analyysiä. Selkeys tärkeämpää kuin ulkoasu.</p>
+<p><strong>k</strong> Kartan tulkinta</p>
+<p><strong>k</strong> Prosentit - kuinka paljon kokonaisinertiasta saadaan kuvattua (“selitettyä”).</p>
+<p><strong>k</strong> Dimenisoiden tulkinta sarakepisteiden avulla: mitä on oikealla ja vasemmalla?
+Kaukana on kaukana, mutta lähellä voi olla täydessä sarake- tai riviavaruudessa
+kaukana. Siksi tulkinta kontrastien avulla - mikä piste on suhteellisesti kauimpana?</p>
+<p><strong>k</strong> Rivipisteiden tulkinta kartalla - järjestys vasemmalta oikealle ja alhaalta
+ylös. Pisteiden etäisyydet toisistaan.</p>
+<p><strong>k</strong> Origo on aineiston keskipiste, “riippumattomuushypoteesi” (kts. teorialiite).</p>
+<p><strong>k</strong> Sarakepisteiden erot ja rivipisteiden erot ovat suhteellisia, approksimoivat
+khii2-etäisyyksiä.</p>
+<p><strong>k</strong> Rivi- ja sarakepisteiden etäisyyksillä ei suoraan mitään tulkintaa!</p>
+<p><strong>k</strong> Lista: mitä muuta, johon palataan seuraavassa luvussa?</p>
+<ul>
+<li>kuinka hyvin pisteet on esitetty tasossa?</li>
+<li>esim. x-akseli kuvaa (“nappaa”) 76% kokonaisinertiasta. Pisteiden
+inertiakontribuutiot</li>
+</ul>
+</div>
+<div id="korrespondenssianalyysin-peruskäsitteet" class="section level2">
+<h2><span class="header-section-number">3.4</span> Korrespondenssianalyysin peruskäsitteet</h2>
+<p><strong>ks</strong> Mitä käsitteitä tässä esitellään? Viittaukset teorialiitteeseen, ja
+tulkinnan hankaluudet (MG “loose ends” - paperi) käsitellään siellä.</p>
+<p><strong>edit</strong> Sulava kuvaus tulkinnasta, painotus kuvien tulkinnassa. CA:n numeeriset
+tulokset vasta seuraavassa luvussa. Tässä “mitä kuvasta näkee”, ei muuta (paitsi
+varoitukset - mitä ei näe). Idea koko ajan taulukon sarakkeiden ja riveien yhteyksien
+visualisointi.</p>
+<p><strong>edit</strong> Tärkeää selkeä kuvaus pääkoordinaattien ja standardikoordinaattien
+suhteesta. Tarkemmin teorialiitteessä, tässä heuristisesti jotta kuvia osaa tulkita.</p>
+<div id="asymmetrinen-kartta-ja-ideaalipisteet" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> Asymmetrinen kartta ja ideaalipisteet</h3>
+<div class="figure" style="text-align: center"><span id="fig:G1-3asymm2"></span>
+<img src="JH_capaper_files/figure-html/G1-3asymm2-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
+<p class="caption">
+Kuva 3.4: Q1b: lapsi kärsii jos äiti on töissä
+</p>
+</div>
+<p><strong>Barysentrinen periaate</strong></p>
+<strong>edit</strong> kuva ei ehkä tarpeen? Tehdään vähän pienempi (out.width = 70%, muuten 90%).
+<div class="figure" style="text-align: center"><span id="fig:G1-3asymm3"></span>
+<img src="JH_capaper_files/figure-html/G1-3asymm3-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="70%" />
+<p class="caption">
+Kuva 3.5: Q1b: lapsi kärsii jos äiti on töissä
+</p>
+</div>
+<p><strong>edit</strong> Perustelu kuvalle: barysentrinen periaate on kuvien tulkinnassa ydinasioita.</p>
+<p><strong>Akseleiden tulkinta</strong> tai tulkinnan varmistaminen akseli kerrallaan. Ortogonaaliset
+projektion piirretty käsin, havainnollistetaan periaatetta.</p>
+<p><img src="img/simpleCAasymmTulk2.png" width="90%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="kontribuutiot-kartalla" class="section level2">
+<h2><span class="header-section-number">3.5</span> Kontribuutiot kartalla</h2>
+<p>Kaksi kuvaa, joissa pisteiden massat on kuvattu pisteiden koolla (ei juuri eroa
+huomaa) ja rivi- ja sarekepisteiden kontribuutiot värisävyllä. Mitä tummempi sitä
+suurempi kontribuutio. Absoluuttiset ja suhteelliset kontribuutiot.</p>
+<p><strong>edit</strong> Pitäisikö kuvissa olla aina toinen absolute, toinen relative? Selvitetään
+teorialiittessä?</p>
+<p>Toinen kuva riittää, tässä esitellään kartta jossa on eniten informaatiota.</p>
+<p><strong>Absoluuttiset kontribuutiot</strong> Oletuspistekoko ok, mutta html- ja pdf-tulostus
+on erilainen!</p>
+<div class="figure" style="text-align: center"><span id="fig:G1-3asymmContrib1"></span>
+<img src="JH_capaper_files/figure-html/G1-3asymmContrib1-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
+<p class="caption">
+Kuva 3.6: Q1b: lapsi kärsii jos äiti on töissä
+</p>
+</div>
+<p><strong>Suhteelliset kontribuutiot</strong> Oletuspistekoko ok.</p>
+<div class="figure" style="text-align: center"><span id="fig:G1-3asymmContrib2"></span>
+<img src="JH_capaper_files/figure-html/G1-3asymmContrib2-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
+<p class="caption">
+Kuva 3.7: Q1b: lapsi kärsii jos äiti on töissä
+</p>
+</div>
+</div>
+<div id="massat" class="section level2">
+<h2><span class="header-section-number">3.6</span> Massat</h2>
+<p><strong>edit3</strong> Onko vakioitujen massojen kartta liian aikaisin? Tämä ei ole pääasia, vaan selvennys.
+Miksi tässä? Perusteltava, miksi en vakioi massoja maille, sukupuolille jne. (a)
+perusteltua kun tarkempi tutkimusongelma, esim. erottelut maiden ja sukupuolten
+välillä. Varianssianalyysin tapaan varianssin hajoittaminen ryhmisen sisäiseen ja
+ryhmien väliseen. Kts. teorialiitteestä esim. ABBA. (b) CA “perusmuodossa”, massa
+on yksi kolmesta tärkeimmästä käsitteestä. (c) on aika työlästä!</p>
+<p><strong>edit4</strong> Galkussa verrattu molempien painotusten khii2-etäisyyksiä, jos tarpeen
+niin teoria-liitteeseen.</p>
+<div class="figure" style="text-align: center"><span id="fig:simpleCA3map1"></span>
+<img src="JH_capaper_files/figure-html/simpleCA3map1-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
+<p class="caption">
+Kuva 3.8: Q1b: lapsi kärsii jos äiti on töissä
+</p>
+</div>
+<p>Ei kovin isoja eroja, tässä datassa.</p>
+
+</div>
+</div>
+<div id="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1---täydentävät-pisteet" class="section level1">
+<h1><span class="header-section-number">Luku 4</span> Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet</h1>
+<p><strong>edit</strong> Edellisssä luvussa selitetty barysentrinen keskiarvopiste;
+teorialiitteessä hieman laveammin.</p>
+<p><strong>edit</strong> CA:n joustava käyttö vaatii matriisioperaatioita, ja muuta datan rakenteen
+muokkausta (rivien lisääminen input-dataan jne.).</p>
+<div id="täydentävät-pisteet-supplementary-points" class="section level2">
+<h2><span class="header-section-number">4.1</span> Täydentävät pisteet (supplementary points)</h2>
+<p>Tekstistä oma dokkari, eri käyttötapaukset lyhyesti. Edellisen luvun asymmetrisen
+kartan avulla perustellaan, miten pisteitä voidaaan lisätä.</p>
+</div>
+<div id="saksan-ja-belgian-alueet" class="section level2">
+<h2><span class="header-section-number">4.2</span> Saksan ja Belgian alueet</h2>
+<p><strong>Data ja taulukko aluejaosta</strong></p>
+<p>Taulukko, Saksan ja Belgian alueet ja maaprofiilit.</p>
+<table>
+<caption><span id="tab:BeDealueTable1">Taulukko 4.1: </span>Q1b vastaukset, Saksan ja Belgian alueet</caption>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">S</th>
+<th align="left">s</th>
+<th align="left">?</th>
+<th align="left">e</th>
+<th align="left">E</th>
+<th align="left">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">bF</td>
+<td align="left">5.04</td>
+<td align="left">23.81</td>
+<td align="left">25.89</td>
+<td align="left">30.83</td>
+<td align="left">14.43</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">bW</td>
+<td align="left">10.82</td>
+<td align="left">21.02</td>
+<td align="left">18.57</td>
+<td align="left">24.08</td>
+<td align="left">25.51</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">bB</td>
+<td align="left">17.03</td>
+<td align="left">20.94</td>
+<td align="left">16.63</td>
+<td align="left">23.87</td>
+<td align="left">21.53</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">BG</td>
+<td align="left">12.81</td>
+<td align="left">42.89</td>
+<td align="left">22.26</td>
+<td align="left">20.63</td>
+<td align="left">1.41</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">dW</td>
+<td align="left">11.40</td>
+<td align="left">26.82</td>
+<td align="left">11.83</td>
+<td align="left">32.13</td>
+<td align="left">17.82</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">dE</td>
+<td align="left">5.85</td>
+<td align="left">11.33</td>
+<td align="left">10.97</td>
+<td align="left">29.80</td>
+<td align="left">42.05</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">DK</td>
+<td align="left">5.04</td>
+<td align="left">17.15</td>
+<td align="left">10.95</td>
+<td align="left">16.71</td>
+<td align="left">50.14</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">FI</td>
+<td align="left">4.23</td>
+<td align="left">16.94</td>
+<td align="left">13.42</td>
+<td align="left">38.11</td>
+<td align="left">27.30</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">HU</td>
+<td align="left">21.97</td>
+<td align="left">28.89</td>
+<td align="left">22.57</td>
+<td align="left">19.06</td>
+<td align="left">7.52</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">All</td>
+<td align="left">9.95</td>
+<td align="left">23.76</td>
+<td align="left">16.79</td>
+<td align="left">26.10</td>
+<td align="left">23.41</td>
+<td align="left">100.00</td>
+</tr>
+</tbody>
+</table>
+<p><strong>edit</strong> Riviprofiilitaulukko, kuvataan alueiden eroja. CA-analyysi kuitenkin koko
+aineiston frekfvenssitaululla, jossa rivien massat eivät ole samat.</p>
+<div id="symmetrinen-kartta" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Symmetrinen kartta</h3>
+<div class="figure" style="text-align: center"><span id="fig:suppointCA2map1"></span>
+<img src="JH_capaper_files/figure-html/suppointCA2map1-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
+<p class="caption">
+Kuva 4.1: Q1b: Saksan ja Belgian aluejako
+</p>
+</div>
+<p><strong>k</strong> Maaåpisteet alueiden barysentrinen keskiarvo. Tulkinta.</p>
+<div class="figure" style="text-align: center"><span id="fig:suppointCA2map2"></span>
+<img src="JH_capaper_files/figure-html/suppointCA2map2-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
+<p class="caption">
+Kuva 4.2: Q1b: Saksan ja Belgian aluejako
+</p>
+</div>
+<p><strong>k</strong> Kontribuutiokartta, kontribuutio värisävyinä ja massat pisteiden kokona.
+Yleiskuvaan riittävä, ei kovin selkeä yksityiskohdissa. Motivaatio seuraavalle
+jaksolle.Skaalataan asymmetrisen kuvan sarakevektoreita (jotka standardikoordinaateissa)
+hieman lähemmäs origoa.</p>
+<p><strong>k</strong> Kaukana on kaukana, mutta lähellä voi olla myös kaukana.</p>
+</div>
+</div>
+<div id="can-numeeriset-tulokset" class="section level2">
+<h2><span class="header-section-number">4.3</span> CA:n numeeriset tulokset</h2>
+<p><strong>edit</strong> Teorialiitteessä selitetään tarkemmin numeeristen tulosten tausta, tässä
+apuneuvo (a) kuvan tulkinnan varmistamiseen ja (b) approksimaation laadun
+tarkistamiseen.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>suppointCA2</span></code></pre></div>
+<pre><code>## 
+##  Principal inertias (eigenvalues):
+##            1        2        3        4       
+## Value      0.154101 0.032489 0.014294 0.008944
+## Percentage 73.44%   15.48%   6.81%    4.26%   
+## 
+## 
+##  Rows:
+##                bF        bW       bB       BG        dW        dE        DK
+## Mass     0.124279  0.060174 0.062753 0.113103  0.143313  0.067174  0.170453
+## ChiDist  0.341469  0.096258 0.239034 0.630991  0.219094  0.505720  0.634063
+## Inertia  0.014491  0.000558 0.003586 0.045032  0.006879  0.017180  0.068528
+## Dim. 1   0.400065 -0.090631 0.216912 1.502458  0.254323 -1.262007 -1.506022
+## Dim. 2  -1.254042  0.267998 0.789358 0.236498 -0.451124 -0.226595  1.121468
+##                FI       HU    BE (*)    DE (*)
+## Mass     0.136313 0.122436        NA        NA
+## ChiDist  0.347733 0.550404  0.157974  0.175013
+## Inertia  0.016483 0.037091        NA        NA
+## Dim. 1  -0.525222 1.215462  0.234127 -0.229593
+## Dim. 2  -1.500986 1.280342 -0.364834 -0.379468
+## 
+## 
+##  Columns:
+##                S        s         ?         e         E
+## Mass    0.099472 0.237627  0.167874  0.260960  0.234066
+## ChiDist 0.592824 0.354761  0.332288  0.280549  0.672594
+## Inertia 0.034959 0.029907  0.018536  0.020540  0.105887
+## Dim. 1  1.073310 0.787257  0.649789 -0.029859 -1.688108
+## Dim. 2  1.835133 0.290929 -0.119934 -1.451548  0.629110</code></pre>
+<p><strong>k</strong> Lyhyt selostus - nämä aika selkeitä</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">summary</span>(suppointCA2)</span></code></pre></div>
+<pre><code>## 
+## Principal inertias (eigenvalues):
+## 
+##  dim    value      %   cum%   scree plot               
+##  1      0.154101  73.4  73.4  ******************       
+##  2      0.032489  15.5  88.9  ****                     
+##  3      0.014294   6.8  95.7  **                       
+##  4      0.008944   4.3 100.0  *                        
+##         -------- -----                                 
+##  Total: 0.209828 100.0                                 
+## 
+## 
+## Rows:
+##       name   mass  qlt  inr    k=1 cor  ctr    k=2 cor  ctr  
+## 1  |    bF |  124  650   69 |  157 212   20 | -226 438  195 |
+## 2  |    bW |   60  388    3 |  -36 137    0 |   48 252    4 |
+## 3  |    bB |   63  481   17 |   85 127    3 |  142 354   39 |
+## 4  |    BG |  113  878  215 |  590 874  255 |   43   5    6 |
+## 5  |    dW |  143  345   33 |  100 208    9 |  -81 138   29 |
+## 6  |    dE |   67  966   82 | -495 960  107 |  -41   7    3 |
+## 7  |    DK |  170  971  327 | -591 869  387 |  202 102  214 |
+## 8  |    FI |  136  957   79 | -206 352   38 | -271 605  307 |
+## 9  |    HU |  122  927  177 |  477 751  181 |  231 176  201 |
+## 10 | (*)BE | &lt;NA&gt;  512 &lt;NA&gt; |   92 338 &lt;NA&gt; |  -66 173 &lt;NA&gt; |
+## 11 | (*)DE | &lt;NA&gt;  418 &lt;NA&gt; |  -90 265 &lt;NA&gt; |  -68 153 &lt;NA&gt; |
+## 
+## Columns:
+##     name   mass  qlt  inr    k=1 cor ctr    k=2 cor ctr  
+## 1 |    S |   99  816  167 |  421 505 115 |  331 311 335 |
+## 2 |    s |  238  781  143 |  309 759 147 |   52  22  20 |
+## 3 |      |  168  594   88 |  255 589  71 |  -22   4   2 |
+## 4 |    e |  261  871   98 |  -12   2   0 | -262 870 550 |
+## 5 |    E |  234  999  505 | -663 971 667 |  113  28  93 |</code></pre>
+<p><strong>k</strong> Tulosteen käsitteiden esittely - tavoite kuvan laadun varmistus, akselien
+tulkinnan tarkistus. Tarkemmin teorialiitteessä. Tästä pitäisi nähdä, miksi seuraavat
+kartat ovat sellaisia kuin ovat.</p>
+</div>
+<div id="esimerkki-3d--kartasta---saksan-ja-belgian-dimensiot" class="section level2">
+<h2><span class="header-section-number">4.4</span> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</h2>
+<p><strong>k</strong> Ei kovin hyviä kuvia, mutta periaate on tärkeä. Kartta on approksimaatio,
+pitää päättää milloin se on tarpeeksi hyvä. Tai mille pisteille hyvä, mille huonompi.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>suppointCA3 &lt;-<span class="st"> </span><span class="kw">ca</span>(<span class="op">~</span>maa3 <span class="op">+</span><span class="st"> </span>Q1b,ISSP2012esim1.dat, <span class="dt">nd =</span> <span class="dv">3</span>)</span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="co"># summary(suppointCA3)</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co"># Error in rsc %*% diag(sv) : non-conformable arguments</span></span></code></pre></div>
+<strong>Kolme karttaa</strong>
+<div class="figure" style="text-align: center"><span id="fig:suppointCA3map1"></span>
+<img src="JH_capaper_files/figure-html/suppointCA3map1-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
+<p class="caption">
+Kuva 4.3: Q1b: Saksan ja Belgian aluejako
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:suppointCA3map2"></span>
+<img src="JH_capaper_files/figure-html/suppointCA3map2-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
+<p class="caption">
+Kuva 4.4: Q1b: Saksan ja Belgian aluejako
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:suppointCA3map3"></span>
+<img src="JH_capaper_files/figure-html/suppointCA3map3-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
+<p class="caption">
+Kuva 4.5: Q1b: Saksan ja Belgian aluejako
+</p>
+</div>
+<p><strong>k</strong> Tulkinta.</p>
+<p><strong>k</strong> kokeilu 3d-grafiikalla - toinen riittää</p>
+<p><img src="img/3dSymMap_1.PNG" width="398" /><img src="img/3dSymMap_2.PNG" width="445" /></p>
+
+</div>
+</div>
+<div id="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2---yhteisvaikutusmuuttujat" class="section level1">
+<h1><span class="header-section-number">Luku 5</span> Yksinkertaisen korrespondenssianalyysin laajennuksia 2 - yhteisvaikutusmuuttujat</h1>
+<p><strong>edit</strong> Yksinkertaisin tapa ottaa muita muuttujia mukaan analyysiin.</p>
+<p><strong>k</strong> Kaksi yhteisvaikutusmuuttujaan (MG “interactive coding”), sukupuoli ja
+ikäluokka/kohortti ja tämän muuttujan yhdistäminen maa-muuttujaan.</p>
+<p><strong>k</strong> Poikkileikkausaineistossa vastaajaan ikä kuvaa sekä ikää että mitä erilaisimipia
+sukupolvivaikutuksia. Ei voi oikein erottaa toisistaan. Vastaajat ovat elämänsä eri
+vaiheissa kohdanneet lukuisia rajuja muutoksia toisen maailmansodan jälkeen. Nähtiin
+jo edellisessä jaksossa!</p>
+<p>Poikkileikkausaineistossa vastaajan ikä kertoo ikäluokan (kohortin), vastaajat ovat
+kokeen esim. kaksi mullistusten vuotta elämänsä eri vaiheissa. Kaksin nuorinta ikäluokka
+on ollut 1990 alle 14-vuotiaita ja vanhin ikäluokka yli 44-vuotiaita. Finannsikriisin
+vuonna 2008 toiseksi nuorin ikäluokka on ollut 22-31 vuotiaita, ja kaksi vanhinta
+yli 51-vuotiaita.</p>
+<div id="ikä-ja-sukupuoli" class="section level2">
+<h2><span class="header-section-number">5.1</span> Ikä ja sukupuoli</h2>
+<p><strong>edit</strong> Lyhyesti tämä, aineisto aggregoitu ikä- ja sukupuoliryhmiin.
+<strong>edit</strong> Voi myös lisätä täydentävinä pisteinä “peruskarttaan”, ei tehdä.</p>
+<p>Ikäluokat ovat (1=15-25, 2 =26-35, 3=36-45, 4=46-55, 5=56-65, 6= 66 tai vanhempi).
+Vuorovaikutusmuuttuja ga koodataan f1,…, f6 ja m1,…,m6. Muuttujien nimet
+kannattaa pitää mahdollisimman lyhyinä.</p>
+<p>Ikäjäkauma painottuu kaikissa maissa jonkinverran vanhempiin ikäluokkiin.
+Nuorempien ikäluokkien osuus on (alle 26-vuotiaat ja alle 26-35 - vuotiaat)
+varsinkin Bulgariassa (BG) ja Unkarissa (HU) pieni.</p>
+<div id="ikä-ja-sukupuoli-1" class="section level3">
+<h3><span class="header-section-number">5.1.1</span> Ikä ja sukupuoli</h3>
+<p><strong>k</strong> Ikä- ja sukupuoliryhmät yli kaikkien maiden; profiilit keskiarvoja. Ei kovin
+pätevää analyysiä, yleiskuva muuttujasta.</p>
+<div class="figure" style="text-align: center"><span id="fig:gaCA1map"></span>
+<img src="JH_capaper_files/figure-html/gaCA1map-1.png" alt="Q1b: ikäluokka ja sukupuoli" width="90%" />
+<p class="caption">
+Kuva 5.1: Q1b: ikäluokka ja sukupuoli
+</p>
+</div>
+<pre><code>## 
+## Principal inertias (eigenvalues):
+## 
+##  dim    value      %   cum%   scree plot               
+##  1      0.037448  87.0  87.0  **********************   
+##  2      0.003977   9.2  96.2  **                       
+##  3      0.001041   2.4  98.6  *                        
+##  4      0.000590   1.4 100.0                           
+##         -------- -----                                 
+##  Total: 0.043055 100.0                                 
+## 
+## 
+## Rows:
+##      name   mass  qlt  inr    k=1 cor ctr    k=2 cor ctr  
+## 1  |   f1 |   60  990   36 | -125 614  25 |  -98 376 145 |
+## 2  |   f2 |   83  997  163 | -289 983 185 |   35  14  25 |
+## 3  |   f3 |   91  984   47 | -146 958  52 |   24  26  13 |
+## 4  |   f4 |  101 1000   97 | -186 836  93 |   82 164 172 |
+## 5  |   f5 |   98  879    4 |  -35 658   3 |   20 221  10 |
+## 6  |   f6 |  100  951  176 |  256 866 175 |   80  85 162 |
+## 7  |   m1 |   57  659   32 |   42  72   3 | -120 587 205 |
+## 8  |   m2 |   66  977   57 | -187 946  62 |  -34  30  19 |
+## 9  |   m3 |   78  457    5 |  -31 318   2 |  -20 139   8 |
+## 10 |   m4 |   89  674   14 |   58 482   8 |  -37 192  30 |
+## 11 |   m5 |   89  988   90 |  189 818  85 |  -86 170 166 |
+## 12 |   m6 |   89  978  277 |  360 963 307 |   45  15  45 |
+## 
+## Columns:
+##     name   mass  qlt  inr    k=1 cor ctr    k=2 cor ctr  
+## 1 |    S |   99  915  128 |  196 695 102 |  110 220 304 |
+## 2 |    s |  238  969  304 |  230 961 336 |   21   8  27 |
+## 3 |      |  168  777   46 |   62 330  17 |  -73 447 223 |
+## 4 |    e |  261  897   58 |  -68 473  32 |  -64 424 268 |
+## 5 |    E |  234  997  464 | -286 962 513 |   55  35 177 |</code></pre>
+<p><strong>k</strong> Kommentteja Galkusta:
+Aika yksiuloitteinen (87 prosenttia ensimmäisellä dimensiolla!). Data on
+“as it is”, ei ole vakioitu ga-luokkien kokoja (massat max(f4 101), min (m1 57)).</p>
+<p>Miten pitäisi tulkita “oikealle kaatunut U - muoto” miehillä ja naisilla?
+Järjestys ei toimi, S s-sarakkeen vasemmalla puolella. Miehet konservatiivisempia,
+mutta maltillisempia? Nuorin ikäluokka on poikkeava. Epävarmoja tai maltillisesti
+e, sitten loikka vasemmalle ja sieltä konservatiiviseen suuntaa oikealle. Naisilla
+poikkeama f3 - f4. VAnhimmat ikäluokat tiukemmin konservatiivisa (f6, m6). Jos
+vertaa sukupuolten eroja samassa ikäluokassa, on aika samanlainen (miehet
+konservatiivisia, naiset liberaaleja). Naisista vain vanhin ikäluokka oikealla,
+miehistä nuorin ja kolme vanhinta.</p>
+<p>Tulkinnassa muistettava, että ikäluokat yli maiden. Voi verrata sekä
+edellisiin maa-vertailuihin että maan, ikäluokan ja sukupuolen yhteisvaikutusmuuttujan
+tuloksiin. MG tutkailee eri kysymyksellä tätä samaa asiaa, ja havaitsee että
+(a) maiden erot suuria ja sukupuolten pieniä (b) naiset liberaalimpia kuin miehet.
+** Viite?**</p>
+<p>Numeeriset tulokset: nuorimpien miesten (qlt 659) ja erityisesti
+keski-ikäisten miestén m3 (qlt 457) pisteet huonosti esitetty kartalla. Tulkitaan
+myös cor ja ctr, riveille ja sarakkeille.</p>
+</div>
+</div>
+<div id="ikä-sukupuoli-ja-maa" class="section level2">
+<h2><span class="header-section-number">5.2</span> Ikä, sukupuoli ja maa</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span><span class="kw">mutate</span>(ISSP2012esim1b.dat,</span>
+<span id="cb8-2"><a href="#cb8-2"></a>                             <span class="dt">maaga =</span> <span class="kw">paste</span>(maa, ga, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>))</span>
+<span id="cb8-3"><a href="#cb8-3"></a></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="co"># tarkistus, muunnos ok</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="co"># ISSP2012esim1b.dat %&gt;% tableX(maa, maaga)</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="co"># head(ISSP2012esim2.dat)</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="co"># str(ISSP2012esim2.dat)</span></span></code></pre></div>
+<p><strong>edit</strong> Yksi vaikeaselkoinen kartta täynnä pisteitä, tihrustellaan.</p>
+<div class="figure" style="text-align: center"><span id="fig:maagaCA1map1"></span>
+<img src="JH_capaper_files/figure-html/maagaCA1map1-1.png" alt="Q1b: ikäluokka ja sukupuoli maittain" width="90%" />
+<p class="caption">
+Kuva 5.2: Q1b: ikäluokka ja sukupuoli maittain
+</p>
+</div>
+<p><strong>edit</strong> Stabiilius - teorialiitteessä laajemmin mutta tässä lyhyt vilkaisu.
+Taulukko alkaa harveta, jo edellä kerrottiin että aineisto painottuu kaikissa maissa
+vanhempiin ikäluokkiin.</p>
+<p><strong>yksinkertainen tarkistus</strong> Löytyykö riviproviileja joilla pieni massa ja suuri
+kontribuutio? Ei löydy, mutta jo kuvan tukkoisuus vaatii luokkien yhdistelyä.
+Aika työlästä!</p>
+
+</div>
+</div>
+<div id="korrespondenssianalyysin-laajennuksia-3---osajoukon-ca" class="section level1">
+<h1><span class="header-section-number">Luku 6</span> Korrespondenssianalyysin laajennuksia 3 - osajoukon CA</h1>
+<p><strong>k</strong> Osajoukon korrespondenssianalyysin tarve: kuvat menevät tukkoon. Kun muuttujia
+on paljon, kartat kertovat vain hyvin yleisiä ja tunnettuja asioita (MG).</p>
+<p><strong>k</strong> Teoreettinen idea: inertian dekomoponointi (taas). Lasketaan ensin
+ca-ratkaisu ja rajataan aineisto. Yksinkertainen toteuttaa. Massat ja reunajakaumat
+säilyvä, ja siksi aineiston (“pilven”) kokonaisinertia voidaan jakaa osiin
+osajoukkojen inertiaksi. Uusia yhteyksiä näkyviin, tarkempi kuva datasta.</p>
+<p><strong>k</strong> Subset-CA:n vaihtoehdot
+1. Kuvan suurentaminen (png, pdf vektorigrafiikka) näytöllä - hyvä ensiaskel
+2. Kuva-alueen rajaaminen R-koodissa toimii hyvin, jos pitää tarkentaa kuvaa origon
+lähelle.</p>
+<p>Ongelma: kaikki havainnot ja muuttujien kategoriat määräävät edelleen koordinaatiston.</p>
+<p>Lähteet MG ja Prado (2006)<span class="citation">(M. Greenacre ja Pardo <a href="#ref-RefWorks:doc:5a857a44e4b0ed2d44664d87" role="doc-biblioref">2006</a>)</span>,
+“vihreä kirja” <span class="citation">(M. Greenacre ja Blasius <a href="#ref-RefWorks:doc:5ab76b43e4b003f4468d1f07" role="doc-biblioref">2006</a>)</span>,
+CAiP <span class="citation">(M. J. Greenacre <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>.</p>
+<p><strong>k</strong> Simple CA subset</p>
+<p><strong>k1</strong> Täydentävät pisteet voi ottaa mukaan jos ne eivät ole rajatusta “pilvestä”.
+Esim. rivien osajoukon analyysiin voi ottaa sarakepisteitä täydeäntvinä pisteinä
+normaalisti. Osajoukon profiilit muuttuvat, niiden summa ei enään ole yksi,
+barysentristä ominaisuutta ei voi suoraan käyttää täydentävien rivipisteiden
+koordinaattien laskemiseen.</p>
+
+</div>
+<div id="monimuuttuja-korrespondenssianalyysi-mca" class="section level1">
+<h1><span class="header-section-number">Luku 7</span> Monimuuttuja-korrespondenssianalyysi (MCA)</h1>
+<p><strong>k</strong> MG:n jäsentely CA:n tutkimusasetelmista (within - between), kokoaan myös
+edeltävät analyysit “saman katon alle”.</p>
+<p><strong>k1</strong> kahden muuttujuajoukon väliset yhteydet</p>
+<p><strong>k2</strong> yhden muuttujajoukon muuttujien väliset yhteydet</p>
+<p><strong>k3</strong> wrt samples ja wrt variables</p>
+<p><strong>k4</strong> Yksinkertaisesta monimutkaisempaan
+0. Täydentävät pisteet tulkinnan apuna, yleistyökaluna (“jack of all trades but
+master of none”) esitelty ensimmäisenä. Tärkeä lisä kaikissa analyyseissä.</p>
+<ol style="list-style-type: decimal">
+<li><p>yhteisvaikutusmuuttujat <strong>K4-1</strong>
+-max kolmen muuttujan yhtesivaikutusmuuttuja - taulukko harsoontuu</p></li>
+<li><p>Yksi “selitettävä” muuttuja, useampi “selittävä” <strong>K4-2"</strong></p></li>
+</ol>
+<ul>
+<li>pinotut taulukot (käytännössä matriisit, helpompi pinota R:ssä, Burtin taulun käyttö)</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Taulukoiden yhdistäminen yleisemmin <strong>K4-3</strong></li>
+</ol>
+<ul>
+<li>monta “selittäjää” ja “selitettävää”: taulukoita päällekkäin ja rinnakkain, lohkomatriisi</li>
+<li>ABBA: voidaan esim. jakaa taulukko (viite) osatauluiksi</li>
+<li>tästä hieman tarkemmin teorialiitteessä;symmetriset taulut (esim. vastaukset
+eri vuosina, isän ja pojan ammatti), matched matrices</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>MCA <strong>K4-4</strong></li>
+</ol>
+<p><strong>K-n</strong></p>
+<p><strong>tulkinnan tärkeimmät periaatteet</strong></p>
+<ul>
+<li>kaikki erot suhteellisia eroja</li>
+<li>ca-ratkaisu approksimaatio; voi olla hyvä, mutta myös huono
+-CA on hajonnan (intertian) dekomponoinnin menetelmä.</li>
+<li>Toiset (esim. MG,“ranskalaiset”) painottavat graafista menetelmää ja kuvien oikeaa tulkintaa),
+voi ymmärtää myös moniulotteisenä skaalauksena (MDS: etsi skaalaus, joka maksimoi
+korrelaation) tai moniulotteisena varianssianalyysinä (ANOVA)</li>
+<li>tulkinnan tarkennus molemmissa alaluvuissa</li>
+</ul>
+<p>**edit* Tässä jaksossa korostuu data-analyyin eksplotatiivinen luonne, datan kaivelu
+ja näkökulmien muuntelu. Missä dimensiossa yhteydet ja riippuvuudet piileksivät?
+Kartta on tässä mielessä kartta(vaikka hieman outo), osoittaa yhdessä numeeristen
+tulosten kanssa suuntaa.</p>
+<div id="pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables" class="section level2">
+<h2><span class="header-section-number">7.1</span> Pinotut ja yhdistetyt taulukot (stacked and concatenated tables)</h2>
+<p>Hyvin yksinkertainen esimerkki.</p>
+<p><strong>edit</strong> Mutta tässä esimerkkiaineisto, jossa ei puuttuvia tietoja. Ne olisivatkin
+aika pulmallisia, varianssin dekomponointi vaatii samat reunajakaumat.</p>
+</div>
+<div id="mca---monimuuttujakorrespondenssianalyysi" class="section level2">
+<h2><span class="header-section-number">7.2</span> MCA - monimuuttujakorrespondenssianalyysi</h2>
+<p><strong>k</strong> Terminologiasta: monta muuttujaa on jo ollut käytössä. MCA on monimuuttujamenetelmä
+samassa mielessä kuin faktorianalyysi. Analysoidaan usean statukseltaan samanlaisen
+muuttujan välisiä suhteita, ja myös niiden yhteyksiä tutkimusongelman kannalta
+“eksogeenisiin” taustamuuttujiin tai “selittäjiin”. Surveytutkimuksen kyselylomakkeen
+kysymyspatterit luotaavat tietoa joistain taustalla olevista asenteista.</p>
+<p><strong>edit</strong> yksi kappale, jossa tutkimusasetelmaa verrataan tilastollisten mallien
+asetelmaan? Jako “selittäjiin” ja selitettävään, moniyhtälömallit?
+Faktorianalyysi tässä selkein vertailukohde</p>
+<p><strong>k</strong> Matemaattisesti kaikki muuttuu paljon mutkikkaammaksi, ja yksinkertaisen
+perustapauksen selkeät tulkinnat eivät toimi. Tärkeä asia: CA:n skaalausominaisuudet ja
+visuaalinen tulkinta pätevät edelleen.</p>
+<p><strong>edit</strong> Teorialiitteessä tästä enemmän, ranskalaiset hieman eri mieltä</p>
+<p><strong>k</strong> Data</p>
+<p><strong>k</strong> Puuttuvat havainnot</p>
+
+</div>
+</div>
+<div id="liitteet" class="section level1 unnumbered">
+<h1>Liitteet</h1>
+<div id="korrespondenssianalyysin-teoriaa" class="section level2">
+<h2><span class="header-section-number">7.3</span> Korrespondenssianalyysin teoriaa</h2>
+</div>
+<div id="suomenkielinen-lomake-esimerkki" class="section level2">
+<h2><span class="header-section-number">7.4</span> Suomenkielinen lomake (esimerkki)</h2>
+<p>Tämä kuva on myös tekstissä, kätevä tapa esittää siististi kysymysten pitkät
+versiot.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/substvar_fi_Q1Q2.png&#39;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:L1suomlom1"></span>
+<img src="img/substvar_fi_Q1Q2.png" alt="Esimerkki suomenkielisestä lomakkeesta" width="60%" />
+<p class="caption">
+Kuva 7.1: Esimerkki suomenkielisestä lomakkeesta
+</p>
+</div>
+</div>
+<div id="r---koodi" class="section level2">
+<h2><span class="header-section-number">7.5</span> R - koodi</h2>
+<pre><code>## tweaking rgl</code></pre>
+<pre><code>## tibble [32,823 x 23] (S3: tbl_df/tbl/data.frame)
+##  $ V1      : dbl+lbl [1:32823] 5900, 5900, 5900, 5900, 5900, 5900, 5900, 5900, 5900...
+##    ..@ label      : chr &quot;GESIS Data Archive Study Number&quot;
+##    ..@ format.spss: chr &quot;F4.0&quot;
+##    ..@ labels     : Named num 5900
+##    .. ..- attr(*, &quot;names&quot;)= chr &quot;GESIS Data Archive Study Number ZA5900&quot;
+##  $ V2      : chr [1:32823] &quot;4.0.0 (2016-11-23)&quot; &quot;4.0.0 (2016-11-23)&quot; &quot;4.0.0 (2016-11-23)&quot; &quot;4.0.0 (2016-11-23)&quot; ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;GESIS Archive Version&quot;
+##   ..- attr(*, &quot;format.spss&quot;)= chr &quot;A25&quot;
+##   ..- attr(*, &quot;display_width&quot;)= int 26
+##  $ DOI     : chr [1:32823] &quot;doi:10.4232/1.12661&quot; &quot;doi:10.4232/1.12661&quot; &quot;doi:10.4232/1.12661&quot; &quot;doi:10.4232/1.12661&quot; ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;Digital Object Identifier&quot;
+##   ..- attr(*, &quot;format.spss&quot;)= chr &quot;A50&quot;
+##   ..- attr(*, &quot;display_width&quot;)= int 26
+##  $ V3      : dbl+lbl [1:32823] 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, ...
+##    ..@ label      : chr &quot;Country/ Sample ISO 3166 Code (see V4 for codes for whole nation states)&quot;
+##    ..@ format.spss: chr &quot;F5.0&quot;
+##    ..@ labels     : Named num [1:45] 32 36 40 100 124 152 156 158 191 203 ...
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:45] &quot;AR-Argentina&quot; &quot;AU-Australia&quot; &quot;AT-Austria&quot; &quot;BG-Bulgaria&quot; ...
+##  $ V4      : dbl+lbl [1:32823] 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, ...
+##    ..@ label      : chr &quot;Country ISO 3166 Code (see V3 for codes for the sample)&quot;
+##    ..@ format.spss: chr &quot;F3.0&quot;
+##    ..@ labels     : Named num [1:41] 32 36 40 56 100 124 152 156 158 191 ...
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:41] &quot;AR-Argentina&quot; &quot;AU-Australia&quot; &quot;AT-Austria&quot; &quot;BE-Belgium&quot; ...
+##  $ C_ALPHAN: chr [1:32823] &quot;AU&quot; &quot;AU&quot; &quot;AU&quot; &quot;AU&quot; ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;Country Prefix ISO 3166 Code - alphanumeric&quot;
+##   ..- attr(*, &quot;format.spss&quot;)= chr &quot;A20&quot;
+##   ..- attr(*, &quot;display_width&quot;)= int 22
+##  $ V5      : dbl+lbl [1:32823]  5,  1,  2,  2,  1, NA,  2,  4,  2,  2,  4,  2,  2, ...
+##    ..@ label      : chr &quot;Q1a Working mom: warm relationship with children as a not working mom&quot;
+##    ..@ format.spss: chr &quot;F1.0&quot;
+##    ..@ labels     : Named num [1:8] 0 1 2 3 4 5 8 9
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:8] &quot;NAP: ES&quot; &quot;Strongly agree&quot; &quot;Agree&quot; &quot;Neither agree nor disagree&quot; ...
+##  $ V6      : dbl+lbl [1:32823]  1,  5,  4,  4,  4, NA,  4,  3,  4,  3,  3,  5,  4, ...
+##    ..@ label      : chr &quot;Q1b Working mom: Preschool child is likely to suffer&quot;
+##    ..@ format.spss: chr &quot;F1.0&quot;
+##    ..@ labels     : Named num [1:8] 0 1 2 3 4 5 8 9
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:8] &quot;NAP: ES&quot; &quot;Strongly agree&quot; &quot;Agree&quot; &quot;Neither agree nor disagree&quot; ...
+##  $ V7      : dbl+lbl [1:32823]  3,  5,  2,  4,  4, NA,  4,  2,  4,  2,  2,  3,  4, ...
+##    ..@ label      : chr &quot;Q1c Working woman: Family life suffers when woman has full-time job&quot;
+##    ..@ format.spss: chr &quot;F1.0&quot;
+##    ..@ labels     : Named num [1:8] 0 1 2 3 4 5 8 9
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:8] &quot;NAP: ES&quot; &quot;Strongly agree&quot; &quot;Agree&quot; &quot;Neither agree nor disagree&quot; ...
+##  $ V8      : dbl+lbl [1:32823]  3,  5,  5,  2,  4, NA,  4,  5,  4,  5,  3,  4,  4, ...
+##    ..@ label      : chr &quot;Q1d Working woman: What women really want is home and kids&quot;
+##    ..@ format.spss: chr &quot;F1.0&quot;
+##    ..@ labels     : Named num [1:8] 0 1 2 3 4 5 8 9
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:8] &quot;NAP: ES&quot; &quot;Strongly agree&quot; &quot;Agree&quot; &quot;Neither agree nor disagree&quot; ...
+##  $ V9      : dbl+lbl [1:32823]  3,  1,  2,  3,  4, NA,  2,  4,  4,  1,  4,  2,  2, ...
+##    ..@ label      : chr &quot;Q1e Working woman: Being housewife is as fulfilling as working for pay&quot;
+##    ..@ format.spss: chr &quot;F1.0&quot;
+##    ..@ labels     : Named num [1:8] 0 1 2 3 4 5 8 9
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:8] &quot;NAP: ES&quot; &quot;Strongly agree&quot; &quot;Agree&quot; &quot;Neither agree nor disagree&quot; ...
+##  $ V10     : dbl+lbl [1:32823]  1,  3,  4,  2,  2, NA,  2,  5,  2,  1,  2,  2,  2, ...
+##    ..@ label      : chr &quot;Q2a Both should contribute to household income&quot;
+##    ..@ format.spss: chr &quot;F1.0&quot;
+##    ..@ labels     : Named num [1:8] 0 1 2 3 4 5 8 9
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:8] &quot;NAP: ES&quot; &quot;Strongly agree&quot; &quot;Agree&quot; &quot;Neither agree nor disagree&quot; ...
+##  $ V11     : dbl+lbl [1:32823]  3,  5,  4,  4,  4, NA,  2,  5,  4,  1,  4,  4,  4, ...
+##    ..@ label      : chr &quot;Q2b Men&#39;s job earn money, women&#39;s job look after home&quot;
+##    ..@ format.spss: chr &quot;F1.0&quot;
+##    ..@ labels     : Named num [1:8] 0 1 2 3 4 5 8 9
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:8] &quot;NAP: ES&quot; &quot;Strongly agree&quot; &quot;Agree&quot; &quot;Neither agree nor disagree&quot; ...
+##  $ V12     : dbl+lbl [1:32823]  3, NA, NA,  2,  2, NA,  2, NA,  2,  2,  3,  2, NA, ...
+##    ..@ label      : chr &quot;Q3a Should women work: Child under school age&quot;
+##    ..@ format.spss: chr &quot;F1.0&quot;
+##    ..@ labels     : Named num [1:6] 1 2 3 6 8 9
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:6] &quot;Work full-time&quot; &quot;Work part-time&quot; &quot;Stay at home&quot; &quot;TW: women should decide&quot; ...
+##  $ V13     : dbl+lbl [1:32823]  2, NA,  2,  1,  2, NA,  2, NA,  2,  2,  2,  2, NA, ...
+##    ..@ label      : chr &quot;Q3b Should women work: Youngest kid at school&quot;
+##    ..@ format.spss: chr &quot;F1.0&quot;
+##    ..@ labels     : Named num [1:6] 1 2 3 6 8 9
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:6] &quot;Work full-time&quot; &quot;Work part-time&quot; &quot;Stay at home&quot; &quot;TW: women should decide&quot; ...
+##  $ SEX     : dbl+lbl [1:32823] 1, 2, 2, 2, 2, 1, 2, 1, 2, 2, 1, 1, 2, 2, 1, 1, 2, 2...
+##    ..@ label      : chr &quot;Sex of Respondent&quot;
+##    ..@ format.spss: chr &quot;F1.0&quot;
+##    ..@ labels     : Named num [1:3] 1 2 9
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:3] &quot;Male&quot; &quot;Female&quot; &quot;No answer&quot;
+##  $ AGE     : dbl+lbl [1:32823] 58, 59, 40, 20, 72, 68, 64, 57, 45, 71, 19, 41, 68, ...
+##    ..@ label      : chr &quot;Age of respondent&quot;
+##    ..@ format.spss: chr &quot;F3.0&quot;
+##    ..@ labels     : Named num [1:6] 15 16 17 18 102 999
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:6] &quot;15 years&quot; &quot;16 years&quot; &quot;17 years&quot; &quot;18 years&quot; ...
+##  $ DEGREE  : dbl+lbl [1:32823]  2,  5,  5,  3,  2, NA, NA,  6,  5,  6,  3,  5,  2, ...
+##    ..@ label      : chr &quot;Highest completed degree of education: Categories for international comparison&quot;
+##    ..@ format.spss: chr &quot;F1.0&quot;
+##    ..@ labels     : Named num [1:8] 0 1 2 3 4 5 6 9
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:8] &quot;No formal education&quot; &quot;Primary school (elementary school)&quot; &quot;Lower secondary (secondary completed does not allow entry to university: obligatory school)&quot; &quot;Upper secondary (programs that allows entry to university&quot; ...
+##  $ MAINSTAT: dbl+lbl [1:32823] 6, 6, 3, 1, 6, 5, 6, 2, 1, 5, 3, 1, 6, 1, 1, 6, 6, 1...
+##    ..@ label      : chr &quot;Main status&quot;
+##    ..@ format.spss: chr &quot;F2.0&quot;
+##    ..@ labels     : Named num [1:10] 1 2 3 4 5 6 7 8 9 99
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:10] &quot;In paid work&quot; &quot;Unemployed and looking for a job, HR: incl never had a job&quot; &quot;In education&quot; &quot;Apprentice or trainee&quot; ...
+##  $ TOPBOT  : dbl+lbl [1:32823]  3,  7,  8, NA,  7,  2,  7, NA, 10,  6,  4,  5, NA, ...
+##    ..@ label      : chr &quot;Top-Bottom self-placement&quot;
+##    ..@ format.spss: chr &quot;F2.0&quot;
+##    ..@ labels     : Named num [1:14] 0 1 2 3 4 5 6 7 8 9 ...
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:14] &quot;Not available: GB,US&quot; &quot;Lowest, Bottom, 01&quot; &quot;02&quot; &quot;03&quot; ...
+##  $ HHCHILDR: dbl+lbl [1:32823] NA, NA,  3,  1,  0, NA,  0,  0,  1, NA,  0,  2,  0, ...
+##    ..@ label      : chr &quot;How many children in household: children between [school age] and 17 years of age&quot;
+##    ..@ format.spss: chr &quot;F2.0&quot;
+##    ..@ labels     : Named num [1:7] 0 1 2 21 96 97 99
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:7] &quot;No children&quot; &quot;One child&quot; &quot;2 children&quot; &quot;21 children&quot; ...
+##  $ MARITAL : dbl+lbl [1:32823]  6,  1,  1,  6,  1,  6,  1,  1,  1, NA,  6,  1,  1, ...
+##    ..@ label      : chr &quot;Legal partnership status&quot;
+##    ..@ format.spss: chr &quot;F1.0&quot;
+##    ..@ labels     : Named num [1:9] 1 2 3 4 5 6 7 8 9
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:9] &quot;Married&quot; &quot;Civil partnership&quot; &quot;Separated from spouse/ civil partner (still legally married/ still legally in a civil partnership)&quot; &quot;Divorced from spouse/ legally separated from civil partner&quot; ...
+##  $ URBRURAL: dbl+lbl [1:32823]  1,  1,  1, NA,  1,  2, NA,  2,  2, NA,  2,  2,  3, ...
+##    ..@ label      : chr &quot;Place of living: urban - rural&quot;
+##    ..@ format.spss: chr &quot;F1.0&quot;
+##    ..@ labels     : Named num [1:7] 1 2 3 4 5 7 9
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:7] &quot;A big city&quot; &quot;The suburbs or outskirts of a big city&quot; &quot;A town or a small city&quot; &quot;A country village&quot; ...
+##  - attr(*, &quot;notes&quot;)= chr [1:45] &quot;document Plan File: /Users/marcic/Desktop/old/GPS2011 sampling/ISSP2013.sampling&quot; &quot;         .csplan&quot; &quot;         Weight Variable: SampleWeight_Final_&quot; &quot;         Stage 1&quot; ...</code></pre>
+<pre><code>## $label
+## [1] &quot;Age of respondent&quot;
+## 
+## $format.spss
+## [1] &quot;F3.0&quot;
+## 
+## $labels
+##  15 years  16 years  17 years  18 years 102 years No answer 
+##        15        16        17        18       102       999 
+## 
+## $class
+## [1] &quot;haven_labelled&quot; &quot;vctrs_vctr&quot;     &quot;double&quot;</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Min.</th>
+<th align="right">1st Qu.</th>
+<th align="right">Median</th>
+<th align="right">Mean</th>
+<th align="right">3rd Qu.</th>
+<th align="right">Max.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">15</td>
+<td align="right">36</td>
+<td align="right">50</td>
+<td align="right">49.51607</td>
+<td align="right">63</td>
+<td align="right">102</td>
+</tr>
+</tbody>
+</table>
+<pre><code>## N = 32823
+## Note: pearson correlation (p-value).</code></pre>
+<table class="kable_wrapper">
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left"></th>
+<th align="left">[1]</th>
+<th align="left">[2]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">[1]AGE</td>
+<td align="left">[1]AGE</td>
+<td align="left">1.00</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">[2]ika</td>
+<td align="left">[2]ika</td>
+<td align="left">1.00</td>
+<td align="left">1.00</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<table>
+<caption><span id="tab:unnamed-chunk-2">Taulukko 7.1: </span>ISSP2012:Työelämä ja perhearvot - kysymykset</caption>
+<colgroup>
+<col width="9%" />
+<col width="90%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">muuttuja</th>
+<th align="left">kysymyksen tunnus, lyhennetty kysymys</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">V5</td>
+<td align="left">Q1a Working mother can have warm relation with child</td>
+</tr>
+<tr class="even">
+<td align="left">V6</td>
+<td align="left">Q1b Pre-school child suffers through working mother</td>
+</tr>
+<tr class="odd">
+<td align="left">V7</td>
+<td align="left">Q1c Family life suffers through working mother</td>
+</tr>
+<tr class="even">
+<td align="left">V8</td>
+<td align="left">Q1d Women’s preference: home and children</td>
+</tr>
+<tr class="odd">
+<td align="left">V9</td>
+<td align="left">Q1e Being housewife is satisfying</td>
+</tr>
+<tr class="even">
+<td align="left">V10</td>
+<td align="left">Q2a Both should contribute to household income</td>
+</tr>
+<tr class="odd">
+<td align="left">V11</td>
+<td align="left">Q2b Men’s job is earn money, women’s job household</td>
+</tr>
+<tr class="even">
+<td align="left">V12</td>
+<td align="left">Q3a Should women work: Child under school age</td>
+</tr>
+<tr class="odd">
+<td align="left">V13</td>
+<td align="left">Q3b Should women work: Youngest kid at school</td>
+</tr>
+<tr class="even">
+<td align="left">SEX</td>
+<td align="left">Respondents age</td>
+</tr>
+<tr class="odd">
+<td align="left">AGE</td>
+<td align="left">Respondents gender</td>
+</tr>
+<tr class="even">
+<td align="left">DEGREE</td>
+<td align="left">Highest completed degree of education: Categories for international comparison</td>
+</tr>
+<tr class="odd">
+<td align="left">MAINSTAT</td>
+<td align="left">Main status: work, unemployed, in education…</td>
+</tr>
+<tr class="even">
+<td align="left">TOPBOT</td>
+<td align="left">Top-Bottom self-placement (10 pt scale)</td>
+</tr>
+<tr class="odd">
+<td align="left">HHCHILDR</td>
+<td align="left">How many children in household: children between [school age] and 17 years of age</td>
+</tr>
+<tr class="even">
+<td align="left">MARITAL</td>
+<td align="left">Legal partnership status: married, civil partership…</td>
+</tr>
+<tr class="odd">
+<td align="left">URBRURAL</td>
+<td align="left">Place of living: urban - rural</td>
+</tr>
+</tbody>
+</table>
+<p><img src="img/substvar_fi_Q1Q2.png" width="380" /></p>
+<pre><code>## tibble [8,542 x 7] (S3: tbl_df/tbl/data.frame)
+##  $ C_ALPHAN: chr [1:8542] &quot;BG&quot; &quot;BG&quot; &quot;BG&quot; &quot;BG&quot; ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;Country Prefix ISO 3166 Code - alphanumeric&quot;
+##   ..- attr(*, &quot;format.spss&quot;)= chr &quot;A20&quot;
+##   ..- attr(*, &quot;display_width&quot;)= int 22
+##  $ V3      : dbl+lbl [1:8542] 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100...
+##    ..@ label      : chr &quot;Country/ Sample ISO 3166 Code (see V4 for codes for whole nation states)&quot;
+##    ..@ format.spss: chr &quot;F5.0&quot;
+##    ..@ labels     : Named num [1:45] 32 36 40 100 124 152 156 158 191 203 ...
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:45] &quot;AR-Argentina&quot; &quot;AU-Australia&quot; &quot;AT-Austria&quot; &quot;BG-Bulgaria&quot; ...
+##  $ maa     : Factor w/ 25 levels &quot;AU&quot;,&quot;AT&quot;,&quot;BG&quot;,..: 3 3 3 3 3 3 3 3 3 3 ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;Country Prefix ISO 3166 Code - alphanumeric&quot;
+##  $ maa3    : Factor w/ 29 levels &quot;AU-Australia&quot;,..: 3 3 3 3 3 3 3 3 3 3 ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;Country/ Sample ISO 3166 Code (see V4 for codes for whole nation states)&quot;
+##  $ Q1b     : Factor w/ 5 levels &quot;S&quot;,&quot;s&quot;,&quot;?&quot;,&quot;e&quot;,..: 3 2 3 4 3 3 4 3 2 3 ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;Q1b Working mom: Preschool child is likely to suffer&quot;
+##  $ sp      : Factor w/ 2 levels &quot;m&quot;,&quot;f&quot;: 2 2 1 2 2 2 1 1 2 1 ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;Sex of Respondent&quot;
+##  $ ika     : dbl+lbl [1:8542] 64, 43, 63, 31, 52, 46, 51, 40, 57, 64, 41, 60, 21, 4...
+##    ..@ label      : chr &quot;Age of respondent&quot;
+##    ..@ format.spss: chr &quot;F3.0&quot;
+##    ..@ labels     : Named num [1:6] 15 16 17 18 102 999
+##    .. ..- attr(*, &quot;names&quot;)= chr [1:6] &quot;15 years&quot; &quot;16 years&quot; &quot;17 years&quot; &quot;18 years&quot; ...
+##  - attr(*, &quot;notes&quot;)= chr [1:45] &quot;document Plan File: /Users/marcic/Desktop/old/GPS2011 sampling/ISSP2013.sampling&quot; &quot;         .csplan&quot; &quot;         Weight Variable: SampleWeight_Final_&quot; &quot;         Stage 1&quot; ...</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<table>
+<caption><span id="tab:unnamed-chunk-2">Taulukko 7.1: </span>Kysymyksen Q1b vastaukset maittain</caption>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">S</th>
+<th align="left">s</th>
+<th align="left">?</th>
+<th align="left">e</th>
+<th align="left">E</th>
+<th align="left">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">BE</td>
+<td align="left">191</td>
+<td align="left">451</td>
+<td align="left">438</td>
+<td align="left">552</td>
+<td align="left">381</td>
+<td align="left">2013</td>
+</tr>
+<tr class="even">
+<td align="left">BG</td>
+<td align="left">118</td>
+<td align="left">395</td>
+<td align="left">205</td>
+<td align="left">190</td>
+<td align="left">13</td>
+<td align="left">921</td>
+</tr>
+<tr class="odd">
+<td align="left">DE</td>
+<td align="left">165</td>
+<td align="left">375</td>
+<td align="left">198</td>
+<td align="left">538</td>
+<td align="left">438</td>
+<td align="left">1714</td>
+</tr>
+<tr class="even">
+<td align="left">DK</td>
+<td align="left">70</td>
+<td align="left">238</td>
+<td align="left">152</td>
+<td align="left">232</td>
+<td align="left">696</td>
+<td align="left">1388</td>
+</tr>
+<tr class="odd">
+<td align="left">FI</td>
+<td align="left">47</td>
+<td align="left">188</td>
+<td align="left">149</td>
+<td align="left">423</td>
+<td align="left">303</td>
+<td align="left">1110</td>
+</tr>
+<tr class="even">
+<td align="left">HU</td>
+<td align="left">219</td>
+<td align="left">288</td>
+<td align="left">225</td>
+<td align="left">190</td>
+<td align="left">75</td>
+<td align="left">997</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">810</td>
+<td align="left">1935</td>
+<td align="left">1367</td>
+<td align="left">2125</td>
+<td align="left">1906</td>
+<td align="left">8143</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption><span id="tab:unnamed-chunk-2">Taulukko 7.1: </span>Kysymyksen Q1b vastaukset, riviprosentit</caption>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">S</th>
+<th align="left">s</th>
+<th align="left">?</th>
+<th align="left">e</th>
+<th align="left">E</th>
+<th align="left">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">BE</td>
+<td align="left">9.49</td>
+<td align="left">22.40</td>
+<td align="left">21.76</td>
+<td align="left">27.42</td>
+<td align="left">18.93</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">BG</td>
+<td align="left">12.81</td>
+<td align="left">42.89</td>
+<td align="left">22.26</td>
+<td align="left">20.63</td>
+<td align="left">1.41</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">DE</td>
+<td align="left">9.63</td>
+<td align="left">21.88</td>
+<td align="left">11.55</td>
+<td align="left">31.39</td>
+<td align="left">25.55</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">DK</td>
+<td align="left">5.04</td>
+<td align="left">17.15</td>
+<td align="left">10.95</td>
+<td align="left">16.71</td>
+<td align="left">50.14</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">FI</td>
+<td align="left">4.23</td>
+<td align="left">16.94</td>
+<td align="left">13.42</td>
+<td align="left">38.11</td>
+<td align="left">27.30</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">HU</td>
+<td align="left">21.97</td>
+<td align="left">28.89</td>
+<td align="left">22.57</td>
+<td align="left">19.06</td>
+<td align="left">7.52</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">All</td>
+<td align="left">9.95</td>
+<td align="left">23.76</td>
+<td align="left">16.79</td>
+<td align="left">26.10</td>
+<td align="left">23.41</td>
+<td align="left">100.00</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption><span id="tab:unnamed-chunk-2">Taulukko 7.1: </span>Kysymyksen Q1b vastaukset, sarakeprosentit</caption>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">S</th>
+<th align="left">s</th>
+<th align="left">?</th>
+<th align="left">e</th>
+<th align="left">E</th>
+<th align="left">All</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">BE</td>
+<td align="left">23.58</td>
+<td align="left">23.31</td>
+<td align="left">32.04</td>
+<td align="left">25.98</td>
+<td align="left">19.99</td>
+<td align="left">24.72</td>
+</tr>
+<tr class="even">
+<td align="left">BG</td>
+<td align="left">14.57</td>
+<td align="left">20.41</td>
+<td align="left">15.00</td>
+<td align="left">8.94</td>
+<td align="left">0.68</td>
+<td align="left">11.31</td>
+</tr>
+<tr class="odd">
+<td align="left">DE</td>
+<td align="left">20.37</td>
+<td align="left">19.38</td>
+<td align="left">14.48</td>
+<td align="left">25.32</td>
+<td align="left">22.98</td>
+<td align="left">21.05</td>
+</tr>
+<tr class="even">
+<td align="left">DK</td>
+<td align="left">8.64</td>
+<td align="left">12.30</td>
+<td align="left">11.12</td>
+<td align="left">10.92</td>
+<td align="left">36.52</td>
+<td align="left">17.05</td>
+</tr>
+<tr class="odd">
+<td align="left">FI</td>
+<td align="left">5.80</td>
+<td align="left">9.72</td>
+<td align="left">10.90</td>
+<td align="left">19.91</td>
+<td align="left">15.90</td>
+<td align="left">13.63</td>
+</tr>
+<tr class="even">
+<td align="left">HU</td>
+<td align="left">27.04</td>
+<td align="left">14.88</td>
+<td align="left">16.46</td>
+<td align="left">8.94</td>
+<td align="left">3.93</td>
+<td align="left">12.24</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+<td align="left">100.00</td>
+</tr>
+</tbody>
+</table>
+<p><img src="JH_capaper_files/figure-html/unnamed-chunk-2-2.png" width="672" /><img src="JH_capaper_files/figure-html/unnamed-chunk-2-3.png" width="672" /><img src="JH_capaper_files/figure-html/unnamed-chunk-2-4.png" width="672" /><img src="JH_capaper_files/figure-html/unnamed-chunk-2-5.png" width="672" /><img src="JH_capaper_files/figure-html/unnamed-chunk-2-6.png" width="672" /><img src="img/simpleCAasymmTulk2.png" width="640" /><img src="JH_capaper_files/figure-html/unnamed-chunk-2-8.png" width="672" /><img src="JH_capaper_files/figure-html/unnamed-chunk-2-9.png" width="672" /><img src="JH_capaper_files/figure-html/unnamed-chunk-2-10.png" width="672" /></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">/</th>
+<th align="right">S</th>
+<th align="right">s</th>
+<th align="right">?</th>
+<th align="right">e</th>
+<th align="right">E</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">BE</td>
+<td align="right">191</td>
+<td align="right">451</td>
+<td align="right">438</td>
+<td align="right">552</td>
+<td align="right">381</td>
+</tr>
+<tr class="even">
+<td align="left">BG</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">DE</td>
+<td align="right">165</td>
+<td align="right">375</td>
+<td align="right">198</td>
+<td align="right">538</td>
+<td align="right">438</td>
+</tr>
+<tr class="even">
+<td align="left">DK</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">FI</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">HU</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption><span id="tab:unnamed-chunk-2">Taulukko 7.1: </span>Q1b vastaukset, Saksan ja Belgian alueet</caption>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">S</th>
+<th align="right">s</th>
+<th align="right">?</th>
+<th align="right">e</th>
+<th align="right">E</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">bF</td>
+<td align="right">51</td>
+<td align="right">241</td>
+<td align="right">262</td>
+<td align="right">312</td>
+<td align="right">146</td>
+</tr>
+<tr class="even">
+<td align="left">bW</td>
+<td align="right">53</td>
+<td align="right">103</td>
+<td align="right">91</td>
+<td align="right">118</td>
+<td align="right">125</td>
+</tr>
+<tr class="odd">
+<td align="left">bB</td>
+<td align="right">87</td>
+<td align="right">107</td>
+<td align="right">85</td>
+<td align="right">122</td>
+<td align="right">110</td>
+</tr>
+<tr class="even">
+<td align="left">BG</td>
+<td align="right">118</td>
+<td align="right">395</td>
+<td align="right">205</td>
+<td align="right">190</td>
+<td align="right">13</td>
+</tr>
+<tr class="odd">
+<td align="left">dW</td>
+<td align="right">133</td>
+<td align="right">313</td>
+<td align="right">138</td>
+<td align="right">375</td>
+<td align="right">208</td>
+</tr>
+<tr class="even">
+<td align="left">dE</td>
+<td align="right">32</td>
+<td align="right">62</td>
+<td align="right">60</td>
+<td align="right">163</td>
+<td align="right">230</td>
+</tr>
+<tr class="odd">
+<td align="left">DK</td>
+<td align="right">70</td>
+<td align="right">238</td>
+<td align="right">152</td>
+<td align="right">232</td>
+<td align="right">696</td>
+</tr>
+<tr class="even">
+<td align="left">FI</td>
+<td align="right">47</td>
+<td align="right">188</td>
+<td align="right">149</td>
+<td align="right">423</td>
+<td align="right">303</td>
+</tr>
+<tr class="odd">
+<td align="left">HU</td>
+<td align="right">219</td>
+<td align="right">288</td>
+<td align="right">225</td>
+<td align="right">190</td>
+<td align="right">75</td>
+</tr>
+<tr class="even">
+<td align="left">BE</td>
+<td align="right">191</td>
+<td align="right">451</td>
+<td align="right">438</td>
+<td align="right">552</td>
+<td align="right">381</td>
+</tr>
+<tr class="odd">
+<td align="left">DE</td>
+<td align="right">165</td>
+<td align="right">375</td>
+<td align="right">198</td>
+<td align="right">538</td>
+<td align="right">438</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">S</th>
+<th align="left">s</th>
+<th align="left">?</th>
+<th align="left">e</th>
+<th align="left">E</th>
+<th align="left">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">bF</td>
+<td align="left">5.04</td>
+<td align="left">23.81</td>
+<td align="left">25.89</td>
+<td align="left">30.83</td>
+<td align="left">14.43</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">bW</td>
+<td align="left">10.82</td>
+<td align="left">21.02</td>
+<td align="left">18.57</td>
+<td align="left">24.08</td>
+<td align="left">25.51</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">bB</td>
+<td align="left">17.03</td>
+<td align="left">20.94</td>
+<td align="left">16.63</td>
+<td align="left">23.87</td>
+<td align="left">21.53</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">BG</td>
+<td align="left">12.81</td>
+<td align="left">42.89</td>
+<td align="left">22.26</td>
+<td align="left">20.63</td>
+<td align="left">1.41</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">dW</td>
+<td align="left">11.40</td>
+<td align="left">26.82</td>
+<td align="left">11.83</td>
+<td align="left">32.13</td>
+<td align="left">17.82</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">dE</td>
+<td align="left">5.85</td>
+<td align="left">11.33</td>
+<td align="left">10.97</td>
+<td align="left">29.80</td>
+<td align="left">42.05</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">DK</td>
+<td align="left">5.04</td>
+<td align="left">17.15</td>
+<td align="left">10.95</td>
+<td align="left">16.71</td>
+<td align="left">50.14</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">FI</td>
+<td align="left">4.23</td>
+<td align="left">16.94</td>
+<td align="left">13.42</td>
+<td align="left">38.11</td>
+<td align="left">27.30</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left">HU</td>
+<td align="left">21.97</td>
+<td align="left">28.89</td>
+<td align="left">22.57</td>
+<td align="left">19.06</td>
+<td align="left">7.52</td>
+<td align="left">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">All</td>
+<td align="left">9.95</td>
+<td align="left">23.76</td>
+<td align="left">16.79</td>
+<td align="left">26.10</td>
+<td align="left">23.41</td>
+<td align="left">100.00</td>
+</tr>
+</tbody>
+</table>
+<p><img src="JH_capaper_files/figure-html/unnamed-chunk-2-11.png" width="672" /><img src="JH_capaper_files/figure-html/unnamed-chunk-2-12.png" width="672" /></p>
+<pre><code>## 
+##  Principal inertias (eigenvalues):
+##            1        2        3        4       
+## Value      0.154101 0.032489 0.014294 0.008944
+## Percentage 73.44%   15.48%   6.81%    4.26%   
+## 
+## 
+##  Rows:
+##                bF        bW       bB       BG        dW        dE        DK
+## Mass     0.124279  0.060174 0.062753 0.113103  0.143313  0.067174  0.170453
+## ChiDist  0.341469  0.096258 0.239034 0.630991  0.219094  0.505720  0.634063
+## Inertia  0.014491  0.000558 0.003586 0.045032  0.006879  0.017180  0.068528
+## Dim. 1   0.400065 -0.090631 0.216912 1.502458  0.254323 -1.262007 -1.506022
+## Dim. 2  -1.254042  0.267998 0.789358 0.236498 -0.451124 -0.226595  1.121468
+##                FI       HU    BE (*)    DE (*)
+## Mass     0.136313 0.122436        NA        NA
+## ChiDist  0.347733 0.550404  0.157974  0.175013
+## Inertia  0.016483 0.037091        NA        NA
+## Dim. 1  -0.525222 1.215462  0.234127 -0.229593
+## Dim. 2  -1.500986 1.280342 -0.364834 -0.379468
+## 
+## 
+##  Columns:
+##                S        s         ?         e         E
+## Mass    0.099472 0.237627  0.167874  0.260960  0.234066
+## ChiDist 0.592824 0.354761  0.332288  0.280549  0.672594
+## Inertia 0.034959 0.029907  0.018536  0.020540  0.105887
+## Dim. 1  1.073310 0.787257  0.649789 -0.029859 -1.688108
+## Dim. 2  1.835133 0.290929 -0.119934 -1.451548  0.629110</code></pre>
+<pre><code>## 
+## Principal inertias (eigenvalues):
+## 
+##  dim    value      %   cum%   scree plot               
+##  1      0.154101  73.4  73.4  ******************       
+##  2      0.032489  15.5  88.9  ****                     
+##  3      0.014294   6.8  95.7  **                       
+##  4      0.008944   4.3 100.0  *                        
+##         -------- -----                                 
+##  Total: 0.209828 100.0                                 
+## 
+## 
+## Rows:
+##       name   mass  qlt  inr    k=1 cor  ctr    k=2 cor  ctr  
+## 1  |    bF |  124  650   69 |  157 212   20 | -226 438  195 |
+## 2  |    bW |   60  388    3 |  -36 137    0 |   48 252    4 |
+## 3  |    bB |   63  481   17 |   85 127    3 |  142 354   39 |
+## 4  |    BG |  113  878  215 |  590 874  255 |   43   5    6 |
+## 5  |    dW |  143  345   33 |  100 208    9 |  -81 138   29 |
+## 6  |    dE |   67  966   82 | -495 960  107 |  -41   7    3 |
+## 7  |    DK |  170  971  327 | -591 869  387 |  202 102  214 |
+## 8  |    FI |  136  957   79 | -206 352   38 | -271 605  307 |
+## 9  |    HU |  122  927  177 |  477 751  181 |  231 176  201 |
+## 10 | (*)BE | &lt;NA&gt;  512 &lt;NA&gt; |   92 338 &lt;NA&gt; |  -66 173 &lt;NA&gt; |
+## 11 | (*)DE | &lt;NA&gt;  418 &lt;NA&gt; |  -90 265 &lt;NA&gt; |  -68 153 &lt;NA&gt; |
+## 
+## Columns:
+##     name   mass  qlt  inr    k=1 cor ctr    k=2 cor ctr  
+## 1 |    S |   99  816  167 |  421 505 115 |  331 311 335 |
+## 2 |    s |  238  781  143 |  309 759 147 |   52  22  20 |
+## 3 |      |  168  594   88 |  255 589  71 |  -22   4   2 |
+## 4 |    e |  261  871   98 |  -12   2   0 | -262 870 550 |
+## 5 |    E |  234  999  505 | -663 971 667 |  113  28  93 |</code></pre>
+<p><img src="JH_capaper_files/figure-html/unnamed-chunk-2-13.png" width="672" /><img src="JH_capaper_files/figure-html/unnamed-chunk-2-14.png" width="672" /><img src="JH_capaper_files/figure-html/unnamed-chunk-2-15.png" width="672" /><img src="img/3dSymMap_1.PNG" width="398" /><img src="img/3dSymMap_2.PNG" width="445" /><img src="JH_capaper_files/figure-html/unnamed-chunk-2-18.png" width="672" /></p>
+<pre><code>## 
+## Principal inertias (eigenvalues):
+## 
+##  dim    value      %   cum%   scree plot               
+##  1      0.037448  87.0  87.0  **********************   
+##  2      0.003977   9.2  96.2  **                       
+##  3      0.001041   2.4  98.6  *                        
+##  4      0.000590   1.4 100.0                           
+##         -------- -----                                 
+##  Total: 0.043055 100.0                                 
+## 
+## 
+## Rows:
+##      name   mass  qlt  inr    k=1 cor ctr    k=2 cor ctr  
+## 1  |   f1 |   60  990   36 | -125 614  25 |  -98 376 145 |
+## 2  |   f2 |   83  997  163 | -289 983 185 |   35  14  25 |
+## 3  |   f3 |   91  984   47 | -146 958  52 |   24  26  13 |
+## 4  |   f4 |  101 1000   97 | -186 836  93 |   82 164 172 |
+## 5  |   f5 |   98  879    4 |  -35 658   3 |   20 221  10 |
+## 6  |   f6 |  100  951  176 |  256 866 175 |   80  85 162 |
+## 7  |   m1 |   57  659   32 |   42  72   3 | -120 587 205 |
+## 8  |   m2 |   66  977   57 | -187 946  62 |  -34  30  19 |
+## 9  |   m3 |   78  457    5 |  -31 318   2 |  -20 139   8 |
+## 10 |   m4 |   89  674   14 |   58 482   8 |  -37 192  30 |
+## 11 |   m5 |   89  988   90 |  189 818  85 |  -86 170 166 |
+## 12 |   m6 |   89  978  277 |  360 963 307 |   45  15  45 |
+## 
+## Columns:
+##     name   mass  qlt  inr    k=1 cor ctr    k=2 cor ctr  
+## 1 |    S |   99  915  128 |  196 695 102 |  110 220 304 |
+## 2 |    s |  238  969  304 |  230 961 336 |   21   8  27 |
+## 3 |      |  168  777   46 |   62 330  17 |  -73 447 223 |
+## 4 |    e |  261  897   58 |  -68 473  32 |  -64 424 268 |
+## 5 |    E |  234  997  464 | -286 962 513 |   55  35 177 |</code></pre>
+<p><img src="JH_capaper_files/figure-html/unnamed-chunk-2-19.png" width="672" /><img src="img/substvar_fi_Q1Q2.png" width="380" /><img src="img/BookdownProc.png" width="242" /></p>
+</div>
+<div id="tekninen-ympäristö-ja-bookdown-paketti" class="section level2">
+<h2><span class="header-section-number">7.6</span> Tekninen ympäristö ja Bookdown-paketti</h2>
+<p>Muokataan tiiviimpi pätkä esimerkkireposta bookdown-testi1. Tämä kuva kertoo vain
+julkaisutekniikan ympäristön.</p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/BookdownProc.png&#39;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:L3bdprocess1"></span>
+<img src="img/BookdownProc.png" alt="Tulostiedoston prosessointi" width="60%" />
+<p class="caption">
+Kuva 7.2: Tulostiedoston prosessointi
+</p>
+</div>
+
+</div>
+</div>
+<div id="lähteet-1" class="section level1 unnumbered">
+<h1>Lähteet</h1>
+
+<div id="refs" class="references">
+<div id="ref-RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a">
+<p>(2016), ISSP Research Group. 2016. ”International Social Survey Programme: Family and Changing Gender Roles IV - ISSP 2012”. <a href="https://doi.org/10.4232/1.12661">https://doi.org/10.4232/1.12661</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5b15542ee4b0e2616bc42dca">
+<p>Blasius, Jörg, ja Victor Thiessen. 2006. ”Assessing Data Quality and Construct Comparability in Cross-National Surveys”. <em>European Sociological Review</em> 22 (3): 229–42. <a href="http://www.jstor.org/stable/3806519">http://www.jstor.org/stable/3806519</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76">
+<p>Greenacre, Michael. 2003. ”Singular value decomposition of matched matrices”. <em>Journal of Applied Statistics</em> 30 (10): 1101–13. <a href="https://doi.org/10.1080/0266476032000107132">https://doi.org/10.1080/0266476032000107132</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca">
+<p>———. 2017. ”Multiple Correspondence Analysis (MCA): Theory and Practice, spring 2017 (University of Helsinki )”. <a href="https://moodle.helsinki.fi/course/search.php?search=correspondence+analysis">https://moodle.helsinki.fi/course/search.php?search=correspondence+analysis</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5ab76b43e4b003f4468d1f07">
+<p>Greenacre, Michael, ja Jörg Blasius. 2006. <em>Multiple correspondence analysis and related methods</em>. Boca Raton (FL): Chapman &amp; Hall/CRC. <a href="https://helka.finna.fi/Record/helka.2018050">https://helka.finna.fi/Record/helka.2018050</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5a857a44e4b0ed2d44664d84">
+<p>Greenacre, Michael, ja Trevor Hastie. 1987. ”The Geometric Interpretation of Correspondence Analysis”. <em>Journal of the American Statistical Association</em> 82 (398): 437–47. <a href="https://doi.org/10.1080/01621459.1987.10478446">https://doi.org/10.1080/01621459.1987.10478446</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c">
+<p>Greenacre, Michael J. 2010. <em>Biplots in Practice</em>. Bilbao, Spain: Fundacion BBVA. <a href="https://www.fbbva.es/microsite/multivariate-statistics/biplots.html">https://www.fbbva.es/microsite/multivariate-statistics/biplots.html</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5a857a43e4b0ed2d44664d78">
+<p>———. 2017. <em>Correspondence analysis in practice</em>. Third edition. Boca Raton, Florida: CRC Press. <a href="https://helka.finna.fi/Record/helka.3029760">https://helka.finna.fi/Record/helka.3029760</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5a857a44e4b0ed2d44664d87">
+<p>Greenacre, Michael, ja Rafael Pardo. 2006. ”Subset Correspondence Analysis: Visualizing Relationships Among a Selected Set of Response Categories From a Questionnaire Survey”. <em>Sociological Methods &amp; Research</em> 35 (2): 193–218. <a href="https://doi.org/10.1177/0049124106290316">https://doi.org/10.1177/0049124106290316</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5c3759c2e4b0085b307c82b5">
+<p>McNamara, Amelia, ja Nicholas J. Horton. 2018. ”Wrangling Categorical Data in R”. <em>The American Statistician</em> 72 (1): 97–104. <a href="https://doi.org/10.1080/00031305.2017.1356375">https://doi.org/10.1080/00031305.2017.1356375</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5a857a44e4b0ed2d44664d95">
+<p>Mustonen, Seppo. 1995. <em>Tilastolliset monimuuttujamenetelmät</em>. Helsinki: Survo Systems. <a href="http://www.survo.fi/mustonen/monim.pdf">http://www.survo.fi/mustonen/monim.pdf</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5a857a43e4b0ed2d44664d75">
+<p>Roux, Brigitte Le, ja Henry Rouanet. 2004. <em>Geometric data analysis: from correspondence analysis to structured data analysis</em>. Dordrecht: Kluwer Academic Publishers.</p>
+</div>
+<div id="ref-RefWorks:doc:5a857a44e4b0ed2d44664da4">
+<p>Vehkalahti, Kimmo. 2008. <em>Kyselytutkimuksen mittarit ja menetelmät</em>. Helsinki: Tammi. <a href="https://helka.finna.fi/Record/helka.2120450">https://helka.finna.fi/Record/helka.2120450</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5bd08fb6e4b05c5447c9a9f9">
+<p>Walter, Jessica. 2018. ”The adequacy of measures of gender roles attitudes: a review of current measures in omnibus surveys”. <em>Quality &amp; Quantity</em> 52 (2): 829–48. <a href="https://doi.org/10.1007/s11135-017-0491-x">https://doi.org/10.1007/s11135-017-0491-x</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5b6b36dde4b09b7ec442bf8b">
+<p>Xie, Yihui. 2016. <em>bookdown: Authoring Books and Technical Documents with R Markdown</em>. Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/bookdown/">https://bookdown.org/yihui/bookdown/</a>.</p>
+</div>
+<div id="ref-R-bookdown">
+<p>———. 2020. <em>bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5b6b346fe4b0c619b11b8a3e">
+<p>Yihui Xie, Garrett Grolemund, J. J. Allaire. 2018. <em>R Markdown: The Definitive Guide</em>. Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/rmarkdown/">https://bookdown.org/yihui/rmarkdown/</a>.</p>
+</div>
+</div>
+</div>
+<p style="text-align: center;">
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

@@ -1,10 +1,11 @@
 ---
 title: "Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä"
 author: "Jussi Hirvonen"
-date: "Versio 0.1, tulostettu `r Sys.Date()`"
+date: "Versio 0.4, tulostettu `r Sys.Date()`"
 output: pdf_document
 description: Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä.
 documentclass: book
+github-repo: hirjus/capaper
 lang: fi
 link-citations: yes
 bibliography:
@@ -26,8 +27,19 @@ _bookdown.yml-tiedostossa.
 RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla),
 ja korjailla skandit jos niissä on vikaa.
 
-**25.10.18**
+Koodi näkyy Galkun tulosteessa (https://hirjus.github.io/Galku), jossa on myös
+pitkiä listauksia muunnosten tarkistuksista ja kuvia eri versioina.
 
+Koodi kopiodaan Galkusta, kommentoidaan pois tarkistuksia ja muita välitulostuksia.
+Koodin ydinasiat koitetaan pitää samana kuin Galkussa, isommat muuutoksen ensin siellä
+ja sitten tähän projektiin.
+
+**PDF-tulostus oikuttelee Saksan ja Belgian aluejako-datan tai profiilitaulukon
+luonnissa - toistaiseksi vain html-tuloste (24.10.2020)**
+
+Raportti yhtenä html-tiedostona (https://hirjus.github.io/capaper/JH_capaper.html).
+
+**
 
 ```{r jhpaketit, include=FALSE}
 # 18.10.2020
@@ -49,13 +61,10 @@ library(tinytex)
 library(assertthat)
 
 ```
-**Ideoita**
 
-1. Ehkä automaattista R-kirjastojen dokumentointia voisi harkita?
+Gitbook-tulosteessa ei saa koodia "piilotettua", asetus "code_folding: hide" vaatii teeman (theme). _output.yml - tiedostoon lisätty html_book - formaatti, siinä voi tarvittaessa käyttää piilotusta.
 
-2. Gitbook-tulosteessa ei saa koodia "piilotettua", asetus "code_folding: hide" vaatii teeman (theme). _output.yml - tiedostoon lisätty html_book - formaatti, siinä voi tarvittaessa käyttää piilotusta.
-
-3. Versiointi: 0.0n aloittelua, 0.n jäsentely koko paperille, 1.n.n valmiimpaa tekstiä.
+ Versiointi: 0.0n aloittelua, 0.n jäsentely koko paperille, 1.n.n valmiimpaa tekstiä.
 
 ```{r include=FALSE}
 

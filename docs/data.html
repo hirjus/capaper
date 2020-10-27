@@ -13,7 +13,7 @@
   
   
   <meta property="og:description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä." />
-  
+  <meta name="github-repo" content="hirjus/capaper" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Luku 2 Data | Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä" />
@@ -50,6 +50,8 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -132,7 +134,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Alkutoimia</a></li>
 <li class="chapter" data-level="1" data-path="johdanto.html"><a href="johdanto.html"><i class="fa fa-check"></i><b>1</b> Johdanto</a><ul>
-<li class="chapter" data-level="1.1" data-path="johdanto.html"><a href="johdanto.html#tutkielman-tavoite-tutkimusongelma"><i class="fa fa-check"></i><b>1.1</b> Tutkielman tavoite (tutkimusongelma?)</a></li>
+<li class="chapter" data-level="1.1" data-path="johdanto.html"><a href="johdanto.html#tutkielman-tavoite"><i class="fa fa-check"></i><b>1.1</b> Tutkielman tavoite)</a></li>
 <li class="chapter" data-level="1.2" data-path="johdanto.html"><a href="johdanto.html#tärkeimmät-lähteet-ja-ohjelmistot"><i class="fa fa-check"></i><b>1.2</b> Tärkeimmät lähteet ja ohjelmistot</a><ul>
 <li class="chapter" data-level="1.2.1" data-path="johdanto.html"><a href="johdanto.html#lähteet"><i class="fa fa-check"></i><b>1.2.1</b> Lähteet</a></li>
 <li class="chapter" data-level="1.2.2" data-path="johdanto.html"><a href="johdanto.html#käytetyt-ohjelmistot"><i class="fa fa-check"></i><b>1.2.2</b> Käytetyt ohjelmistot</a></li>
@@ -140,23 +142,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3" data-path="johdanto.html"><a href="johdanto.html#korrespondenssianalyysin-historiaa"><i class="fa fa-check"></i><b>1.3</b> Korrespondenssianalyysin historiaa</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Data</a><ul>
-<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#datan-luku-ja-perusmuokkaukset-testailua"><i class="fa fa-check"></i><b>2.1</b> Datan luku ja perusmuokkaukset: testailua</a><ul>
+<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#datan-luku-ja-perusmuokkaukset"><i class="fa fa-check"></i><b>2.1</b> Datan luku ja perusmuokkaukset</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="data.html"><a href="data.html#maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.1.1</b> Maat ja muuttujat</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="data.html"><a href="data.html#aineiston-kuvailu-tietosisältö"><i class="fa fa-check"></i><b>2.2</b> Aineiston kuvailu (tietosisältö)</a></li>
-<li class="chapter" data-level="2.3" data-path="data.html"><a href="data.html#aineiston-rajaaminen"><i class="fa fa-check"></i><b>2.3</b> Aineiston rajaaminen</a></li>
-<li class="chapter" data-level="2.4" data-path="data.html"><a href="data.html#aineiston-kuvailu-tunnuslukuja"><i class="fa fa-check"></i><b>2.4</b> Aineiston kuvailu (tunnuslukuja)</a></li>
+<li class="chapter" data-level="2.3" data-path="data.html"><a href="data.html#aineiston-rajaaminen-maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.3</b> Aineiston rajaaminen maat ja muuttujat</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>3</b> Yksinkertainen korrespondenssianalyysi</a><ul>
-<li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä</a></li>
+<li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä--kärsiikö-lapsi"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä -kärsiikö lapsi?</a></li>
 <li class="chapter" data-level="3.2" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#kahden-muuttujan-frekvenssitaulukon-analyysi"><i class="fa fa-check"></i><b>3.2</b> Kahden muuttujan frekvenssitaulukon analyysi</a></li>
+<li class="chapter" data-level="3.3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#ca---esimerkki"><i class="fa fa-check"></i><b>3.3</b> CA - esimerkki</a></li>
+<li class="chapter" data-level="3.4" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#korrespondenssianalyysin-peruskäsitteet"><i class="fa fa-check"></i><b>3.4</b> Korrespondenssianalyysin peruskäsitteet</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#asymmetrinen-kartta-ja-ideaalipisteet"><i class="fa fa-check"></i><b>3.4.1</b> Asymmetrinen kartta ja ideaalipisteet</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="yksinkertaisen-korrespondenssianalyysi-tulkinnan-syventäminen.html"><a href="yksinkertaisen-korrespondenssianalyysi-tulkinnan-syventäminen.html"><i class="fa fa-check"></i><b>4</b> Yksinkertaisen korrespondenssianalyysi - tulkinnan syventäminen</a></li>
-<li class="chapter" data-level="5" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia.html"><i class="fa fa-check"></i><b>5</b> Yksinkertaisen korrespondenssianalyysin laajennuksia</a></li>
+<li class="chapter" data-level="3.5" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#kontribuutiot-kartalla"><i class="fa fa-check"></i><b>3.5</b> Kontribuutiot kartalla</a></li>
+<li class="chapter" data-level="3.6" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#massat"><i class="fa fa-check"></i><b>3.6</b> Massat</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><i class="fa fa-check"></i><b>4</b> Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet</a><ul>
+<li class="chapter" data-level="4.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#täydentävät-pisteet-supplementary-points"><i class="fa fa-check"></i><b>4.1</b> Täydentävät pisteet (supplementary points)</a></li>
+<li class="chapter" data-level="4.2" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#saksan-ja-belgian-alueet"><i class="fa fa-check"></i><b>4.2</b> Saksan ja Belgian alueet</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#symmetrinen-kartta"><i class="fa fa-check"></i><b>4.2.1</b> Symmetrinen kartta</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#can-numeeriset-tulokset"><i class="fa fa-check"></i><b>4.3</b> CA:n numeeriset tulokset</a></li>
+<li class="chapter" data-level="4.4" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#esimerkki-3d--kartasta---saksan-ja-belgian-dimensiot"><i class="fa fa-check"></i><b>4.4</b> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><i class="fa fa-check"></i><b>5</b> Yksinkertaisen korrespondenssianalyysin laajennuksia 2 - yhteisvaikutusmuuttujat</a><ul>
+<li class="chapter" data-level="5.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#ikä-ja-sukupuoli"><i class="fa fa-check"></i><b>5.1</b> Ikä ja sukupuoli</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#ikä-ja-sukupuoli-1"><i class="fa fa-check"></i><b>5.1.1</b> Ikä ja sukupuoli</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#ikä-sukupuoli-ja-maa"><i class="fa fa-check"></i><b>5.2</b> Ikä, sukupuoli ja maa</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="korrespondenssianalyysin-laajennuksia-3-osajoukon-ca.html"><a href="korrespondenssianalyysin-laajennuksia-3-osajoukon-ca.html"><i class="fa fa-check"></i><b>6</b> Korrespondenssianalyysin laajennuksia 3 - osajoukon CA</a></li>
+<li class="chapter" data-level="7" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html"><i class="fa fa-check"></i><b>7</b> Monimuuttuja-korrespondenssianalyysi (MCA)</a><ul>
+<li class="chapter" data-level="7.1" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables"><i class="fa fa-check"></i><b>7.1</b> Pinotut ja yhdistetyt taulukot (stacked and concatenated tables)</a></li>
+<li class="chapter" data-level="7.2" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#matched-matrices"><i class="fa fa-check"></i><b>7.2</b> Matched matrices</a></li>
+<li class="chapter" data-level="7.3" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#mca---monimuuttujakorrespondenssianalyysi"><i class="fa fa-check"></i><b>7.3</b> MCA - monimuuttujakorrespondenssianalyysi</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="liitteet.html"><a href="liitteet.html"><i class="fa fa-check"></i>Liitteet</a><ul>
-<li class="chapter" data-level="5.1" data-path="liitteet.html"><a href="liitteet.html#suomenkielinen-lomake-esimerkki"><i class="fa fa-check"></i><b>5.1</b> Suomenkielinen lomake (esimerkki)</a></li>
-<li class="chapter" data-level="5.2" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>5.2</b> R - koodi</a></li>
-<li class="chapter" data-level="5.3" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>5.3</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
+<li class="chapter" data-level="7.4" data-path="liitteet.html"><a href="liitteet.html#korrespondenssianalyysin-teoriaa"><i class="fa fa-check"></i><b>7.4</b> Korrespondenssianalyysin teoriaa</a></li>
+<li class="chapter" data-level="7.5" data-path="liitteet.html"><a href="liitteet.html#suomenkielinen-lomake-esimerkki"><i class="fa fa-check"></i><b>7.5</b> Suomenkielinen lomake (esimerkki)</a></li>
+<li class="chapter" data-level="7.6" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>7.6</b> R - koodi</a></li>
+<li class="chapter" data-level="7.7" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>7.7</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="lähteet-1.html"><a href="lähteet-1.html"><i class="fa fa-check"></i>Lähteet</a></li>
 </ul>
@@ -178,12 +204,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="data" class="section level1">
 <h1><span class="header-section-number">Luku 2</span> Data</h1>
-<div id="datan-luku-ja-perusmuokkaukset-testailua" class="section level2">
-<h2><span class="header-section-number">2.1</span> Datan luku ja perusmuokkaukset: testailua</h2>
+<p><strong>edit</strong> Teksti vielä vanhoja muistiinpanoja.</p>
+<div id="datan-luku-ja-perusmuokkaukset" class="section level2">
+<h2><span class="header-section-number">2.1</span> Datan luku ja perusmuokkaukset</h2>
 <div id="maat-ja-muuttujat" class="section level3">
 <h3><span class="header-section-number">2.1.1</span> Maat ja muuttujat</h3>
 <p><strong>maat luettu, sitten muuttujat</strong></p>
-<p>Perusmuunnokset - viisi koodilohkoa</p>
+<p>Substanssimuuttujat (9). Jos sukupuoli tai ikä puuttuu, havainto jätetään pois
+(32969-32823 = 146), maa-muuttujassa ei puuttuvia tietoja ole. Lisäksi kuusi
+taustamuuttujaa ( “SEX”,“AGE”,“DEGREE”, “MAINSTAT”, “TOPBOT”, “HHCHILDR”,
+“MARITAL”, “URBRURAL”).</p>
+<p><strong>Perusmuunnokset - viisi koodilohkoa</strong></p>
 <p>Vaihe 1</p>
 <p>Vaihe 2
 Vaihe 2.1</p>
@@ -199,7 +230,7 @@ Alla virallinen viite, ja tässä kaksi muuta ([RefWorks:doc:5b6c7f6ce4b0e4e1516
 ja [RefWorks:doc:5b6c7debe4b0e4e15164ab00]). Löytyy myös
 seurantaraportti([RefWorks:doc:5b155e0ce4b044dfd738458f]).
 <strong>viitteet pois- ehkä tekstiin linkkeinä?</strong></p>
-<p><strong>ks</strong> ISSP (International social survey) on tehnyt laajoja kansainvälisiä kyselytutkimuksia eri teemoista. Yksi teemoista on perhe ja muuttuvat (sosiaalisesti määräytyvät) sukupuoliroolit <span class="citation">((2016) <a href="lähteet-1.html#ref-RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a" role="doc-biblioref">2016</a>)</span>.</p>
+<p><strong>k</strong> ISSP (International social survey) on tehnyt laajoja kansainvälisiä kyselytutkimuksia eri teemoista. Yksi teemoista on perhe ja muuttuvat (sosiaalisesti määräytyvät) sukupuoliroolit <span class="citation">((2016) <a href="lähteet-1.html#ref-RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a" role="doc-biblioref">2016</a>)</span>.</p>
 <p><strong>zxy</strong> Miksi data on kiinnostava sisällöllisesti? Viite Kantola (HS). Lisäksi laadukas, usealta vuodelta, tarkasti dokumentoitu.</p>
 <p><strong>ks</strong></p>
 <p><strong>zxy</strong> Miksi data sovelutuu korrespondenssianalyysin esittelyyn? Iso ja monimutkainen (kansainvälinen, datan laaut? kts. Blasius-viite alempana), sisällölliset muuttuja nominaaliasteikolla (kysymyspatterit, Likert), laadukas hyvin dokumentoitu aineisto.</p>
@@ -208,34 +239,143 @@ seurantaraportti([RefWorks:doc:5b155e0ce4b044dfd738458f]).
 <p><strong>ks1</strong></p>
 <p><strong>ks2</strong></p>
 <p><strong>ks-n</strong></p>
-<p><strong>zxy</strong> Aineiston ongelmat ja puutteet (tavanomaisten surveyaineistojen ongelmien lisäksi, erityisesti vastauskadon). Kato erikseen, oikeastaan hyvä juttu koska CA soveltuu sen analyysiin.</p>
-<p><strong>zxy</strong> Aineisto kuvattava <strong>sisällön</strong> (mitä asiaa, ilmiötä, tällä datalla halutaan valaista), <strong>para- ja metadatan</strong> näkökulmasta (tai ainakin kerrottava mitä on saatavilla). Kolmanneksi aineiston “tilastotieteellinen olemus”: otanta-asetelmat, kansalliset versioinnit, harmonisoinnit (esim. puoluekenttä vertailukelpoiseksi).</p>
+<p><strong>zxy</strong> Aineiston ongelmat ja puutteet (tavanomaisten surveyaineistojen ongelmien
+lisäksi, erityisesti vastauskadon). Kato erikseen, oikeastaan hyvä juttu koska
+CA soveltuu sen analyysiin.</p>
+<p><strong>zxy</strong> Aineisto kuvattava <strong>sisällön</strong> (mitä asiaa, ilmiötä, tällä datalla
+halutaan valaista), <strong>para- ja metadatan</strong> näkökulmasta (tai ainakin kerrottava
+mitä on saatavilla). Kolmanneksi aineiston “tilastotieteellinen olemus”:
+otanta-asetelmat, kansalliset versioinnit, harmonisoinnit (esim. puoluekenttä
+vertailukelpoiseksi).</p>
 <ol style="list-style-type: decimal">
-<li><p>Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu tarkentaa tai muuten hifistellä. Osa kummallisa, erityisesti neutraalin vaihtoehdon puuttuminen (Espanja). Nämä maat pitää sivuuttaa.</p></li>
-<li><p>Datassa painot “maatasolle”, otanta sun muu kuvattu tarkasti dokumentaatiossa. Jos tutkimusongelma on maiden erojen analyysi, mitään vertailupainoja ei ole käytössä. Otoskoko on paino. Paha juttu, MG oikaisee ja ja oikaisee myös sukupuolien osuudet.</p></li>
+<li><p>Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu tarkentaa tai
+muuten hifistellä. Osa kummallisa, erityisesti neutraalin vaihtoehdon puuttuminen
+(Espanja). Nämä maat jätetään pois.</p></li>
+<li><p>Datassa painot “maatasolle”, otanta sun muu kuvattu tarkasti dokumentaatiossa.
+Jos tutkimusongelma on maiden erojen analyysi, mitään vertailupainoja ei ole
+käytössä. Otoskoko on paino. MG oikaisee ja ja oikaisee myös sukupuolien osuudet.</p></li>
 </ol>
 </div>
 </div>
 <div id="aineiston-kuvailu-tietosisältö" class="section level2">
 <h2><span class="header-section-number">2.2</span> Aineiston kuvailu (tietosisältö)</h2>
-<p><strong>Jäsennys:</strong></p>
-<ol style="list-style-type: decimal">
-<li></li>
-<li></li>
-<li></li>
-</ol>
+<p><strong>ks</strong> “Perhe, työ ja sukupuoliroolit” tutkimuksen teemat, tarkoitus. <strong>Paras</strong>
+lähde Yhteiskuntatieteellisen tietoarkiston palvelu
+(<a href="https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&amp;study_language=fi" class="uri">https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&amp;study_language=fi</a>).</p>
 </div>
-<div id="aineiston-rajaaminen" class="section level2">
-<h2><span class="header-section-number">2.3</span> Aineiston rajaaminen</h2>
-<p><strong>zxy</strong> Viitteitä myös r-ratkaisuihin, jotka selostetaan koodissa. Erityisesti (a) puuttuvat tiedot ja (b) likert-asteikko faktorina (ilman järjestystä).</p>
-<p><strong>puuttuvat</strong> vastaukset aluksi pois (rankka rajaus - vain yksinkertaistus, menetelmän esittelyn vuoksi)</p>
-<p><strong>zxy</strong> Aluksi kuusi maata</p>
-<p><strong>zxy</strong> Sitten monta maata</p>
+<div id="aineiston-rajaaminen-maat-ja-muuttujat" class="section level2">
+<h2><span class="header-section-number">2.3</span> Aineiston rajaaminen maat ja muuttujat</h2>
+<p><strong>k</strong> maat, samankaltaisia, data saatavilla kiinnostavista muuttujista</p>
+<p><strong>k</strong> muuttujat. Laajasti käyetty, valittu sopiva kysymyspatteri asenteista naisten
+työssäkäyntiin ja joitain taustamuuttujia. Korrespondenssianalyysi on hyvä menetelmä
+aineiston analyysiin: monimutkainen ja laaaja, paljon luokitteluasteikon muuttujia,
+“akvaariositaatti” tähän.</p>
+<p><strong>kysymykset</strong></p>
+<p><strong>k</strong> Taulukon <a href="data.html#tab:vartable1">2.1</a> kysymysten lyhyet versiot ovat datassa mukana.
+Sarakkeessa “muuttuja” on alkuperäisen aineiston muuttujanimi,
+kysymyksen tunnus on valittuun dataan luotu muuttujanimi. Auttaa vertailemaan tätä
+tutkielmaa moniin ISSP-datalla tehtyihin analyyseihin.</p>
+<table>
+<caption><span id="tab:vartable1">Taulukko 2.1: </span>ISSP2012:Työelämä ja perhearvot - kysymykset</caption>
+<colgroup>
+<col width="9%" />
+<col width="90%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">muuttuja</th>
+<th align="left">kysymyksen tunnus, lyhennetty kysymys</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">V5</td>
+<td align="left">Q1a Working mother can have warm relation with child</td>
+</tr>
+<tr class="even">
+<td align="left">V6</td>
+<td align="left">Q1b Pre-school child suffers through working mother</td>
+</tr>
+<tr class="odd">
+<td align="left">V7</td>
+<td align="left">Q1c Family life suffers through working mother</td>
+</tr>
+<tr class="even">
+<td align="left">V8</td>
+<td align="left">Q1d Women’s preference: home and children</td>
+</tr>
+<tr class="odd">
+<td align="left">V9</td>
+<td align="left">Q1e Being housewife is satisfying</td>
+</tr>
+<tr class="even">
+<td align="left">V10</td>
+<td align="left">Q2a Both should contribute to household income</td>
+</tr>
+<tr class="odd">
+<td align="left">V11</td>
+<td align="left">Q2b Men’s job is earn money, women’s job household</td>
+</tr>
+<tr class="even">
+<td align="left">V12</td>
+<td align="left">Q3a Should women work: Child under school age</td>
+</tr>
+<tr class="odd">
+<td align="left">V13</td>
+<td align="left">Q3b Should women work: Youngest kid at school</td>
+</tr>
+<tr class="even">
+<td align="left">SEX</td>
+<td align="left">Respondents age</td>
+</tr>
+<tr class="odd">
+<td align="left">AGE</td>
+<td align="left">Respondents gender</td>
+</tr>
+<tr class="even">
+<td align="left">DEGREE</td>
+<td align="left">Highest completed degree of education: Categories for international comparison</td>
+</tr>
+<tr class="odd">
+<td align="left">MAINSTAT</td>
+<td align="left">Main status: work, unemployed, in education…</td>
+</tr>
+<tr class="even">
+<td align="left">TOPBOT</td>
+<td align="left">Top-Bottom self-placement (10 pt scale)</td>
+</tr>
+<tr class="odd">
+<td align="left">HHCHILDR</td>
+<td align="left">How many children in household: children between [school age] and 17 years of age</td>
+</tr>
+<tr class="even">
+<td align="left">MARITAL</td>
+<td align="left">Legal partnership status: married, civil partership…</td>
+</tr>
+<tr class="odd">
+<td align="left">URBRURAL</td>
+<td align="left">Place of living: urban - rural</td>
+</tr>
+</tbody>
+</table>
+<p><strong>k</strong> Kyselylomakkeilla kysymykset olivat hieman pidempiä, kuvassa <a href="data.html#fig:suom-kys">2.1</a> osa suomenkielistä lomaketta.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="data.html#cb1-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/substvar_fi_Q1Q2.png&#39;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:suom-kys"></span>
+<img src="img/substvar_fi_Q1Q2.png" alt="Suomenkielinen lomake" width="50%" />
+<p class="caption">
+Kuva 2.1: Suomenkielinen lomake
+</p>
 </div>
-<div id="aineiston-kuvailu-tunnuslukuja" class="section level2">
-<h2><span class="header-section-number">2.4</span> Aineiston kuvailu (tunnuslukuja)</h2>
-<p><strong>zxy</strong> ehkäpä taulukoiden lisäksi Likert-kuva?</p>
-<p><strong>viimeiset kappaleet</strong></p>
+<p><strong>taustamuuttujat</strong></p>
+<p><strong>k</strong> maa, sukupuoli, haastateltavan ikä, koulutustaso, “virallinen” juridinen
+parisuhdestatus, pääasiallinen toimi (töissä, eläkkeellä jne), lasten lukumäärä
+perheessä ja asuinpaikka (maaseutu,suurkaupunki jne.), oma arvio sosiaalisesta
+asemasta (1-10). Kysymyksiä, tiedot tosin kerätty eri tavoin eri maissa.</p>
+<p>Vastaajan ikä</p>
+<p><strong>K</strong> Aineistossa mukana puuttuvat vastaukset, puuttuvia ei ole kolmessa muuttujassa
+(maa, ikä ja sukupuoli). Muutamilla havainnoilla puuttui tieto iästä tai sukupuolesta,
+ja ne rajattiin pois.</p>
+<p>Kuvataan tarkemmin, kun käytetään luvussa 7.</p>
 <p><strong>Miten aineistoa on käytetty?</strong>.</p>
 <p><strong>Korrespondenssianalyysin esimerkkiaineistona</strong></p>
 <p>Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa (Helsinki 2017 MCA, viite Moodleen?) ja kahdessa oppikirjassa (<span class="citation">(Greenacre <a href="lähteet-1.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span>, <span class="citation">(M. J. Greenacre <a href="lähteet-1.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>).ISSP - aineisto vuodelta 1989 on käytetty myös neljän “singuaariarvohajoitelmaan perustuvan menetelmän” vertailuun<span class="citation">(Greenacre <a href="lähteet-1.html#ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76" role="doc-biblioref">2003</a>)</span>.</p>
@@ -308,7 +448,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["JH_ca.pdf"],
+"download": ["JH_capaper.pdf"],
 "toc": {
 "collapse": "subsection"
 }

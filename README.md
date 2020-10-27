@@ -86,4 +86,37 @@ peruskäsittelyn R-koodilohkot. Versionumero 0.08. PDF-tulostus ei toimi.
 **18.10.2020** Kommentoitiin pois muunnosten laveita ristiintaulkointeja,
  testauskoodilohko jätetiin. PDF-tulostus toimii.
 
- **21.10.2020 Versio 0.10** Johdatteleva esimerkin koodia, datan luonti ja profiilikuvat. 
+ **21.10.2020 Versio 0.10** Johdatteleva esimerkin koodia, datan luonti ja profiilikuvat.
+ Lisätty muuttujataulukko kysymyksistä ja suomenkielisen lomakkeen kuva. R- koodi
+ liitteksi.
+ Rivi- ja sarakeprofiilikuvien tekstit korjattu.
+ Kaksi ensimmäistä karttaa.
+
+ **23.20.2020** Ikäluokat syntmävuosina, ca-numeerisia tuloksia tekstiin.
+
+ **23.10.2020 Versio 0.20** Karkea sisällysluettelo, hieman **k**appaleiden sisältöjä ja muistiinpanoja rakenteesta.
+
+ **23.10.2020 Versio 0.30**  Karttoja yksinkertaisen ca-esimerkin loppuun asti. Muutettiin pdf-dokumentin nimi JH_ca.pdf -> JH_capaper.
+
+ **24.10.2020** Belgian ja saksan jako, symmetrinen ja kontribuutiokartta. Uusi
+  bib-tiedosto (RefWorks-lähteet). PDF-tulostus kaatuu aluejako-taulukkoon tai
+	sitä edeltävään koodilohkoon. CA-numeeriset tulokset ja kolmiulotteinen ratkaisu.
+	summary() - funktio ei toimi 3d-ca-objektilla jostain syystä.
+
+	Ikä-sukupuoli ja ikä-sukupuoli-maa yhdysvaikutusmuuttujat luotu, molemmilla
+	yksi kartta.
+
+	**25.10.2020** PDF-tulostus ei toimi, julkaistan myös "html_book" yhtenä tiedostona, voi tulostaa selaimella pdf-muotoon.
+
+	**26.10.2020**
+
+	PDF-tulostus ei toimi, ei välitetä tästä. Lokitiedot ja tex-tiedosto, josta saan
+	"suoraan" renderöityä jonkinlaisen pdf-tulosteen, mutta ilman lähdeviitteitä jne.
+	Editointia, jäsentelyä loppulukuihin.
+
+**26.10.2020**
+	Analyysi ja kommenteja lisätty subsetCA-jakson loppuun. Muutama tulostus mukana
+	CA:n numerisista tuloksista, poistetaan niistä suurin osa kun teksti on valmis.
+
+**26.10.2020 Versio 0.4**
+Koodi siirretty capaperiin, jonkin verran kommentteja lisäilty. Outo ilmiö, koodiliitteeseen tulostuu myös koodilohkojen output?

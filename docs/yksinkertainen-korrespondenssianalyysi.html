@@ -13,7 +13,7 @@
   
   
   <meta property="og:description" content="Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä." />
-  
+  <meta name="github-repo" content="hirjus/capaper" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Luku 3 Yksinkertainen korrespondenssianalyysi | Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="data.html"/>
-<link rel="next" href="yksinkertaisen-korrespondenssianalyysi-tulkinnan-syventäminen.html"/>
+<link rel="next" href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,6 +50,8 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -132,7 +134,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Alkutoimia</a></li>
 <li class="chapter" data-level="1" data-path="johdanto.html"><a href="johdanto.html"><i class="fa fa-check"></i><b>1</b> Johdanto</a><ul>
-<li class="chapter" data-level="1.1" data-path="johdanto.html"><a href="johdanto.html#tutkielman-tavoite-tutkimusongelma"><i class="fa fa-check"></i><b>1.1</b> Tutkielman tavoite (tutkimusongelma?)</a></li>
+<li class="chapter" data-level="1.1" data-path="johdanto.html"><a href="johdanto.html#tutkielman-tavoite"><i class="fa fa-check"></i><b>1.1</b> Tutkielman tavoite)</a></li>
 <li class="chapter" data-level="1.2" data-path="johdanto.html"><a href="johdanto.html#tärkeimmät-lähteet-ja-ohjelmistot"><i class="fa fa-check"></i><b>1.2</b> Tärkeimmät lähteet ja ohjelmistot</a><ul>
 <li class="chapter" data-level="1.2.1" data-path="johdanto.html"><a href="johdanto.html#lähteet"><i class="fa fa-check"></i><b>1.2.1</b> Lähteet</a></li>
 <li class="chapter" data-level="1.2.2" data-path="johdanto.html"><a href="johdanto.html#käytetyt-ohjelmistot"><i class="fa fa-check"></i><b>1.2.2</b> Käytetyt ohjelmistot</a></li>
@@ -140,23 +142,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3" data-path="johdanto.html"><a href="johdanto.html#korrespondenssianalyysin-historiaa"><i class="fa fa-check"></i><b>1.3</b> Korrespondenssianalyysin historiaa</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Data</a><ul>
-<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#datan-luku-ja-perusmuokkaukset-testailua"><i class="fa fa-check"></i><b>2.1</b> Datan luku ja perusmuokkaukset: testailua</a><ul>
+<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#datan-luku-ja-perusmuokkaukset"><i class="fa fa-check"></i><b>2.1</b> Datan luku ja perusmuokkaukset</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="data.html"><a href="data.html#maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.1.1</b> Maat ja muuttujat</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="data.html"><a href="data.html#aineiston-kuvailu-tietosisältö"><i class="fa fa-check"></i><b>2.2</b> Aineiston kuvailu (tietosisältö)</a></li>
-<li class="chapter" data-level="2.3" data-path="data.html"><a href="data.html#aineiston-rajaaminen"><i class="fa fa-check"></i><b>2.3</b> Aineiston rajaaminen</a></li>
-<li class="chapter" data-level="2.4" data-path="data.html"><a href="data.html#aineiston-kuvailu-tunnuslukuja"><i class="fa fa-check"></i><b>2.4</b> Aineiston kuvailu (tunnuslukuja)</a></li>
+<li class="chapter" data-level="2.3" data-path="data.html"><a href="data.html#aineiston-rajaaminen-maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.3</b> Aineiston rajaaminen maat ja muuttujat</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>3</b> Yksinkertainen korrespondenssianalyysi</a><ul>
-<li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä</a></li>
+<li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä--kärsiikö-lapsi"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä -kärsiikö lapsi?</a></li>
 <li class="chapter" data-level="3.2" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#kahden-muuttujan-frekvenssitaulukon-analyysi"><i class="fa fa-check"></i><b>3.2</b> Kahden muuttujan frekvenssitaulukon analyysi</a></li>
+<li class="chapter" data-level="3.3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#ca---esimerkki"><i class="fa fa-check"></i><b>3.3</b> CA - esimerkki</a></li>
+<li class="chapter" data-level="3.4" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#korrespondenssianalyysin-peruskäsitteet"><i class="fa fa-check"></i><b>3.4</b> Korrespondenssianalyysin peruskäsitteet</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#asymmetrinen-kartta-ja-ideaalipisteet"><i class="fa fa-check"></i><b>3.4.1</b> Asymmetrinen kartta ja ideaalipisteet</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="yksinkertaisen-korrespondenssianalyysi-tulkinnan-syventäminen.html"><a href="yksinkertaisen-korrespondenssianalyysi-tulkinnan-syventäminen.html"><i class="fa fa-check"></i><b>4</b> Yksinkertaisen korrespondenssianalyysi - tulkinnan syventäminen</a></li>
-<li class="chapter" data-level="5" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia.html"><i class="fa fa-check"></i><b>5</b> Yksinkertaisen korrespondenssianalyysin laajennuksia</a></li>
+<li class="chapter" data-level="3.5" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#kontribuutiot-kartalla"><i class="fa fa-check"></i><b>3.5</b> Kontribuutiot kartalla</a></li>
+<li class="chapter" data-level="3.6" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#massat"><i class="fa fa-check"></i><b>3.6</b> Massat</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><i class="fa fa-check"></i><b>4</b> Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet</a><ul>
+<li class="chapter" data-level="4.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#täydentävät-pisteet-supplementary-points"><i class="fa fa-check"></i><b>4.1</b> Täydentävät pisteet (supplementary points)</a></li>
+<li class="chapter" data-level="4.2" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#saksan-ja-belgian-alueet"><i class="fa fa-check"></i><b>4.2</b> Saksan ja Belgian alueet</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#symmetrinen-kartta"><i class="fa fa-check"></i><b>4.2.1</b> Symmetrinen kartta</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#can-numeeriset-tulokset"><i class="fa fa-check"></i><b>4.3</b> CA:n numeeriset tulokset</a></li>
+<li class="chapter" data-level="4.4" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html#esimerkki-3d--kartasta---saksan-ja-belgian-dimensiot"><i class="fa fa-check"></i><b>4.4</b> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><i class="fa fa-check"></i><b>5</b> Yksinkertaisen korrespondenssianalyysin laajennuksia 2 - yhteisvaikutusmuuttujat</a><ul>
+<li class="chapter" data-level="5.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#ikä-ja-sukupuoli"><i class="fa fa-check"></i><b>5.1</b> Ikä ja sukupuoli</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#ikä-ja-sukupuoli-1"><i class="fa fa-check"></i><b>5.1.1</b> Ikä ja sukupuoli</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#ikä-sukupuoli-ja-maa"><i class="fa fa-check"></i><b>5.2</b> Ikä, sukupuoli ja maa</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="korrespondenssianalyysin-laajennuksia-3-osajoukon-ca.html"><a href="korrespondenssianalyysin-laajennuksia-3-osajoukon-ca.html"><i class="fa fa-check"></i><b>6</b> Korrespondenssianalyysin laajennuksia 3 - osajoukon CA</a></li>
+<li class="chapter" data-level="7" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html"><i class="fa fa-check"></i><b>7</b> Monimuuttuja-korrespondenssianalyysi (MCA)</a><ul>
+<li class="chapter" data-level="7.1" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables"><i class="fa fa-check"></i><b>7.1</b> Pinotut ja yhdistetyt taulukot (stacked and concatenated tables)</a></li>
+<li class="chapter" data-level="7.2" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#matched-matrices"><i class="fa fa-check"></i><b>7.2</b> Matched matrices</a></li>
+<li class="chapter" data-level="7.3" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#mca---monimuuttujakorrespondenssianalyysi"><i class="fa fa-check"></i><b>7.3</b> MCA - monimuuttujakorrespondenssianalyysi</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="liitteet.html"><a href="liitteet.html"><i class="fa fa-check"></i>Liitteet</a><ul>
-<li class="chapter" data-level="5.1" data-path="liitteet.html"><a href="liitteet.html#suomenkielinen-lomake-esimerkki"><i class="fa fa-check"></i><b>5.1</b> Suomenkielinen lomake (esimerkki)</a></li>
-<li class="chapter" data-level="5.2" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>5.2</b> R - koodi</a></li>
-<li class="chapter" data-level="5.3" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>5.3</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
+<li class="chapter" data-level="7.4" data-path="liitteet.html"><a href="liitteet.html#korrespondenssianalyysin-teoriaa"><i class="fa fa-check"></i><b>7.4</b> Korrespondenssianalyysin teoriaa</a></li>
+<li class="chapter" data-level="7.5" data-path="liitteet.html"><a href="liitteet.html#suomenkielinen-lomake-esimerkki"><i class="fa fa-check"></i><b>7.5</b> Suomenkielinen lomake (esimerkki)</a></li>
+<li class="chapter" data-level="7.6" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>7.6</b> R - koodi</a></li>
+<li class="chapter" data-level="7.7" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>7.7</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="lähteet-1.html"><a href="lähteet-1.html"><i class="fa fa-check"></i>Lähteet</a></li>
 </ul>
@@ -180,20 +206,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Luku 3</span> Yksinkertainen korrespondenssianalyysi</h1>
 <p><strong>k1</strong> Yksi kysymys, kuusi maata, peruskäsitteet</p>
 <p><strong>k2</strong> Luvun tärkeimmät asiat; mitä on luvassa?</p>
-<div id="äiti-töissä" class="section level2">
-<h2><span class="header-section-number">3.1</span> Äiti töissä</h2>
+<div id="äiti-töissä--kärsiikö-lapsi" class="section level2">
+<h2><span class="header-section-number">3.1</span> Äiti töissä -kärsiikö lapsi?</h2>
 <p><strong>k1</strong>“Alle kouluikäinen lapsi todennäköisesti kärsii, jos hänen äitinsä käy työssä”.
 Lyhennän muotoon äiti töissä. ISSP-tutkimuksissa kaksi kysymystä, joissa sana “äiti”,
-MG havainnut ne poikkeaviksi (<strong>#V ?</strong>).
-<strong>zxy</strong> Edellisessä luvussa on esitelyt aineisto, ja kerrottu rajaukset.</p>
+MG havainnut ne poikkeaviksi (<strong>#V ?</strong>).</p>
+<p><strong>zxy</strong> Edellisessä luvussa on esitelyt aineisto, ja kerrottu rajaukset.</p>
 <p>Tarkistetaan uudet muuttujat (koodilohkon tulostus pois tarvittaessa).</p>
 </div>
 <div id="kahden-muuttujan-frekvenssitaulukon-analyysi" class="section level2">
 <h2><span class="header-section-number">3.2</span> Kahden muuttujan frekvenssitaulukon analyysi</h2>
 <p><strong>k</strong> Kolme taulukkoa: frekvenssitaulukko, riviprosentit ja sarakeprosentit</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="yksinkertainen-korrespondenssianalyysi.html#cb1-1"></a>taulu2 &lt;-<span class="st"> </span>ISSP2012esim1.dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">tableX</span>(maa, Q1b, <span class="dt">type =</span> <span class="st">&quot;count&quot;</span>)</span>
-<span id="cb1-2"><a href="yksinkertainen-korrespondenssianalyysi.html#cb1-2"></a>knitr<span class="op">::</span><span class="kw">kable</span>(taulu2,<span class="dt">digits =</span> <span class="dv">2</span>, <span class="dt">booktabs =</span> <span class="ot">TRUE</span>,</span>
-<span id="cb1-3"><a href="yksinkertainen-korrespondenssianalyysi.html#cb1-3"></a>             <span class="dt">caption =</span> <span class="st">&quot;Kysymyksen Q1b vastaukset maittain&quot;</span>)</span></code></pre></div>
 <table>
 <caption><span id="tab:simpeCA-frekTa1">Taulukko 3.1: </span>Kysymyksen Q1b vastaukset maittain</caption>
 <thead>
@@ -273,10 +296,6 @@ MG havainnut ne poikkeaviksi (<strong>#V ?</strong>).
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="yksinkertainen-korrespondenssianalyysi.html#cb2-1"></a>taulu3 &lt;-<span class="st"> </span>ISSP2012esim1.dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">tableX</span>(maa,Q1b,<span class="dt">type =</span> <span class="st">&quot;row_perc&quot;</span>)</span>
-<span id="cb2-2"><a href="yksinkertainen-korrespondenssianalyysi.html#cb2-2"></a></span>
-<span id="cb2-3"><a href="yksinkertainen-korrespondenssianalyysi.html#cb2-3"></a>knitr<span class="op">::</span><span class="kw">kable</span>(taulu3,<span class="dt">digits =</span> <span class="dv">2</span>, <span class="dt">booktabs =</span> <span class="ot">TRUE</span>,</span>
-<span id="cb2-4"><a href="yksinkertainen-korrespondenssianalyysi.html#cb2-4"></a>             <span class="dt">caption =</span> <span class="st">&quot;Kysymyksen Q1b vastaukset, riviprosentit&quot;</span>)</span></code></pre></div>
 <table>
 <caption><span id="tab:simpeCA-rprosTa1">Taulukko 3.2: </span>Kysymyksen Q1b vastaukset, riviprosentit</caption>
 <thead>
@@ -356,10 +375,6 @@ MG havainnut ne poikkeaviksi (<strong>#V ?</strong>).
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="yksinkertainen-korrespondenssianalyysi.html#cb3-1"></a>taulu4 &lt;-<span class="st"> </span>ISSP2012esim1.dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">tableX</span>(maa,Q1b,<span class="dt">type =</span> <span class="st">&quot;col_perc&quot;</span>)</span>
-<span id="cb3-2"><a href="yksinkertainen-korrespondenssianalyysi.html#cb3-2"></a></span>
-<span id="cb3-3"><a href="yksinkertainen-korrespondenssianalyysi.html#cb3-3"></a>knitr<span class="op">::</span><span class="kw">kable</span>(taulu4,<span class="dt">digits =</span> <span class="dv">2</span>, <span class="dt">booktabs =</span> <span class="ot">TRUE</span>,</span>
-<span id="cb3-4"><a href="yksinkertainen-korrespondenssianalyysi.html#cb3-4"></a>             <span class="dt">caption =</span> <span class="st">&quot;Kysymyksen Q1b vastaukset, sarakeprosentit&quot;</span>)</span></code></pre></div>
 <table>
 <caption><span id="tab:simpeCA-cprosTa1">Taulukko 3.3: </span>Kysymyksen Q1b vastaukset, sarakeprosentit</caption>
 <thead>
@@ -447,17 +462,124 @@ ovat luonteva tapa verrata “riippuvaa muuttujaa”, eri maita.</p>
 terminologialla “samples”.</p>
 <p><strong>Kuvat</strong></p>
 <div class="figure"><span id="fig:g1-2kuva1"></span>
-<img src="JH_ca_files/figure-html/g1-2kuva1-1.png" alt="Q1b:Sarakeprofiilit ja keskiarvoprofiili" width="672" />
+<img src="JH_capaper_files/figure-html/g1-2kuva1-1.png" alt="Q1b:Sarakeprofiilit ja keskiarvoprofiili" width="672" />
 <p class="caption">
 Kuva 3.1: Q1b:Sarakeprofiilit ja keskiarvoprofiili
 </p>
 </div>
 <div class="figure"><span id="fig:g1-2kuva2"></span>
-<img src="JH_ca_files/figure-html/g1-2kuva2-1.png" alt="Q1b: riviprofiilit ja keskiarvorivi" width="672" />
+<img src="JH_capaper_files/figure-html/g1-2kuva2-1.png" alt="Q1b: riviprofiilit ja keskiarvorivi" width="672" />
 <p class="caption">
 Kuva 3.2: Q1b: riviprofiilit ja keskiarvorivi
 </p>
 </div>
+</div>
+<div id="ca---esimerkki" class="section level2">
+<h2><span class="header-section-number">3.3</span> CA - esimerkki</h2>
+<div class="figure" style="text-align: center"><span id="fig:simpleCA1map1"></span>
+<img src="JH_capaper_files/figure-html/simpleCA1map1-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
+<p class="caption">
+Kuva 3.3: Q1b: lapsi kärsii jos äiti on töissä
+</p>
+</div>
+<p><strong>edit1</strong> jatkossa plot - main on kuvan tyyppi (symmetrinen, kontribuutio jne),
+koodilohkon fig.cap “ylimmän tason” otsikko.</p>
+<p><strong>edit2</strong> Akseleiden tekstit (Dimensio 1….jne) asetettu käsin, ikävä kyllä myös
+selitetyn inertian osuus. Ainakin tästä ensimmäisestä kuvasta ne kannattaa jättää
+pois, spoileri!</p>
+<p><strong>edit3</strong> par(cex = 1) ennen plot-komenota muuttaa valitettavasti “kaiken” kokoa.
+Antaa olla, kun on graafista data-analyysiä. Selkeys tärkeämpää kuin ulkoasu.</p>
+<p><strong>k</strong> Kartan tulkinta</p>
+<p><strong>k</strong> Prosentit - kuinka paljon kokonaisinertiasta saadaan kuvattua (“selitettyä”).</p>
+<p><strong>k</strong> Dimenisoiden tulkinta sarakepisteiden avulla: mitä on oikealla ja vasemmalla?
+Kaukana on kaukana, mutta lähellä voi olla täydessä sarake- tai riviavaruudessa
+kaukana. Siksi tulkinta kontrastien avulla - mikä piste on suhteellisesti kauimpana?</p>
+<p><strong>k</strong> Rivipisteiden tulkinta kartalla - järjestys vasemmalta oikealle ja alhaalta
+ylös. Pisteiden etäisyydet toisistaan.</p>
+<p><strong>k</strong> Origo on aineiston keskipiste, “riippumattomuushypoteesi” (kts. teorialiite).</p>
+<p><strong>k</strong> Sarakepisteiden erot ja rivipisteiden erot ovat suhteellisia, approksimoivat
+khii2-etäisyyksiä.</p>
+<p><strong>k</strong> Rivi- ja sarakepisteiden etäisyyksillä ei suoraan mitään tulkintaa!</p>
+<p><strong>k</strong> Lista: mitä muuta, johon palataan seuraavassa luvussa?</p>
+<ul>
+<li>kuinka hyvin pisteet on esitetty tasossa?</li>
+<li>esim. x-akseli kuvaa (“nappaa”) 76% kokonaisinertiasta. Pisteiden
+inertiakontribuutiot</li>
+</ul>
+</div>
+<div id="korrespondenssianalyysin-peruskäsitteet" class="section level2">
+<h2><span class="header-section-number">3.4</span> Korrespondenssianalyysin peruskäsitteet</h2>
+<p><strong>ks</strong> Mitä käsitteitä tässä esitellään? Viittaukset teorialiitteeseen, ja
+tulkinnan hankaluudet (MG “loose ends” - paperi) käsitellään siellä.</p>
+<p><strong>edit</strong> Sulava kuvaus tulkinnasta, painotus kuvien tulkinnassa. CA:n numeeriset
+tulokset vasta seuraavassa luvussa. Tässä “mitä kuvasta näkee”, ei muuta (paitsi
+varoitukset - mitä ei näe). Idea koko ajan taulukon sarakkeiden ja riveien yhteyksien
+visualisointi.</p>
+<p><strong>edit</strong> Tärkeää selkeä kuvaus pääkoordinaattien ja standardikoordinaattien
+suhteesta. Tarkemmin teorialiitteessä, tässä heuristisesti jotta kuvia osaa tulkita.</p>
+<div id="asymmetrinen-kartta-ja-ideaalipisteet" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> Asymmetrinen kartta ja ideaalipisteet</h3>
+<div class="figure" style="text-align: center"><span id="fig:G1-3asymm2"></span>
+<img src="JH_capaper_files/figure-html/G1-3asymm2-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
+<p class="caption">
+Kuva 3.4: Q1b: lapsi kärsii jos äiti on töissä
+</p>
+</div>
+<p><strong>Barysentrinen periaate</strong></p>
+<strong>edit</strong> kuva ei ehkä tarpeen? Tehdään vähän pienempi (out.width = 70%, muuten 90%).
+<div class="figure" style="text-align: center"><span id="fig:G1-3asymm3"></span>
+<img src="JH_capaper_files/figure-html/G1-3asymm3-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="70%" />
+<p class="caption">
+Kuva 3.5: Q1b: lapsi kärsii jos äiti on töissä
+</p>
+</div>
+<p><strong>edit</strong> Perustelu kuvalle: barysentrinen periaate on kuvien tulkinnassa ydinasioita.</p>
+<p><strong>Akseleiden tulkinta</strong> tai tulkinnan varmistaminen akseli kerrallaan. Ortogonaaliset
+projektion piirretty käsin, havainnollistetaan periaatetta.</p>
+<p><img src="img/simpleCAasymmTulk2.png" width="90%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="kontribuutiot-kartalla" class="section level2">
+<h2><span class="header-section-number">3.5</span> Kontribuutiot kartalla</h2>
+<p>Kaksi kuvaa, joissa pisteiden massat on kuvattu pisteiden koolla (ei juuri eroa
+huomaa) ja rivi- ja sarekepisteiden kontribuutiot värisävyllä. Mitä tummempi sitä
+suurempi kontribuutio. Absoluuttiset ja suhteelliset kontribuutiot.</p>
+<p><strong>edit</strong> Pitäisikö kuvissa olla aina toinen absolute, toinen relative? Selvitetään
+teorialiittessä?</p>
+<p>Toinen kuva riittää, tässä esitellään kartta jossa on eniten informaatiota.</p>
+<p><strong>Absoluuttiset kontribuutiot</strong> Oletuspistekoko ok, mutta html- ja pdf-tulostus
+on erilainen!</p>
+<div class="figure" style="text-align: center"><span id="fig:G1-3asymmContrib1"></span>
+<img src="JH_capaper_files/figure-html/G1-3asymmContrib1-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
+<p class="caption">
+Kuva 3.6: Q1b: lapsi kärsii jos äiti on töissä
+</p>
+</div>
+<p><strong>Suhteelliset kontribuutiot</strong> Oletuspistekoko ok.</p>
+<div class="figure" style="text-align: center"><span id="fig:G1-3asymmContrib2"></span>
+<img src="JH_capaper_files/figure-html/G1-3asymmContrib2-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
+<p class="caption">
+Kuva 3.7: Q1b: lapsi kärsii jos äiti on töissä
+</p>
+</div>
+</div>
+<div id="massat" class="section level2">
+<h2><span class="header-section-number">3.6</span> Massat</h2>
+<p><strong>edit3</strong> Onko vakioitujen massojen kartta liian aikaisin? Tämä ei ole pääasia, vaan selvennys.
+Miksi tässä? Perusteltava, miksi en vakioi massoja maille, sukupuolille jne. (a)
+perusteltua kun tarkempi tutkimusongelma, esim. erottelut maiden ja sukupuolten
+välillä. Varianssianalyysin tapaan varianssin hajoittaminen ryhmisen sisäiseen ja
+ryhmien väliseen. Kts. teorialiitteestä esim. ABBA. (b) CA “perusmuodossa”, massa
+on yksi kolmesta tärkeimmästä käsitteestä. (c) on aika työlästä!</p>
+<p><strong>edit4</strong> Galkussa verrattu molempien painotusten khii2-etäisyyksiä, jos tarpeen
+niin teoria-liitteeseen.</p>
+<div class="figure" style="text-align: center"><span id="fig:simpleCA3map1"></span>
+<img src="JH_capaper_files/figure-html/simpleCA3map1-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
+<p class="caption">
+Kuva 3.8: Q1b: lapsi kärsii jos äiti on töissä
+</p>
+</div>
+<p>Ei kovin isoja eroja, tässä datassa.</p>
 
 </div>
 </div>
@@ -467,7 +589,7 @@ Kuva 3.2: Q1b: riviprofiilit ja keskiarvorivi
         </div>
       </div>
 <a href="data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="yksinkertaisen-korrespondenssianalyysi-tulkinnan-syventäminen.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-1-täydentävät-pisteet.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -509,7 +631,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["JH_ca.pdf"],
+"download": ["JH_capaper.pdf"],
 "toc": {
 "collapse": "subsection"
 }

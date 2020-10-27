@@ -1,4 +1,4 @@
-book_filename: "JH_ca"
+book_filename: "JH_capaper"
 delete_merged_file: true
 language:
    label:
@@ -7,7 +7,8 @@ language:
       eq: 'Yhtälö '
    ui:
       chapter_name: "Luku "
-      
+
 output_dir: "docs"
-rmd_files: ["index.Rmd", "01-johdanto.Rmd", "02-data.Rmd", "03-simpleCA.Rmd", 
-        "04-caTulkintaa.Rmd", "05-simpleCA2.Rmd", "090-liitteet.Rmd", "099-references.Rmd"]
+rmd_files: ["index.Rmd", "01-johdanto.Rmd", "02-data.Rmd", "03-simpleCA.Rmd",
+        "04-simpleCAlaaj1.Rmd","05-simpleCAlaaj2.Rmd","06-simpleCAlaaj3.Rmd",
+         "07-monimuuttujaCA.Rmd", "090-liitteet.Rmd", "099-references.Rmd"]

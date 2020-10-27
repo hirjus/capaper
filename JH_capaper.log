@@ -1,0 +1,1272 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.26)  26 OCT 2020 09:48
+entering extended mode
+**./JH_capaper.tex
+(JH_capaper.tex
+LaTeX2e <2020-10-01> patch level 1
+L3 programming layer <2020-10-05> xparse <2020-03-03>
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\book.cls"
+Document Class: book 2020/04/10 v1.4m Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\bk10.clo"
+File: bk10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count175
+\c@chapter=\count176
+\c@section=\count177
+\c@subsection=\count178
+\c@subsubsection=\count179
+\c@paragraph=\count180
+\c@subparagraph=\count181
+\c@figure=\count182
+\c@table=\count183
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\lmodern.sty"
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen139
+))
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count184
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count185
+\leftroot@=\count186
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count187
+\DOTSCASE@=\count188
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count189
+\c@MaxMatrixCols=\count190
+\dotsspace@=\muskip16
+\c@parentequation=\count191
+\dspbrk@lvl=\count192
+\tag@help=\toks17
+\row@=\count193
+\column@=\count194
+\maxfields@=\count195
+\andhelp@=\toks18
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks19
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\ifxetex.sty"
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\ifluatex.sty"
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\inputenc.sty"
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks21
+\inpenc@posthook=\toks22
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\textcomp.sty"
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/latex/upquote\upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/microtype\microtype.sty"
+Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
+)
+\MT@toks=\toks24
+\MT@count=\count196
+LaTeX Info: Redefining \textls on input line 790.
+\MT@outer@kern=\dimen148
+LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
+\MT@listname@count=\count197
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/microtype\microtype-pdftex.def"
+File: microtype-pdftex.def 2019/11/18 v2.7d Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
+\MT@outer@space=\skip52
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/microtype\microtype.cfg"
+File: microtype.cfg 2019/11/18 v2.7d microtype main configuration file (RS)
+))
+("C:\Program Files\MiKTeX 2.9\tex/latex/parskip\parskip.sty"
+Package: parskip 2020-06-15 v2.0f non-zero parskip adjustments
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/kvoptions\kvoptions.sty"
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/ltxcmds\ltxcmds.sty"
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/generic/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+("C:\Program Files\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.sty"
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count198
+))
+("C:\Program Files\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/xurl\xurl.sty"
+Package: xurl 2020/01/24 v 0.09 modify URL breaks
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/url\url.sty"
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+))
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/latex/bookmark\bookmark.sty
+Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pdftexcmds\pdftexcmds.sty"
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/generic/kvdefinekeys\kvdefinekeys.s
+ty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/generic/pdfescape\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/letltxmacro\letltxmacro.sty"
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen149
+\Hy@linkcounter=\count199
+\Hy@pagecounter=\count266
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count267
+Package hyperref Info: Option `unicode' set `true' on input line 4338.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\puenc.def"
+File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count268
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen150
+
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/generic/bigintcalc\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count269
+\Field@Width=\dimen151
+\Fld@charsize=\dimen152
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\atbegshi-ltx.sty"
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+)
+\Hy@abspage=\count270
+\c@Item=\count271
+\c@Hfootnote=\count272
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def"
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\atveryend-ltx.sty"
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count273
+\c@bookmark@seq@number=\count274
+
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/latex/rerunfilecheck\rerunfilecheck
+.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/generic/uniquecounter\uniquecounter
+.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip53
+)
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/latex/bookmark\bkm-pdftex.def
+File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
+\BKM@id=\count275
+))
+("C:\Program Files\MiKTeX 2.9\tex/latex/fancyvrb\fancyvrb.sty"
+Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count276
+\FV@InFile=\read2
+\FV@TabBox=\box49
+\c@FancyVerbLine=\count277
+\FV@StepNumber=\count278
+\FV@OutFile=\write3
+)
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/latex/framed\framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip54
+\fb@frw=\dimen153
+\fb@frh=\dimen154
+\FrameRule=\dimen155
+\FrameSep=\dimen156
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\longtable.sty"
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip55
+\LTright=\skip56
+\LTpre=\skip57
+\LTpost=\skip58
+\LTchunksize=\count279
+\LTcapwidth=\dimen157
+\LT@head=\box50
+\LT@firsthead=\box51
+\LT@foot=\box52
+\LT@lastfoot=\box53
+\LT@cols=\count280
+\LT@rows=\count281
+\c@LT@tables=\count282
+\c@LT@chunks=\count283
+\LT@p@ftn=\toks25
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/booktabs\booktabs.sty"
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen158
+\lightrulewidth=\dimen159
+\cmidrulewidth=\dimen160
+\belowrulesep=\dimen161
+\belowbottomsep=\dimen162
+\aboverulesep=\dimen163
+\abovetopsep=\dimen164
+\cmidrulesep=\dimen165
+\cmidrulekern=\dimen166
+\defaultaddspace=\dimen167
+\@cmidla=\count284
+\@cmidlb=\count285
+\@aboverulesep=\dimen168
+\@belowrulesep=\dimen169
+\@thisruleclass=\count286
+\@lastruleclass=\count287
+\@thisrulewidth=\dimen170
+)
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/latex/footnotehyper\footnotehyper.s
+ty
+Package: footnotehyper 2019/11/07 v1.1a hyperref aware footnote.sty (JFB)
+\FNH@notes=\box54
+\FNH@width=\dimen171
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen172
+\Gin@req@width=\dimen173
+)
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/latex/grffile\grffile.sty
+Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legac
+y)
+Package grffile Info: This package is an empty stub for compatibility on input 
+line 40.
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.sty"
+Package: babel 2020/10/06 3.50 The Babel package
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.def"
+File: babel.def 2020/10/06 3.50 Babel common definitions
+\babel@savecnt=\count288
+\U@D=\dimen174
+\l@babelnohyphens=\language16
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/babel\txtbabel.def")
+\bbl@readstream=\read3
+)
+\bbl@dirlevel=\count289
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/babel-finnish\finnish.ldf"
+Language: finnish 2020/04/16 v1.3r Finnish support from the babel system
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/babel-finnish\finnish.ldf"
+Language: finnish 2020/04/16 v1.3r Finnish support from the babel system
+))
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/latex/natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip59
+\bibsep=\skip60
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count290
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdftex.def"
+File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count291
+\l__pdf_internal_box=\box55
+)
+No file JH_capaper.aux.
+\openout1 = `JH_capaper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Info: Redefining \microtypecontext on input line 161.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using protrusion set `basicmath'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+LaTeX Info: Redefining \showhyphens on input line 161.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+("C:\Program Files\MiKTeX 2.9\tex/latex/microtype\mt-cmr.cfg"
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count292
+\scratchdimen=\dimen175
+\scratchbox=\box56
+\nofMPsegments=\count293
+\nofMParguments=\count294
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count295
+\MPscratchDim=\dimen176
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
+\everyMPtoPDFconversion=\toks27
+)
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/latex/epstopdf-pkg\epstopdf-base.st
+y
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+Package hyperref Info: Link coloring OFF on input line 161.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\jh\AppData\Roaming\MiKTeX\2.9\tex/generic/gettitlestring\gettitlestri
+ng.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count298
+)
+LaTeX Info: Redefining \ref on input line 161.
+LaTeX Info: Redefining \pageref on input line 161.
+LaTeX Info: Redefining \nameref on input line 161.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+63.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+63.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+163.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+163.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 163.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 163.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 163.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 163
+.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/microtype\mt-msa.cfg"
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 163
+.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/microtype\mt-msb.cfg"
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) [1
+
+
+{C:/Users/jh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
+
+]
+
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
+\tf@toc=\write4
+\openout4 = `JH_capaper.toc'.
+
+[3] [4
+
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 181.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 181.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 181.
+ [5] [6
+
+]
+Luku 1.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
+17.
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\ts1lmr.fd"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [7]
+
+Package natbib Warning: Citation `RefWorks:doc:5a857a44e4b0ed2d44664d84' on pag
+e 8 undefined on input line 252.
+
+
+Package natbib Warning: Citation `RefWorks:doc:5b6ef091e4b0984fd9b8c0ca' on pag
+e 8 undefined on input line 290.
+
+
+Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d75' on pag
+e 8 undefined on input line 297.
+
+[8]
+
+Package natbib Warning: Citation `RefWorks:doc:5a857a44e4b0ed2d44664d95' on pag
+e 9 undefined on input line 305.
+
+
+Package natbib Warning: Citation `RefWorks:doc:5a857a44e4b0ed2d44664da4' on pag
+e 9 undefined on input line 306.
+
+
+Package natbib Warning: Citation `RefWorks:doc:5b6b346fe4b0c619b11b8a3e' on pag
+e 9 undefined on input line 314.
+
+
+Package natbib Warning: Citation `RefWorks:doc:5b6b36dde4b09b7ec442bf8b' on pag
+e 9 undefined on input line 315.
+
+
+Package natbib Warning: Citation `R-bookdown' on page 9 undefined on input line
+ 315.
+
+
+Package natbib Warning: Citation `RefWorks:doc:5c3759c2e4b0085b307c82b5' on pag
+e 9 undefined on input line 327.
+
+[9] [10
+
+]
+Luku 2.
+[11]
+
+Package natbib Warning: Citation `RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a' on pag
+e 12 undefined on input line 407.
+
+[12]
+
+LaTeX Warning: Reference `tab:vartable1' on page 13 undefined on input line 466
+.
+
+
+Overfull \hbox (100.22075pt too wide) in paragraph at lines 475--501
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `fig:suom-kys' on page 13 undefined on input line 503.
+
+
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
+06.
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 507.
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+507.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\ts1lmtt.fd"
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+<img/substvar_fi_Q1Q2.png, id=98, 458.31226pt x 490.2315pt>
+File: img/substvar_fi_Q1Q2.png Graphic file (type png)
+<use img/substvar_fi_Q1Q2.png>
+Package pdftex.def Info: img/substvar_fi_Q1Q2.png  used on input line 513.
+(pdftex.def)             Requested size: 172.50305pt x 184.51706pt.
+ [13]
+
+Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d7c' on pag
+e 14 undefined on input line 539.
+
+
+Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d78' on pag
+e 14 undefined on input line 539.
+
+
+Package natbib Warning: Citation `RefWorks:doc:5b6f159ce4b0bc0f31734b76' on pag
+e 14 undefined on input line 539.
+
+[14 <./img/substvar_fi_Q1Q2.png>]
+
+Package natbib Warning: Citation `RefWorks:doc:5b15542ee4b0e2616bc42dca' on pag
+e 15 undefined on input line 554.
+
+
+Package natbib Warning: Citation `RefWorks:doc:5bd08fb6e4b05c5447c9a9f9' on pag
+e 15 undefined on input line 563.
+
+[15] [16
+
+]
+Luku 3.
+<JH_capaper_files/figure-latex/g1-2kuva1-1.pdf, id=124, 469.755pt x 325.215pt>
+File: JH_capaper_files/figure-latex/g1-2kuva1-1.pdf Graphic file (type pdf)
+<use JH_capaper_files/figure-latex/g1-2kuva1-1.pdf>
+Package pdftex.def Info: JH_capaper_files/figure-latex/g1-2kuva1-1.pdf  used on
+ input line 661.
+(pdftex.def)             Requested size: 344.997pt x 238.84406pt.
+<JH_capaper_files/figure-latex/g1-2kuva2-1.pdf, id=125, 469.755pt x 325.215pt>
+File: JH_capaper_files/figure-latex/g1-2kuva2-1.pdf Graphic file (type pdf)
+<use JH_capaper_files/figure-latex/g1-2kuva2-1.pdf>
+Package pdftex.def Info: JH_capaper_files/figure-latex/g1-2kuva2-1.pdf  used on
+ input line 667.
+(pdftex.def)             Requested size: 344.997pt x 238.84406pt.
+<JH_capaper_files/figure-latex/simpleCA1map1-1.pdf, id=126, 469.755pt x 469.755
+pt>
+File: JH_capaper_files/figure-latex/simpleCA1map1-1.pdf Graphic file (type pdf)
+
+<use JH_capaper_files/figure-latex/simpleCA1map1-1.pdf>
+Package pdftex.def Info: JH_capaper_files/figure-latex/simpleCA1map1-1.pdf  use
+d on input line 676.
+(pdftex.def)             Requested size: 310.498pt x 310.498pt.
+[17] [18] [19 <./JH_capaper_files/figure-latex/g1-2kuva1-1.pdf> <./JH_capaper_f
+iles/figure-latex/g1-2kuva2-1.pdf>] [20 <./JH_capaper_files/figure-latex/simple
+CA1map1-1.pdf>]
+<JH_capaper_files/figure-latex/G1-3asymm2-1.pdf, id=173, 469.755pt x 469.755pt>
+
+File: JH_capaper_files/figure-latex/G1-3asymm2-1.pdf Graphic file (type pdf)
+<use JH_capaper_files/figure-latex/G1-3asymm2-1.pdf>
+Package pdftex.def Info: JH_capaper_files/figure-latex/G1-3asymm2-1.pdf  used o
+n input line 741.
+(pdftex.def)             Requested size: 310.498pt x 310.498pt.
+<JH_capaper_files/figure-latex/G1-3asymm3-1.pdf, id=174, 469.755pt x 469.755pt>
+
+File: JH_capaper_files/figure-latex/G1-3asymm3-1.pdf Graphic file (type pdf)
+<use JH_capaper_files/figure-latex/G1-3asymm3-1.pdf>
+Package pdftex.def Info: JH_capaper_files/figure-latex/G1-3asymm3-1.pdf  used o
+n input line 754.
+(pdftex.def)             Requested size: 241.50005pt x 241.50005pt.
+<img/simpleCAasymmTulk2.png, id=175, 963.6pt x 542.025pt>
+File: img/simpleCAasymmTulk2.png Graphic file (type png)
+<use img/simpleCAasymmTulk2.png>
+Package pdftex.def Info: img/simpleCAasymmTulk2.png  used on input line 766.
+(pdftex.def)             Requested size: 310.49028pt x 174.65077pt.
+
+Underfull \vbox (badness 3780) has occurred while \output is active []
+
+ [21]
+[22 <./JH_capaper_files/figure-latex/G1-3asymm2-1.pdf>] [23 <./JH_capaper_files
+/figure-latex/G1-3asymm3-1.pdf> <./img/simpleCAasymmTulk2.png>]
+<JH_capaper_files/figure-latex/G1-3asymmContrib1-1.pdf, id=207, 469.755pt x 469
+.755pt>
+File: JH_capaper_files/figure-latex/G1-3asymmContrib1-1.pdf Graphic file (type 
+pdf)
+<use JH_capaper_files/figure-latex/G1-3asymmContrib1-1.pdf>
+Package pdftex.def Info: JH_capaper_files/figure-latex/G1-3asymmContrib1-1.pdf 
+ used on input line 785.
+(pdftex.def)             Requested size: 310.498pt x 310.498pt.
+<JH_capaper_files/figure-latex/G1-3asymmContrib2-1.pdf, id=208, 469.755pt x 469
+.755pt>
+File: JH_capaper_files/figure-latex/G1-3asymmContrib2-1.pdf Graphic file (type 
+pdf)
+<use JH_capaper_files/figure-latex/G1-3asymmContrib2-1.pdf>
+Package pdftex.def Info: JH_capaper_files/figure-latex/G1-3asymmContrib2-1.pdf 
+ used on input line 796.
+(pdftex.def)             Requested size: 310.498pt x 310.498pt.
+ [24 <./JH_capaper_files/figure-latex/G1-3asymmContrib1-1.pdf>] [25 <./JH_capap
+er_files/figure-latex/G1-3asymmContrib2-1.pdf>]
+<JH_capaper_files/figure-latex/simpleCA3map1-1.pdf, id=234, 469.755pt x 469.755
+pt>
+File: JH_capaper_files/figure-latex/simpleCA3map1-1.pdf Graphic file (type pdf)
+
+<use JH_capaper_files/figure-latex/simpleCA3map1-1.pdf>
+Package pdftex.def Info: JH_capaper_files/figure-latex/simpleCA3map1-1.pdf  use
+d on input line 818.
+(pdftex.def)             Requested size: 310.498pt x 310.498pt.
+ [26 <./JH_capaper_files/figure-latex/simpleCA3map1-1.pdf>]
+Luku 4.
+<JH_capaper_files/figure-latex/suppointCA2map1-1.pdf, id=247, 469.755pt x 469.7
+55pt>
+File: JH_capaper_files/figure-latex/suppointCA2map1-1.pdf Graphic file (type pd
+f)
+<use JH_capaper_files/figure-latex/suppointCA2map1-1.pdf>
+Package pdftex.def Info: JH_capaper_files/figure-latex/suppointCA2map1-1.pdf  u
+sed on input line 857.
+(pdftex.def)             Requested size: 310.498pt x 310.498pt.
+<JH_capaper_files/figure-latex/suppointCA2map2-1.pdf, id=248, 469.755pt x 469.7
+55pt>
+File: JH_capaper_files/figure-latex/suppointCA2map2-1.pdf Graphic file (type pd
+f)
+<use JH_capaper_files/figure-latex/suppointCA2map2-1.pdf>
+Package pdftex.def Info: JH_capaper_files/figure-latex/suppointCA2map2-1.pdf  u
+sed on input line 868.
+(pdftex.def)             Requested size: 310.498pt x 310.498pt.
+[27
+
+] [28 <./JH_capaper_files/figure-latex/suppointCA2map1-1.pdf>] [29 <./JH_capape
+r_files/figure-latex/suppointCA2map2-1.pdf>]
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 925--925
+[]\T1/lmtt/m/n/10 ##                bF        bW       bB       BG        dW   
+     dE        DK[] 
+ []
+
+
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 925--925
+[]\T1/lmtt/m/n/10 ## Mass     0.124279  0.060174 0.062753 0.113103  0.143313  0
+.067174  0.170453[] 
+ []
+
+
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 925--925
+[]\T1/lmtt/m/n/10 ## ChiDist  0.341469  0.096258 0.239034 0.630991  0.219094  0
+.505720  0.634063[] 
+ []
+
+
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 925--925
+[]\T1/lmtt/m/n/10 ## Inertia  0.014491  0.000558 0.003586 0.045032  0.006879  0
+.017180  0.068528[] 
+ []
+
+
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 925--925
+[]\T1/lmtt/m/n/10 ## Dim. 1   0.400065 -0.090631 0.216912 1.502458  0.254323 -1
+.262007 -1.506022[] 
+ []
+
+
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 925--925
+[]\T1/lmtt/m/n/10 ## Dim. 2  -1.254042  0.267998 0.789358 0.236498 -0.451124 -0
+.226595  1.121468[] 
+ []
+
+[30]
+<JH_capaper_files/figure-latex/suppointCA3map1-1.pdf, id=288, 469.755pt x 469.7
+55pt>
+File: JH_capaper_files/figure-latex/suppointCA3map1-1.pdf Graphic file (type pd
+f)
+<use JH_capaper_files/figure-latex/suppointCA3map1-1.pdf>
+Package pdftex.def Info: JH_capaper_files/figure-latex/suppointCA3map1-1.pdf  u
+sed on input line 994.
+(pdftex.def)             Requested size: 310.498pt x 310.498pt.
+<JH_capaper_files/figure-latex/suppointCA3map2-1.pdf, id=289, 469.755pt x 469.7
+55pt>
+File: JH_capaper_files/figure-latex/suppointCA3map2-1.pdf Graphic file (type pd
+f)
+<use JH_capaper_files/figure-latex/suppointCA3map2-1.pdf>
+Package pdftex.def Info: JH_capaper_files/figure-latex/suppointCA3map2-1.pdf  u
+sed on input line 1003.
+(pdftex.def)             Requested size: 310.498pt x 310.498pt.
+<JH_capaper_files/figure-latex/suppointCA3map3-1.pdf, id=290, 469.755pt x 469.7
+55pt>
+File: JH_capaper_files/figure-latex/suppointCA3map3-1.pdf Graphic file (type pd
+f)
+<use JH_capaper_files/figure-latex/suppointCA3map3-1.pdf>
+Package pdftex.def Info: JH_capaper_files/figure-latex/suppointCA3map3-1.pdf  u
+sed on input line 1012.
+(pdftex.def)             Requested size: 310.498pt x 310.498pt.
+<img/3dSymMap_1.png, id=291, 479.99326pt x 389.65575pt>
+File: img/3dSymMap_1.png Graphic file (type png)
+<use img/3dSymMap_1.png>
+Package pdftex.def Info: img/3dSymMap_1.png  used on input line 1023.
+(pdftex.def)             Requested size: 480.02869pt x 389.68451pt.
+<img/3dSymMap_2.png, id=293, 536.0025pt x 552.8655pt>
+File: img/3dSymMap_2.png Graphic file (type png)
+<use img/3dSymMap_2.png>
+Package pdftex.def Info: img/3dSymMap_2.png  used on input line 1024.
+(pdftex.def)             Requested size: 533.26949pt x 550.0465pt.
+
+Overfull \hbox (135.02869pt too wide) in paragraph at lines 1023--1025
+[][]
+ []
+
+
+Overfull \hbox (188.26949pt too wide) in paragraph at lines 1023--1025
+[] 
+ []
+
+
+Underfull \vbox (badness 5417) has occurred while \output is active []
+
+ [31]
+[32 <./JH_capaper_files/figure-latex/suppointCA3map1-1.pdf>] [33 <./JH_capaper_
+files/figure-latex/suppointCA3map2-1.pdf>] [34 <./JH_capaper_files/figure-latex
+/suppointCA3map3-1.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35 <./img/3dSymMap_1.png>] [36 <./img/3dSymMap_2.png>]
+Luku 5.
+[37
+
+]
+<JH_capaper_files/figure-latex/gaCA1map-1.pdf, id=354, 469.755pt x 469.755pt>
+File: JH_capaper_files/figure-latex/gaCA1map-1.pdf Graphic file (type pdf)
+<use JH_capaper_files/figure-latex/gaCA1map-1.pdf>
+Package pdftex.def Info: JH_capaper_files/figure-latex/gaCA1map-1.pdf  used on 
+input line 1067.
+(pdftex.def)             Requested size: 310.498pt x 310.498pt.
+ [38 <./JH_capaper_files/figure-latex/gaCA1map-1.pdf>] [39]
+<JH_capaper_files/figure-latex/maagaCA1map1-1.pdf, id=372, 469.755pt x 469.755p
+t>
+File: JH_capaper_files/figure-latex/maagaCA1map1-1.pdf Graphic file (type pdf)
+<use JH_capaper_files/figure-latex/maagaCA1map1-1.pdf>
+Package pdftex.def Info: JH_capaper_files/figure-latex/maagaCA1map1-1.pdf  used
+ on input line 1153.
+(pdftex.def)             Requested size: 310.498pt x 310.498pt.
+ [40 <./JH_capaper_files/figure-latex/maagaCA1map1-1.pdf>] [41] [42
+
+]
+Luku 6.
+
+Package natbib Warning: Citation `RefWorks:doc:5a857a44e4b0ed2d44664d87' on pag
+e 43 undefined on input line 1186.
+
+
+Package natbib Warning: Citation `RefWorks:doc:5ab76b43e4b003f4468d1f07' on pag
+e 43 undefined on input line 1187.
+
+
+Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d78' on pag
+e 43 undefined on input line 1188.
+
+[43] [44
+
+]
+Luku 7.
+
+Underfull \vbox (badness 3386) has occurred while \output is active []
+
+ [45]
+[46]
+File: img/substvar_fi_Q1Q2.png Graphic file (type png)
+<use img/substvar_fi_Q1Q2.png>
+Package pdftex.def Info: img/substvar_fi_Q1Q2.png  used on input line 1260.
+(pdftex.def)             Requested size: 207.00786pt x 221.42497pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47
+
+]
+! Dimension too large.
+\fb@put@frame ...p \ifdim \dimen@ >\ht \@tempboxa 
+                                                  \fb@putboxa #1\fb@afterfra...
+l.2838 \end{Shaded}
+                   
+I can't work with sizes bigger than about 19 feet.
+Continue and I'll use the largest value I can.
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+! Dimension too large.
+\fb@put@frame ...p \ifdim \dimen@ >\ht \@tempboxa 
+                                                  \fb@putboxa #1\fb@afterfra...
+l.2838 \end{Shaded}
+                   
+I can't work with sizes bigger than about 19 feet.
+Continue and I'll use the largest value I can.
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[49]
+! Dimension too large.
+\fb@put@frame ...p \ifdim \dimen@ >\ht \@tempboxa 
+                                                  \fb@putboxa #1\fb@afterfra...
+l.2838 \end{Shaded}
+                   
+I can't work with sizes bigger than about 19 feet.
+Continue and I'll use the largest value I can.
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[50]
+! Dimension too large.
+\fb@put@frame ...p \ifdim \dimen@ >\ht \@tempboxa 
+                                                  \fb@putboxa #1\fb@afterfra...
+l.2838 \end{Shaded}
+                   
+I can't work with sizes bigger than about 19 feet.
+Continue and I'll use the largest value I can.
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[51]
+! Dimension too large.
+\fb@put@frame ...p \ifdim \dimen@ >\ht \@tempboxa 
+                                                  \fb@putboxa #1\fb@afterfra...
+l.2838 \end{Shaded}
+                   
+I can't work with sizes bigger than about 19 feet.
+Continue and I'll use the largest value I can.
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[52]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[53]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[54]
+Overfull \vbox (2.22223pt too high) detected at line 2838
+ []
+
+[55]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[56]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[57]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[58] [59]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[60]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[61]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[62]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[63]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[64]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[65] [66]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[67]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[68]
+Overfull \vbox (1.39pt too high) detected at line 2838
+ []
+
+[69] [70]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[71]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[72]
+Overfull \vbox (2.22223pt too high) detected at line 2838
+ []
+
+[73]
+Overfull \vbox (2.22223pt too high) detected at line 2838
+ []
+
+[74]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[75]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[76]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[77] [78]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[79]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[80]
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2838
+ []
+
+[81]
+<img/BookdownProc.pdf, id=575, 486.81876pt x 158.5925pt>
+File: img/BookdownProc.pdf Graphic file (type pdf)
+<use img/BookdownProc.pdf>
+Package pdftex.def Info: img/BookdownProc.pdf  used on input line 2854.
+(pdftex.def)             Requested size: 207.00294pt x 67.43599pt.
+
+No file JH_capaper.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+[82 <./img/BookdownProc.pdf>] (JH_capaper.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 14713 strings out of 481784
+ 219472 string characters out of 2923580
+ 817255 words of memory out of 3000000
+ 30507 multiletter control sequences out of 15000+200000
+ 604143 words of font info for 125 fonts, out of 3000000 for 9000
+ 220 hyphenation exceptions out of 8191
+ 71i,8n,86p,958b,480s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/
+MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx1
+2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+lm/lmtk10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb>
+Output written on JH_capaper.pdf (82 pages, 682589 bytes).
+PDF statistics:
+ 777 PDF objects out of 1000 (max. 8388607)
+ 193 named destinations out of 1000 (max. 500000)
+ 10653 words of extra memory for PDF output out of 12000 (max. 10000000)
+

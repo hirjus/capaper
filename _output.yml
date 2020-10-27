@@ -17,5 +17,5 @@ bookdown::pdf_book:
 bookdown::html_book:
   #toc_depth: 2
   fig_caption: true
-  code_folding: show
+  code_folding: hide
   split_by: none
