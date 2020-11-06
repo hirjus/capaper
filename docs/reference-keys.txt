@@ -29,12 +29,14 @@ fig:maagaCA2sub2map1
 fig:maagaCA2sub2map2
 fig:maagaCA2sub2map3
 fig:maagaCA2sub3map1
+fig:stackedimg1
 fig:concat1map1
 fig:concat1map2
 fig:MCA1map1
 fig:MCA1map2
 fig:subsetMCA1map1
 fig:subsetMCA1map2
+fig:subsetMCA1map3
 eq:svd1
 eq:contrat1
 eq:contrat2
@@ -87,6 +89,7 @@ monimuuttuja-korrespondenssianalyysi-mca
 pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables
 matched-matrices
 mca---monimuuttujakorrespondenssianalyysi
+yhteenveto
 korrespondenssianalyysin-teoriaa
 korrespondenssianalyysin-perusyhtälöt-ja-kaavat
 matriisit-ja-niiden-havainnollistaminen

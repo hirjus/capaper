@@ -49,6 +49,13 @@ tulosten kanssa suuntaa.
 
 ## Pinotut ja yhdistetyt taulukot (stacked and concatenated tables)
 
+Pinotut taulut: perusidea
+```{r stackedimg1, out.width='50%', fig.align='center',fig.cap='Pinotut ja yhdistetyt taulut - periaate'}
+knitr::include_graphics('img/stacked1.png')
+```
+
+Lisättiin kuva
+
 ```{r concatDat1, echo=F}
 # Data
 ISSP2012Concat1jh.dat <- select(ISSP2012esim1b.dat, Q1b, maa,sp, age_cat)
@@ -555,6 +562,18 @@ plot.mjca(Qmuuttujat2.mca,
 ```
 Kun kartalle lisätään havainnot, nähdään selvästi kuinka suuri hajonta on havaintojen
 pilvessä verrattuna vastauskategorioiden pilveen.
+
+Asymmetrinen kartta näyttäisi olevan paras vaihtoehto, vastausvaihtoehdot erottuvat selvemmin.
+
+```{r subsetMCA1map3,echo=F, fig.cap= "MCA: Seitsemän kysymystä - 25 maata, kartta 5", fig.asp = 1, out.width = "90%",fig.align = "center"}
+plot.mjca(Qmuuttujat2.mca, map = "rowprincipal",
+          what = c("all","all"),labels = c(0,2),
+          col = c("lightblue", "red"),
+          main="Seitsemän kysymystä, viisi vastausvaihtoehtoa - asymmetrinen kartta",
+          sub = "subset: ei puuttuvien vastausten kategoriaa (*P)")
+
+
+```
 
 **edit1** Jostain syystä en saa toimimaan mjca-funktiossa subsecat - parametrin kanssa
 täydentäviä muuttujia supcol.

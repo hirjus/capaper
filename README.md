@@ -15,22 +15,27 @@ Kopioidaan suoraan testi-projektin asetustiedostot tähän projektiin.
 
 **docs** pdf- ja htlm-tulosteet
 
-**bddefaults** bookdown-paketin oletuskonfiguraatiot (YAML- front matter index.Rmd-tiedostossa, _output.yml, 		_bookdown.yml)
+**bddefaults** bookdown-paketin oletuskonfiguraatiot (YAML- front matter index.
+Rmd-tiedostossa, _output.yml, 		_bookdown.yml)
 
 ## Muut hakemistot RStudion projektissa
 
 **data** 	SPSS-tiedosto, tekstitiedosto muuttujakuvauksista
 **ark**		arkisto
-**test**	yksittäisiä Rmd-sivuja, joilla saan yhden Rmd-tiedoston tulostuksen toimimaan. preview_chapter() ei toimi
-		odotetulla tavalla projektin juuressa, eikä RStudion knit-nappi, vaan aina tulostuu koko dokumentti.
+**test**	yksittäisiä Rmd-sivuja, joilla saan yhden Rmd-tiedoston tulostuksen
+toimimaan. preview_chapter() ei toimi		odotetulla tavalla projektin juuressa,
+eikä RStudion knit-nappi, vaan aina tulostuu koko dokumentti.
 
 **3.8.2018**
 
-Lisäsin test-hakemiston, jossa voi rakennella r-koodia. Siellä toimii yhden Rmd-tiedoston tulostus. output.yml - tiedostoon output-optioksi myös html_book.
+Lisäsin test-hakemiston, jossa voi rakennella r-koodia. Siellä toimii yhden
+Rmd-tiedoston tulostus. output.yml - tiedostoon output-optioksi myös html_book.
 
 **8.8.2018**
 
-Lähdeviitteet toimivat, johdantoon hieman jäsentelyä. Tulostusvaihtoehtona on myös html-book, siinä saa tarvittaessa koodin piilotuksen toimimaan. Ei onnistu gitbook-formaatissa, vaatii teeman käyttöä.
+Lähdeviitteet toimivat, johdantoon hieman jäsentelyä. Tulostusvaihtoehtona on
+myös html-book, siinä saa tarvittaessa koodin piilotuksen toimimaan. Ei onnistu
+gitbook-formaatissa, vaatii teeman käyttöä.
 
 Versio 0.02 : lisättty lähdeviiteitä ja päivitetty bibtex-viitetiedosto.
 
@@ -94,9 +99,11 @@ peruskäsittelyn R-koodilohkot. Versionumero 0.08. PDF-tulostus ei toimi.
 
  **23.20.2020** Ikäluokat syntmävuosina, ca-numeerisia tuloksia tekstiin.
 
- **23.10.2020 Versio 0.20** Karkea sisällysluettelo, hieman **k**appaleiden sisältöjä ja muistiinpanoja rakenteesta.
+ **23.10.2020 Versio 0.20** Karkea sisällysluettelo, hieman **k**appaleiden
+ sisältöjä ja muistiinpanoja rakenteesta.
 
- **23.10.2020 Versio 0.30**  Karttoja yksinkertaisen ca-esimerkin loppuun asti. Muutettiin pdf-dokumentin nimi JH_ca.pdf -> JH_capaper.
+ **23.10.2020 Versio 0.30**  Karttoja yksinkertaisen ca-esimerkin loppuun asti.
+ Muutettiin pdf-dokumentin nimi JH_ca.pdf -> JH_capaper.
 
  **24.10.2020** Belgian ja saksan jako, symmetrinen ja kontribuutiokartta. Uusi
   bib-tiedosto (RefWorks-lähteet). PDF-tulostus kaatuu aluejako-taulukkoon tai
@@ -106,7 +113,8 @@ peruskäsittelyn R-koodilohkot. Versionumero 0.08. PDF-tulostus ei toimi.
 	Ikä-sukupuoli ja ikä-sukupuoli-maa yhdysvaikutusmuuttujat luotu, molemmilla
 	yksi kartta.
 
-	**25.10.2020** PDF-tulostus ei toimi, julkaistan myös "html_book" yhtenä tiedostona, voi tulostaa selaimella pdf-muotoon.
+	**25.10.2020** PDF-tulostus ei toimi, julkaistan myös "html_book" yhtenä
+	tiedostona, voi tulostaa selaimella pdf-muotoon.
 
 	**26.10.2020**
 
@@ -119,9 +127,13 @@ peruskäsittelyn R-koodilohkot. Versionumero 0.08. PDF-tulostus ei toimi.
 	CA:n numerisista tuloksista, poistetaan niistä suurin osa kun teksti on valmis.
 
 **26.10.2020 Versio 0.4**
-Koodi siirretty capaperiin, jonkin verran kommentteja lisäilty. Outo ilmiö, koodiliitteeseen tulostuu myös koodilohkojen output?
+Koodi siirretty capaperiin, jonkin verran kommentteja lisäilty. Outo ilmiö,
+koodiliitteeseen tulostuu myös koodilohkojen output?
 
 **27.10.2020** R-koodi tulostuu ok.
 
 **6.11.2020** Lisättiin koodia johdattelevaan esimerkkiin ja teorialiite, kopiotu
 Galkusta. Pientä editointia.
+
+**7.11.2020** Lisättiin MCA-lukuun kuva taulukoiden yhdistelyn periaatteesta,
+ja asymmetrinen MCA-kuva.
