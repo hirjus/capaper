@@ -179,10 +179,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.3" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#mca---monimuuttujakorrespondenssianalyysi"><i class="fa fa-check"></i><b>7.3</b> MCA - monimuuttujakorrespondenssianalyysi</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="liitteet.html"><a href="liitteet.html"><i class="fa fa-check"></i>Liitteet</a><ul>
-<li class="chapter" data-level="7.4" data-path="liitteet.html"><a href="liitteet.html#korrespondenssianalyysin-teoriaa"><i class="fa fa-check"></i><b>7.4</b> Korrespondenssianalyysin teoriaa</a></li>
+<li class="chapter" data-level="7.4" data-path="liitteet.html"><a href="liitteet.html#korrespondenssianalyysin-teoriaa"><i class="fa fa-check"></i><b>7.4</b> Korrespondenssianalyysin teoriaa</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="liitteet.html"><a href="liitteet.html#korrespondenssianalyysin-perusyhtälöt-ja-kaavat"><i class="fa fa-check"></i><b>7.4.1</b> Korrespondenssianalyysin perusyhtälöt ja kaavat</a></li>
+<li class="chapter" data-level="7.4.2" data-path="liitteet.html"><a href="liitteet.html#matriisit-ja-niiden-havainnollistaminen"><i class="fa fa-check"></i><b>7.4.2</b> Matriisit ja niiden havainnollistaminen</a></li>
+</ul></li>
 <li class="chapter" data-level="7.5" data-path="liitteet.html"><a href="liitteet.html#suomenkielinen-lomake-esimerkki"><i class="fa fa-check"></i><b>7.5</b> Suomenkielinen lomake (esimerkki)</a></li>
-<li class="chapter" data-level="7.6" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>7.6</b> R - koodi</a></li>
-<li class="chapter" data-level="7.7" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>7.7</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
+<li class="chapter" data-level="7.6" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>7.6</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
+<li class="chapter" data-level="7.7" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>7.7</b> R - koodi</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="lähteet-1.html"><a href="lähteet-1.html"><i class="fa fa-check"></i>Lähteet</a></li>
 </ul>
@@ -205,12 +208,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</h1>
 <p class="author"><em>Jussi Hirvonen</em></p>
-<p class="date"><em>Versio 0.4, tulostettu 2020-10-27</em></p>
+<p class="date"><em>Versio 0.4, tulostettu 2020-11-06</em></p>
 </div>
 <div id="alkutoimia" class="section level1 unnumbered">
 <h1>Alkutoimia</h1>
-<p>Ladataan r-paketit, ei tulosteta dokumenttiin. Pelkkä YAML- ‘front matter’,
-lisäkonfiguroinnit tiedostoissa _bookdown.yml ja _output.yml.</p>
+<p><strong>PDF-tulostus oikuttelee Saksan ja Belgian aluejako-datan tai profiilitaulukon
+luonnissa - toistaiseksi vain html-tuloste (24.10.2020)</strong></p>
+<p>27.10.20 Vertailin testi-bookdownin ja capaperin asetuksia.
+Poistin YAML-headerista viimeisen rivin “toc-depth: 2”. Onko eri latex-engine?
+Poistin ongelmia aiheuttavan taulukon (Saksan ja Belgian aluejako).
+Eivät auttaneet pdf-tulostuksen ongelmaan.</p>
 <p>Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti
 _bookdown.yml-tiedostossa.</p>
 <p>RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla),
@@ -220,11 +227,11 @@ pitkiä listauksia muunnosten tarkistuksista ja kuvia eri versioina.</p>
 <p>Koodi kopiodaan Galkusta, kommentoidaan pois tarkistuksia ja muita välitulostuksia.
 Koodin ydinasiat koitetaan pitää samana kuin Galkussa, isommat muuutoksen ensin siellä
 ja sitten tähän projektiin.</p>
-<p><strong>PDF-tulostus oikuttelee Saksan ja Belgian aluejako-datan tai profiilitaulukon
-luonnissa - toistaiseksi vain html-tuloste (24.10.2020)</strong></p>
 <p>Raportti yhtenä html-tiedostona (<a href="https://hirjus.github.io/capaper/JH_capaper.html" class="uri">https://hirjus.github.io/capaper/JH_capaper.html</a>).</p>
 <p>**</p>
-<p>Gitbook-tulosteessa ei saa koodia “piilotettua”, asetus “code_folding: hide” vaatii teeman (theme). _output.yml - tiedostoon lisätty html_book - formaatti, siinä voi tarvittaessa käyttää piilotusta.</p>
+<p>Gitbook-tulosteessa ei saa koodia “piilotettua”, asetus “code_folding: hide” vaatii
+teeman (theme). _output.yml - tiedostoon lisätty html_book - formaatti, siinä
+voi tarvittaessa käyttää piilotusta.</p>
 <p>Versiointi: 0.0n aloittelua, 0.n jäsentely koko paperille, 1.n.n valmiimpaa tekstiä.</p>
 
 </div>
@@ -284,6 +291,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

@@ -13,13 +13,17 @@ bibliography:
 - packages.bib
 site: bookdown::bookdown_site
 biblio-style: apalike
-toc-depth: 2
 ---
 
 # Alkutoimia {-}
 
-Ladataan r-paketit, ei tulosteta dokumenttiin. Pelkkä YAML- 'front matter',
-lisäkonfiguroinnit tiedostoissa _bookdown.yml ja _output.yml.
+**PDF-tulostus oikuttelee Saksan ja Belgian aluejako-datan tai profiilitaulukon
+luonnissa - toistaiseksi vain html-tuloste (24.10.2020)**
+
+27.10.20 Vertailin testi-bookdownin ja capaperin asetuksia.
+Poistin YAML-headerista viimeisen rivin "toc-depth: 2". Onko eri latex-engine?
+Poistin ongelmia aiheuttavan taulukon (Saksan ja Belgian aluejako).
+Eivät auttaneet pdf-tulostuksen ongelmaan.
 
 Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti
 _bookdown.yml-tiedostossa.
@@ -33,9 +37,6 @@ pitkiä listauksia muunnosten tarkistuksista ja kuvia eri versioina.
 Koodi kopiodaan Galkusta, kommentoidaan pois tarkistuksia ja muita välitulostuksia.
 Koodin ydinasiat koitetaan pitää samana kuin Galkussa, isommat muuutoksen ensin siellä
 ja sitten tähän projektiin.
-
-**PDF-tulostus oikuttelee Saksan ja Belgian aluejako-datan tai profiilitaulukon
-luonnissa - toistaiseksi vain html-tuloste (24.10.2020)**
 
 Raportti yhtenä html-tiedostona (https://hirjus.github.io/capaper/JH_capaper.html).
 
@@ -62,7 +63,9 @@ library(assertthat)
 
 ```
 
-Gitbook-tulosteessa ei saa koodia "piilotettua", asetus "code_folding: hide" vaatii teeman (theme). _output.yml - tiedostoon lisätty html_book - formaatti, siinä voi tarvittaessa käyttää piilotusta.
+Gitbook-tulosteessa ei saa koodia "piilotettua", asetus "code_folding: hide" vaatii
+teeman (theme). _output.yml - tiedostoon lisätty html_book - formaatti, siinä
+voi tarvittaessa käyttää piilotusta.
 
  Versiointi: 0.0n aloittelua, 0.n jäsentely koko paperille, 1.n.n valmiimpaa tekstiä.
 

@@ -11,7 +11,7 @@
 
 **k1**"Alle kouluikäinen lapsi todennäköisesti kärsii, jos hänen äitinsä käy työssä".
 Lyhennän muotoon äiti töissä. ISSP-tutkimuksissa kaksi kysymystä, joissa sana "äiti",
-MG havainnut ne poikkeaviksi (**#V ?**).
+MG havainnut vastausten jakaumat poikkeaviksi (**#V ?**).
 
 **zxy** Edellisessä luvussa on esitelyt aineisto, ja kerrottu rajaukset.
 ```{r esim1data1, echo = FALSE, include = FALSE}
@@ -230,10 +230,11 @@ validate_that(are_equal(levels(ISSP2012esim1.dat$Q1b),
 
 **k** Kolme taulukkoa: frekvenssitaulukko, riviprosentit ja sarakeprosentit
 
+
 ```{r simpeCA-frekTa1, echo = FALSE}
-taulu2 <- ISSP2012esim1.dat %>% tableX(maa, Q1b, type = "count")
+taulu2 <- ISSP2012esim1.dat %>% tableX(maa, Q1b, type = "cell_perc")
 knitr::kable(taulu2,digits = 2, booktabs = TRUE,
-             caption = "Kysymyksen Q1b vastaukset maittain")
+             caption = "Kysymyksen Q1b vastaukset maittain, suhteelliset frekvenssit")
 ```
 
 
@@ -255,9 +256,15 @@ knitr::kable(taulu4,digits = 2, booktabs = TRUE,
 
 **k** **Taulkoista**
 
-Ensimmäinen taulukko on data, lukumäärädataa. Toinen ja kolmas kaksi näkökulmaa
-samaan taulukkoon. Sarakkeilla ja riveillä on erilainen rooli, tässä riviprosentit
-ovat luonteva tapa verrata "riippuvaa muuttujaa", eri maita.
+Frekvenssitaulukossa havaintojen lukumäärät on jaettu kokonaislukumäärällä
+(8143).
+
+Frekvenssitaulukko \@ref(tab:simpeCA-frekTa1) kertoo vastausten jakauman maiden 
+ja vastausvaihtoehtojen mukaan luokiteltuina.
+
+Muuttujien luonne on usein erilainen. Tähän aineistoon sopii riviprosenttientaulukko,
+vertaillaan vastausten jakaumia maiden välillä.Taulukon sarakkeet ovat muuttujia
+ja rivit havaintoja. Sarakeprosentit antavat toisen näkökulmaan samaan dataan.
 
 **k** Rivit on saatu alkuperäisestä aineistosta osajoukkojen summina. MG:n
 terminologialla "samples".
@@ -380,6 +387,82 @@ p + scale_x_discrete(name = " ")
 
 
 ```
+
+
+Mikä on rivien ja sarakkeiden suhde?
+
+Tähän klassiseen kysymykseen korrespondenssianalyysi tarjoaa oman ratkaisunsa.
+Siinä rivit ja sarakkeet esitetään samassa kuvassa, ja riippuutta tutkitaan tulkitsemalla tämä kuva tai "kartta".
+
+Kahden luokittelumuuttujan riippuvuutta voidaan testata  $\chi^{2}$ - testillä.
+Testisuure saadaan laskemalla yhten jokaisen solun havaittujen ja odotetettujen
+(riippumattomuushypoteesi) frekvenssien erotukset muodossa
+
+\begin{equation}
+  \chi^{2} = \frac{(havaittu - odotettu)^2} {odotettu}
+    (\#eq:khii21)
+\end{equation}
+
+Tämä voidaan esittää ca:han sopivammalla tavalla parilla muunnoksella, jolloin
+saamme riveittäin vastaavat termit rivisummalla painotettuna:
+
+\begin{equation}
+  rivisumma \times \frac{(havaittu \: riviprofiili - odotettu \: riviprofiili)^2} {odotettu \: riviprofiili}
+    (\#eq:khii22)
+\end{equation}
+
+Kun jaamme nämä tekijät havaintojen kokonaismäärällä $n$, rivisumma muuntuu
+rivin massaksi, ja niiden summa muotoon $\frac{\chi^{2}}{n}$.
+
+\begin{equation}
+ \frac{\chi^{2}}{n} = \phi^{2}
+  (\#eq:inert1)
+ \end{equation}
+
+Huomaa jakajassa n, ei n-1. Tässä ei tn-päättelyä!
+
+
+Tunnusluku $\phi^{2}$ on korrespondenssianalyysissä kokonaisinertia (total
+inertia). Se kuvaa, kuinka paljon varianssia taulukossa on ja on riippumaton
+havaintojen lukumäärästä. Tilastotieteessä tunnusluvulla on useita vaihtoehtoisia
+nimiä (esim. mean square contingency coefficient), ja sen neliöjuurta kutsutaan
+$\phi$ - kertoimeksi.
+
+Tässä siirrytään kahden luokittelumuuttujan taulukosta suhteellisten frekvenssien
+taulukkoon. Kaavojen \@ref(eq:khii21) ja \@ref(eq:khii22) yhteyden pitäisi olla
+selkeä.
+
+Frekvenssitaulukossa (jossa kaikki taulukon luvut on jaettu havaintojen
+lukumäärällä N riviprofiilien 1 ja 3  (euklidinen) etäisyys on
+
+ \begin{equation}
+ \sqrt{(p_{11} - p_{31})^2 + (p_{12} - p_{32})^2 + (p_{13} - _{33})^2+ (p_{14} - _{34})^2+ (p_{15} - _{35})^2}
+ (\#eq:euclid1)
+ \end{equation}
+
+
+Rivien $\chi^{2}$ - etäisyys on painotettu euklidinen etäisyys, jossa painoina
+ovat riviprofiilin odotetut arvot. Ne ovat riippumattomuushypoteesin mukaisesti
+riviprofiilien keskiarvoprofiilin vastaavat alkioit $r_{i}$ .
+
+\begin{equation}
+ \sqrt{\frac{(p_{11} - p_{31})^2} { r_{1}} + \dots + \frac{(p_{15} - p_{35})^2} {r_{5}}}
+ (\#eq:euclid2)
+\end{equation}
+
+Inertia voidaa esittää rivien ja keskiarvorivin (sentroidin) $\chi^{2}$ -etäisyyksien
+neliöiden painotettuna summana, jossa painoina ovat rivien massat $m_{i}$ ja
+summa lasketaan yli rivien ${i}$.
+
+\begin{equation}
+ \phi^{2} = \sum_{i} (massa \: m_{i}) \times (profiilin \: i \: \chi^{2} - etaisyys \: sentroidista)^{2}
+ (\#eq:inert2)
+\end{equation}
+
+Tässä esitystavassa viite on CAiP, teorialiitteessä tarkemmin. Tarkoitus on esittää
+yksinkertaisesti taulukon datan analyysin käsitteet ja CA:n peruskäsitteet profiili,
+massa ja $\chi^{2}$ - etäisyys
+
 
 ## CA - esimerkki
 
@@ -519,6 +602,8 @@ plot(simpleCA1, map = "rowgreen",
      sub = "sarakevektorin ja rivipisteiden värin tummuus = absoluuttinen kontribuutio")
 
 ```
+
+
 
 
 **Suhteelliset kontribuutiot**  Oletuspistekoko ok.

@@ -179,10 +179,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.3" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#mca---monimuuttujakorrespondenssianalyysi"><i class="fa fa-check"></i><b>7.3</b> MCA - monimuuttujakorrespondenssianalyysi</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="liitteet.html"><a href="liitteet.html"><i class="fa fa-check"></i>Liitteet</a><ul>
-<li class="chapter" data-level="7.4" data-path="liitteet.html"><a href="liitteet.html#korrespondenssianalyysin-teoriaa"><i class="fa fa-check"></i><b>7.4</b> Korrespondenssianalyysin teoriaa</a></li>
+<li class="chapter" data-level="7.4" data-path="liitteet.html"><a href="liitteet.html#korrespondenssianalyysin-teoriaa"><i class="fa fa-check"></i><b>7.4</b> Korrespondenssianalyysin teoriaa</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="liitteet.html"><a href="liitteet.html#korrespondenssianalyysin-perusyhtälöt-ja-kaavat"><i class="fa fa-check"></i><b>7.4.1</b> Korrespondenssianalyysin perusyhtälöt ja kaavat</a></li>
+<li class="chapter" data-level="7.4.2" data-path="liitteet.html"><a href="liitteet.html#matriisit-ja-niiden-havainnollistaminen"><i class="fa fa-check"></i><b>7.4.2</b> Matriisit ja niiden havainnollistaminen</a></li>
+</ul></li>
 <li class="chapter" data-level="7.5" data-path="liitteet.html"><a href="liitteet.html#suomenkielinen-lomake-esimerkki"><i class="fa fa-check"></i><b>7.5</b> Suomenkielinen lomake (esimerkki)</a></li>
-<li class="chapter" data-level="7.6" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>7.6</b> R - koodi</a></li>
-<li class="chapter" data-level="7.7" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>7.7</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
+<li class="chapter" data-level="7.6" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>7.6</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
+<li class="chapter" data-level="7.7" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>7.7</b> R - koodi</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="lähteet-1.html"><a href="lähteet-1.html"><i class="fa fa-check"></i>Lähteet</a></li>
 </ul>
@@ -267,7 +270,7 @@ Kuva 7.1: Q1b: Lapsi kärsii jos äiti käy työssä
 <p>Lisäpisteet on hyvin esitetty, niiden etäisyyksiä voi luotettavasti arvioida kuvasta. Poikkeus on nuorin ikäluokka (a1, qlt = 501). Inertian osuudet (inr) ovat yhtä vaatimattomia kuin Belgian (28) ja Saksan (29), (m =20, f = 17, a2 = 40, a6 = 83), samoin kontribuutiot akseleiden inertiaan. 1. dimension kontribuutio (ctr) on suuri (&gt;800) kaikilla paitsi nuorimmalla ikäryhmällä (a1) jolla 2. dimension selittää lähes puolet sen inertiasta (470).</p>
 <p>Vilkaistaan taas numeerisa tuloksia, varmistetaan tulkinta. Tämän voi poistaa
 lopullisesta versiosta.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb16-1"></a><span class="kw">summary</span>(Concat1jh.CA1)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-1"></a><span class="kw">summary</span>(Concat1jh.CA1)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -372,26 +375,26 @@ visuaalinen tulkinta pätevät edelleen.</p>
 ovat nollia tai hyvin vähän havaintoja. Luokkia pitäisi ehkä yhdistellä,jo pelkästään
 “kuvaroskan” takia. Ei tehdä.</p>
 <p><strong>k</strong> Puuttuvat havainnot, muutama numero vain mitä “listwise delete” saa aikaan.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-1"></a><span class="co">#Puuttuvien tietojen yleiskuva</span></span>
-<span id="cb18-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-2"></a></span>
-<span id="cb18-3"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-3"></a><span class="co"># Puuttuvat tiedot aineistossa - viite datan dokumentointiin jossa taulukot.</span></span>
-<span id="cb18-4"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-4"></a><span class="co"># Vaihtelee maittain ja muuttujittain, paljon.</span></span>
-<span id="cb18-5"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-5"></a></span>
-<span id="cb18-6"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-6"></a><span class="co"># Koko data (G1_1_data2.Rmd - skriptissä valitut muuttujat ja 25 maata)</span></span>
-<span id="cb18-7"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-7"></a><span class="co">#</span></span>
-<span id="cb18-8"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-8"></a><span class="co">#sum(!complete.cases(ISSP2012jh1d.dat)) = 9455</span></span>
-<span id="cb18-9"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-9"></a><span class="co">#dim(ISSP2012jh1d.dat) = 32823</span></span>
-<span id="cb18-10"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-10"></a><span class="co">#9455/32823 = 0.2880602</span></span>
-<span id="cb18-11"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-11"></a></span>
-<span id="cb18-12"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-12"></a><span class="co"># Puuttuvat tiedot valitussa MCA-aineistossa</span></span>
-<span id="cb18-13"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-13"></a></span>
-<span id="cb18-14"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-14"></a><span class="co">#missingMCAvars1 &lt;-  c(&quot;Q1a&quot;,&quot;Q1b&quot;, &quot;Q1c&quot;, &quot;Q1d&quot;,&quot;Q1e&quot;,&quot;Q2a&quot;,&quot;Q2b&quot;,&quot;edu&quot;,</span></span>
-<span id="cb18-15"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-15"></a><span class="co">#                 &quot;sosta&quot;, &quot;urbru&quot;, &quot;maa&quot;, &quot;ika&quot;, &quot;sp&quot; )</span></span>
-<span id="cb18-16"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-16"></a><span class="co">#missingTestMCA1.dat &lt;- ISSP2012jh1d.dat %&gt;% select(all_of(missingMCAvars1))</span></span>
-<span id="cb18-17"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-17"></a></span>
-<span id="cb18-18"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-18"></a><span class="co">#sum(!complete.cases(missingTestMCA1.dat)) = 6101</span></span>
-<span id="cb18-19"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-19"></a><span class="co">#dim(missingTestMCA1.dat) = 32823</span></span>
-<span id="cb18-20"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb18-20"></a><span class="co">#6101/32823 = 0.1858758 Puuttellisten havaintojen osuus.</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-1"></a><span class="co">#Puuttuvien tietojen yleiskuva</span></span>
+<span id="cb20-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-2"></a></span>
+<span id="cb20-3"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-3"></a><span class="co"># Puuttuvat tiedot aineistossa - viite datan dokumentointiin jossa taulukot.</span></span>
+<span id="cb20-4"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-4"></a><span class="co"># Vaihtelee maittain ja muuttujittain, paljon.</span></span>
+<span id="cb20-5"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-5"></a></span>
+<span id="cb20-6"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-6"></a><span class="co"># Koko data (G1_1_data2.Rmd - skriptissä valitut muuttujat ja 25 maata)</span></span>
+<span id="cb20-7"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-7"></a><span class="co">#</span></span>
+<span id="cb20-8"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-8"></a><span class="co">#sum(!complete.cases(ISSP2012jh1d.dat)) = 9455</span></span>
+<span id="cb20-9"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-9"></a><span class="co">#dim(ISSP2012jh1d.dat) = 32823</span></span>
+<span id="cb20-10"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-10"></a><span class="co">#9455/32823 = 0.2880602</span></span>
+<span id="cb20-11"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-11"></a></span>
+<span id="cb20-12"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-12"></a><span class="co"># Puuttuvat tiedot valitussa MCA-aineistossa</span></span>
+<span id="cb20-13"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-13"></a></span>
+<span id="cb20-14"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-14"></a><span class="co">#missingMCAvars1 &lt;-  c(&quot;Q1a&quot;,&quot;Q1b&quot;, &quot;Q1c&quot;, &quot;Q1d&quot;,&quot;Q1e&quot;,&quot;Q2a&quot;,&quot;Q2b&quot;,&quot;edu&quot;,</span></span>
+<span id="cb20-15"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-15"></a><span class="co">#                 &quot;sosta&quot;, &quot;urbru&quot;, &quot;maa&quot;, &quot;ika&quot;, &quot;sp&quot; )</span></span>
+<span id="cb20-16"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-16"></a><span class="co">#missingTestMCA1.dat &lt;- ISSP2012jh1d.dat %&gt;% select(all_of(missingMCAvars1))</span></span>
+<span id="cb20-17"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-17"></a></span>
+<span id="cb20-18"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-18"></a><span class="co">#sum(!complete.cases(missingTestMCA1.dat)) = 6101</span></span>
+<span id="cb20-19"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-19"></a><span class="co">#dim(missingTestMCA1.dat) = 32823</span></span>
+<span id="cb20-20"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-20"></a><span class="co">#6101/32823 = 0.1858758 Puuttellisten havaintojen osuus.</span></span></code></pre></div>
 <p>Koko tähän tutkimukseen valitussa aineistossa (25 maata ja muuttujat, poistettu
 havainnot joissa ikä tai sukupuoli puuttuu) 71% havainnoista on kaikki tiedot.</p>
 <p>MCA-analyyseihin valitun 7 + 3 = 10 muuttujan aineiston havainnoista 81% on
@@ -461,7 +464,7 @@ pilvessä verrattuna vastauskategorioiden pilveen.</p>
 täydentäviä muuttujia supcol.</p>
 <p><strong>edit2</strong>
 <strong>MCA - numeeriset tulokset</strong></p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-1"></a><span class="kw">summary</span>(Qmuuttujat2.mca)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb22-1"></a><span class="kw">summary</span>(Qmuuttujat2.mca)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -516,7 +519,7 @@ täydentäviä muuttujia supcol.</p>
 ## 33 |  b2? |   27  640   25 | -281 582  16 |   89  58   3 |
 ## 34 |  b2e |   40  711   24 |  -76  53   2 |  269 658  45 |
 ## 35 |  b2E |   39  939   37 |  630 932 119 |  -55   7   2 |</code></pre>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb22-1"></a><span class="kw">summary</span>(Qmuuttujat2.mca)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb24-1"></a><span class="kw">summary</span>(Qmuuttujat2.mca)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -574,8 +577,8 @@ täydentäviä muuttujia supcol.</p>
 <p>Vilkaistaan 3d-ratkaisua - onko kolmella keskimmäisellä vaihtoehdolla “dimenison
 of middleness”?</p>
 <p><strong>edit</strong> tämä poistetaan lopullisesta versiosta.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb24-1"></a>Qmuuttujat2d3  &lt;-<span class="st"> </span><span class="kw">mjca</span>(mcaDat11jh.dat, <span class="dt">ps=</span><span class="st">&quot;&quot;</span>, <span class="dt">nd =</span> <span class="dv">3</span>,<span class="dt">subsetcat=</span>eiPvastaukset)</span>
-<span id="cb24-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb24-2"></a><span class="kw">summary</span>(Qmuuttujat2d3)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb26-1"></a>Qmuuttujat2d3  &lt;-<span class="st"> </span><span class="kw">mjca</span>(mcaDat11jh.dat, <span class="dt">ps=</span><span class="st">&quot;&quot;</span>, <span class="dt">nd =</span> <span class="dv">3</span>,<span class="dt">subsetcat=</span>eiPvastaukset)</span>
+<span id="cb26-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb26-2"></a><span class="kw">summary</span>(Qmuuttujat2d3)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -689,6 +692,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

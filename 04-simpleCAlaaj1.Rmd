@@ -16,6 +16,37 @@ kartan avulla perustellaan, miten pisteitä voidaaan lisätä.
 
 **Data ja taulukko aluejaosta**
 
+```{r BeDealueTable1, echo=T, eval=T}
+# riviprofiilitaulukko aiheuttaa virheen PDF-tulostuksessa, JH_capaper.Rmd
+# tiedoston voi kuitenkin renderöidä knit-napilla RStudiossa pdf-tiedostoksi.
+
+# Kts. edellinen koodilohko - testailua pdf-ongelman ratkaisemiseksi
+# tallennetaan data tiedostoon, koodilohko BeDeAluedat1 passiviseksi
+# suppoint1_tab1 <- read_rds("suppoint1tab1.rds")
+# suppoint1_tab1 # tarkistus ok
+
+BeDealueTable <- ISSP2012esim1.dat %>% tableX(maa3, Q1b, type = "row_perc")
+
+knitr::kable(BeDealueTable , digits = 2, booktabs = TRUE,
+            caption = "Q1b vastaukset, Saksan ja Belgian alueet")
+
+# Q1b vastaukset, Saksan ja Belgian alueet
+# S	s	?	e	E	Total
+# bF	5.04	23.81	25.89	30.83	14.43	100.00
+# bW	10.82	21.02	18.57	24.08	25.51	100.00
+# bB	17.03	20.94	16.63	23.87	21.53	100.00
+# BG	12.81	42.89	22.26	20.63	1.41	100.00
+# dW	11.40	26.82	11.83	32.13	17.82	100.00
+# dE	5.85	11.33	10.97	29.80	42.05	100.00
+# DK	5.04	17.15	10.95	16.71	50.14	100.00
+# FI	4.23	16.94	13.42	38.11	27.30	100.00
+# HU	21.97	28.89	22.57	19.06	7.52	100.00
+# All	9.95	23.76	16.79	26.10	23.41	100.00
+
+```
+
+
+
 ```{r BeDeAluedat1, eval=T, include=F}
 # (26.10.20) TÄSSÄ EHKÄ VIRHE - PDF-renderöinti antaa virheilmoituksen?
 # Ei todennäköistä, sillä toimii html-tulostuksessa. Kokeiltiin tämän lohkon
@@ -52,33 +83,8 @@ suppoint1_tab1 # tarkistus 3
 ```
 
 Taulukko, Saksan ja Belgian alueet ja maaprofiilit.
-```{r BeDealueTable1, echo=F, eval=TRUE}
-# riviprofiilitaulukko aiheuttaa virheen PDF-tulostuksessa 
-# 
-# Kts. edellinen koodilohko - testailua pdf-ongelman ratkaisemiseksi
-# tallennetaan data tiedostoon, koodilohko BeDeAluedat1 passiviseksi
-# suppoint1_tab1 <- read_rds("suppoint1tab1.rds")
-# suppoint1_tab1 # tarkistus ok
 
-BeDealueTable <- ISSP2012esim1.dat %>% tableX(maa3, Q1b, type = "row_perc")
 
-knitr::kable(BeDealueTable , digits = 2, booktabs = TRUE,
-            caption = "Q1b vastaukset, Saksan ja Belgian alueet")
-
-# Q1b vastaukset, Saksan ja Belgian alueet
-# S	s	?	e	E	Total
-# bF	5.04	23.81	25.89	30.83	14.43	100.00
-# bW	10.82	21.02	18.57	24.08	25.51	100.00
-# bB	17.03	20.94	16.63	23.87	21.53	100.00
-# BG	12.81	42.89	22.26	20.63	1.41	100.00
-# dW	11.40	26.82	11.83	32.13	17.82	100.00
-# dE	5.85	11.33	10.97	29.80	42.05	100.00
-# DK	5.04	17.15	10.95	16.71	50.14	100.00
-# FI	4.23	16.94	13.42	38.11	27.30	100.00
-# HU	21.97	28.89	22.57	19.06	7.52	100.00
-# All	9.95	23.76	16.79	26.10	23.41	100.00
-
-```
 
 **edit** Riviprofiilitaulukko, kuvataan alueiden eroja. CA-analyysi kuitenkin koko
 aineiston frekfvenssitaululla, jossa rivien massat eivät ole samat.

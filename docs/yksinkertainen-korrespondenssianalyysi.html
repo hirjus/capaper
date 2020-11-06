@@ -179,10 +179,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.3" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#mca---monimuuttujakorrespondenssianalyysi"><i class="fa fa-check"></i><b>7.3</b> MCA - monimuuttujakorrespondenssianalyysi</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="liitteet.html"><a href="liitteet.html"><i class="fa fa-check"></i>Liitteet</a><ul>
-<li class="chapter" data-level="7.4" data-path="liitteet.html"><a href="liitteet.html#korrespondenssianalyysin-teoriaa"><i class="fa fa-check"></i><b>7.4</b> Korrespondenssianalyysin teoriaa</a></li>
+<li class="chapter" data-level="7.4" data-path="liitteet.html"><a href="liitteet.html#korrespondenssianalyysin-teoriaa"><i class="fa fa-check"></i><b>7.4</b> Korrespondenssianalyysin teoriaa</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="liitteet.html"><a href="liitteet.html#korrespondenssianalyysin-perusyhtälöt-ja-kaavat"><i class="fa fa-check"></i><b>7.4.1</b> Korrespondenssianalyysin perusyhtälöt ja kaavat</a></li>
+<li class="chapter" data-level="7.4.2" data-path="liitteet.html"><a href="liitteet.html#matriisit-ja-niiden-havainnollistaminen"><i class="fa fa-check"></i><b>7.4.2</b> Matriisit ja niiden havainnollistaminen</a></li>
+</ul></li>
 <li class="chapter" data-level="7.5" data-path="liitteet.html"><a href="liitteet.html#suomenkielinen-lomake-esimerkki"><i class="fa fa-check"></i><b>7.5</b> Suomenkielinen lomake (esimerkki)</a></li>
-<li class="chapter" data-level="7.6" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>7.6</b> R - koodi</a></li>
-<li class="chapter" data-level="7.7" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>7.7</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
+<li class="chapter" data-level="7.6" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>7.6</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
+<li class="chapter" data-level="7.7" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>7.7</b> R - koodi</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="lähteet-1.html"><a href="lähteet-1.html"><i class="fa fa-check"></i>Lähteet</a></li>
 </ul>
@@ -210,7 +213,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">3.1</span> Äiti töissä -kärsiikö lapsi?</h2>
 <p><strong>k1</strong>“Alle kouluikäinen lapsi todennäköisesti kärsii, jos hänen äitinsä käy työssä”.
 Lyhennän muotoon äiti töissä. ISSP-tutkimuksissa kaksi kysymystä, joissa sana “äiti”,
-MG havainnut ne poikkeaviksi (<strong>#V ?</strong>).</p>
+MG havainnut vastausten jakaumat poikkeaviksi (<strong>#V ?</strong>).</p>
 <p><strong>zxy</strong> Edellisessä luvussa on esitelyt aineisto, ja kerrottu rajaukset.</p>
 <p>Tarkistetaan uudet muuttujat (koodilohkon tulostus pois tarvittaessa).</p>
 </div>
@@ -218,7 +221,7 @@ MG havainnut ne poikkeaviksi (<strong>#V ?</strong>).</p>
 <h2><span class="header-section-number">3.2</span> Kahden muuttujan frekvenssitaulukon analyysi</h2>
 <p><strong>k</strong> Kolme taulukkoa: frekvenssitaulukko, riviprosentit ja sarakeprosentit</p>
 <table>
-<caption><span id="tab:simpeCA-frekTa1">Taulukko 3.1: </span>Kysymyksen Q1b vastaukset maittain</caption>
+<caption><span id="tab:simpeCA-frekTa1">Taulukko 3.1: </span>Kysymyksen Q1b vastaukset maittain, suhteelliset frekvenssit</caption>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -233,66 +236,66 @@ MG havainnut ne poikkeaviksi (<strong>#V ?</strong>).</p>
 <tbody>
 <tr class="odd">
 <td align="left">BE</td>
-<td align="left">191</td>
-<td align="left">451</td>
-<td align="left">438</td>
-<td align="left">552</td>
-<td align="left">381</td>
-<td align="left">2013</td>
+<td align="left">2.35</td>
+<td align="left">5.54</td>
+<td align="left">5.38</td>
+<td align="left">6.78</td>
+<td align="left">4.68</td>
+<td align="left">24.72</td>
 </tr>
 <tr class="even">
 <td align="left">BG</td>
-<td align="left">118</td>
-<td align="left">395</td>
-<td align="left">205</td>
-<td align="left">190</td>
-<td align="left">13</td>
-<td align="left">921</td>
+<td align="left">1.45</td>
+<td align="left">4.85</td>
+<td align="left">2.52</td>
+<td align="left">2.33</td>
+<td align="left">0.16</td>
+<td align="left">11.31</td>
 </tr>
 <tr class="odd">
 <td align="left">DE</td>
-<td align="left">165</td>
-<td align="left">375</td>
-<td align="left">198</td>
-<td align="left">538</td>
-<td align="left">438</td>
-<td align="left">1714</td>
+<td align="left">2.03</td>
+<td align="left">4.61</td>
+<td align="left">2.43</td>
+<td align="left">6.61</td>
+<td align="left">5.38</td>
+<td align="left">21.05</td>
 </tr>
 <tr class="even">
 <td align="left">DK</td>
-<td align="left">70</td>
-<td align="left">238</td>
-<td align="left">152</td>
-<td align="left">232</td>
-<td align="left">696</td>
-<td align="left">1388</td>
+<td align="left">0.86</td>
+<td align="left">2.92</td>
+<td align="left">1.87</td>
+<td align="left">2.85</td>
+<td align="left">8.55</td>
+<td align="left">17.05</td>
 </tr>
 <tr class="odd">
 <td align="left">FI</td>
-<td align="left">47</td>
-<td align="left">188</td>
-<td align="left">149</td>
-<td align="left">423</td>
-<td align="left">303</td>
-<td align="left">1110</td>
+<td align="left">0.58</td>
+<td align="left">2.31</td>
+<td align="left">1.83</td>
+<td align="left">5.19</td>
+<td align="left">3.72</td>
+<td align="left">13.63</td>
 </tr>
 <tr class="even">
 <td align="left">HU</td>
-<td align="left">219</td>
-<td align="left">288</td>
-<td align="left">225</td>
-<td align="left">190</td>
-<td align="left">75</td>
-<td align="left">997</td>
+<td align="left">2.69</td>
+<td align="left">3.54</td>
+<td align="left">2.76</td>
+<td align="left">2.33</td>
+<td align="left">0.92</td>
+<td align="left">12.24</td>
 </tr>
 <tr class="odd">
 <td align="left">Total</td>
-<td align="left">810</td>
-<td align="left">1935</td>
-<td align="left">1367</td>
-<td align="left">2125</td>
-<td align="left">1906</td>
-<td align="left">8143</td>
+<td align="left">9.95</td>
+<td align="left">23.76</td>
+<td align="left">16.79</td>
+<td align="left">26.10</td>
+<td align="left">23.41</td>
+<td align="left">100.00</td>
 </tr>
 </tbody>
 </table>
@@ -455,9 +458,13 @@ MG havainnut ne poikkeaviksi (<strong>#V ?</strong>).</p>
 </tbody>
 </table>
 <p><strong>k</strong> <strong>Taulkoista</strong></p>
-<p>Ensimmäinen taulukko on data, lukumäärädataa. Toinen ja kolmas kaksi näkökulmaa
-samaan taulukkoon. Sarakkeilla ja riveillä on erilainen rooli, tässä riviprosentit
-ovat luonteva tapa verrata “riippuvaa muuttujaa”, eri maita.</p>
+<p>Frekvenssitaulukossa havaintojen lukumäärät on jaettu kokonaislukumäärällä
+(8143).</p>
+<p>Frekvenssitaulukko <a href="yksinkertainen-korrespondenssianalyysi.html#tab:simpeCA-frekTa1">3.1</a> kertoo vastausten jakauman maiden
+ja vastausvaihtoehtojen mukaan luokiteltuina.</p>
+<p>Muuttujien luonne on usein erilainen. Tähän aineistoon sopii riviprosenttientaulukko,
+vertaillaan vastausten jakaumia maiden välillä.Taulukon sarakkeet ovat muuttujia
+ja rivit havaintoja. Sarakeprosentit antavat toisen näkökulmaan samaan dataan.</p>
 <p><strong>k</strong> Rivit on saatu alkuperäisestä aineistosta osajoukkojen summina. MG:n
 terminologialla “samples”.</p>
 <p><strong>Kuvat</strong></p>
@@ -473,6 +480,60 @@ Kuva 3.1: Q1b:Sarakeprofiilit ja keskiarvoprofiili
 Kuva 3.2: Q1b: riviprofiilit ja keskiarvorivi
 </p>
 </div>
+<p>Mikä on rivien ja sarakkeiden suhde?</p>
+<p>Tähän klassiseen kysymykseen korrespondenssianalyysi tarjoaa oman ratkaisunsa.
+Siinä rivit ja sarakkeet esitetään samassa kuvassa, ja riippuutta tutkitaan tulkitsemalla tämä kuva tai “kartta”.</p>
+<p>Kahden luokittelumuuttujan riippuvuutta voidaan testata <span class="math inline">\(\chi^{2}\)</span> - testillä.
+Testisuure saadaan laskemalla yhten jokaisen solun havaittujen ja odotetettujen
+(riippumattomuushypoteesi) frekvenssien erotukset muodossa</p>
+<p><span class="math display" id="eq:khii21">\[\begin{equation}
+  \chi^{2} = \frac{(havaittu - odotettu)^2} {odotettu}
+    \tag{3.1}
+\end{equation}\]</span></p>
+<p>Tämä voidaan esittää ca:han sopivammalla tavalla parilla muunnoksella, jolloin
+saamme riveittäin vastaavat termit rivisummalla painotettuna:</p>
+<p><span class="math display" id="eq:khii22">\[\begin{equation}
+  rivisumma \times \frac{(havaittu \: riviprofiili - odotettu \: riviprofiili)^2} {odotettu \: riviprofiili}
+    \tag{3.2}
+\end{equation}\]</span></p>
+<p>Kun jaamme nämä tekijät havaintojen kokonaismäärällä <span class="math inline">\(n\)</span>, rivisumma muuntuu
+rivin massaksi, ja niiden summa muotoon <span class="math inline">\(\frac{\chi^{2}}{n}\)</span>.</p>
+<p><span class="math display" id="eq:inert1">\[\begin{equation}
+ \frac{\chi^{2}}{n} = \phi^{2}
+  \tag{3.3}
+ \end{equation}\]</span></p>
+<p>Huomaa jakajassa n, ei n-1. Tässä ei tn-päättelyä!</p>
+<p>Tunnusluku <span class="math inline">\(\phi^{2}\)</span> on korrespondenssianalyysissä kokonaisinertia (total
+inertia). Se kuvaa, kuinka paljon varianssia taulukossa on ja on riippumaton
+havaintojen lukumäärästä. Tilastotieteessä tunnusluvulla on useita vaihtoehtoisia
+nimiä (esim. mean square contingency coefficient), ja sen neliöjuurta kutsutaan
+<span class="math inline">\(\phi\)</span> - kertoimeksi.</p>
+<p>Tässä siirrytään kahden luokittelumuuttujan taulukosta suhteellisten frekvenssien
+taulukkoon. Kaavojen <a href="yksinkertainen-korrespondenssianalyysi.html#eq:khii21">(3.1)</a> ja <a href="yksinkertainen-korrespondenssianalyysi.html#eq:khii22">(3.2)</a> yhteyden pitäisi olla
+selkeä.</p>
+<p>Frekvenssitaulukossa (jossa kaikki taulukon luvut on jaettu havaintojen
+lukumäärällä N riviprofiilien 1 ja 3 (euklidinen) etäisyys on</p>
+<p><span class="math display" id="eq:euclid1">\[\begin{equation}
+ \sqrt{(p_{11} - p_{31})^2 + (p_{12} - p_{32})^2 + (p_{13} - _{33})^2+ (p_{14} - _{34})^2+ (p_{15} - _{35})^2}
+ \tag{3.4}
+ \end{equation}\]</span></p>
+<p>Rivien <span class="math inline">\(\chi^{2}\)</span> - etäisyys on painotettu euklidinen etäisyys, jossa painoina
+ovat riviprofiilin odotetut arvot. Ne ovat riippumattomuushypoteesin mukaisesti
+riviprofiilien keskiarvoprofiilin vastaavat alkioit <span class="math inline">\(r_{i}\)</span> .</p>
+<p><span class="math display" id="eq:euclid2">\[\begin{equation}
+ \sqrt{\frac{(p_{11} - p_{31})^2} { r_{1}} + \dots + \frac{(p_{15} - p_{35})^2} {r_{5}}}
+ \tag{3.5}
+\end{equation}\]</span></p>
+<p>Inertia voidaa esittää rivien ja keskiarvorivin (sentroidin) <span class="math inline">\(\chi^{2}\)</span> -etäisyyksien
+neliöiden painotettuna summana, jossa painoina ovat rivien massat <span class="math inline">\(m_{i}\)</span> ja
+summa lasketaan yli rivien <span class="math inline">\({i}\)</span>.</p>
+<p><span class="math display" id="eq:inert2">\[\begin{equation}
+ \phi^{2} = \sum_{i} (massa \: m_{i}) \times (profiilin \: i \: \chi^{2} - etaisyys \: sentroidista)^{2}
+ \tag{3.6}
+\end{equation}\]</span></p>
+<p>Tässä esitystavassa viite on CAiP, teorialiitteessä tarkemmin. Tarkoitus on esittää
+yksinkertaisesti taulukon datan analyysin käsitteet ja CA:n peruskäsitteet profiili,
+massa ja <span class="math inline">\(\chi^{2}\)</span> - etäisyys</p>
 </div>
 <div id="ca---esimerkki" class="section level2">
 <h2><span class="header-section-number">3.3</span> CA - esimerkki</h2>
@@ -639,6 +700,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

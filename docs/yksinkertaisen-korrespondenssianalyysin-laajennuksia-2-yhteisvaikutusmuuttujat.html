@@ -179,10 +179,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.3" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#mca---monimuuttujakorrespondenssianalyysi"><i class="fa fa-check"></i><b>7.3</b> MCA - monimuuttujakorrespondenssianalyysi</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="liitteet.html"><a href="liitteet.html"><i class="fa fa-check"></i>Liitteet</a><ul>
-<li class="chapter" data-level="7.4" data-path="liitteet.html"><a href="liitteet.html#korrespondenssianalyysin-teoriaa"><i class="fa fa-check"></i><b>7.4</b> Korrespondenssianalyysin teoriaa</a></li>
+<li class="chapter" data-level="7.4" data-path="liitteet.html"><a href="liitteet.html#korrespondenssianalyysin-teoriaa"><i class="fa fa-check"></i><b>7.4</b> Korrespondenssianalyysin teoriaa</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="liitteet.html"><a href="liitteet.html#korrespondenssianalyysin-perusyhtälöt-ja-kaavat"><i class="fa fa-check"></i><b>7.4.1</b> Korrespondenssianalyysin perusyhtälöt ja kaavat</a></li>
+<li class="chapter" data-level="7.4.2" data-path="liitteet.html"><a href="liitteet.html#matriisit-ja-niiden-havainnollistaminen"><i class="fa fa-check"></i><b>7.4.2</b> Matriisit ja niiden havainnollistaminen</a></li>
+</ul></li>
 <li class="chapter" data-level="7.5" data-path="liitteet.html"><a href="liitteet.html#suomenkielinen-lomake-esimerkki"><i class="fa fa-check"></i><b>7.5</b> Suomenkielinen lomake (esimerkki)</a></li>
-<li class="chapter" data-level="7.6" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>7.6</b> R - koodi</a></li>
-<li class="chapter" data-level="7.7" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>7.7</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
+<li class="chapter" data-level="7.6" data-path="liitteet.html"><a href="liitteet.html#tekninen-ympäristö-ja-bookdown-paketti"><i class="fa fa-check"></i><b>7.6</b> Tekninen ympäristö ja Bookdown-paketti</a></li>
+<li class="chapter" data-level="7.7" data-path="liitteet.html"><a href="liitteet.html#r---koodi"><i class="fa fa-check"></i><b>7.7</b> R - koodi</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="lähteet-1.html"><a href="lähteet-1.html"><i class="fa fa-check"></i>Lähteet</a></li>
 </ul>
@@ -293,13 +296,13 @@ myös cor ja ctr, riveille ja sarakkeille.</p>
 </div>
 <div id="ikä-sukupuoli-ja-maa" class="section level2">
 <h2><span class="header-section-number">5.2</span> Ikä, sukupuoli ja maa</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb8-1"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span><span class="kw">mutate</span>(ISSP2012esim1b.dat,</span>
-<span id="cb8-2"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb8-2"></a>                             <span class="dt">maaga =</span> <span class="kw">paste</span>(maa, ga, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>))</span>
-<span id="cb8-3"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb8-3"></a></span>
-<span id="cb8-4"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb8-4"></a><span class="co"># tarkistus, muunnos ok</span></span>
-<span id="cb8-5"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb8-5"></a><span class="co"># ISSP2012esim1b.dat %&gt;% tableX(maa, maaga)</span></span>
-<span id="cb8-6"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb8-6"></a><span class="co"># head(ISSP2012esim2.dat)</span></span>
-<span id="cb8-7"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb8-7"></a><span class="co"># str(ISSP2012esim2.dat)</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb10-1"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span><span class="kw">mutate</span>(ISSP2012esim1b.dat,</span>
+<span id="cb10-2"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb10-2"></a>                             <span class="dt">maaga =</span> <span class="kw">paste</span>(maa, ga, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>))</span>
+<span id="cb10-3"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb10-3"></a></span>
+<span id="cb10-4"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb10-4"></a><span class="co"># tarkistus, muunnos ok</span></span>
+<span id="cb10-5"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb10-5"></a><span class="co"># ISSP2012esim1b.dat %&gt;% tableX(maa, maaga)</span></span>
+<span id="cb10-6"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb10-6"></a><span class="co"># head(ISSP2012esim2.dat)</span></span>
+<span id="cb10-7"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb10-7"></a><span class="co"># str(ISSP2012esim2.dat)</span></span></code></pre></div>
 <p><strong>edit</strong> Yksi vaikeaselkoinen kartta täynnä pisteitä, tihrustellaan.</p>
 <div class="figure" style="text-align: center"><span id="fig:maagaCA1map1"></span>
 <img src="JH_capaper_files/figure-html/maagaCA1map1-1.png" alt="Q1b: ikäluokka ja sukupuoli maittain" width="90%" />
@@ -307,8 +310,8 @@ myös cor ja ctr, riveille ja sarakkeille.</p>
 Kuva 5.2: Q1b: ikäluokka ja sukupuoli maittain
 </p>
 </div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb9-1"></a><span class="co"># Vilkaistaan numeerisia tuloksia, kopioidaan tekstiin jos on tarpeellista</span></span>
-<span id="cb9-2"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb9-2"></a><span class="kw">summary</span>(maagaCA1)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb11-1"></a><span class="co"># Vilkaistaan numeerisia tuloksia, kopioidaan tekstiin jos on tarpeellista</span></span>
+<span id="cb11-2"><a href="yksinkertaisen-korrespondenssianalyysin-laajennuksia-2-yhteisvaikutusmuuttujat.html#cb11-2"></a><span class="kw">summary</span>(maagaCA1)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -467,6 +470,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
