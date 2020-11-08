@@ -137,3 +137,6 @@ Galkusta. Pientä editointia.
 
 **7.11.2020** Lisättiin MCA-lukuun kuva taulukoiden yhdistelyn periaatteesta,
 ja asymmetrinen MCA-kuva.
+
+**7.11.2020** Paljon kokeiluja, mutta pdf-tulostusta ei saatu toimimaan. TinyTeX
+käyttöön latex-enginenä.

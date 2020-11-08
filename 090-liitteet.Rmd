@@ -295,8 +295,11 @@ knitr::include_graphics('img/substvar_fi_Q1Q2.png')
 Muokataan tiiviimpi pätkä esimerkkireposta bookdown-testi1. Tämä kuva kertoo vain
 julkaisutekniikan ympäristön.
 
-```{r L3bdprocess1, out.width='60%', fig.align='center',fig.cap='Tulostiedoston prosessointi'}
+```{r L3bdprocess1, out.width = '70%', fig.align='center',fig.cap='Tulostiedoston prosessointi'}
 knitr::include_graphics('img/BookdownProc.png')
+
+# pois out.width='50%',
+
 ```
 
 

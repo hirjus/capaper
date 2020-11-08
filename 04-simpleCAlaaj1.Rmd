@@ -25,10 +25,10 @@ kartan avulla perustellaan, miten pisteitä voidaaan lisätä.
 # suppoint1_tab1 <- read_rds("suppoint1tab1.rds")
 # suppoint1_tab1 # tarkistus ok
 
-BeDealueTable <- ISSP2012esim1.dat %>% tableX(maa3, Q1b, type = "row_perc")
+# BeDealueTable <- ISSP2012esim1.dat %>% tableX(maa3, Q1b, type = "row_perc")
 
-knitr::kable(BeDealueTable , digits = 2, booktabs = TRUE,
-            caption = "Q1b vastaukset, Saksan ja Belgian alueet")
+# knitr::kable(BeDealueTable , digits = 2, booktabs = TRUE,
+#            caption = "Q1b vastaukset, Saksan ja Belgian alueet")
 
 # Q1b vastaukset, Saksan ja Belgian alueet
 # S	s	?	e	E	Total
@@ -80,6 +80,7 @@ suppoint1_tab1 # tarkistus 3
 # Testailua pdf-ongelman ratkaisemiseksi - tallennetaa taulukko tiedostoksi
 # Ei ratkaisevasti auttanut (26.10.2020)
 # write_rds(suppoint1_tab1,"suppoint1tab1.rds")
+
 ```
 
 Taulukko, Saksan ja Belgian alueet ja maaprofiilit.
@@ -89,6 +90,7 @@ Taulukko, Saksan ja Belgian alueet ja maaprofiilit.
 **edit** Riviprofiilitaulukko, kuvataan alueiden eroja. CA-analyysi kuitenkin koko
 aineiston frekfvenssitaululla, jossa rivien massat eivät ole samat.
 ```{r BeDealueetCA2, echo=FALSE}
+# suppoint1_tab2 <- read_rds("suppoint1tab1.rds") - testaus joka siirsi virheen 07-rmd-tiedostoon. Sama virheilmoitustyyppi.
 suppointCA2 <- ca(suppoint1_tab1[,1:5], suprow = 10:11)
 
 ```

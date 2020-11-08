@@ -17,7 +17,6 @@ fig:G1-3asymm3
 fig:G1-3asymmContrib1
 fig:G1-3asymmContrib2
 fig:simpleCA3map1
-tab:BeDealueTable1
 fig:suppointCA2map1
 fig:suppointCA2map2
 fig:suppointCA3map1

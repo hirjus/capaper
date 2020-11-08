@@ -10,7 +10,7 @@ bookdown::pdf_book:
   #toc-depth: 2
   includes:
       in_header: simple_preamble.tex
-  fig_caption: true
+  #fig_caption: true tätä ei ole testidokkarissa
   latex_engine: pdflatex
   citation_package: natbib
   keep_tex: yes

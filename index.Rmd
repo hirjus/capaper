@@ -17,6 +17,12 @@ biblio-style: apalike
 
 # Alkutoimia {-}
 
+```{r, include=FALSE}
+# testaukseen 7.11.2020
+options(tinytex.verbose = TRUE)
+```
+
+
 **PDF-tulostus oikuttelee Saksan ja Belgian aluejako-datan tai profiilitaulukon
 luonnissa - toistaiseksi vain html-tuloste (24.10.2020)**
 
@@ -40,7 +46,6 @@ ja sitten tähän projektiin.
 
 Raportti yhtenä html-tiedostona (https://hirjus.github.io/capaper/JH_capaper.html).
 
-**
 
 ```{r jhpaketit, include=FALSE}
 # 18.10.2020
