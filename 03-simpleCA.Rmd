@@ -235,6 +235,7 @@ validate_that(are_equal(levels(ISSP2012esim1.dat$Q1b),
 taulu2 <- ISSP2012esim1.dat %>% tableX(maa, Q1b, type = "cell_perc")
 knitr::kable(taulu2,digits = 2, booktabs = TRUE,
              caption = "Kysymyksen Q1b vastaukset maittain, suhteelliset frekvenssit")
+
 ```
 
 
@@ -243,6 +244,7 @@ taulu3 <- ISSP2012esim1.dat %>% tableX(maa,Q1b,type = "row_perc")
 
 knitr::kable(taulu3,digits = 2, booktabs = TRUE,
              caption = "Kysymyksen Q1b vastaukset, riviprosentit")
+
 ```
 
 
@@ -346,6 +348,7 @@ p <- p + labs(fill = "maa")
 p + scale_x_discrete(name = "Q1b - vastauskategoriat")
 # apu1_df
 # apu1b_df
+
 ```
 
 ```{r g1-2kuva2, fig.cap = "Q1b: riviprofiilit ja keskiarvorivi", echo = FALSE, include = TRUE}
@@ -479,6 +482,7 @@ plot(simpleCA1, map = "symmetric", mass = c(TRUE,TRUE),
      ylab = "Dimensio 2: maltillinen/epävarma - radikaali/jyrkkä/varma (15.1%)",
      main = "symmetrinen kartta 1",
      sub = "Maiden massat eri suuruisia (otoskoko), pisteiden koko suhteessa massaan")
+
 ```
 
 **edit1** jatkossa plot - main on kuvan tyyppi (symmetrinen, kontribuutio jne),
@@ -517,9 +521,6 @@ khii2-etäisyyksiä.
 inertiakontribuutiot
 
 
-
-
-
 ## Korrespondenssianalyysin peruskäsitteet
 
 **ks** Mitä käsitteitä tässä esitellään? Viittaukset teorialiitteeseen, ja
@@ -544,6 +545,7 @@ plot(simpleCA1, map = "rowprincipal",
      arrows = c(FALSE,TRUE), 
      main = "asymmetrinen kartta 1"
     )
+
 ```
 
 
@@ -575,6 +577,7 @@ projektion piirretty käsin, havainnollistetaan periaatetta.
 
 ```{r G1_3_asymmtulk2, echo = FALSE, out.width='90%', fig.align='center'}
 knitr::include_graphics('img/simpleCAasymmTulk2.png')
+
 ```
 
 

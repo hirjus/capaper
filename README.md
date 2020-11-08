@@ -140,3 +140,6 @@ ja asymmetrinen MCA-kuva.
 
 **7.11.2020** Paljon kokeiluja, mutta pdf-tulostusta ei saatu toimimaan. TinyTeX
 käyttöön latex-enginenä.
+
+**8.11.2020** Siistittiin data-luvusta väliotsikoita pois, lisättiin viitteitä ja
+muutama tekstipätkä.
