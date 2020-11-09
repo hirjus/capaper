@@ -146,3 +146,5 @@ muutama tekstipätkä.
 
 **9.11.2020 Versio 0.5** Lukujen otsikot lyhyemmiksi, tarkistettu että koodilohkot päättyvät tyhjään riviin ("newline"),
 maltillisesti kappalekuvauksia (**k**), lisäilty viitteitä hiotavaksi.
+
+**9.11.2020** Muutama viite lisää. Taulukko ISSP-dokumenteista, muutama viite.

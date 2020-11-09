@@ -350,9 +350,9 @@ yhteyksiä kuten edellisessä esimerkissä.</p>
 Kannattaa mainita, ehkävain teoriajaksossa? Idea: matriisien yhdistämisellä
 saadaan ote monenlaiseen tutkimusongelmaan. Benzecri: data-analyysissä on vain
 löydettävä oikea matriisi joka diagonalisoidaan.</p>
-<p>Ref:CAip ss. 177, HY2017_MCA, Greenacre JAS 2013 (sovellus ISSP 1989,4 kysymystä
-‘pitäisikö äidin olla kotona’, 8 maata), tässä artikkelissa “SVD-based methods”,
-joista yksi CA (muut biplots, PCA, compositional data/log ratios).
+<p>Ref:CAip ss. 177 <span class="citation">(M. J. Greenacre <a href="lähteet-1.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>, HY2017_MCA, Greenacre JAS 2013
+(sovellus ISSP 1989,4 kysymystä ‘pitäisikö äidin olla kotona’, 8 maata), tässä
+artikkelissa “SVD-based methods”,joista yksi CA (muut biplots, PCA, compositional data/log ratios).
 <span class="citation">(Greenacre <a href="lähteet-1.html#ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76" role="doc-biblioref">2003</a>)</span></p>
 <p><strong>ABBA</strong>“We consider the joint analysis of two matched matrices which have common
 rows and columns, for example multivariate data observed at two time points or split
@@ -392,64 +392,39 @@ Faktorianalyysi tässä selkein vertailukohde</p>
 <p><strong>k</strong> Matemaattisesti kaikki muuttuu paljon mutkikkaammaksi, ja yksinkertaisen
 perustapauksen selkeät tulkinnat eivät toimi. Tärkeä asia: CA:n skaalausominaisuudet ja
 visuaalinen tulkinta pätevät edelleen.</p>
-<p><strong>edit</strong> Teorialiitteessä tästä enemmän, ranskalaiset hieman eri mieltä</p>
+<p><strong>edit</strong> Teorialiitteessä tästä enemmän, ranskalaiset hieman eri mieltä
+<strong>Viitteitä</strong></p>
+<p>MG ja MG&amp;Prado ovat tutkineet ISSP-datalla tätä ongelmaa.
+Biplots In practice - kirja <span class="citation">(Greenacre <a href="lähteet-1.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span>, ss.142-
+“dimensions of middleness”. Mg ja Prado artikkelissaan <span class="citation">(M. Greenacre ja Pardo <a href="lähteet-1.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d87" role="doc-biblioref">2006</a>)</span> ja samasta
+teemasta laajentaen kokoomateoksessa <span class="citation">(M. Greenacre ja Blasius <a href="lähteet-1.html#ref-RefWorks:doc:5ab76b43e4b003f4468d1f07" role="doc-biblioref">2006</a>)</span>, ss. 197-217. Ensimmäisessä artikkelissa
+kommentoivat vertaisarvioitsijoiden ehdotuksia: miksi kuva-alueen rajaaminen tai vain osajoukon analysointi ei ole
+hyvä ratkaisu.</p>
 <p><strong>k</strong> Data</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-1"></a><span class="co"># TinyTeX MikTeXin tilalle, testiprojektissa toimii mutta täällä sama virheilmoitus.</span></span>
-<span id="cb20-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-2"></a><span class="co"># Kopioidaan taulukoinnit tähän, error=TRUE nin suoritus ei katkea virheeseen.</span></span>
-<span id="cb20-3"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-3"></a></span>
-<span id="cb20-4"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-4"></a></span>
-<span id="cb20-5"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-5"></a><span class="co">#Tarkistus</span></span>
-<span id="cb20-6"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-6"></a></span>
-<span id="cb20-7"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-7"></a><span class="co"># MCAdata1jh.dat %&gt;% tableX (a1, Q1am)</span></span>
-<span id="cb20-8"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-8"></a><span class="co"># MCAdata1jh.dat %&gt;% tableX (b1, Q1bm)</span></span>
-<span id="cb20-9"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-9"></a><span class="co"># MCAdata1jh.dat %&gt;% tableX (c1, Q1cm)</span></span>
-<span id="cb20-10"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-10"></a><span class="co"># MCAdata1jh.dat %&gt;% tableX (d1, Q1dm)</span></span>
-<span id="cb20-11"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-11"></a><span class="co"># MCAdata1jh.dat %&gt;% tableX (e1, Q1em)</span></span>
-<span id="cb20-12"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-12"></a><span class="co"># MCAdata1jh.dat %&gt;% tableX (a2, Q2am)</span></span>
-<span id="cb20-13"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-13"></a><span class="co"># MCAdata1jh.dat %&gt;% tableX (b2, Q2bm)</span></span>
-<span id="cb20-14"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-14"></a><span class="co"># MCAdata1jh.dat %&gt;% tableX(gaf, ga)</span></span>
-<span id="cb20-15"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-15"></a></span>
-<span id="cb20-16"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-16"></a><span class="co"># Perustietoja - TÄSSÄ UUSI PDF-VIRHEILMOITUS 7.11.2020</span></span>
-<span id="cb20-17"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-17"></a><span class="co"># Ei tulosteta - kommentoidaan pois</span></span>
-<span id="cb20-18"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-18"></a></span>
-<span id="cb20-19"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-19"></a><span class="co">#MCAdata1jh.dat %&gt;% tableX (maa,a1, type = &quot;row_perc&quot;)</span></span>
-<span id="cb20-20"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-20"></a><span class="co">#MCAdata1jh.dat %&gt;% tableX (maa,b1, type = &quot;row_perc&quot;)</span></span>
-<span id="cb20-21"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-21"></a><span class="co">#MCAdata1jh.dat %&gt;% tableX (maa,c1, type = &quot;row_perc&quot;)</span></span>
-<span id="cb20-22"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-22"></a><span class="co">#MCAdata1jh.dat %&gt;% tableX (maa,d1, type = &quot;row_perc&quot;)</span></span>
-<span id="cb20-23"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-23"></a><span class="co">#MCAdata1jh.dat %&gt;% tableX (maa,e1, type = &quot;row_perc&quot;)</span></span>
-<span id="cb20-24"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-24"></a><span class="co">#MCAdata1jh.dat %&gt;% tableX (maa,a2,type = &quot;row_perc&quot;)</span></span>
-<span id="cb20-25"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-25"></a><span class="co">#MCAdata1jh.dat %&gt;% tableX (maa,b2,type = &quot;row_perc&quot;)</span></span>
-<span id="cb20-26"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-26"></a></span>
-<span id="cb20-27"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-27"></a><span class="co">#MCAdata1jh.dat %&gt;% tableX(gaf, ga,type = &quot;row_perc&quot;)</span></span>
-<span id="cb20-28"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-28"></a><span class="co">#MCAdata1jh.dat %&gt;% tableX(maa, age_cat,type = &quot;row_perc&quot;)</span></span>
-<span id="cb20-29"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-29"></a><span class="co">#MCAdata1jh.dat %&gt;% tableX(maa, gaf,type = &quot;row_perc&quot;)</span></span>
-<span id="cb20-30"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-30"></a><span class="co">#MCAdata1jh.dat %&gt;% tableX(maa, S, type = &quot;row_perc&quot;)</span></span>
-<span id="cb20-31"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-31"></a><span class="co">#MCAdata1jh.dat %&gt;% tableX(maa, U, type = &quot;row_perc&quot;)</span></span>
-<span id="cb20-32"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-32"></a><span class="co">#MCAdata1jh.dat %&gt;% tableX(maa, E, type = &quot;row_perc&quot;)</span></span></code></pre></div>
 <p>Taustamuuttujien taulukoissa on yllättävän isoja eroja, jotkut taulukoiden luokat
 ovat nollia tai hyvin vähän havaintoja. Luokkia pitäisi ehkä yhdistellä,jo pelkästään
 “kuvaroskan” takia. Ei tehdä.</p>
 <p><strong>k</strong> Puuttuvat havainnot, muutama numero vain mitä “listwise delete” saa aikaan.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-1"></a><span class="co">#Puuttuvien tietojen yleiskuva</span></span>
-<span id="cb21-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-2"></a></span>
-<span id="cb21-3"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-3"></a><span class="co"># Puuttuvat tiedot aineistossa - viite datan dokumentointiin jossa taulukot.</span></span>
-<span id="cb21-4"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-4"></a><span class="co"># Vaihtelee maittain ja muuttujittain, paljon.</span></span>
-<span id="cb21-5"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-5"></a></span>
-<span id="cb21-6"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-6"></a><span class="co"># Koko data (G1_1_data2.Rmd - skriptissä valitut muuttujat ja 25 maata)</span></span>
-<span id="cb21-7"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-7"></a><span class="co">#</span></span>
-<span id="cb21-8"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-8"></a><span class="co">#sum(!complete.cases(ISSP2012jh1d.dat)) = 9455</span></span>
-<span id="cb21-9"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-9"></a><span class="co">#dim(ISSP2012jh1d.dat) = 32823</span></span>
-<span id="cb21-10"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-10"></a><span class="co">#9455/32823 = 0.2880602</span></span>
-<span id="cb21-11"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-11"></a></span>
-<span id="cb21-12"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-12"></a><span class="co"># Puuttuvat tiedot valitussa MCA-aineistossa</span></span>
-<span id="cb21-13"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-13"></a></span>
-<span id="cb21-14"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-14"></a><span class="co">#missingMCAvars1 &lt;-  c(&quot;Q1a&quot;,&quot;Q1b&quot;, &quot;Q1c&quot;, &quot;Q1d&quot;,&quot;Q1e&quot;,&quot;Q2a&quot;,&quot;Q2b&quot;,&quot;edu&quot;,</span></span>
-<span id="cb21-15"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-15"></a><span class="co">#                 &quot;sosta&quot;, &quot;urbru&quot;, &quot;maa&quot;, &quot;ika&quot;, &quot;sp&quot; )</span></span>
-<span id="cb21-16"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-16"></a><span class="co">#missingTestMCA1.dat &lt;- ISSP2012jh1d.dat %&gt;% select(all_of(missingMCAvars1))</span></span>
-<span id="cb21-17"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-17"></a></span>
-<span id="cb21-18"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-18"></a><span class="co">#sum(!complete.cases(missingTestMCA1.dat)) = 6101</span></span>
-<span id="cb21-19"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-19"></a><span class="co">#dim(missingTestMCA1.dat) = 32823</span></span>
-<span id="cb21-20"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb21-20"></a><span class="co">#6101/32823 = 0.1858758 Puuttellisten havaintojen osuus.</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-1"></a><span class="co">#Puuttuvien tietojen yleiskuva</span></span>
+<span id="cb20-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-2"></a></span>
+<span id="cb20-3"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-3"></a><span class="co"># Puuttuvat tiedot aineistossa - viite datan dokumentointiin jossa taulukot.</span></span>
+<span id="cb20-4"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-4"></a><span class="co"># Vaihtelee maittain ja muuttujittain, paljon.</span></span>
+<span id="cb20-5"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-5"></a></span>
+<span id="cb20-6"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-6"></a><span class="co"># Koko data (G1_1_data2.Rmd - skriptissä valitut muuttujat ja 25 maata)</span></span>
+<span id="cb20-7"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-7"></a><span class="co">#</span></span>
+<span id="cb20-8"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-8"></a><span class="co">#sum(!complete.cases(ISSP2012jh1d.dat)) = 9455</span></span>
+<span id="cb20-9"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-9"></a><span class="co">#dim(ISSP2012jh1d.dat) = 32823</span></span>
+<span id="cb20-10"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-10"></a><span class="co">#9455/32823 = 0.2880602</span></span>
+<span id="cb20-11"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-11"></a></span>
+<span id="cb20-12"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-12"></a><span class="co"># Puuttuvat tiedot valitussa MCA-aineistossa</span></span>
+<span id="cb20-13"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-13"></a></span>
+<span id="cb20-14"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-14"></a><span class="co">#missingMCAvars1 &lt;-  c(&quot;Q1a&quot;,&quot;Q1b&quot;, &quot;Q1c&quot;, &quot;Q1d&quot;,&quot;Q1e&quot;,&quot;Q2a&quot;,&quot;Q2b&quot;,&quot;edu&quot;,</span></span>
+<span id="cb20-15"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-15"></a><span class="co">#                 &quot;sosta&quot;, &quot;urbru&quot;, &quot;maa&quot;, &quot;ika&quot;, &quot;sp&quot; )</span></span>
+<span id="cb20-16"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-16"></a><span class="co">#missingTestMCA1.dat &lt;- ISSP2012jh1d.dat %&gt;% select(all_of(missingMCAvars1))</span></span>
+<span id="cb20-17"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-17"></a></span>
+<span id="cb20-18"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-18"></a><span class="co">#sum(!complete.cases(missingTestMCA1.dat)) = 6101</span></span>
+<span id="cb20-19"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-19"></a><span class="co">#dim(missingTestMCA1.dat) = 32823</span></span>
+<span id="cb20-20"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb20-20"></a><span class="co">#6101/32823 = 0.1858758 Puuttellisten havaintojen osuus.</span></span></code></pre></div>
 <p>Koko tähän tutkimukseen valitussa aineistossa (25 maata ja muuttujat, poistettu
 havainnot joissa ikä tai sukupuoli puuttuu) 71% havainnoista on kaikki tiedot.</p>
 <p>MCA-analyyseihin valitun 7 + 3 = 10 muuttujan aineiston havainnoista 81% on
@@ -526,7 +501,7 @@ Kuva 7.8: MCA: Seitsemän kysymystä - 25 maata, kartta 5
 täydentäviä muuttujia supcol.</p>
 <p><strong>edit2</strong>
 <strong>MCA - numeeriset tulokset</strong></p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb23-1"></a><span class="kw">summary</span>(Qmuuttujat2.mca)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb22-1"></a><span class="kw">summary</span>(Qmuuttujat2.mca)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -581,7 +556,7 @@ täydentäviä muuttujia supcol.</p>
 ## 33 |  b2? |   27  640   25 | -281 582  16 |   89  58   3 |
 ## 34 |  b2e |   40  711   24 |  -76  53   2 |  269 658  45 |
 ## 35 |  b2E |   39  939   37 |  630 932 119 |  -55   7   2 |</code></pre>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb25-1"></a><span class="kw">summary</span>(Qmuuttujat2.mca)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb24-1"></a><span class="kw">summary</span>(Qmuuttujat2.mca)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -639,8 +614,8 @@ täydentäviä muuttujia supcol.</p>
 <p>Vilkaistaan 3d-ratkaisua - onko kolmella keskimmäisellä vaihtoehdolla “dimenison
 of middleness”?</p>
 <p><strong>edit</strong> tämä poistetaan lopullisesta versiosta.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb27-1"></a>Qmuuttujat2d3  &lt;-<span class="st"> </span><span class="kw">mjca</span>(mcaDat11jh.dat, <span class="dt">ps=</span><span class="st">&quot;&quot;</span>, <span class="dt">nd =</span> <span class="dv">3</span>,<span class="dt">subsetcat=</span>eiPvastaukset)</span>
-<span id="cb27-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb27-2"></a><span class="kw">summary</span>(Qmuuttujat2d3)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb26-1"></a>Qmuuttujat2d3  &lt;-<span class="st"> </span><span class="kw">mjca</span>(mcaDat11jh.dat, <span class="dt">ps=</span><span class="st">&quot;&quot;</span>, <span class="dt">nd =</span> <span class="dv">3</span>,<span class="dt">subsetcat=</span>eiPvastaukset)</span>
+<span id="cb26-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb26-2"></a><span class="kw">summary</span>(Qmuuttujat2d3)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 

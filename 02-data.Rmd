@@ -8,10 +8,8 @@ lyhyesti. Löytyy koodista ja Githubista. Tässä otsikot vain markkereita koodi
 
 **ks** ISSP, GESIS
 
-**ISSP 2012**, linkit dokumentaatioon
+**ISSP 2012**, linkit dokumentaatioon eivät oiken toimi.
 
-**edit 9.11.20** Taulukko ISSP2012 - dokumenteista jätetty pois, on tylsä. Löytyvät
-Googlella.
 
 **ks** 
 
@@ -998,11 +996,40 @@ suomenkielinen versio [@RefWorks:doc:5bb90a0ae4b018435936a488]. Tiedonkeruun
 tarkoitus ja kyselyn suunnitelun ideat kerrotaan omassa raportissa
 [@RefWorks:doc:5f9439fde4b04741789a2187].
 
+**edit 9.11.20** Kaikki linkit vievät vain GESIS-arkistosivulle jossa on "pitkähkö"
+lista pdf-dokumentteja. Siksi tässä taulukkona tärkeimpien dokumenttien
+tiedostonimet.
+```{r ISSPdocsTable, echo = FALSE, include = TRUE}
+issp_docname <- c("Variable Report", "Study Monitoring Report","Basic Questionnaire",
+                  "Contents of ISSP 2012 module", "Questionnaire Development")
+issp_docdesc <- c("Perusdokumentti, muuttujien kuvaukset ja taulukot",
+                  "tiedokeruun toteutus eri maissa",
+                  "Maittain sovellettava kyselylomake", "substanssikysymykset taulukkona",
+                  "kyselylomakkeen laatiminen")
+issp_docfile <- c("ZA5900_cdb.pdf", "ZA5900_mr.pdf", "ZA5900_bq.pdf","ZA5900_overview.pdf",
+                  "ssoar-2014-scholz_et_al-ISSP_2012_Family_and_Changing.pdf")
+
+
+col_isspdocs <- c("dokumentti","sisältö","tiedosto")
+
+ISSPdocsT.tbl <- tibble(issp_docname, issp_docdesc, issp_docfile)
+colnames(ISSPdocsT.tbl) <- col_isspdocs
+
+knitr::kable(ISSPdocsT.tbl, booktab = TRUE,
+             caption = ' ISSP 2012: tärkeimmät dokumentit')
+
+
+```
+
+
 **zxy** Miksi data on kiinnostava sisällöllisesti? Viite Kantola (HS). Lisäksi laadukas, usealta vuodelta, tarkasti dokumentoitu.
 
 **ks**
 
-**zxy** Miksi data sovelutuu korrespondenssianalyysin esittelyyn? Iso ja monimutkainen (kansainvälinen, datan laaut? kts. Blasius-viite alempana), sisällölliset muuttuja nominaaliasteikolla (kysymyspatterit, Likert), laadukas hyvin dokumentoitu aineisto.
+**zxy** Miksi data sovelutuu korrespondenssianalyysin esittelyyn? Iso ja
+monimutkainen (kansainvälinen, datan laaut? kts. Blasius-viite alempana),
+sisällölliset muuttuja nominaaliasteikolla (kysymyspatterit, Likert),
+laadukas hyvin dokumentoitu aineisto.
 
 **zxy** Onko itse asia kiinnostava? (Kantolan kolumni, HS), The Econimist?
 

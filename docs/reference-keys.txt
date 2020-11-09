@@ -1,3 +1,4 @@
+tab:ISSPdocsTable
 tab:vartable1
 fig:suom-kys
 tab:simpeCA-frekTa1

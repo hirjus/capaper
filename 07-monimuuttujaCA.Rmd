@@ -60,6 +60,7 @@ tulosten kanssa suuntaa.
 Pinotut taulut: perusidea
 ```{r stackedimg1, out.width='50%', fig.align='center',fig.cap='Pinotut ja yhdistetyt taulut - periaate'}
 knitr::include_graphics('img/stacked1.png')
+
 ```
 
 Lisättiin kuva
@@ -138,6 +139,7 @@ lopullisesta versiosta.
 
 ```{r concatCA1num}
 summary(Concat1jh.CA1)
+
 ```
 
 **edit** Galkussa myös subsetCA-kartta, josta Unkari ja Bulgaria on jätetty pois.
@@ -188,9 +190,9 @@ saadaan ote monenlaiseen tutkimusongelmaan. Benzecri: data-analyysissä on vain
 löydettävä oikea matriisi joka diagonalisoidaan.
 
 
-Ref:CAip ss. 177, HY2017_MCA, Greenacre JAS 2013 (sovellus ISSP 1989,4 kysymystä
-'pitäisikö äidin olla kotona', 8 maata), tässä artikkelissa "SVD-based methods",
-joista yksi CA (muut biplots, PCA, compositional data/log ratios).
+Ref:CAip ss. 177 [@RefWorks:doc:5a857a43e4b0ed2d44664d78], HY2017_MCA, Greenacre JAS 2013
+(sovellus ISSP 1989,4 kysymystä 'pitäisikö äidin olla kotona', 8 maata), tässä
+artikkelissa "SVD-based methods",joista yksi CA (muut biplots, PCA, compositional data/log ratios).
 [@RefWorks:doc:5b6f159ce4b0bc0f31734b76]
 
 **ABBA**"We consider the joint analysis of two matched matrices which have common
@@ -242,6 +244,14 @@ perustapauksen selkeät tulkinnat eivät toimi. Tärkeä asia: CA:n skaalausomin
 visuaalinen tulkinta pätevät edelleen.
 
 **edit** Teorialiitteessä tästä enemmän, ranskalaiset hieman eri mieltä
+**Viitteitä**
+
+MG ja MG&Prado ovat tutkineet ISSP-datalla tätä ongelmaa.
+Biplots In practice - kirja [@RefWorks:doc:5a857a43e4b0ed2d44664d7c], ss.142-
+"dimensions of middleness". Mg ja Prado artikkelissaan [@RefWorks:doc:5a857a44e4b0ed2d44664d87] ja samasta
+teemasta laajentaen kokoomateoksessa [@RefWorks:doc:5ab76b43e4b003f4468d1f07], ss. 197-217. Ensimmäisessä artikkelissa
+kommentoivat vertaisarvioitsijoiden ehdotuksia: miksi kuva-alueen rajaaminen tai vain osajoukon analysointi ei ole
+hyvä ratkaisu.
 
 **k** Data
 
@@ -398,7 +408,7 @@ MCAdata1jh.dat <- MCAdata1jh.dat %>% mutate(a1 = Q1am,
 
 ```
 
-```{r 07MCAdataTarkistus, error= TRUE}
+```{r 07MCAdataTarkistus,echo=FALSE, error= TRUE, include=FALSE}
 # TinyTeX MikTeXin tilalle, testiprojektissa toimii mutta täällä sama virheilmoitus.
 # Kopioidaan taulukoinnit tähän, error=TRUE nin suoritus ei katkea virheeseen.
 
