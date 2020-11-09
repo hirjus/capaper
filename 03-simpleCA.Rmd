@@ -3,8 +3,6 @@
 **k1** Yksi kysymys, kuusi maata, peruskäsitteet
 
 
-
-
 **k2** Luvun tärkeimmät asiat; mitä on luvassa?
 
 ## Äiti töissä -kärsiikö lapsi?
@@ -14,6 +12,7 @@ Lyhennän muotoon äiti töissä. ISSP-tutkimuksissa kaksi kysymystä, joissa sa
 MG havainnut vastausten jakaumat poikkeaviksi (**#V ?**).
 
 **zxy** Edellisessä luvussa on esitelyt aineisto, ja kerrottu rajaukset.
+
 ```{r esim1data1, echo = FALSE, include = FALSE}
 # UUSI DATA 30.1.20
 #
@@ -394,6 +393,9 @@ p + scale_x_discrete(name = " ")
 
 Mikä on rivien ja sarakkeiden suhde?
 
+**edit** Tässä esitellään ovelasti CA:n tripletti (massat, profiilit, khii2-etäisyys). Pitääkö lisätä
+riippumattomuushypoteesin mukainen odotettu solufrekvenssi reunajakaumien tulona?
+
 Tähän klassiseen kysymykseen korrespondenssianalyysi tarjoaa oman ratkaisunsa.
 Siinä rivit ja sarakkeet esitetään samassa kuvassa, ja riippuutta tutkitaan tulkitsemalla tämä kuva tai "kartta".
 
@@ -489,16 +491,19 @@ plot(simpleCA1, map = "symmetric", mass = c(TRUE,TRUE),
 koodilohkon fig.cap "ylimmän tason" otsikko.
 
 **edit2** Akseleiden tekstit (Dimensio 1....jne) asetettu käsin, ikävä kyllä myös
-selitetyn inertian osuus. Ainakin tästä ensimmäisestä kuvasta ne kannattaa jättää
-pois, spoileri!
+selitetyn inertian osuus. CA-kartoissa tämä on niin oleellinen asia, että akselien nimet voi muutttaa
+vasta esitysgrafiikassa, ei data-analyysissä. Dim1 ja Dim2  kuuluvat kuviin.
 
 **edit3** par(cex = 1) ennen plot-komenota muuttaa valitettavasti "kaiken" kokoa.
 Antaa olla, kun on graafista data-analyysiä. Selkeys tärkeämpää kuin ulkoasu.
 
 
+
+
 **k** Kartan tulkinta
 
-**k** Prosentit - kuinka paljon kokonaisinertiasta saadaan kuvattua ("selitettyä").
+**k** Prosentit - kuinka paljon kokonaisinertiasta saadaan kuvattua ("selitettyä") kahdessa
+ulottuvuudessa? Miten se jakautuu ensimmäiselle ja toiselle akselille?
 
 **k** Dimenisoiden tulkinta sarakepisteiden avulla: mitä on oikealla ja vasemmalla?
 Kaukana on kaukana, mutta lähellä voi olla täydessä sarake- tai riviavaruudessa

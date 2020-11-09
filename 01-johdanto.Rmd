@@ -22,7 +22,7 @@ mainittava data-osuudessa)
 historiasta.
 
 
-## Tutkielman tavoite)
+## Tutkielman tavoite
 
 **k** Tässä kerrotaan, miksi tämä työ on kirjoitettu. Esitellään menetelmä
 käyttämällä oikeaa dataa. Täsmällisempi esitys sirotellaan esimerkkiaineiston

@@ -1,3 +1,18 @@
 # Yhteenveto
 
 Jäsennysdokumentissa on muutama ajatus, ja viite. Kirjoitetaan tämä viimeiseksi.
+
+Blasius ja Thiessen
+"This paper provides empirically-based criteria for selecting Items and countries
+to develop measures of an underlying construct of interest that are comparable in
+cross-national research. Using data from the 1994 International Social Survey
+Program and applying multiple correspondence analysis to a set of common items
+in each of the 24 participating countries, we show that both the quality of the
+data, as well as its underlying structure - and therefore meaning - vary
+considerably between countries. The approach we use for screening countries and
+items is especially useful in situations where the psychometric properties of
+the items have not been well established in previous research."
+[@RefWorks:doc:5b15542ee4b0e2616bc42dca]
+
+"Surullinen totuus onnellisuustutkimuksesta"@RefWorks:doc:5c223412e4b0508a6674dec0
+(ilman sulkuja) ja suluilla [@RefWorks:doc:5c223412e4b0508a6674dec0]

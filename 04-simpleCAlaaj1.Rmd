@@ -1,16 +1,22 @@
-# Yksinkertaisen korrespondenssianalyysin laajennuksia 1 - täydentävät pisteet
+# Täydentävät pisteet
 
 **edit** Edellisssä luvussa selitetty barysentrinen keskiarvopiste;
  teorialiitteessä hieman laveammin.
 
  **edit** CA:n joustava käyttö vaatii matriisioperaatioita, ja muuta datan rakenteen
  muokkausta (rivien lisääminen input-dataan jne.).
- 
-
-## Täydentävät pisteet (supplementary points)
 
 Tekstistä oma dokkari, eri käyttötapaukset lyhyesti. Edellisen luvun asymmetrisen
 kartan avulla perustellaan, miten pisteitä voidaaan lisätä.
+
+## Täydentävät pisteet
+
+**ks** Passiiviset pisteet ja niiden käyttötarkoitukset
+
+
+
+**edit** Tiivisti tärkeimmät käyttötapaukset
+
 
 ## Saksan ja Belgian alueet
 
@@ -67,6 +73,7 @@ suppoint1_tab1 # tarkistus 3
 # Ei ratkaisevasti auttanut (26.10.2020)
 # write_rds(suppoint1_tab1,"suppoint1tab1.rds")
 
+
 ```
 
 Taulukko, Saksan ja Belgian alueet ja maaprofiilit.
@@ -91,9 +98,10 @@ plot(suppointCA2, main = "Symmetrinen kartta 1 ",
      # contrib = c(TRUE, TRUE),
      sub = "Täydentävät pisteet DE ja BE" )
 
+
 ```
 
-**k** Maaåpisteet alueiden barysentrinen keskiarvo. Tulkinta.
+**k** Maapisteet alueiden barysentrinen keskiarvo. Tulkinta.
 
 ```{r suppointCA2map2, echo=FALSE, fig.cap= "Q1b: Saksan ja  Belgian aluejako ",fig.asp = 1, out.width = "90%",fig.align = "center"}
 
@@ -123,6 +131,7 @@ tarkistamiseen.
 ```{r suppointCA2numres1,echo=TRUE}
 
 suppointCA2
+
 ```
 
 **k** Lyhyt selostus - nämä aika selkeitä
@@ -152,6 +161,7 @@ suppointCA3 <- ca(~maa3 + Q1b,ISSP2012esim1.dat, nd = 3)
 
 # summary(suppointCA3)
 # Error in rsc %*% diag(sv) : non-conformable arguments
+
 ```
  
  **Kolme karttaa**
@@ -184,4 +194,6 @@ plot(suppointCA3, dim = c(2,3),
 ```{r 3dklippi1, echo=FALSE}
 knitr::include_graphics('img/3dSymMap_1.PNG')
 knitr::include_graphics('img/3dSymMap_2.PNG')
+
 ```
+

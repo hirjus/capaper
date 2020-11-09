@@ -1,7 +1,7 @@
-# Korrespondenssianalyysin laajennuksia 3 - osajoukon CA
+# Osajoukon korrespondenssianalyysi
 
 **k** Osajoukon korrespondenssianalyysin tarve: kuvat menevät tukkoon. Kun muuttujia
-on paljon, kartat kertovat vain hyvin yleisiä ja tunnettuja asioita (MG).
+on paljon, kartat kertovat vain hyvin yleisiä ja tunnettuja asioita (MG). Subset CA.
 
 **k** Teoreettinen idea: inertian dekomoponointi (taas). Lasketaan ensin 
 ca-ratkaisu ja rajataan aineisto. Yksinkertainen toteuttaa. Massat ja reunajakaumat

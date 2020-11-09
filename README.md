@@ -143,3 +143,6 @@ käyttöön latex-enginenä.
 
 **8.11.2020** Siistittiin data-luvusta väliotsikoita pois, lisättiin viitteitä ja
 muutama tekstipätkä.
+
+**9.11.2020 Versio 0.5** Lukujen otsikot lyhyemmiksi, tarkistettu että koodilohkot päättyvät tyhjään riviin ("newline"),
+maltillisesti kappalekuvauksia (**k**), lisäilty viitteitä hiotavaksi.

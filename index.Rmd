@@ -1,7 +1,7 @@
 ---
 title: "Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä"
 author: "Jussi Hirvonen"
-date: "Versio 0.4, tulostettu `r Sys.Date()`"
+date: "Versio 0.5, tulostettu `r Sys.Date()`"
 output: pdf_document
 description: Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä.
 documentclass: book
@@ -17,9 +17,10 @@ biblio-style: apalike
 
 # Alkutoimia {-}
 
-```{r, include=FALSE}
-# testaukseen 7.11.2020
-options(tinytex.verbose = TRUE)
+```{r texerr1, eval=FALSE, include=FALSE}
+# testaukseen 7.11.2020 virheilmoituksia varten arvo TRUE
+options(tinytex.verbose = FALSE)
+
 ```
 
 

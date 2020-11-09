@@ -3,6 +3,14 @@
 **k** MG:n jäsentely CA:n  tutkimusasetelmista (within - between), kokoaan myös 
 edeltävät analyysit "saman katon alle".
 
+**k** Idea: taulukoiden yhdistely "supertaulukoksi" tai matriisiksi, analysoidaan kahden muuttujan
+ristiintaulukoinnin laajennuksena useita kahden muuttujan ristiintaulukointeja.
+
+**k** MCA stacked&concat - analyysin erikoistapauksena.
+
+**k** CA SVD:tä soveltavana ratkaisualgoritmina, jolle "syötetään" sopiva matriisi. Benzecri: löydettettävä vain
+matriisi joka dekomponoidaan.
+
 **k1** kahden muuttujuajoukon väliset yhteydet
 
 **k2** yhden muuttujajoukon muuttujien väliset yhteydet
@@ -183,6 +191,21 @@ löydettävä oikea matriisi joka diagonalisoidaan.
 Ref:CAip ss. 177, HY2017_MCA, Greenacre JAS 2013 (sovellus ISSP 1989,4 kysymystä
 'pitäisikö äidin olla kotona', 8 maata), tässä artikkelissa "SVD-based methods",
 joista yksi CA (muut biplots, PCA, compositional data/log ratios).
+[@RefWorks:doc:5b6f159ce4b0bc0f31734b76]
+
+**ABBA**"We consider the joint analysis of two matched matrices which have common
+rows and columns, for example multivariate data observed at two time points or split
+according to a dichotomous variable. Methods of interest include principal components
+analysis for interval-scaled data, correspondence analysis for frequency data, log-ratio
+analysis of compositional data and linear biplots in general, all of which depend on the
+singular value decomposition. A simple result in matrix algebra shows that by setting up
+two matched matrices in a particular block format, matrix sum and difference components
+can be analysed using a single application of the singular value decomposition algorithm.
+The methodology is applied to data from the International Social Survey Program
+comparing male and female attitudes on working wives across eight countries. The resulting
+biplots optimally display the overall cross-cultural differences as well as the male–female
+differences. The case of more than two matched matrices is also discussed."
+
 
 Edellisen menetelmän variantti, jossa ryhmien väliset ja sisäiset erot saadaan
 esiin. Inertian jakaminen.

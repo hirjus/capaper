@@ -3,7 +3,19 @@
 **edit** turhia alalukuja pois, datan luku tekniikkaliitteessä ja/tai johdantoluvussa
 lyhyesti. Löytyy koodista ja Githubista. Tässä otsikot vain markkereita koodilohkoille.
 
-Datan luku ja perusmuokkaukset
+## Data: kuka, missä, milloin?
+**ks** ISSP, linkit, ihan ensimmäisenä yhteiskunatieteellinen tietoarkisto.
+
+**ks** ISSP, GESIS
+
+**ISSP 2012**, linkit dokumentaatioon
+
+**edit 9.11.20** Taulukko ISSP2012 - dokumenteista jätetty pois, on tylsä. Löytyvät
+Googlella.
+
+**ks** 
+
+Datan luku ja perusmuokkaukset selostettu R-koodissa (liittenä).
 
 **Maat ja muuttujat**
 
@@ -169,16 +181,15 @@ countryvars1 <- c("V3","V4","C_ALPHAN")
 #
 # Q3a Should women work: Child under school age 
 # Q3b Should women work: Youngest kid at school
-# 1= kokopäivätyö, 2 = osa-aikatyö, 3 = pysyä kotona, 8 = en osaa sanoa (can't choose), 9 = no answer
+# 1= kokopäivätyö, 2 = osa-aikatyö, 3 = pysyä kotona, 8 = en osaa sanoa
+# (can't choose), 9 = no answer
 #
-# Kysymysten Q3a ja Q3b eos-vastaus ei ole sama kuin "en samaa enkä eri  mieltä" (ns. neutraali 
-# vaihtoehto), mutta kieltäytymisiä jne. (koodi 9) on aika vähän. Kolmessa 
-# maassa ne on yhdistety: 
+# Kysymysten Q3a ja Q3b eos-vastaus ei ole sama kuin "en samaa enkä eri  mieltä"
+# (ns. neutraali # vaihtoehto), mutta kieltäytymisiä jne. (koodi 9) on aika
+# vähän. Kolmessa # maassa ne on yhdistety: 
 # (8 Can't choose, CA:can't choose+no answer, KR:don't know+refused, NL:don't know).
 # Kun SPSS-tiedostosta ei ole tuotu puuttuvan tiedon tarkempaa luokittelua,
 # erottelua ei voi tehdä.
-#
-# 
 #
 
 substvars1 <- c("V5","V6","V7","V8","V9","V10","V11","V12","V13") # 9 muuttujaa
@@ -196,19 +207,22 @@ substvars1 <- c("V5","V6","V7","V8","V9","V10","V11","V12","V13") # 9 muuttujaa
 #
 # AGE, SEX
 #
-# DEGREE - Highest completed degree of education: Categories for international comparison. 
-# Slightly re-arranged subset of ISCED-97
+# DEGREE - Highest completed degree of education: Categories for international
+# comparison. Slightly re-arranged subset of ISCED-97
 #
 # 0 No formal education
 # 1 Primary school (elementary school)
-# 2 Lower secondary (secondary completed does not allow entry to university: obligatory school)
-# 3 Upper secondary (programs that allow entry to university or programs that allow to entry 
-#   other ISCED level 3 programs - designed to prepare students for direct entry into the labour market)
-# 4 Post secondary, non-tertiary (other upper secondary programs toward labour market or technical formation)
+# 2 Lower secondary (secondary completed does not allow entry to university:
+#  obligatory school)
+# 3 Upper secondary (programs that allow entry to university or programs that
+#  allow to entry other ISCED level 3 programs - designed to prepare students for
+#  direct entry into the labour market)
+# 4 Post secondary, non-tertiary (other upper secondary programs toward labour
+#  market or technical formation)
 # 5 Lower level tertiary, first stage (also technical schools at a tertiary level)
 # 6 Upper level tertiary (Master, Dr.)
 # 9 No answer, CH: don't know
-# Yhdistelyt?
+# HUOM! R-factor - muunnoksessa koodaus on 1-7
 #
 # MAINSTAT - main status: Which of the following best describes your current situation?
 #
@@ -245,9 +259,9 @@ substvars1 <- c("V5","V6","V7","V8","V9","V10","V11","V12","V13") # 9 muuttujaa
 # 99 No answer
 #
 # Voisi koodata dummymuuttujaksi lapsia (1) - ei lapsia (0).
-# Ranskan datassa on erittäin iso osa puuttuvia tietoja ( "99"", n. 20 %), myös 
-# Austarlialla aika paljon. Sama tilanne myös muissa perheen kokoon liittyvissä 
-# kysymyksissä.
+# Ranskan datassa on erittäin iso osa puuttuvia tietoja (yli 20 %), Sama tilanne
+# myös  muissa perheen kokoon liittyvissä kysymyksissä.  Myös Austarlialla aika
+# paljon puuttuvia vastauksia.
 #
 # MARITAL - Legal partnership status 
 #
@@ -276,11 +290,12 @@ substvars1 <- c("V5","V6","V7","V8","V9","V10","V11","V12","V13") # 9 muuttujaa
 # 7 Other answer
 # 9 No answer
 # 1 ja 2 vaihtelevat aika paljon maittain, parempi laskea yhteen. Unkarista puuttuu 
-# jostain syystä kokonaan vaihtoehto 5.  Vaihotehdon 7 on valinnut vain 4 vastaajaa Ranskasta.
-# Yhdistetään 1 ja 2 = city, 3 = town, rural= 4, 5, 7
+# jostain syystä kokonaan vaihtoehto 5.  Vaihotehdon 7 on valinnut vain 4
+# vastaajaa Ranskasta.
 #
 
-bgvars1 <- c( "SEX","AGE","DEGREE", "MAINSTAT", "TOPBOT", "HHCHILDR", "MARITAL", "URBRURAL")
+bgvars1 <- c( "SEX","AGE","DEGREE", "MAINSTAT", "TOPBOT",
+              "HHCHILDR", "MARITAL", "URBRURAL")
 
 #Valitaan muuttujat
 
@@ -290,25 +305,24 @@ jhvars1 <- c(metavars1,countryvars1, substvars1,bgvars1)
 ISSP2012jh1b.data <- select(ISSP2012jh1a.data, all_of(jhvars1)) 
 
 # laaja aineisto - mukana havainnot joissa puuttuvia tietoja
-# hauska detalji URBRURAL - muuttujan metatiedoissa viite jonkun työaseman hakemistoon
 # str(ISSP2012jh1b.data) #32969 obs. of  23 variables 
 # 
 # SUBSTANSSIMUUTTUJAT
 #
 # $ V5      : 'haven_labelled' num  5 1 2 2 1 NA 2 4 2 2 ...
-#  ..- attr(*, "label")= chr "Q1a Working mom: warm relationship with children as a not working mom"
+#  ..- attr(*, "label")= chr "Q1a Working mom: warm relationship with children
+#       as a not working mom"
 #  ..- attr(*, "labels")= Named num  0 1 2 3 4 5 8 9
 #
 # ISSP2012jh1b.data$V5 näyttää tarkemmin rakenteen
 #
 # glimpse(ISSP2012jh1b.data)
-# str(ISSP2012jh1b.data) # 32969 obs. of  23 variables
 
 # Poistetaan havainnot, joissa ikä (AGE) tai sukupuolitieto puuttuu (5.7.2019)
 
 ISSP2012jh1c.data <- filter(ISSP2012jh1b.data, (!is.na(SEX) & !is.na(AGE)))
 
-str(ISSP2012jh1c.data) # 32823 obs. of  23 variables, 32969-32823 = 146
+# str(ISSP2012jh1c.data) # 32823 obs. of  23 variables, 32969-32823 = 146
 # TARKISTUS 8.6.20 dplyr 1.0.0-päivitys: havaintojen ja muuttujien määrä ok.
 
 ```
@@ -836,7 +850,7 @@ ISSP2012jh1d.dat <- ISSP2012jh1d.dat %>%
 
 **Muunnosten testaus, varmistetaan että muuttujat ovat sitä mitä halutaan.**
 
-```{r fct-testaus1, warning=TRUE,echo=FALSE,include=FALSE}
+```{r fct-testaus1, warning=TRUE,echo=TRUE ,include=FALSE}
 # (16.9.2020) Testaus uusille muuttujille
 # Koodilohkoissa on jo testattu taulukoimalla muuttujia. Tässä varmistetaan, että
 # muuttujat pysyvät sellaisina millaisiksi ne on luotu.
@@ -952,10 +966,7 @@ validate_that(length(levels(ISSP2012jh1d.dat$urbrum)) == 6)
 ```
 
 *
-*edit** Taulukko tärkeimmistä ISSP2012-dokumenteista, koska dokumenttien nimessä
-on data-arkistoa hoitavan Liebniz-instituutin koodi (Z---). Sivustojen uudistaminen
-rikkoo usein linkit, ja 2012 alkaen Gesis on jakanut dokumentaation ja suuren osan
-datasta verkossa. Taulukon voi jättää pois, jos linkit ovat lähteissä. Voiko/saako
+*edit** Voiko/saako
 tekstissä olla linkkejä?
 
 ISSP-viitteiden testailua:
@@ -993,27 +1004,12 @@ tarkoitus ja kyselyn suunnitelun ideat kerrotaan omassa raportissa
 
 **zxy** Miksi data sovelutuu korrespondenssianalyysin esittelyyn? Iso ja monimutkainen (kansainvälinen, datan laaut? kts. Blasius-viite alempana), sisällölliset muuttuja nominaaliasteikolla (kysymyspatterit, Likert), laadukas hyvin dokumentoitu aineisto.
 
-**zxy** Onko itse asia kiinnostava? (Kantolan kolumni, HS).
+**zxy** Onko itse asia kiinnostava? (Kantolan kolumni, HS), The Econimist?
 
-**ks** Kokoava kappale, ja sen perään tarkentavat
-
-  
-  **ks1**
-  
-  **ks2**
-  
-  **ks-n**
   
 **zxy** Aineiston ongelmat ja puutteet (tavanomaisten surveyaineistojen ongelmien
 lisäksi, erityisesti vastauskadon). Kato erikseen, oikeastaan hyvä juttu koska
 CA soveltuu sen analyysiin.
-
-**zxy** Aineisto kuvattava **sisällön** (mitä asiaa, ilmiötä, tällä datalla
-halutaan valaista), **para- ja metadatan** näkökulmasta (tai ainakin kerrottava
-mitä on saatavilla). Kolmanneksi aineiston "tilastotieteellinen olemus":
-otanta-asetelmat, kansalliset versioinnit, harmonisoinnit (esim. puoluekenttä
-vertailukelpoiseksi).
-
 
 1. Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu tarkentaa tai
 muuten hifistellä. Osa kummallisa, erityisesti neutraalin vaihtoehdon puuttuminen
@@ -1023,9 +1019,6 @@ muuten hifistellä. Osa kummallisa, erityisesti neutraalin vaihtoehdon puuttumin
 Jos tutkimusongelma on maiden erojen analyysi, mitään vertailupainoja ei ole
 käytössä. Otoskoko on paino. MG oikaisee ja ja oikaisee myös sukupuolien osuudet.
 
-  
-
-**Aineiston kuvailu (tietosisältö)** Hyvin lyhyesti oleelliset asiat.
 
 **ks** "Perhe, työ ja sukupuoliroolit" tutkimuksen teemat, tarkoitus. **Paras**
 lähde Yhteiskuntatieteellisen tietoarkiston palvelu
@@ -1092,6 +1085,7 @@ colnames(jhVarTable1.tbl) <- cols_jhVarTable1
 knitr::kable(jhVarTable1.tbl, booktab = TRUE,
                caption = "ISSP2012:Työelämä ja perhearvot - kysymykset")
 
+
 ```
 
 **k** Kyselylomakkeilla kysymykset olivat hieman pidempiä, kuvassa \@ref(fig:suom-kys) osa suomenkielistä lomaketta.
@@ -1126,7 +1120,8 @@ Kuvataan tarkemmin, kun käytetään luvussa 7.
 
 **Korrespondenssianalyysin esimerkkiaineistona**
 
-**edit 8.11.20** Nämä sitaatit kuuluvat muualle, viitteet voivat olla. 
+**edit 8.11.20** Nämä sitaatit kuuluvat muualle, viitteet voivat olla. Näitä
+viitteitä vähän liian monessa paikassa!
 
 Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa
 (Helsinki 2017 MCA, viite Moodleen?) ja kahdessa oppikirjassa
@@ -1134,32 +1129,11 @@ Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa
 ISSP - aineisto vuodelta 1989 on käytetty myös neljän "singuaariarvohajoitelmaan
 perustuvan menetelmän" vertailuun[@RefWorks:doc:5b6f159ce4b0bc0f31734b76]. 
 
- "We consider the joint analysis of two matched matrices which have common
-rows and columns, for example multivariate data observed at two time points or split
-according to a dichotomous variable. Methods of interest include principal components
-analysis for interval-scaled data, correspondence analysis for frequency data, log-ratio
-analysis of compositional data and linear biplots in general, all of which depend on the
-singular value decomposition. A simple result in matrix algebra shows that by setting up
-two matched matrices in a particular block format, matrix sum and difference components
-can be analysed using a single application of the singular value decomposition algorithm.
-The methodology is applied to data from the International Social Survey Program
-comparing male and female attitudes on working wives across eight countries. The resulting
-biplots optimally display the overall cross-cultural differences as well as the male–female
-differences. The case of more than two matched matrices is also discussed."
-
-
 Blasius ja Thiessen ([@RefWorks:doc:5b15542ee4b0e2616bc42dca]) arvioivat aineiston
 laatua ja ja maiden vertailtavuutta vuoden 1994 aineistolla.
-
-"This paper provides empirically-based criteria for selecting Items and countries
+This paper provides empirically-based criteria for selecting Items and countries
 to develop measures of an underlying construct of interest that are comparable in
-cross-national research. Using data from the 1994 International Social Survey
-Program and applying multiple correspondence analysis to a set of common items
-in each of the 24 participating countries, we show that both the quality of the
-data, as well as its underlying structure - and therefore meaning - vary
-considerably between countries. The approach we use for screening countries and
-items is especially useful in situations where the psychometric properties of
-the items have not been well established in previous research."
+cross-national research.
 
 **tärkeä rajaus** Substanssitutkimusta ei tässä käsitellä. Siksi muutama esimerkki.
 
