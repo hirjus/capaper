@@ -1,19 +1,9 @@
 # Data
 
-**edit** turhia alalukuja pois, datan luku tekniikkaliitteessä ja/tai johdantoluvussa
-lyhyesti. Löytyy koodista ja Githubista. Tässä otsikot vain markkereita koodilohkoille.
+**edit** turhia alalukuja pois, datan luku tekniikkaliitteessä ja/tai
+johdantoluvussa lyhyesti. Löytyy koodista ja Githubista.
+Tässä otsikot vain markkereita koodilohkoille.
 
-## Data: kuka, missä, milloin?
-**ks** ISSP, linkit, ihan ensimmäisenä yhteiskunatieteellinen tietoarkisto.
-
-**ks** ISSP, GESIS
-
-**ISSP 2012**, linkit dokumentaatioon eivät oiken toimi.
-
-
-**ks** 
-
-Datan luku ja perusmuokkaukset selostettu R-koodissa (liittenä).
 
 **Maat ja muuttujat**
 
@@ -847,6 +837,7 @@ ISSP2012jh1d.dat <- ISSP2012jh1d.dat %>%
 ```
 
 **Muunnosten testaus, varmistetaan että muuttujat ovat sitä mitä halutaan.**
+**edit** vain varmistuksena toistaikseksi
 
 ```{r fct-testaus1, warning=TRUE,echo=TRUE ,include=FALSE}
 # (16.9.2020) Testaus uusille muuttujille
@@ -963,42 +954,61 @@ validate_that(length(levels(ISSP2012jh1d.dat$urbrum)) == 6)
 
 ```
 
-*
-*edit** Voiko/saako
+
+**edit** Voiko/saako
 tekstissä olla linkkejä?
 
-ISSP-viitteiden testailua:
-
-
-"ISSP - saitilla" löytyy bibliografia, ja hakupalveluillakin voi haravoida.
-**zxy** www.gesis.org - sivustolta löytyy myös
-[julkaisuluettelo](https://search.gesis.org/research_data/ZA5900).
-
- 
+## Data: kuka, mitä, missä ja milloin
 
 **k** ISSP (International social survey) on tehnyt laajoja kansainvälisiä
 kyselytutkimuksia eri teemoista. Yksi teemoista on perhe ja muuttuvat
 (sosiaalisesti määräytyvät) sukupuoliroolit.
 
-Viitteet ISSP2012 - dokumentteihin:
+
+**ks** ISSP, GESIS historiaa
+
+
+**ks** "Perhe, työ ja sukupuoliroolit" tutkimuksen teemat, tarkoitus.
+**Paras** lähde Yhteiskuntatieteellisen tietoarkiston palvelu
+(https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&study_language=fi).
+
+
+ISSP2012-viitteiden testailua:
+
 
 Tutkimuksen viitetieto, linkki vie dokumenttiluetteloon koska hanke on päättynyt.
 Kaksi versiota, käytetään ensimmäistä [@RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a] . 
 Toisessa suora linkki, huono juttu. [@RefWorks:doc:5b6c7debe4b0e4e15164ab00].
-Data ja dokumentaatio (ml. käyttöehdot) löytyvät GESIS-instituutin datakatalogista
-[@RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a].
+Data ja dokumentaatio (ml. käyttöehdot) löytyvät GESIS-instituutin
+datakatalogista (https://zacat.gesis.org)[@RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a].
+Tätä kirjoittaessa (10.11.2020) tutkimuksen aineisto löytyy osoitteesta
+[https://zacat.gesis.org/webview/index.jsp?object=http://zacat.gesis.org/obj/fStudy/ZA5900].
+Datakatalogista löytää tällä hetkellä (10.11.2020) dokumetit ja datan helpoiten.
 
-Koodikirjan ("variable report") [@RefWorks:doc:5bb9041be4b06677e5e61f83] selostaa
-tarkasti tietosisällön, tutkimuksen seurantaraportti
+
+Koodikirjan ("Variable report") [@RefWorks:doc:5bb9041be4b06677e5e61f83] selostaa
+tarkasti tietosisällön. Tutkimuksen seurantaraportti ("Study Monitoring Report")
 [@RefWorks:doc:5c053d69e4b0191a580d6451] kertoo miten tutkimus käytännössä
 toteutettiin. Kyselylomake [@RefWorks:doc:5bb9044fe4b0dfeb95352229] ja
-suomenkielinen versio [@RefWorks:doc:5bb90a0ae4b018435936a488]. Tiedonkeruun
-tarkoitus ja kyselyn suunnitelun ideat kerrotaan omassa raportissa
-[@RefWorks:doc:5f9439fde4b04741789a2187].
+suomenkielinen versio [@RefWorks:doc:5bb90a0ae4b018435936a488] ja myös kaikki muut
+kieliversiot voivat olla hyödyllisiä. Tiedonkeruun tarkoitus ja kyselyn
+suunnitelun ideat kerrotaan omassa raportissa [@RefWorks:doc:5f9439fde4b04741789a2187].
 
-**edit 9.11.20** Kaikki linkit vievät vain GESIS-arkistosivulle jossa on "pitkähkö"
-lista pdf-dokumentteja. Siksi tässä taulukkona tärkeimpien dokumenttien
-tiedostonimet.
+
+**edit 9.11.20** Kaikki linkit lähdeluettelossa vievät vain GESIS-arkistosivulle,
+josta löytää pitkän listan pdf-dokumentteja. Taulukossa \@Ref(tab:ISSPdocsTable)
+on neljän tärkeimmän dokumentin tiedostonimi.
+
+
+
+
+
+ 
+
+
+
+
+
 ```{r ISSPdocsTable, echo = FALSE, include = TRUE}
 issp_docname <- c("Variable Report", "Study Monitoring Report","Basic Questionnaire",
                   "Contents of ISSP 2012 module", "Questionnaire Development")
@@ -1022,7 +1032,8 @@ knitr::kable(ISSPdocsT.tbl, booktab = TRUE,
 ```
 
 
-**zxy** Miksi data on kiinnostava sisällöllisesti? Viite Kantola (HS). Lisäksi laadukas, usealta vuodelta, tarkasti dokumentoitu.
+**zxy** Miksi data on kiinnostava sisällöllisesti? Viite Kantola (HS). Lisäksi
+laadukas, usealta vuodelta, tarkasti dokumentoitu.
 
 **ks**
 
@@ -1031,7 +1042,7 @@ monimutkainen (kansainvälinen, datan laaut? kts. Blasius-viite alempana),
 sisällölliset muuttuja nominaaliasteikolla (kysymyspatterit, Likert),
 laadukas hyvin dokumentoitu aineisto.
 
-**zxy** Onko itse asia kiinnostava? (Kantolan kolumni, HS), The Econimist?
+**zxy** Onko itse asia kiinnostava? (Kantolan kolumni, HS), The Economist?
 
   
 **zxy** Aineiston ongelmat ja puutteet (tavanomaisten surveyaineistojen ongelmien
@@ -1047,9 +1058,6 @@ Jos tutkimusongelma on maiden erojen analyysi, mitään vertailupainoja ei ole
 käytössä. Otoskoko on paino. MG oikaisee ja ja oikaisee myös sukupuolien osuudet.
 
 
-**ks** "Perhe, työ ja sukupuoliroolit" tutkimuksen teemat, tarkoitus. **Paras**
-lähde Yhteiskuntatieteellisen tietoarkiston palvelu
-(https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&study_language=fi).
 
 
 ## Aineiston rajaaminen maat ja muuttujat

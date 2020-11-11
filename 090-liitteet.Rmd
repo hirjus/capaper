@@ -1,15 +1,16 @@
 # Liitteet {-}
 
-## Korrespondenssianalyysin teoriaa
+## Korrespondenssianalyysin teoriaa {-}
 
 ### Korrespondenssianalyysin perusyhtälöt ja kaavat
 
-**viitetiedot puuttuvat kaavoista**
 
-Tässä lähteenä Greenacren kirja (ca in practice) ja sen liite Theory of CA
-. Muistiinpanoja löytyy, joissa viitataan myös Biplots in practice - kirjaan.
+Tässä lähteenä Greenacren kirja[@RefWorks:doc:5a857a43e4b0ed2d44664d78] (ca in practice) ja sen liite
+"Theory of CA".
+
+**edit**  Muistiinpanoja löytyy, joissa viitataan myös Biplots in practice - kirjaan.
 Kevään 2017 kurssin luentokalvoja on myös käytetty. Lisäillään vielä käsitteitä
-LeRouxin ja Rouanetin kirjasta.
+LeRouxin ja Rouanetin kirjasta, jos on tarvis.
 
 Datamatriisilla $\boldsymbol{N}$ on $I$ riviä ja $J$ sarakketta ($I x J$ ).
 Alkiot ovat ei-negatiivisia (eli nollat sallittuja) ja samassa mitta-asteikossa.
@@ -200,8 +201,22 @@ yhdistää barisentrinen painotetun keskiarvon riippuvuus, mutta mukana ovat ska
 Kokeillaan vielä kaavaviitteitä: kaavojen \@ref(eq:khii21) ja \@ref(eq:khii22)
 yhteyden pitäisi olla selkeä.
 
+**Pisteet ja projektio aliavaruuteen**
 
-### Matriisit ja niiden havainnollistaminen
+Kuva MG:n kurssimateriaaleista[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca].
+
+```{r projectionimg1, out.width='70%', fig.align='center',fig.cap='Pisteen projektio aliavaruuteen'}
+knitr::include_graphics('img/CAquality.png')
+
+
+```
+Kuvassa on esitetty korrespondenssianalyysin ratkaisun minimointiongelma. Pisteen projektio on sitä parempi mitä pienempi kulma on sentroidista pisteeseen piirtetyn janan ja pisteen projektion välillä. COR - tunnusluku ca-funktion
+numeerisissa tuloksissa. Kuvasta voi myös hahmottaa sen periaatteen, että projektiossa kaukana olevat pisteet ovat kaukana myös alkuperäisessä avaruudessa. Projektiossa lähekkäin olevat pisteet voivat olla kaukana toisistaan, mutta jos niiden projektion laatu on huono ne voivat olla alkuperäisessä avaruudessa etäällä toisistaan.
+
+
+### Matriisit ja niiden havainnollistaminen {-}
+
+**edit** Nämä tässä varalla, jos matriisikaavoja tarvitaan lisää. Ehkä ei?
 
 
 \begin{equation}

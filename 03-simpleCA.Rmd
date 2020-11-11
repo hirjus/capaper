@@ -545,7 +545,7 @@ suhteesta. Tarkemmin teorialiitteessä, tässä heuristisesti jotta kuvia osaa t
 # asymmetrinen kartta - rivit pc ja sarakkeet sc
 # sarakkeet vektorikuvina
 
-par(cex = 0.7)
+# par(cex = 0.7)
 plot(simpleCA1, map = "rowprincipal", 
      arrows = c(FALSE,TRUE), 
      main = "asymmetrinen kartta 1"
@@ -611,7 +611,9 @@ plot(simpleCA1, map = "rowgreen",
 
 ```
 
-
+Rivi- ja sarakesymbolien koko on suhteessa pisteen massaan, mutta eroja ei tässä
+kovin selkeästi näe.Suhteellisen värisävyn erot näyttävät absoluuttisten
+kontribuutioiden erot selkeästi.
 
 
 **Suhteelliset kontribuutiot**  Oletuspistekoko ok.
@@ -627,6 +629,7 @@ plot(simpleCA1, map = "rowgreen",
      sub = "sarakevektorin ja pisteen värin tummuus = suhteellinen kontribuutio")
 
 ```
+
 
 
 ## Massat
@@ -647,11 +650,28 @@ niin teoria-liitteeseen.
 # Sama kartta - maiden massat vakiotu - simpleCA3 luotu koodilohkossa EkaCA
 # CA:n lähtötietona riviprofiilit
 
-par(cex = 0.6)
+#par(cex = 0.8)
 plot(simpleCA3, map = "symmetric", mass = c(TRUE,TRUE),
 main = "symmetrinen kartta 2 ",
 sub = "Maidet massat vakioitu (riviprofiilidata)")
 
 ```
 
-Ei kovin isoja eroja, tässä datassa.
+Ei kovin isoja eroja, tässä datassa. Vilkaistaan myös absoluuttisia kontribuutioita.
+```{r simpleCA3map2, echo=FALSE, fig.cap= "Q1b: lapsi kärsii jos äiti on töissä",fig.asp = 1, out.width = "90%",fig.align = "center"}
+
+plot(simpleCA3, map = "rowgreen",
+     contrib = c("absolute", "absolute"),
+     mass = c(TRUE,TRUE),
+     arrows = c(FALSE, TRUE),
+     main = "kontribuutiokartta 3",
+     sub = "sarakevektorin ja rivipisteiden värin tummuus = absoluuttinen kontribuutio, riviprofiilidata")
+
+```
+
+## Karttojen erot
+
+Yksinkertaisen korrespondenssianalyysin peruskuva on symmetrinen kartta. Ehkä
+yllättäen sen "tulkinta on edelleen menetelmän kaikkein kiistanalaisin aspekti.”
+[@RefWorks:doc:5a857a43e4b0ed2d44664d78] (s.295),[@RefWorks:doc:5c768b09e4b02df9431e950a].
+vrt. myös, Johdanto, SPSS - kritiikki.

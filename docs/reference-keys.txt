@@ -18,6 +18,7 @@ fig:G1-3asymm3
 fig:G1-3asymmContrib1
 fig:G1-3asymmContrib2
 fig:simpleCA3map1
+fig:simpleCA3map2
 tab:BeDealueTable1
 fig:suppointCA2map1
 fig:suppointCA2map2
@@ -55,6 +56,7 @@ eq:barysentr1
 eq:barysentr2
 eq:barysentr3
 eq:barysentr4
+fig:projectionimg1
 fig:L3bdprocess1
 johdanto
 tutkielman-tavoite
@@ -63,7 +65,7 @@ lähteet
 käytetyt-ohjelmistot
 korrespondenssianalyysin-historiaa
 data
-data-kuka-missä-milloin
+data-kuka-mitä-missä-ja-milloin
 aineiston-rajaaminen-maat-ja-muuttujat
 yksinkertainen-korrespondenssianalyysi
 äiti-töissä--kärsiikö-lapsi
@@ -73,6 +75,7 @@ korrespondenssianalyysin-peruskäsitteet
 asymmetrinen-kartta-ja-ideaalipisteet
 kontribuutiot-kartalla
 massat
+karttojen-erot
 täydentävät-pisteet
 täydentävät-pisteet-1
 saksan-ja-belgian-alueet
@@ -88,9 +91,7 @@ pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables
 matched-matrices
 mca---monimuuttujakorrespondenssianalyysi
 yhteenveto
-korrespondenssianalyysin-teoriaa
 korrespondenssianalyysin-perusyhtälöt-ja-kaavat
-matriisit-ja-niiden-havainnollistaminen
 suomenkielinen-lomake-esimerkki
 tekninen-ympäristö-ja-bookdown-paketti
 r---koodi
