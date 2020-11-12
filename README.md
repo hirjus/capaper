@@ -151,8 +151,11 @@ maltillisesti kappalekuvauksia (**k**), lisäilty viitteitä hiotavaksi.
 
 **11.11.2020** Teorialiitteeseen yksi kuva, yksi kartta lisää johdattelevan
  esimerkin massa-lukuun. Pieni tekstimuutoksia ja lisäyksiä, viitteitä lisää.
- 
+
  **12.11.2020** Viitetietoja, pientä editointia.
- 
+
  **12.11.2020** Teorialiitteen pientä täydennystä ja siistimistä, turhia alalukuja pois
  johdannosta.
+
+ **12.11.2020 Versio 0.6** Johdanto ja yhteenvetoluku jätetään viimeisiksi,
+  muihin valmista tekstiä. Dataluku lisätty.

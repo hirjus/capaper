@@ -1,7 +1,7 @@
 ---
 title: "Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä"
 author: "Jussi Hirvonen"
-date: "Versio 0.5, tulostettu `r Sys.Date()`"
+date: "Versio 0.6, tulostettu `r Sys.Date()`"
 output: pdf_document
 description: Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä.
 documentclass: book
@@ -46,6 +46,11 @@ Koodin ydinasiat koitetaan pitää samana kuin Galkussa, isommat muuutoksen ensi
 ja sitten tähän projektiin.
 
 Raportti yhtenä html-tiedostona (https://hirjus.github.io/capaper/JH_capaper.html).
+
+**12.11.20**
+Raportissa on hieman liian pitkiä ca:n numeeristen tulosten listauksia, poistetaan tai
+lyhennetään rajusti poimimalla oleellisia rivejä. Periaatteessa vain yksi (Saksan ja Belgian jako)
+jää, siinä kerrotaan miten tuloksia luetaan.
 
 
 ```{r jhpaketit, include=FALSE}

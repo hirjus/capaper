@@ -139,8 +139,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3" data-path="johdanto.html"><a href="johdanto.html#korrespondenssianalyysin-historiaa"><i class="fa fa-check"></i><b>1.3</b> Korrespondenssianalyysin historiaa</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Data</a><ul>
-<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#data-kuka-mitä-missä-ja-milloin"><i class="fa fa-check"></i><b>2.1</b> Data: kuka, mitä, missä ja milloin</a></li>
-<li class="chapter" data-level="2.2" data-path="data.html"><a href="data.html#aineiston-rajaaminen-maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.2</b> Aineiston rajaaminen maat ja muuttujat</a></li>
+<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#aineiston-rajaaminen-maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.1</b> Aineiston rajaaminen maat ja muuttujat</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>3</b> Yksinkertainen korrespondenssianalyysi</a><ul>
 <li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä--kärsiikö-lapsi"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä -kärsiikö lapsi?</a></li>
@@ -201,52 +200,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="data" class="section level1">
 <h1><span class="header-section-number">Luku 2</span> Data</h1>
-<p><strong>edit</strong> turhia alalukuja pois, datan luku tekniikkaliitteessä ja/tai
-johdantoluvussa lyhyesti. Löytyy koodista ja Githubista.
-Tässä otsikot vain markkereita koodilohkoille.</p>
-<p><strong>Maat ja muuttujat</strong></p>
-<p><strong>maat luettu, sitten muuttujat</strong></p>
-<p>Substanssimuuttujat (9). Jos sukupuoli tai ikä puuttuu, havainto jätetään pois
-(32969-32823 = 146), maa-muuttujassa ei puuttuvia tietoja ole. Lisäksi kuusi
-taustamuuttujaa ( “SEX”,“AGE”,“DEGREE”, “MAINSTAT”, “TOPBOT”, “HHCHILDR”,
-“MARITAL”, “URBRURAL”).</p>
-<p><strong>Perusmuunnokset - viisi koodilohkoa</strong></p>
-<p><strong>Vaihe 1</strong></p>
-<p><strong>Vaihe 2</strong></p>
-<p><strong>Vaihe 2.1</strong></p>
-<p><strong>Vaihe 2.2</strong></p>
-<p><strong>Vaihe 2.3</strong></p>
-<p>Vaihe 2.4</p>
-<p><strong>Muunnosten testaus, varmistetaan että muuttujat ovat sitä mitä halutaan.</strong>
-<strong>edit</strong> vain varmistuksena toistaikseksi</p>
-<p><strong>edit</strong> Voiko/saako
-tekstissä olla linkkejä?</p>
-<div id="data-kuka-mitä-missä-ja-milloin" class="section level2">
-<h2><span class="header-section-number">2.1</span> Data: kuka, mitä, missä ja milloin</h2>
-<p><strong>k</strong> ISSP (International social survey) on tehnyt laajoja kansainvälisiä
-kyselytutkimuksia eri teemoista. Yksi teemoista on perhe ja muuttuvat
-(sosiaalisesti määräytyvät) sukupuoliroolit.</p>
-<p><strong>ks</strong> ISSP, GESIS historiaa</p>
-<p><strong>ks</strong> “Perhe, työ ja sukupuoliroolit” tutkimuksen teemat, tarkoitus.
-<strong>Paras</strong> lähde Yhteiskuntatieteellisen tietoarkiston palvelu
+<p>Käytän tutkielmassa International Social Survey - projektin (ISSP) vuoden 2012
+kyselytutkimusta “Perhe , työ ja sukupuoliroolit”(International Social Survey
+Programme: Family and Changing Gender Roles IV). Tutkielman tärkeimmissä lähteissä
+(esim. CAiP, Biplots) tutkimuksen aikaisemmat versiot ovat esimerkkiaineistona,
+samoin Greenacren luennoilla 2017.</p>
+<p>Länsi-Saksan ja USA:n tutkimuslaitosten yhteistyö vakiintui ISSP-organisaatioksi
+1984 (<a href="http://www.issp.org" class="uri">http://www.issp.org</a>). Vuonna 2015 neljän perustajajäsenen joukko oli kasvanut 49 maahan.
+Vertailevan tutkimuksen aineistoja on kerätty monista teemoista, perhearvoista
+ja naisten työmarkkina-asemasta neljä kertaa (1988, 1994,2002,2012).
+USA:n edustajana mukana ollut Tom W. Smith näkee aineistojen arvon juuri
+kansainvälisessä vertailevassa tutkimuksessa. Järjestön julkaisuluettelossa oli
+2012 yli 5200, ja viime vuosina yli 400 vuodessa lisää.
+<span class="citation">(Smith <a href="lähteet.html#ref-RefWorks:doc:5c0543a5e4b077eba1dc3cd8" role="doc-biblioref">2015</a>)</span>.</p>
+<p>Saksalainen GESIS-tutkimuslaitos ylläpitää data-arkistoa, josta suurin osa
+datasta ja dokumentaatiosta on vapaasti saatavissa
+(<a href="https://www.gesis.org/en/issp/home" class="uri">https://www.gesis.org/en/issp/home</a>). Suomessa tutkimuksen data ja dokumentaatio
+löytyvät Tampereen yliopiston Aila-tietoarkistosta
 (<a href="https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&amp;study_language=fi" class="uri">https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&amp;study_language=fi</a>).</p>
-<p>ISSP2012-viitteiden testailua:</p>
-<p>Tutkimuksen viitetieto, linkki vie dokumenttiluetteloon koska hanke on päättynyt.
-Kaksi versiota, käytetään ensimmäistä <span class="citation">((2016) <a href="lähteet.html#ref-RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a" role="doc-biblioref">2016</a><a href="lähteet.html#ref-RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a" role="doc-biblioref">a</a>)</span> .
-Toisessa suora linkki, huono juttu. <span class="citation">((2016) <a href="lähteet.html#ref-RefWorks:doc:5b6c7debe4b0e4e15164ab00" role="doc-biblioref">2016</a><a href="lähteet.html#ref-RefWorks:doc:5b6c7debe4b0e4e15164ab00" role="doc-biblioref">b</a>)</span>.
-Data ja dokumentaatio (ml. käyttöehdot) löytyvät GESIS-instituutin
-datakatalogista (<a href="https://zacat.gesis.org" class="uri">https://zacat.gesis.org</a>)<span class="citation">(ISSP <a href="lähteet.html#ref-RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a" role="doc-biblioref">2016</a>)</span>.
-Tätä kirjoittaessa (10.11.2020) tutkimuksen aineisto löytyy osoitteesta
-[<a href="https://zacat.gesis.org/webview/index.jsp?object=http://zacat.gesis.org/obj/fStudy/ZA5900" class="uri">https://zacat.gesis.org/webview/index.jsp?object=http://zacat.gesis.org/obj/fStudy/ZA5900</a>].
-Datakatalogista löytää tällä hetkellä (10.11.2020) dokumetit ja datan helpoiten.</p>
-<p>Koodikirjan (“Variable report”) <span class="citation">(GESIS <a href="lähteet.html#ref-RefWorks:doc:5bb9041be4b06677e5e61f83" role="doc-biblioref">2016</a>)</span> selostaa
-tarkasti tietosisällön. Tutkimuksen seurantaraportti (“Study Monitoring Report”)
-<span class="citation">(Gendall ja Randow <a href="lähteet.html#ref-RefWorks:doc:5c053d69e4b0191a580d6451" role="doc-biblioref">2016</a>)</span> kertoo miten tutkimus käytännössä
-toteutettiin. Kyselylomake <span class="citation">(”ISSP 2012 - Family and Changing Gender Roles IV Basic Questinnaire&lt;br&gt;” <a href="lähteet.html#ref-RefWorks:doc:5bb9044fe4b0dfeb95352229" role="doc-biblioref">2011</a>)</span> ja
-suomenkielinen versio <span class="citation">(Tilastokeskus <a href="lähteet.html#ref-RefWorks:doc:5bb90a0ae4b018435936a488" role="doc-biblioref">2012</a>)</span> ja myös kaikki muut
-kieliversiot voivat olla hyödyllisiä. Tiedonkeruun tarkoitus ja kyselyn
-suunnitelun ideat kerrotaan omassa raportissa <span class="citation">(Scholz ym. <a href="lähteet.html#ref-RefWorks:doc:5f9439fde4b04741789a2187" role="doc-biblioref">2014</a>)</span>.</p>
-<p><strong>edit 9.11.20</strong> Kaikki linkit lähdeluettelossa vievät vain GESIS-arkistosivulle,
+<p>GESIS-instituutin ”datakatalogista” löytää kätevästi kaiken dokumentaation,
+mutta edes saksalaiset eivät voi estää www-sivustojen innokaita uudistajia.
+Kaikki linkit lähdeluettelossa vievät vain GESIS-arkistosivulle,
 josta löytää pitkän listan pdf-dokumentteja. Taulukossa @Ref(tab:ISSPdocsTable)
 on neljän tärkeimmän dokumentin tiedostonimi.</p>
 <table>
@@ -291,38 +265,40 @@ on neljän tärkeimmän dokumentin tiedostonimi.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>zxy</strong> Miksi data on kiinnostava sisällöllisesti? Viite Kantola (HS). Lisäksi
-laadukas, usealta vuodelta, tarkasti dokumentoitu.</p>
-<p><strong>ks</strong></p>
-<p><strong>zxy</strong> Miksi data sovelutuu korrespondenssianalyysin esittelyyn? Iso ja
-monimutkainen (kansainvälinen, datan laaut? kts. Blasius-viite alempana),
-sisällölliset muuttuja nominaaliasteikolla (kysymyspatterit, Likert),
-laadukas hyvin dokumentoitu aineisto.</p>
-<p><strong>zxy</strong> Onko itse asia kiinnostava? (Kantolan kolumni, HS), The Economist?</p>
-<p><strong>zxy</strong> Aineiston ongelmat ja puutteet (tavanomaisten surveyaineistojen ongelmien
-lisäksi, erityisesti vastauskadon). Kato erikseen, oikeastaan hyvä juttu koska
-CA soveltuu sen analyysiin.</p>
-<ol style="list-style-type: decimal">
-<li><p>Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu tarkentaa tai
-muuten hifistellä. Osa kummallisa, erityisesti neutraalin vaihtoehdon puuttuminen
-(Espanja). Nämä maat jätetään pois.</p></li>
-<li><p>Datassa painot “maatasolle”, otanta sun muu kuvattu tarkasti dokumentaatiossa.
-Jos tutkimusongelma on maiden erojen analyysi, mitään vertailupainoja ei ole
-käytössä. Otoskoko on paino. MG oikaisee ja ja oikaisee myös sukupuolien osuudet.</p></li>
-</ol>
-</div>
+<p>Tutkimuksen viitetieto, linkki vie dokumenttiluetteloon koska hanke on päättynyt.
+Kaksi versiota, käytetään ensimmäistä <span class="citation">((2016) <a href="lähteet.html#ref-RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a" role="doc-biblioref">2016</a>)</span> .</p>
+<p>Data ja dokumentaatio (ml. käyttöehdot) löytyvät GESIS-instituutin
+datakatalogista (<a href="https://zacat.gesis.org" class="uri">https://zacat.gesis.org</a>)<span class="citation">(ISSP <a href="lähteet.html#ref-RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a" role="doc-biblioref">2016</a>)</span>.</p>
+<p>Tätä kirjoittaessa (10.11.2020) tutkimuksen aineisto löytyy osoitteesta
+[<a href="https://zacat.gesis.org/webview/index.jsp?object=http://zacat.gesis.org/obj/fStudy/ZA5900" class="uri">https://zacat.gesis.org/webview/index.jsp?object=http://zacat.gesis.org/obj/fStudy/ZA5900</a>].
+Datakatalogista löytää tällä hetkellä (10.11.2020) dokumetit ja datan helpoiten.</p>
+<p>Koodikirjan (“Variable report”) <span class="citation">(GESIS <a href="lähteet.html#ref-RefWorks:doc:5bb9041be4b06677e5e61f83" role="doc-biblioref">2016</a>)</span> selostaa
+tarkasti tietosisällön. Tutkimuksen seurantaraportti (“Study Monitoring Report”)
+<span class="citation">(Gendall ja Randow <a href="lähteet.html#ref-RefWorks:doc:5c053d69e4b0191a580d6451" role="doc-biblioref">2016</a>)</span> kertoo miten tutkimus käytännössä
+toteutettiin. Kyselylomake <span class="citation">(”ISSP 2012 - Family and Changing Gender Roles IV Basic Questinnaire&lt;br&gt;” <a href="lähteet.html#ref-RefWorks:doc:5bb9044fe4b0dfeb95352229" role="doc-biblioref">2011</a>)</span> ja
+suomenkielinen versio <span class="citation">(Tilastokeskus <a href="lähteet.html#ref-RefWorks:doc:5bb90a0ae4b018435936a488" role="doc-biblioref">2012</a>)</span> ja myös kaikki muut
+kieliversiot voivat olla hyödyllisiä. Tiedonkeruun tarkoitus ja kyselyn
+suunnitelun ideat kerrotaan omassa raportissa <span class="citation">(Scholz ym. <a href="lähteet.html#ref-RefWorks:doc:5f9439fde4b04741789a2187" role="doc-biblioref">2014</a>)</span>.</p>
 <div id="aineiston-rajaaminen-maat-ja-muuttujat" class="section level2">
-<h2><span class="header-section-number">2.2</span> Aineiston rajaaminen maat ja muuttujat</h2>
-<p><strong>k</strong> maat, samankaltaisia, data saatavilla kiinnostavista muuttujista</p>
-<p><strong>k</strong> muuttujat. Laajasti käyetty, valittu sopiva kysymyspatteri asenteista naisten
-työssäkäyntiin ja joitain taustamuuttujia. Korrespondenssianalyysi on hyvä menetelmä
-aineiston analyysiin: monimutkainen ja laaaja, paljon luokitteluasteikon muuttujia,
-“akvaariositaatti” tähän.</p>
-<p><strong>kysymykset</strong></p>
-<p><strong>k</strong> Taulukon <a href="data.html#tab:vartable1">2.2</a> kysymysten lyhyet versiot ovat datassa mukana.
+<h2><span class="header-section-number">2.1</span> Aineiston rajaaminen maat ja muuttujat</h2>
+<p>Olen valinnut laajasta aineistosta 25 maata ja joukon muuttujia. Maat on valittu
+niin, että ne ovat suhteellisen samankaltaisia ja valitut muuttujat ovat niissä
+samanlaisia. Kysymyksissä on jonkin verran pieniä eroja, mutta joissain
+tapauksissa ero on merkittävä. Esimerkiksi Espanja on jostain syystä jättänyt
+tässä käytetyistä muuttujista ns. neutraalin (”en samaa enkä eri mieltä”)
+vastausvaihtoehdon pois, joten Espanja jää pois.</p>
+<p>Substanssimuuttujat ovat yksi ”kysymyspatteri”, jolla luodataan asenteita
+naisten roolista työmarkkinoilla. Aiheen pysyvää ajankohtaisuutta kuvaa hyvin
+The Economist - lehden artikkeli Saksojen yhdistymisen 30-vuotispäivänä
+(3.10.2020, “A report…reveals the interplay between policy and attitudes that
+influences the decision to work.”).
+Artikkeli on maksumuurin takana mutta tutkimus on vapaasti
+luettavissa (DIW Weekly Report 38 / 2020, S. 403-410)
+(<a href="https://www.diw.de/de/diw_01.c.799302.de/publikationen/weekly_reports/2020_38_1/mothers_in_eastern_and_western_germany__employment_rates_and_attitudes_are_converging__full-time_employment_is_not.html" class="uri">https://www.diw.de/de/diw_01.c.799302.de/publikationen/weekly_reports/2020_38_1/mothers_in_eastern_and_western_germany__employment_rates_and_attitudes_are_converging__full-time_employment_is_not.html</a>)</p>
+<p>Taulukon <a href="data.html#tab:vartable1">2.2</a> kysymysten lyhyet versiot ovat datassa mukana.
 Sarakkeessa “muuttuja” on alkuperäisen aineiston muuttujanimi,
-kysymyksen tunnus on valittuun dataan luotu muuttujanimi. Auttaa vertailemaan tätä
-tutkielmaa moniin ISSP-datalla tehtyihin analyyseihin.</p>
+kysymyksen tunnus on valittuun dataan luotu muuttujanimi. Vertailu muihin samalla
+aineistoilla tehtyihin tutkimuksiin on helpompaa.</p>
 <table>
 <caption><span id="tab:vartable1">Taulukko 2.2: </span>ISSP2012:Työelämä ja perhearvot - kysymykset</caption>
 <colgroup>
@@ -407,7 +383,6 @@ tutkielmaa moniin ISSP-datalla tehtyihin analyyseihin.</p>
 </tbody>
 </table>
 <p><strong>k</strong> Kyselylomakkeilla kysymykset olivat hieman pidempiä, kuvassa <a href="data.html#fig:suom-kys">2.1</a> osa suomenkielistä lomaketta.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="data.html#cb1-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/substvar_fi_Q1Q2.png&#39;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:suom-kys"></span>
 <img src="img/substvar_fi_Q1Q2.png" alt="Suomenkielinen lomake" width="50%" />
 <p class="caption">
@@ -415,30 +390,41 @@ Kuva 2.1: Suomenkielinen lomake
 </p>
 </div>
 <p><strong>taustamuuttujat</strong></p>
-<p><strong>k</strong> maa, sukupuoli, haastateltavan ikä, koulutustaso, “virallinen” juridinen
-parisuhdestatus, pääasiallinen toimi (töissä, eläkkeellä jne), lasten lukumäärä
-perheessä ja asuinpaikka (maaseutu,suurkaupunki jne.), oma arvio sosiaalisesta
-asemasta (1-10). Kysymyksiä, tiedot tosin kerätty eri tavoin eri maissa.</p>
-<p>Vastaajan ikä</p>
-<p><strong>K</strong> Aineistossa mukana puuttuvat vastaukset, puuttuvia ei ole kolmessa muuttujassa
-(maa, ikä ja sukupuoli). Muutamilla havainnoilla puuttui tieto iästä tai sukupuolesta,
-ja ne rajattiin pois.</p>
-<p>Kuvataan tarkemmin, kun käytetään luvussa 7.</p>
-<p><strong>Miten aineistoa on käytetty?</strong>.</p>
-<p><strong>Korrespondenssianalyysin esimerkkiaineistona</strong></p>
-<p><strong>edit 8.11.20</strong> Nämä sitaatit kuuluvat muualle, viitteet voivat olla. Näitä
-viitteitä vähän liian monessa paikassa!</p>
-<p>Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa
-(Helsinki 2017 MCA, viite Moodleen?) ja kahdessa oppikirjassa
-(<span class="citation">(Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span>, <span class="citation">(M. J. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>).
+<p>Valitsin myös joukon taustamuuttujia, joista monissa monet on kerätty haastattelulla.
+Tiedonkeruu, otantamenetelmät ja yksikkövastauskadon huomioiminen on tehty joka
+maassa omalla tavallaan. Aineistossa on mukana painot joilla tulokset voidaan
+korottaa perusjoukon tasolle, mutta kansainvälisiä vertailupainoja ei syystä tai
+toisesta ole. Taustamuuttujat kuten koulutustaso on harmonisoitu vertailukelpoisiksi.
+Tutkimuksen kohdeperusjoukko on 18-vuotiaat tai sitä vanhemmat,
+poikkeuksina Suomi (15 - 74 vuotiaat), Islanti, Japani, Etelä-Afrikka ja Venezuela.</p>
+<p>Jos ohitetaan pienet erot kysymyksissä ja vastausvaihtoehdoissa jäljelle jää
+erävastauskato, kyselytutkimusten ominaisuus. Jostain syystä joihinkin kysymyksiin
+ei vastata. Esimerkiksi Ranskassa yli 20 prosenttia kieltäytyi vastaamasta lasten
+(HHCHILDR) lukumäärää kysyttäessä, ja aika moni myös muissa perherakenteeseen
+liittyvissä kysymyksissä. Tässä tutkielmassa monimuuttujakorrespondenssianalyysiä
+käytetään tämän ongelman tai datan ominaisuuden analyysiin.</p>
+<p>Poistin aineistosta havainnot, jos tieto iästä tai sukupuolesta puuttuu
+(32969-32823 = 146 havaintoa).</p>
+<p>Aineiston luokittelu- ja järjestysasteikon muuttujat muunnetaan R-ohjelmiston
+factor-tietotyypiksi. Teen muunnokset useammassa vaiheessa heti kun data on
+luettu SPSS-tiedosta. Käsittelyssä koitan noudattaa helposti toistettavan
+tutkimuksen periaatteita (McNamara ja Horton <span class="citation">(McNamara ja Horton <a href="lähteet.html#ref-RefWorks:doc:5c3759c2e4b0085b307c82b5" role="doc-biblioref">2018</a>)</span> ),
+koodi ei saisi olla kovin virhealtista (”haurasta”) ja tarkistuksia tehdään
+paljon. Data-analyysin ja ehkä erityisesti korrespondenssianalyysin idea on
+kuitenkin operoida matriiseilla, lisätä ja poistaa rivejä ja sarakkeita ja
+rakennella mutkikkaampia matriiseja yksinkertaisemmista.
+Analyysivaiheessa koodi muuttuu hauraammaksi.</p>
+<p><strong>Aineiston ja korrespondenssianalyysi</strong></p>
+<p>Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa kuten
+Helsingissä 2017<span class="citation">(M. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca" role="doc-biblioref">2017</a>)</span> ja ainakin kahdessa
+oppikirjassaan(<span class="citation">(Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span>,
+<span class="citation">(M. J. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>).
 ISSP - aineisto vuodelta 1989 on käytetty myös neljän “singuaariarvohajoitelmaan
-perustuvan menetelmän” vertailuun<span class="citation">(Greenacre <a href="lähteet.html#ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76" role="doc-biblioref">2003</a>)</span>.</p>
-<p>Blasius ja Thiessen (<span class="citation">(Blasius ja Thiessen <a href="lähteet.html#ref-RefWorks:doc:5b15542ee4b0e2616bc42dca" role="doc-biblioref">2006</a>)</span>) arvioivat aineiston
-laatua ja ja maiden vertailtavuutta vuoden 1994 aineistolla.
-This paper provides empirically-based criteria for selecting Items and countries
-to develop measures of an underlying construct of interest that are comparable in
-cross-national research.</p>
-<p><strong>tärkeä rajaus</strong> Substanssitutkimusta ei tässä käsitellä. Siksi muutama esimerkki.</p>
+perustuvan menetelmän” vertailuun<span class="citation">(Greenacre <a href="lähteet.html#ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76" role="doc-biblioref">2003</a>)</span>. Blasius
+ja Thiessen (<span class="citation">(Blasius ja Thiessen <a href="lähteet.html#ref-RefWorks:doc:5b15542ee4b0e2616bc42dca" role="doc-biblioref">2006</a>)</span>) arvioivat aineiston laatua
+ja ja maiden vertailtavuutta vuoden 1994 aineistolla.</p>
+<p>Substanssitutkimusta en käsittele, näiden esimerkkien lisäksi ISSP:n ja
+GESIS-instituutin www-palveluista löytyy paljon muitankin.</p>
 <p>Sukupuoliroolien (gender roles) ja niihin liittyvien asenteiden vertailevaa
 kansainvälistä (cross-cultural) tutkimusta on tehty paljon. Tutkimusongelman
 sisällöllisten ja teoreettisen kysymysten nykytilaa kuvaa tuore artikkeli
@@ -449,7 +435,6 @@ työllisyyspolitiikka ja menetelmänä monimuuttuja-korrespondenssianalyysi (MCA
 Havaituille kehityssuunnille etsitään toisessa vaiheessa selityksiä. Aineistona
 on viisi kansainväliseen vertailuun soveltuvaa aineistoa, yhtenä niistä ISSP:n
 data kolmelta kierrokselta (1988,1994,2002).</p>
-<p><strong>edit</strong> Ehkä MCA-lukuun?</p>
 
 </div>
 </div>

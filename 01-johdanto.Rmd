@@ -3,23 +3,27 @@
 **edit** Kirjoitetaan disposition pohjalta, keräillään kaikki yleiset
 ca-luonnehdinnat yhteen paikkaan eli johdantoon.
 
-**Mahdollisia lisäyksiä**
+
+**johdannon ydinsisältö**
+
+**1**. CA:n periaatteet voi esitellä yksinkertaisen kahden luokittelumuuttujan
+taulukon analyysin avulla. Kun taulukko on pieni, on helppo vertailla CA:n
+karttoja dataan. Yksinkertainen kahden luokittelumuuttujan
+korrespondenssianalyysi antaa graafisen analyysin "...perussäännöt
+tulkinnalle. Kaikki muut korrespondenssianalyysin muodot ovat saman algoritmin
+soveltamista toisen tyyppiisiin datamatriiseihin, ja tulkintaa sovelletaan vastaavasti
+".([@RefWorks:doc:5a857a44e4b0ed2d44664d84] s. 437). Tämä Greenacren ja Hastien artikkelissaan
+esittämä periaate helpottaa huomattavasti juuri graafisen data-analyysin
+eli korrespondenssianalyysin karttojen tulkinnan perussääntöjen oivaltamista. Juuri kartat,
+samassa kuvassa esitettävät havainnot ja muuttujat ovat CA:n tärkein menetelmä, mutta ei
+aivan helppo.
+
+**2**. CA on kuitenkin vahvimmillaan isojen ja monimutkaisten aineistojen analyysissä.
+Siksi ns. monimuuttujakorrespondenssianalyysin lyhyessä esittelyssä aineistoa
+laajennetaan, sillä "on erittäin vaikeaa osoittaa kotiakvaarioissa, että verkko on
+tehokas"([@RefWorks:doc:5a857a43e4b0ed2d44664d75], s.15).
 
 
-1. Tavoitteet, sisältö, rajaukset (jota voi myöhemmin täydentää)
-
-2. Muutamat puutteet/rajaukset, onko kerrottava tässä?
-
-- data: ei huomioida sitä, että otoskoot vaihtelevat aika paljon eli
-"maapainot" eri suuruisia
-
-- ei huomioida muitakaan otantaan liittyviä asioita (tämä ainakin
-mainittava data-osuudessa)
-
-- kuvaileva menetelmä, mutta mikä on tutkimusongelma? Sellainen pitäisi olla.
-
-**zxy* Mitä on korrespondenssianalyysi? Muutamalla kappaleella. Yksi kappale
-historiasta.
 
 
 ## Tutkielman tavoite
@@ -34,19 +38,16 @@ Ehkä ei, koska sen pohdinta ei ole pääasia. Se tietysti mainitaan, ja asiaa p
 **ks** Esitellään korrespondenssianalyysin käsitteet ja graafisen analyysin
 periaatteet.
 
-**zxy** -mitä ca on?
+**k** -mitä ca on?
 - dimensioiden vähentäminen ja visualisointi
-- mihin dataan se soveltuu
+
+- mihin dataan se soveltuu: kahden luokittemuuttujan taulukon lukumäärädata (count data)
+tai suhdeasteikon muuttujia samassa mittayksikössä (esim. euroissa).
+
 - määrittele graafinen, deskriptiivinen, eksploratiivinen data-analyysi
 - yksinkertainen ca, useamman muuttujan ca
 
 
-**ks** Tämän voi tehdä yksinkertaisen korrespondenssianalyysin avulla. Yksinkertainen
-kahden luokittelumuuttujan korrespondenssianalyysi antaa graafisen analyysin
-"...perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin muodot ovat
-saman algoritmin soveltamista toisen tyyppiisiin datamatriiseihin, ja tulkintaa
-sovelletaan vastaavasti (with the consequent adaptation of the interpretation)"
-[@RefWorks:doc:5a857a44e4b0ed2d44664d84 , s. 437] .
 
 **zxy** Miksi eksporatiivinen (määrittele!) ja deskriptiivinen (määrittele!)
 menetelmä on esitettävä "in vivo", toiminnassa? Oppikirjoissa (viitteitä)
