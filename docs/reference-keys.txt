@@ -61,7 +61,7 @@ fig:L3bdprocess1
 johdanto
 tutkielman-tavoite
 tärkeimmät-lähteet-ja-ohjelmistot
-lähteet
+tärkeimät-ähteet
 käytetyt-ohjelmistot
 korrespondenssianalyysin-historiaa
 data
@@ -92,6 +92,3 @@ matched-matrices
 mca---monimuuttujakorrespondenssianalyysi
 yhteenveto
 korrespondenssianalyysin-perusyhtälöt-ja-kaavat
-suomenkielinen-lomake-esimerkki
-tekninen-ympäristö-ja-bookdown-paketti
-r---koodi

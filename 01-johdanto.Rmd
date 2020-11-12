@@ -76,15 +76,18 @@ perusteet tuntevalle. R-ohjelmisto ei ole rajoitus, SPSS ja SAS sopivat
 **zxy** Tarvitaanko tämä, perustelu? Muutamat lähteet aivan keskeisiä, ja MG:n
 kurssi pitää mainita.
 
-### Lähteet
+### Tärkeimät ähteet
 
 Michael Greenacre luennoi lyhyen kurssin korrespondenssianalyysistä Helsingin
 yliopistossa keväällä 2017[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca]. Luennot ja
 laskuharjoitukset perehdyttivät minut ensimmäistä kertaa tähän menetelmään, ja
-kurssin materiaaleihin olen usein palannut. Niihin voi tutustua
-[Moodle-palvelussa] (https://moodle.helsinki.fi) (käyttäjätunnus vaaditaan).
-Greenacren kärsivällisesti kirjoitetut perusoppikirjat ovat tehneet menetelmää
-laajasti tunnetuksi englantia lukeville.
+kurssin materiaaleihin olen usein palannut.
+Michael Greenacren kärsivällisesti kirjoitettu "Correrspondence Analysis in
+Practice" (jatkossa "CAiP") [@RefWorks:doc:5a857a43e4b0ed2d44664d78] ja sen
+aikasemmat versiot ovat tehneet menetelmää laajasti tunnetuksi."Biplots in Practice"
+(jatkossa "Biplots") [@RefWorks:doc:5a857a43e4b0ed2d44664d7c] esittää menetelman
+osana yleisempää kaksoiskuvien ideaa. 
+
 
 Ranskalaisen lähestymistan perusoppikirja[@RefWorks:doc:5a857a43e4b0ed2d44664d75] (GDA-kirja?)
 esittelee menetelmän matemaattiset perusteet.
@@ -92,11 +95,6 @@ Lyhyt historiallinen katsaus ja menetelmä soveltamisen perusajatusten esittely
 valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita.
 Kirjoittajat esittelevät perusteellisesti joitain empiirisiä tutkimuksia, ja
 lyhyt mutta naseva matriisilaskennan kritiikki on hyvä panna merkille.
-
-Korrespondenssianalyysi tuli osaksi suomalaista Survo-ohjelmistoa jo vuonna (**????**),
-ja menetelmää on esitelty ainakin kahdessa oppikirjassa[@RefWorks:doc:5a857a44e4b0ed2d44664d95]
-ja [@RefWorks:doc:5a857a44e4b0ed2d44664da4].
-
 
 
 ### Käytetyt ohjelmistot

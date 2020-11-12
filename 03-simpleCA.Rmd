@@ -675,3 +675,5 @@ Yksinkertaisen korrespondenssianalyysin peruskuva on symmetrinen kartta. Ehkä
 yllättäen sen "tulkinta on edelleen menetelmän kaikkein kiistanalaisin aspekti.”
 [@RefWorks:doc:5a857a43e4b0ed2d44664d78] (s.295),[@RefWorks:doc:5c768b09e4b02df9431e950a].
 vrt. myös, Johdanto, SPSS - kritiikki.
+
+**k** Miksi symmetrinen kartta on paras oletus?

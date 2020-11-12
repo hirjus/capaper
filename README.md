@@ -148,5 +148,8 @@ muutama tekstipätkä.
 maltillisesti kappalekuvauksia (**k**), lisäilty viitteitä hiotavaksi.
 
 **9.11.2020** Muutama viite lisää. Taulukko ISSP-dokumenteista, muutama viite.
+
 **11.11.2020** Teorialiitteeseen yksi kuva, yksi kartta lisää johdattelevan
  esimerkin massa-lukuun. Pieni tekstimuutoksia ja lisäyksiä, viitteitä lisää.
+ 
+ **12.11.2020** Viitetietoja, pientä editointia.

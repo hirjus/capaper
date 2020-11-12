@@ -11,11 +11,11 @@ kartan avulla perustellaan, miten pisteitä voidaaan lisätä.
 
 ## Täydentävät pisteet
 
+**edit** Tiivisti tärkeimmät käyttötapaukset. CA:n peruskäsitteet ja numeeriset
+tulokset selitetty edellä.
+
 **ks** Passiiviset pisteet ja niiden käyttötarkoitukset
 
-
-
-**edit** Tiivisti tärkeimmät käyttötapaukset
 
 
 ## Saksan ja Belgian alueet
@@ -120,7 +120,7 @@ Yleiskuvaan riittävä, ei kovin selkeä yksityiskohdissa. Motivaatio seuraavall
 jaksolle.Skaalataan asymmetrisen kuvan sarakevektoreita (jotka standardikoordinaateissa)
 hieman lähemmäs origoa.
 
-**k** Kaukana on kaukana, mutta lähellä voi olla myös kaukana.
+**k** Kaukana on kaukana, mutta lähellä voi olla myös kaukana. 
 
 ## CA:n numeeriset tulokset
 

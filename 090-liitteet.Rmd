@@ -1,6 +1,7 @@
 # Liitteet {-}
 
-## Korrespondenssianalyysin teoriaa {-}
+
+## Liite 1: Korrespondenssianalyysin teoriaa {-}
 
 ### Korrespondenssianalyysin perusyhtälöt ja kaavat
 
@@ -215,7 +216,6 @@ numeerisissa tuloksissa. Kuvasta voi myös hahmottaa sen periaatteen, että proj
 
 
 ### Matriisit ja niiden havainnollistaminen {-}
-
 **edit** Nämä tässä varalla, jos matriisikaavoja tarvitaan lisää. Ehkä ei?
 
 
@@ -295,7 +295,7 @@ kysymyksen vastaukset laajentamalla kahden päällekkäisen matriisin taulukkoa 
 
 
 
-## Suomenkielinen lomake (esimerkki)
+## Liite 2: Suomenkielinen lomake (esimerkki) {-}
 
 Tämä kuva on myös tekstissä, kätevä tapa esittää siististi kysymysten pitkät
 versiot.
@@ -305,7 +305,7 @@ knitr::include_graphics('img/substvar_fi_Q1Q2.png')
 ```
 
 
-## Tekninen ympäristö ja Bookdown-paketti
+## Liite 3: Tekninen ympäristö ja Bookdown-paketti {-}
 
 Muokataan tiiviimpi pätkä esimerkkireposta bookdown-testi1. Tämä kuva kertoo vain
 julkaisutekniikan ympäristön.
@@ -320,7 +320,7 @@ knitr::include_graphics('img/BookdownProc.png')
 
 
 
-## R - koodi
+## Liite 4: R - koodi {-}
 
 
 
