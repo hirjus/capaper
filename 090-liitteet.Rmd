@@ -55,12 +55,13 @@ Residuaalimatriisi voidaan esittää myös ns. kontingenssi-suhdelukujen
 \end{equation}
 
 Toinen esitystapa on hyödyllinen, kun tarkastellaan CA:n yhteyksiä muihin
-läheisiin menetelmiin (log ratio analysis of compositional data, moniulotteinen
-skaalaus (?), lineaarinen diskriminanttianalyysi, kanoninen korrelaatioanalyysi,
-pääkomponettianalyysi, kaksoiskuvat, yleensä SVD-hajoitelmaan perustuvat
-dimensioden vähentämisen menetelmät).
+läheisiin menetelmiin. Näitä menetelmiä kuten myös korrespondenssianalyysiä kutsutaan monilla
+nimillä:"suhteellisten osuuksien datan" analyysi (log ratio analysis of compositiona data),
+moniulotteinen skaalaus, lineaarinen diskriminanttianalyysi, kanoninen korrelaatioanalyysi,
+pääkomponettianalyysi, kaksoiskuvat ja muutä SVD-hajoitelmaan perustuvat dimensioden
+vähentämisen menetelmät.
 
-Samat kaavat alkiomuodossa.
+Samat kaavat voi esittää myös alkiomuodossa:
 
 
 \begin{equation}
@@ -74,7 +75,10 @@ s_{ij} = \sqrt{r_{i}} \left( \frac{p_{ij}}{r_{i}c_{j}} \right) \sqrt{c_{j}} \;\;
 (\#eq:contrat21)
 \end{equation}
 
-Mitäköhän tuosta pitäisi nähdä? Selitykset löytyvät em. teorialiitteestä.
+Alkimuodosasa esitetyistä  kaavoista näkee intuitivisesti rivi- ja sarakeratkaisujen sidoksen.
+Ratkaisujen duaalisuus on teoreettinen tulos, jonka voi perustella täsmällisesti
+algebrallisen geometrian avulla. Käytännössä rivi- ja sarekeongelman duaalisuus tarkoittaa sitä,
+että vain toinen ongelma on ratkaistava.
 
 Singulaariarvohajoitelma (singular value decomposition, SVD) matriisille $\boldsymbol{S}$ on
 
@@ -204,20 +208,35 @@ yhteyden pitäisi olla selkeä.
 
 **Pisteet ja projektio aliavaruuteen**
 
-Kuva MG:n kurssimateriaaleista[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca].
+Kuva on kurssimateriaaleista[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca].
 
 ```{r projectionimg1, out.width='70%', fig.align='center',fig.cap='Pisteen projektio aliavaruuteen'}
 knitr::include_graphics('img/CAquality.png')
 
 
 ```
-Kuvassa on esitetty korrespondenssianalyysin ratkaisun minimointiongelma. Pisteen projektio on sitä parempi mitä pienempi kulma on sentroidista pisteeseen piirtetyn janan ja pisteen projektion välillä. COR - tunnusluku ca-funktion
-numeerisissa tuloksissa. Kuvasta voi myös hahmottaa sen periaatteen, että projektiossa kaukana olevat pisteet ovat kaukana myös alkuperäisessä avaruudessa. Projektiossa lähekkäin olevat pisteet voivat olla kaukana toisistaan, mutta jos niiden projektion laatu on huono ne voivat olla alkuperäisessä avaruudessa etäällä toisistaan.
+Kuvassa on esitetty korrespondenssianalyysin ratkaisun minimointiongelma. Pisteen
+projektio on sitä parempi mitä pienempi kulma on sentroidista pisteeseen
+piirtetyn janan ja pisteen projektion välillä. COR - tunnusluku ca-funktion
+numeerisissa tuloksissa tämän kulman kosinin neliö. Pisteen kuvauksen laatu (qlt)
+ca-tuloksissa on valitun approsimaation akseleiden kvaliteettien (COR) summa.
+
+Kuvasta voi myös hahmottaa sen periaatteen, että projektiossa kaukana olevat
+pisteet ovat kaukana myös alkuperäisessä avaruudessa. Projektiossa lähekkäin
+olevat pisteet voivat olla alkuperäisessä avaruudessa kaukana toisistaan,
+jos niiden projektion laatu on huono.
+
+
+
 
 
 ### Matriisit ja niiden havainnollistaminen {-}
 **edit** Nämä tässä varalla, jos matriisikaavoja tarvitaan lisää. Ehkä ei?
 
+Korrespondenssianalyysin sovelluksissa tutkimusongelman ratkaisu on usein sopivan
+matriisin rakentaminen.
+
+**edit: kaavaesimerkkejä**
 
 \begin{equation}
 A = \begin{bmatrix}
@@ -238,7 +257,6 @@ A = \begin{bmatrix}
     \end{bmatrix}
 \end{equation}
 
-Pinottujen ja konkatenoitujen matriisien havainnollistaminen?
 
 \begin{equation}
 A = \begin{bmatrix}
@@ -248,18 +266,9 @@ A = \begin{bmatrix}
 \end{equation}
 
 
-Yksinkertainen korrespondenssianalyysi on kahden luokittelumuuttujan määrittelmän
-frekvenssitaulukon analyysiä. Taulukon rivit ovat havaintoyksiköiden (individuals,
-havaintoyksikkö) aggregoituja summia, sarakkeet muuttujia.
 
-Analyysissä osa riveistä tai sarakkeista voidaan jättää pois ratkaisun
-laskennasta ns. passiviisiksi, ja esittää kartalla täydentävinä pisteinä
-(supplementary points). Ne eivät vaikuta ratkaisuun, eli teknisesti niiden massa
-on nolla, mutta pisteiden esityksen (projektion) tarkkuus voidaan arvioida.
-Täydentävien profiilien on kuintenkin oltava yhteismitallisia taulukon datan
-kanssa. Mikä tahansa ei käy (kts. CAinP, vast.luku).
+**Pinotut tai yhdistetyt matriisit ("stacked and concatenated matrices")**
 
-Pinotut tai yhdistetyt matriisit (``stacked matrices'').
 Yksinkertainen korrespondenssianalyysi on kahden luokittelumuuttujan määrittämän
 taulukon analyysiä, mutta sitä voi soveltaa myös usean muuttujan analyysiin.
 Menetelmän matemaattinen perusta ja ratkaisualgoritmi (SVD) toimivat, tulkinta
@@ -268,7 +277,11 @@ vain muuttuu.
 Yksinkertaisin laajennus on lisätä alkuperäisen taulukon alle toinen taulukko.
 Rivit ovat esimerkissä maittan summattuja vastauksia, ja niiden alle voidaan
 lisätä joku toinen luokittelumuuttuja. Havaintojen määrä yhditetyssä ("pinotussa")
-taulussa kaksinkertaistuu. Miksi tämä ei ei vaikuta tuloksiin vääristävästi??
+taulussa kaksinkertaistuu.
+
+Taulukoiden yhdistämisen idea on inertian dekomponointi. Yhdistetyn matriisin inertia
+voidaan eri tavoin esittää alimatriisien inertian summana. Tällöin jokaisen alimatriisin
+reunajakauman tulee olla sama, ja puuttuvat tiedot vääristävät tuloksia.
 
 Merkitään edellisten analyysien kuuden maan ja viiden vastausvaihtoehdon
 taulukkoa matriisilla $\boldsymbol{ A}_{I  J}$, missä $I$ on rivien ja $J$
@@ -290,6 +303,35 @@ ABBA on erityistapaus yleisemmästä moniulotteisen taulukon (multiway table) an
 jossa useita kahden muuttujan taulukoita ``pinotaan'' päällekkäin ja rinnakkain.
 Voimme ottaa yhden kysymyksen vastausten lisäksi analyysiin mukaan useamman
 kysymyksen vastaukset laajentamalla kahden päällekkäisen matriisin taulukkoa oikealle.
+
+**Monimuuttuja-korrespondenssianalyysi MCA**
+
+Usean muuttujan korrespondenssianalyysissä tutkitaan usean muuttujan välisiä yhteyksiä.
+Kartan tulkinnan apuna siihen voidaan lisätä havaintojen sijaan niiden keskiarvopisteitä
+ja niille simuloituja luottamusellipsejä. Kuvien pääongelma on liian suuri määärä pisteitä,
+ja analyysin lopputulos on usein mahdollisimman yksinkertainen kartta.
+
+Usean muuttujan analyysissä kohteena on joko indikaattorimatriisi $\boldsymbol{Z}$ tai
+Burtin matriisi $\boldsymbol{B}$
+
+Indikaattorimatriisissa rivit ovat havaintoja ja sarakkeet luokittelumuuttujan arvoja.
+Havaintoa vastaa rivi nollia ja arvo 1 valitun vastausvaihtoehdon kohdalla. Tästä seuraa,
+että vain erilaiset vastaukset määrittävät rivien etäisyyksiä.
+
+Burtin matriisi on erikoistapaus yhdistetyistä matriiseista. Siihen on koottu kaikki tutkittavien
+muuttujien pareittan muodostetut taulukot. Diagonaalilla ovat muuttujien ristiintaulukoinnit
+itsensä kanssa. Ratkaisu riippuu vain näistä parittaisista taulukoista.
+
+Burtin matriisi on kätevä välivaihe matriisien yhdistelyssä.
+
+Molemmat matriisit paisuttavat keinotekoisesti kokonaisinertiaa, ja esimerkikisi kaksiulotteisen kartan
+selitetyn inertian osuudet jäävät melko pieniksi. Ratkaisuna on inertian oikaisu tai korjaus
+(adjusted inertia), jossa mm. poistetaan kokonaisinertialaskelmista Burtin matriisin
+diagonaalilla olevat alimatriisit. Näillä korjauksilla ei ole vaikutusta kartan pisteiden
+sijaintiin. Tämä menetelmä on ca-paketin mjca-funktion oletus.
+
+Kolmas vaihtoehto on ns. yhdistetty korrespondenssianalyysi (joint ca).
+
 
 
 

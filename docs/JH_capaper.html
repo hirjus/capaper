@@ -142,10 +142,7 @@ img {
 <li><a href="#alkutoimia">Alkutoimia</a></li>
 <li class="has-sub"><a href="#johdanto"><span class="toc-section-number">1</span> Johdanto</a><ul>
 <li><a href="#tutkielman-tavoite"><span class="toc-section-number">1.1</span> Tutkielman tavoite</a></li>
-<li class="has-sub"><a href="#tärkeimmät-lähteet-ja-ohjelmistot"><span class="toc-section-number">1.2</span> Tärkeimmät lähteet ja ohjelmistot</a><ul>
-<li><a href="#tärkeimät-ähteet"><span class="toc-section-number">1.2.1</span> Tärkeimät ähteet</a></li>
-<li><a href="#käytetyt-ohjelmistot"><span class="toc-section-number">1.2.2</span> Käytetyt ohjelmistot</a></li>
-</ul></li>
+<li><a href="#tärkeimmät-lähteet-ja-ohjelmistot"><span class="toc-section-number">1.2</span> Tärkeimmät lähteet ja ohjelmistot</a></li>
 <li><a href="#korrespondenssianalyysin-historiaa"><span class="toc-section-number">1.3</span> Korrespondenssianalyysin historiaa</a></li>
 </ul></li>
 <li class="has-sub"><a href="#data"><span class="toc-section-number">2</span> Data</a><ul>
@@ -289,10 +286,6 @@ perusteet tuntevalle. R-ohjelmisto ei ole rajoitus, SPSS ja SAS sopivat
 </div>
 <div id="tärkeimmät-lähteet-ja-ohjelmistot" class="section level2">
 <h2><span class="header-section-number">1.2</span> Tärkeimmät lähteet ja ohjelmistot</h2>
-<p><strong>zxy</strong> Tarvitaanko tämä, perustelu? Muutamat lähteet aivan keskeisiä, ja MG:n
-kurssi pitää mainita.</p>
-<div id="tärkeimät-ähteet" class="section level3">
-<h3><span class="header-section-number">1.2.1</span> Tärkeimät ähteet</h3>
 <p>Michael Greenacre luennoi lyhyen kurssin korrespondenssianalyysistä Helsingin
 yliopistossa keväällä 2017<span class="citation">(M. Greenacre <a href="#ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca" role="doc-biblioref">2017</a>)</span>. Luennot ja
 laskuharjoitukset perehdyttivät minut ensimmäistä kertaa tähän menetelmään, ja
@@ -308,9 +301,6 @@ Lyhyt historiallinen katsaus ja menetelmä soveltamisen perusajatusten esittely
 valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita.
 Kirjoittajat esittelevät perusteellisesti joitain empiirisiä tutkimuksia, ja
 lyhyt mutta naseva matriisilaskennan kritiikki on hyvä panna merkille.</p>
-</div>
-<div id="käytetyt-ohjelmistot" class="section level3">
-<h3><span class="header-section-number">1.2.2</span> Käytetyt ohjelmistot</h3>
 <p><strong>edit</strong> Hyvin lyhyesti, lause tai pari. On oma liite tekneisestä ympäristöstä.</p>
 <p><strong>zxy</strong> R, ca-paketti. löytyy myös muita paketteja.
 Rmarkdown<span class="citation">(Yihui Xie <a href="#ref-RefWorks:doc:5b6b346fe4b0c619b11b8a3e" role="doc-biblioref">2018</a>)</span>, ja
@@ -324,7 +314,6 @@ R-ohjelmistoon.</li>
 <li>R, LaTeX, pandoc - versiot dokumentoidaan</li>
 </ol>
 <p>Tarkemmin liittessä.</p>
-</div>
 </div>
 <div id="korrespondenssianalyysin-historiaa" class="section level2">
 <h2><span class="header-section-number">1.3</span> Korrespondenssianalyysin historiaa</h2>
@@ -879,13 +868,16 @@ Kuva 3.2: Q1b: riviprofiilit ja keskiarvorivi
 </p>
 </div>
 <p>Mikä on rivien ja sarakkeiden suhde?</p>
-<p><strong>edit</strong> Tässä esitellään ovelasti CA:n tripletti (massat, profiilit, khii2-etäisyys). Pitääkö lisätä
-riippumattomuushypoteesin mukainen odotettu solufrekvenssi reunajakaumien tulona?</p>
+<p><strong>edit</strong> Tässä esitellään ovelasti CA:n tripletti (massat, profiilit,
+khii2-etäisyys). Niihin liittyy myös “kvartetti”, josta tässä esitellään inertia.</p>
 <p>Tähän klassiseen kysymykseen korrespondenssianalyysi tarjoaa oman ratkaisunsa.
-Siinä rivit ja sarakkeet esitetään samassa kuvassa, ja riippuutta tutkitaan tulkitsemalla tämä kuva tai “kartta”.</p>
+Siinä rivit ja sarakkeet esitetään samassa kuvassa, ja riippuutta tutkitaan
+tulkitsemalla tämä kuva tai “kartta”.</p>
 <p>Kahden luokittelumuuttujan riippuvuutta voidaan testata <span class="math inline">\(\chi^{2}\)</span> - testillä.
-Testisuure saadaan laskemalla yhten jokaisen solun havaittujen ja odotetettujen
-(riippumattomuushypoteesi) frekvenssien erotukset muodossa</p>
+Riippumattomuushypoteesin mukainen odotettu solufrekvenssi on taulukon
+<a href="#tab:simpeCA-frekTa1">3.1</a> reunajakaumien alkioiden tulo.</p>
+<p>Testisuure saadaan laskemalla yhten jokaisen solun havaittujen ja odotetettujen
+frekvenssien erotukset muodossa</p>
 <p><span class="math display" id="eq:khii21">\[\begin{equation}
   \chi^{2} = \frac{(havaittu - odotettu)^2} {odotettu}
     \tag{3.1}
@@ -971,6 +963,9 @@ inertiakontribuutiot</li>
 </div>
 <div id="korrespondenssianalyysin-peruskäsitteet" class="section level2">
 <h2><span class="header-section-number">3.4</span> Korrespondenssianalyysin peruskäsitteet</h2>
+<p>huom: riippumattomuushypoteesin oletukset eivät välttämättä ole voimassa
+kaikissa aineistoissa. Khii2-etäisyysmittaa käytetään silti, sen perustelu on
+paljon yleisempi,</p>
 <p><strong>ks</strong> Mitä käsitteitä tässä esitellään? Viittaukset teorialiitteeseen, ja
 tulkinnan hankaluudet (MG “loose ends” - paperi) käsitellään siellä.</p>
 <p><strong>edit</strong> Sulava kuvaus tulkinnasta, painotus kuvien tulkinnassa. CA:n numeeriset
@@ -1020,7 +1015,7 @@ Kuva 3.6: Q1b: lapsi kärsii jos äiti on töissä
 <p>Rivi- ja sarakesymbolien koko on suhteessa pisteen massaan, mutta eroja ei tässä
 kovin selkeästi näe.Suhteellisen värisävyn erot näyttävät absoluuttisten
 kontribuutioiden erot selkeästi.</p>
-<p><strong>Suhteelliset kontribuutiot</strong> Oletuspistekoko ok.</p>
+<p><strong>Suhteelliset kontribuutiot</strong></p>
 <div class="figure" style="text-align: center"><span id="fig:G1-3asymmContrib2"></span>
 <img src="JH_capaper_files/figure-html/G1-3asymmContrib2-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
 <p class="caption">
@@ -2293,11 +2288,12 @@ sitä sovelletaan standardoituun residuaalimatriisiin <span class="math inline">
 \tag{8.3}
 \end{equation}\]</span></p>
 <p>Toinen esitystapa on hyödyllinen, kun tarkastellaan CA:n yhteyksiä muihin
-läheisiin menetelmiin (log ratio analysis of compositional data, moniulotteinen
-skaalaus (?), lineaarinen diskriminanttianalyysi, kanoninen korrelaatioanalyysi,
-pääkomponettianalyysi, kaksoiskuvat, yleensä SVD-hajoitelmaan perustuvat
-dimensioden vähentämisen menetelmät).</p>
-<p>Samat kaavat alkiomuodossa.</p>
+läheisiin menetelmiin. Näitä menetelmiä kuten myös korrespondenssianalyysiä kutsutaan monilla
+nimillä:“suhteellisten osuuksien datan” analyysi (log ratio analysis of compositiona data),
+moniulotteinen skaalaus, lineaarinen diskriminanttianalyysi, kanoninen korrelaatioanalyysi,
+pääkomponettianalyysi, kaksoiskuvat ja muutä SVD-hajoitelmaan perustuvat dimensioden
+vähentämisen menetelmät.</p>
+<p>Samat kaavat voi esittää myös alkiomuodossa:</p>
 <p><span class="math display" id="eq:contrat11">\[\begin{equation}
 s_{ij} = \frac{p_{ij}-r_{i}c_{j}} { \sqrt{r_{i}c_{j} } }
 \tag{8.4}
@@ -2307,7 +2303,10 @@ s_{ij} = \frac{p_{ij}-r_{i}c_{j}} { \sqrt{r_{i}c_{j} } }
 s_{ij} = \sqrt{r_{i}} \left( \frac{p_{ij}}{r_{i}c_{j}} \right) \sqrt{c_{j}} \;\;\; .
 \tag{8.5}
 \end{equation}\]</span></p>
-<p>Mitäköhän tuosta pitäisi nähdä? Selitykset löytyvät em. teorialiitteestä.</p>
+<p>Alkimuodosasa esitetyistä kaavoista näkee intuitivisesti rivi- ja sarakeratkaisujen sidoksen.
+Ratkaisujen duaalisuus on teoreettinen tulos, jonka voi perustella täsmällisesti
+algebrallisen geometrian avulla. Käytännössä rivi- ja sarekeongelman duaalisuus tarkoittaa sitä,
+että vain toinen ongelma on ratkaistava.</p>
 <p>Singulaariarvohajoitelma (singular value decomposition, SVD) matriisille <span class="math inline">\(\boldsymbol{S}\)</span> on</p>
 <p><span class="math display" id="eq:svd2">\[\begin{equation}
 \boldsymbol{S} = \boldsymbol{U} \boldsymbol{D_{\alpha}} \boldsymbol{V}^{T}
@@ -2402,7 +2401,7 @@ yhdistää barisentrinen painotetun keskiarvon riippuvuus, mutta mukana ovat ska
 <p>Kokeillaan vielä kaavaviitteitä: kaavojen <a href="#eq:khii21">(3.1)</a> ja <a href="#eq:khii22">(3.2)</a>
 yhteyden pitäisi olla selkeä.</p>
 <p><strong>Pisteet ja projektio aliavaruuteen</strong></p>
-<p>Kuva MG:n kurssimateriaaleista<span class="citation">(M. Greenacre <a href="#ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca" role="doc-biblioref">2017</a>)</span>.</p>
+<p>Kuva on kurssimateriaaleista<span class="citation">(M. Greenacre <a href="#ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca" role="doc-biblioref">2017</a>)</span>.</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/CAquality.png&#39;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:projectionimg1"></span>
 <img src="img/CAquality.png" alt="Pisteen projektio aliavaruuteen" width="70%" />
@@ -2410,12 +2409,22 @@ yhteyden pitäisi olla selkeä.</p>
 Kuva 8.1: Pisteen projektio aliavaruuteen
 </p>
 </div>
-<p>Kuvassa on esitetty korrespondenssianalyysin ratkaisun minimointiongelma. Pisteen projektio on sitä parempi mitä pienempi kulma on sentroidista pisteeseen piirtetyn janan ja pisteen projektion välillä. COR - tunnusluku ca-funktion
-numeerisissa tuloksissa. Kuvasta voi myös hahmottaa sen periaatteen, että projektiossa kaukana olevat pisteet ovat kaukana myös alkuperäisessä avaruudessa. Projektiossa lähekkäin olevat pisteet voivat olla kaukana toisistaan, mutta jos niiden projektion laatu on huono ne voivat olla alkuperäisessä avaruudessa etäällä toisistaan.</p>
+<p>Kuvassa on esitetty korrespondenssianalyysin ratkaisun minimointiongelma. Pisteen
+projektio on sitä parempi mitä pienempi kulma on sentroidista pisteeseen
+piirtetyn janan ja pisteen projektion välillä. COR - tunnusluku ca-funktion
+numeerisissa tuloksissa tämän kulman kosinin neliö. Pisteen kuvauksen laatu (qlt)
+ca-tuloksissa on valitun approsimaation akseleiden kvaliteettien (COR) summa.</p>
+<p>Kuvasta voi myös hahmottaa sen periaatteen, että projektiossa kaukana olevat
+pisteet ovat kaukana myös alkuperäisessä avaruudessa. Projektiossa lähekkäin
+olevat pisteet voivat olla alkuperäisessä avaruudessa kaukana toisistaan,
+jos niiden projektion laatu on huono.</p>
 </div>
 <div id="matriisit-ja-niiden-havainnollistaminen" class="section level3 unnumbered">
 <h3>Matriisit ja niiden havainnollistaminen</h3>
 <p><strong>edit</strong> Nämä tässä varalla, jos matriisikaavoja tarvitaan lisää. Ehkä ei?</p>
+<p>Korrespondenssianalyysin sovelluksissa tutkimusongelman ratkaisu on usein sopivan
+matriisin rakentaminen.</p>
+<p><strong>edit: kaavaesimerkkejä</strong></p>
 <p><span class="math display">\[\begin{equation}
 A = \begin{bmatrix}
     a_{11} &amp; a_{12} &amp; \dots &amp; a_{1k}\\
@@ -2432,31 +2441,24 @@ A = \begin{bmatrix}
     B_{21} &amp; A_{22}
     \end{bmatrix}
 \end{equation}\]</span></p>
-<p>Pinottujen ja konkatenoitujen matriisien havainnollistaminen?</p>
 <p><span class="math display">\[\begin{equation}
 A = \begin{bmatrix}
     A_{maa, Q1a} &amp; A_{maa, Q1b}  \\
     B_{gage, Q1a} &amp; B_{gage, Q1b}
     \end{bmatrix}
 \end{equation}\]</span></p>
-<p>Yksinkertainen korrespondenssianalyysi on kahden luokittelumuuttujan määrittelmän
-frekvenssitaulukon analyysiä. Taulukon rivit ovat havaintoyksiköiden (individuals,
-havaintoyksikkö) aggregoituja summia, sarakkeet muuttujia.</p>
-<p>Analyysissä osa riveistä tai sarakkeista voidaan jättää pois ratkaisun
-laskennasta ns. passiviisiksi, ja esittää kartalla täydentävinä pisteinä
-(supplementary points). Ne eivät vaikuta ratkaisuun, eli teknisesti niiden massa
-on nolla, mutta pisteiden esityksen (projektion) tarkkuus voidaan arvioida.
-Täydentävien profiilien on kuintenkin oltava yhteismitallisia taulukon datan
-kanssa. Mikä tahansa ei käy (kts. CAinP, vast.luku).</p>
-<p>Pinotut tai yhdistetyt matriisit (``stacked matrices’’).
-Yksinkertainen korrespondenssianalyysi on kahden luokittelumuuttujan määrittämän
+<p><strong>Pinotut tai yhdistetyt matriisit (“stacked and concatenated matrices”)</strong></p>
+<p>Yksinkertainen korrespondenssianalyysi on kahden luokittelumuuttujan määrittämän
 taulukon analyysiä, mutta sitä voi soveltaa myös usean muuttujan analyysiin.
 Menetelmän matemaattinen perusta ja ratkaisualgoritmi (SVD) toimivat, tulkinta
 vain muuttuu.</p>
 <p>Yksinkertaisin laajennus on lisätä alkuperäisen taulukon alle toinen taulukko.
 Rivit ovat esimerkissä maittan summattuja vastauksia, ja niiden alle voidaan
 lisätä joku toinen luokittelumuuttuja. Havaintojen määrä yhditetyssä (“pinotussa”)
-taulussa kaksinkertaistuu. Miksi tämä ei ei vaikuta tuloksiin vääristävästi??</p>
+taulussa kaksinkertaistuu.</p>
+<p>Taulukoiden yhdistämisen idea on inertian dekomponointi. Yhdistetyn matriisin inertia
+voidaan eri tavoin esittää alimatriisien inertian summana. Tällöin jokaisen alimatriisin
+reunajakauman tulee olla sama, ja puuttuvat tiedot vääristävät tuloksia.</p>
 <p>Merkitään edellisten analyysien kuuden maan ja viiden vastausvaihtoehdon
 taulukkoa matriisilla <span class="math inline">\(\boldsymbol{ A}_{I J}\)</span>, missä <span class="math inline">\(I\)</span> on rivien ja <span class="math inline">\(J\)</span>
 sarakkeiden lukumäärä. Taulukoidaan ikäluokan (1 - 6) ja sukupuolen (<span class="math inline">\(f\)</span> = nainen,
@@ -2474,6 +2476,26 @@ jonkun ryhmän sisäinen vaihtelu ryhmien välisiestä vaihtelusta.
 jossa useita kahden muuttujan taulukoita ``pinotaan’’ päällekkäin ja rinnakkain.
 Voimme ottaa yhden kysymyksen vastausten lisäksi analyysiin mukaan useamman
 kysymyksen vastaukset laajentamalla kahden päällekkäisen matriisin taulukkoa oikealle.</p>
+<p><strong>Monimuuttuja-korrespondenssianalyysi MCA</strong></p>
+<p>Usean muuttujan korrespondenssianalyysissä tutkitaan usean muuttujan välisiä yhteyksiä.
+Kartan tulkinnan apuna siihen voidaan lisätä havaintojen sijaan niiden keskiarvopisteitä
+ja niille simuloituja luottamusellipsejä. Kuvien pääongelma on liian suuri määärä pisteitä,
+ja analyysin lopputulos on usein mahdollisimman yksinkertainen kartta.</p>
+<p>Usean muuttujan analyysissä kohteena on joko indikaattorimatriisi <span class="math inline">\(\boldsymbol{Z}\)</span> tai
+Burtin matriisi <span class="math inline">\(\boldsymbol{B}\)</span></p>
+<p>Indikaattorimatriisissa rivit ovat havaintoja ja sarakkeet luokittelumuuttujan arvoja.
+Havaintoa vastaa rivi nollia ja arvo 1 valitun vastausvaihtoehdon kohdalla. Tästä seuraa,
+että vain erilaiset vastaukset määrittävät rivien etäisyyksiä.</p>
+<p>Burtin matriisi on erikoistapaus yhdistetyistä matriiseista. Siihen on koottu kaikki tutkittavien
+muuttujien pareittan muodostetut taulukot. Diagonaalilla ovat muuttujien ristiintaulukoinnit
+itsensä kanssa. Ratkaisu riippuu vain näistä parittaisista taulukoista.</p>
+<p>Burtin matriisi on kätevä välivaihe matriisien yhdistelyssä.</p>
+<p>Molemmat matriisit paisuttavat keinotekoisesti kokonaisinertiaa, ja esimerkikisi kaksiulotteisen kartan
+selitetyn inertian osuudet jäävät melko pieniksi. Ratkaisuna on inertian oikaisu tai korjaus
+(adjusted inertia), jossa mm. poistetaan kokonaisinertialaskelmista Burtin matriisin
+diagonaalilla olevat alimatriisit. Näillä korjauksilla ei ole vaikutusta kartan pisteiden
+sijaintiin. Tämä menetelmä on ca-paketin mjca-funktion oletus.</p>
+<p>Kolmas vaihtoehto on ns. yhdistetty korrespondenssianalyysi (joint ca).</p>
 </div>
 </div>
 <div id="liite-2-suomenkielinen-lomake-esimerkki" class="section level2 unnumbered">

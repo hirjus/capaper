@@ -73,10 +73,7 @@ perusteet tuntevalle. R-ohjelmisto ei ole rajoitus, SPSS ja SAS sopivat
 
 ## Tärkeimmät lähteet ja ohjelmistot
 
-**zxy** Tarvitaanko tämä, perustelu? Muutamat lähteet aivan keskeisiä, ja MG:n
-kurssi pitää mainita.
 
-### Tärkeimät ähteet
 
 Michael Greenacre luennoi lyhyen kurssin korrespondenssianalyysistä Helsingin
 yliopistossa keväällä 2017[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca]. Luennot ja
@@ -97,15 +94,12 @@ Kirjoittajat esittelevät perusteellisesti joitain empiirisiä tutkimuksia, ja
 lyhyt mutta naseva matriisilaskennan kritiikki on hyvä panna merkille.
 
 
-### Käytetyt ohjelmistot
-
 **edit** Hyvin lyhyesti, lause tai pari. On oma liite tekneisestä ympäristöstä.
 
 **zxy** R, ca-paketti. löytyy myös muita paketteja.
 Rmarkdown[@RefWorks:doc:5b6b346fe4b0c619b11b8a3e], ja
 bookdown ([@RefWorks:doc:5b6b36dde4b09b7ec442bf8b] ja toinen viite [@R-bookdown]).
 Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.
-
 
 **k** Helposti toistettavan tutkimukset periaatteet
 

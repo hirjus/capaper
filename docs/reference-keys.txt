@@ -61,8 +61,6 @@ fig:L3bdprocess1
 johdanto
 tutkielman-tavoite
 tärkeimmät-lähteet-ja-ohjelmistot
-tärkeimät-ähteet
-käytetyt-ohjelmistot
 korrespondenssianalyysin-historiaa
 data
 data-kuka-mitä-missä-ja-milloin

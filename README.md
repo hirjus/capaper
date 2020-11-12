@@ -153,3 +153,6 @@ maltillisesti kappalekuvauksia (**k**), lisäilty viitteitä hiotavaksi.
  esimerkin massa-lukuun. Pieni tekstimuutoksia ja lisäyksiä, viitteitä lisää.
  
  **12.11.2020** Viitetietoja, pientä editointia.
+ 
+ **12.11.2020** Teorialiitteen pientä täydennystä ja siistimistä, turhia alalukuja pois
+ johdannosta.

@@ -393,15 +393,19 @@ p + scale_x_discrete(name = " ")
 
 Mikä on rivien ja sarakkeiden suhde?
 
-**edit** Tässä esitellään ovelasti CA:n tripletti (massat, profiilit, khii2-etäisyys). Pitääkö lisätä
-riippumattomuushypoteesin mukainen odotettu solufrekvenssi reunajakaumien tulona?
+**edit** Tässä esitellään ovelasti CA:n tripletti (massat, profiilit,
+khii2-etäisyys). Niihin liittyy myös "kvartetti", josta tässä esitellään inertia.
 
 Tähän klassiseen kysymykseen korrespondenssianalyysi tarjoaa oman ratkaisunsa.
-Siinä rivit ja sarakkeet esitetään samassa kuvassa, ja riippuutta tutkitaan tulkitsemalla tämä kuva tai "kartta".
+Siinä rivit ja sarakkeet esitetään samassa kuvassa, ja riippuutta tutkitaan
+tulkitsemalla tämä kuva tai "kartta".
 
 Kahden luokittelumuuttujan riippuvuutta voidaan testata  $\chi^{2}$ - testillä.
+Riippumattomuushypoteesin mukainen odotettu solufrekvenssi on taulukon
+\@ref(tab:simpeCA-frekTa1) reunajakaumien alkioiden tulo.
+
 Testisuure saadaan laskemalla yhten jokaisen solun havaittujen ja odotetettujen
-(riippumattomuushypoteesi) frekvenssien erotukset muodossa
+frekvenssien erotukset muodossa
 
 \begin{equation}
   \chi^{2} = \frac{(havaittu - odotettu)^2} {odotettu}
@@ -424,7 +428,7 @@ rivin massaksi, ja niiden summa muotoon $\frac{\chi^{2}}{n}$.
   (\#eq:inert1)
  \end{equation}
 
-Huomaa jakajassa n, ei n-1. Tässä ei tn-päättelyä!
+Huomaa jakajassa n, ei n-1. Tässä ei tn-päättelyä! 
 
 
 Tunnusluku $\phi^{2}$ on korrespondenssianalyysissä kokonaisinertia (total
@@ -528,6 +532,10 @@ inertiakontribuutiot
 
 ## Korrespondenssianalyysin peruskäsitteet
 
+huom: riippumattomuushypoteesin oletukset eivät välttämättä ole voimassa
+kaikissa aineistoissa. Khii2-etäisyysmittaa käytetään silti, sen perustelu on
+paljon yleisempi,
+
 **ks** Mitä käsitteitä tässä esitellään? Viittaukset teorialiitteeseen, ja
 tulkinnan hankaluudet (MG "loose ends" - paperi) käsitellään siellä.
 
@@ -616,7 +624,7 @@ kovin selkeästi näe.Suhteellisen värisävyn erot näyttävät absoluuttisten
 kontribuutioiden erot selkeästi.
 
 
-**Suhteelliset kontribuutiot**  Oletuspistekoko ok.
+**Suhteelliset kontribuutiot**
 
 ```{r G1-3asymmContrib2,echo = FALSE,fig.cap= "Q1b: lapsi kärsii jos äiti on töissä",fig.asp = 1, out.width = "90%",fig.align = "center"}
 
