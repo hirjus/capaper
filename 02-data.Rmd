@@ -1084,13 +1084,13 @@ knitr::include_graphics('img/substvar_fi_Q1Q2.png')
 
 
 
-**taustamuuttujat**
-
-Valitsin myös joukon taustamuuttujia, joista monissa monet on kerätty haastattelulla.
+Valituista taustamuuttujista monet on kerätty haastattelulla. 
 Tiedonkeruu, otantamenetelmät ja yksikkövastauskadon huomioiminen on tehty joka
-maassa omalla tavallaan. Aineistossa on mukana painot joilla tulokset voidaan
+maassa omalla tavallaan. Aineistoissa on mukana painot joilla tulokset voidaan
 korottaa perusjoukon tasolle, mutta kansainvälisiä vertailupainoja ei syystä tai
-toisesta ole. Taustamuuttujat kuten koulutustaso on harmonisoitu vertailukelpoisiksi.
+toisesta ole. Taustamuuttujat kuten koulutustaso on harmonisoitu
+vertailukelpoisiksi.
+
 Tutkimuksen kohdeperusjoukko on 18-vuotiaat tai sitä vanhemmat,
 poikkeuksina Suomi (15 - 74 vuotiaat), Islanti, Japani, Etelä-Afrikka ja Venezuela.
 
@@ -1101,8 +1101,8 @@ ei vastata. Esimerkiksi Ranskassa yli 20 prosenttia kieltäytyi vastaamasta last
 liittyvissä kysymyksissä. Tässä tutkielmassa monimuuttujakorrespondenssianalyysiä
 käytetään tämän ongelman tai datan ominaisuuden analyysiin.
 
-Poistin aineistosta havainnot, jos tieto iästä tai sukupuolesta puuttuu
-(32969-32823 = 146 havaintoa). 
+Poistin aineistosta havainnot, joissa tieto iästä tai sukupuolesta puuttuu
+(32969-32823 = 146 havaintoa).
 
 Aineiston luokittelu- ja järjestysasteikon muuttujat muunnetaan R-ohjelmiston
 factor-tietotyypiksi. Teen muunnokset useammassa vaiheessa heti kun data on
@@ -1117,7 +1117,7 @@ Analyysivaiheessa koodi muuttuu hauraammaksi.
 
 
 
-**Aineiston ja korrespondenssianalyysi**
+**Aineisto ja korrespondenssianalyysi**
 
 
 Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa kuten

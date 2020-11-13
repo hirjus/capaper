@@ -66,7 +66,6 @@ data
 aineiston-rajaaminen-maat-ja-muuttujat
 yksinkertainen-korrespondenssianalyysi
 äiti-töissä--kärsiikö-lapsi
-kahden-muuttujan-frekvenssitaulukon-analyysi
 ca---esimerkki
 korrespondenssianalyysin-peruskäsitteet
 asymmetrinen-kartta-ja-ideaalipisteet
@@ -88,4 +87,3 @@ pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables
 matched-matrices
 mca---monimuuttujakorrespondenssianalyysi
 yhteenveto
-korrespondenssianalyysin-perusyhtälöt-ja-kaavat

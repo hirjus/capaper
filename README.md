@@ -159,3 +159,5 @@ maltillisesti kappalekuvauksia (**k**), lisäilty viitteitä hiotavaksi.
 
  **12.11.2020 Versio 0.6** Johdanto ja yhteenvetoluku jätetään viimeisiksi,
   muihin valmista tekstiä. Dataluku lisätty.
+
+  **13.11.2020** Editointia data-analyysiluvuissa, pieniä lisäyksiä.

@@ -1,17 +1,25 @@
 # Yksinkertainen korrespondenssianalyysi
 
-**k1** Yksi kysymys, kuusi maata, peruskäsitteet
+**k1** Korrespondenssianalyysin geometriset periaatteet ja kuvien tulkinnan
+oleelliset asiat voi esittää yksinkertaisen korrespondenssianalyysin avulla
+(MG ja Hastie). Tässä jaksossa aineistoksi valitaan yksi subsatanssimuuttuja ja
+kuusi maata. Taustamuuttujia ovat vastaajan ikä ja sukupuoli ja maa. Aineistosta jätettiin
+pois kaikki havainnot joissa vastaustieto puuttui. Taustamuuttujissa puuttuvia
+tietoja ei ole.
 
 
-**k2** Luvun tärkeimmät asiat; mitä on luvassa?
+**k2** Yksinkertainen korrespondenssianalyysi on yhden taulukon analyysiä.
+Peruskäsitteet ja niiden yhteys dataan on helpompi hahmottaa pienessä aineistosssa,
+aina voi katsoa koko dataaa.
 
 ## Äiti töissä -kärsiikö lapsi?
 
 **k1**"Alle kouluikäinen lapsi todennäköisesti kärsii, jos hänen äitinsä käy työssä".
-Lyhennän muotoon äiti töissä. ISSP-tutkimuksissa kaksi kysymystä, joissa sana "äiti",
-MG havainnut vastausten jakaumat poikkeaviksi (**#V ?**).
 
-**zxy** Edellisessä luvussa on esitelyt aineisto, ja kerrottu rajaukset.
+ISSP-tutkimuksissa kaksi kysymystä, joissa sana "äiti", MG havainnut vastausten
+jakaumat poikkeaviksi (**#V ?**).
+
+
 
 ```{r esim1data1, echo = FALSE, include = FALSE}
 # UUSI DATA 30.1.20
@@ -156,7 +164,7 @@ ISSP2012esim1.dat <- ISSP2012esim1.dat %>%
 
 ```
 
-Tarkistetaan uudet muuttujat (koodilohkon tulostus pois tarvittaessa).
+
 
 ```{r r esim1data2, echo = FALSE, include = FALSE, message=TRUE, warning=TRUE}
 # Taulukoita (31.1.2020) ja tarkistuksia
@@ -225,9 +233,9 @@ validate_that(are_equal(levels(ISSP2012esim1.dat$Q1b),
 ```
 
 
-## Kahden muuttujan frekvenssitaulukon analyysi
 
 **k** Kolme taulukkoa: frekvenssitaulukko, riviprosentit ja sarakeprosentit
+
 
 
 ```{r simpeCA-frekTa1, echo = FALSE}
@@ -267,8 +275,6 @@ Muuttujien luonne on usein erilainen. Tähän aineistoon sopii riviprosenttienta
 vertaillaan vastausten jakaumia maiden välillä.Taulukon sarakkeet ovat muuttujia
 ja rivit havaintoja. Sarakeprosentit antavat toisen näkökulmaan samaan dataan.
 
-**k** Rivit on saatu alkuperäisestä aineistosta osajoukkojen summina. MG:n
-terminologialla "samples".
 
 ```{r  EkaCA, echo = FALSE, include = FALSE}
 # CA tässä, jotta saadaan rivi- ja sarakeprofiilikuvat
@@ -321,7 +327,21 @@ simpleCA3 <- ca(johdesim1_rowproc.tab)
 
 ```
 
-**Kuvat**
+Tavoitteena on korrespondenssianalyysin kartta, jossa rivi- ja
+sarakepisteet on esitetty samassa kuvassa. Sarakeprosenttien taulukossa on esitetty
+sarakkeiden suhteelliset jakaumat.
+
+Näitä suhteellisia rivejä ja sarakkeita kutsutaan korrespondenssianalyysissä
+profiileiksi.
+
+Frekvenssitaulukon reunajakaumat eli rivi- ja sarakesummat jaettuna havaintojen
+lukumäärällä ovat profiilien massoja.
+
+**k** Rivit on saatu alkuperäisestä aineistosta osajoukkojen summina. MG:n
+terminologialla "samples".
+
+Rivi- ja sarakeprofiileja verrataan niiden keskiarvoprofiiliin. Seuraavat kaksi
+kuvaa näyttävät miten eri profiilit poikkeavat keskiarvostaan.
 
 ```{r g1-2kuva1, fig.cap = "Q1b:Sarakeprofiilit ja keskiarvoprofiili", echo = FALSE, include = TRUE}
 #mutkikas kuvan piirto - sarakeprofiilit vertailussa
@@ -391,14 +411,13 @@ p + scale_x_discrete(name = " ")
 ```
 
 
-Mikä on rivien ja sarakkeiden suhde?
 
-**edit** Tässä esitellään ovelasti CA:n tripletti (massat, profiilit,
-khii2-etäisyys). Niihin liittyy myös "kvartetti", josta tässä esitellään inertia.
 
-Tähän klassiseen kysymykseen korrespondenssianalyysi tarjoaa oman ratkaisunsa.
-Siinä rivit ja sarakkeet esitetään samassa kuvassa, ja riippuutta tutkitaan
-tulkitsemalla tämä kuva tai "kartta".
+**edit**  Tässä esitellään ovelasti CA:n tripletin kaksi jäsentä, massat ja profiilit.
+khii2-etäisyys on kolmas. Triplettiin liittyy "kvartetti",
+josta tässä esitellään inertia.
+
+Mikä on rivien (havaintojen) ja sarakkeiden (muuttujien) yhteys? 
 
 Kahden luokittelumuuttujan riippuvuutta voidaan testata  $\chi^{2}$ - testillä.
 Riippumattomuushypoteesin mukainen odotettu solufrekvenssi on taulukon
@@ -468,9 +487,19 @@ summa lasketaan yli rivien ${i}$.
  (\#eq:inert2)
 \end{equation}
 
-Tässä esitystavassa viite on CAiP, teorialiitteessä tarkemmin. Tarkoitus on esittää
+**edit** Tässä esitystavassa viite on CAiP, teorialiitteessä tarkemmin. Tarkoitus on esittää
 yksinkertaisesti taulukon datan analyysin käsitteet ja CA:n peruskäsitteet profiili,
 massa ja $\chi^{2}$ - etäisyys
+
+**k** ca-ratkaisu: rivi- ja sarekepilvien dimensio on sarakkeiden tai rivien
+lukumäärä vähennettynä yhdellä, pienempi kahdesta vaihtoehdosta. Tämä seuraa
+yksikertaisesti rivi- ja sarakeprofiilien suhteellisuudesta, niiden summat ovat 1.
+
+**k** Etsitään kaksiulotteinen ratkaisu (taso), joka minimoi pisteiden
+khii2-etäisyyksien poikkeamien summan eli on mahdollisimman lähellä pisteitä.
+
+**K** rivi- ja sarakeongelma ratkaisu johtaa saamaan lopputulokseen. Tämä
+duaalisuus on korrespondenssianalyysin perusominaisuuksia.
 
 
 ## CA - esimerkki

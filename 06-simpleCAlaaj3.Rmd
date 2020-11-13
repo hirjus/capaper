@@ -1,20 +1,26 @@
 # Osajoukon korrespondenssianalyysi
 
 **k** Osajoukon korrespondenssianalyysin tarve: kuvat menevät tukkoon. Kun muuttujia
-on paljon, kartat kertovat vain hyvin yleisiä ja tunnettuja asioita (MG). Subset CA.
+on paljon kartat ovat täynnä pisteitä ja niitä on vaikea lukea. Usein myös havaitaan,
+että ratkaisun päädimensiot kertovat ylllätyksettömän ilmeisen tarinan, ja
+kiinnostavammat yhteydet ovat piilossa ylemmissä dimensioissa (MG ja Pardo, "Vihreä
+kirja" ss. 198).
 
 **k** Teoreettinen idea: inertian dekomoponointi (taas). Lasketaan ensin 
 ca-ratkaisu ja rajataan aineisto. Yksinkertainen toteuttaa. Massat ja reunajakaumat
 säilyvä, ja siksi aineiston ("pilven") kokonaisinertia voidaan jakaa osiin
 osajoukkojen inertiaksi. Uusia yhteyksiä näkyviin, tarkempi kuva datasta.
 
-**k** Subset-CA:n vaihtoehdot 
-1. Kuvan suurentaminen (png, pdf vektorigrafiikka) näytöllä - hyvä ensiaskel
+Kuvan tukkoisuuteen voi toki vaikuttaa muillakin keinoilla. Muuttujien arvoja voi
+yhdistellä, kuvasta voi jättää pois pisteitä joiden kontribuutio on pieni tai kuvaa
+voi yksinkertaisesti suurentaa analyysivaiheessa näytöllä.
 
-2. Kuva-alueen rajaaminen R-koodissa toimii hyvin, jos pitää tarkentaa kuvaa origon
-lähelle.
+Kuva-aluetta voi myös rajata johonkin osaan kuvaa. Kaikki pisteet ovat kuitenkin
+mukana määräämässä ratkaisun geometriaa.
 
-Ongelma: kaikki havainnot ja muuttujien kategoriat määräävät edelleen koordinaatiston.
+Rivejä tai sarakkeita voi myös muuttaa passiivisiksi, mutta silloin ei saavuteta
+käytännöllistä inertian dekomponointi-ominaisuutta. MCA-jaksossa osajoukon
+analysointi on pääasia ja mahdollisia vaihtoehtoja käsitellään hieman lisää.
 
 
 Lähteet MG ja Prado (2006)[@RefWorks:doc:5a857a44e4b0ed2d44664d87], 
@@ -29,7 +35,7 @@ normaalisti. Osajoukon profiilit muuttuvat, niiden summa ei enään ole yksi,
 barysentristä ominaisuutta ei voi suoraan käyttää täydentävien rivipisteiden
 koordinaattien laskemiseen.
 
-**edit** tarina jatkuu MCA-jaksossa, jossa subset aivan oleellinen asia.
+
 
 ```{r maagaSubDKDEFI, echo=F}
 # Osajoukon CA: Tanska, Saksa ja Suomi

@@ -248,10 +248,16 @@ visuaalinen tulkinta pätevät edelleen.
 
 MG ja MG&Prado ovat tutkineet ISSP-datalla tätä ongelmaa.
 Biplots In practice - kirja [@RefWorks:doc:5a857a43e4b0ed2d44664d7c], ss.142-
-"dimensions of middleness". Mg ja Prado artikkelissaan [@RefWorks:doc:5a857a44e4b0ed2d44664d87] ja samasta
-teemasta laajentaen kokoomateoksessa [@RefWorks:doc:5ab76b43e4b003f4468d1f07], ss. 197-217. Ensimmäisessä artikkelissa
-kommentoivat vertaisarvioitsijoiden ehdotuksia: miksi kuva-alueen rajaaminen tai vain osajoukon analysointi ei ole
-hyvä ratkaisu.
+"dimensions of middleness". Mg ja Prado artikkelissaan 
+[@RefWorks:doc:5a857a44e4b0ed2d44664d87] ja samasta teemasta laajentaen
+kokoomateoksessa [@RefWorks:doc:5ab76b43e4b003f4468d1f07], ss. 197-217.
+Aineistona jälkimmäisessä tutkimuksessa on sama kysymyssarja kuin tässä 1994
+datasta. Kysymyksissä on jonkin verran eroja. Ensimmäisessä artikkelissa he kommentoivat vertaisarvioitsijoiden ehdotuksia. Kuvia voisi selkiyttää esittämällä vain osan
+pisteistä sarjassa karttoja, mutta ratkaisu perustuisi siinäkin koko dataan ja
+sitä nimenomaan ei haluta. Toinen ehdotus on yhdistää ne vastausvaihtoehdot jotka
+eivät ole tutkimuksen kohteena yhdeksi yhdistetyksi kategoriaksi. Tällöin osajoukon
+korrespondenssianalyysin kätevä inertia dekomponointi osajoukille ei toimisi. Ratkaisu 
+ei toimi ollenkaan yleisimmissä osajoukoissa.
 
 **k** Data
 

@@ -3,7 +3,7 @@
 
 ## Liite 1: Korrespondenssianalyysin teoriaa {-}
 
-### Korrespondenssianalyysin perusyhtälöt ja kaavat
+### Korrespondenssianalyysin perusyhtälöt ja kaavat {-}
 
 
 Tässä lähteenä Greenacren kirja[@RefWorks:doc:5a857a43e4b0ed2d44664d78] (ca in practice) ja sen liite
@@ -331,8 +331,6 @@ diagonaalilla olevat alimatriisit. Näillä korjauksilla ei ole vaikutusta karta
 sijaintiin. Tämä menetelmä on ca-paketin mjca-funktion oletus.
 
 Kolmas vaihtoehto on ns. yhdistetty korrespondenssianalyysi (joint ca).
-
-
 
 
 
