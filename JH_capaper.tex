@@ -120,7 +120,7 @@
 \title{Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin
 menetelmä}
 \author{Jussi Hirvonen}
-\date{Versio 0.4, tulostettu 2020-11-07}
+\date{Versio 0.6, tulostettu 2020-11-14}
 
 \begin{document}
 \frontmatter
@@ -157,6 +157,11 @@ isommat muuutoksen ensin siellä ja sitten tähän projektiin.
 Raportti yhtenä html-tiedostona
 (\url{https://hirjus.github.io/capaper/JH_capaper.html}).
 
+\textbf{12.11.20} Raportissa on hieman liian pitkiä ca:n numeeristen
+tulosten listauksia, poistetaan tai lyhennetään rajusti poimimalla
+oleellisia rivejä. Periaatteessa vain yksi (Saksan ja Belgian jako) jää,
+siinä kerrotaan miten tuloksia luetaan.
+
 Gitbook-tulosteessa ei saa koodia ``piilotettua'', asetus
 ``code\_folding: hide'' vaatii teeman (theme). \_output.yml - tiedostoon
 lisätty html\_book - formaatti, siinä voi tarvittaessa käyttää
@@ -171,33 +176,32 @@ valmiimpaa tekstiä.
 \textbf{edit} Kirjoitetaan disposition pohjalta, keräillään kaikki
 yleiset ca-luonnehdinnat yhteen paikkaan eli johdantoon.
 
-\textbf{Mahdollisia lisäyksiä}
+\textbf{johdannon ydinsisältö}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Tavoitteet, sisältö, rajaukset (jota voi myöhemmin täydentää)
-\item
-  Muutamat puutteet/rajaukset, onko kerrottava tässä?
-\end{enumerate}
+\textbf{1}. CA:n periaatteet voi esitellä yksinkertaisen kahden
+luokittelumuuttujan taulukon analyysin avulla. Kun taulukko on pieni, on
+helppo vertailla CA:n karttoja dataan. Yksinkertainen kahden
+luokittelumuuttujan korrespondenssianalyysi antaa graafisen analyysin
+``\ldots perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin
+muodot ovat saman algoritmin soveltamista toisen tyyppiisiin
+datamatriiseihin, ja tulkintaa sovelletaan vastaavasti''.((Greenacre ja
+Hastie
+\protect\hyperlink{ref-RefWorks:doc:5a857a44e4b0ed2d44664d84}{1987}) s.
+437). Tämä Greenacren ja Hastien artikkelissaan esittämä periaate
+helpottaa huomattavasti juuri graafisen data-analyysin eli
+korrespondenssianalyysin karttojen tulkinnan perussääntöjen
+oivaltamista. Juuri kartat, samassa kuvassa esitettävät havainnot ja
+muuttujat ovat CA:n tärkein menetelmä, mutta ei aivan helppo.
 
-\begin{itemize}
-\item
-  data: ei huomioida sitä, että otoskoot vaihtelevat aika paljon eli
-  ``maapainot'' eri suuruisia
-\item
-  ei huomioida muitakaan otantaan liittyviä asioita (tämä ainakin
-  mainittava data-osuudessa)
-\item
-  kuvaileva menetelmä, mutta mikä on tutkimusongelma? Sellainen pitäisi
-  olla.
-\end{itemize}
-
-**zxy* Mitä on korrespondenssianalyysi? Muutamalla kappaleella. Yksi
-kappale historiasta.
+\textbf{2}. CA on kuitenkin vahvimmillaan isojen ja monimutkaisten
+aineistojen analyysissä. Siksi ns. monimuuttujakorrespondenssianalyysin
+lyhyessä esittelyssä aineistoa laajennetaan, sillä ``on erittäin vaikeaa
+osoittaa kotiakvaarioissa, että verkko on tehokas''((Roux ja Rouanet
+\protect\hyperlink{ref-RefWorks:doc:5a857a43e4b0ed2d44664d75}{2004}),
+s.15).
 
 \hypertarget{tutkielman-tavoite}{%
-\section{Tutkielman tavoite)}\label{tutkielman-tavoite}}
+\section{Tutkielman tavoite}\label{tutkielman-tavoite}}
 
 \textbf{k} Tässä kerrotaan, miksi tämä työ on kirjoitettu. Esitellään
 menetelmä käyttämällä oikeaa dataa. Täsmällisempi esitys sirotellaan
@@ -209,20 +213,18 @@ ole pääasia. Se tietysti mainitaan, ja asiaa pohditaan.
 \textbf{ks} Esitellään korrespondenssianalyysin käsitteet ja graafisen
 analyysin periaatteet.
 
-\textbf{zxy} -mitä ca on? - dimensioiden vähentäminen ja visualisointi -
-mihin dataan se soveltuu - määrittele graafinen, deskriptiivinen,
-eksploratiivinen data-analyysi - yksinkertainen ca, useamman muuttujan
-ca
+\textbf{k} -mitä ca on? - dimensioiden vähentäminen ja visualisointi
 
-\textbf{ks} Tämän voi tehdä yksinkertaisen korrespondenssianalyysin
-avulla. Yksinkertainen kahden luokittelumuuttujan
-korrespondenssianalyysi antaa graafisen analyysin ``\ldots perussäännöt
-tulkinnalle. Kaikki muut korrespondenssianalyysin muodot ovat saman
-algoritmin soveltamista toisen tyyppiisiin datamatriiseihin, ja
-tulkintaa sovelletaan vastaavasti (with the consequent adaptation of the
-interpretation)'' (Greenacre ja Hastie
-\protect\hyperlink{ref-RefWorks:doc:5a857a44e4b0ed2d44664d84}{1987} , s.
-437) .
+\begin{itemize}
+\item
+  mihin dataan se soveltuu: kahden luokittemuuttujan taulukon
+  lukumäärädata (count data) tai suhdeasteikon muuttujia samassa
+  mittayksikössä (esim. euroissa).
+\item
+  määrittele graafinen, deskriptiivinen, eksploratiivinen data-analyysi
+\item
+  yksinkertainen ca, useamman muuttujan ca
+\end{itemize}
 
 \textbf{zxy} Miksi eksporatiivinen (määrittele!) ja deskriptiivinen
 (määrittele!) menetelmä on esitettävä ``in vivo'', toiminnassa?
@@ -257,21 +259,18 @@ tarttua'' menetelmän tulosmatriiseihin.
 \section{Tärkeimmät lähteet ja
 ohjelmistot}\label{tuxe4rkeimmuxe4t-luxe4hteet-ja-ohjelmistot}}
 
-\textbf{zxy} Tarvitaanko tämä, perustelu? Muutamat lähteet aivan
-keskeisiä, ja MG:n kurssi pitää mainita.
-
-\hypertarget{luxe4hteet}{%
-\subsection{Lähteet}\label{luxe4hteet}}
-
 Michael Greenacre luennoi lyhyen kurssin korrespondenssianalyysistä
 Helsingin yliopistossa keväällä 2017(M. Greenacre
 \protect\hyperlink{ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca}{2017}).
 Luennot ja laskuharjoitukset perehdyttivät minut ensimmäistä kertaa
-tähän menetelmään, ja kurssin materiaaleihin olen usein palannut. Niihin
-voi tutustua {[}Moodle-palvelussa{]} (\url{https://moodle.helsinki.fi})
-(käyttäjätunnus vaaditaan). Greenacren kärsivällisesti kirjoitetut
-perusoppikirjat ovat tehneet menetelmää laajasti tunnetuksi englantia
-lukeville.
+tähän menetelmään, ja kurssin materiaaleihin olen usein palannut.
+Michael Greenacren kärsivällisesti kirjoitettu ``Correrspondence
+Analysis in Practice'' (jatkossa ``CAiP'') (M. J. Greenacre
+\protect\hyperlink{ref-RefWorks:doc:5a857a43e4b0ed2d44664d78}{2017}) ja
+sen aikasemmat versiot ovat tehneet menetelmää laajasti
+tunnetuksi.``Biplots in Practice'' (jatkossa ``Biplots'') (Greenacre
+\protect\hyperlink{ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c}{2010})
+esittää menetelman osana yleisempää kaksoiskuvien ideaa.
 
 Ranskalaisen lähestymistan perusoppikirja(Roux ja Rouanet
 \protect\hyperlink{ref-RefWorks:doc:5a857a43e4b0ed2d44664d75}{2004})
@@ -281,16 +280,6 @@ valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita.
 Kirjoittajat esittelevät perusteellisesti joitain empiirisiä
 tutkimuksia, ja lyhyt mutta naseva matriisilaskennan kritiikki on hyvä
 panna merkille.
-
-Korrespondenssianalyysi tuli osaksi suomalaista Survo-ohjelmistoa jo
-vuonna (\textbf{????}), ja menetelmää on esitelty ainakin kahdessa
-oppikirjassa(Mustonen
-\protect\hyperlink{ref-RefWorks:doc:5a857a44e4b0ed2d44664d95}{1995}) ja
-(Vehkalahti
-\protect\hyperlink{ref-RefWorks:doc:5a857a44e4b0ed2d44664da4}{2008}).
-
-\hypertarget{kuxe4ytetyt-ohjelmistot}{%
-\subsection{Käytetyt ohjelmistot}\label{kuxe4ytetyt-ohjelmistot}}
 
 \textbf{edit} Hyvin lyhyesti, lause tai pari. On oma liite tekneisestä
 ympäristöstä.
@@ -359,123 +348,151 @@ ollut.
 \hypertarget{data}{%
 \chapter{Data}\label{data}}
 
-\textbf{edit} Teksti vielä vanhoja muistiinpanoja.
+Käytän tutkielmassa International Social Survey - projektin (ISSP)
+vuoden 2012 kyselytutkimusta ``Perhe , työ ja
+sukupuoliroolit''(International Social Survey Programme: Family and
+Changing Gender Roles IV). Tutkielman tärkeimmissä lähteissä (esim.
+CAiP, Biplots) tutkimuksen aikaisemmat versiot ovat esimerkkiaineistona,
+samoin Greenacren luennoilla 2017.
 
-\hypertarget{datan-luku-ja-perusmuokkaukset}{%
-\section{Datan luku ja
-perusmuokkaukset}\label{datan-luku-ja-perusmuokkaukset}}
+Länsi-Saksan ja USA:n tutkimuslaitosten yhteistyö vakiintui
+ISSP-organisaatioksi 1984 (\url{http://www.issp.org}). Vuonna 2015
+neljän perustajajäsenen joukko oli kasvanut 49 maahan. Vertailevan
+tutkimuksen aineistoja on kerätty monista teemoista, perhearvoista ja
+naisten työmarkkina-asemasta neljä kertaa (1988, 1994,2002,2012). USA:n
+edustajana mukana ollut Tom W. Smith näkee aineistojen arvon juuri
+kansainvälisessä vertailevassa tutkimuksessa. Järjestön
+julkaisuluettelossa oli 2012 yli 5200, ja viime vuosina yli 400 vuodessa
+lisää. (Smith
+\protect\hyperlink{ref-RefWorks:doc:5c0543a5e4b077eba1dc3cd8}{2015}).
 
-\hypertarget{maat-ja-muuttujat}{%
-\subsection{Maat ja muuttujat}\label{maat-ja-muuttujat}}
-
-\textbf{maat luettu, sitten muuttujat}
-
-Substanssimuuttujat (9). Jos sukupuoli tai ikä puuttuu, havainto
-jätetään pois (32969-32823 = 146), maa-muuttujassa ei puuttuvia tietoja
-ole. Lisäksi kuusi taustamuuttujaa ( ``SEX'',``AGE'',``DEGREE'',
-``MAINSTAT'', ``TOPBOT'', ``HHCHILDR'', ``MARITAL'', ``URBRURAL'').
-
-\textbf{Perusmuunnokset - viisi koodilohkoa}
-
-Vaihe 1
-
-Vaihe 2 Vaihe 2.1
-
-Vaihe 2.2
-
-Vaihe 2.3
-
-Vaihe 2.4
-
-Muunnosten testaus, varmistetaan että muuttujat ovat sitä mitä halutaan.
-
-\textbf{zxy} Voisi miettiä paremman otsikon. Galku-paperin alusta on
-lisäilty viitteitä Refworksiin, mutta hieman hanklaa. www.gesis.org -
-sivusto on aika sekava. Virallinen (heidän määrittelemä) sitaatti
-löytyy, ja linkkejä. Tässä voisi ehkä käyttää alaviitettä, jossa
-tarjoaisi linkit? Tai ihan oma lyhyt kappale? Alla virallinen viite, ja
-tässä kaksi muuta ({[}RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a{]} ja
-{[}RefWorks:doc:5b6c7debe4b0e4e15164ab00{]}). Löytyy myös
-seurantaraportti({[}RefWorks:doc:5b155e0ce4b044dfd738458f{]}).
-\textbf{viitteet pois- ehkä tekstiin linkkeinä?}
-
-\textbf{k} ISSP (International social survey) on tehnyt laajoja
-kansainvälisiä kyselytutkimuksia eri teemoista. Yksi teemoista on perhe
-ja muuttuvat (sosiaalisesti määräytyvät) sukupuoliroolit ((2016)
-\protect\hyperlink{ref-RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a}{2016}).
-
-\textbf{zxy} Miksi data on kiinnostava sisällöllisesti? Viite Kantola
-(HS). Lisäksi laadukas, usealta vuodelta, tarkasti dokumentoitu.
-
-\textbf{ks}
-
-\textbf{zxy} Miksi data sovelutuu korrespondenssianalyysin esittelyyn?
-Iso ja monimutkainen (kansainvälinen, datan laaut? kts. Blasius-viite
-alempana), sisällölliset muuttuja nominaaliasteikolla (kysymyspatterit,
-Likert), laadukas hyvin dokumentoitu aineisto.
-
-\textbf{zxy} Onko itse asia kiinnostava? (Kantolan kolumni, HS).
-
-\textbf{ks} Kokoava kappale, ja sen perään tarkentavat
-
-\textbf{ks1}
-
-\textbf{ks2}
-
-\textbf{ks-n}
-
-\textbf{zxy} Aineiston ongelmat ja puutteet (tavanomaisten
-surveyaineistojen ongelmien lisäksi, erityisesti vastauskadon). Kato
-erikseen, oikeastaan hyvä juttu koska CA soveltuu sen analyysiin.
-
-\textbf{zxy} Aineisto kuvattava \textbf{sisällön} (mitä asiaa, ilmiötä,
-tällä datalla halutaan valaista), \textbf{para- ja metadatan}
-näkökulmasta (tai ainakin kerrottava mitä on saatavilla). Kolmanneksi
-aineiston ``tilastotieteellinen olemus'': otanta-asetelmat, kansalliset
-versioinnit, harmonisoinnit (esim. puoluekenttä vertailukelpoiseksi).
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Kysymyksissä maakohtaisia eroja. Osa perusteltuja, on haluttu
-  tarkentaa tai muuten hifistellä. Osa kummallisa, erityisesti
-  neutraalin vaihtoehdon puuttuminen (Espanja). Nämä maat jätetään pois.
-\item
-  Datassa painot ``maatasolle'', otanta sun muu kuvattu tarkasti
-  dokumentaatiossa. Jos tutkimusongelma on maiden erojen analyysi,
-  mitään vertailupainoja ei ole käytössä. Otoskoko on paino. MG oikaisee
-  ja ja oikaisee myös sukupuolien osuudet.
-\end{enumerate}
-
-\hypertarget{aineiston-kuvailu-tietosisuxe4ltuxf6}{%
-\section{Aineiston kuvailu
-(tietosisältö)}\label{aineiston-kuvailu-tietosisuxe4ltuxf6}}
-
-\textbf{ks} ``Perhe, työ ja sukupuoliroolit'' tutkimuksen teemat,
-tarkoitus. \textbf{Paras} lähde Yhteiskuntatieteellisen tietoarkiston
-palvelu
+Saksalainen GESIS-tutkimuslaitos ylläpitää data-arkistoa, josta suurin
+osa datasta ja dokumentaatiosta on vapaasti saatavissa
+(\url{https://www.gesis.org/en/issp/home}). Suomessa tutkimuksen data ja
+dokumentaatio löytyvät Tampereen yliopiston Aila-tietoarkistosta
 (\url{https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary\&study_language=fi}).
+
+GESIS-instituutin ''datakatalogista'' löytää kätevästi kaiken
+dokumentaation, mutta edes saksalaiset eivät voi estää www-sivustojen
+innokaita uudistajia. Kaikki linkit lähdeluettelossa vievät vain
+GESIS-arkistosivulle, josta löytää pitkän listan pdf-dokumentteja.
+Taulukossa @Ref(tab:ISSPdocsTable) on neljän tärkeimmän dokumentin
+tiedostonimi.
+
+\begin{longtable}[]{@{}lll@{}}
+\caption{ISSP 2012: tärkeimmät dokumentit}\tabularnewline
+\toprule
+\begin{minipage}[b]{0.19\columnwidth}\raggedright
+dokumentti\strut
+\end{minipage} & \begin{minipage}[b]{0.33\columnwidth}\raggedright
+sisältö\strut
+\end{minipage} & \begin{minipage}[b]{0.39\columnwidth}\raggedright
+tiedosto\strut
+\end{minipage}\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{0.19\columnwidth}\raggedright
+dokumentti\strut
+\end{minipage} & \begin{minipage}[b]{0.33\columnwidth}\raggedright
+sisältö\strut
+\end{minipage} & \begin{minipage}[b]{0.39\columnwidth}\raggedright
+tiedosto\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.19\columnwidth}\raggedright
+Variable Report\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+Perusdokumentti, muuttujien kuvaukset ja taulukot\strut
+\end{minipage} & \begin{minipage}[t]{0.39\columnwidth}\raggedright
+ZA5900\_cdb.pdf\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright
+Study Monitoring Report\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+tiedokeruun toteutus eri maissa\strut
+\end{minipage} & \begin{minipage}[t]{0.39\columnwidth}\raggedright
+ZA5900\_mr.pdf\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright
+Basic Questionnaire\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+Maittain sovellettava kyselylomake\strut
+\end{minipage} & \begin{minipage}[t]{0.39\columnwidth}\raggedright
+ZA5900\_bq.pdf\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright
+Contents of ISSP 2012 module\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+substanssikysymykset taulukkona\strut
+\end{minipage} & \begin{minipage}[t]{0.39\columnwidth}\raggedright
+ZA5900\_overview.pdf\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright
+Questionnaire Development\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+kyselylomakkeen laatiminen\strut
+\end{minipage} & \begin{minipage}[t]{0.39\columnwidth}\raggedright
+ssoar-2014-scholz\_et\_al-ISSP\_2012\_Family\_and\_Changing.pdf\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+Tutkimuksen viitetieto, linkki vie dokumenttiluetteloon koska hanke on
+päättynyt. Kaksi versiota, käytetään ensimmäistä ((2016)
+\protect\hyperlink{ref-RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a}{2016}) .
+
+Data ja dokumentaatio (ml. käyttöehdot) löytyvät GESIS-instituutin
+datakatalogista (\url{https://zacat.gesis.org})(ISSP
+\protect\hyperlink{ref-RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a}{2016}).
+
+Tätä kirjoittaessa (10.11.2020) tutkimuksen aineisto löytyy osoitteesta
+{[}\url{https://zacat.gesis.org/webview/index.jsp?object=http://zacat.gesis.org/obj/fStudy/ZA5900}{]}.
+Datakatalogista löytää tällä hetkellä (10.11.2020) dokumetit ja datan
+helpoiten.
+
+Koodikirjan (``Variable report'') (GESIS
+\protect\hyperlink{ref-RefWorks:doc:5bb9041be4b06677e5e61f83}{2016})
+selostaa tarkasti tietosisällön. Tutkimuksen seurantaraportti (``Study
+Monitoring Report'') (Gendall ja Randow
+\protect\hyperlink{ref-RefWorks:doc:5c053d69e4b0191a580d6451}{2016})
+kertoo miten tutkimus käytännössä toteutettiin. Kyselylomake (''ISSP
+2012 - Family and Changing Gender Roles IV Basic
+Questinnaire\textless br\textgreater''
+\protect\hyperlink{ref-RefWorks:doc:5bb9044fe4b0dfeb95352229}{2011}) ja
+suomenkielinen versio (Tilastokeskus
+\protect\hyperlink{ref-RefWorks:doc:5bb90a0ae4b018435936a488}{2012}) ja
+myös kaikki muut kieliversiot voivat olla hyödyllisiä. Tiedonkeruun
+tarkoitus ja kyselyn suunnitelun ideat kerrotaan omassa raportissa
+(Scholz ym.
+\protect\hyperlink{ref-RefWorks:doc:5f9439fde4b04741789a2187}{2014}).
 
 \hypertarget{aineiston-rajaaminen-maat-ja-muuttujat}{%
 \section{Aineiston rajaaminen maat ja
 muuttujat}\label{aineiston-rajaaminen-maat-ja-muuttujat}}
 
-\textbf{k} maat, samankaltaisia, data saatavilla kiinnostavista
-muuttujista
+Olen valinnut laajasta aineistosta 25 maata ja joukon muuttujia. Maat on
+valittu niin, että ne ovat suhteellisen samankaltaisia ja valitut
+muuttujat ovat niissä samanlaisia. Kysymyksissä on jonkin verran pieniä
+eroja, mutta joissain tapauksissa ero on merkittävä. Esimerkiksi Espanja
+on jostain syystä jättänyt tässä käytetyistä muuttujista ns. neutraalin
+(''en samaa enkä eri mieltä'') vastausvaihtoehdon pois, joten Espanja
+jää pois.
 
-\textbf{k} muuttujat. Laajasti käyetty, valittu sopiva kysymyspatteri
-asenteista naisten työssäkäyntiin ja joitain taustamuuttujia.
-Korrespondenssianalyysi on hyvä menetelmä aineiston analyysiin:
-monimutkainen ja laaaja, paljon luokitteluasteikon muuttujia,
-``akvaariositaatti'' tähän.
+Substanssimuuttujat ovat yksi ''kysymyspatteri'', jolla luodataan
+asenteita naisten roolista työmarkkinoilla. Aiheen pysyvää
+ajankohtaisuutta kuvaa hyvin The Economist - lehden artikkeli Saksojen
+yhdistymisen 30-vuotispäivänä (3.10.2020, ``A report\ldots reveals the
+interplay between policy and attitudes that influences the decision to
+work.''). Artikkeli on maksumuurin takana mutta tutkimus on vapaasti
+luettavissa (DIW Weekly Report 38 / 2020, S. 403-410)
+(\url{https://www.diw.de/de/diw_01.c.799302.de/publikationen/weekly_reports/2020_38_1/mothers_in_eastern_and_western_germany__employment_rates_and_attitudes_are_converging__full-time_employment_is_not.html})
 
-\textbf{kysymykset}
-
-\textbf{k} Taulukon @ref(tab:vartable1) kysymysten lyhyet versiot ovat
-datassa mukana. Sarakkeessa ``muuttuja'' on alkuperäisen aineiston
-muuttujanimi, kysymyksen tunnus on valittuun dataan luotu muuttujanimi.
-Auttaa vertailemaan tätä tutkielmaa moniin ISSP-datalla tehtyihin
-analyyseihin.
+Taulukon @ref(tab:vartable1) kysymysten lyhyet versiot ovat datassa
+mukana. Sarakkeessa ``muuttuja'' on alkuperäisen aineiston muuttujanimi,
+kysymyksen tunnus on valittuun dataan luotu muuttujanimi. Vertailu
+muihin samalla aineistoilla tehtyihin tutkimuksiin on helpompaa.
 
 \begin{longtable}[]{@{}ll@{}}
 \caption{ISSP2012:Työelämä ja perhearvot - kysymykset}\tabularnewline
@@ -588,12 +605,6 @@ Place of living: urban - rural\strut
 \textbf{k} Kyselylomakkeilla kysymykset olivat hieman pidempiä, kuvassa
 @ref(fig:suom-kys) osa suomenkielistä lomaketta.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/substvar_fi_Q1Q2.png'}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{figure}
 
 {\centering \includegraphics[width=0.5\linewidth]{img/substvar_fi_Q1Q2} 
@@ -603,107 +614,100 @@ Place of living: urban - rural\strut
 \caption{Suomenkielinen lomake}\label{fig:suom-kys}
 \end{figure}
 
-\textbf{taustamuuttujat}
+Valituista taustamuuttujista monet on kerätty haastattelulla.
+Tiedonkeruu, otantamenetelmät ja yksikkövastauskadon huomioiminen on
+tehty joka maassa omalla tavallaan. Aineistoissa on mukana painot joilla
+tulokset voidaan korottaa perusjoukon tasolle, mutta kansainvälisiä
+vertailupainoja ei syystä tai toisesta ole. Taustamuuttujat kuten
+koulutustaso on harmonisoitu vertailukelpoisiksi.
 
-\textbf{k} maa, sukupuoli, haastateltavan ikä, koulutustaso,
-``virallinen'' juridinen parisuhdestatus, pääasiallinen toimi (töissä,
-eläkkeellä jne), lasten lukumäärä perheessä ja asuinpaikka
-(maaseutu,suurkaupunki jne.), oma arvio sosiaalisesta asemasta (1-10).
-Kysymyksiä, tiedot tosin kerätty eri tavoin eri maissa.
+Tutkimuksen kohdeperusjoukko on 18-vuotiaat tai sitä vanhemmat,
+poikkeuksina Suomi (15 - 74 vuotiaat), Islanti, Japani, Etelä-Afrikka ja
+Venezuela.
 
-Vastaajan ikä
+Jos ohitetaan pienet erot kysymyksissä ja vastausvaihtoehdoissa jäljelle
+jää erävastauskato, kyselytutkimusten ominaisuus. Jostain syystä
+joihinkin kysymyksiin ei vastata. Esimerkiksi Ranskassa yli 20
+prosenttia kieltäytyi vastaamasta lasten (HHCHILDR) lukumäärää
+kysyttäessä, ja aika moni myös muissa perherakenteeseen liittyvissä
+kysymyksissä. Tässä tutkielmassa monimuuttujakorrespondenssianalyysiä
+käytetään tämän ongelman tai datan ominaisuuden analyysiin.
 
-\textbf{K} Aineistossa mukana puuttuvat vastaukset, puuttuvia ei ole
-kolmessa muuttujassa (maa, ikä ja sukupuoli). Muutamilla havainnoilla
-puuttui tieto iästä tai sukupuolesta, ja ne rajattiin pois.
+Poistin aineistosta havainnot, joissa tieto iästä tai sukupuolesta
+puuttuu (32969-32823 = 146 havaintoa).
 
-Kuvataan tarkemmin, kun käytetään luvussa 7.
+Aineiston luokittelu- ja järjestysasteikon muuttujat muunnetaan
+R-ohjelmiston factor-tietotyypiksi. Teen muunnokset useammassa vaiheessa
+heti kun data on luettu SPSS-tiedosta. Käsittelyssä koitan noudattaa
+helposti toistettavan tutkimuksen periaatteita (McNamara ja Horton
+(McNamara ja Horton
+\protect\hyperlink{ref-RefWorks:doc:5c3759c2e4b0085b307c82b5}{2018}) ),
+koodi ei saisi olla kovin virhealtista (''haurasta'') ja tarkistuksia
+tehdään paljon. Data-analyysin ja ehkä erityisesti
+korrespondenssianalyysin idea on kuitenkin operoida matriiseilla, lisätä
+ja poistaa rivejä ja sarakkeita ja rakennella mutkikkaampia matriiseja
+yksinkertaisemmista. Analyysivaiheessa koodi muuttuu hauraammaksi.
 
-\textbf{Miten aineistoa on käytetty?}.
-
-\textbf{Korrespondenssianalyysin esimerkkiaineistona}
+\textbf{Aineisto ja korrespondenssianalyysi}
 
 Michael Greenacre on käyttänyt aineistoa eri vuosilta
-luentomateriaaleissa (Helsinki 2017 MCA, viite Moodleen?) ja kahdessa
-oppikirjassa ((Greenacre
+luentomateriaaleissa kuten Helsingissä 2017(M. Greenacre
+\protect\hyperlink{ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca}{2017}) ja
+ainakin kahdessa oppikirjassaan((Greenacre
 \protect\hyperlink{ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c}{2010}),
 (M. J. Greenacre
-\protect\hyperlink{ref-RefWorks:doc:5a857a43e4b0ed2d44664d78}{2017})).ISSP
-- aineisto vuodelta 1989 on käytetty myös neljän
+\protect\hyperlink{ref-RefWorks:doc:5a857a43e4b0ed2d44664d78}{2017})).
+ISSP - aineisto vuodelta 1989 on käytetty myös neljän
 ``singuaariarvohajoitelmaan perustuvan menetelmän'' vertailuun(Greenacre
 \protect\hyperlink{ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76}{2003}).
-
-``We consider the joint analysis of two matched matrices which have
-common rows and columns, for example multivariate data observed at two
-time points or split according to a dichotomous variable. Methods of
-interest include principal components analysis for interval-scaled data,
-correspondence analysis for frequency data, log-ratio analysis of
-compositional data and linear biplots in general, all of which depend on
-the singular value decomposition. A simple result in matrix algebra
-shows that by setting up two matched matrices in a particular block
-format, matrix sum and difference components can be analysed using a
-single application of the singular value decomposition algorithm. The
-methodology is applied to data from the International Social Survey
-Program comparing male and female attitudes on working wives across
-eight countries. The resulting biplots optimally display the overall
-cross-cultural differences as well as the male--female differences. The
-case of more than two matched matrices is also discussed.''
-
 Blasius ja Thiessen ((Blasius ja Thiessen
 \protect\hyperlink{ref-RefWorks:doc:5b15542ee4b0e2616bc42dca}{2006}))
 arvioivat aineiston laatua ja ja maiden vertailtavuutta vuoden 1994
 aineistolla.
 
-``This paper provides empirically-based criteria for selecting Items and
-countries to develop measures of an underlying construct of interest
-that are comparable in cross-national research. Using data from the 1994
-International Social Survey Program and applying multiple correspondence
-analysis to a set of common items in each of the 24 participating
-countries, we show that both the quality of the data, as well as its
-underlying structure - and therefore meaning - vary considerably between
-countries. The approach we use for screening countries and items is
-especially useful in situations where the psychometric properties of the
-items have not been well established in previous research.''
-
-\textbf{tärkeä rajaus} Substanssitutkimusta ei tässä käsitellä.
-
-``ISSP - saitilla'' löytyy bibliografia, ja hakupalveluillakin voi
-haravoida. \textbf{zxy} www.gesis.org - sivustolta löytyy myös
-\href{https://search.gesis.org/research_data/ZA5900}{julkaisuluettelo},
-voiko linkin laittaa alaviitteeksi tai suoraan leipätekstiin?
+Substanssitutkimusta en käsittele, näiden esimerkkien lisäksi ISSP:n ja
+GESIS-instituutin www-palveluista löytyy paljon muitankin.
 
 Sukupuoliroolien (gender roles) ja niihin liittyvien asenteiden
 vertailevaa kansainvälistä (cross-cultural) tutkimusta on tehty paljon.
 Tutkimusongelman sisällöllisten ja teoreettisen kysymysten nykytilaa
-kuvaa Walterin(Walter
-\protect\hyperlink{ref-RefWorks:doc:5bd08fb6e4b05c5447c9a9f9}{2018})
-tuore artikkeli. Omnibus surveys ?
+kuvaa tuore artikkeli (Walter
+\protect\hyperlink{ref-RefWorks:doc:5bd08fb6e4b05c5447c9a9f9}{2018}).
+
+Toisessa esimerkissä (Ferragina ja Seeleib-Kaiser
+\protect\hyperlink{ref-RefWorks:doc:5bd0a663e4b0c91dcf7c4be9}{2015})
+tutkitaan ensin 18 OECD-maan perhepolitiikan muutoksia kolmen viime
+vuosikymmenen ajalta. Näkökulma on työllisyyspolitiikka ja menetelmänä
+monimuuttuja-korrespondenssianalyysi (MCA). Havaituille kehityssuunnille
+etsitään toisessa vaiheessa selityksiä. Aineistona on viisi
+kansainväliseen vertailuun soveltuvaa aineistoa, yhtenä niistä ISSP:n
+data kolmelta kierrokselta (1988,1994,2002).
 
 \hypertarget{yksinkertainen-korrespondenssianalyysi}{%
 \chapter{Yksinkertainen
 korrespondenssianalyysi}\label{yksinkertainen-korrespondenssianalyysi}}
 
-\textbf{k1} Yksi kysymys, kuusi maata, peruskäsitteet
+\textbf{k1} Korrespondenssianalyysin geometriset periaatteet ja kuvien
+tulkinnan oleelliset asiat voi esittää yksinkertaisen
+korrespondenssianalyysin avulla (MG ja Hastie). Tässä jaksossa
+aineistoksi valitaan yksi subsatanssimuuttuja ja kuusi maata.
+Taustamuuttujia ovat vastaajan ikä ja sukupuoli ja maa. Aineistosta
+jätettiin pois kaikki havainnot joissa vastaustieto puuttui.
+Taustamuuttujissa puuttuvia tietoja ei ole.
 
-\textbf{k2} Luvun tärkeimmät asiat; mitä on luvassa?
+\textbf{k2} Yksinkertainen korrespondenssianalyysi on yhden taulukon
+analyysiä. Peruskäsitteet ja niiden yhteys dataan on helpompi hahmottaa
+pienessä aineistosssa, aina voi katsoa koko dataaa.
 
 \hypertarget{uxe4iti-tuxf6issuxe4--kuxe4rsiikuxf6-lapsi}{%
 \section{Äiti töissä -kärsiikö
 lapsi?}\label{uxe4iti-tuxf6issuxe4--kuxe4rsiikuxf6-lapsi}}
 
 \textbf{k1}``Alle kouluikäinen lapsi todennäköisesti kärsii, jos hänen
-äitinsä käy työssä''. Lyhennän muotoon äiti töissä. ISSP-tutkimuksissa
-kaksi kysymystä, joissa sana ``äiti'', MG havainnut vastausten jakaumat
-poikkeaviksi (\textbf{\#V ?}).
+äitinsä käy työssä''.
 
-\textbf{zxy} Edellisessä luvussa on esitelyt aineisto, ja kerrottu
-rajaukset.
-
-Tarkistetaan uudet muuttujat (koodilohkon tulostus pois tarvittaessa).
-
-\hypertarget{kahden-muuttujan-frekvenssitaulukon-analyysi}{%
-\section{Kahden muuttujan frekvenssitaulukon
-analyysi}\label{kahden-muuttujan-frekvenssitaulukon-analyysi}}
+ISSP-tutkimuksissa kaksi kysymystä, joissa sana ``äiti'', MG havainnut
+vastausten jakaumat poikkeaviksi (\textbf{\#V ?}).
 
 \textbf{k} Kolme taulukkoa: frekvenssitaulukko, riviprosentit ja
 sarakeprosentit
@@ -783,10 +787,22 @@ riviprosenttientaulukko, vertaillaan vastausten jakaumia maiden
 välillä.Taulukon sarakkeet ovat muuttujia ja rivit havaintoja.
 Sarakeprosentit antavat toisen näkökulmaan samaan dataan.
 
+Tavoitteena on korrespondenssianalyysin kartta, jossa rivi- ja
+sarakepisteet on esitetty samassa kuvassa. Sarakeprosenttien taulukossa
+on esitetty sarakkeiden suhteelliset jakaumat.
+
+Näitä suhteellisia rivejä ja sarakkeita kutsutaan
+korrespondenssianalyysissä profiileiksi.
+
+Frekvenssitaulukon reunajakaumat eli rivi- ja sarakesummat jaettuna
+havaintojen lukumäärällä ovat profiilien massoja.
+
 \textbf{k} Rivit on saatu alkuperäisestä aineistosta osajoukkojen
 summina. MG:n terminologialla ``samples''.
 
-\textbf{Kuvat}
+Rivi- ja sarakeprofiileja verrataan niiden keskiarvoprofiiliin.
+Seuraavat kaksi kuvaa näyttävät miten eri profiilit poikkeavat
+keskiarvostaan.
 
 \begin{figure}
 \centering
@@ -800,16 +816,18 @@ summina. MG:n terminologialla ``samples''.
 \caption{Q1b: riviprofiilit ja keskiarvorivi}
 \end{figure}
 
-Mikä on rivien ja sarakkeiden suhde?
+\textbf{edit} Tässä esitellään ovelasti CA:n tripletin kaksi jäsentä,
+massat ja profiilit. khii2-etäisyys on kolmas. Triplettiin liittyy
+``kvartetti'', josta tässä esitellään inertia.
 
-Tähän klassiseen kysymykseen korrespondenssianalyysi tarjoaa oman
-ratkaisunsa. Siinä rivit ja sarakkeet esitetään samassa kuvassa, ja
-riippuutta tutkitaan tulkitsemalla tämä kuva tai ``kartta''.
+Mikä on rivien (havaintojen) ja sarakkeiden (muuttujien) yhteys?
 
 Kahden luokittelumuuttujan riippuvuutta voidaan testata \(\chi^{2}\) -
-testillä. Testisuure saadaan laskemalla yhten jokaisen solun havaittujen
-ja odotetettujen (riippumattomuushypoteesi) frekvenssien erotukset
-muodossa
+testillä. Riippumattomuushypoteesin mukainen odotettu solufrekvenssi on
+taulukon @ref(tab:simpeCA-frekTa1) reunajakaumien alkioiden tulo.
+
+Testisuure saadaan laskemalla yhten jokaisen solun havaittujen ja
+odotetettujen frekvenssien erotukset muodossa
 
 \begin{equation}
   \chi^{2} = \frac{(havaittu - odotettu)^2} {odotettu}
@@ -872,9 +890,23 @@ painoina ovat rivien massat \(m_{i}\) ja summa lasketaan yli rivien
  (\#eq:inert2)
 \end{equation}
 
-Tässä esitystavassa viite on CAiP, teorialiitteessä tarkemmin. Tarkoitus
-on esittää yksinkertaisesti taulukon datan analyysin käsitteet ja CA:n
-peruskäsitteet profiili, massa ja \(\chi^{2}\) - etäisyys
+\textbf{edit} Tässä esitystavassa viite on CAiP, teorialiitteessä
+tarkemmin. Tarkoitus on esittää yksinkertaisesti taulukon datan
+analyysin käsitteet ja CA:n peruskäsitteet profiili, massa ja
+\(\chi^{2}\) - etäisyys
+
+\textbf{k} ca-ratkaisu: rivi- ja sarekepilvien dimensio on sarakkeiden
+tai rivien lukumäärä vähennettynä yhdellä, pienempi kahdesta
+vaihtoehdosta. Tämä seuraa yksikertaisesti rivi- ja sarakeprofiilien
+suhteellisuudesta, niiden summat ovat 1.
+
+\textbf{k} Etsitään kaksiulotteinen ratkaisu (taso), joka minimoi
+pisteiden khii2-etäisyyksien poikkeamien summan eli on mahdollisimman
+lähellä pisteitä.
+
+\textbf{K} rivi- ja sarakeongelma ratkaisu johtaa saamaan
+lopputulokseen. Tämä duaalisuus on korrespondenssianalyysin
+perusominaisuuksia.
 
 \hypertarget{ca---esimerkki}{%
 \section{CA - esimerkki}\label{ca---esimerkki}}
@@ -892,8 +924,9 @@ peruskäsitteet profiili, massa ja \(\chi^{2}\) - etäisyys
 kontribuutio jne), koodilohkon fig.cap ``ylimmän tason'' otsikko.
 
 \textbf{edit2} Akseleiden tekstit (Dimensio 1\ldots.jne) asetettu käsin,
-ikävä kyllä myös selitetyn inertian osuus. Ainakin tästä ensimmäisestä
-kuvasta ne kannattaa jättää pois, spoileri!
+ikävä kyllä myös selitetyn inertian osuus. CA-kartoissa tämä on niin
+oleellinen asia, että akselien nimet voi muutttaa vasta
+esitysgrafiikassa, ei data-analyysissä. Dim1 ja Dim2 kuuluvat kuviin.
 
 \textbf{edit3} par(cex = 1) ennen plot-komenota muuttaa valitettavasti
 ``kaiken'' kokoa. Antaa olla, kun on graafista data-analyysiä. Selkeys
@@ -902,7 +935,8 @@ tärkeämpää kuin ulkoasu.
 \textbf{k} Kartan tulkinta
 
 \textbf{k} Prosentit - kuinka paljon kokonaisinertiasta saadaan kuvattua
-(``selitettyä'').
+(``selitettyä'') kahdessa ulottuvuudessa? Miten se jakautuu
+ensimmäiselle ja toiselle akselille?
 
 \textbf{k} Dimenisoiden tulkinta sarakepisteiden avulla: mitä on
 oikealla ja vasemmalla? Kaukana on kaukana, mutta lähellä voi olla
@@ -935,6 +969,10 @@ tulkintaa!
 \hypertarget{korrespondenssianalyysin-peruskuxe4sitteet}{%
 \section{Korrespondenssianalyysin
 peruskäsitteet}\label{korrespondenssianalyysin-peruskuxe4sitteet}}
+
+huom: riippumattomuushypoteesin oletukset eivät välttämättä ole voimassa
+kaikissa aineistoissa. Khii2-etäisyysmittaa käytetään silti, sen
+perustelu on paljon yleisempi,
 
 \textbf{ks} Mitä käsitteitä tässä esitellään? Viittaukset
 teorialiitteeseen, ja tulkinnan hankaluudet (MG ``loose ends'' - paperi)
@@ -1011,7 +1049,11 @@ pdf-tulostus on erilainen!
 \caption{Q1b: lapsi kärsii jos äiti on töissä}\label{fig:G1-3asymmContrib1}
 \end{figure}
 
-\textbf{Suhteelliset kontribuutiot} Oletuspistekoko ok.
+Rivi- ja sarakesymbolien koko on suhteessa pisteen massaan, mutta eroja
+ei tässä kovin selkeästi näe.Suhteellisen värisävyn erot näyttävät
+absoluuttisten kontribuutioiden erot selkeästi.
+
+\textbf{Suhteelliset kontribuutiot}
 
 \begin{figure}
 
@@ -1046,12 +1088,33 @@ khii2-etäisyyksiä, jos tarpeen niin teoria-liitteeseen.
 \caption{Q1b: lapsi kärsii jos äiti on töissä}\label{fig:simpleCA3map1}
 \end{figure}
 
-Ei kovin isoja eroja, tässä datassa.
+Ei kovin isoja eroja, tässä datassa. Vilkaistaan myös absoluuttisia
+kontribuutioita.
 
-\hypertarget{yksinkertaisen-korrespondenssianalyysin-laajennuksia-1---tuxe4ydentuxe4vuxe4t-pisteet}{%
-\chapter{Yksinkertaisen korrespondenssianalyysin laajennuksia 1 -
-täydentävät
-pisteet}\label{yksinkertaisen-korrespondenssianalyysin-laajennuksia-1---tuxe4ydentuxe4vuxe4t-pisteet}}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{JH_capaper_files/figure-latex/simpleCA3map2-1} 
+
+}
+
+\caption{Q1b: lapsi kärsii jos äiti on töissä}\label{fig:simpleCA3map2}
+\end{figure}
+
+\hypertarget{karttojen-erot}{%
+\section{Karttojen erot}\label{karttojen-erot}}
+
+Yksinkertaisen korrespondenssianalyysin peruskuva on symmetrinen kartta.
+Ehkä yllättäen sen ``tulkinta on edelleen menetelmän kaikkein
+kiistanalaisin aspekti.'' (M. J. Greenacre
+\protect\hyperlink{ref-RefWorks:doc:5a857a43e4b0ed2d44664d78}{2017})
+(s.295),(M. Greenacre
+\protect\hyperlink{ref-RefWorks:doc:5c768b09e4b02df9431e950a}{2006}).
+vrt. myös, Johdanto, SPSS - kritiikki.
+
+\textbf{k} Miksi symmetrinen kartta on paras oletus?
+
+\hypertarget{tuxe4ydentuxe4vuxe4t-pisteet}{%
+\chapter{Täydentävät pisteet}\label{tuxe4ydentuxe4vuxe4t-pisteet}}
 
 \textbf{edit} Edellisssä luvussa selitetty barysentrinen keskiarvopiste;
 teorialiitteessä hieman laveammin.
@@ -1059,12 +1122,16 @@ teorialiitteessä hieman laveammin.
 \textbf{edit} CA:n joustava käyttö vaatii matriisioperaatioita, ja muuta
 datan rakenteen muokkausta (rivien lisääminen input-dataan jne.).
 
-\hypertarget{tuxe4ydentuxe4vuxe4t-pisteet-supplementary-points}{%
-\section{Täydentävät pisteet (supplementary
-points)}\label{tuxe4ydentuxe4vuxe4t-pisteet-supplementary-points}}
-
 Tekstistä oma dokkari, eri käyttötapaukset lyhyesti. Edellisen luvun
 asymmetrisen kartan avulla perustellaan, miten pisteitä voidaaan lisätä.
+
+\hypertarget{tuxe4ydentuxe4vuxe4t-pisteet-1}{%
+\section{Täydentävät pisteet}\label{tuxe4ydentuxe4vuxe4t-pisteet-1}}
+
+\textbf{edit} Tiivisti tärkeimmät käyttötapaukset. CA:n peruskäsitteet
+ja numeeriset tulokset selitetty edellä.
+
+\textbf{ks} Passiiviset pisteet ja niiden käyttötarkoitukset
 
 \hypertarget{saksan-ja-belgian-alueet}{%
 \section{Saksan ja Belgian alueet}\label{saksan-ja-belgian-alueet}}
@@ -1081,25 +1148,35 @@ asymmetrisen kartan avulla perustellaan, miten pisteitä voidaaan lisätä.
 \CommentTok{# suppoint1_tab1 <- read_rds("suppoint1tab1.rds")}
 \CommentTok{# suppoint1_tab1 # tarkistus ok}
 
-\CommentTok{# BeDealueTable <- ISSP2012esim1.dat %>% tableX(maa3, Q1b, type = "row_perc")}
+\NormalTok{BeDealueTable <-}\StringTok{ }\NormalTok{ISSP2012esim1.dat }\OperatorTok{%>%}\StringTok{ }\KeywordTok{tableX}\NormalTok{(maa3, Q1b, }\DataTypeTok{type =} \StringTok{"row_perc"}\NormalTok{)}
 
-\CommentTok{# knitr::kable(BeDealueTable , digits = 2, booktabs = TRUE,}
-\CommentTok{#            caption = "Q1b vastaukset, Saksan ja Belgian alueet")}
-
-\CommentTok{# Q1b vastaukset, Saksan ja Belgian alueet}
-\CommentTok{# S s   ?   e   E   Total}
-\CommentTok{# bF    5.04    23.81   25.89   30.83   14.43   100.00}
-\CommentTok{# bW    10.82   21.02   18.57   24.08   25.51   100.00}
-\CommentTok{# bB    17.03   20.94   16.63   23.87   21.53   100.00}
-\CommentTok{# BG    12.81   42.89   22.26   20.63   1.41    100.00}
-\CommentTok{# dW    11.40   26.82   11.83   32.13   17.82   100.00}
-\CommentTok{# dE    5.85    11.33   10.97   29.80   42.05   100.00}
-\CommentTok{# DK    5.04    17.15   10.95   16.71   50.14   100.00}
-\CommentTok{# FI    4.23    16.94   13.42   38.11   27.30   100.00}
-\CommentTok{# HU    21.97   28.89   22.57   19.06   7.52    100.00}
-\CommentTok{# All   9.95    23.76   16.79   26.10   23.41   100.00}
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(BeDealueTable , }\DataTypeTok{digits =} \DecValTok{2}\NormalTok{, }\DataTypeTok{booktabs =} \OtherTok{TRUE}\NormalTok{,}
+           \DataTypeTok{caption =} \StringTok{"Q1b vastaukset, Saksan ja Belgian alueet"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{longtable}[]{@{}lllllll@{}}
+\caption{Q1b vastaukset, Saksan ja Belgian alueet}\tabularnewline
+\toprule
+& S & s & ? & e & E & Total\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+& S & s & ? & e & E & Total\tabularnewline
+\midrule
+\endhead
+bF & 5.04 & 23.81 & 25.89 & 30.83 & 14.43 & 100.00\tabularnewline
+bW & 10.82 & 21.02 & 18.57 & 24.08 & 25.51 & 100.00\tabularnewline
+bB & 17.03 & 20.94 & 16.63 & 23.87 & 21.53 & 100.00\tabularnewline
+BG & 12.81 & 42.89 & 22.26 & 20.63 & 1.41 & 100.00\tabularnewline
+dW & 11.40 & 26.82 & 11.83 & 32.13 & 17.82 & 100.00\tabularnewline
+dE & 5.85 & 11.33 & 10.97 & 29.80 & 42.05 & 100.00\tabularnewline
+DK & 5.04 & 17.15 & 10.95 & 16.71 & 50.14 & 100.00\tabularnewline
+FI & 4.23 & 16.94 & 13.42 & 38.11 & 27.30 & 100.00\tabularnewline
+HU & 21.97 & 28.89 & 22.57 & 19.06 & 7.52 & 100.00\tabularnewline
+All & 9.95 & 23.76 & 16.79 & 26.10 & 23.41 & 100.00\tabularnewline
+\bottomrule
+\end{longtable}
 
 Taulukko, Saksan ja Belgian alueet ja maaprofiilit.
 
@@ -1119,7 +1196,7 @@ ole samat.
 \caption{Q1b: Saksan ja  Belgian aluejako }\label{fig:suppointCA2map1}
 \end{figure}
 
-\textbf{k} Maaåpisteet alueiden barysentrinen keskiarvo. Tulkinta.
+\textbf{k} Maapisteet alueiden barysentrinen keskiarvo. Tulkinta.
 
 \begin{figure}
 
@@ -1288,9 +1365,10 @@ Kehno kvalitetti 2d-ratkaisussa saa kuvissa selityksen.
 \includegraphics[width=11.07in]{img/3dSymMap_1}
 \includegraphics[width=12.36in]{img/3dSymMap_2}
 
-\hypertarget{yksinkertaisen-korrespondenssianalyysin-laajennuksia-2---yhteisvaikutusmuuttujat}{%
-\chapter{Yksinkertaisen korrespondenssianalyysin laajennuksia 2 -
-yhteisvaikutusmuuttujat}\label{yksinkertaisen-korrespondenssianalyysin-laajennuksia-2---yhteisvaikutusmuuttujat}}
+\hypertarget{yhteisvaikutusmuuttujat}{%
+\chapter{Yhteisvaikutusmuuttujat}\label{yhteisvaikutusmuuttujat}}
+
+\textbf{ks} ``Interactive coding''
 
 \textbf{edit} Yksinkertaisin tapa ottaa muita muuttujia mukaan
 analyysiin.
@@ -1326,9 +1404,6 @@ m1,\ldots,m6. Muuttujien nimet kannattaa pitää mahdollisimman lyhyinä.
 Ikäjäkauma painottuu kaikissa maissa jonkinverran vanhempiin
 ikäluokkiin. Nuorempien ikäluokkien osuus on (alle 26-vuotiaat ja alle
 26-35 - vuotiaat) varsinkin Bulgariassa (BG) ja Unkarissa (HU) pieni.
-
-\hypertarget{ikuxe4-ja-sukupuoli-1}{%
-\subsection{Ikä ja sukupuoli}\label{ikuxe4-ja-sukupuoli-1}}
 
 \textbf{k} Ikä- ja sukupuoliryhmät yli kaikkien maiden; profiilit
 keskiarvoja. Ei kovin pätevää analyysiä, yleiskuva muuttujasta.
@@ -1542,13 +1617,15 @@ painottuu kaikissa maissa vanhempiin ikäluokkiin.
 massa ja suuri kontribuutio? Ei löydy (Galkussa tuloksia), mutta jo
 kuvan tukkoisuus vaatii luokkien yhdistelyä. Aika työlästä!
 
-\hypertarget{korrespondenssianalyysin-laajennuksia-3---osajoukon-ca}{%
-\chapter{Korrespondenssianalyysin laajennuksia 3 - osajoukon
-CA}\label{korrespondenssianalyysin-laajennuksia-3---osajoukon-ca}}
+\hypertarget{osajoukon-korrespondenssianalyysi}{%
+\chapter{Osajoukon
+korrespondenssianalyysi}\label{osajoukon-korrespondenssianalyysi}}
 
 \textbf{k} Osajoukon korrespondenssianalyysin tarve: kuvat menevät
-tukkoon. Kun muuttujia on paljon, kartat kertovat vain hyvin yleisiä ja
-tunnettuja asioita (MG).
+tukkoon. Kun muuttujia on paljon kartat ovat täynnä pisteitä ja niitä on
+vaikea lukea. Usein myös havaitaan, että ratkaisun päädimensiot kertovat
+ylllätyksettömän ilmeisen tarinan, ja kiinnostavammat yhteydet ovat
+piilossa ylemmissä dimensioissa (MG ja Pardo, ``Vihreä kirja'' ss. 198).
 
 \textbf{k} Teoreettinen idea: inertian dekomoponointi (taas). Lasketaan
 ensin ca-ratkaisu ja rajataan aineisto. Yksinkertainen toteuttaa. Massat
@@ -1556,20 +1633,18 @@ ja reunajakaumat säilyvä, ja siksi aineiston (``pilven'')
 kokonaisinertia voidaan jakaa osiin osajoukkojen inertiaksi. Uusia
 yhteyksiä näkyviin, tarkempi kuva datasta.
 
-\textbf{k} Subset-CA:n vaihtoehdot 1. Kuvan suurentaminen (png, pdf
-vektorigrafiikka) näytöllä - hyvä ensiaskel
+Kuvan tukkoisuuteen voi toki vaikuttaa muillakin keinoilla. Muuttujien
+arvoja voi yhdistellä, kuvasta voi jättää pois pisteitä joiden
+kontribuutio on pieni tai kuvaa voi yksinkertaisesti suurentaa
+analyysivaiheessa näytöllä.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
-\item
-  Kuva-alueen rajaaminen R-koodissa toimii hyvin, jos pitää tarkentaa
-  kuvaa origon lähelle.
-\end{enumerate}
+Kuva-aluetta voi myös rajata johonkin osaan kuvaa. Kaikki pisteet ovat
+kuitenkin mukana määräämässä ratkaisun geometriaa.
 
-Ongelma: kaikki havainnot ja muuttujien kategoriat määräävät edelleen
-koordinaatiston.
+Rivejä tai sarakkeita voi myös muuttaa passiivisiksi, mutta silloin ei
+saavuteta käytännöllistä inertian dekomponointi-ominaisuutta.
+MCA-jaksossa osajoukon analysointi on pääasia ja mahdollisia
+vaihtoehtoja käsitellään hieman lisää.
 
 Lähteet MG ja Prado (2006)(M. Greenacre ja Pardo
 \protect\hyperlink{ref-RefWorks:doc:5a857a44e4b0ed2d44664d87}{2006}),
@@ -1586,9 +1661,6 @@ sarakepisteitä täydeäntvinä pisteinä normaalisti. Osajoukon profiilit
 muuttuvat, niiden summa ei enään ole yksi, barysentristä ominaisuutta ei
 voi suoraan käyttää täydentävien rivipisteiden koordinaattien
 laskemiseen.
-
-\textbf{edit} tarina jatkuu MCA-jaksossa, jossa subset aivan oleellinen
-asia.
 
 \begin{figure}
 
@@ -1824,6 +1896,16 @@ Belgia on pulmallinen tapaus, omissa dimensioissaan.
 
 \textbf{k} MG:n jäsentely CA:n tutkimusasetelmista (within - between),
 kokoaan myös edeltävät analyysit ``saman katon alle''.
+
+\textbf{k} Idea: taulukoiden yhdistely ``supertaulukoksi'' tai
+matriisiksi, analysoidaan kahden muuttujan ristiintaulukoinnin
+laajennuksena useita kahden muuttujan ristiintaulukointeja.
+
+\textbf{k} MCA stacked\&concat - analyysin erikoistapauksena.
+
+\textbf{k} CA SVD:tä soveltavana ratkaisualgoritmina, jolle
+``syötetään'' sopiva matriisi. Benzecri: löydettettävä vain matriisi
+joka dekomponoidaan.
 
 \textbf{k1} kahden muuttujuajoukon väliset yhteydet
 
@@ -2068,10 +2150,30 @@ yhdistämisellä saadaan ote monenlaiseen tutkimusongelmaan. Benzecri:
 data-analyysissä on vain löydettävä oikea matriisi joka
 diagonalisoidaan.
 
-Ref:CAip ss. 177, HY2017\_MCA, Greenacre JAS 2013 (sovellus ISSP 1989,4
-kysymystä `pitäisikö äidin olla kotona', 8 maata), tässä artikkelissa
-``SVD-based methods'', joista yksi CA (muut biplots, PCA, compositional
-data/log ratios).
+Ref:CAip ss. 177 (M. J. Greenacre
+\protect\hyperlink{ref-RefWorks:doc:5a857a43e4b0ed2d44664d78}{2017}),
+HY2017\_MCA, Greenacre JAS 2013 (sovellus ISSP 1989,4 kysymystä
+`pitäisikö äidin olla kotona', 8 maata), tässä artikkelissa ``SVD-based
+methods'',joista yksi CA (muut biplots, PCA, compositional data/log
+ratios). (Greenacre
+\protect\hyperlink{ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76}{2003})
+
+\textbf{ABBA}``We consider the joint analysis of two matched matrices
+which have common rows and columns, for example multivariate data
+observed at two time points or split according to a dichotomous
+variable. Methods of interest include principal components analysis for
+interval-scaled data, correspondence analysis for frequency data,
+log-ratio analysis of compositional data and linear biplots in general,
+all of which depend on the singular value decomposition. A simple result
+in matrix algebra shows that by setting up two matched matrices in a
+particular block format, matrix sum and difference components can be
+analysed using a single application of the singular value decomposition
+algorithm. The methodology is applied to data from the International
+Social Survey Program comparing male and female attitudes on working
+wives across eight countries. The resulting biplots optimally display
+the overall cross-cultural differences as well as the male--female
+differences. The case of more than two matched matrices is also
+discussed.''
 
 Edellisen menetelmän variantti, jossa ryhmien väliset ja sisäiset erot
 saadaan esiin. Inertian jakaminen.
@@ -2113,46 +2215,28 @@ asia: CA:n skaalausominaisuudet ja visuaalinen tulkinta pätevät
 edelleen.
 
 \textbf{edit} Teorialiitteessä tästä enemmän, ranskalaiset hieman eri
-mieltä
+mieltä \textbf{Viitteitä}
+
+MG ja MG\&Prado ovat tutkineet ISSP-datalla tätä ongelmaa. Biplots In
+practice - kirja (Greenacre
+\protect\hyperlink{ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c}{2010}),
+ss.142- ``dimensions of middleness''. Mg ja Prado artikkelissaan (M.
+Greenacre ja Pardo
+\protect\hyperlink{ref-RefWorks:doc:5a857a44e4b0ed2d44664d87}{2006}) ja
+samasta teemasta laajentaen kokoomateoksessa (M. Greenacre ja Blasius
+\protect\hyperlink{ref-RefWorks:doc:5ab76b43e4b003f4468d1f07}{2006}),
+ss. 197-217. Aineistona jälkimmäisessä tutkimuksessa on sama
+kysymyssarja kuin tässä 1994 datasta. Kysymyksissä on jonkin verran
+eroja. Ensimmäisessä artikkelissa he kommentoivat vertaisarvioitsijoiden
+ehdotuksia. Kuvia voisi selkiyttää esittämällä vain osan pisteistä
+sarjassa karttoja, mutta ratkaisu perustuisi siinäkin koko dataan ja
+sitä nimenomaan ei haluta. Toinen ehdotus on yhdistää ne
+vastausvaihtoehdot jotka eivät ole tutkimuksen kohteena yhdeksi
+yhdistetyksi kategoriaksi. Tällöin osajoukon korrespondenssianalyysin
+kätevä inertia dekomponointi osajoukille ei toimisi. Ratkaisu ei toimi
+ollenkaan yleisimmissä osajoukoissa.
 
 \textbf{k} Data
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{# TinyTeX MikTeXin tilalle, testiprojektissa toimii mutta täällä sama virheilmoitus.}
-\CommentTok{# Kopioidaan taulukoinnit tähän, error=TRUE nin suoritus ei katkea virheeseen.}
-
-
-\CommentTok{#Tarkistus}
-
-\CommentTok{# MCAdata1jh.dat %>% tableX (a1, Q1am)}
-\CommentTok{# MCAdata1jh.dat %>% tableX (b1, Q1bm)}
-\CommentTok{# MCAdata1jh.dat %>% tableX (c1, Q1cm)}
-\CommentTok{# MCAdata1jh.dat %>% tableX (d1, Q1dm)}
-\CommentTok{# MCAdata1jh.dat %>% tableX (e1, Q1em)}
-\CommentTok{# MCAdata1jh.dat %>% tableX (a2, Q2am)}
-\CommentTok{# MCAdata1jh.dat %>% tableX (b2, Q2bm)}
-\CommentTok{# MCAdata1jh.dat %>% tableX(gaf, ga)}
-
-\CommentTok{# Perustietoja - TÄSSÄ UUSI PDF-VIRHEILMOITUS 7.11.2020}
-\CommentTok{# Ei tulosteta - kommentoidaan pois}
-
-\CommentTok{#MCAdata1jh.dat %>% tableX (maa,a1, type = "row_perc")}
-\CommentTok{#MCAdata1jh.dat %>% tableX (maa,b1, type = "row_perc")}
-\CommentTok{#MCAdata1jh.dat %>% tableX (maa,c1, type = "row_perc")}
-\CommentTok{#MCAdata1jh.dat %>% tableX (maa,d1, type = "row_perc")}
-\CommentTok{#MCAdata1jh.dat %>% tableX (maa,e1, type = "row_perc")}
-\CommentTok{#MCAdata1jh.dat %>% tableX (maa,a2,type = "row_perc")}
-\CommentTok{#MCAdata1jh.dat %>% tableX (maa,b2,type = "row_perc")}
-
-\CommentTok{#MCAdata1jh.dat %>% tableX(gaf, ga,type = "row_perc")}
-\CommentTok{#MCAdata1jh.dat %>% tableX(maa, age_cat,type = "row_perc")}
-\CommentTok{#MCAdata1jh.dat %>% tableX(maa, gaf,type = "row_perc")}
-\CommentTok{#MCAdata1jh.dat %>% tableX(maa, S, type = "row_perc")}
-\CommentTok{#MCAdata1jh.dat %>% tableX(maa, U, type = "row_perc")}
-\CommentTok{#MCAdata1jh.dat %>% tableX(maa, E, type = "row_perc")}
-\end{Highlighting}
-\end{Shaded}
 
 Taustamuuttujien taulukoissa on yllättävän isoja eroja, jotkut
 taulukoiden luokat ovat nollia tai hyvin vähän havaintoja. Luokkia
@@ -2249,10 +2333,11 @@ korrespondenssianalyysissä. Ne eivät edusta kysymystä vaan kysymyksen
 yhtä vastauskategoriaa, pitkä jono nollia ja ykkösiä. Rivipiste on
 vastauksiaan vastaavien sarakepisteiden keskiarvopiste. Jos vastaaja on
 valinnut vaihtoehdot (a1S, a2s,\ldots, b2?) se on näiden pisteiden
-keskiarvopiste. Oleellista MCA-kartan tulkinnassa on kuitenkin
-yleiskuvan muodostaminen, geometrinen tulkinta on hieman hankala.
-Skaalausominaisuudet MCA kuitenkin säilyttää (\textbf{Viite},
-teorialiitteessä hieman tarkemmin).
+keskiarvopiste.
+
+Oleellista MCA-kartan tulkinnassa on kuitenkin yleiskuvan muodostaminen,
+geometrinen tulkinta on hieman hankala. Skaalausominaisuudet MCA
+kuitenkin säilyttää (\textbf{Viite}, teorialiitteessä hieman tarkemmin).
 
 Myös riviprofiilit ovat samanlaisia, jokaisella rivilla on kuudessa
 kategoriassa (vastaukset ja puuttuva tieto) nollia ja yksi ykkönen.
@@ -2261,8 +2346,14 @@ GDA-kirjan (\textbf{viite}) ohjeen mukaan MCA-karttojen tulkinta pitäisi
 aloittaa yksilöiden pilven ääripäistä.
 
 Pistepilven muoto kertoo , kuinka pienenevä joukko vastaajia lähestyy
-kiilana puuttivien tietojen pisteitä. Pieni joukko määrää koko kartan
-koordinaatiston. (MG-vastaava kuva ekologiakirjassa \textbf{viite})
+kiilana puuttivien tietojen pisteitä. Kaikkiin kysymyksiin vastanneet
+ovat massana kuvan oikeassa laidassa. Pistepilvet oikealta vasemmalle
+kuvaavat kuinka moneen kysymykseen on jätetty vastaamatta.
+
+(MG-vastaava kuva (Greenacre
+\protect\hyperlink{ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c}{2010}),
+luku 14. ``dimenisions of middleness''.) Pieni joukko määrää koko kartan
+koordinaatiston.
 
 \textbf{Osajoukon MCA}
 
@@ -2522,24 +2613,61 @@ Vilkaistaan 3d-ratkaisua - onko kolmella keskimmäisellä vaihtoehdolla
 Jäsennysdokumentissa on muutama ajatus, ja viite. Kirjoitetaan tämä
 viimeiseksi.
 
+Blasius ja Thiessen ``This paper provides empirically-based criteria for
+selecting Items and countries to develop measures of an underlying
+construct of interest that are comparable in cross-national research.
+Using data from the 1994 International Social Survey Program and
+applying multiple correspondence analysis to a set of common items in
+each of the 24 participating countries, we show that both the quality of
+the data, as well as its underlying structure - and therefore meaning -
+vary considerably between countries. The approach we use for screening
+countries and items is especially useful in situations where the
+psychometric properties of the items have not been well established in
+previous research.'' (Blasius ja Thiessen
+\protect\hyperlink{ref-RefWorks:doc:5b15542ee4b0e2616bc42dca}{2006})
+
+``Surullinen totuus onnellisuustutkimuksesta'' Bond ja Lang
+(\protect\hyperlink{ref-RefWorks:doc:5c223412e4b0508a6674dec0}{2018})
+(ilman sulkuja) ja suluilla (Bond ja Lang
+\protect\hyperlink{ref-RefWorks:doc:5c223412e4b0508a6674dec0}{2018})
+
+Gifi-nimimerkillä kirjoittavat Jan De Leeuw jatkavat verkkokirjassaan
+(julkaistu bookdown-paketilla) (Leeuw, Mair, ja Groenen
+\protect\hyperlink{ref-RefWorks:doc:5faaf996e4b05416e98ff547}{2016})
+keskustelua konfirmatorisen ja data-analyyttisen eksploratiivisen
+lähestymistavan eroista. He ovat tiukasti eksploratiivisen linjan
+kannattajia, ja korostavat konfliktin pitkää historiaa. Nyt historia on
+heidän mielestään loppunut: ``We shall not pay much attention any more
+to these turf and culture wars, because basically they are over. Data
+analysis, in its multitude of disguises and appearances, is the winner.
+Classical statistics departments are gone, or on their way out. They may
+not have changed their name, but their curricula and hiring practices
+are very different from what they were 20 or even 10 years ago.''
+
 \hypertarget{liitteet}{%
 \chapter*{Liitteet}\label{liitteet}}
 \addcontentsline{toc}{chapter}{Liitteet}
 
-\hypertarget{korrespondenssianalyysin-teoriaa}{%
-\section{Korrespondenssianalyysin
-teoriaa}\label{korrespondenssianalyysin-teoriaa}}
+\hypertarget{liite-1-korrespondenssianalyysin-teoriaa}{%
+\section*{Liite 1: Korrespondenssianalyysin
+teoriaa}\label{liite-1-korrespondenssianalyysin-teoriaa}}
+\addcontentsline{toc}{section}{Liite 1: Korrespondenssianalyysin
+teoriaa}
 
 \hypertarget{korrespondenssianalyysin-perusyhtuxe4luxf6t-ja-kaavat}{%
-\subsection{Korrespondenssianalyysin perusyhtälöt ja
+\subsection*{Korrespondenssianalyysin perusyhtälöt ja
 kaavat}\label{korrespondenssianalyysin-perusyhtuxe4luxf6t-ja-kaavat}}
+\addcontentsline{toc}{subsection}{Korrespondenssianalyysin perusyhtälöt
+ja kaavat}
 
-\textbf{viitetiedot puuttuvat kaavoista}
+Tässä lähteenä Greenacren kirja(M. J. Greenacre
+\protect\hyperlink{ref-RefWorks:doc:5a857a43e4b0ed2d44664d78}{2017}) (ca
+in practice) ja sen liite ``Theory of CA''.
 
-Tässä lähteenä Greenacren kirja (ca in practice) ja sen liite Theory of
-CA . Muistiinpanoja löytyy, joissa viitataan myös Biplots in practice -
-kirjaan. Kevään 2017 kurssin luentokalvoja on myös käytetty. Lisäillään
-vielä käsitteitä LeRouxin ja Rouanetin kirjasta.
+\textbf{edit} Muistiinpanoja löytyy, joissa viitataan myös Biplots in
+practice - kirjaan. Kevään 2017 kurssin luentokalvoja on myös käytetty.
+Lisäillään vielä käsitteitä LeRouxin ja Rouanetin kirjasta, jos on
+tarvis.
 
 Datamatriisilla \(\boldsymbol{N}\) on \(I\) riviä ja \(J\) sarakketta
 (\(I x J\) ). Alkiot ovat ei-negatiivisia (eli nollat sallittuja) ja
@@ -2567,7 +2695,7 @@ ratkaisun kun sitä sovelletaan standardoituun residuaalimatriisiin
 \(\boldsymbol{S}\).
 
 \begin{equation}
-\boldsymbol{S} = \boldsymbol{D_r}^{-1/2}(\boldsymbol{P} - \boldsymbol{r}\boldsymbol{c}^T)\boldsymbol{D_c}^{-1/2} \label{A}
+\boldsymbol{S} = \boldsymbol{D_r}^{-1/2}(\boldsymbol{P} - \boldsymbol{r}\boldsymbol{c}^T)\boldsymbol{D_c}^{-1/2}
 (\#eq:svd1)
 \end{equation}
 
@@ -2585,13 +2713,14 @@ Residuaalimatriisi voidaan esittää myös ns. kontingenssi-suhdelukujen
 \end{equation}
 
 Toinen esitystapa on hyödyllinen, kun tarkastellaan CA:n yhteyksiä
-muihin läheisiin menetelmiin (log ratio analysis of compositional data,
-moniulotteinen skaalaus (?), lineaarinen diskriminanttianalyysi,
-kanoninen korrelaatioanalyysi, pääkomponettianalyysi, kaksoiskuvat,
-yleensä SVD-hajoitelmaan perustuvat dimensioden vähentämisen
-menetelmät).
+muihin läheisiin menetelmiin. Näitä menetelmiä kuten myös
+korrespondenssianalyysiä kutsutaan monilla nimillä:``suhteellisten
+osuuksien datan'' analyysi (log ratio analysis of compositiona data),
+moniulotteinen skaalaus, lineaarinen diskriminanttianalyysi, kanoninen
+korrelaatioanalyysi, pääkomponettianalyysi, kaksoiskuvat ja muutä
+SVD-hajoitelmaan perustuvat dimensioden vähentämisen menetelmät.
 
-Samat kaavat alkiomuodossa.
+Samat kaavat voi esittää myös alkiomuodossa:
 
 \begin{equation}
 s_{ij} = \frac{p_{ij}-r_{i}c_{j}} { \sqrt{r_{i}c_{j} } }
@@ -2603,8 +2732,11 @@ s_{ij} = \sqrt{r_{i}} \left( \frac{p_{ij}}{r_{i}c_{j}} \right) \sqrt{c_{j}} \;\;
 (\#eq:contrat21)
 \end{equation}
 
-Mitäköhän tuosta pitäisi nähdä? Selitykset löytyvät em.
-teorialiitteestä.
+Alkimuodosasa esitetyistä kaavoista näkee intuitivisesti rivi- ja
+sarakeratkaisujen sidoksen. Ratkaisujen duaalisuus on teoreettinen
+tulos, jonka voi perustella täsmällisesti algebrallisen geometrian
+avulla. Käytännössä rivi- ja sarekeongelman duaalisuus tarkoittaa sitä,
+että vain toinen ongelma on ratkaistava.
 
 Singulaariarvohajoitelma (singular value decomposition, SVD) matriisille
 \(\boldsymbol{S}\) on
@@ -2641,26 +2773,26 @@ sarakkeille.
 Rivien standardikoordinaatit
 
 \begin{equation}
-\boldsymbol{\Phi} = \boldsymbol{D_r}^{-\frac{1}{2}} \boldsymbol{U} \label{B}
+\boldsymbol{\Phi} = \boldsymbol{D_r}^{-\frac{1}{2}} \boldsymbol{U}
 (\#eq:rivistd1)
 \end{equation}
 
 Sarakkeiden standardikoordinaatit
 
 \begin{equation}
- \boldsymbol{\Gamma} = \boldsymbol{D_c}^{-\frac{1}{2}} \boldsymbol{V} \label{C}
+ \boldsymbol{\Gamma} = \boldsymbol{D_c}^{-\frac{1}{2}} \boldsymbol{V}
  (\#eq:sarakestd1)
 \end{equation}
 
 Rivien pääkoordinaatit
 
 \begin{equation}
- \boldsymbol{F} =   \boldsymbol{D_r}^{-\frac{1}{2}} \boldsymbol{U}  \boldsymbol{D_{\alpha}} = \boldsymbol{\Phi} \boldsymbol{D_{\alpha}} \label{D}
+ \boldsymbol{F} =   \boldsymbol{D_r}^{-\frac{1}{2}} \boldsymbol{U}  \boldsymbol{D_{\alpha}} = \boldsymbol{\Phi} \boldsymbol{D_{\alpha}}
 (\#eq:riviprinc1)
 \end{equation}
 
 Sarakkeiden pääkoordinaatit \begin{equation}
- \boldsymbol{G}  = \boldsymbol{D_c}^{-\frac{1}{2}} \boldsymbol{V} \boldsymbol{D_{\alpha}} = \boldsymbol{\Gamma}  \boldsymbol{D_{\alpha}} \label{E}
+ \boldsymbol{G}  = \boldsymbol{D_c}^{-\frac{1}{2}} \boldsymbol{V} \boldsymbol{D_{\alpha}} = \boldsymbol{\Gamma}  \boldsymbol{D_{\alpha}}
  (\#eq:sarakeprinc1)
 \end{equation}
 
@@ -2738,9 +2870,51 @@ dimensiossa sen inertia, suurimmasta pienimpään.
 Kokeillaan vielä kaavaviitteitä: kaavojen @ref(eq:khii21) ja
 @ref(eq:khii22) yhteyden pitäisi olla selkeä.
 
+\textbf{Pisteet ja projektio aliavaruuteen}
+
+Kuva on kurssimateriaaleista(M. Greenacre
+\protect\hyperlink{ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca}{2017}).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/CAquality.png'}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{img/CAquality} 
+
+}
+
+\caption{Pisteen projektio aliavaruuteen}\label{fig:projectionimg1}
+\end{figure}
+
+Kuvassa on esitetty korrespondenssianalyysin ratkaisun
+minimointiongelma. Pisteen projektio on sitä parempi mitä pienempi kulma
+on sentroidista pisteeseen piirtetyn janan ja pisteen projektion
+välillä. COR - tunnusluku ca-funktion numeerisissa tuloksissa tämän
+kulman kosinin neliö. Pisteen kuvauksen laatu (qlt) ca-tuloksissa on
+valitun approsimaation akseleiden kvaliteettien (COR) summa.
+
+Kuvasta voi myös hahmottaa sen periaatteen, että projektiossa kaukana
+olevat pisteet ovat kaukana myös alkuperäisessä avaruudessa.
+Projektiossa lähekkäin olevat pisteet voivat olla alkuperäisessä
+avaruudessa kaukana toisistaan, jos niiden projektion laatu on huono.
+
 \hypertarget{matriisit-ja-niiden-havainnollistaminen}{%
-\subsection{Matriisit ja niiden
+\subsection*{Matriisit ja niiden
 havainnollistaminen}\label{matriisit-ja-niiden-havainnollistaminen}}
+\addcontentsline{toc}{subsection}{Matriisit ja niiden
+havainnollistaminen}
+
+\textbf{edit} Nämä tässä varalla, jos matriisikaavoja tarvitaan lisää.
+Ehkä ei?
+
+Korrespondenssianalyysin sovelluksissa tutkimusongelman ratkaisu on
+usein sopivan matriisin rakentaminen.
+
+\textbf{edit: kaavaesimerkkejä}
 
 \begin{equation}
 A = \begin{bmatrix}
@@ -2761,8 +2935,6 @@ A = \begin{bmatrix}
     \end{bmatrix}
 \end{equation}
 
-Pinottujen ja konkatenoitujen matriisien havainnollistaminen?
-
 \begin{equation}
 A = \begin{bmatrix}
     A_{maa, Q1a} & A_{maa, Q1b}  \\
@@ -2770,30 +2942,23 @@ A = \begin{bmatrix}
     \end{bmatrix}
 \end{equation}
 
+\textbf{Pinotut tai yhdistetyt matriisit (``stacked and concatenated
+matrices'')}
+
 Yksinkertainen korrespondenssianalyysi on kahden luokittelumuuttujan
-määrittelmän frekvenssitaulukon analyysiä. Taulukon rivit ovat
-havaintoyksiköiden (individuals, havaintoyksikkö) aggregoituja summia,
-sarakkeet muuttujia.
-
-Analyysissä osa riveistä tai sarakkeista voidaan jättää pois ratkaisun
-laskennasta ns. passiviisiksi, ja esittää kartalla täydentävinä pisteinä
-(supplementary points). Ne eivät vaikuta ratkaisuun, eli teknisesti
-niiden massa on nolla, mutta pisteiden esityksen (projektion) tarkkuus
-voidaan arvioida. Täydentävien profiilien on kuintenkin oltava
-yhteismitallisia taulukon datan kanssa. Mikä tahansa ei käy (kts. CAinP,
-vast.luku).
-
-Pinotut tai yhdistetyt matriisit (``stacked matrices''). Yksinkertainen
-korrespondenssianalyysi on kahden luokittelumuuttujan määrittämän
-taulukon analyysiä, mutta sitä voi soveltaa myös usean muuttujan
-analyysiin. Menetelmän matemaattinen perusta ja ratkaisualgoritmi (SVD)
-toimivat, tulkinta vain muuttuu.
+määrittämän taulukon analyysiä, mutta sitä voi soveltaa myös usean
+muuttujan analyysiin. Menetelmän matemaattinen perusta ja
+ratkaisualgoritmi (SVD) toimivat, tulkinta vain muuttuu.
 
 Yksinkertaisin laajennus on lisätä alkuperäisen taulukon alle toinen
 taulukko. Rivit ovat esimerkissä maittan summattuja vastauksia, ja
 niiden alle voidaan lisätä joku toinen luokittelumuuttuja. Havaintojen
-määrä yhditetyssä (``pinotussa'') taulussa kaksinkertaistuu. Miksi tämä
-ei ei vaikuta tuloksiin vääristävästi??
+määrä yhditetyssä (``pinotussa'') taulussa kaksinkertaistuu.
+
+Taulukoiden yhdistämisen idea on inertian dekomponointi. Yhdistetyn
+matriisin inertia voidaan eri tavoin esittää alimatriisien inertian
+summana. Tällöin jokaisen alimatriisin reunajakauman tulee olla sama, ja
+puuttuvat tiedot vääristävät tuloksia.
 
 Merkitään edellisten analyysien kuuden maan ja viiden vastausvaihtoehdon
 taulukkoa matriisilla \(\boldsymbol{ A}_{I J}\), missä \(I\) on rivien
@@ -2818,9 +2983,44 @@ table) analyysistä, jossa useita kahden muuttujan taulukoita
 vastausten lisäksi analyysiin mukaan useamman kysymyksen vastaukset
 laajentamalla kahden päällekkäisen matriisin taulukkoa oikealle.
 
-\hypertarget{suomenkielinen-lomake-esimerkki}{%
-\section{Suomenkielinen lomake
-(esimerkki)}\label{suomenkielinen-lomake-esimerkki}}
+\textbf{Monimuuttuja-korrespondenssianalyysi MCA}
+
+Usean muuttujan korrespondenssianalyysissä tutkitaan usean muuttujan
+välisiä yhteyksiä. Kartan tulkinnan apuna siihen voidaan lisätä
+havaintojen sijaan niiden keskiarvopisteitä ja niille simuloituja
+luottamusellipsejä. Kuvien pääongelma on liian suuri määärä pisteitä, ja
+analyysin lopputulos on usein mahdollisimman yksinkertainen kartta.
+
+Usean muuttujan analyysissä kohteena on joko indikaattorimatriisi
+\(\boldsymbol{Z}\) tai Burtin matriisi \(\boldsymbol{B}\)
+
+Indikaattorimatriisissa rivit ovat havaintoja ja sarakkeet
+luokittelumuuttujan arvoja. Havaintoa vastaa rivi nollia ja arvo 1
+valitun vastausvaihtoehdon kohdalla. Tästä seuraa, että vain erilaiset
+vastaukset määrittävät rivien etäisyyksiä.
+
+Burtin matriisi on erikoistapaus yhdistetyistä matriiseista. Siihen on
+koottu kaikki tutkittavien muuttujien pareittan muodostetut taulukot.
+Diagonaalilla ovat muuttujien ristiintaulukoinnit itsensä kanssa.
+Ratkaisu riippuu vain näistä parittaisista taulukoista.
+
+Burtin matriisi on kätevä välivaihe matriisien yhdistelyssä.
+
+Molemmat matriisit paisuttavat keinotekoisesti kokonaisinertiaa, ja
+esimerkikisi kaksiulotteisen kartan selitetyn inertian osuudet jäävät
+melko pieniksi. Ratkaisuna on inertian oikaisu tai korjaus (adjusted
+inertia), jossa mm. poistetaan kokonaisinertialaskelmista Burtin
+matriisin diagonaalilla olevat alimatriisit. Näillä korjauksilla ei ole
+vaikutusta kartan pisteiden sijaintiin. Tämä menetelmä on ca-paketin
+mjca-funktion oletus.
+
+Kolmas vaihtoehto on ns. yhdistetty korrespondenssianalyysi (joint ca).
+
+\hypertarget{liite-2-suomenkielinen-lomake-esimerkki}{%
+\section*{Liite 2: Suomenkielinen lomake
+(esimerkki)}\label{liite-2-suomenkielinen-lomake-esimerkki}}
+\addcontentsline{toc}{section}{Liite 2: Suomenkielinen lomake
+(esimerkki)}
 
 Tämä kuva on myös tekstissä, kätevä tapa esittää siististi kysymysten
 pitkät versiot.
@@ -2831,9 +3031,11 @@ pitkät versiot.
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{tekninen-ympuxe4ristuxf6-ja-bookdown-paketti}{%
-\section{Tekninen ympäristö ja
-Bookdown-paketti}\label{tekninen-ympuxe4ristuxf6-ja-bookdown-paketti}}
+\hypertarget{liite-3-tekninen-ympuxe4ristuxf6-ja-bookdown-paketti}{%
+\section*{Liite 3: Tekninen ympäristö ja
+Bookdown-paketti}\label{liite-3-tekninen-ympuxe4ristuxf6-ja-bookdown-paketti}}
+\addcontentsline{toc}{section}{Liite 3: Tekninen ympäristö ja
+Bookdown-paketti}
 
 Muokataan tiiviimpi pätkä esimerkkireposta bookdown-testi1. Tämä kuva
 kertoo vain julkaisutekniikan ympäristön.
@@ -2859,13 +3061,15 @@ kertoo vain julkaisutekniikan ympäristön.
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{r---koodi}{%
-\section{R - koodi}\label{r---koodi}}
+\hypertarget{liite-4-r---koodi}{%
+\section*{Liite 4: R - koodi}\label{liite-4-r---koodi}}
+\addcontentsline{toc}{section}{Liite 4: R - koodi}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{# testaukseen 7.11.2020}
-\KeywordTok{options}\NormalTok{(}\DataTypeTok{tinytex.verbose =} \OtherTok{TRUE}\NormalTok{)}
+\CommentTok{# testaukseen 7.11.2020 virheilmoituksia varten arvo TRUE}
+\KeywordTok{options}\NormalTok{(}\DataTypeTok{tinytex.verbose =} \OtherTok{FALSE}\NormalTok{)}
+
 \CommentTok{# 18.10.2020}
 \KeywordTok{library}\NormalTok{(rgl)}
 \KeywordTok{library}\NormalTok{(ca)}
@@ -3045,16 +3249,15 @@ kertoo vain julkaisutekniikan ympäristön.
 \CommentTok{#}
 \CommentTok{# Q3a Should women work: Child under school age }
 \CommentTok{# Q3b Should women work: Youngest kid at school}
-\CommentTok{# 1= kokopäivätyö, 2 = osa-aikatyö, 3 = pysyä kotona, 8 = en osaa sanoa (can't choose), 9 = no answer}
+\CommentTok{# 1= kokopäivätyö, 2 = osa-aikatyö, 3 = pysyä kotona, 8 = en osaa sanoa}
+\CommentTok{# (can't choose), 9 = no answer}
 \CommentTok{#}
-\CommentTok{# Kysymysten Q3a ja Q3b eos-vastaus ei ole sama kuin "en samaa enkä eri  mieltä" (ns. neutraali }
-\CommentTok{# vaihtoehto), mutta kieltäytymisiä jne. (koodi 9) on aika vähän. Kolmessa }
-\CommentTok{# maassa ne on yhdistety: }
+\CommentTok{# Kysymysten Q3a ja Q3b eos-vastaus ei ole sama kuin "en samaa enkä eri  mieltä"}
+\CommentTok{# (ns. neutraali # vaihtoehto), mutta kieltäytymisiä jne. (koodi 9) on aika}
+\CommentTok{# vähän. Kolmessa # maassa ne on yhdistety: }
 \CommentTok{# (8 Can't choose, CA:can't choose+no answer, KR:don't know+refused, NL:don't know).}
 \CommentTok{# Kun SPSS-tiedostosta ei ole tuotu puuttuvan tiedon tarkempaa luokittelua,}
 \CommentTok{# erottelua ei voi tehdä.}
-\CommentTok{#}
-\CommentTok{# }
 \CommentTok{#}
 
 \NormalTok{substvars1 <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"V5"}\NormalTok{,}\StringTok{"V6"}\NormalTok{,}\StringTok{"V7"}\NormalTok{,}\StringTok{"V8"}\NormalTok{,}\StringTok{"V9"}\NormalTok{,}\StringTok{"V10"}\NormalTok{,}\StringTok{"V11"}\NormalTok{,}\StringTok{"V12"}\NormalTok{,}\StringTok{"V13"}\NormalTok{) }\CommentTok{# 9 muuttujaa}
@@ -3072,19 +3275,22 @@ kertoo vain julkaisutekniikan ympäristön.
 \CommentTok{#}
 \CommentTok{# AGE, SEX}
 \CommentTok{#}
-\CommentTok{# DEGREE - Highest completed degree of education: Categories for international comparison. }
-\CommentTok{# Slightly re-arranged subset of ISCED-97}
+\CommentTok{# DEGREE - Highest completed degree of education: Categories for international}
+\CommentTok{# comparison. Slightly re-arranged subset of ISCED-97}
 \CommentTok{#}
 \CommentTok{# 0 No formal education}
 \CommentTok{# 1 Primary school (elementary school)}
-\CommentTok{# 2 Lower secondary (secondary completed does not allow entry to university: obligatory school)}
-\CommentTok{# 3 Upper secondary (programs that allow entry to university or programs that allow to entry }
-\CommentTok{#   other ISCED level 3 programs - designed to prepare students for direct entry into the labour market)}
-\CommentTok{# 4 Post secondary, non-tertiary (other upper secondary programs toward labour market or technical formation)}
+\CommentTok{# 2 Lower secondary (secondary completed does not allow entry to university:}
+\CommentTok{#  obligatory school)}
+\CommentTok{# 3 Upper secondary (programs that allow entry to university or programs that}
+\CommentTok{#  allow to entry other ISCED level 3 programs - designed to prepare students for}
+\CommentTok{#  direct entry into the labour market)}
+\CommentTok{# 4 Post secondary, non-tertiary (other upper secondary programs toward labour}
+\CommentTok{#  market or technical formation)}
 \CommentTok{# 5 Lower level tertiary, first stage (also technical schools at a tertiary level)}
 \CommentTok{# 6 Upper level tertiary (Master, Dr.)}
 \CommentTok{# 9 No answer, CH: don't know}
-\CommentTok{# Yhdistelyt?}
+\CommentTok{# HUOM! R-factor - muunnoksessa koodaus on 1-7}
 \CommentTok{#}
 \CommentTok{# MAINSTAT - main status: Which of the following best describes your current situation?}
 \CommentTok{#}
@@ -3121,9 +3327,9 @@ kertoo vain julkaisutekniikan ympäristön.
 \CommentTok{# 99 No answer}
 \CommentTok{#}
 \CommentTok{# Voisi koodata dummymuuttujaksi lapsia (1) - ei lapsia (0).}
-\CommentTok{# Ranskan datassa on erittäin iso osa puuttuvia tietoja ( "99"", n. 20 %), myös }
-\CommentTok{# Austarlialla aika paljon. Sama tilanne myös muissa perheen kokoon liittyvissä }
-\CommentTok{# kysymyksissä.}
+\CommentTok{# Ranskan datassa on erittäin iso osa puuttuvia tietoja (yli 20 %), Sama tilanne}
+\CommentTok{# myös  muissa perheen kokoon liittyvissä kysymyksissä.  Myös Austarlialla aika}
+\CommentTok{# paljon puuttuvia vastauksia.}
 \CommentTok{#}
 \CommentTok{# MARITAL - Legal partnership status }
 \CommentTok{#}
@@ -3152,11 +3358,12 @@ kertoo vain julkaisutekniikan ympäristön.
 \CommentTok{# 7 Other answer}
 \CommentTok{# 9 No answer}
 \CommentTok{# 1 ja 2 vaihtelevat aika paljon maittain, parempi laskea yhteen. Unkarista puuttuu }
-\CommentTok{# jostain syystä kokonaan vaihtoehto 5.  Vaihotehdon 7 on valinnut vain 4 vastaajaa Ranskasta.}
-\CommentTok{# Yhdistetään 1 ja 2 = city, 3 = town, rural= 4, 5, 7}
+\CommentTok{# jostain syystä kokonaan vaihtoehto 5.  Vaihotehdon 7 on valinnut vain 4}
+\CommentTok{# vastaajaa Ranskasta.}
 \CommentTok{#}
 
-\NormalTok{bgvars1 <-}\StringTok{ }\KeywordTok{c}\NormalTok{( }\StringTok{"SEX"}\NormalTok{,}\StringTok{"AGE"}\NormalTok{,}\StringTok{"DEGREE"}\NormalTok{, }\StringTok{"MAINSTAT"}\NormalTok{, }\StringTok{"TOPBOT"}\NormalTok{, }\StringTok{"HHCHILDR"}\NormalTok{, }\StringTok{"MARITAL"}\NormalTok{, }\StringTok{"URBRURAL"}\NormalTok{)}
+\NormalTok{bgvars1 <-}\StringTok{ }\KeywordTok{c}\NormalTok{( }\StringTok{"SEX"}\NormalTok{,}\StringTok{"AGE"}\NormalTok{,}\StringTok{"DEGREE"}\NormalTok{, }\StringTok{"MAINSTAT"}\NormalTok{, }\StringTok{"TOPBOT"}\NormalTok{,}
+              \StringTok{"HHCHILDR"}\NormalTok{, }\StringTok{"MARITAL"}\NormalTok{, }\StringTok{"URBRURAL"}\NormalTok{)}
 
 \CommentTok{#Valitaan muuttujat}
 
@@ -3166,25 +3373,24 @@ kertoo vain julkaisutekniikan ympäristön.
 \NormalTok{ISSP2012jh1b.data <-}\StringTok{ }\KeywordTok{select}\NormalTok{(ISSP2012jh1a.data, }\KeywordTok{all_of}\NormalTok{(jhvars1)) }
 
 \CommentTok{# laaja aineisto - mukana havainnot joissa puuttuvia tietoja}
-\CommentTok{# hauska detalji URBRURAL - muuttujan metatiedoissa viite jonkun työaseman hakemistoon}
 \CommentTok{# str(ISSP2012jh1b.data) #32969 obs. of  23 variables }
 \CommentTok{# }
 \CommentTok{# SUBSTANSSIMUUTTUJAT}
 \CommentTok{#}
 \CommentTok{# $ V5      : 'haven_labelled' num  5 1 2 2 1 NA 2 4 2 2 ...}
-\CommentTok{#  ..- attr(*, "label")= chr "Q1a Working mom: warm relationship with children as a not working mom"}
+\CommentTok{#  ..- attr(*, "label")= chr "Q1a Working mom: warm relationship with children}
+\CommentTok{#       as a not working mom"}
 \CommentTok{#  ..- attr(*, "labels")= Named num  0 1 2 3 4 5 8 9}
 \CommentTok{#}
 \CommentTok{# ISSP2012jh1b.data$V5 näyttää tarkemmin rakenteen}
 \CommentTok{#}
 \CommentTok{# glimpse(ISSP2012jh1b.data)}
-\CommentTok{# str(ISSP2012jh1b.data) # 32969 obs. of  23 variables}
 
 \CommentTok{# Poistetaan havainnot, joissa ikä (AGE) tai sukupuolitieto puuttuu (5.7.2019)}
 
 \NormalTok{ISSP2012jh1c.data <-}\StringTok{ }\KeywordTok{filter}\NormalTok{(ISSP2012jh1b.data, (}\OperatorTok{!}\KeywordTok{is.na}\NormalTok{(SEX) }\OperatorTok{&}\StringTok{ }\OperatorTok{!}\KeywordTok{is.na}\NormalTok{(AGE)))}
 
-\KeywordTok{str}\NormalTok{(ISSP2012jh1c.data) }\CommentTok{# 32823 obs. of  23 variables, 32969-32823 = 146}
+\CommentTok{# str(ISSP2012jh1c.data) # 32823 obs. of  23 variables, 32969-32823 = 146}
 \CommentTok{# TARKISTUS 8.6.20 dplyr 1.0.0-päivitys: havaintojen ja muuttujien määrä ok.}
 
 \CommentTok{# VAIHE 1 - muuttujat joissa ei ole puuttuvia tietoja}
@@ -3785,6 +3991,24 @@ kertoo vain julkaisutekniikan ympäristön.
 \KeywordTok{validate_that}\NormalTok{(}\KeywordTok{length}\NormalTok{(}\KeywordTok{levels}\NormalTok{(ISSP2012jh1d.dat}\OperatorTok{$}\NormalTok{urbru)) }\OperatorTok{==}\StringTok{ }\DecValTok{5}\NormalTok{)}
 \KeywordTok{validate_that}\NormalTok{(}\KeywordTok{length}\NormalTok{(}\KeywordTok{levels}\NormalTok{(ISSP2012jh1d.dat}\OperatorTok{$}\NormalTok{urbrum)) }\OperatorTok{==}\StringTok{ }\DecValTok{6}\NormalTok{)}
 
+\NormalTok{issp_docname <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"Variable Report"}\NormalTok{, }\StringTok{"Study Monitoring Report"}\NormalTok{,}\StringTok{"Basic Questionnaire"}\NormalTok{,}
+                  \StringTok{"Contents of ISSP 2012 module"}\NormalTok{, }\StringTok{"Questionnaire Development"}\NormalTok{)}
+\NormalTok{issp_docdesc <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"Perusdokumentti, muuttujien kuvaukset ja taulukot"}\NormalTok{,}
+                  \StringTok{"tiedokeruun toteutus eri maissa"}\NormalTok{,}
+                  \StringTok{"Maittain sovellettava kyselylomake"}\NormalTok{, }\StringTok{"substanssikysymykset taulukkona"}\NormalTok{,}
+                  \StringTok{"kyselylomakkeen laatiminen"}\NormalTok{)}
+\NormalTok{issp_docfile <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"ZA5900_cdb.pdf"}\NormalTok{, }\StringTok{"ZA5900_mr.pdf"}\NormalTok{, }\StringTok{"ZA5900_bq.pdf"}\NormalTok{,}\StringTok{"ZA5900_overview.pdf"}\NormalTok{,}
+                  \StringTok{"ssoar-2014-scholz_et_al-ISSP_2012_Family_and_Changing.pdf"}\NormalTok{)}
+
+
+\NormalTok{col_isspdocs <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"dokumentti"}\NormalTok{,}\StringTok{"sisältö"}\NormalTok{,}\StringTok{"tiedosto"}\NormalTok{)}
+
+\NormalTok{ISSPdocsT.tbl <-}\StringTok{ }\KeywordTok{tibble}\NormalTok{(issp_docname, issp_docdesc, issp_docfile)}
+\KeywordTok{colnames}\NormalTok{(ISSPdocsT.tbl) <-}\StringTok{ }\NormalTok{col_isspdocs}
+
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(ISSPdocsT.tbl, }\DataTypeTok{booktab =} \OtherTok{TRUE}\NormalTok{,}
+             \DataTypeTok{caption =} \StringTok{' ISSP 2012: tärkeimmät dokumentit'}\NormalTok{)}
+
 
 \CommentTok{# Muuttuja taulukkona - karkea tapa}
 \CommentTok{# HUOM! Taulkot ovat hankalia, kun tulostus halutaan pdf- ja html- formaattiin}
@@ -3828,7 +4052,9 @@ kertoo vain julkaisutekniikan ympäristön.
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(jhVarTable1.tbl, }\DataTypeTok{booktab =} \OtherTok{TRUE}\NormalTok{,}
                \DataTypeTok{caption =} \StringTok{"ISSP2012:Työelämä ja perhearvot - kysymykset"}\NormalTok{)}
 
+
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/substvar_fi_Q1Q2.png'}\NormalTok{)}
+
 \CommentTok{# UUSI DATA 30.1.20}
 \CommentTok{#}
 \CommentTok{# LUETAAN DATA G1_1_data2.Rmd - tiedostossa, luodaan faktorimuuttujat}
@@ -4035,10 +4261,12 @@ kertoo vain julkaisutekniikan ympäristön.
 \NormalTok{taulu2 <-}\StringTok{ }\NormalTok{ISSP2012esim1.dat }\OperatorTok{%>%}\StringTok{ }\KeywordTok{tableX}\NormalTok{(maa, Q1b, }\DataTypeTok{type =} \StringTok{"cell_perc"}\NormalTok{)}
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(taulu2,}\DataTypeTok{digits =} \DecValTok{2}\NormalTok{, }\DataTypeTok{booktabs =} \OtherTok{TRUE}\NormalTok{,}
              \DataTypeTok{caption =} \StringTok{"Kysymyksen Q1b vastaukset maittain, suhteelliset frekvenssit"}\NormalTok{)}
+
 \NormalTok{taulu3 <-}\StringTok{ }\NormalTok{ISSP2012esim1.dat }\OperatorTok{%>%}\StringTok{ }\KeywordTok{tableX}\NormalTok{(maa,Q1b,}\DataTypeTok{type =} \StringTok{"row_perc"}\NormalTok{)}
 
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(taulu3,}\DataTypeTok{digits =} \DecValTok{2}\NormalTok{, }\DataTypeTok{booktabs =} \OtherTok{TRUE}\NormalTok{,}
              \DataTypeTok{caption =} \StringTok{"Kysymyksen Q1b vastaukset, riviprosentit"}\NormalTok{)}
+
 \NormalTok{taulu4 <-}\StringTok{ }\NormalTok{ISSP2012esim1.dat }\OperatorTok{%>%}\StringTok{ }\KeywordTok{tableX}\NormalTok{(maa,Q1b,}\DataTypeTok{type =} \StringTok{"col_perc"}\NormalTok{)}
 
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(taulu4,}\DataTypeTok{digits =} \DecValTok{2}\NormalTok{, }\DataTypeTok{booktabs =} \OtherTok{TRUE}\NormalTok{,}
@@ -4116,6 +4344,7 @@ kertoo vain julkaisutekniikan ympäristön.
 \CommentTok{# apu1_df}
 \CommentTok{# apu1b_df}
 
+
 \CommentTok{# riviprofiilit ja keskiarvorivi -  18.9.2018}
 \NormalTok{apu2_df <-}\StringTok{ }\KeywordTok{as.data.frame}\NormalTok{(apu1)}
 \NormalTok{apu2_df <-}\StringTok{ }\KeywordTok{rbind}\NormalTok{(apu2_df, }\DataTypeTok{ka_rivi =} \KeywordTok{colSums}\NormalTok{(apu2_df))}
@@ -4164,14 +4393,16 @@ kertoo vain julkaisutekniikan ympäristön.
      \DataTypeTok{ylab =} \StringTok{"Dimensio 2: maltillinen/epävarma - radikaali/jyrkkä/varma (15.1%)"}\NormalTok{,}
      \DataTypeTok{main =} \StringTok{"symmetrinen kartta 1"}\NormalTok{,}
      \DataTypeTok{sub =} \StringTok{"Maiden massat eri suuruisia (otoskoko), pisteiden koko suhteessa massaan"}\NormalTok{)}
+
 \CommentTok{# asymmetrinen kartta - rivit pc ja sarakkeet sc}
 \CommentTok{# sarakkeet vektorikuvina}
 
-\KeywordTok{par}\NormalTok{(}\DataTypeTok{cex =} \FloatTok{0.7}\NormalTok{)}
+\CommentTok{# par(cex = 0.7)}
 \KeywordTok{plot}\NormalTok{(simpleCA1, }\DataTypeTok{map =} \StringTok{"rowprincipal"}\NormalTok{, }
      \DataTypeTok{arrows =} \KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{,}\OtherTok{TRUE}\NormalTok{), }
      \DataTypeTok{main =} \StringTok{"asymmetrinen kartta 1"}
 \NormalTok{    )}
+
 
 \CommentTok{# Piirretään Suomen riviprofiilista janat sarakepisteisiin - barysentinen keskiarvo}
 \CommentTok{# Rivipisteet pääkoordinaatteina (principal coordinates)}
@@ -4188,6 +4419,7 @@ kertoo vain julkaisutekniikan ympäristön.
 \NormalTok{         simpleCA1}\OperatorTok{$}\NormalTok{colcoord[, }\DecValTok{2}\NormalTok{], }\DataTypeTok{col =} \StringTok{"pink"}\NormalTok{)}
 
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/simpleCAasymmTulk2.png'}\NormalTok{)}
+
 \CommentTok{#par(cex = 0.6)}
 \KeywordTok{plot}\NormalTok{(simpleCA1, }\DataTypeTok{map =} \StringTok{"rowgreen"}\NormalTok{,}
      \DataTypeTok{contrib =} \KeywordTok{c}\NormalTok{(}\StringTok{"absolute"}\NormalTok{, }\StringTok{"absolute"}\NormalTok{),}
@@ -4209,10 +4441,18 @@ kertoo vain julkaisutekniikan ympäristön.
 \CommentTok{# Sama kartta - maiden massat vakiotu - simpleCA3 luotu koodilohkossa EkaCA}
 \CommentTok{# CA:n lähtötietona riviprofiilit}
 
-\KeywordTok{par}\NormalTok{(}\DataTypeTok{cex =} \FloatTok{0.6}\NormalTok{)}
+\CommentTok{#par(cex = 0.8)}
 \KeywordTok{plot}\NormalTok{(simpleCA3, }\DataTypeTok{map =} \StringTok{"symmetric"}\NormalTok{, }\DataTypeTok{mass =} \KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{,}\OtherTok{TRUE}\NormalTok{),}
 \DataTypeTok{main =} \StringTok{"symmetrinen kartta 2 "}\NormalTok{,}
 \DataTypeTok{sub =} \StringTok{"Maidet massat vakioitu (riviprofiilidata)"}\NormalTok{)}
+
+
+\KeywordTok{plot}\NormalTok{(simpleCA3, }\DataTypeTok{map =} \StringTok{"rowgreen"}\NormalTok{,}
+     \DataTypeTok{contrib =} \KeywordTok{c}\NormalTok{(}\StringTok{"absolute"}\NormalTok{, }\StringTok{"absolute"}\NormalTok{),}
+     \DataTypeTok{mass =} \KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{,}\OtherTok{TRUE}\NormalTok{),}
+     \DataTypeTok{arrows =} \KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{),}
+     \DataTypeTok{main =} \StringTok{"kontribuutiokartta 3"}\NormalTok{,}
+     \DataTypeTok{sub =} \StringTok{"sarakevektorin ja rivipisteiden värin tummuus = absoluuttinen kontribuutio, riviprofiilidata"}\NormalTok{)}
 
 \CommentTok{# riviprofiilitaulukko aiheuttaa virheen PDF-tulostuksessa, JH_capaper.Rmd}
 \CommentTok{# tiedoston voi kuitenkin renderöidä knit-napilla RStudiossa pdf-tiedostoksi.}
@@ -4222,23 +4462,10 @@ kertoo vain julkaisutekniikan ympäristön.
 \CommentTok{# suppoint1_tab1 <- read_rds("suppoint1tab1.rds")}
 \CommentTok{# suppoint1_tab1 # tarkistus ok}
 
-\CommentTok{# BeDealueTable <- ISSP2012esim1.dat %>% tableX(maa3, Q1b, type = "row_perc")}
+\NormalTok{BeDealueTable <-}\StringTok{ }\NormalTok{ISSP2012esim1.dat }\OperatorTok{%>%}\StringTok{ }\KeywordTok{tableX}\NormalTok{(maa3, Q1b, }\DataTypeTok{type =} \StringTok{"row_perc"}\NormalTok{)}
 
-\CommentTok{# knitr::kable(BeDealueTable , digits = 2, booktabs = TRUE,}
-\CommentTok{#            caption = "Q1b vastaukset, Saksan ja Belgian alueet")}
-
-\CommentTok{# Q1b vastaukset, Saksan ja Belgian alueet}
-\CommentTok{# S s   ?   e   E   Total}
-\CommentTok{# bF    5.04    23.81   25.89   30.83   14.43   100.00}
-\CommentTok{# bW    10.82   21.02   18.57   24.08   25.51   100.00}
-\CommentTok{# bB    17.03   20.94   16.63   23.87   21.53   100.00}
-\CommentTok{# BG    12.81   42.89   22.26   20.63   1.41    100.00}
-\CommentTok{# dW    11.40   26.82   11.83   32.13   17.82   100.00}
-\CommentTok{# dE    5.85    11.33   10.97   29.80   42.05   100.00}
-\CommentTok{# DK    5.04    17.15   10.95   16.71   50.14   100.00}
-\CommentTok{# FI    4.23    16.94   13.42   38.11   27.30   100.00}
-\CommentTok{# HU    21.97   28.89   22.57   19.06   7.52    100.00}
-\CommentTok{# All   9.95    23.76   16.79   26.10   23.41   100.00}
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(BeDealueTable , }\DataTypeTok{digits =} \DecValTok{2}\NormalTok{, }\DataTypeTok{booktabs =} \OtherTok{TRUE}\NormalTok{,}
+           \DataTypeTok{caption =} \StringTok{"Q1b vastaukset, Saksan ja Belgian alueet"}\NormalTok{)}
 
 \CommentTok{# (26.10.20) TÄSSÄ EHKÄ VIRHE - PDF-renderöinti antaa virheilmoituksen?}
 \CommentTok{# Ei todennäköistä, sillä toimii html-tulostuksessa. Kokeiltiin tämän lohkon}
@@ -4255,23 +4482,38 @@ kertoo vain julkaisutekniikan ympäristön.
 
 \NormalTok{suppoint1_tab1 <-}\StringTok{ }\KeywordTok{table}\NormalTok{(suppoint1_df1}\OperatorTok{$}\NormalTok{maa3, suppoint1_df1}\OperatorTok{$}\NormalTok{Q1b)}
 
-\CommentTok{# Maaprofiilit}
+\CommentTok{# tarkistus 1}
+\CommentTok{# suppoint1_tab1}
+
+\CommentTok{# Maaprofiilit lisäpisteiksi}
 \NormalTok{suppoint2_df <-}\StringTok{ }\KeywordTok{filter}\NormalTok{(ISSP2012esim1.dat, (maa }\OperatorTok{==}\StringTok{ "BE"} \OperatorTok{|}\StringTok{ }\NormalTok{maa }\OperatorTok{==}\StringTok{ "DE"}\NormalTok{))}
 \NormalTok{suppoint2_df <-}\StringTok{ }\KeywordTok{select}\NormalTok{(suppoint2_df, maa, Q1b)}
+\CommentTok{# Poistetaan maa-faktroin tyhjät luokat (14.11.2020)}
+\NormalTok{suppoint2_df <-}\StringTok{ }\NormalTok{suppoint2_df }\OperatorTok{%>%}
+\StringTok{    }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{maa =} \KeywordTok{fct_drop}\NormalTok{(maa)}
+\NormalTok{    )}
+
 
 \CommentTok{#glimpse(suppoint2_df)}
 \NormalTok{suppoint2_tab1 <-}\StringTok{ }\KeywordTok{table}\NormalTok{(suppoint2_df}\OperatorTok{$}\NormalTok{maa, suppoint2_df}\OperatorTok{$}\NormalTok{Q1b)}
-\NormalTok{suppoint2_tab1 }\CommentTok{# tarkistus 1}
+
+\CommentTok{# tarkistus 1}
+\CommentTok{# suppoint2_tab1}
+
 \CommentTok{# Huom! tämä komento vain kerran - tai koko Rmd-tiedosto uudestaan (17.10.20)}
-\NormalTok{suppoint2_tab1 <-}\StringTok{ }\NormalTok{suppoint2_tab1[}\OperatorTok{-}\KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{4}\OperatorTok{:}\DecValTok{6}\NormalTok{) ,]}
+\CommentTok{# Korvattu maa-faktorin tyhjien luokkien poisolla (14.11.2020)}
+\CommentTok{# suppoint2_tab1 <- suppoint2_tab1[-c(2,4:6) ,]}
 \CommentTok{#suppoint2_tab1 # tarkistus 2}
 
 \CommentTok{# lisätään rivit maa3-muuttujan taulukkoon}
+
 \NormalTok{suppoint1_tab1 <-}\StringTok{ }\KeywordTok{rbind}\NormalTok{(suppoint1_tab1, suppoint2_tab1)}
-\NormalTok{suppoint1_tab1 }\CommentTok{# tarkistus 3}
+
+\CommentTok{# suppoint1_tab1 # tarkistus 3}
 \CommentTok{# Testailua pdf-ongelman ratkaisemiseksi - tallennetaa taulukko tiedostoksi}
 \CommentTok{# Ei ratkaisevasti auttanut (26.10.2020)}
 \CommentTok{# write_rds(suppoint1_tab1,"suppoint1tab1.rds")}
+
 
 \CommentTok{# suppoint1_tab2 <- read_rds("suppoint1tab1.rds") - testaus joka siirsi virheen 07-rmd-tiedostoon. Sama virheilmoitustyyppi.}
 \NormalTok{suppointCA2 <-}\StringTok{ }\KeywordTok{ca}\NormalTok{(suppoint1_tab1[,}\DecValTok{1}\OperatorTok{:}\DecValTok{5}\NormalTok{], }\DataTypeTok{suprow =} \DecValTok{10}\OperatorTok{:}\DecValTok{11}\NormalTok{)}
@@ -4281,6 +4523,8 @@ kertoo vain julkaisutekniikan ympäristön.
      \CommentTok{# mass = c(TRUE, TRUE),}
      \CommentTok{# contrib = c(TRUE, TRUE),}
      \DataTypeTok{sub =} \StringTok{"Täydentävät pisteet DE ja BE"}\NormalTok{ )}
+
+
 
 \KeywordTok{plot}\NormalTok{(suppointCA2, }\DataTypeTok{main =} \StringTok{"kontribuutiokartta "}\NormalTok{,}
         \DataTypeTok{map =} \StringTok{"rowgreen"}\NormalTok{,}
@@ -4292,21 +4536,21 @@ kertoo vain julkaisutekniikan ympäristön.
 
 \NormalTok{suppointCA2}
 
+
 \KeywordTok{summary}\NormalTok{(suppointCA2)}
 
 \NormalTok{suppointCA3 <-}\StringTok{ }\KeywordTok{ca}\NormalTok{(}\OperatorTok{~}\NormalTok{maa3 }\OperatorTok{+}\StringTok{ }\NormalTok{Q1b,ISSP2012esim1.dat, }\DataTypeTok{nd =} \DecValTok{3}\NormalTok{)}
 
 \CommentTok{# summary(suppointCA3)}
 \CommentTok{# Error in rsc %*% diag(sv) : non-conformable arguments}
+
 \KeywordTok{plot}\NormalTok{(suppointCA3, }\DataTypeTok{dim =} \KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{),}
                 \DataTypeTok{main =} \StringTok{"Kolmen dimension ratkaisu"}\NormalTok{,}
                 \DataTypeTok{sub =} \StringTok{"symmetrinen kartta - 1. ja 2. dimensio"}\NormalTok{)}
 
-
 \KeywordTok{plot}\NormalTok{(suppointCA3, }\DataTypeTok{dim =} \KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{3}\NormalTok{),}
                 \DataTypeTok{main =} \StringTok{"Kolmen dimension ratkaisu"}\NormalTok{,}
                 \DataTypeTok{sub =} \StringTok{"symmetrinen kartta - 1. ja 3. dimensio"}\NormalTok{)}
-
 
 \KeywordTok{plot}\NormalTok{(suppointCA3, }\DataTypeTok{dim =} \KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{),}
                 \DataTypeTok{main =} \StringTok{"Kolmen dimension ratkaisu"}\NormalTok{,}
@@ -4314,6 +4558,7 @@ kertoo vain julkaisutekniikan ympäristön.
 
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/3dSymMap_1.PNG'}\NormalTok{)}
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/3dSymMap_2.PNG'}\NormalTok{)}
+
 \CommentTok{# Iän ja sukupuolen vuorovaikutusmuuttujia}
 \CommentTok{#}
 \CommentTok{# Uusi R-data: ISSP2012esim1b.dat2esim1b)}
@@ -4502,6 +4747,7 @@ kertoo vain julkaisutekniikan ympäristön.
 \CommentTok{# koko datalla 0.263154}
 
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/stacked1.png'}\NormalTok{)}
+
 \CommentTok{# Data}
 \NormalTok{ISSP2012Concat1jh.dat <-}\StringTok{ }\KeywordTok{select}\NormalTok{(ISSP2012esim1b.dat, Q1b, maa,sp, age_cat)}
 
@@ -4546,6 +4792,7 @@ kertoo vain julkaisutekniikan ympäristön.
 \NormalTok{     )}
 
 \KeywordTok{summary}\NormalTok{(Concat1jh.CA1)}
+
 \KeywordTok{par}\NormalTok{(}\DataTypeTok{cex =} \FloatTok{0.6}\NormalTok{)}
 \KeywordTok{plot}\NormalTok{(Concat1jh.CA1, }\DataTypeTok{map =} \StringTok{"rowgreen"}\NormalTok{,}
      \DataTypeTok{mass =} \KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{),}
@@ -4557,18 +4804,21 @@ kertoo vain julkaisutekniikan ympäristön.
 
 \CommentTok{# str(ISSP2012jh1d.dat) - luotu skripteissä G1_1_data2.Rmd ja G1_1_data_fct1.Rmd}
 \CommentTok{# Tarkistukset näkyvät Galkussa - tässä ei tulosteta}
+\CommentTok{# Kommentoidaan pois tarkistuksia (14.11.2020)}
 \CommentTok{#Valitaan muuttujat joissa puuttuva tieto on koodattu muuttujan arvoksi}
 
 \NormalTok{MCAvars1 <-}\StringTok{  }\KeywordTok{c}\NormalTok{(}\StringTok{"Q1am"}\NormalTok{,}\StringTok{"Q1bm"}\NormalTok{, }\StringTok{"Q1cm"}\NormalTok{, }\StringTok{"Q1dm"}\NormalTok{,}\StringTok{"Q1em"}\NormalTok{,}\StringTok{"Q2am"}\NormalTok{,}\StringTok{"Q2bm"}\NormalTok{,}\StringTok{"edum"}\NormalTok{,}
                  \StringTok{"sostam"}\NormalTok{, }\StringTok{"urbrum"}\NormalTok{, }\StringTok{"maa"}\NormalTok{, }\StringTok{"ika"}\NormalTok{, }\StringTok{"sp"}\NormalTok{ )}
 
 \NormalTok{MCAdata1jh.dat <-}\StringTok{ }\NormalTok{ISSP2012jh1d.dat }\OperatorTok{%>%}\StringTok{ }\KeywordTok{select}\NormalTok{(}\KeywordTok{all_of}\NormalTok{(MCAvars1))}
-\KeywordTok{dim}\NormalTok{(MCAdata1jh.dat)}
-\KeywordTok{names}\NormalTok{(MCAdata1jh.dat)}
+
+\CommentTok{#dim(MCAdata1jh.dat)}
+\CommentTok{# names(MCAdata1jh.dat)}
 
 \CommentTok{# luodaan ikaluokka-muuttuja ja ikäluokka-sukupuoli - muuttuja}
 \CommentTok{#age_cat}
 \CommentTok{#ikä 1=15-25, 2 =26-35, 3=36-45, 4=46-55, 5=56-65, 6= 66 and older}
+
 \NormalTok{MCAdata1jh.dat <-}\StringTok{ }\KeywordTok{mutate}\NormalTok{(MCAdata1jh.dat, }\DataTypeTok{age_cat =} \KeywordTok{ifelse}\NormalTok{(ika }\OperatorTok{%in%}\StringTok{ }\DecValTok{15}\OperatorTok{:}\DecValTok{25}\NormalTok{, }\StringTok{"1"}\NormalTok{,}
                                 \KeywordTok{ifelse}\NormalTok{(ika }\OperatorTok{%in%}\StringTok{ }\DecValTok{26}\OperatorTok{:}\DecValTok{35}\NormalTok{, }\StringTok{"2"}\NormalTok{,}
                                 \KeywordTok{ifelse}\NormalTok{(ika }\OperatorTok{%in%}\StringTok{ }\DecValTok{36}\OperatorTok{:}\DecValTok{45}\NormalTok{, }\StringTok{"3"}\NormalTok{,}
@@ -4582,6 +4832,7 @@ kertoo vain julkaisutekniikan ympäristön.
 \CommentTok{#tarkastuksia - outo järjestys}
 \CommentTok{#levels(MCAdata1jh.dat$age_cat)}
 \CommentTok{# str(MCAdata1jh.dat$age_cat)}
+
 \NormalTok{MCAdata1jh.dat<-}\StringTok{ }\NormalTok{MCAdata1jh.dat }\OperatorTok{%>%}
 \StringTok{        }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{age_cat =} \KeywordTok{fct_relevel}\NormalTok{(age_cat,}
                                    \StringTok{"1"}\NormalTok{,}
@@ -4593,13 +4844,13 @@ kertoo vain julkaisutekniikan ympäristön.
 
 \CommentTok{# Tarkistuksia(16.10.20)}
 
-\NormalTok{MCAdata1jh.dat }\OperatorTok{%>%}
-\StringTok{        }\KeywordTok{tableX}\NormalTok{(maa,age_cat,}\DataTypeTok{type =} \StringTok{"count"}\NormalTok{) }\CommentTok{#%>%}
-        \CommentTok{#kable(digits = 2, caption = "Ikäluokka age_cat")}
+\CommentTok{#MCAdata1jh.dat %>%}
+\CommentTok{#        tableX(maa,age_cat,type = "count") #%>%}
+\CommentTok{#        #kable(digits = 2, caption = "Ikäluokka age_cat")}
 
-\NormalTok{MCAdata1jh.dat }\OperatorTok{%>%}
-\StringTok{        }\KeywordTok{tableX}\NormalTok{(maa,age_cat,}\DataTypeTok{type =} \StringTok{"row_perc"}\NormalTok{) }\CommentTok{#%>%}
-        \CommentTok{#kable(digits = 2, caption = "age_cat: suhteelliset frekvenssit")}
+\CommentTok{#MCAdata1jh.dat %>%}
+\CommentTok{#        tableX(maa,age_cat,type = "row_perc") #%>%}
+\CommentTok{#        #kable(digits = 2, caption = "age_cat: suhteelliset frekvenssit")}
 
 
 \CommentTok{# Ikäluokka-sukupuoli - muuttuja}
@@ -4622,14 +4873,14 @@ kertoo vain julkaisutekniikan ympäristön.
 
 
 \CommentTok{#Sosiaalinen status: oma arvio "Top-Bottom self-placement"}
-\KeywordTok{str}\NormalTok{(ISSP2012jh1d.dat}\OperatorTok{$}\NormalTok{sosta)}
-\KeywordTok{str}\NormalTok{(ISSP2012jh1d.dat}\OperatorTok{$}\NormalTok{urbru)}
-\KeywordTok{str}\NormalTok{(ISSP2012jh1d.dat}\OperatorTok{$}\NormalTok{edu)}
+\CommentTok{#str(ISSP2012jh1d.dat$sosta)}
+\CommentTok{#str(ISSP2012jh1d.dat$urbru)}
+\CommentTok{#str(ISSP2012jh1d.dat$edu)}
 \CommentTok{#Koulutustaso}
-\KeywordTok{str}\NormalTok{(ISSP2012jh1d.dat}\OperatorTok{$}\NormalTok{edu)}
+\CommentTok{#str(ISSP2012jh1d.dat$edu)}
 
 \CommentTok{#Asuipaikka}
-\KeywordTok{str}\NormalTok{(ISSP2012jh1d.dat}\OperatorTok{$}\NormalTok{urbru)}
+\CommentTok{#str(ISSP2012jh1d.dat$urbru)}
 
 \CommentTok{# Muunnetaan faktorimuuttujia, mahdollisimman lyhyet tunnisteet kategorioille}
 \NormalTok{MCAdata1jh.dat <-}\StringTok{ }\NormalTok{MCAdata1jh.dat }\OperatorTok{%>%}
@@ -4663,19 +4914,19 @@ kertoo vain julkaisutekniikan ympäristön.
         \StringTok{"P"}\NormalTok{ =}\StringTok{ "missing"}\NormalTok{)}
 \NormalTok{        )}
 
-\KeywordTok{names}\NormalTok{(MCAdata1jh.dat)}
-\KeywordTok{dim}\NormalTok{(MCAdata1jh.dat)}
-\NormalTok{MCAdata1jh.dat}\OperatorTok{$}\NormalTok{E }\OperatorTok{%>%}\StringTok{ }\KeywordTok{levels}\NormalTok{()}
-\NormalTok{MCAdata1jh.dat}\OperatorTok{$}\NormalTok{S }\OperatorTok{%>%}\StringTok{ }\KeywordTok{levels}\NormalTok{()}
-\NormalTok{MCAdata1jh.dat}\OperatorTok{$}\NormalTok{U }\OperatorTok{%>%}\StringTok{ }\KeywordTok{levels}\NormalTok{()}
-\NormalTok{MCAdata1jh.dat}\OperatorTok{$}\NormalTok{age_cat }\OperatorTok{%>%}\StringTok{ }\KeywordTok{levels}\NormalTok{()}
-\KeywordTok{str}\NormalTok{(MCAdata1jh.dat}\OperatorTok{$}\NormalTok{ga) }\CommentTok{# toimiikohan - chr-muuttuja? (16.10.20)}
+\CommentTok{#names(MCAdata1jh.dat)}
+\CommentTok{#dim(MCAdata1jh.dat)}
+\CommentTok{#MCAdata1jh.dat$E %>% levels()}
+\CommentTok{#MCAdata1jh.dat$S %>% levels()}
+\CommentTok{#MCAdata1jh.dat$U %>% levels()}
+\CommentTok{#MCAdata1jh.dat$age_cat %>% levels()}
+\CommentTok{#str(MCAdata1jh.dat$ga) # toimiikohan - chr-muuttuja? (16.10.20)}
 
 \NormalTok{MCAdata1jh.dat <-}\StringTok{ }\NormalTok{MCAdata1jh.dat }\OperatorTok{%>%}
 \KeywordTok{mutate}\NormalTok{(}\DataTypeTok{gaf =} \KeywordTok{as_factor}\NormalTok{(ga))}
 
-\KeywordTok{str}\NormalTok{(MCAdata1jh.dat}\OperatorTok{$}\NormalTok{gaf)}
-\KeywordTok{levels}\NormalTok{(MCAdata1jh.dat}\OperatorTok{$}\NormalTok{gaf) }\CommentTok{# järjestyksellä ei liene väliä? (16.10.20)}
+\CommentTok{#str(MCAdata1jh.dat$gaf)}
+\CommentTok{#levels(MCAdata1jh.dat$gaf) # järjestyksellä ei liene väliä? (16.10.20)}
 
 \CommentTok{# gaf ja ga: sama järjestys}
 
@@ -4831,6 +5082,9 @@ kertoo vain julkaisutekniikan ympäristön.
 
 \NormalTok{Qmuuttujat2d3  <-}\StringTok{ }\KeywordTok{mjca}\NormalTok{(mcaDat11jh.dat, }\DataTypeTok{ps=}\StringTok{""}\NormalTok{, }\DataTypeTok{nd =} \DecValTok{3}\NormalTok{,}\DataTypeTok{subsetcat=}\NormalTok{eiPvastaukset)}
 \KeywordTok{summary}\NormalTok{(Qmuuttujat2d3)}
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/CAquality.png'}\NormalTok{)}
+
+
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/substvar_fi_Q1Q2.png'}\NormalTok{)}
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/BookdownProc.png'}\NormalTok{)}
 
@@ -4854,10 +5108,38 @@ Construct Comparability in Cross-National Surveys''. \emph{European
 Sociological Review} 22 (3): 229--42.
 \url{http://www.jstor.org/stable/3806519}.
 
+\leavevmode\hypertarget{ref-RefWorks:doc:5c223412e4b0508a6674dec0}{}%
+Bond, Timothy N., ja Kevin Lang. 2018. ''The Sad Truth About Happiness
+Scales''. \emph{Journal of Political Economy} 127 (4): 1629--40.
+\url{https://doi.org/10.1086/701679}.
+
+\leavevmode\hypertarget{ref-RefWorks:doc:5bd0a663e4b0c91dcf7c4be9}{}%
+Ferragina, Emanuele, ja Martin Seeleib-Kaiser. 2015. ''Determinants of a
+Silent (R)evolution: Understanding the Expansion of Family Policy in
+Rich OECD Countries''. \emph{Social Politics: International Studies in
+Gender, State and Society} 22 (1): 1--37.
+\url{https://doi.org/10.1093/sp/jxu027}.
+
+\leavevmode\hypertarget{ref-RefWorks:doc:5c053d69e4b0191a580d6451}{}%
+Gendall, Phil, ja Martin von Randow. 2016. ''International Social Survey
+Programme , ISSP 2012 - Family \& Changing Gender Roles IV, Study
+Monitoring Report\textless br\textgreater''.
+\url{https://dbk.gesis.org/dbksearch/sdesc2.asp?no=5900\&db=e\&doi=10.4232/1.12661}.
+
+\leavevmode\hypertarget{ref-RefWorks:doc:5bb9041be4b06677e5e61f83}{}%
+GESIS. 2016. ''ISSP 2012 - Family and Changing Gender Roles IV, Variable
+Report''. GESIS. \url{https://doi.org/10.4232/1.12661}.
+
 \leavevmode\hypertarget{ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76}{}%
 Greenacre, Michael. 2003. ''Singular value decomposition of matched
 matrices''. \emph{Journal of Applied Statistics} 30 (10): 1101--13.
 \url{https://doi.org/10.1080/0266476032000107132}.
+
+\leavevmode\hypertarget{ref-RefWorks:doc:5c768b09e4b02df9431e950a}{}%
+---------. 2006. ''Tying up the loose ends in simple, multiple, joint
+correspondence analysis''. Teoksessa \emph{Compstat 2006 - Proceedings
+in Computational Statistics}, toimittanut Alfredo Rizzi ja Maurizio
+Vichi, 163--85. Heidelberg: Physica-Verlag HD.
 
 \leavevmode\hypertarget{ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca}{}%
 ---------. 2017. ''Multiple Correspondence Analysis (MCA): Theory and
@@ -4892,24 +5174,48 @@ Categories From a Questionnaire Survey''. \emph{Sociological Methods \&
 Research} 35 (2): 193--218.
 \url{https://doi.org/10.1177/0049124106290316}.
 
+\leavevmode\hypertarget{ref-RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a}{}%
+ISSP. 2016. ''ZA5900: International Social Survey Programme: Family and
+Changing Gender Roles IV - ISSP 2012 - data ja dokumentaatio (selattava
+versio)\textless br\textgreater''.
+\url{https://zacat.gesis.org/webview/index.jsp?object=http://zacat.gesis.org/obj/fStudy/ZA5900}.
+
+\leavevmode\hypertarget{ref-RefWorks:doc:5bb9044fe4b0dfeb95352229}{}%
+''ISSP 2012 - Family and Changing Gender Roles IV Basic
+Questinnaire\textless br\textgreater''. 2011.
+\url{https://dbk.gesis.org/dbksearch/sdesc2.asp?no=5900\&db=e\&doi=10.4232/1.12661}.
+
+\leavevmode\hypertarget{ref-RefWorks:doc:5faaf996e4b05416e98ff547}{}%
+Leeuw, Jan de, Patrick Mair, ja Patric Groenen. 2016. ''Multivariate
+Analysis with Optimal Scaling''.
+\url{https://bookdown.org/jandeleeuw6/gifi/}.
+
 \leavevmode\hypertarget{ref-RefWorks:doc:5c3759c2e4b0085b307c82b5}{}%
 McNamara, Amelia, ja Nicholas J. Horton. 2018. ''Wrangling Categorical
 Data in R''. \emph{The American Statistician} 72 (1): 97--104.
 \url{https://doi.org/10.1080/00031305.2017.1356375}.
-
-\leavevmode\hypertarget{ref-RefWorks:doc:5a857a44e4b0ed2d44664d95}{}%
-Mustonen, Seppo. 1995. \emph{Tilastolliset monimuuttujamenetelmät}.
-Helsinki: Survo Systems. \url{http://www.survo.fi/mustonen/monim.pdf}.
 
 \leavevmode\hypertarget{ref-RefWorks:doc:5a857a43e4b0ed2d44664d75}{}%
 Roux, Brigitte Le, ja Henry Rouanet. 2004. \emph{Geometric data
 analysis: from correspondence analysis to structured data analysis}.
 Dordrecht: Kluwer Academic Publishers.
 
-\leavevmode\hypertarget{ref-RefWorks:doc:5a857a44e4b0ed2d44664da4}{}%
-Vehkalahti, Kimmo. 2008. \emph{Kyselytutkimuksen mittarit ja
-menetelmät}. Helsinki: Tammi.
-\url{https://helka.finna.fi/Record/helka.2120450}.
+\leavevmode\hypertarget{ref-RefWorks:doc:5f9439fde4b04741789a2187}{}%
+Scholz, Evi, Regina Jutz, Jonas Edlund, Ida Öun, ja Michael Braun. 2014.
+''ISSP 2012 Family and Changing Gender Roles IV: Questionnaire
+Development''.
+\url{https://explore.openaire.eu/search/publication?articleId=od______1272::0a6c70387bf644137af3cb2bc69b0df6}.
+
+\leavevmode\hypertarget{ref-RefWorks:doc:5c0543a5e4b077eba1dc3cd8}{}%
+Smith, Tom W. 2015. ''International Social Survey Programme''.
+\emph{International Encyclopedia of the Social \& Behavioral Sciences
+(Second Edition)}.
+\url{https://doi.org///doi-org.libproxy.helsinki.fi/10.1016/B978-0-08-097086-8.44080-8}.
+
+\leavevmode\hypertarget{ref-RefWorks:doc:5bb90a0ae4b018435936a488}{}%
+Tilastokeskus. 2012. ''ISSP 2012 - Family and Changing Gender Roles IV
+Questionnaire (Finnish)''. Tilastokeskus.
+\url{https://zacat.gesis.org/webview/index.jsp?object=http://zacat.gesis.org/obj/fStudy/ZA5900}.
 
 \leavevmode\hypertarget{ref-RefWorks:doc:5bd08fb6e4b05c5447c9a9f9}{}%
 Walter, Jessica. 2018. ''The adequacy of measures of gender roles

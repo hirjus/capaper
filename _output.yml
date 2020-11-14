@@ -11,7 +11,8 @@ bookdown::pdf_book:
   includes:
       in_header: simple_preamble.tex
   #fig_caption: true tätä ei ole testidokkarissa
-  latex_engine: pdflatex
+  # latex_engine: pdflatex   TESTI 14.11.20 
+  latex_engine: xelatex 
   citation_package: natbib
   keep_tex: yes
 bookdown::html_book:

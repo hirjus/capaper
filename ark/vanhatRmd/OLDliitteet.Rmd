@@ -1,11 +1,17 @@
-### Korrespondenssianalyysin perusyhtälöt ja kaavat
+# Liitteet {-}
 
-**viitetiedot puuttuvat kaavoista**
 
-Tässä lähteenä Greenacren kirja (ca in practice) ja sen liite Theory of CA
-. Muistiinpanoja löytyy, joissa viitataan myös Biplots in practice - kirjaan.
+## Liite 1: Korrespondenssianalyysin teoriaa {-}
+
+### Korrespondenssianalyysin perusyhtälöt ja kaavat {-}
+
+
+Tässä lähteenä Greenacren kirja[@RefWorks:doc:5a857a43e4b0ed2d44664d78] (ca in practice) ja sen liite
+"Theory of CA".
+
+**edit**  Muistiinpanoja löytyy, joissa viitataan myös Biplots in practice - kirjaan.
 Kevään 2017 kurssin luentokalvoja on myös käytetty. Lisäillään vielä käsitteitä
-LeRouxin ja Rouanetin kirjasta.
+LeRouxin ja Rouanetin kirjasta, jos on tarvis.
 
 Datamatriisilla $\boldsymbol{N}$ on $I$ riviä ja $J$ sarakketta ($I x J$ ).
 Alkiot ovat ei-negatiivisia (eli nollat sallittuja) ja samassa mitta-asteikossa.
@@ -32,41 +38,53 @@ sitä sovelletaan standardoituun residuaalimatriisiin $\boldsymbol{S}$.
 
 \begin{equation}
 \boldsymbol{S} = \boldsymbol{D_r}^{-1/2}(\boldsymbol{P} - \boldsymbol{r}\boldsymbol{c}^T)\boldsymbol{D_c}^{-1/2}
+(\#eq:svd1)
 \end{equation}
 
 Residuaalimatriisi voidaan esittää myös ns. kontingenssi-suhdelukujen
-(contingency ratio) avulla.
+(contingency ratio) avulla kahdella tavalla.
 
 \begin{equation}
 \boldsymbol{D_r}^{-1} \boldsymbol{P} \boldsymbol{D_c}^{-1} = \left( \frac{p_{ij}} {r_{i} c{j}} \right)
+(\#eq:contrat1)
 \end{equation}
 
 \begin{equation}
 \boldsymbol{S} = \boldsymbol{D_r}^{1/2} (\boldsymbol{D_r}^{-1} \boldsymbol{P} \boldsymbol{D_c}^{-1} - \boldsymbol{1}\boldsymbol{1}^{T} ) \boldsymbol{D_c}^{-1/2}  \;\;\; .
+(\#eq:contrat2)
 \end{equation}
 
 Toinen esitystapa on hyödyllinen, kun tarkastellaan CA:n yhteyksiä muihin
-läheisiin menetelmiin (log ratio analysis of compositional data, moniulotteinen
-skaalaus (?), lineaarinen diskriminanttianalyysi, kanoninen korrelaatioanalyysi,
-pääkomponettianalyysi, kaksoiskuvat, yleensä SVD-hajoitelmaan perustuvat
-dimensioden vähentämisen menetelmät).
+läheisiin menetelmiin. Näitä menetelmiä kuten myös korrespondenssianalyysiä kutsutaan monilla
+nimillä:"suhteellisten osuuksien datan" analyysi (log ratio analysis of compositiona data),
+moniulotteinen skaalaus, lineaarinen diskriminanttianalyysi, kanoninen korrelaatioanalyysi,
+pääkomponettianalyysi, kaksoiskuvat ja muutä SVD-hajoitelmaan perustuvat dimensioden
+vähentämisen menetelmät.
+
+Samat kaavat voi esittää myös alkiomuodossa:
 
 
 \begin{equation}
 s_{ij} = \frac{p_{ij}-r_{i}c_{j}} { \sqrt{r_{i}c_{j} } }
+(\#eq:contrat11)
 \end{equation}
 
 ja toinen
 \begin{equation}
 s_{ij} = \sqrt{r_{i}} \left( \frac{p_{ij}}{r_{i}c_{j}} \right) \sqrt{c_{j}} \;\;\; .
+(\#eq:contrat21)
 \end{equation}
 
-Mitäköhän tuosta pitäisi nähdä? Selitykset löytyvät em. teorialiitteestä.
+Alkimuodosasa esitetyistä  kaavoista näkee intuitivisesti rivi- ja sarakeratkaisujen sidoksen.
+Ratkaisujen duaalisuus on teoreettinen tulos, jonka voi perustella täsmällisesti
+algebrallisen geometrian avulla. Käytännössä rivi- ja sarekeongelman duaalisuus tarkoittaa sitä,
+että vain toinen ongelma on ratkaistava.
 
 Singulaariarvohajoitelma (singular value decomposition, SVD) matriisille $\boldsymbol{S}$ on
 
 \begin{equation}
 \boldsymbol{S} = \boldsymbol{U} \boldsymbol{D_{\alpha}} \boldsymbol{V}^{T}
+(\#eq:svd2)
 \end{equation}
 
 missä $\boldsymbol{D_{\alpha}}$ on diagonaalimatriisi, jonka alkiot ovat
@@ -75,13 +93,14 @@ singulaariarvot suuruusjärjestyksessä $\alpha_{1}\geq \alpha_{1} \geq \cdots$.
 
 Matriisit $\boldsymbol{U}$ ja $\boldsymbol{V}$ ovat ortogonaalisia
 singulaarivektoreiden matriiseja. Singulaariarvohajoitelman merkitys dimensioiden
-vähentämiselle perustuu Eckart - Young - teoreemaan. Teoreema (30-luvulta?) kertoo
+vähentämiselle perustuu Eckart - Young - teoreemaan. Teoreema kertoo
 että saamme pienimmän neliösumman $m$ - ulotteisen approksimaation matriisille
 $\boldsymbol{S}$ (CAinP, ss. 244) matriisien $\boldsymbol{U}$ ja $\boldsymbol{V}$
 ensimmäisten sarakkeiden ja ensimmäisten singulaariarvojen avulla.
 
 \begin{equation}
 \boldsymbol{S}_{(m)} = \boldsymbol{U}_{(m)} \boldsymbol{D}_{\alpha(m)} \boldsymbol{V}_{(m)}^{T}
+(\#eq:svd3)
 \end{equation}
 
 Korrrespondenssianalyysin ratkaisualgoritmissa tätä tulosta on muokattava niin,
@@ -95,24 +114,27 @@ Rivien standardikoordinaatit
 
 \begin{equation}
 \boldsymbol{\Phi} = \boldsymbol{D_r}^{-\frac{1}{2}} \boldsymbol{U} \label{B}
-(\#eq:svd1)
+(\#eq:rivistd1)
 \end{equation}
 
 Sarakkeiden standardikoordinaatit
 
 \begin{equation}
  \boldsymbol{\Gamma} = \boldsymbol{D_c}^{-\frac{1}{2}} \boldsymbol{V} \label{C}
+ (\#eq:sarakestd1)
 \end{equation}
 
 Rivien pääkoordinaatit
 
 \begin{equation}
  \boldsymbol{F} =   \boldsymbol{D_r}^{-\frac{1}{2}} \boldsymbol{U}  \boldsymbol{D_{\alpha}} = \boldsymbol{\Phi} \boldsymbol{D_{\alpha}} \label{D}
+(\#eq:riviprinc1)
 \end{equation}
 
 Sarakkeiden pääkoordinaatit
 \begin{equation}
  \boldsymbol{G}  = \boldsymbol{D_c}^{-\frac{1}{2}} \boldsymbol{V} \boldsymbol{D_{\alpha}} = \boldsymbol{\Gamma}  \boldsymbol{D_{\alpha}} \label{E}
+ (\#eq:sarakeprinc1)
 \end{equation}
 
 Pääakseleiden inertiat (principal inertias) $\lambda_{k}$
@@ -136,10 +158,12 @@ alkiomuodossa ns. palautuskaavana (reconstitution formula).
 
 \begin{equation}
 \boldsymbol{P} = \boldsymbol{D}_{r} \left( \boldsymbol{1}\boldsymbol{1}^{T} + \boldsymbol{\Phi}\boldsymbol{D}_{\lambda}^{\frac {1}{2}}\boldsymbol{\Gamma}^{T}\right)\boldsymbol{D}_{c}
+(\#eq:reconstform1)
 \end{equation}
 
 \begin{equation}
 p_ {ij}= r_{i}c_{j} \left(1 + \sum_{k=1}^{K} \sqrt{\lambda_{k}} \phi_{ik} \gamma_{jk} \right)
+(\#eq:reconstform2)
 \end{equation}
 
 Tässä viitataan s. 101 (13.4), 109 (14.9), ja 109-110 (14.10 ja 14.11).
@@ -152,35 +176,67 @@ Pääkoordinaatit standardikoordinaattien funktiona
 
 \begin{equation}
 \boldsymbol{F} = \boldsymbol{D}_{r}^{-1} \boldsymbol{P}\boldsymbol{\Gamma}
+(\#eq:barysentr1)
 \end{equation}
 
 \begin{equation}
 \boldsymbol{G} = \boldsymbol{D}_{c}^{-1} \boldsymbol{P}^{T}\boldsymbol{\Phi}
+(\#eq:barysentr2)
 \end{equation}
 
 Pääkoordinaatit pääkoordinaattien funktiointa:
 
 \begin{equation}
 \boldsymbol{F} = \boldsymbol{D}_{r}^{-1} \boldsymbol{P}\boldsymbol{G}\boldsymbol{D}_{\lambda}^{-\frac{1}{2}}
+(\#eq:barysentr3)
 \end{equation}
 
 \begin{equation}
 \boldsymbol{G} = \boldsymbol{D}_{c}^{-1} \boldsymbol{P}^{T}\boldsymbol{F}\boldsymbol{D}_{\lambda}^{-\frac{1}{2}}
+(\#eq:barysentr4)
 \end{equation}
 
-Yhtälöt (9) ja (10) esittävät profiilipisteet ideaalipisteiden (vertex points)
+Yhtälöt \@ref(eq:barysentr1) ja \@ref(eq:barysentr1) esittävät profiilipisteet ideaalipisteiden (vertex points)
 painotettuina keskiarvoina, painoina profiilin elementit. Asymmetriset kartat
-(rivien tai sarakkeiden suhteen) perustuvat näihin yhtälöihin. Yhtälöiden (11)
-ja (12) kahdet pääkoordinaatit ovat perusta symmetrisille kartoille. Myös niitä
+(rivien tai sarakkeiden suhteen) perustuvat näihin yhtälöihin. Yhtälöiden \@ref(eq:barysentr3)
+ja \@ref(eq:barysentr4) kahdet pääkoordinaatit ovat perusta symmetrisille kartoille. Myös niitä
 yhdistää barisentrinen painotetun keskiarvon riippuvuus, mutta mukana ovat skaalaustekijät
- $\frac{1}{\sqrt{\lambda_{i}}}$. Ne ovat jokaisessa dimensiossa eri suuruisia.
+ $\frac{1}{\sqrt{\lambda_{i}}}$. Skaalaustekijä on jokaisessa dimensiossa sen inertia, suurimmasta pienimpään.
 
 Kokeillaan vielä kaavaviitteitä: kaavojen \@ref(eq:khii21) ja \@ref(eq:khii22)
 yhteyden pitäisi olla selkeä.
 
+**Pisteet ja projektio aliavaruuteen**
 
-### Matriisit ja niiden havainnollistaminen
+Kuva on kurssimateriaaleista[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca].
 
+```{r projectionimg1, out.width='70%', fig.align='center',fig.cap='Pisteen projektio aliavaruuteen'}
+knitr::include_graphics('img/CAquality.png')
+
+
+```
+Kuvassa on esitetty korrespondenssianalyysin ratkaisun minimointiongelma. Pisteen
+projektio on sitä parempi mitä pienempi kulma on sentroidista pisteeseen
+piirtetyn janan ja pisteen projektion välillä. COR - tunnusluku ca-funktion
+numeerisissa tuloksissa tämän kulman kosinin neliö. Pisteen kuvauksen laatu (qlt)
+ca-tuloksissa on valitun approsimaation akseleiden kvaliteettien (COR) summa.
+
+Kuvasta voi myös hahmottaa sen periaatteen, että projektiossa kaukana olevat
+pisteet ovat kaukana myös alkuperäisessä avaruudessa. Projektiossa lähekkäin
+olevat pisteet voivat olla alkuperäisessä avaruudessa kaukana toisistaan,
+jos niiden projektion laatu on huono.
+
+
+
+
+
+### Matriisit ja niiden havainnollistaminen {-}
+**edit** Nämä tässä varalla, jos matriisikaavoja tarvitaan lisää. Ehkä ei?
+
+Korrespondenssianalyysin sovelluksissa tutkimusongelman ratkaisu on usein sopivan
+matriisin rakentaminen.
+
+**edit: kaavaesimerkkejä**
 
 \begin{equation}
 A = \begin{bmatrix}
@@ -201,7 +257,6 @@ A = \begin{bmatrix}
     \end{bmatrix}
 \end{equation}
 
-Pinottujen ja konkatenoitujen matriisien havainnollistaminen?
 
 \begin{equation}
 A = \begin{bmatrix}
@@ -211,18 +266,9 @@ A = \begin{bmatrix}
 \end{equation}
 
 
-Yksinkertainen korrespondenssianalyysi on kahden luokittelumuuttujan määrittelmän
-frekvenssitaulukon analyysiä. Taulukon rivit ovat havaintoyksiköiden (individuals,
-havaintoyksikkö) aggregoituja summia, sarakkeet muuttujia.
 
-Analyysissä osa riveistä tai sarakkeista voidaan jättää pois ratkaisun
-laskennasta ns. passiviisiksi, ja esittää kartalla täydentävinä pisteinä
-(supplementary points). Ne eivät vaikuta ratkaisuun, eli teknisesti niiden massa
-on nolla, mutta pisteiden esityksen (projektion) tarkkuus voidaan arvioida.
-Täydentävien profiilien on kuintenkin oltava yhteismitallisia taulukon datan
-kanssa. Mikä tahansa ei käy (kts. CAinP, vast.luku).
+**Pinotut tai yhdistetyt matriisit ("stacked and concatenated matrices")**
 
-Pinotut tai yhdistetyt matriisit (``stacked matrices'').
 Yksinkertainen korrespondenssianalyysi on kahden luokittelumuuttujan määrittämän
 taulukon analyysiä, mutta sitä voi soveltaa myös usean muuttujan analyysiin.
 Menetelmän matemaattinen perusta ja ratkaisualgoritmi (SVD) toimivat, tulkinta
@@ -231,7 +277,11 @@ vain muuttuu.
 Yksinkertaisin laajennus on lisätä alkuperäisen taulukon alle toinen taulukko.
 Rivit ovat esimerkissä maittan summattuja vastauksia, ja niiden alle voidaan
 lisätä joku toinen luokittelumuuttuja. Havaintojen määrä yhditetyssä ("pinotussa")
-taulussa kaksinkertaistuu. Miksi tämä ei ei vaikuta tuloksiin vääristävästi??
+taulussa kaksinkertaistuu.
+
+Taulukoiden yhdistämisen idea on inertian dekomponointi. Yhdistetyn matriisin inertia
+voidaan eri tavoin esittää alimatriisien inertian summana. Tällöin jokaisen alimatriisin
+reunajakauman tulee olla sama, ja puuttuvat tiedot vääristävät tuloksia.
 
 Merkitään edellisten analyysien kuuden maan ja viiden vastausvaihtoehdon
 taulukkoa matriisilla $\boldsymbol{ A}_{I  J}$, missä $I$ on rivien ja $J$
@@ -254,4 +304,69 @@ jossa useita kahden muuttujan taulukoita ``pinotaan'' päällekkäin ja rinnakka
 Voimme ottaa yhden kysymyksen vastausten lisäksi analyysiin mukaan useamman
 kysymyksen vastaukset laajentamalla kahden päällekkäisen matriisin taulukkoa oikealle.
 
+**Monimuuttuja-korrespondenssianalyysi MCA**
+
+Usean muuttujan korrespondenssianalyysissä tutkitaan usean muuttujan välisiä yhteyksiä.
+Kartan tulkinnan apuna siihen voidaan lisätä havaintojen sijaan niiden keskiarvopisteitä
+ja niille simuloituja luottamusellipsejä. Kuvien pääongelma on liian suuri määärä pisteitä,
+ja analyysin lopputulos on usein mahdollisimman yksinkertainen kartta.
+
+Usean muuttujan analyysissä kohteena on joko indikaattorimatriisi $\boldsymbol{Z}$ tai
+Burtin matriisi $\boldsymbol{B}$
+
+Indikaattorimatriisissa rivit ovat havaintoja ja sarakkeet luokittelumuuttujan arvoja.
+Havaintoa vastaa rivi nollia ja arvo 1 valitun vastausvaihtoehdon kohdalla. Tästä seuraa,
+että vain erilaiset vastaukset määrittävät rivien etäisyyksiä.
+
+Burtin matriisi on erikoistapaus yhdistetyistä matriiseista. Siihen on koottu kaikki tutkittavien
+muuttujien pareittan muodostetut taulukot. Diagonaalilla ovat muuttujien ristiintaulukoinnit
+itsensä kanssa. Ratkaisu riippuu vain näistä parittaisista taulukoista.
+
+Burtin matriisi on kätevä välivaihe matriisien yhdistelyssä.
+
+Molemmat matriisit paisuttavat keinotekoisesti kokonaisinertiaa, ja esimerkikisi kaksiulotteisen kartan
+selitetyn inertian osuudet jäävät melko pieniksi. Ratkaisuna on inertian oikaisu tai korjaus
+(adjusted inertia), jossa mm. poistetaan kokonaisinertialaskelmista Burtin matriisin
+diagonaalilla olevat alimatriisit. Näillä korjauksilla ei ole vaikutusta kartan pisteiden
+sijaintiin. Tämä menetelmä on ca-paketin mjca-funktion oletus.
+
+Kolmas vaihtoehto on ns. yhdistetty korrespondenssianalyysi (joint ca).
+
+
+
+
+## Liite 2: Suomenkielinen lomake (esimerkki) {-}
+
+Tämä kuva on myös tekstissä, kätevä tapa esittää siististi kysymysten pitkät
+versiot.
+
+```{r L1suomlom1, out.width='60%', fig.align='center',fig.cap='Esimerkki suomenkielisestä lomakkeesta', echo=T, eval=F}
+knitr::include_graphics('img/substvar_fi_Q1Q2.png')
+```
+
+
+## Liite 3: Tekninen ympäristö ja Bookdown-paketti {-}
+
+Muokataan tiiviimpi pätkä esimerkkireposta bookdown-testi1. Tämä kuva kertoo vain
+julkaisutekniikan ympäristön.
+
+```{r L3bdprocess1, out.width = '70%', fig.align='center',fig.cap='Tulostiedoston prosessointi'}
+knitr::include_graphics('img/BookdownProc.png')
+
+# pois out.width='50%',
+
+```
+
+
+
+
+## Liite 4: R - koodi {-}
+
+
+
+```{r ref.label=knitr::all_labels(), echo = T, eval=F}
+#Testataan koodilohkojen listausta, näyttää toimivan mutta vaatii vielä säätämistä.
+#Ohje löytyi [Yihui Xienin blogista](https://yihui.name/en/2018/09/code-appendix/)
+#(luettu 26.10.2018).
+```
 

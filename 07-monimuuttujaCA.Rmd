@@ -264,18 +264,21 @@ ei toimi ollenkaan yleisimmissä osajoukoissa.
 ```{r 07mcaIsodat1, echo=F, include=F, error= TRUE}
 # str(ISSP2012jh1d.dat) - luotu skripteissä G1_1_data2.Rmd ja G1_1_data_fct1.Rmd
 # Tarkistukset näkyvät Galkussa - tässä ei tulosteta
+# Kommentoidaan pois tarkistuksia (14.11.2020)
 #Valitaan muuttujat joissa puuttuva tieto on koodattu muuttujan arvoksi
 
 MCAvars1 <-  c("Q1am","Q1bm", "Q1cm", "Q1dm","Q1em","Q2am","Q2bm","edum",
                  "sostam", "urbrum", "maa", "ika", "sp" )
 
 MCAdata1jh.dat <- ISSP2012jh1d.dat %>% select(all_of(MCAvars1))
-dim(MCAdata1jh.dat)
-names(MCAdata1jh.dat)
+
+#dim(MCAdata1jh.dat)
+# names(MCAdata1jh.dat)
 
 # luodaan ikaluokka-muuttuja ja ikäluokka-sukupuoli - muuttuja
 #age_cat
 #ikä 1=15-25, 2 =26-35, 3=36-45, 4=46-55, 5=56-65, 6= 66 and older
+
 MCAdata1jh.dat <- mutate(MCAdata1jh.dat, age_cat = ifelse(ika %in% 15:25, "1",
                                 ifelse(ika %in% 26:35, "2",
                                 ifelse(ika %in% 36:45, "3",
@@ -289,6 +292,7 @@ MCAdata1jh.dat <- MCAdata1jh.dat %>%
 #tarkastuksia - outo järjestys
 #levels(MCAdata1jh.dat$age_cat)
 # str(MCAdata1jh.dat$age_cat)
+
 MCAdata1jh.dat<- MCAdata1jh.dat %>%
         mutate(age_cat = fct_relevel(age_cat,
                                    "1",
@@ -300,13 +304,13 @@ MCAdata1jh.dat<- MCAdata1jh.dat %>%
 
 # Tarkistuksia(16.10.20)
 
-MCAdata1jh.dat %>%
-        tableX(maa,age_cat,type = "count") #%>%
-        #kable(digits = 2, caption = "Ikäluokka age_cat")
+#MCAdata1jh.dat %>%
+#        tableX(maa,age_cat,type = "count") #%>%
+#        #kable(digits = 2, caption = "Ikäluokka age_cat")
 
-MCAdata1jh.dat %>%
-        tableX(maa,age_cat,type = "row_perc") #%>%
-        #kable(digits = 2, caption = "age_cat: suhteelliset frekvenssit")
+#MCAdata1jh.dat %>%
+#        tableX(maa,age_cat,type = "row_perc") #%>%
+#        #kable(digits = 2, caption = "age_cat: suhteelliset frekvenssit")
 
 
 # Ikäluokka-sukupuoli - muuttuja
@@ -329,14 +333,14 @@ MCAdata1jh.dat <- mutate(MCAdata1jh.dat,
 
 
 #Sosiaalinen status: oma arvio "Top-Bottom self-placement"
-str(ISSP2012jh1d.dat$sosta)
-str(ISSP2012jh1d.dat$urbru)
-str(ISSP2012jh1d.dat$edu)
+#str(ISSP2012jh1d.dat$sosta)
+#str(ISSP2012jh1d.dat$urbru)
+#str(ISSP2012jh1d.dat$edu)
 #Koulutustaso
-str(ISSP2012jh1d.dat$edu)
+#str(ISSP2012jh1d.dat$edu)
 
 #Asuipaikka
-str(ISSP2012jh1d.dat$urbru)
+#str(ISSP2012jh1d.dat$urbru)
 
 # Muunnetaan faktorimuuttujia, mahdollisimman lyhyet tunnisteet kategorioille
 MCAdata1jh.dat <- MCAdata1jh.dat %>%
@@ -370,19 +374,19 @@ mutate(E = fct_recode(edum,
         "P" = "missing")
         )
 
-names(MCAdata1jh.dat)
-dim(MCAdata1jh.dat)
-MCAdata1jh.dat$E %>% levels()
-MCAdata1jh.dat$S %>% levels()
-MCAdata1jh.dat$U %>% levels()
-MCAdata1jh.dat$age_cat %>% levels()
-str(MCAdata1jh.dat$ga) # toimiikohan - chr-muuttuja? (16.10.20)
+#names(MCAdata1jh.dat)
+#dim(MCAdata1jh.dat)
+#MCAdata1jh.dat$E %>% levels()
+#MCAdata1jh.dat$S %>% levels()
+#MCAdata1jh.dat$U %>% levels()
+#MCAdata1jh.dat$age_cat %>% levels()
+#str(MCAdata1jh.dat$ga) # toimiikohan - chr-muuttuja? (16.10.20)
 
 MCAdata1jh.dat <- MCAdata1jh.dat %>%
 mutate(gaf = as_factor(ga))
 
-str(MCAdata1jh.dat$gaf)
-levels(MCAdata1jh.dat$gaf) # järjestyksellä ei liene väliä? (16.10.20)
+#str(MCAdata1jh.dat$gaf)
+#levels(MCAdata1jh.dat$gaf) # järjestyksellä ei liene väliä? (16.10.20)
 
 # gaf ja ga: sama järjestys
 

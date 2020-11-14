@@ -37,7 +37,7 @@ Singulaariarvohajoitelma (singular value decomposition) tuottaa ratkaisun kun
 sitä sovelletaan standardoituun residuaalimatriisiin $\boldsymbol{S}$.
 
 \begin{equation}
-\boldsymbol{S} = \boldsymbol{D_r}^{-1/2}(\boldsymbol{P} - \boldsymbol{r}\boldsymbol{c}^T)\boldsymbol{D_c}^{-1/2} \label{A}
+\boldsymbol{S} = \boldsymbol{D_r}^{-1/2}(\boldsymbol{P} - \boldsymbol{r}\boldsymbol{c}^T)\boldsymbol{D_c}^{-1/2}
 (\#eq:svd1)
 \end{equation}
 
@@ -113,27 +113,27 @@ sarakkeille.
 Rivien standardikoordinaatit
 
 \begin{equation}
-\boldsymbol{\Phi} = \boldsymbol{D_r}^{-\frac{1}{2}} \boldsymbol{U} \label{B}
+\boldsymbol{\Phi} = \boldsymbol{D_r}^{-\frac{1}{2}} \boldsymbol{U}
 (\#eq:rivistd1)
 \end{equation}
 
 Sarakkeiden standardikoordinaatit
 
 \begin{equation}
- \boldsymbol{\Gamma} = \boldsymbol{D_c}^{-\frac{1}{2}} \boldsymbol{V} \label{C}
+ \boldsymbol{\Gamma} = \boldsymbol{D_c}^{-\frac{1}{2}} \boldsymbol{V}
  (\#eq:sarakestd1)
 \end{equation}
 
 Rivien pääkoordinaatit
 
 \begin{equation}
- \boldsymbol{F} =   \boldsymbol{D_r}^{-\frac{1}{2}} \boldsymbol{U}  \boldsymbol{D_{\alpha}} = \boldsymbol{\Phi} \boldsymbol{D_{\alpha}} \label{D}
+ \boldsymbol{F} =   \boldsymbol{D_r}^{-\frac{1}{2}} \boldsymbol{U}  \boldsymbol{D_{\alpha}} = \boldsymbol{\Phi} \boldsymbol{D_{\alpha}}
 (\#eq:riviprinc1)
 \end{equation}
 
 Sarakkeiden pääkoordinaatit
 \begin{equation}
- \boldsymbol{G}  = \boldsymbol{D_c}^{-\frac{1}{2}} \boldsymbol{V} \boldsymbol{D_{\alpha}} = \boldsymbol{\Gamma}  \boldsymbol{D_{\alpha}} \label{E}
+ \boldsymbol{G}  = \boldsymbol{D_c}^{-\frac{1}{2}} \boldsymbol{V} \boldsymbol{D_{\alpha}} = \boldsymbol{\Gamma}  \boldsymbol{D_{\alpha}}
  (\#eq:sarakeprinc1)
 \end{equation}
 

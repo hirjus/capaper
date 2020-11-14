@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.11.7)  7 NOV 2020 08:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.11.7)  14 NOV 2020 11:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -411,7 +411,8 @@ dftex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count287
 \l__pdf_internal_box=\box55
-) (./JH_capaper.aux)
+)
+No file JH_capaper.aux.
 \openout1 = `JH_capaper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 125.
@@ -467,7 +468,6 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 125.
 LaTeX Info: Redefining \pageref on input line 125.
 LaTeX Info: Redefining \nameref on input line 125.
-(./JH_capaper.out) (./JH_capaper.out)
 \@outlinefile=\write4
 \openout4 = `JH_capaper.out'.
 
@@ -542,746 +542,129 @@ hub . io / capaper / JH _
 ] [2
 
 ]
-Overfull \hbox (0.66203pt too wide) in paragraph at lines 171--173
+Overfull \hbox (0.66203pt too wide) in paragraph at lines 176--178
 \T1/lmr/bx/n/10 edit \T1/lmr/m/n/10 Kir-joi-te-taan dis-po-si-tion poh-jal-ta, 
 ke-räil-lään kaik-ki ylei-set ca-luonnehdinnat
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-86.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
+20.
 (c:/Users/jh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3] [4]
-Underfull \hbox (badness 1715) in paragraph at lines 276--284
+) [3]
+Underfull \hbox (badness 1715) in paragraph at lines 275--283
 \T1/lmr/m/n/10 tai-ta-mat-to-mal-le data-analyysin kou-lu-kun-nan ideoi-ta. Kir
 -joit-ta-jat esit-te-le-
  []
 
 
-Underfull \hbox (badness 1152) in paragraph at lines 276--284
+Underfull \hbox (badness 1152) in paragraph at lines 275--283
 \T1/lmr/m/n/10 vät pe-rus-teel-li-ses-ti joi-tain em-pii-ri-siä tut-ki-muk-sia,
  ja ly-hyt mut-ta na-se-va
  []
 
-[5] [6] [7
+[4] [5] [6
 
-] [8]
-Overfull \hbox (9.50647pt too wide) in paragraph at lines 484--485
+]
+Overfull \hbox (5.6955pt too wide) in paragraph at lines 358--368
+[]\T1/lmr/m/n/10 Länsi-Saksan ja USA:n tut-ki-mus-lai-tos-ten yh-teis-työ va-ki
+in-tui ISSP-organisaatioksi
+ []
+
+
+Overfull \hbox (41.83809pt too wide) in paragraph at lines 437--438
+\T1/lmr/m/n/10 ISSP_2012_Family_and_Changing.pdf|  
+ []
+
+[7]
+Underfull \hbox (badness 5077) in paragraph at lines 450--454
+[]\T1/lmr/m/n/10 Tätä kir-joit-taes-sa (10.11.2020) tut-ki-muk-sen ai-neis-to l
+öy-tyy osoit-tees-ta
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 450--454
+\T1/lmr/m/n/10 [[]$https : / / zacat . gesis . org / webview / index . jsp ? ob
+ject = http : / / zacat . gesis . org / obj /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--491
+\T1/lmr/m/n/10 ([]$https : / / www . diw . de / de / diw _ 01 . c . 799302 . de
+ / publikationen / weekly _ reports /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--491
+\T1/lmr/m/n/10 2020 _ 38 _ 1 / mothers _ in _ eastern _ and _ western _ germany
+ _ _employment _
+ []
+
+[8]
+Overfull \hbox (9.50647pt too wide) in paragraph at lines 501--502
 []\T1/lmr/m/n/10 muuttuja|  
  []
 
 
-Overfull \hbox (9.50647pt too wide) in paragraph at lines 492--493
+Overfull \hbox (9.50647pt too wide) in paragraph at lines 509--510
 []\T1/lmr/m/n/10 muuttuja|  
  []
 
 
-Overfull \hbox (12.21475pt too wide) in paragraph at lines 554--555
+Overfull \hbox (12.21475pt too wide) in paragraph at lines 571--572
 []\T1/lmr/m/n/10 DEGREE|  
  []
 
 
-Overfull \hbox (22.56206pt too wide) in paragraph at lines 560--561
+Overfull \hbox (22.56206pt too wide) in paragraph at lines 577--578
 []\T1/lmr/m/n/10 MAINSTAT|  
  []
 
 
-Overfull \hbox (12.83972pt too wide) in paragraph at lines 565--566
+Overfull \hbox (12.83972pt too wide) in paragraph at lines 582--583
 []\T1/lmr/m/n/10 TOPBOT|  
  []
 
 
-Overfull \hbox (23.53426pt too wide) in paragraph at lines 570--571
+Overfull \hbox (23.53426pt too wide) in paragraph at lines 587--588
 []\T1/lmr/m/n/10 HHCHILDR|  
  []
 
 
-Overfull \hbox (16.7289pt too wide) in paragraph at lines 576--577
+Overfull \hbox (16.7289pt too wide) in paragraph at lines 593--594
 []\T1/lmr/m/n/10 MARITAL|  
  []
 
 
-Overfull \hbox (26.58945pt too wide) in paragraph at lines 581--582
+Overfull \hbox (26.58945pt too wide) in paragraph at lines 598--599
 []\T1/lmr/m/n/10 URBRURAL|  
  []
 
 
-Overfull \hbox (0.67805pt too wide) in paragraph at lines 588--590
+Overfull \hbox (0.67805pt too wide) in paragraph at lines 605--607
 []\T1/lmr/bx/n/10 k \T1/lmr/m/n/10 Ky-se-ly-lo-mak-keil-la ky-sy-myk-set oli-va
 t hie-man pi-dem-piä, ku-vas-sa @ref(fig:suom-
  []
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
-92.
-(c:/Users/jh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 593.
-<img/substvar_fi_Q1Q2.png, id=267, 458.31226pt x 490.2315pt>
+<img/substvar_fi_Q1Q2.png, id=120, 458.31226pt x 490.2315pt>
 File: img/substvar_fi_Q1Q2.png Graphic file (type png)
 <use img/substvar_fi_Q1Q2.png>
-Package pdftex.def Info: img/substvar_fi_Q1Q2.png  used on input line 599.
+Package pdftex.def Info: img/substvar_fi_Q1Q2.png  used on input line 610.
 (pdftex.def)             Requested size: 172.50305pt x 184.51706pt.
-[9] [10 <./img/substvar_fi_Q1Q2.png>] [11] [12
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[13]
-<JH_capaper_files/figure-latex/g1-2kuva1-1.pdf, id=308, 469.755pt x 325.215pt>
-File: JH_capaper_files/figure-latex/g1-2kuva1-1.pdf Graphic file (type pdf)
-<use JH_capaper_files/figure-latex/g1-2kuva1-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/g1-2kuva1-1.pdf  used on
- input line 793.
-(pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-<JH_capaper_files/figure-latex/g1-2kuva2-1.pdf, id=309, 469.755pt x 325.215pt>
-File: JH_capaper_files/figure-latex/g1-2kuva2-1.pdf Graphic file (type pdf)
-<use JH_capaper_files/figure-latex/g1-2kuva2-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/g1-2kuva2-1.pdf  used on
- input line 799.
-(pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-[14] [15 <./JH_capaper_files/figure-latex/g1-2kuva1-1.pdf> <./JH_capaper_files/
-figure-latex/g1-2kuva2-1.pdf>]
-Overfull \hbox (8.38794pt too wide) detected at line 853
-[][]\OT1/lmr/m/n/10 (#\OML/lmm/m/it/10 eq \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 eu
-clid\OT1/lmr/m/n/10 1)
- []
-
-[16]
-<JH_capaper_files/figure-latex/simpleCA1map1-1.pdf, id=349, 469.755pt x 469.755
-pt>
-File: JH_capaper_files/figure-latex/simpleCA1map1-1.pdf Graphic file (type pdf)
-
-<use JH_capaper_files/figure-latex/simpleCA1map1-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/simpleCA1map1-1.pdf  use
-d on input line 884.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-[17 <./JH_capaper_files/figure-latex/simpleCA1map1-1.pdf>]
-<JH_capaper_files/figure-latex/G1-3asymm2-1.pdf, id=364, 469.755pt x 469.755pt>
-
-File: JH_capaper_files/figure-latex/G1-3asymm2-1.pdf Graphic file (type pdf)
-<use JH_capaper_files/figure-latex/G1-3asymm2-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/G1-3asymm2-1.pdf  used o
-n input line 958.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-<JH_capaper_files/figure-latex/G1-3asymm3-1.pdf, id=365, 469.755pt x 469.755pt>
-
-File: JH_capaper_files/figure-latex/G1-3asymm3-1.pdf Graphic file (type pdf)
-<use JH_capaper_files/figure-latex/G1-3asymm3-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/G1-3asymm3-1.pdf  used o
-n input line 972.
-(pdftex.def)             Requested size: 241.50005pt x 241.50005pt.
-[18] [19 <./JH_capaper_files/figure-latex/G1-3asymm2-1.pdf>]
-<img/simpleCAasymmTulk2.png, id=383, 963.6pt x 542.025pt>
-File: img/simpleCAasymmTulk2.png Graphic file (type png)
-<use img/simpleCAasymmTulk2.png>
-Package pdftex.def Info: img/simpleCAasymmTulk2.png  used on input line 986.
-(pdftex.def)             Requested size: 310.49028pt x 174.65077pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[20 <./JH_capaper_files/figure-latex/G1-3asymm3-1.pdf>]
-<JH_capaper_files/figure-latex/G1-3asymmContrib1-1.pdf, id=394, 469.755pt x 469
-.755pt>
-File: JH_capaper_files/figure-latex/G1-3asymmContrib1-1.pdf Graphic file (type 
-pdf)
-<use JH_capaper_files/figure-latex/G1-3asymmContrib1-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/G1-3asymmContrib1-1.pdf 
- used on input line 1007.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-<JH_capaper_files/figure-latex/G1-3asymmContrib2-1.pdf, id=395, 469.755pt x 469
-.755pt>
-File: JH_capaper_files/figure-latex/G1-3asymmContrib2-1.pdf Graphic file (type 
-pdf)
-<use JH_capaper_files/figure-latex/G1-3asymmContrib2-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/G1-3asymmContrib2-1.pdf 
- used on input line 1018.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-<JH_capaper_files/figure-latex/simpleCA3map1-1.pdf, id=396, 469.755pt x 469.755
-pt>
-File: JH_capaper_files/figure-latex/simpleCA3map1-1.pdf Graphic file (type pdf)
-
-<use JH_capaper_files/figure-latex/simpleCA3map1-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/simpleCA3map1-1.pdf  use
-d on input line 1042.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-[21 <./img/simpleCAasymmTulk2.png>] [22 <./JH_capaper_files/figure-latex/G1-3as
-ymmContrib1-1.pdf>] [23 <./JH_capaper_files/figure-latex/G1-3asymmContrib2-1.pd
-f>] [24 <./JH_capaper_files/figure-latex/simpleCA3map1-1.pdf>] [25
-
-]
-<JH_capaper_files/figure-latex/suppointCA2map1-1.pdf, id=445, 469.755pt x 469.7
-55pt>
-File: JH_capaper_files/figure-latex/suppointCA2map1-1.pdf Graphic file (type pd
-f)
-<use JH_capaper_files/figure-latex/suppointCA2map1-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/suppointCA2map1-1.pdf  u
-sed on input line 1115.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-<JH_capaper_files/figure-latex/suppointCA2map2-1.pdf, id=446, 469.755pt x 469.7
-55pt>
-File: JH_capaper_files/figure-latex/suppointCA2map2-1.pdf Graphic file (type pd
-f)
-<use JH_capaper_files/figure-latex/suppointCA2map2-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/suppointCA2map2-1.pdf  u
-sed on input line 1126.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-
-Overfull \hbox (137.77135pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 26 \T1/lmr/m/sl/10 YKSINKERTAISEN KORRESPONDENSSIANALYYSIN LAAJE
-NNUKSIA 1 - TÄYDENTÄVÄT PISTEET
- []
-
-[26] [27 <./JH_capaper_files/figure-latex/suppointCA2map1-1.pdf>]
-Overfull \hbox (137.77135pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 28 \T1/lmr/m/sl/10 YKSINKERTAISEN KORRESPONDENSSIANALYYSIN LAAJE
-NNUKSIA 1 - TÄYDENTÄVÄT PISTEET
- []
-
-[28 <./JH_capaper_files/figure-latex/suppointCA2map2-1.pdf>]
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1184--1184
-[]\T1/lmtt/m/n/10 ##                bF        bW       bB       BG        dW   
-     dE        DK[] 
- []
-
-
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1184--1184
-[]\T1/lmtt/m/n/10 ## Mass     0.124279  0.060174 0.062753 0.113103  0.143313  0
-.067174  0.170453[] 
- []
-
-
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1184--1184
-[]\T1/lmtt/m/n/10 ## ChiDist  0.341469  0.096258 0.239034 0.630991  0.219094  0
-.505720  0.634063[] 
- []
-
-
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1184--1184
-[]\T1/lmtt/m/n/10 ## Inertia  0.014491  0.000558 0.003586 0.045032  0.006879  0
-.017180  0.068528[] 
- []
-
-
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1184--1184
-[]\T1/lmtt/m/n/10 ## Dim. 1   0.400065 -0.090631 0.216912 1.502458  0.254323 -1
-.262007 -1.506022[] 
- []
-
-
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1184--1184
-[]\T1/lmtt/m/n/10 ## Dim. 2  -1.254042  0.267998 0.789358 0.236498 -0.451124 -0
-.226595  1.121468[] 
- []
-
-[29]
-<JH_capaper_files/figure-latex/suppointCA3map1-1.pdf, id=481, 469.755pt x 469.7
-55pt>
-File: JH_capaper_files/figure-latex/suppointCA3map1-1.pdf Graphic file (type pd
-f)
-<use JH_capaper_files/figure-latex/suppointCA3map1-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/suppointCA3map1-1.pdf  u
-sed on input line 1259.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-<JH_capaper_files/figure-latex/suppointCA3map2-1.pdf, id=482, 469.755pt x 469.7
-55pt>
-File: JH_capaper_files/figure-latex/suppointCA3map2-1.pdf Graphic file (type pd
-f)
-<use JH_capaper_files/figure-latex/suppointCA3map2-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/suppointCA3map2-1.pdf  u
-sed on input line 1268.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-<JH_capaper_files/figure-latex/suppointCA3map3-1.pdf, id=483, 469.755pt x 469.7
-55pt>
-File: JH_capaper_files/figure-latex/suppointCA3map3-1.pdf Graphic file (type pd
-f)
-<use JH_capaper_files/figure-latex/suppointCA3map3-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/suppointCA3map3-1.pdf  u
-sed on input line 1277.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-
-Overfull \hbox (137.77135pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 30 \T1/lmr/m/sl/10 YKSINKERTAISEN KORRESPONDENSSIANALYYSIN LAAJE
-NNUKSIA 1 - TÄYDENTÄVÄT PISTEET
- []
-
-[30] [31 <./JH_capaper_files/figure-latex/suppointCA3map1-1.pdf>]
-Overfull \hbox (137.77135pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 32 \T1/lmr/m/sl/10 YKSINKERTAISEN KORRESPONDENSSIANALYYSIN LAAJE
-NNUKSIA 1 - TÄYDENTÄVÄT PISTEET
- []
-
-[32 <./JH_capaper_files/figure-latex/suppointCA3map2-1.pdf>] [33 <./JH_capaper_
-files/figure-latex/suppointCA3map3-1.pdf>]
-<img/3dSymMap_1.png, id=522, 479.99326pt x 389.65575pt>
-File: img/3dSymMap_1.png Graphic file (type png)
-<use img/3dSymMap_1.png>
-Package pdftex.def Info: img/3dSymMap_1.png  used on input line 1288.
-(pdftex.def)             Requested size: 480.02869pt x 389.68451pt.
-<img/3dSymMap_2.png, id=524, 536.0025pt x 552.8655pt>
-File: img/3dSymMap_2.png Graphic file (type png)
-<use img/3dSymMap_2.png>
-Package pdftex.def Info: img/3dSymMap_2.png  used on input line 1289.
-(pdftex.def)             Requested size: 533.26949pt x 550.0465pt.
-
-Overfull \hbox (135.02869pt too wide) in paragraph at lines 1288--1290
-[][]
- []
-
-
-Overfull \hbox (188.26949pt too wide) in paragraph at lines 1288--1290
-[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (137.77135pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 34 \T1/lmr/m/sl/10 YKSINKERTAISEN KORRESPONDENSSIANALYYSIN LAAJE
-NNUKSIA 1 - TÄYDENTÄVÄT PISTEET
- []
-
-[34 <./img/3dSymMap_1.PNG>] [35 <./img/3dSymMap_2.PNG>]
-Overfull \hbox (137.77135pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 36 \T1/lmr/m/sl/10 YKSINKERTAISEN KORRESPONDENSSIANALYYSIN LAAJE
-NNUKSIA 1 - TÄYDENTÄVÄT PISTEET
- []
-
-[36
-
-]
-<JH_capaper_files/figure-latex/gaCA1map-1.pdf, id=541, 469.755pt x 469.755pt>
-File: JH_capaper_files/figure-latex/gaCA1map-1.pdf Graphic file (type pdf)
-<use JH_capaper_files/figure-latex/gaCA1map-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/gaCA1map-1.pdf  used on 
-input line 1338.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-[37]
-Overfull \hbox (172.35637pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 38 \T1/lmr/m/sl/10 YKSINKERTAISEN KORRESPONDENSSIANALYYSIN LAAJE
-NNUKSIA 2 - YHTEISVAIKUTUSMUUTTUJAT
- []
-
-[38 <./JH_capaper_files/figure-latex/gaCA1map-1.pdf>] [39]
-<JH_capaper_files/figure-latex/maagaCA1map1-1.pdf, id=564, 469.755pt x 469.755p
-t>
-File: JH_capaper_files/figure-latex/maagaCA1map1-1.pdf Graphic file (type pdf)
-<use JH_capaper_files/figure-latex/maagaCA1map1-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/maagaCA1map1-1.pdf  used
- on input line 1426.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-
-Overfull \hbox (172.35637pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 40 \T1/lmr/m/sl/10 YKSINKERTAISEN KORRESPONDENSSIANALYYSIN LAAJE
-NNUKSIA 2 - YHTEISVAIKUTUSMUUTTUJAT
- []
-
-[40 <./JH_capaper_files/figure-latex/maagaCA1map1-1.pdf>] [41]
-Overfull \hbox (172.35637pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 42 \T1/lmr/m/sl/10 YKSINKERTAISEN KORRESPONDENSSIANALYYSIN LAAJE
-NNUKSIA 2 - YHTEISVAIKUTUSMUUTTUJAT
- []
-
-[42] [43]
-Overfull \hbox (172.35637pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 44 \T1/lmr/m/sl/10 YKSINKERTAISEN KORRESPONDENSSIANALYYSIN LAAJE
-NNUKSIA 2 - YHTEISVAIKUTUSMUUTTUJAT
- []
-
-[44
-
-]
-<JH_capaper_files/figure-latex/maagaCA2sub2map1-1.pdf, id=598, 469.755pt x 469.
-755pt>
-File: JH_capaper_files/figure-latex/maagaCA2sub2map1-1.pdf Graphic file (type p
-df)
-<use JH_capaper_files/figure-latex/maagaCA2sub2map1-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/maagaCA2sub2map1-1.pdf  
-used on input line 1595.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-<JH_capaper_files/figure-latex/maagaCA2sub2map2-1.pdf, id=599, 469.755pt x 469.
-755pt>
-File: JH_capaper_files/figure-latex/maagaCA2sub2map2-1.pdf Graphic file (type p
-df)
-<use JH_capaper_files/figure-latex/maagaCA2sub2map2-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/maagaCA2sub2map2-1.pdf  
-used on input line 1604.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-<JH_capaper_files/figure-latex/maagaCA2sub2map3-1.pdf, id=600, 469.755pt x 469.
-755pt>
-File: JH_capaper_files/figure-latex/maagaCA2sub2map3-1.pdf Graphic file (type p
-df)
-<use JH_capaper_files/figure-latex/maagaCA2sub2map3-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/maagaCA2sub2map3-1.pdf  
-used on input line 1613.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-[45]
-Overfull \hbox (4.58058pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 46 \T1/lmr/m/sl/10 KORRESPONDENSSIANALYYSIN LAAJENNUKSIA 3 - OSA
-JOUKON CA
- []
-
-[46 <./JH_capaper_files/figure-latex/maagaCA2sub2map1-1.pdf>] [47 <./JH_capaper
-_files/figure-latex/maagaCA2sub2map2-1.pdf>]
-Overfull \hbox (4.58058pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 48 \T1/lmr/m/sl/10 KORRESPONDENSSIANALYYSIN LAAJENNUKSIA 3 - OSA
-JOUKON CA
- []
-
-[48 <./JH_capaper_files/figure-latex/maagaCA2sub2map3-1.pdf>] [49]
-Overfull \hbox (4.58058pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 50 \T1/lmr/m/sl/10 KORRESPONDENSSIANALYYSIN LAAJENNUKSIA 3 - OSA
-JOUKON CA
- []
-
-[50]
-<JH_capaper_files/figure-latex/maagaCA2sub3map1-1.pdf, id=649, 469.755pt x 469.
-755pt>
-File: JH_capaper_files/figure-latex/maagaCA2sub3map1-1.pdf Graphic file (type p
-df)
-<use JH_capaper_files/figure-latex/maagaCA2sub3map1-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/maagaCA2sub3map1-1.pdf  
-used on input line 1730.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-[51 <./JH_capaper_files/figure-latex/maagaCA2sub3map1-1.pdf>]
-Overfull \hbox (4.58058pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 52 \T1/lmr/m/sl/10 KORRESPONDENSSIANALYYSIN LAAJENNUKSIA 3 - OSA
-JOUKON CA
- []
-
-[52] [53]
-Overfull \hbox (4.58058pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 54 \T1/lmr/m/sl/10 KORRESPONDENSSIANALYYSIN LAAJENNUKSIA 3 - OSA
-JOUKON CA
- []
-
-[54
-
-] [55]
-Underfull \hbox (badness 1881) in paragraph at lines 1909--1909
-[][]\T1/lmr/bx/n/14.4 Pinotut ja yh-dis-te-tyt tau-lu-kot (stac-ked and
- []
-
-<img/stacked1.png, id=683, 390.45876pt x 448.67625pt>
-File: img/stacked1.png Graphic file (type png)
-<use img/stacked1.png>
-Package pdftex.def Info: img/stacked1.png  used on input line 1921.
-(pdftex.def)             Requested size: 172.49945pt x 198.21916pt.
-<JH_capaper_files/figure-latex/concat1map1-1.pdf, id=684, 469.755pt x 469.755pt
->
-File: JH_capaper_files/figure-latex/concat1map1-1.pdf Graphic file (type pdf)
-<use JH_capaper_files/figure-latex/concat1map1-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/concat1map1-1.pdf  used 
-on input line 1937.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-[56]
-Overfull \hbox (71.10094pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 PINOTUT JA YHDISTETYT TAULUKOT (STACKED AND CONCATENATED TABLES
-) \T1/lmr/m/n/10 57
- []
-
-[57 <./img/stacked1.png (PNG copy)>] [58 <./JH_capaper_files/figure-latex/conca
-t1map1-1.pdf>]
-<JH_capaper_files/figure-latex/concat1map2-1.pdf, id=706, 469.755pt x 469.755pt
->
-File: JH_capaper_files/figure-latex/concat1map2-1.pdf Graphic file (type pdf)
-<use JH_capaper_files/figure-latex/concat1map2-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/concat1map2-1.pdf  used 
-on input line 2030.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-
-Overfull \hbox (71.10094pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 PINOTUT JA YHDISTETYT TAULUKOT (STACKED AND CONCATENATED TABLES
-) \T1/lmr/m/n/10 59
- []
-
-[59] [60 <./JH_capaper_files/figure-latex/concat1map2-1.pdf>] [61] [62]
-<JH_capaper_files/figure-latex/MCA1map1-1.pdf, id=734, 469.755pt x 469.755pt>
-File: JH_capaper_files/figure-latex/MCA1map1-1.pdf Graphic file (type pdf)
-<use JH_capaper_files/figure-latex/MCA1map1-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/MCA1map1-1.pdf  used on 
-input line 2216.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-[63] [64 <./JH_capaper_files/figure-latex/MCA1map1-1.pdf>]
-<JH_capaper_files/figure-latex/MCA1map2-1.pdf, id=750, 469.755pt x 469.755pt>
-File: JH_capaper_files/figure-latex/MCA1map2-1.pdf Graphic file (type pdf)
-<use JH_capaper_files/figure-latex/MCA1map2-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/MCA1map2-1.pdf  used on 
-input line 2239.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-[65 <./JH_capaper_files/figure-latex/MCA1map2-1.pdf>]
-<JH_capaper_files/figure-latex/subsetMCA1map1-1.pdf, id=763, 469.755pt x 469.75
-5pt>
-File: JH_capaper_files/figure-latex/subsetMCA1map1-1.pdf Graphic file (type pdf
-)
-<use JH_capaper_files/figure-latex/subsetMCA1map1-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/subsetMCA1map1-1.pdf  us
-ed on input line 2273.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-[66 <./JH_capaper_files/figure-latex/subsetMCA1map1-1.pdf>]
-<JH_capaper_files/figure-latex/subsetMCA1map2-1.pdf, id=775, 469.755pt x 469.75
-5pt>
-File: JH_capaper_files/figure-latex/subsetMCA1map2-1.pdf Graphic file (type pdf
-)
-<use JH_capaper_files/figure-latex/subsetMCA1map2-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/subsetMCA1map2-1.pdf  us
-ed on input line 2297.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-<JH_capaper_files/figure-latex/subsetMCA1map3-1.pdf, id=776, 469.755pt x 469.75
-5pt>
-File: JH_capaper_files/figure-latex/subsetMCA1map3-1.pdf Graphic file (type pdf
-)
-<use JH_capaper_files/figure-latex/subsetMCA1map3-1.pdf>
-Package pdftex.def Info: JH_capaper_files/figure-latex/subsetMCA1map3-1.pdf  us
-ed on input line 2312.
-(pdftex.def)             Requested size: 310.498pt x 310.498pt.
-[67 <./JH_capaper_files/figure-latex/subsetMCA1map2-1.pdf>] [68 <./JH_capaper_f
-iles/figure-latex/subsetMCA1map3-1.pdf>] [69] [70]
-Overfull \hbox (43.49887pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ##      name   mass  qlt  inr    k=1 cor ctr    k=2 cor ctr  
-  k=3 cor ctr[] 
- []
-
-[71]
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 1  |  a1S |   48  976   29 |  441 916  73 | -112  59   9 |
-  -18   1   1 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 2  |  a1s |   54  966   20 | -117 206   6 |  210 663  37 |
-   81  98  24 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 3  |  a1? |   15  786   27 | -354 626  14 |   73  26   1 |
- -163 133  26 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 4  |  a1e |   18  837   29 | -451 709  28 | -150  79   6 |
- -119  49  17 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 5  |  a1E |    5  935   30 | -339 113   4 | -887 771  56 |
-  229  51  16 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 6  |  b1S |   12  869   37 | -367 133  12 | -831 685 128 |
-  226  51  41 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 7  |  b1s |   37  798   28 | -387 689  42 |  -39   7   1 |
- -149 102  55 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 8  |  b1? |   26  573   25 | -194 269   8 |  189 258  14 |
-  -80  46  11 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 9  |  b1e |   39  836   25 |   98  67   3 |  266 488  43 |
-  201 281 107 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 10 |  b1E |   24  910   43 |  821 858 126 | -156  31   9 |
- -129  21  27 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 11 |  c1S |   12  876   38 | -379 141  14 | -836 685 134 |
-  226  50  43 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 12 |  c1s |   36  805   29 | -393 692  43 |  -35   6   1 |
- -155 107  58 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 13 |  c1? |   26  571   25 | -198 282   8 |  181 235  13 |
-  -87  54  13 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 14 |  c1e |   38  843   26 |   79  41   2 |  281 509  46 |
-  213 293 116 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 15 |  c1E |   26  908   43 |  815 865 134 | -137  24   8 |
- -119  18  25 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 16 |  d1S |   12  902   34 | -247  80   6 | -768 771 112 |
-  197  51  32 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 17 |  d1s |   33  828   26 | -347 744  31 |  -35   8   1 |
- -112  77  28 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 18 |  d1? |   32  647   23 | -157 336   6 |  129 226   8 |
-  -80  86  14 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 19 |  d1e |   34  896   24 |   72  47   1 |  249 572  33 |
-  173 276  69 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 20 |  d1E |   22  956   38 |  791 932 106 |  -91  12   3 |
-  -90  12  12 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 21 |  e1S |   15  949   31 | -142  44   2 | -631 866  90 |
-  135  40  18 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 22 |  e1s |   36  793   23 | -263 738  19 |   35  13   1 |
-  -62  42  10 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 23 |  e1? |   34  475   22 |  -56  70   1 |  112 279   7 |
-  -75 126  13 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 24 |  e1e |   32  847   23 |   56  48   1 |  189 549  18 |
-  128 250  35 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 25 |  e1E |   15 1023   32 |  726 985  62 | -119  26   3 |
-  -78  11   6 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 26 |  a2S |   49 1005   24 |  335 870  43 | -132 134  13 |
-   -2   0   0 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 27 |  a2s |   59 1011   19 | -154 428  11 |  176 561  28 |
-   35  22   5 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 28 |  a2? |   22  770   24 | -203 582   7 |  -12   2   0 |
- -115 186  19 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 29 |  a2e |    8  796   26 | -338 565   7 | -215 228   6 |
-   23   3   0 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 30 |  a2E |    2  920   27 |   33   1   0 | -851 869  20 |
-  202  49   5 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 31 |  b2S |   12  961   33 | -345 173  11 | -718 750  94 |
-  162  38  21 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 32 |  b2s |   22  873   28 | -431 736  32 | -108  46   4 |
- -151  91  35 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 33 |  b2? |   27  741   25 | -281 582  16 |   89  58   3 |
- -117 101  25 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 34 |  b2e |   40  939   24 |  -76  53   2 |  269 658  45 |
-  159 228  68 |[] 
- []
-
-
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 2517--2517
-[]\T1/lmtt/m/n/10 ## 35 |  b2E |   39  944   37 |  630 932 119 |  -55   7   2 |
-  -45   5   5 |[] 
- []
-
-[72] [73
-
-] [74
-
-]
-Underfull \hbox (badness 1584) in paragraph at lines 2544--2551
-\T1/lmr/m/n/10 (eli nol-lat sal-lit-tu-ja) ja sa-mas-sa mitta-asteikossa. Jos m
-itta-asteikko on
- []
-
-[75] [76] [77] [78] [79]
-<img/BookdownProc.pdf, id=878, 486.81876pt x 158.5925pt>
-File: img/BookdownProc.pdf Graphic file (type pdf)
-<use img/BookdownProc.pdf>
-Package pdftex.def Info: img/BookdownProc.pdf  used on input line 2849.
-(pdftex.def)             Requested size: 241.49971pt x 78.67412pt.
-! Dimension too large.
-\fb@put@frame ...p \ifdim \dimen@ >\ht \@tempboxa 
-                                                  \fb@putboxa #1\fb@afterfra...
-l.4843 \end{Shaded}
-                    
+[9
+! pdfTeX error (ext4): \pdfendlink ended up in different nesting level than \pd
+fstartlink.
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.635 
+       
 Here is how much of TeX's memory you used:
- 12304 strings out of 481418
- 184728 string characters out of 5918213
- 825166 words of memory out of 5000000
- 28555 multiletter control sequences out of 15000+600000
- 601521 words of font info for 83 fonts, out of 8000000 for 9000
+ 11691 strings out of 481418
+ 168539 string characters out of 5918213
+ 478274 words of memory out of 5000000
+ 28200 multiletter control sequences out of 15000+600000
+ 586778 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 66i,9n,72p,508b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 66i,6n,72p,329b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 !  ==> Fatal error occurred, no output PDF file produced!
