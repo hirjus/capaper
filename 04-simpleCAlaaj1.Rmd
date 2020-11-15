@@ -96,8 +96,10 @@ Taulukko, Saksan ja Belgian alueet ja maaprofiilit.
 
 **edit** Riviprofiilitaulukko, kuvataan alueiden eroja. CA-analyysi kuitenkin koko
 aineiston frekfvenssitaululla, jossa rivien massat eivät ole samat.
+
 ```{r BeDealueetCA2, echo=FALSE}
 # suppoint1_tab2 <- read_rds("suppoint1tab1.rds") - testaus joka siirsi virheen 07-rmd-tiedostoon. Sama virheilmoitustyyppi.
+
 suppointCA2 <- ca(suppoint1_tab1[,1:5], suprow = 10:11)
 
 ```
@@ -119,7 +121,7 @@ plot(suppointCA2, main = "Symmetrinen kartta 1 ",
 
 ```{r suppointCA2map2, echo=FALSE, fig.cap= "Q1b: Saksan ja  Belgian aluejako ",fig.asp = 1, out.width = "90%",fig.align = "center"}
 
-plot(suppointCA2, main = "kontribuutiokartta ",
+plot(suppointCA2, main = "kontribuutiokartta 1",
         map = "rowgreen",
         arrows = c(FALSE, TRUE),
         mass = c(TRUE, FALSE),
@@ -175,6 +177,7 @@ suppointCA3 <- ca(~maa3 + Q1b,ISSP2012esim1.dat, nd = 3)
 
 # summary(suppointCA3)
 # Error in rsc %*% diag(sv) : non-conformable arguments
+# outo juttu, ei toimi! - TÄMÄ POISTETAAN
 
 ```
  
@@ -205,8 +208,15 @@ plot(suppointCA3, dim = c(2,3),
 
 **k** kokeilu 3d-grafiikalla - toinen riittää
 
-```{r 3dklippi1, echo=FALSE}
+```{r 3dklippi1, echo=FALSE, fig.cap="Saksan ja  Belgian aluejako - 3d-kuva1", out.width = "90%",fig.align = "center"}
+
 knitr::include_graphics('img/3dSymMap_1.PNG')
+
+```
+
+
+```{r 3dklippi2, echo=FALSE, fig.cap="Saksan ja  Belgian aluejako - 3d-kuva2", out.width = "90%",fig.align = "center"}
+
 knitr::include_graphics('img/3dSymMap_2.PNG')
 
 ```

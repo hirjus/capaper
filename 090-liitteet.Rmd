@@ -341,7 +341,9 @@ Tämä kuva on myös tekstissä, kätevä tapa esittää siististi kysymysten pi
 versiot.
 
 ```{r L1suomlom1, out.width='60%', fig.align='center',fig.cap='Esimerkki suomenkielisestä lomakkeesta', echo=T, eval=F}
+
 knitr::include_graphics('img/substvar_fi_Q1Q2.png')
+
 ```
 
 
@@ -351,6 +353,7 @@ Muokataan tiiviimpi pätkä esimerkkireposta bookdown-testi1. Tämä kuva kertoo
 julkaisutekniikan ympäristön.
 
 ```{r L3bdprocess1, out.width = '70%', fig.align='center',fig.cap='Tulostiedoston prosessointi'}
+
 knitr::include_graphics('img/BookdownProc.png')
 
 # pois out.width='50%',
@@ -364,9 +367,11 @@ knitr::include_graphics('img/BookdownProc.png')
 
 
 
-```{r ref.label=knitr::all_labels(), echo = T, eval=F}
+```{r ref.label=knitr::all_labels(), echo = T, eval = F}
+
 #Testataan koodilohkojen listausta, näyttää toimivan mutta vaatii vielä säätämistä.
 #Ohje löytyi [Yihui Xienin blogista](https://yihui.name/en/2018/09/code-appendix/)
 #(luettu 26.10.2018).
+
 ```
 

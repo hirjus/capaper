@@ -25,6 +25,8 @@ fig:suppointCA2map2
 fig:suppointCA3map1
 fig:suppointCA3map2
 fig:suppointCA3map3
+fig:3dklippi1
+fig:3dklippi2
 fig:gaCA1map
 fig:maagaCA1map1
 fig:maagaCA2sub2map1

@@ -166,3 +166,9 @@ maltillisesti kappalekuvauksia (**k**), lisäilty viitteitä hiotavaksi.
 Kokeiluja pdf-tulostuksen kanssa, ei vieläkään toimi mutta virheilmoitukset muuttuneet.
 Korjailtiin teorialiitteen kaavoja, poistettiin toiset kaava-labelit sieltä
  missä niitä oli. Kommentoitiin pois testitulostuksia MCA-luvussa.
+
+ **15.11.2020** Vaihdettu latex MikTeX -> TinyTeX, ja latex-kääntäjä pdflatex->
+ xelatex. Index.Rmd - tiedostossa "korkeimman tason" YAML-asetusksissa
+ margin = 0.9in jotta dokumenttitaulukko mahtuisi pdf-tulostuksessa sivulle.
+ PDF-tulostus kaatuu koodiliitteeseen, lokit ja tex-tiedosto luettavissa. PDF
+ saadaan "melkein", mutta sisällysluettelo puuttuu.
