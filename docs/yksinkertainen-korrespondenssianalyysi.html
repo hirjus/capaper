@@ -142,8 +142,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#aineiston-rajaaminen-maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.1</b> Aineiston rajaaminen maat ja muuttujat</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>3</b> Yksinkertainen korrespondenssianalyysi</a><ul>
-<li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä--kärsiikö-lapsi"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä -kärsiikö lapsi?</a></li>
-<li class="chapter" data-level="3.2" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#ca---esimerkki"><i class="fa fa-check"></i><b>3.2</b> CA - esimerkki</a></li>
+<li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä---kärsiikö-lapsi"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä - kärsiikö lapsi?</a></li>
+<li class="chapter" data-level="3.2" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#korrespondenssianalyysin-esimerkki-symmetrinen-kartta"><i class="fa fa-check"></i><b>3.2</b> Korrespondenssianalyysin esimerkki: symmetrinen kartta</a></li>
 <li class="chapter" data-level="3.3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#korrespondenssianalyysin-peruskäsitteet"><i class="fa fa-check"></i><b>3.3</b> Korrespondenssianalyysin peruskäsitteet</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#asymmetrinen-kartta-ja-ideaalipisteet"><i class="fa fa-check"></i><b>3.3.1</b> Asymmetrinen kartta ja ideaalipisteet</a></li>
 </ul></li>
@@ -199,21 +199,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="yksinkertainen-korrespondenssianalyysi" class="section level1">
 <h1><span class="header-section-number">Luku 3</span> Yksinkertainen korrespondenssianalyysi</h1>
-<p><strong>k1</strong> Korrespondenssianalyysin geometriset periaatteet ja kuvien tulkinnan
-oleelliset asiat voi esittää yksinkertaisen korrespondenssianalyysin avulla
-(MG ja Hastie). Tässä jaksossa aineistoksi valitaan yksi subsatanssimuuttuja ja
-kuusi maata. Taustamuuttujia ovat vastaajan ikä ja sukupuoli ja maa. Aineistosta jätettiin
-pois kaikki havainnot joissa vastaustieto puuttui. Taustamuuttujissa puuttuvia
-tietoja ei ole.</p>
-<p><strong>k2</strong> Yksinkertainen korrespondenssianalyysi on yhden taulukon analyysiä.
-Peruskäsitteet ja niiden yhteys dataan on helpompi hahmottaa pienessä aineistosssa,
-aina voi katsoa koko dataaa.</p>
-<div id="äiti-töissä--kärsiikö-lapsi" class="section level2">
-<h2><span class="header-section-number">3.1</span> Äiti töissä -kärsiikö lapsi?</h2>
-<p><strong>k1</strong>“Alle kouluikäinen lapsi todennäköisesti kärsii, jos hänen äitinsä käy työssä”.</p>
-<p>ISSP-tutkimuksissa kaksi kysymystä, joissa sana “äiti”, MG havainnut vastausten
-jakaumat poikkeaviksi (<strong>#V ?</strong>).</p>
-<p><strong>k</strong> Kolme taulukkoa: frekvenssitaulukko, riviprosentit ja sarakeprosentit</p>
+<p>Korrespondenssianalyysin peruskäsitteet ja muuttujien yhteyden graafisen analyysin
+periaatteet voi esittää kahden luokitelumuuttujan ristiintaulukoinnin eli
+kontigenssitaulun analyysin avulla. Kyse ei ole pelkästään helposta esimerkistä,
+vaan peruskäsitteet ja geometrisiin perusteisiin nojaava graafinen analyysi ovat
+oleellisilta osin samat myös monimutkaisemmissa menetelmän sovelluksissa.
+MG&amp;Hastie korostivat tätä, ja MG:n oppikirjat ovat hyvä esimerkki perusteellisesta
+yksinkertaisen taulukon analyysin esitystavasta. GDA-kirja (viite) korostaa
+ranskalaisen perinteen mukaisesti matemaattista teoriaperustaa, mutta myös siinä
+menetelmä peruskäsitteet ja tulkinnat esitellään yksinkertaisella esimerkillä
+(Fisherin Cairness-data, Mustonen (viite) käyttää samaa dataa).</p>
+<p>Esitän tässä jaksossa korrespondenssianalyysin peruskäsitteet intuitiivisesti,
+matemaattiset yksityiskohdat löytyvät liittestä 1. Esitystavan etu on taulukon
+pieni koko, johtopäätökset voi helposti tarkastaa datasta.
+Näin päästään nopeasti pääasiaan, graafiseen analyysiin.</p>
+<p>Tämä ei ole ainoa mahdollinen näkökulma, korrespondenssianalyysillä on useita
+vaihtoehtoisia tulkintoja. Se voidaan ymmärtää myös moniulotteisen
+varianssianalyysin kaltaiseksi hajonnan dekomponoinnin menetelmäksi.
+GDA-kirjassa numeeriset tulokset ovat tulkinnan lähtökohtana ja vasta sitten
+katsotaan graafista esitystä. CAiP (viite) pitää numeerisia tuloksia tärkeinä,
+niiden avulla varmistetaan kuvan tulkinnan pätevyys.</p>
+<div id="äiti-töissä---kärsiikö-lapsi" class="section level2">
+<h2><span class="header-section-number">3.1</span> Äiti töissä - kärsiikö lapsi?</h2>
+<p>Aineisto on kuuden maan vastaukset kysymykseen Q1b: ”Alle kouluikäinen lapsi
+todennäköisesti kärsii, jos hänen äitinsä käy työssä”. Kysymys on voimakkaasti
+muotoiltu (<strong>edit</strong>MG on jossain jutussa havainnut, että kyselyn kahdessa
+kysymyksessä on sana ”äiti” ja niiden vastausten jakaumat poikkeavat. Jos löydän
+lähteen lisään sen tähän). Kysymykset on suunniteltu kokonaisuudeksi, ja niitä
+analysoidaan yhdessä luvussa 7, yhden taulukon analyysi esittelee menetelmän.
+(alaviite:Tämän havaitsi eräs lastensuojelun ammattilainen: kysymys on
+irrallisena monimerkityksellinen (vähintään ns. ”double - barreled”), eikä
+siihen voi oikein järjevästi vastata. Pitäisi tietää missä lapsi on, mitä hän
+tekee). Havainnot joissa tieto vastauksesta puuttuu on poistettu aineistosta.
+Taustamuuttujia ovat vastaajan sukupuoli ja ikä.</p>
+<p>Frekvenssitaulukossa <a href="yksinkertainen-korrespondenssianalyysi.html#tab:simpeCA-frekTa1">3.1</a> on esitetty vastausten suhteellinen jakauma,
+lukumäärät on jaettu havaintojen lukumäärällä (8143). Korrespondenssianalyysissä
+kaikki on suhteellista, ja analyysi perustuu tähän taulukkoon. Taulukon
+reunajakaumat kertovat jokaisen maan ja jokaisen vastausvaihtoehdon suhteellisen
+osuuden. Näitä suhteellisia osuuksia kutsustaan korrespondenssianalyysissä
+<em>rivi- ja sarakemassoiksi</em>.</p>
 <table>
 <caption><span id="tab:simpeCA-frekTa1">Taulukko 3.1: </span>Kysymyksen Q1b vastaukset maittain, suhteelliset frekvenssit</caption>
 <thead>
@@ -293,6 +317,11 @@ jakaumat poikkeaviksi (<strong>#V ?</strong>).</p>
 </tr>
 </tbody>
 </table>
+<p>Muuttujien luonne on usein erilainen. Tähän aineistoon sopii
+riviprosenttientaulukko, vertaillaan vastausten jakaumia maiden välillä. Taulukon
+sarakkeet ovat muuttujia ja rivit havaintoja. Rivit on saatu summaamalla
+(aggregoimalla) vastaukset maittain.
+(viite: MG kutsuu näitä rivejä termillä samples, osajoukot).</p>
 <table>
 <caption><span id="tab:simpeCA-rprosTa1">Taulukko 3.2: </span>Kysymyksen Q1b vastaukset, riviprosentit</caption>
 <thead>
@@ -372,6 +401,7 @@ jakaumat poikkeaviksi (<strong>#V ?</strong>).</p>
 </tr>
 </tbody>
 </table>
+<p>Sarakeprosentit antavat toisen näkökulmaan samaan dataan.</p>
 <table>
 <caption><span id="tab:simpeCA-cprosTa1">Taulukko 3.3: </span>Kysymyksen Q1b vastaukset, sarakeprosentit</caption>
 <thead>
@@ -451,25 +481,16 @@ jakaumat poikkeaviksi (<strong>#V ?</strong>).</p>
 </tr>
 </tbody>
 </table>
-<p><strong>k</strong> <strong>Taulkoista</strong></p>
-<p>Frekvenssitaulukossa havaintojen lukumäärät on jaettu kokonaislukumäärällä
-(8143).</p>
-<p>Frekvenssitaulukko <a href="yksinkertainen-korrespondenssianalyysi.html#tab:simpeCA-frekTa1">3.1</a> kertoo vastausten jakauman maiden
-ja vastausvaihtoehtojen mukaan luokiteltuina.</p>
-<p>Muuttujien luonne on usein erilainen. Tähän aineistoon sopii riviprosenttientaulukko,
-vertaillaan vastausten jakaumia maiden välillä.Taulukon sarakkeet ovat muuttujia
-ja rivit havaintoja. Sarakeprosentit antavat toisen näkökulmaan samaan dataan.</p>
-<p>Tavoitteena on korrespondenssianalyysin kartta, jossa rivi- ja
-sarakepisteet on esitetty samassa kuvassa. Sarakeprosenttien taulukossa on esitetty
-sarakkeiden suhteelliset jakaumat.</p>
-<p>Näitä suhteellisia rivejä ja sarakkeita kutsutaan korrespondenssianalyysissä
-profiileiksi.</p>
-<p>Frekvenssitaulukon reunajakaumat eli rivi- ja sarakesummat jaettuna havaintojen
-lukumäärällä ovat profiilien massoja.</p>
+<p>Tavoitteena on korrespondenssianalyysin kartta, jossa rivi- ja sarakepisteet on
+esitetty samassa kuvassa. Sarakeprosenttien taulukossa on esitetty sarakkeiden
+suhteelliset jakaumat. Näitä suhteellisia rivejä ja sarakkeita kutsutaan
+korrespondenssianalyysissä <em>rivi- ja sarakeprofiileiksi</em>.</p>
 <p><strong>k</strong> Rivit on saatu alkuperäisestä aineistosta osajoukkojen summina. MG:n
 terminologialla “samples”.</p>
-<p>Rivi- ja sarakeprofiileja verrataan niiden keskiarvoprofiiliin. Seuraavat kaksi
-kuvaa näyttävät miten eri profiilit poikkeavat keskiarvostaan.</p>
+<p>Korrespondenssianalyysin perusidea on analysoida rivien ja sarakkeiden yhteyttä
+(korrespondenssia) rivi- tai sarakeprofiilien hajonnan avulla. Hajontaa mitataan
+poikkeamilla keskiarvorivistä tai sarakkeesta, ja massat otetaan huomioon,
+kun hajonnat lasketaan yhteen.</p>
 <div class="figure"><span id="fig:g1-2kuva1"></span>
 <img src="JH_capaper_files/figure-html/g1-2kuva1-1.png" alt="Q1b:Sarakeprofiilit ja keskiarvoprofiili" width="672" />
 <p class="caption">
@@ -482,9 +503,13 @@ Kuva 3.1: Q1b:Sarakeprofiilit ja keskiarvoprofiili
 Kuva 3.2: Q1b: riviprofiilit ja keskiarvorivi
 </p>
 </div>
-<p><strong>edit</strong> Tässä esitellään ovelasti CA:n tripletin kaksi jäsentä, massat ja profiilit.
-khii2-etäisyys on kolmas. Triplettiin liittyy “kvartetti”,
-josta tässä esitellään inertia.</p>
+<p>Kuvasta 3.2 <a href="yksinkertainen-korrespondenssianalyysi.html#fig:g1-2kuva2">3.2</a> esimerkiksi näkee, että Tanska (DK) näyttäisi
+poikkeava keskiarvorivistä paljon, samoin Bulgaria.
+Bulgarian massa on kuitenkin aineiston pienin (11,31 %), Tanskan taas
+kohtalainen (17 %).
+Sarakeprofiilikuvassa <a href="yksinkertainen-korrespondenssianalyysi.html#fig:g1-2kuva1">3.1</a> täysin eri mieltä - vastaus (E) on
+selvästi erilainen ja sen massa on suuri (23%). Kaikki luvut ovat suhteellisia,
+havaintojen lukumäärä ei vaikuta tulkintaan periaatteessa mitenkään.</p>
 <p>Mikä on rivien (havaintojen) ja sarakkeiden (muuttujien) yhteys?</p>
 <p>Kahden luokittelumuuttujan riippuvuutta voidaan testata <span class="math inline">\(\chi^{2}\)</span> - testillä.
 Riippumattomuushypoteesin mukainen odotettu solufrekvenssi on taulukon
@@ -547,53 +572,129 @@ khii2-etäisyyksien poikkeamien summan eli on mahdollisimman lähellä pisteitä
 <p><strong>K</strong> rivi- ja sarakeongelma ratkaisu johtaa saamaan lopputulokseen. Tämä
 duaalisuus on korrespondenssianalyysin perusominaisuuksia.</p>
 </div>
-<div id="ca---esimerkki" class="section level2">
-<h2><span class="header-section-number">3.2</span> CA - esimerkki</h2>
+<div id="korrespondenssianalyysin-esimerkki-symmetrinen-kartta" class="section level2">
+<h2><span class="header-section-number">3.2</span> Korrespondenssianalyysin esimerkki: symmetrinen kartta</h2>
 <div class="figure" style="text-align: center"><span id="fig:simpleCA1map1"></span>
 <img src="JH_capaper_files/figure-html/simpleCA1map1-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
 <p class="caption">
 Kuva 3.3: Q1b: lapsi kärsii jos äiti on töissä
 </p>
 </div>
-<p><strong>edit1</strong> jatkossa plot - main on kuvan tyyppi (symmetrinen, kontribuutio jne),
-koodilohkon fig.cap “ylimmän tason” otsikko.</p>
-<p><strong>edit2</strong> Akseleiden tekstit (Dimensio 1….jne) asetettu käsin, ikävä kyllä myös
-selitetyn inertian osuus. CA-kartoissa tämä on niin oleellinen asia, että akselien nimet voi muutttaa
-vasta esitysgrafiikassa, ei data-analyysissä. Dim1 ja Dim2 kuuluvat kuviin.</p>
-<p><strong>edit3</strong> par(cex = 1) ennen plot-komenota muuttaa valitettavasti “kaiken” kokoa.
-Antaa olla, kun on graafista data-analyysiä. Selkeys tärkeämpää kuin ulkoasu.</p>
 <p><strong>k</strong> Kartan tulkinta</p>
-<p><strong>k</strong> Prosentit - kuinka paljon kokonaisinertiasta saadaan kuvattua (“selitettyä”) kahdessa
-ulottuvuudessa? Miten se jakautuu ensimmäiselle ja toiselle akselille?</p>
-<p><strong>k</strong> Dimenisoiden tulkinta sarakepisteiden avulla: mitä on oikealla ja vasemmalla?
-Kaukana on kaukana, mutta lähellä voi olla täydessä sarake- tai riviavaruudessa
-kaukana. Siksi tulkinta kontrastien avulla - mikä piste on suhteellisesti kauimpana?</p>
-<p><strong>k</strong> Rivipisteiden tulkinta kartalla - järjestys vasemmalta oikealle ja alhaalta
-ylös. Pisteiden etäisyydet toisistaan.</p>
-<p><strong>k</strong> Origo on aineiston keskipiste, “riippumattomuushypoteesi” (kts. teorialiite).</p>
-<p><strong>k</strong> Sarakepisteiden erot ja rivipisteiden erot ovat suhteellisia, approksimoivat
-khii2-etäisyyksiä.</p>
-<p><strong>k</strong> Rivi- ja sarakepisteiden etäisyyksillä ei suoraan mitään tulkintaa!</p>
-<p><strong>k</strong> Lista: mitä muuta, johon palataan seuraavassa luvussa?</p>
-<ul>
-<li>kuinka hyvin pisteet on esitetty tasossa?</li>
-<li>esim. x-akseli kuvaa (“nappaa”) 76% kokonaisinertiasta. Pisteiden
-inertiakontribuutiot</li>
-</ul>
+<p>Kartassa (symmetrisessä kartassa) on jo nimetty molemmat akselit, mutta tulkinta
+aloitetaan prosenteista. Ne kertovat, kuinka paljon aineiston inertiasta eli
+hajonnasta on kaksiulotteisesssa projektiossa saatu kuvattua akseleille.</p>
+<p>Ensimmäinen akseli saa aina suurimman osan inertiasta, tässä 76 prosenttia.
+Kun toinen akseli kuvaa 15 prosenttia koko inertiasta, on kartalla esitetty 91
+prosenttia aineiston hajonnasta. Loput 9 prosenttia jää 3. ja 4. dimensiolle.
+Nämä ”selitysosuudet” ovat samantapainen laskelma kuin perinteisen regressiomallin
+”selitetty” vaihtelu ja ”jäännösvaihtelu”.</p>
+<p><em>Kontrastit</em> määrittävät akselien tulkinnan . Benzacrin ohjeen mukaan (1992,
+teoksessa GDA s. 49) katsotaan mitä on oikealla ja mitä vasemmalla. Akselien
+tulkinta perustuu siihen, mitä mitä yhteistä on kaikilla elementeillä jotka ovat
+origon vasemmalla puolella ja vastaavasti origon oikealla puolella. Samalla tavalla
+tulkitaan toinen akseli, mitä on ylhäällä ja alhaalla.</p>
+<p><strong>edit</strong>Käytän jatkossa muuttujista niiden symboleja sanallisen kuvauksen sijaan.</p>
+<p>Tässä tapauksessa taulukon rivit ovat havaintoja (”samples” ) ja sarakkeet
+muuttujia, ja akselien tulkinta tehdään muuttujien avulla. Vasemmalla on E ja
+oikealla puolella samanmieliset vastaukset s ja S. Neutraali ”?” on s-vastausten
+vasemmalla puolella. Kun erot ovat suhteellisia, ei kuvan perusteella voi sanoa
+kuinka paljon.</p>
+<p>Sarakkeet voi projisoida ensimmäiselle akselille (ts. katsoa niiden x-koordinaatin)
+, ja tässä ne ovat “oikeassa järjestyksessä”.
+Jos vastausvaihtoehdoille haluaisi antaa numeeriset arvot, x-akselin koordinaatti
+olisi ehkä parempi kun järjestysnumero?</p>
+<p>Ensimmäisen dimenosion tulkinta on aika selkeä. Toinen akseli on kontrasti
+lievemmän tai maltillisemman erimielisyyden ja muiden vastausten kanssa.
+Se on 1. dimension suuntaan kaikkein lähimpänä origoa. Hieman varoivaisemmin
+akselin voi tulkita maltillisen ja jyrkemmän tai varmemman mielipiteen kontrastiksi.</p>
+<p>Maiden vertailu tehdään näiden akselien suuntaan. Sekä sarekepisteiden että
+rivipisteiden keskinäiset välimatkat approksimoivat optimaalisesti niiden
+(khii2)etäisyyksiä. Sarake- ja rivipisteiden välisillä etäisyyksillä ei ole
+mitään suoraa tulkintaa. Pisteiden etäisyydet samassa pistepilvessä ovat
+suhteellisia, Saksa on konsevatiivisempi kuin Suomi mutta emme tiedä kuinka paljon.
+Maiden järjestys oikealta vasemmalle on selkeä, Tanska on vasemmalla
+liberaalina ”ääripäänä”, oikealla taas Unkari ja Bulgaria. Pystyakselin suuntaan
+nähdään, että kaikkein ”maltillisin” mutta kuitenkin liberaali on Suomi,
+jyrkimmät mielipiteet löytyvät Unkarista ja Tanskasta.</p>
+<p>Näitä tulkintoja voi vertailla edellä esitettyihin kahteen kuvaan rivi- ja
+sarakeprofiileista. Kartta kertoo aika paljon enemmän.
+Kartta on approksimaatio neliulotteisen pistepilven hajonnalle. Vain origo on
+siinä tarkasti esitetty, se on koko aineiston keskiarvopiste, ja pisteiden
+hajonta sen ympärillä kuvaa poikkeamaa riippumattomuushypoteesista.</p>
+<p>Tärkeä geometrinen periaate on se, että kaukana on kaukana myös alkuperäisessä
+pistepilvessä, mutta kartalla lähellä olevat pisteet eivät välttämättä ole lähellä.
+Projektio kutistaa pisteiden etäisyyksiä.</p>
+<p>Approksimaation laatu selviää korrespondenssianalyysin numeerisista tuloksista,
+samoin se miten rivi- ja sarakepisteen määrittävät akselit.</p>
+<p>Kartoissa tärkein tekninen yksityiskohta on kuva- tai muotosuhde (aspect ratio).
+Akseleiden mittayksikön pitää olla sama (eli muotosuhten 1). Jos kuvia
+tulostetaan useassa formaatissa kannattaa olla tarkkana. Kuvien on jo
+analyysivaiheessa oltava lukukelpoisia, ja symbolien kokoa joutuu isoissa
+aineistoissa säätämään. Tulosten esittäminen lopullisessa muodossa vaatii jo
+paljon vaivannäköä, tässä tutkielmassa esitetään vain datan analysoinnin
+valikoituja kuvia. Graafinen data-analyysi on vaivatonta vasta sitten kun se tehty.
+En jatkossa esitä kuvailevia akseleiden nimiä kuvissa,
+akseleiden nimeäminen on kuvan tulkinnan toinen askel.</p>
+<p>Liitteessä 1 on esitetty korrespondenssianalyysin matemaattisen ratkaisun periaate.</p>
+<p><strong>k</strong> Kuva tai kartta - käytän termejä synonyymeinä - on se taso, joka parhaiten
+”selittää” neliulotteisen pisteparven hajontaa suhteessa koko aineiston
+keskiarvopisteeseen eli sentroidiin. Matemaattisesti ratkaisu saadaan
+soveltamalla singulaariarvohajoitelmaa, ja tulokseksi saadaa taso joka on
+lähimpänä pistepilviä. Etäisyyttä mitataan massoilla painotetulla
+khii2-etäisyysmitalla.</p>
+<p><strong>k</strong> Intuitiivisesti idea on aivan sama kuin pääkomponenttianalyysissä
+(PCA, principal component analysis). Ratkaisu löydetään akseli kerrallaan.
+Ensi pistepilvestä etsitää akseli, jolle ortogonaalisesti projisoitujen
+pisteiden hajonta on suurin. Sitten etsitään sille kohtisuora toinen akseli
+samalla säännöllä, ja näin jatketaan kunnes koko pilven hajota on jaettu näille
+uusille akseleille. tavoitteena on muutaman dimension approksimaatio
+moniulotteiselle datalle, yleensä kaksiulottoinen kartta.</p>
+<p><strong>k</strong> CA on paintotettu PCA</p>
 </div>
 <div id="korrespondenssianalyysin-peruskäsitteet" class="section level2">
 <h2><span class="header-section-number">3.3</span> Korrespondenssianalyysin peruskäsitteet</h2>
-<p>huom: riippumattomuushypoteesin oletukset eivät välttämättä ole voimassa
-kaikissa aineistoissa. Khii2-etäisyysmittaa käytetään silti, sen perustelu on
-paljon yleisempi,</p>
-<p><strong>ks</strong> Mitä käsitteitä tässä esitellään? Viittaukset teorialiitteeseen, ja
-tulkinnan hankaluudet (MG “loose ends” - paperi) käsitellään siellä.</p>
 <p><strong>edit</strong> Sulava kuvaus tulkinnasta, painotus kuvien tulkinnassa. CA:n numeeriset
 tulokset vasta seuraavassa luvussa. Tässä “mitä kuvasta näkee”, ei muuta (paitsi
 varoitukset - mitä ei näe). Idea koko ajan taulukon sarakkeiden ja riveien yhteyksien
 visualisointi.</p>
 <p><strong>edit</strong> Tärkeää selkeä kuvaus pääkoordinaattien ja standardikoordinaattien
 suhteesta. Tarkemmin teorialiitteessä, tässä heuristisesti jotta kuvia osaa tulkita.</p>
+<p>Korrespondenssianalyysille on vakiintunut oma käsitteistö, joista tärkeimmät on
+jo mainittu. Kun tulkinta perustuu ”ääripäihin”, puhutaan kontrasteista ja
+distinktiosta. Luokittelumuuttujan arvot taas ovat modaliteetteja.
+Tärkein periaate on se, että kaikki on suhteellista. Ydinkäsitteitä ovat
+<em>korrespondenssianalyysin ”tripletti”: khii2-etäisyys, massat ja profiilit</em>.</p>
+<p>Kolmikkoa täydentää ”kvartetti”, neljä siitä johdettua käsitettä: <em>inertia</em> eli
+(painotettu) varianssi, <em>sentroidi</em> (painotettu keskiarvo, barysentrinen periaate),
+<em>aliavaruus</em> ja <em>projektio</em>. (CAiP, s. 49).</p>
+<p><em>k</em> rivi- ja sarakeratkaisun duaalisuus: viite CAiP, jossa käydään läpi
+perusteellisesti.</p>
+<p><em>k</em> khii2-etäisyys on profiilien painotettu euklidinen etäisyys (ja toki
+neliöjuuri!) jossa painoina ovat keskiarvoprofiilin elementtien käänteisluvut
+eli elementtien etäisyyden neliö jaetaan keskiarvoprofiilin alkiolla.</p>
+<p><strong>edit</strong>: khii2-etäisyydestä ehkä teorialiitteeseen?</p>
+<p><em>k</em> khii2-testin oletukset eivät välttämättä ole voimassa kaikissa aineistoissa,
+mutta etäisyysmittaa käytetään silti, sen perustelu on paljon yleisempi.</p>
+<p><em>k</em> khii2-etäisyys on ainoa etäisyysmitta, joka toteuttaa distributional
+equivalence - periaatteen, CA:n ”tärkein juttu” (Benzecri), avain kaikkiin CA:n
+ominaisuuksiin. (Viite:CAip epilogi)</p>
+<p><em>k</em> normalisointi, samaan tapaan kuin PCA:ssa. Jos lukumäärätaulukko,
+Poisson-jakauman hajonta on sama kuin odotusarvo eli jaetaan poikkeama
+keskiarvosta hajonnalla.</p>
+<p><em>k</em> CAiP epilogi: khii2 on yhteys Mahlanobis-etäisyyteen ja multinomijakaumaan,
+jonka realisaatioiksi kontingenssitaulun rivit (esim.) voidaan tulkita. (s. 301).</p>
+<p><strong>Millaista dataa?</strong></p>
+<p>Korrespondenssianalyysin sovelletaan yleisimmin frekvenssitaulujen analyysiin,
+lukumäärädataan (count data). Periaatteessa mikä tahansa data sopii, kunhan se
+voidaan järkevästi esittää suhteelisina lukumäärinä (relative amounts), siis
+suhdeasteikon (ratio scale) muuttujana. Tässä oleellista on tulkittavuus
+tutkimusongelman näkökulmasta. Välttämätön ehto on sama mittayksikkö: lukumäärä,
+rahayksikkö, pituusmitta kelpaavat. (CAiP s. 15).
+Toinen ehto on ei-negatiivisuus (nolla tai nollaa suurempi luku) ,
+kts. kuitenkin GDA (tietyilllä ehdoilla myös neg. arvot. Rajat ovat melko
+joustavat, kun mukaan otetaan erilaiset uudelleenskaalaukset ja transformaatiot.
+Tämä oli menetelmän perusidea jo Benzecrillä(CAiP ch 26, s. 201).</p>
 <div id="asymmetrinen-kartta-ja-ideaalipisteet" class="section level3">
 <h3><span class="header-section-number">3.3.1</span> Asymmetrinen kartta ja ideaalipisteet</h3>
 <div class="figure" style="text-align: center"><span id="fig:G1-3asymm2"></span>

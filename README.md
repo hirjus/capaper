@@ -172,3 +172,5 @@ Korjailtiin teorialiitteen kaavoja, poistettiin toiset kaava-labelit sieltä
  margin = 0.9in jotta dokumenttitaulukko mahtuisi pdf-tulostuksessa sivulle.
  PDF-tulostus kaatuu koodiliitteeseen, lokit ja tex-tiedosto luettavissa. PDF
  saadaan "melkein", mutta sisällysluettelo puuttuu.
+
+ **16.11.2020** Teksti johdattelevaan esimerkkiin (3.1 - 3.3).
