@@ -532,14 +532,15 @@ rivin massaksi, ja niiden summa muotoon <span class="math inline">\(\frac{\chi^{
  \frac{\chi^{2}}{n} = \phi^{2}
   \tag{3.3}
  \end{equation}\]</span></p>
-<p>Huomaa jakajassa n, ei n-1. Tässä ei tn-päättelyä!</p>
+<p>Jakajassa ei ole vapausastekorjausta (n-1), korrespondenssianalyysi on
+deskriptiivistä data-analyysiä.</p>
 <p>Tunnusluku <span class="math inline">\(\phi^{2}\)</span> on korrespondenssianalyysissä kokonaisinertia (total
 inertia). Se kuvaa, kuinka paljon varianssia taulukossa on ja on riippumaton
 havaintojen lukumäärästä. Tilastotieteessä tunnusluvulla on useita vaihtoehtoisia
 nimiä (esim. mean square contingency coefficient), ja sen neliöjuurta kutsutaan
 <span class="math inline">\(\phi\)</span> - kertoimeksi.</p>
-<p>Tässä siirrytään kahden luokittelumuuttujan taulukosta suhteellisten frekvenssien
-taulukkoon. Kaavojen <a href="yksinkertainen-korrespondenssianalyysi.html#eq:khii21">(3.1)</a> ja <a href="yksinkertainen-korrespondenssianalyysi.html#eq:khii22">(3.2)</a> yhteyden pitäisi olla
+<p>Korrespondenssianalyysin algoritmit operoivat suhteellisten frekvenssien
+taulukkolla. Kaavojen <a href="yksinkertainen-korrespondenssianalyysi.html#eq:khii21">(3.1)</a> ja <a href="yksinkertainen-korrespondenssianalyysi.html#eq:khii22">(3.2)</a> yhteyden pitäisi olla
 selkeä.</p>
 <p>Frekvenssitaulukossa (jossa kaikki taulukon luvut on jaettu havaintojen
 lukumäärällä N riviprofiilien 1 ja 3 (euklidinen) etäisyys on</p>
@@ -547,7 +548,7 @@ lukumäärällä N riviprofiilien 1 ja 3 (euklidinen) etäisyys on</p>
  \sqrt{(p_{11} - p_{31})^2 + (p_{12} - p_{32})^2 + (p_{13} - _{33})^2+ (p_{14} - _{34})^2+ (p_{15} - _{35})^2}
  \tag{3.4}
  \end{equation}\]</span></p>
-<p>Rivien <span class="math inline">\(\chi^{2}\)</span> - etäisyys on painotettu euklidinen etäisyys, jossa painoina
+<p>Rivien <span class="math inline">\(\chi^{2}\)</span> - etäisyys on painotettueuklidinen etäisyys, jossa painoina
 ovat riviprofiilin odotetut arvot. Ne ovat riippumattomuushypoteesin mukaisesti
 riviprofiilien keskiarvoprofiilin vastaavat alkioit <span class="math inline">\(r_{i}\)</span> .</p>
 <p><span class="math display" id="eq:euclid2">\[\begin{equation}
@@ -564,6 +565,12 @@ summa lasketaan yli rivien <span class="math inline">\({i}\)</span>.</p>
 <p><strong>edit</strong> Tässä esitystavassa viite on CAiP, teorialiitteessä tarkemmin. Tarkoitus on esittää
 yksinkertaisesti taulukon datan analyysin käsitteet ja CA:n peruskäsitteet profiili,
 massa ja <span class="math inline">\(\chi^{2}\)</span> - etäisyys</p>
+<p>Rivi- ja sarakeprofiilien taulukoista näkee helposti, että keskiarvoprofiilien
+alkiot ovat massoja. Rivien keskiarvoprofiilin alkiot ovat sarakemassoja, ja sama
+pätee sarakkeille. Tämä rivi- ja sarakeongelmien duaalisuus on yksinkertaisen
+korrespondenssianalyysin keskeinen idea. Greenacren perusoppikirjassa ensimmäiset
+luvut esittelevät lähes kaikki menetelmän perusideat eri näkökulmilla
+tällaiseen taulukkoon (CAiP).</p>
 <p><strong>k</strong> ca-ratkaisu: rivi- ja sarekepilvien dimensio on sarakkeiden tai rivien
 lukumäärä vähennettynä yhdellä, pienempi kahdesta vaihtoehdosta. Tämä seuraa
 yksikertaisesti rivi- ja sarakeprofiilien suhteellisuudesta, niiden summat ovat 1.</p>
@@ -580,7 +587,6 @@ duaalisuus on korrespondenssianalyysin perusominaisuuksia.</p>
 Kuva 3.3: Q1b: lapsi kärsii jos äiti on töissä
 </p>
 </div>
-<p><strong>k</strong> Kartan tulkinta</p>
 <p>Kartassa (symmetrisessä kartassa) on jo nimetty molemmat akselit, mutta tulkinta
 aloitetaan prosenteista. Ne kertovat, kuinka paljon aineiston inertiasta eli
 hajonnasta on kaksiulotteisesssa projektiossa saatu kuvattua akseleille.</p>
@@ -628,7 +634,7 @@ Projektio kutistaa pisteiden etäisyyksiä.</p>
 <p>Approksimaation laatu selviää korrespondenssianalyysin numeerisista tuloksista,
 samoin se miten rivi- ja sarakepisteen määrittävät akselit.</p>
 <p>Kartoissa tärkein tekninen yksityiskohta on kuva- tai muotosuhde (aspect ratio).
-Akseleiden mittayksikön pitää olla sama (eli muotosuhten 1). Jos kuvia
+Akseleiden mittayksikön pitää olla sama eli muotosuhteen yksi. Jos kuvia
 tulostetaan useassa formaatissa kannattaa olla tarkkana. Kuvien on jo
 analyysivaiheessa oltava lukukelpoisia, ja symbolien kokoa joutuu isoissa
 aineistoissa säätämään. Tulosten esittäminen lopullisessa muodossa vaatii jo
@@ -761,6 +767,7 @@ Tämä tunnusluku kuvaa pisteen projektion laatua, kuinka hyvin se on kartalla e
 (kerrottu) massojen neliöillä. Näin sarakevektorit “kutistuvat” kohti origoa mutta
 vektorin pituus kertoo edelleen sen suhteellisen massan. Kartta sopii niin pienen
 kuin suuren inertian tilanteisiin(kts. esim. <span class="citation">(M. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5c768b09e4b02df9431e950a" role="doc-biblioref">2006</a>)</span>)</p>
+<p><strong>Absoluuttiset kontribuutiot</strong></p>
 <p>Absoluuttisten kontribuutioiden jakautumista akseleille voi varovaisesti päätellä
 sarakevektorin ja akseleiden välisistä kulmista. Mitä lähempänä sarakevektori on akselia,
 sitä suurempi on sen osuus akselin inertiasta. Samanlaisia päätelmiä voi tehdä myös
@@ -797,21 +804,39 @@ Belgia erottuvat hieman heikommin esitettyinä.</p>
 </div>
 <div id="massat" class="section level2">
 <h2><span class="header-section-number">3.5</span> Massat</h2>
-<p><strong>edit3</strong> Onko vakioitujen massojen kartta liian aikaisin? Tämä ei ole pääasia, vaan selvennys.
+<p><strong>edit</strong> Onko vakioitujen massojen kartta liian aikaisin? Tämä ei ole pääasia, vaan selvennys.
 Miksi tässä? Perusteltava, miksi en vakioi massoja maille, sukupuolille jne. (a)
 perusteltua kun tarkempi tutkimusongelma, esim. erottelut maiden ja sukupuolten
 välillä. Varianssianalyysin tapaan varianssin hajoittaminen ryhmisen sisäiseen ja
 ryhmien väliseen. Kts. teorialiitteestä esim. ABBA. (b) CA “perusmuodossa”, massa
 on yksi kolmesta tärkeimmästä käsitteestä. (c) on aika työlästä!</p>
-<p><strong>edit4</strong> Galkussa verrattu molempien painotusten khii2-etäisyyksiä, jos tarpeen
+<p><strong>edit</strong> Galkussa verrattu molempien painotusten khii2-etäisyyksiä, jos tarpeen
 niin teoria-liitteeseen.</p>
+<p>Massat ovat korrespondenssianalyysin keskeinen käsite, ja niiden kaksoisrooli on
+menetelmän ytimessä. Massat ovat normalisoiva muunnos khii2-etäisyysmitalle ja
+profiilien painoja. Tässä jälkimmäisessä roolissa massat liittyvät tutkimusongelmaan,
+mitä halutaan vertailla? Kun vertaillaan eri maita, ei ole kovin perusteltua käyttää
+massoina eri maiden otoskokoja. Jos taas halutaan vertailla vaikkapa miesten ja
+naisten vastauksia on luonnollista normalisoida miesten ja naisten massat yhtä
+suuriksi. Rivi- ja sarakemassat ovat verrannollisia taulukon rivi- ja sarakesummiin,
+frekvenssitaulukon reunajakaumiin. Ne voidaan tutkimusongelmaan sopivalla tavalla
+skaalata uudelleen. CAiP(s. 23) esimerkissä viiden koulutustaso-ryhmän massat skaalataan
+verrannollisiksi niiden väestötason osuuksiin, ei otoksen osuuksiin. Tällainen datan
+esikäsittely on normaali osa korrespondenssianalyysin soveltamista.</p>
+<p>Jos massat halutaan vakioida yhtä suuriksi osajoukoissa, ratkaisu on yksinkertainen.
+Korrespondenssianalyysin taulukoksi otetaan riviprofiilitaulukko, jossa rivien summat
+ovat yksi.</p>
+<p>Kuvassa <a href="yksinkertainen-korrespondenssianalyysi.html#fig:simpleCA3map1">3.8</a> on tehty näin, ja kartta eroaa hämmästyttävän
+vähän maiden otoskokoja massoina käyttävästä kartasta.</p>
 <div class="figure" style="text-align: center"><span id="fig:simpleCA3map1"></span>
 <img src="JH_capaper_files/figure-html/simpleCA3map1-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
 <p class="caption">
 Kuva 3.8: Q1b: lapsi kärsii jos äiti on töissä
 </p>
 </div>
-<p>Ei kovin isoja eroja, tässä datassa. Vilkaistaan myös absoluuttisia kontribuutioita.
+<p>Pienimpien otosten maat (Bulgaria, Unkari) liikahtavat hieman origoa kohti,
+Bulgaria hieman enemmän kohti maltillista puolta x-akselia.</p>
+<p>Kontribuutiokarttakaan ei eroa edellä esitetystä kartasta.
 <strong>edit</strong> Tämä kuva on ehkä tarpeeton?</p>
 <div class="figure" style="text-align: center"><span id="fig:simpleCA3map2"></span>
 <img src="JH_capaper_files/figure-html/simpleCA3map2-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
@@ -819,14 +844,53 @@ Kuva 3.8: Q1b: lapsi kärsii jos äiti on töissä
 Kuva 3.9: Q1b: lapsi kärsii jos äiti on töissä
 </p>
 </div>
+<p>En ole vakioinut vertailtavien ryhmien (tässä maat) suhteellisia osuuksia. Syy on
+yksinkertainen: esittelen menetelmää sen perusmuodossa ilman kovin täsmällisiä
+tutkimusongelmia. Oikeiden tutkimuskymysten vastausia pitää tietysti etsiä järkevillä
+massojen skaalauksella. Korrespondenssianalyysi on inertian eli kokonaishajonnan
+dekomponointia, jakamista osiin.</p>
 </div>
 <div id="karttojen-erot" class="section level2">
 <h2><span class="header-section-number">3.6</span> Karttojen erot</h2>
 <p>Yksinkertaisen korrespondenssianalyysin peruskuva on symmetrinen kartta. Ehkä
-yllättäen sen “tulkinta on edelleen menetelmän kaikkein kiistanalaisin aspekti.”
+yllättäen sen “…tulkinta on edelleen menetelmän kaikkein kiistanalaisin aspekti.”
 <span class="citation">(M. J. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span> (s.295),<span class="citation">(M. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5c768b09e4b02df9431e950a" role="doc-biblioref">2006</a>)</span>.
 vrt. myös, Johdanto, SPSS - kritiikki.</p>
-<p><strong>k</strong> Miksi symmetrinen kartta on paras oletus?</p>
+<p>Sarake- ja rivisteet esitetään siinä ikään kuin päällekkäin, samassa koordinaatistossa.
+Niiden pääkoordinaatit ovat kuitenkin eri pistejoukoista tai avaruuksista. Asymmetrisessä
+kartassa pisteet ovat samassa avaruudessa, ja ero on Greenacren mukaan vain skaalaus.
+Asymmetrisessä kartassa standardikoordinaateissa esitetyt ideaalipisteet skaalataan
+pääakselien suunnassa vastaavilla pääakselien inertioiden neliöjuurilla. Siten pisteiden
+suuntavektorit niin pääkoordinaateissa kuin standardikoordinaateissa ovat lähes samat
+kun akselien inertioiden (principal inertias) neliöjuuret eivät ole liian erisuuruisia.</p>
+<p>Jos pääinertioiden neliöjuuret ovat hyvin eri suuruisia, tulkintaongelmia voi tulla, mutta
+niillä ei käytännössä ole merkitystä. Siksi hän pitää skaalausdebattia akateemisena
+kiistana, käytännön sovelluksissa sillä ei ole merkitystä. Kiista on ollut aika
+sitkeä (Viite: esim. JMR 1989 ), mutta lienee laantunut.</p>
+<p>Symmetinen kartta hyvä vaihtoehto, sillä asymmetrisessä skaalaus vie
+ideaalipisteet usein kauas pääkoordinaateissa esitetyt pisteet pakkautuvat kuvan
+keskelle. Toisaalta jos dataa tulkitaan ”asymmetrisesti” kontribuutiokartta on
+hyvä vaihtoehto. Silloin rivipisteiden etäisyydet esitetään optimaalisesti,
+sarakkeiden suuntavektoreille projisoiduilla pistellä on kaksoiskuva-tulkinta
+(biplot) ja niiden pituudetkin kertovat jotain.</p>
+<p>Greenacren mukaan kartoilla voi tavoitella kolmea eri asiaa, joista vain kaksi
+voi totetua yhtä aikaa. Kuvassa voi esittää rivipisteiden etäisyydet,
+sarakepisteiden etäisyydet tai rivi- ja sarakepisteiden etäisyydet. Jäkimmäinen on
+kaksoiskuvien (biplot) ns. skalaaritulo-ominaisuus. Rivi- ja sarakepisteen
+skalaaritulo “palauttaa” alkuperäisen datan, tässä tapauksessa taulukon solun.</p>
+<p>Näistä vain kaksi voidaan optimaalisesti esittää yhtä aikaa.</p>
+<p><em>Symmetrisessä kartassa</em> khii2-etäisyydet rivipisteiden välillä ja sarakepisteiden
+välillä esitetään optimaalisesti. Rivi- ja sarakepisteiden välisiä etäisyyksiä ei
+esitetä optimaalisesti, mutta ne voidaan tulkita kohtalaisen hyvin jos pääakselien
+inertioiden neliöjuuret eivät ole liian erisuuruisia.</p>
+<p><em>Asymmetrisessä kartassa</em> pääkoordinaateissa esitetyn pistejoukon etäisyydet
+kuvataan optimaalisesti, standardikoordinaateissa esitetyt pisteet ovat “ääriprofiileja”,
+verteksin kulmapisteitä. Rivi- ja sarakepisteiden etäisyydet esitetään optimaalisesti,
+mutta sarakepisteiden etäisyyksillä ei ole suoraa tulkintaa,</p>
+<p><em>Kontribuutiokartta</em> on muunnelma asymmetrisestä kartasta. “Ääriprofiilit” vedetään
+kohti origoa kertomalla ne massojen neliöjuurilla. Näin kuva selkenee, ja “kutistetun”
+pisteen etäisyys origosta (“vektori”) kertoo sen kontribuution pääakseleille. Näiden pisteiden
+välisillä etäisyyksillä ei ole suoraa tulkintaa.</p>
 
 </div>
 </div>

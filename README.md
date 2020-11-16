@@ -175,4 +175,6 @@ Korjailtiin teorialiitteen kaavoja, poistettiin toiset kaava-labelit sieltä
 
  **16.11.2020** Teksti johdattelevaan esimerkkiin (3.1 - 3.3).
 
- **16.11.2020** Tekstiä jaksoon kolme, asymmetriset kartat.
+ **16.11.2020 Versio 0.65** Tekstiä lukuun 3, asymmetriset kartat.
+
+ **16.11.2020** Luku 3 tehty, on vielä editoitavaa.
