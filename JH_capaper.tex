@@ -902,7 +902,8 @@ Kolmikkoa täydentää ''kvartetti'', neljä siitä johdettua käsitettä: \emph
 \emph{aliavaruus} ja \emph{projektio}. (CAiP, s. 49).
 
 \emph{k} rivi- ja sarakeratkaisun duaalisuus: viite CAiP, jossa käydään läpi
-perusteellisesti.
+perusteellisesti. Rivi- ja sarakeratkaisut liittyvät tiivisti toisiinsa, kts.
+teorialiite.
 
 \emph{k} khii2-etäisyys on profiilien painotettu euklidinen etäisyys (ja toki
 neliöjuuri!) jossa painoina ovat keskiarvoprofiilin elementtien käänteisluvut
@@ -919,10 +920,12 @@ ominaisuuksiin. (Viite:CAip epilogi)
 
 \emph{k} normalisointi, samaan tapaan kuin PCA:ssa. Jos lukumäärätaulukko,
 Poisson-jakauman hajonta on sama kuin odotusarvo eli jaetaan poikkeama
-keskiarvosta hajonnalla.
+keskiarvosta hajonnalla. Poisson-jakaumassa odostusarvo ja hajonta ovat sama
+parametri. Tämä tulkinta khii2-etäisyydelle ei kuitenkaan saisi hämärtää massojen
+kaksoisroolia: ne ovat profiilien painoja ja samalla standardoivat khii2-etäisyyden.
 
 \emph{k} CAiP epilogi: khii2 on yhteys Mahlanobis-etäisyyteen ja multinomijakaumaan,
-jonka realisaatioiksi kontingenssitaulun rivit (esim.) voidaan tulkita. (s. 301).
+jonka realisaatioiksi profiilit voidaan tulkita. (s. 301).
 
 \textbf{Millaista dataa?}
 
@@ -937,8 +940,24 @@ kts. kuitenkin GDA (tietyilllä ehdoilla myös neg. arvot. Rajat ovat melko
 joustavat, kun mukaan otetaan erilaiset uudelleenskaalaukset ja transformaatiot.
 Tämä oli menetelmän perusidea jo Benzecrillä(CAiP ch 26, s. 201).
 
+Menetelmää sovelletaan profiileihin jotka painotetaan massoilla, ja
+profiilien etäisyyksiä mitataan khii2-etäisyysmitalla. Jos datan voi esittää
+tässä muodossa, menetelmää voi käyttää.
+
 \hypertarget{asymmetrinen-kartta-ja-ideaalipisteet}{%
 \subsection{Asymmetrinen kartta ja ideaalipisteet}\label{asymmetrinen-kartta-ja-ideaalipisteet}}
+
+Symmetrinen kartta \ref{fig:simpleCA1map1} on peruskuva ja esimerkiksi tässä
+käytetyn R-paketin ``ca'' oletus. Siinä molemmat pisteparvet on esitetty
+pääkoordinaateissa (prinipal coordinates) ikäänkuin päällekkäin, samassa kuvassa.
+
+Toinen vaihtoehto on asymmetrinen kartta. Sarakkeet ovat aineistossa muuttujia,
+joten ne voi esittää ns. standardikoordinaateissa ja rivipisteet pääkoordinaateissa.
+
+Sarakepisteitä kutsutaan ideaalipisteiksi, ne edustavat kuviteellisia maita joissa
+kaikki vastaukset ovat samoja. Matemaattisesti kartalle projisoidut ideaalipisteet
+ovat (tässä esimerkissä) neliulotteisen avaruuden verteksin (monikulmion)
+kärkipisteitä. Rivipisteet ovat tämän verteksin sisällä.
 
 \begin{figure}
 
@@ -949,9 +968,20 @@ Tämä oli menetelmän perusidea jo Benzecrillä(CAiP ch 26, s. 201).
 \caption{Q1b: lapsi kärsii jos äiti on töissä}\label{fig:G1-3asymm2}
 \end{figure}
 
+Sarakepisteet kuvaavat maksimi-inertiaa, ja rivipisteiden paljon pienempi hajonta
+kuvaa niiden poikkeamaa tästä hypoteettisesta tilanteesta. Sarakepisteet
+skaalautuvat origosta ulospäin, Asymmetrisessä kartassa rivi- ja sarakepisteiden
+etäisyydellä on tulkinta, samoin rivipisteiden välisellä etäisyydellä.
+Sarakepisteiden välisillä etäisyyksillä ei ole tulkintaa. Sarakepisteet on
+skaalattu ja mittakaavan ero symmetriseen karttaan näkyy selvästi.
+
 \textbf{Barysentrinen periaate}
 
-\textbf{edit} kuva ei ehkä tarpeen? Tehdään vähän pienempi (out.width = 70\%, muuten 90\%).
+Rivipisteet ja sarakepisteet yhdistää \emph{barysentrinen\_periaate} . Jokainen rivipiste
+on ideaalipisteiden painotettu keskiarvo, painoina sarakkeiden käänteinen osuus
+riviprofiilissa.
+
+\textbf{edit} kuva ei ehkä tarpeen? Tehdään vähän pienempi (out.width = 60\%, muuten 90\%).
 
 \begin{figure}
 
@@ -962,27 +992,48 @@ Tämä oli menetelmän perusidea jo Benzecrillä(CAiP ch 26, s. 201).
 \caption{Q1b: lapsi kärsii jos äiti on töissä}\label{fig:G1-3asymm3}
 \end{figure}
 
-\textbf{edit} Perustelu kuvalle: barysentrinen periaate on kuvien tulkinnassa ydinasioita.
+Suomen profiili on kaukana S-sarakkeesta ja lähellä ? - saraketta, niiden osuus
+profiilissa on suuri.
 
-\textbf{Akseleiden tulkinta} tai tulkinnan varmistaminen akseli kerrallaan. Ortogonaaliset
-projektion piirretty käsin, havainnollistetaan periaatetta.
+Ideaalipisteiden tulkinnan voi varmistaa sarake kerrallaan, projisjoimalla rivipisteet
+origon kautta piirretylle janalle. Kuvassa @ref(fig:G1\_3\_asymmtulk2) nähdään mikä
+on maiden järjestys E-vastausvaihtoehdossa.
 
 \begin{center}\includegraphics[width=0.9\linewidth]{img/simpleCAasymmTulk2} \end{center}
+
+Asymmetrinen kartta antaa kaksi uutta näkökulmaa rivien ja sarakkeiden suhteeseen.
+Sen huono puoli on ideaalipisteiden karkaaminen kauas origosta ja rivipisteiden
+pakkautuminen pieneksi parveksi. Jos rivipisteiden hajonta on suuri,
+kuva on käytännöllinen. Kyselytutkimusaineistoissa näin ei yleensä ole.
 
 \hypertarget{kontribuutiot-kartalla}{%
 \section{Kontribuutiot kartalla}\label{kontribuutiot-kartalla}}
 
-Kaksi kuvaa, joissa pisteiden massat on kuvattu pisteiden koolla (ei juuri eroa
-huomaa) ja rivi- ja sarekepisteiden kontribuutiot värisävyllä. Mitä tummempi sitä
-suurempi kontribuutio. Absoluuttiset ja suhteelliset kontribuutiot.
+Analyyseissä käytetty r-paketti ``ca'' esittää kartoilla myös pisteiden massat pisteen
+symbolin kokona, mutta tässä aineistossa eroja on vaikea nähdä. Tärkeämpi on pisteiden
+\emph{kontribuutioiden} esittämien värisävynä.
 
-\textbf{edit} Pitäisikö kuvissa olla aina toinen absolute, toinen relative? Selvitetään
-teorialiittessä?
+Kun kartalla pistejoukon inertia kuvataan akseleille, on jokaisella pisteellä oma
+osuutensa akseleiden kuvaamasta inertiasta. Absoluuttinen kontribuutio kertoo rivin
+tai sarakkeen osuuden akselin inertiasta. Vaikutuksessa on mukana pisteen massa.
 
-Toinen kuva riittää, tässä esitellään kartta jossa on eniten informaatiota.
+Suhteellinen kontribuutio taas kertoo akselin osuuden pisteen inertiasta.
+Tämä tunnusluku kuvaa pisteen projektion laatua, kuinka hyvin se on kartalla esitetty.
 
-\textbf{Absoluuttiset kontribuutiot} Oletuspistekoko ok, mutta html- ja pdf-tulostus
-on erilainen!
+Kontribuutiokartta on asymmetrinen kartta, jossa sarakevektorit on skaalattu
+(kerrottu) massojen neliöillä. Näin sarakevektorit ``kutistuvat'' kohti origoa mutta
+vektorin pituus kertoo edelleen sen suhteellisen massan. Kartta sopii niin pienen
+kuin suuren inertian tilanteisiin(kts. esim. \citep{RefWorks:doc:5c768b09e4b02df9431e950a})
+
+Absoluuttisten kontribuutioiden jakautumista akseleille voi varovaisesti päätellä
+sarakevektorin ja akseleiden välisistä kulmista. Mitä lähempänä sarakevektori on akselia,
+sitä suurempi on sen osuus akselin inertiasta. Samanlaisia päätelmiä voi tehdä myös
+rivipisteistä hahmottamalla janan niistä origoon.
+
+Käsitteisiin palataan tarkemmin seuraavissa luvuissa ja teorialiitteessä, ja liian
+tarkkaan karttaa ei kannata tutkia. Numeeriset tulokset ovat yksityiskohdissa selkeämpiä.
+
+\textbf{edit} käytän termiä ``vektori'' vain kuvaan piirretyn ``nuolen'' nimityksenä.
 
 \begin{figure}
 
@@ -993,9 +1044,14 @@ on erilainen!
 \caption{Q1b: lapsi kärsii jos äiti on töissä}\label{fig:G1-3asymmContrib1}
 \end{figure}
 
-Rivi- ja sarakesymbolien koko on suhteessa pisteen massaan, mutta eroja ei tässä
-kovin selkeästi näe.Suhteellisen värisävyn erot näyttävät absoluuttisten
-kontribuutioiden erot selkeästi.
+Sarakkeista ratkaisuun vaikuttaa selvästi eniten E, ja juuri ensimmäiseen
+dimensioon. Toista dimennsiota määrittää vahviten e, mutta myös kaikki muut
+sarakkeet x-akselin yläpuolella. Samaa mieltä olevien (S ja s) vaikutus näyttäisi
+jakautuvan selvimmin molemmille dimensioille.
+
+Vaikka massojen suhteellisia eroja ei kovin helposti pistekoosta erota, se näkyy
+epäsuorasti Saksan melko vahvimpana kontribuutiona. Bulgarian vähäisin kontribuutio
+näyttäisi olevan ensimmäiselle dimensiolle.
 
 \textbf{Suhteelliset kontribuutiot}
 
@@ -1007,6 +1063,14 @@ kontribuutioiden erot selkeästi.
 
 \caption{Q1b: lapsi kärsii jos äiti on töissä}\label{fig:G1-3asymmContrib2}
 \end{figure}
+
+Kaikki edellä esitetyt pääättelyt perustuvat tietysti kaksiulotteideen projektioon.
+Jos pisteet on esitetty hyvin eli niiden inertiasta (poikkeamasta keskiarvosta)
+suuri osa on kuvattu kartalle, rivipiste on sitä lähempänä ideaalipistettä mitä
+suurempi ideaalipisteen osuus on sen profiilissa.
+
+Sarakkeiden laatu näyttäisi olevan hyvä, mutta rivipisteistä Saksa ja erityisesti
+Belgia erottuvat hieman heikommin esitettyinä.
 
 \hypertarget{massat}{%
 \section{Massat}\label{massat}}
@@ -1031,6 +1095,7 @@ niin teoria-liitteeseen.
 \end{figure}
 
 Ei kovin isoja eroja, tässä datassa. Vilkaistaan myös absoluuttisia kontribuutioita.
+\textbf{edit} Tämä kuva on ehkä tarpeeton?
 
 \begin{figure}
 
@@ -4249,7 +4314,7 @@ julkaisutekniikan ympäristön.
      \DataTypeTok{contrib =} \KeywordTok{c}\NormalTok{(}\StringTok{"absolute"}\NormalTok{, }\StringTok{"absolute"}\NormalTok{),}
      \DataTypeTok{mass =} \KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{,}\OtherTok{TRUE}\NormalTok{),}
      \DataTypeTok{arrows =} \KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{),}
-     \DataTypeTok{main =} \StringTok{"kontribuutiokartta 1"}\NormalTok{,}
+     \DataTypeTok{main =} \StringTok{"kontribuutiokartta 1 - pisteen koko suhteessa massaan"}\NormalTok{,}
      \DataTypeTok{sub =} \StringTok{"sarakevektorin ja rivipisteiden värin tummuus = absoluuttinen kontribuutio"}\NormalTok{)}
 
 
@@ -4258,7 +4323,7 @@ julkaisutekniikan ympäristön.
      \DataTypeTok{contrib =} \KeywordTok{c}\NormalTok{(}\StringTok{"relative"}\NormalTok{, }\StringTok{"relative"}\NormalTok{),}
      \DataTypeTok{mass =} \KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{,}\OtherTok{TRUE}\NormalTok{),}
      \DataTypeTok{arrows =} \KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{),}
-     \DataTypeTok{main =} \StringTok{"kontribuutiokartta 2"}\NormalTok{,}
+     \DataTypeTok{main =} \StringTok{"kontribuutiokartta 2 - pisteen koko suhteessa massaan"}\NormalTok{,}
      \DataTypeTok{sub =} \StringTok{"sarakevektorin ja pisteen värin tummuus = suhteellinen kontribuutio"}\NormalTok{)}
 
 
