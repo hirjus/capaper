@@ -180,5 +180,5 @@ Korjailtiin teorialiitteen kaavoja, poistettiin toiset kaava-labelit sieltä
  **16.11.2020** Luku 3 tehty, on vielä editoitavaa.
 
  **17.11.2020** Kokeiluja pdf-tulostuksella, vailla ratkaisua.
- 
- **17.11.2020** Luku neljä lähes valmis, numeeriset tulokset selitetty.
+
+ **17.11.2020** Luku neljä lähes valmis, numeeriset tulokset selitetty. Github Desktop päivitys.
