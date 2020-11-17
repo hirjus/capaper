@@ -948,7 +948,7 @@ kun akselien inertioiden (principal inertias) neliöjuuret eivät ole liian eris
 Jos pääinertioiden neliöjuuret ovat hyvin eri suuruisia, tulkintaongelmia voi tulla, mutta
 niillä ei käytännössä ole merkitystä. Siksi hän pitää skaalausdebattia akateemisena
 kiistana, käytännön sovelluksissa sillä ei ole merkitystä. Kiista on ollut aika
-sitkeä (Viite: esim. JMR 1989 ), mutta lienee laantunut.
+sitkeä (esimerkiksi 1989 Greenacren kommentoi skaalausta perusteellisesti [@RefWorks:doc:5c754c6de4b0947789165cde]), mutta lienee laantunut.
 
 Symmetinen kartta hyvä vaihtoehto, sillä asymmetrisessä skaalaus vie
 ideaalipisteet usein kauas pääkoordinaateissa esitetyt pisteet pakkautuvat kuvan

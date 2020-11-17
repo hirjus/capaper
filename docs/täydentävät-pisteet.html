@@ -152,12 +152,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.6" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#karttojen-erot"><i class="fa fa-check"></i><b>3.6</b> Karttojen erot</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html"><i class="fa fa-check"></i><b>4</b> Täydentävät pisteet</a><ul>
-<li class="chapter" data-level="4.1" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html#täydentävät-pisteet-1"><i class="fa fa-check"></i><b>4.1</b> Täydentävät pisteet</a></li>
-<li class="chapter" data-level="4.2" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html#saksan-ja-belgian-alueet"><i class="fa fa-check"></i><b>4.2</b> Saksan ja Belgian alueet</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html#symmetrinen-kartta"><i class="fa fa-check"></i><b>4.2.1</b> Symmetrinen kartta</a></li>
-</ul></li>
-<li class="chapter" data-level="4.3" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html#can-numeeriset-tulokset"><i class="fa fa-check"></i><b>4.3</b> CA:n numeeriset tulokset</a></li>
-<li class="chapter" data-level="4.4" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html#esimerkki-3d--kartasta---saksan-ja-belgian-dimensiot"><i class="fa fa-check"></i><b>4.4</b> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</a></li>
+<li class="chapter" data-level="4.1" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html#saksan-ja-belgian-alueet"><i class="fa fa-check"></i><b>4.1</b> Saksan ja Belgian alueet</a></li>
+<li class="chapter" data-level="4.2" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html#korrespondenssianalyysin-numeeriset-tulokset"><i class="fa fa-check"></i><b>4.2</b> Korrespondenssianalyysin numeeriset tulokset</a></li>
+<li class="chapter" data-level="4.3" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html#esimerkki-3d--kartasta---saksan-ja-belgian-dimensiot"><i class="fa fa-check"></i><b>4.3</b> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="yhteisvaikutusmuuttujat.html"><a href="yhteisvaikutusmuuttujat.html"><i class="fa fa-check"></i><b>5</b> Yhteisvaikutusmuuttujat</a><ul>
 <li class="chapter" data-level="5.1" data-path="yhteisvaikutusmuuttujat.html"><a href="yhteisvaikutusmuuttujat.html#ikä-ja-sukupuoli"><i class="fa fa-check"></i><b>5.1</b> Ikä ja sukupuoli</a></li>
@@ -199,33 +196,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="täydentävät-pisteet" class="section level1">
 <h1><span class="header-section-number">Luku 4</span> Täydentävät pisteet</h1>
-<p><strong>edit</strong> Edellisssä luvussa selitetty barysentrinen keskiarvopiste;
-teorialiitteessä hieman laveammin.</p>
-<p><strong>edit</strong> CA:n joustava käyttö vaatii matriisioperaatioita, ja muuta datan rakenteen
-muokkausta (rivien lisääminen input-dataan jne.).</p>
-<p>Tekstistä oma dokkari, eri käyttötapaukset lyhyesti. Edellisen luvun asymmetrisen
-kartan avulla perustellaan, miten pisteitä voidaaan lisätä.</p>
-<div id="täydentävät-pisteet-1" class="section level2">
-<h2><span class="header-section-number">4.1</span> Täydentävät pisteet</h2>
-<p><strong>edit</strong> Tiivisti tärkeimmät käyttötapaukset. CA:n peruskäsitteet ja numeeriset
-tulokset selitetty edellä.</p>
-<p><strong>ks</strong> Passiiviset pisteet ja niiden käyttötarkoitukset</p>
-</div>
+<p>Kartat ovat analyysin väline, ja usein on hyödyllistä esittää kuvassa
+lisäinformaatiota tulkinnan avuksi. Täydentävät pisteet (supplementary points,
+CAiP s. 89-) ovat rivejä tai sarakkeita jotka lisätään karttaan. Mikä tahansa
+rivi tai sarake voidaan voidaan lisätä kuvaan, jos se on järkevästi vertailukelpoinen
+kartan määtittäneiden profiilien kanssa.</p>
+<p>Tällainen piste on kartan laskennassa <em>passiivinen</em>, sillä on sijainti kartalla
+mutta ei massaa eikä vaikutusta inertiaan. Passiivisilla pisteillä ei ole vaikutusta
+(kontribuutiota) kartan pääakseleihin.</p>
+<p>Täydentävillä pisteillä on kolme yleistä käyttötarkoitusta. Kartalle voidaan lisätä
+profiili, joka on jollain lailla sisällöllisesti erilainen kuin muut. Esimerkkiaineistossa
+kartalle voisi lisätä joitain Euroopan ulkopuolisia maita. Vaikka nämä riviprofiilit
+eivät vaikuta kartan akseleiden määräytymiseen, ne voidaan esittää kuuden maan
+määrittämässä “avaruudessa”. Projektion laatu (suhteelliset kontribuutiot) voidaan myös
+esittää.</p>
+<p>Toinen käyttötapaus on pienen massan profiili. Tällaisella pisteellä voi olla iso
+vaikutus ratkaisuun, mutta passiivisena pisteenä se sijoitetaan muiden pisteiden
+määrittämälle kartalle. Jo sisällöllisistä syistä pienen massan pisteiden esitystä
+kannattaa harkita, ne sijaitsevat kaukana origosta ja huonontavat kuvan laatua.
+Esimerkkiaineistossa puuttuvat vastaukset voisi ottaa mukaan täydentävänä pisteenä.</p>
+<p>Kolmas mahdollisuus on jakaa pistejoukkoja osajoukkoihin ja esittää niiden
+summaprofiili täydentävänä pisteenä. Summaprofiili on osiensa painotettu
+(barysentrinen) keskiarvo. Kun se esiteteään passiivisena pisteenä, havaintoja ei
+oteta ratkaisuun kahta kertaa. Profiilien yhdistämiseen liittyy
+korrespondenssianalyysin tärkein periaate, jakaumaekvivalenssi (<em>distributional
+equivalence</em>). Profiileiltaan samanlaiset rivit voidaan yhdistää, analyysin tulokset
+eivät muutu. Khii2-etäisyysmitta taas on ainoa etäisyysmitta joka toutettaa tämän
+periaatteen. En esittele tätä ydinkäsitettä tämän enempää (kts. esim. CAiP tai
+perusteellinen matemaattinen esitys <span class="citation">(Roux ja Rouanet <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>)</span>).</p>
+<p>Täydentävien profiilien lisääminen vaatii jo yksinkertaisia matriisioperaatioita.
+Korrespondenssianalyysi on käytännössä matriisien muokkausta tutkimusongelman
+tarpeisiin.</p>
 <div id="saksan-ja-belgian-alueet" class="section level2">
-<h2><span class="header-section-number">4.2</span> Saksan ja Belgian alueet</h2>
-<p><strong>Data ja taulukko aluejaosta</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="täydentävät-pisteet.html#cb2-1"></a><span class="co"># riviprofiilitaulukko aiheuttaa virheen PDF-tulostuksessa, JH_capaper.Rmd</span></span>
-<span id="cb2-2"><a href="täydentävät-pisteet.html#cb2-2"></a><span class="co"># tiedoston voi kuitenkin renderöidä knit-napilla RStudiossa pdf-tiedostoksi.</span></span>
-<span id="cb2-3"><a href="täydentävät-pisteet.html#cb2-3"></a></span>
-<span id="cb2-4"><a href="täydentävät-pisteet.html#cb2-4"></a><span class="co"># Kts. edellinen koodilohko - testailua pdf-ongelman ratkaisemiseksi</span></span>
-<span id="cb2-5"><a href="täydentävät-pisteet.html#cb2-5"></a><span class="co"># tallennetaan data tiedostoon, koodilohko BeDeAluedat1 passiviseksi</span></span>
-<span id="cb2-6"><a href="täydentävät-pisteet.html#cb2-6"></a><span class="co"># suppoint1_tab1 &lt;- read_rds(&quot;suppoint1tab1.rds&quot;)</span></span>
-<span id="cb2-7"><a href="täydentävät-pisteet.html#cb2-7"></a><span class="co"># suppoint1_tab1 # tarkistus ok</span></span>
-<span id="cb2-8"><a href="täydentävät-pisteet.html#cb2-8"></a></span>
-<span id="cb2-9"><a href="täydentävät-pisteet.html#cb2-9"></a>BeDealueTable &lt;-<span class="st"> </span>ISSP2012esim1.dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">tableX</span>(maa3, Q1b, <span class="dt">type =</span> <span class="st">&quot;row_perc&quot;</span>)</span>
-<span id="cb2-10"><a href="täydentävät-pisteet.html#cb2-10"></a></span>
-<span id="cb2-11"><a href="täydentävät-pisteet.html#cb2-11"></a>knitr<span class="op">::</span><span class="kw">kable</span>(BeDealueTable , <span class="dt">digits =</span> <span class="dv">2</span>, <span class="dt">booktabs =</span> <span class="ot">TRUE</span>,</span>
-<span id="cb2-12"><a href="täydentävät-pisteet.html#cb2-12"></a>           <span class="dt">caption =</span> <span class="st">&quot;Q1b vastaukset, Saksan ja Belgian alueet&quot;</span>)</span></code></pre></div>
+<h2><span class="header-section-number">4.1</span> Saksan ja Belgian alueet</h2>
+<p>Saksan ja Belgian aineistossa on mukana aluejako: entiset itä- ja länsi-Saksa
+(dE,dW), Flanders (bF), Wallonia (bW) ja Bryssel (bB).</p>
 <table>
 <caption><span id="tab:BeDealueTable1">Taulukko 4.1: </span>Q1b vastaukset, Saksan ja Belgian alueet</caption>
 <thead>
@@ -332,68 +337,65 @@ tulokset selitetty edellä.</p>
 </tr>
 </tbody>
 </table>
-<p>Taulukko, Saksan ja Belgian alueet ja maaprofiilit.</p>
-<p><strong>edit</strong> Riviprofiilitaulukko, kuvataan alueiden eroja. CA-analyysi kuitenkin koko
-aineiston frekfvenssitaululla, jossa rivien massat eivät ole samat.</p>
-<div id="symmetrinen-kartta" class="section level3">
-<h3><span class="header-section-number">4.2.1</span> Symmetrinen kartta</h3>
+<p>Aineistoon lisätään passiviisina riveinä Saksan ja Belgian maaprofiilit (DE, BE).
+Maiden massoja ei skaalta yhtä suuriksi, otoskoot vaikuttavat ratkaisuun.</p>
 <div class="figure" style="text-align: center"><span id="fig:suppointCA2map1"></span>
 <img src="JH_capaper_files/figure-html/suppointCA2map1-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
 <p class="caption">
 Kuva 4.1: Q1b: Saksan ja Belgian aluejako
 </p>
 </div>
-<p><strong>k</strong> Maapisteet alueiden barysentrinen keskiarvo. Tulkinta.</p>
+<p>Saksan ja Belgian täydentävät pisteet ovat osiensa barysentrisiä keskiarvoja,
+etäisyys on sitä pienempi mitä suurempi on osuus. Saksan piste sijaitsee siksi
+lähempänä länsi-Saksan pistettä. Karttaa kannattaa verrata kuvaan jossa aluejakoa
+ei ole (fig:simpleCA1map1), mutta Saksan ja Belgian osien sijoittuminen on kiinnostava.
+Itäinen Saksa on selvästi liberaalilla puolella, ensimmäisellä dimensiolla lähinnä Tanskaa.
+Läntinen Saksa on ensimmäisellä dimensiolla konservatiivisella puolella Belgian maapisteen
+tasolla. Belgian alueista Wallonia (bW) on liberaalilla puolella mutta kaikkein eniten oikealla.
+Bryssel ja Flander ovat konservatiivisella puolella, toinen länsi-Saksaa liberaalimpi ja toinen konservatiivisempi. Belgian osat hajoavat toiseen suuntaan kuin Saksan,
+liberaalein Flanders on myös kaikkein maltillisin ja Bryssel vastaavasti
+tiukempien mielipiteiden puolella. Sarakepisteiden suhteelliset sijainnit
+toisiinsa nähden eivät oleellisesti muutu.</p>
+<p>Bryssel ja Wallonia näyttävä olevan hyvin lievästi U-muotoisen maapisteiden
+parven sisällä. Tämä kaariefekti tai <em>Guttman-efekti</em> on kartoissa yleinen.
+Se on tavallaan seuraus ratkaisun geometriasta. Rivipisteiden pilvi on
+sarakkeiden ideaalipisteiden virittämän verteksin sisällä, ja ainoa reitti
+verteksin kulmasta toiseen kulkee tasolla kaarveasti (VIITE: MG, CAiP).
+Voi myös sanoa, että kaariefektin taustalla on järjestysasteikon muuttujan
+korrelaatio (viite: LeRoux). Kaaren sisäpisteet ovat usein polarisoituneita
+ensimmäisen dimension “ääripää-vastausten” välillä. Tässä vaikutus on heikko,
+taulukossa <a href="täydentävät-pisteet.html#tab:BeDealueTable1">4.1</a> ei mitää selvää polariaatiota näy.</p>
 <div class="figure" style="text-align: center"><span id="fig:suppointCA2map2"></span>
 <img src="JH_capaper_files/figure-html/suppointCA2map2-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
 <p class="caption">
 Kuva 4.2: Q1b: Saksan ja Belgian aluejako
 </p>
 </div>
-<p><strong>k</strong> Kontribuutiokartta, kontribuutio värisävyinä ja massat pisteiden kokona.
-Yleiskuvaan riittävä, ei kovin selkeä yksityiskohdissa. Motivaatio seuraavalle
-jaksolle.Skaalataan asymmetrisen kuvan sarakevektoreita (jotka standardikoordinaateissa)
-hieman lähemmäs origoa.</p>
-<p><strong>k</strong> Kaukana on kaukana, mutta lähellä voi olla myös kaukana.</p>
+<p>Kontribuutiokartasta täydentävät pisteet on jätetty pois, ne eivät vaikuta ratkaisuun.
+Pisteiden koko auttaa hahmottamaan niiden massojen eroja, sarakkeiden massoja ei
+juuri tässä kuvassa erota. Sarakkeiden kontribuutiot ovat samantapaiset kuin
+alkuperäisessä kartassa <a href="yksinkertainen-korrespondenssianalyysi.html#fig:G1-3asymmContrib1">3.6</a>. Rivipisteiden kontribuutioista
+osa on selvästi pienempiä, erityisesti länsi-Saksa kaksi Belgian aluetta (bB, bF).
+Unkarin ja Bulgarian kontribuutiot muuttuvat eri suuntiin, Unkarin pienenee ja
+Bulgarian kasvaa.</p>
 </div>
-</div>
-<div id="can-numeeriset-tulokset" class="section level2">
-<h2><span class="header-section-number">4.3</span> CA:n numeeriset tulokset</h2>
-<p><strong>edit</strong> Teorialiitteessä selitetään tarkemmin numeeristen tulosten tausta, tässä
-apuneuvo (a) kuvan tulkinnan varmistamiseen ja (b) approksimaation laadun
-tarkistamiseen.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="täydentävät-pisteet.html#cb3-1"></a>suppointCA2</span></code></pre></div>
-<pre><code>## 
-##  Principal inertias (eigenvalues):
-##            1        2        3        4       
-## Value      0.154101 0.032489 0.014294 0.008944
-## Percentage 73.44%   15.48%   6.81%    4.26%   
-## 
-## 
-##  Rows:
-##                bF        bW       bB       BG        dW        dE        DK
-## Mass     0.124279  0.060174 0.062753 0.113103  0.143313  0.067174  0.170453
-## ChiDist  0.341469  0.096258 0.239034 0.630991  0.219094  0.505720  0.634063
-## Inertia  0.014491  0.000558 0.003586 0.045032  0.006879  0.017180  0.068528
-## Dim. 1   0.400065 -0.090631 0.216912 1.502458  0.254323 -1.262007 -1.506022
-## Dim. 2  -1.254042  0.267998 0.789358 0.236498 -0.451124 -0.226595  1.121468
-##                FI       HU    BE (*)    DE (*)
-## Mass     0.136313 0.122436        NA        NA
-## ChiDist  0.347733 0.550404  0.157974  0.175013
-## Inertia  0.016483 0.037091        NA        NA
-## Dim. 1  -0.525222 1.215462  0.234127 -0.229593
-## Dim. 2  -1.500986 1.280342 -0.364834 -0.379468
-## 
-## 
-##  Columns:
-##                S        s         ?         e         E
-## Mass    0.099472 0.237627  0.167874  0.260960  0.234066
-## ChiDist 0.592824 0.354761  0.332288  0.280549  0.672594
-## Inertia 0.034959 0.029907  0.018536  0.020540  0.105887
-## Dim. 1  1.073310 0.787257  0.649789 -0.029859 -1.688108
-## Dim. 2  1.835133 0.290929 -0.119934 -1.451548  0.629110</code></pre>
+<div id="korrespondenssianalyysin-numeeriset-tulokset" class="section level2">
+<h2><span class="header-section-number">4.2</span> Korrespondenssianalyysin numeeriset tulokset</h2>
+<p>Korrespondenssianalyysin numeeriset tulokset ovat tärkeitä tulkinnan varmistamiselle
+ja antavat tarkemman kuvan ratkaisusta. Nämä tulokset ovat erilaisia kokonaisinertian
+dekomponointeja. Kokonaisinertia (total inertia) profiilien ja keskiarvoprofiilin
+khii2-etäisyyksien massoilla painotettu summa (<a href="yksinkertainen-korrespondenssianalyysi.html#eq:inert2">(3.6)</a>. Se kuvaa
+profiilipisteiden hajontaa ideaalipisteiden verteksin sisällä. Maksimi-inertia
+saavutetaan kun profiilit ovat verteksien kärkipisteissä, jokaisessa profiilissa on vain
+yksi luokittelumuuttujan arvo. Inertia on sama kuin ratkaisun dimensio, tässä esimerkissä
+4 (sarakkeiden lukumäärä - 1).<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+<p>R-paketti “ca” (versio 0.71.1) listaa numeeriset tulokset suppeasti (print) ja laajemmin
+(summary), laajempi tulostus on alla.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
 <p><strong>k</strong> Lyhyt selostus - nämä aika selkeitä</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="täydentävät-pisteet.html#cb5-1"></a><span class="kw">summary</span>(suppointCA2)</span></code></pre></div>
+<p>Ensimmäisenä on listattu kokonaisinertia pääakseleittain. Tässä suhteelliset luvut
+on esitetty prosentteina. Muut luvut on luettavuuden vuoksi skaalattu, joko kerrottu
+tuhannella tai esitetty “permills” (summa on 1000).</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="täydentävät-pisteet.html#cb2-1"></a><span class="kw">summary</span>(suppointCA2)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -427,22 +429,47 @@ tarkistamiseen.</p>
 ## 3 |      |  168  594   88 |  255 589  71 |  -22   4   2 |
 ## 4 |    e |  261  871   98 |  -12   2   0 | -262 870 550 |
 ## 5 |    E |  234  999  505 | -663 971 667 |  113  28  93 |</code></pre>
+<p>Rivi- ja sarakeprofiileista esitetään samat tiedot. Ensimmäisessä kolmen
+sarakkeen joukossa kerrotaan pisteen massa, laatu (qlt) ja inertiakontribuutio.</p>
+<p>Inertiakontribuutio on suhteellinen osuus kokonaisinertiasta. Aktiivisia rivejä on 9,
+joten tasaisesti jaettu inetia olisi noin 110. Tanska, Bulgaria ja Unkari “selittävät”
+suurimman osan inertiasta. Belgian ja Saksan alueiden kontribuutiot ovat pieniä.
+Nämä inertiaosuudet liittyvät kokonaisinertiaan alkuperäisessä neljässä ulottuvuudessa.</p>
+<p>Laatu kertoo miten hyvin piste on esitetty kartalla, miten suuri osa sen
+inertiasta on esitetty kartalla. Kaksiulotteinen kartta kuten tässä on yleisin
+valinta, laatu kerrotaan valitulle dimensioiden määrälle. Laatu ei riipu massasta,
+vaan pisteen ja kartan akseleiden välisistä kulmista (kts. teorialiite). Saksan
+osien ero laadussa on iso,itä-Saksalla erittäin hyvä ja länsi-Saksalla huono.
+Belgian alueista Wallonia on kehtoiten esitetty, ja vain Flandersin laatu on
+kohtuullisen hyvä. Kovin hyvä ei ole täydentävien maapisteidenkään laatu.</p>
+<p>Kaksi seuraavaa lohkoa kertovat tulokset valituille dimenisoille eli ratkaisulle.
+Molempien dimensioiden (“k=1”, “k=2” ) pääkoordinaattattien (x 1000) lisäksi
+raportoidaan dimension <em>suhteellinen kontribuutio</em> pisteen inertiaan (“cor”).
+Nämä tunnusluvut summautuvat laaduksi (qlt), ja ne voidaan tulkita korrelaation
+neliöiksi (kts. teorialiite).Erityisesti Belgian alueiden projektion laatu on
+huonompi ensimmäisellä dimensiolla. Itä-Saksa ja Bulgaria taas ovat hyvin esittyjä
+vain ensimmäisellä dimensiolla eivätkä juuri ollenkaan korreloi toisen dimension
+kanssa.</p>
+<p>Pisteen <em>absoluuttinen kontribuutio</em> kertoo sen osuuden dimension inertiasta
+(summa 1000). Jos katsotaan sarakkeita, nähdään E-sarake “selittää” ensimmäisen
+dimension inertiasta lähes 70 prosenttia, ja dimensio saman verran
+kokonaisinertiasta.</p>
 <p><strong>k</strong> Tulosteen käsitteiden esittely - tavoite kuvan laadun varmistus, akselien
 tulkinnan tarkistus. Tarkemmin teorialiitteessä. Tästä pitäisi nähdä, miksi seuraavat
 kartat ovat sellaisia kuin ovat.</p>
 </div>
 <div id="esimerkki-3d--kartasta---saksan-ja-belgian-dimensiot" class="section level2">
-<h2><span class="header-section-number">4.4</span> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</h2>
+<h2><span class="header-section-number">4.3</span> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</h2>
 <p><strong>k</strong> Ei kovin hyviä kuvia, mutta periaate on tärkeä. Kartta on approksimaatio,
 pitää päättää milloin se on tarpeeksi hyvä. Tai mille pisteille hyvä, mille huonompi.</p>
 <p><strong>edit 26.10.2020</strong> summary-funktio ei toimi, kun dimensioita CA-ratkaisussa kolme.
 Numeeriset tulokset voisi laskea “käsityönä”. Kehno kvalitetti 2d-ratkaisussa saa
 kuvissa selityksen.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="täydentävät-pisteet.html#cb7-1"></a>suppointCA3 &lt;-<span class="st"> </span><span class="kw">ca</span>(<span class="op">~</span>maa3 <span class="op">+</span><span class="st"> </span>Q1b,ISSP2012esim1.dat, <span class="dt">nd =</span> <span class="dv">3</span>)</span>
-<span id="cb7-2"><a href="täydentävät-pisteet.html#cb7-2"></a></span>
-<span id="cb7-3"><a href="täydentävät-pisteet.html#cb7-3"></a><span class="co"># summary(suppointCA3)</span></span>
-<span id="cb7-4"><a href="täydentävät-pisteet.html#cb7-4"></a><span class="co"># Error in rsc %*% diag(sv) : non-conformable arguments</span></span>
-<span id="cb7-5"><a href="täydentävät-pisteet.html#cb7-5"></a><span class="co"># outo juttu, ei toimi! - TÄMÄ POISTETAAN</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="täydentävät-pisteet.html#cb4-1"></a>suppointCA3 &lt;-<span class="st"> </span><span class="kw">ca</span>(<span class="op">~</span>maa3 <span class="op">+</span><span class="st"> </span>Q1b,ISSP2012esim1.dat, <span class="dt">nd =</span> <span class="dv">3</span>)</span>
+<span id="cb4-2"><a href="täydentävät-pisteet.html#cb4-2"></a></span>
+<span id="cb4-3"><a href="täydentävät-pisteet.html#cb4-3"></a><span class="co"># summary(suppointCA3)</span></span>
+<span id="cb4-4"><a href="täydentävät-pisteet.html#cb4-4"></a><span class="co"># Error in rsc %*% diag(sv) : non-conformable arguments</span></span>
+<span id="cb4-5"><a href="täydentävät-pisteet.html#cb4-5"></a><span class="co"># outo juttu, ei toimi! - TÄMÄ POISTETAAN</span></span></code></pre></div>
 <strong>Kolme karttaa</strong>
 <div class="figure" style="text-align: center"><span id="fig:suppointCA3map1"></span>
 <img src="JH_capaper_files/figure-html/suppointCA3map1-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
@@ -478,6 +505,14 @@ Kuva 4.7: Saksan ja Belgian aluejako - 3d-kuva2
 </div>
 
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Luku perustuu CAiP:n lukuun 11 ja liitteeseen B<a href="täydentävät-pisteet.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Paketin pdf-dokumentissa s.20 kerrotaan, että print
+tulostaa pääkoordinaatit (principal coordinates) mutta se tulostaakin standardikoordinaatit.<a href="täydentävät-pisteet.html#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

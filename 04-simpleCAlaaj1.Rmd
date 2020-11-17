@@ -1,35 +1,54 @@
 # Täydentävät pisteet
 
-**edit** Edellisssä luvussa selitetty barysentrinen keskiarvopiste;
- teorialiitteessä hieman laveammin.
+Kartat ovat analyysin väline, ja usein on hyödyllistä esittää kuvassa
+lisäinformaatiota tulkinnan avuksi. Täydentävät pisteet (supplementary points,
+CAiP s. 89-) ovat rivejä tai sarakkeita jotka lisätään karttaan. Mikä tahansa 
+rivi tai sarake voidaan voidaan lisätä kuvaan, jos se on järkevästi vertailukelpoinen
+kartan määtittäneiden profiilien kanssa.
 
- **edit** CA:n joustava käyttö vaatii matriisioperaatioita, ja muuta datan rakenteen
- muokkausta (rivien lisääminen input-dataan jne.).
+Tällainen piste on kartan laskennassa _passiivinen_, sillä on sijainti kartalla
+mutta ei massaa eikä vaikutusta inertiaan. Passiivisilla pisteillä ei ole vaikutusta
+(kontribuutiota) kartan pääakseleihin.
 
-Tekstistä oma dokkari, eri käyttötapaukset lyhyesti. Edellisen luvun asymmetrisen
-kartan avulla perustellaan, miten pisteitä voidaaan lisätä.
+Täydentävillä pisteillä on kolme yleistä käyttötarkoitusta. Kartalle voidaan lisätä
+profiili, joka on jollain lailla sisällöllisesti erilainen kuin muut. Esimerkkiaineistossa
+kartalle voisi lisätä joitain Euroopan ulkopuolisia maita. Vaikka nämä riviprofiilit
+eivät vaikuta kartan akseleiden määräytymiseen, ne voidaan esittää kuuden maan
+määrittämässä "avaruudessa". Projektion laatu (suhteelliset kontribuutiot) voidaan myös
+esittää.
 
-## Täydentävät pisteet
+Toinen käyttötapaus on pienen massan profiili. Tällaisella pisteellä voi olla iso
+vaikutus ratkaisuun, mutta passiivisena pisteenä se sijoitetaan muiden pisteiden 
+määrittämälle kartalle. Jo sisällöllisistä syistä pienen massan pisteiden esitystä
+kannattaa harkita, ne sijaitsevat kaukana origosta ja huonontavat kuvan laatua.
+Esimerkkiaineistossa puuttuvat vastaukset voisi ottaa mukaan täydentävänä pisteenä.
 
-**edit** Tiivisti tärkeimmät käyttötapaukset. CA:n peruskäsitteet ja numeeriset
-tulokset selitetty edellä.
+Kolmas mahdollisuus on jakaa pistejoukkoja osajoukkoihin ja esittää niiden
+summaprofiili täydentävänä pisteenä. Summaprofiili on osiensa painotettu
+(barysentrinen) keskiarvo. Kun se esiteteään passiivisena pisteenä, havaintoja ei
+oteta ratkaisuun kahta kertaa. Profiilien yhdistämiseen liittyy
+korrespondenssianalyysin tärkein periaate, jakaumaekvivalenssi (_distributional
+equivalence_). Profiileiltaan samanlaiset rivit voidaan yhdistää, analyysin tulokset
+eivät muutu. Khii2-etäisyysmitta taas on ainoa etäisyysmitta joka toutettaa tämän
+periaatteen. En esittele tätä ydinkäsitettä tämän enempää (kts. esim. CAiP tai
+perusteellinen matemaattinen esitys [@RefWorks:doc:5a857a43e4b0ed2d44664d75]).
 
-**ks** Passiiviset pisteet ja niiden käyttötarkoitukset
-
+Täydentävien profiilien lisääminen vaatii jo yksinkertaisia matriisioperaatioita.
+Korrespondenssianalyysi on käytännössä matriisien muokkausta tutkimusongelman
+tarpeisiin.
 
 
 ## Saksan ja Belgian alueet
 
-**Data ja taulukko aluejaosta**
+Saksan ja Belgian aineistossa on mukana aluejako: entiset itä- ja länsi-Saksa
+(dE,dW), Flanders (bF), Wallonia (bW) ja Bryssel (bB).
 
-```{r BeDealueTable1, echo=T, eval=T}
+
+
+```{r BeDealueTable1, echo=F, eval=T}
 # riviprofiilitaulukko aiheuttaa virheen PDF-tulostuksessa, JH_capaper.Rmd
 # tiedoston voi kuitenkin renderöidä knit-napilla RStudiossa pdf-tiedostoksi.
 
-# Kts. edellinen koodilohko - testailua pdf-ongelman ratkaisemiseksi
-# tallennetaan data tiedostoon, koodilohko BeDeAluedat1 passiviseksi
-# suppoint1_tab1 <- read_rds("suppoint1tab1.rds")
-# suppoint1_tab1 # tarkistus ok
 
 BeDealueTable <- ISSP2012esim1.dat %>% tableX(maa3, Q1b, type = "row_perc")
 
@@ -40,9 +59,6 @@ knitr::kable(BeDealueTable , digits = 2, booktabs = TRUE,
 
 
 ```{r BeDeAluedat1, eval=T, include=F}
-# (26.10.20) TÄSSÄ EHKÄ VIRHE - PDF-renderöinti antaa virheilmoituksen?
-# Ei todennäköistä, sillä toimii html-tulostuksessa. Kokeiltiin tämän lohkon
-# poistamista, ei auttanut ratkaisevasti.
 
 # Belgian ja Saksan aluejako maa3-muuttujassa
 # str(ISSP2012esim1.dat$maa3)
@@ -73,90 +89,152 @@ suppoint2_tab1 <- table(suppoint2_df$maa, suppoint2_df$Q1b)
 # tarkistus 1
 # suppoint2_tab1
 
-# Huom! tämä komento vain kerran - tai koko Rmd-tiedosto uudestaan (17.10.20)
-# Korvattu maa-faktorin tyhjien luokkien poisolla (14.11.2020)
-# suppoint2_tab1 <- suppoint2_tab1[-c(2,4:6) ,]
-#suppoint2_tab1 # tarkistus 2
-
 # lisätään rivit maa3-muuttujan taulukkoon
 
 suppoint1_tab1 <- rbind(suppoint1_tab1, suppoint2_tab1)
 
-# suppoint1_tab1 # tarkistus 3
-# Testailua pdf-ongelman ratkaisemiseksi - tallennetaa taulukko tiedostoksi
-# Ei ratkaisevasti auttanut (26.10.2020)
-# write_rds(suppoint1_tab1,"suppoint1tab1.rds")
-
+# suppoint1_tab1 
 
 ```
 
-Taulukko, Saksan ja Belgian alueet ja maaprofiilit.
-
-
-
-**edit** Riviprofiilitaulukko, kuvataan alueiden eroja. CA-analyysi kuitenkin koko
-aineiston frekfvenssitaululla, jossa rivien massat eivät ole samat.
+Aineistoon lisätään passiviisina riveinä Saksan ja Belgian maaprofiilit (DE, BE).
+Maiden massoja ei skaalta yhtä suuriksi, otoskoot vaikuttavat ratkaisuun.
 
 ```{r BeDealueetCA2, echo=FALSE}
 # suppoint1_tab2 <- read_rds("suppoint1tab1.rds") - testaus joka siirsi virheen 07-rmd-tiedostoon. Sama virheilmoitustyyppi.
 
 suppointCA2 <- ca(suppoint1_tab1[,1:5], suprow = 10:11)
 
+# Sama kartta ilman täydentäviä pisteitä
+
+suppointCA2b <- ca(suppoint1_tab1[1:9,1:5])
+
 ```
 
 
-### Symmetrinen kartta
 
 ```{r suppointCA2map1, echo=FALSE, fig.cap= "Q1b: Saksan ja  Belgian aluejako ",fig.asp = 1, out.width = "90%",fig.align = "center"}
 # par(cex = 0.6)
 plot(suppointCA2, main = "Symmetrinen kartta 1 ",
      # mass = c(TRUE, TRUE),
-     # contrib = c(TRUE, TRUE),
+     # contrib = c(TRUE, FALSE),
      sub = "Täydentävät pisteet DE ja BE" )
 
 
 ```
 
-**k** Maapisteet alueiden barysentrinen keskiarvo. Tulkinta.
+Saksan ja Belgian täydentävät pisteet ovat osiensa barysentrisiä keskiarvoja,
+etäisyys on sitä pienempi mitä suurempi on osuus. Saksan piste sijaitsee siksi
+lähempänä länsi-Saksan pistettä. Karttaa kannattaa verrata kuvaan jossa aluejakoa
+ei ole \ref(fig:simpleCA1map1), mutta Saksan ja Belgian osien sijoittuminen on kiinnostava.
+Itäinen Saksa on selvästi liberaalilla puolella, ensimmäisellä dimensiolla lähinnä Tanskaa.
+Läntinen Saksa on ensimmäisellä dimensiolla konservatiivisella puolella Belgian maapisteen
+tasolla. Belgian alueista Wallonia (bW) on liberaalilla puolella mutta kaikkein eniten oikealla.
+Bryssel ja Flander ovat konservatiivisella puolella, toinen länsi-Saksaa liberaalimpi ja toinen konservatiivisempi. Belgian osat hajoavat toiseen suuntaan kuin Saksan,
+liberaalein Flanders on myös kaikkein maltillisin ja Bryssel vastaavasti
+tiukempien mielipiteiden puolella. Sarakepisteiden suhteelliset sijainnit
+toisiinsa nähden eivät oleellisesti muutu.
+
+Bryssel ja Wallonia näyttävä olevan hyvin lievästi U-muotoisen maapisteiden 
+parven sisällä. Tämä kaariefekti tai _Guttman-efekti_ on kartoissa yleinen.
+Se on tavallaan seuraus ratkaisun geometriasta. Rivipisteiden pilvi on
+sarakkeiden ideaalipisteiden virittämän verteksin sisällä, ja ainoa reitti
+verteksin kulmasta toiseen kulkee tasolla kaarveasti (VIITE: MG, CAiP).
+Voi myös sanoa, että kaariefektin taustalla on järjestysasteikon muuttujan
+korrelaatio (viite: LeRoux). Kaaren sisäpisteet ovat usein polarisoituneita
+ensimmäisen dimension "ääripää-vastausten" välillä. Tässä vaikutus on heikko,
+taulukossa \@ref(tab:BeDealueTable1) ei mitää selvää polariaatiota näy.
+
 
 ```{r suppointCA2map2, echo=FALSE, fig.cap= "Q1b: Saksan ja  Belgian aluejako ",fig.asp = 1, out.width = "90%",fig.align = "center"}
 
-plot(suppointCA2, main = "kontribuutiokartta 1",
+plot(suppointCA2b, main = "kontribuutiokartta 1 - absoluuttiset kontribuutiot",
         map = "rowgreen",
         arrows = c(FALSE, TRUE),
-        mass = c(TRUE, FALSE),
+        mass = c(TRUE, TRUE),
         contrib = c("absolute","absolute"),
-        sub = "Täydentävät pisteet DE ja BE" )
+        sub = "Massat: pisteiden ja symbolien koko " )
 
 ```
 
 
-**k** Kontribuutiokartta, kontribuutio värisävyinä ja massat pisteiden kokona.
-Yleiskuvaan riittävä, ei kovin selkeä yksityiskohdissa. Motivaatio seuraavalle
-jaksolle.Skaalataan asymmetrisen kuvan sarakevektoreita (jotka standardikoordinaateissa)
-hieman lähemmäs origoa.
+Kontribuutiokartasta täydentävät pisteet on jätetty pois, ne eivät vaikuta ratkaisuun.
+Pisteiden koko auttaa hahmottamaan niiden massojen eroja, sarakkeiden massoja ei
+juuri tässä kuvassa erota. Sarakkeiden kontribuutiot ovat samantapaiset kuin
+alkuperäisessä kartassa \@ref(fig:G1-3asymmContrib1). Rivipisteiden kontribuutioista
+osa on selvästi pienempiä, erityisesti länsi-Saksa kaksi Belgian aluetta (bB, bF).
+Unkarin ja Bulgarian kontribuutiot muuttuvat eri suuntiin, Unkarin pienenee ja
+Bulgarian kasvaa.
 
-**k** Kaukana on kaukana, mutta lähellä voi olla myös kaukana. 
 
-## CA:n numeeriset tulokset
+## Korrespondenssianalyysin numeeriset tulokset
 
-**edit** Teorialiitteessä selitetään tarkemmin numeeristen tulosten tausta, tässä
-apuneuvo (a) kuvan tulkinnan varmistamiseen ja (b) approksimaation laadun
-tarkistamiseen.
+Korrespondenssianalyysin numeeriset tulokset ovat tärkeitä tulkinnan varmistamiselle
+ja antavat tarkemman kuvan ratkaisusta. Nämä tulokset ovat erilaisia kokonaisinertian
+dekomponointeja. Kokonaisinertia (total inertia) profiilien ja keskiarvoprofiilin
+khii2-etäisyyksien massoilla painotettu summa (\@ref(eq:inert2). Se kuvaa
+profiilipisteiden hajontaa ideaalipisteiden verteksin sisällä. Maksimi-inertia
+saavutetaan kun profiilit ovat verteksien kärkipisteissä, jokaisessa profiilissa on vain
+yksi luokittelumuuttujan arvo. Inertia on sama kuin ratkaisun dimensio, tässä esimerkissä
+4 (sarakkeiden lukumäärä - 1).^[Luku perustuu CAiP:n lukuun 11 ja liitteeseen B].
 
-```{r suppointCA2numres1,echo=TRUE}
+R-paketti "ca" (versio 0.71.1) listaa numeeriset tulokset suppeasti (print) ja laajemmin
+(summary), laajempi tulostus on alla.^[Paketin pdf-dokumentissa s.20 kerrotaan, että print
+tulostaa pääkoordinaatit (principal coordinates) mutta se tulostaakin standardikoordinaatit.]
 
-suppointCA2
+
+
+```{r suppointCA2numres1,echo=FALSE, eval=FALSE}
+
+# ca-paketin manuaali väittää, että tässä tulostetaan principal-koordinaatit mutta nämä ovat
+# standardikoordinaatteja.
+print(suppointCA2)
 
 ```
+
+
 
 **k** Lyhyt selostus - nämä aika selkeitä
+
+Ensimmäisenä on listattu kokonaisinertia pääakseleittain. Tässä suhteelliset luvut
+on esitetty prosentteina. Muut luvut on luettavuuden vuoksi skaalattu, joko kerrottu
+tuhannella tai esitetty "permills" (summa on 1000).
 
 ```{r suppointCA2numres2,echo=TRUE}
 
 summary(suppointCA2)
 
 ```
+Rivi- ja sarakeprofiileista esitetään samat tiedot. Ensimmäisessä kolmen
+sarakkeen joukossa kerrotaan pisteen massa, laatu (qlt) ja inertiakontribuutio.
+
+Inertiakontribuutio on suhteellinen osuus kokonaisinertiasta. Aktiivisia rivejä on 9,
+joten tasaisesti jaettu inetia olisi noin 110. Tanska, Bulgaria ja Unkari "selittävät"
+suurimman osan inertiasta. Belgian ja Saksan alueiden kontribuutiot ovat pieniä.
+Nämä inertiaosuudet liittyvät kokonaisinertiaan alkuperäisessä neljässä ulottuvuudessa.
+
+Laatu kertoo miten hyvin piste on esitetty kartalla, miten suuri osa sen
+inertiasta on esitetty kartalla. Kaksiulotteinen kartta kuten tässä on yleisin 
+valinta, laatu kerrotaan valitulle dimensioiden määrälle. Laatu ei riipu massasta,
+vaan pisteen ja kartan akseleiden välisistä kulmista (kts. teorialiite). Saksan 
+osien ero laadussa on iso,itä-Saksalla erittäin hyvä ja länsi-Saksalla huono.
+Belgian alueista Wallonia on kehtoiten esitetty, ja vain Flandersin laatu on
+kohtuullisen hyvä. Kovin hyvä ei ole täydentävien maapisteidenkään laatu.
+
+Kaksi seuraavaa lohkoa kertovat tulokset valituille dimenisoille eli ratkaisulle.
+Molempien dimensioiden ("k=1", "k=2" ) pääkoordinaattattien (x 1000) lisäksi
+raportoidaan dimension _suhteellinen kontribuutio_ pisteen inertiaan ("cor").
+Nämä tunnusluvut summautuvat laaduksi (qlt), ja ne voidaan tulkita korrelaation
+neliöiksi (kts. teorialiite).Erityisesti Belgian alueiden projektion laatu on
+huonompi ensimmäisellä dimensiolla. Itä-Saksa ja Bulgaria taas ovat hyvin esittyjä
+vain ensimmäisellä dimensiolla eivätkä juuri ollenkaan korreloi toisen dimension
+kanssa.
+
+Pisteen _absoluuttinen kontribuutio_ kertoo sen osuuden dimension inertiasta
+(summa 1000). Jos katsotaan sarakkeita, nähdään E-sarake "selittää" ensimmäisen
+dimension inertiasta lähes 70 prosenttia, ja dimensio saman verran
+kokonaisinertiasta.
+
 
 **k** Tulosteen käsitteiden esittely - tavoite kuvan laadun varmistus, akselien
 tulkinnan tarkistus. Tarkemmin teorialiitteessä. Tästä pitäisi nähdä, miksi seuraavat

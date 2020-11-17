@@ -152,12 +152,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.6" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#karttojen-erot"><i class="fa fa-check"></i><b>3.6</b> Karttojen erot</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html"><i class="fa fa-check"></i><b>4</b> Täydentävät pisteet</a><ul>
-<li class="chapter" data-level="4.1" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html#täydentävät-pisteet-1"><i class="fa fa-check"></i><b>4.1</b> Täydentävät pisteet</a></li>
-<li class="chapter" data-level="4.2" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html#saksan-ja-belgian-alueet"><i class="fa fa-check"></i><b>4.2</b> Saksan ja Belgian alueet</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html#symmetrinen-kartta"><i class="fa fa-check"></i><b>4.2.1</b> Symmetrinen kartta</a></li>
-</ul></li>
-<li class="chapter" data-level="4.3" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html#can-numeeriset-tulokset"><i class="fa fa-check"></i><b>4.3</b> CA:n numeeriset tulokset</a></li>
-<li class="chapter" data-level="4.4" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html#esimerkki-3d--kartasta---saksan-ja-belgian-dimensiot"><i class="fa fa-check"></i><b>4.4</b> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</a></li>
+<li class="chapter" data-level="4.1" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html#saksan-ja-belgian-alueet"><i class="fa fa-check"></i><b>4.1</b> Saksan ja Belgian alueet</a></li>
+<li class="chapter" data-level="4.2" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html#korrespondenssianalyysin-numeeriset-tulokset"><i class="fa fa-check"></i><b>4.2</b> Korrespondenssianalyysin numeeriset tulokset</a></li>
+<li class="chapter" data-level="4.3" data-path="täydentävät-pisteet.html"><a href="täydentävät-pisteet.html#esimerkki-3d--kartasta---saksan-ja-belgian-dimensiot"><i class="fa fa-check"></i><b>4.3</b> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="yhteisvaikutusmuuttujat.html"><a href="yhteisvaikutusmuuttujat.html"><i class="fa fa-check"></i><b>5</b> Yhteisvaikutusmuuttujat</a><ul>
 <li class="chapter" data-level="5.1" data-path="yhteisvaikutusmuuttujat.html"><a href="yhteisvaikutusmuuttujat.html#ikä-ja-sukupuoli"><i class="fa fa-check"></i><b>5.1</b> Ikä ja sukupuoli</a></li>
@@ -286,13 +283,13 @@ myös cor ja ctr, riveille ja sarakkeille.</p>
 </div>
 <div id="ikä-sukupuoli-ja-maa" class="section level2">
 <h2><span class="header-section-number">5.2</span> Ikä, sukupuoli ja maa</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="yhteisvaikutusmuuttujat.html#cb9-1"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span><span class="kw">mutate</span>(ISSP2012esim1b.dat,</span>
-<span id="cb9-2"><a href="yhteisvaikutusmuuttujat.html#cb9-2"></a>                             <span class="dt">maaga =</span> <span class="kw">paste</span>(maa, ga, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>))</span>
-<span id="cb9-3"><a href="yhteisvaikutusmuuttujat.html#cb9-3"></a></span>
-<span id="cb9-4"><a href="yhteisvaikutusmuuttujat.html#cb9-4"></a><span class="co"># tarkistus, muunnos ok</span></span>
-<span id="cb9-5"><a href="yhteisvaikutusmuuttujat.html#cb9-5"></a><span class="co"># ISSP2012esim1b.dat %&gt;% tableX(maa, maaga)</span></span>
-<span id="cb9-6"><a href="yhteisvaikutusmuuttujat.html#cb9-6"></a><span class="co"># head(ISSP2012esim2.dat)</span></span>
-<span id="cb9-7"><a href="yhteisvaikutusmuuttujat.html#cb9-7"></a><span class="co"># str(ISSP2012esim2.dat)</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="yhteisvaikutusmuuttujat.html#cb6-1"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span><span class="kw">mutate</span>(ISSP2012esim1b.dat,</span>
+<span id="cb6-2"><a href="yhteisvaikutusmuuttujat.html#cb6-2"></a>                             <span class="dt">maaga =</span> <span class="kw">paste</span>(maa, ga, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>))</span>
+<span id="cb6-3"><a href="yhteisvaikutusmuuttujat.html#cb6-3"></a></span>
+<span id="cb6-4"><a href="yhteisvaikutusmuuttujat.html#cb6-4"></a><span class="co"># tarkistus, muunnos ok</span></span>
+<span id="cb6-5"><a href="yhteisvaikutusmuuttujat.html#cb6-5"></a><span class="co"># ISSP2012esim1b.dat %&gt;% tableX(maa, maaga)</span></span>
+<span id="cb6-6"><a href="yhteisvaikutusmuuttujat.html#cb6-6"></a><span class="co"># head(ISSP2012esim2.dat)</span></span>
+<span id="cb6-7"><a href="yhteisvaikutusmuuttujat.html#cb6-7"></a><span class="co"># str(ISSP2012esim2.dat)</span></span></code></pre></div>
 <p><strong>edit</strong> Yksi vaikeaselkoinen kartta täynnä pisteitä, tihrustellaan.</p>
 <div class="figure" style="text-align: center"><span id="fig:maagaCA1map1"></span>
 <img src="JH_capaper_files/figure-html/maagaCA1map1-1.png" alt="Q1b: ikäluokka ja sukupuoli maittain" width="90%" />
@@ -300,8 +297,8 @@ myös cor ja ctr, riveille ja sarakkeille.</p>
 Kuva 5.2: Q1b: ikäluokka ja sukupuoli maittain
 </p>
 </div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="yhteisvaikutusmuuttujat.html#cb10-1"></a><span class="co"># Vilkaistaan numeerisia tuloksia, kopioidaan tekstiin jos on tarpeellista</span></span>
-<span id="cb10-2"><a href="yhteisvaikutusmuuttujat.html#cb10-2"></a><span class="kw">summary</span>(maagaCA1)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="yhteisvaikutusmuuttujat.html#cb7-1"></a><span class="co"># Vilkaistaan numeerisia tuloksia, kopioidaan tekstiin jos on tarpeellista</span></span>
+<span id="cb7-2"><a href="yhteisvaikutusmuuttujat.html#cb7-2"></a><span class="kw">summary</span>(maagaCA1)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 

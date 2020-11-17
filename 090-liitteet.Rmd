@@ -365,13 +365,11 @@ knitr::include_graphics('img/BookdownProc.png')
 
 ## Liite 4: R - koodi {-}
 
-
-
 ```{r ref.label=knitr::all_labels(), echo = T, eval = F}
 
+# echo = FALSE toistaiseksi.
 #Testataan koodilohkojen listausta, näyttää toimivan mutta vaatii vielä säätämistä.
 #Ohje löytyi [Yihui Xienin blogista](https://yihui.name/en/2018/09/code-appendix/)
 #(luettu 26.10.2018).
 
 ```
-

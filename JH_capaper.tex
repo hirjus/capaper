@@ -157,7 +157,7 @@
 
 \title{Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä}
 \author{Jussi Hirvonen}
-\date{Versio 0.65, tulostettu 2020-11-16}
+\date{Versio 0.65, tulostettu 2020-11-17}
 
 \begin{document}
 \maketitle
@@ -1161,7 +1161,7 @@ kun akselien inertioiden (principal inertias) neliöjuuret eivät ole liian eris
 Jos pääinertioiden neliöjuuret ovat hyvin eri suuruisia, tulkintaongelmia voi tulla, mutta
 niillä ei käytännössä ole merkitystä. Siksi hän pitää skaalausdebattia akateemisena
 kiistana, käytännön sovelluksissa sillä ei ole merkitystä. Kiista on ollut aika
-sitkeä (Viite: esim. JMR 1989 ), mutta lienee laantunut.
+sitkeä (esimerkiksi 1989 Greenacren kommentoi skaalausta perusteellisesti \citep{RefWorks:doc:5c754c6de4b0947789165cde}), mutta lienee laantunut.
 
 Symmetinen kartta hyvä vaihtoehto, sillä asymmetrisessä skaalaus vie
 ideaalipisteet usein kauas pääkoordinaateissa esitetyt pisteet pakkautuvat kuvan
@@ -1196,44 +1196,48 @@ välisillä etäisyyksillä ei ole suoraa tulkintaa.
 \hypertarget{tuxe4ydentuxe4vuxe4t-pisteet}{%
 \chapter{Täydentävät pisteet}\label{tuxe4ydentuxe4vuxe4t-pisteet}}
 
-\textbf{edit} Edellisssä luvussa selitetty barysentrinen keskiarvopiste;
-teorialiitteessä hieman laveammin.
+Kartat ovat analyysin väline, ja usein on hyödyllistä esittää kuvassa
+lisäinformaatiota tulkinnan avuksi. Täydentävät pisteet (supplementary points,
+CAiP s. 89-) ovat rivejä tai sarakkeita jotka lisätään karttaan. Mikä tahansa
+rivi tai sarake voidaan voidaan lisätä kuvaan, jos se on järkevästi vertailukelpoinen
+kartan määtittäneiden profiilien kanssa.
 
-\textbf{edit} CA:n joustava käyttö vaatii matriisioperaatioita, ja muuta datan rakenteen
-muokkausta (rivien lisääminen input-dataan jne.).
+Tällainen piste on kartan laskennassa \emph{passiivinen}, sillä on sijainti kartalla
+mutta ei massaa eikä vaikutusta inertiaan. Passiivisilla pisteillä ei ole vaikutusta
+(kontribuutiota) kartan pääakseleihin.
 
-Tekstistä oma dokkari, eri käyttötapaukset lyhyesti. Edellisen luvun asymmetrisen
-kartan avulla perustellaan, miten pisteitä voidaaan lisätä.
+Täydentävillä pisteillä on kolme yleistä käyttötarkoitusta. Kartalle voidaan lisätä
+profiili, joka on jollain lailla sisällöllisesti erilainen kuin muut. Esimerkkiaineistossa
+kartalle voisi lisätä joitain Euroopan ulkopuolisia maita. Vaikka nämä riviprofiilit
+eivät vaikuta kartan akseleiden määräytymiseen, ne voidaan esittää kuuden maan
+määrittämässä ``avaruudessa''. Projektion laatu (suhteelliset kontribuutiot) voidaan myös
+esittää.
 
-\hypertarget{tuxe4ydentuxe4vuxe4t-pisteet-1}{%
-\section{Täydentävät pisteet}\label{tuxe4ydentuxe4vuxe4t-pisteet-1}}
+Toinen käyttötapaus on pienen massan profiili. Tällaisella pisteellä voi olla iso
+vaikutus ratkaisuun, mutta passiivisena pisteenä se sijoitetaan muiden pisteiden
+määrittämälle kartalle. Jo sisällöllisistä syistä pienen massan pisteiden esitystä
+kannattaa harkita, ne sijaitsevat kaukana origosta ja huonontavat kuvan laatua.
+Esimerkkiaineistossa puuttuvat vastaukset voisi ottaa mukaan täydentävänä pisteenä.
 
-\textbf{edit} Tiivisti tärkeimmät käyttötapaukset. CA:n peruskäsitteet ja numeeriset
-tulokset selitetty edellä.
+Kolmas mahdollisuus on jakaa pistejoukkoja osajoukkoihin ja esittää niiden
+summaprofiili täydentävänä pisteenä. Summaprofiili on osiensa painotettu
+(barysentrinen) keskiarvo. Kun se esiteteään passiivisena pisteenä, havaintoja ei
+oteta ratkaisuun kahta kertaa. Profiilien yhdistämiseen liittyy
+korrespondenssianalyysin tärkein periaate, jakaumaekvivalenssi (\emph{distributional
+equivalence}). Profiileiltaan samanlaiset rivit voidaan yhdistää, analyysin tulokset
+eivät muutu. Khii2-etäisyysmitta taas on ainoa etäisyysmitta joka toutettaa tämän
+periaatteen. En esittele tätä ydinkäsitettä tämän enempää (kts. esim. CAiP tai
+perusteellinen matemaattinen esitys \citep{RefWorks:doc:5a857a43e4b0ed2d44664d75}).
 
-\textbf{ks} Passiiviset pisteet ja niiden käyttötarkoitukset
+Täydentävien profiilien lisääminen vaatii jo yksinkertaisia matriisioperaatioita.
+Korrespondenssianalyysi on käytännössä matriisien muokkausta tutkimusongelman
+tarpeisiin.
 
 \hypertarget{saksan-ja-belgian-alueet}{%
 \section{Saksan ja Belgian alueet}\label{saksan-ja-belgian-alueet}}
 
-\textbf{Data ja taulukko aluejaosta}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{# riviprofiilitaulukko aiheuttaa virheen PDF-tulostuksessa, JH_capaper.Rmd}
-\CommentTok{# tiedoston voi kuitenkin renderöidä knit-napilla RStudiossa pdf-tiedostoksi.}
-
-\CommentTok{# Kts. edellinen koodilohko - testailua pdf-ongelman ratkaisemiseksi}
-\CommentTok{# tallennetaan data tiedostoon, koodilohko BeDeAluedat1 passiviseksi}
-\CommentTok{# suppoint1_tab1 <- read_rds("suppoint1tab1.rds")}
-\CommentTok{# suppoint1_tab1 # tarkistus ok}
-
-\NormalTok{BeDealueTable <-}\StringTok{ }\NormalTok{ISSP2012esim1.dat }\OperatorTok{%>%}\StringTok{ }\KeywordTok{tableX}\NormalTok{(maa3, Q1b, }\DataTypeTok{type =} \StringTok{"row_perc"}\NormalTok{)}
-
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(BeDealueTable , }\DataTypeTok{digits =} \DecValTok{2}\NormalTok{, }\DataTypeTok{booktabs =} \OtherTok{TRUE}\NormalTok{,}
-           \DataTypeTok{caption =} \StringTok{"Q1b vastaukset, Saksan ja Belgian alueet"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+Saksan ja Belgian aineistossa on mukana aluejako: entiset itä- ja länsi-Saksa
+(dE,dW), Flanders (bF), Wallonia (bW) ja Bryssel (bB).
 
 \begin{table}
 
@@ -1258,13 +1262,8 @@ All & 9.95 & 23.76 & 16.79 & 26.10 & 23.41 & 100.00\\
 \end{tabular}
 \end{table}
 
-Taulukko, Saksan ja Belgian alueet ja maaprofiilit.
-
-\textbf{edit} Riviprofiilitaulukko, kuvataan alueiden eroja. CA-analyysi kuitenkin koko
-aineiston frekfvenssitaululla, jossa rivien massat eivät ole samat.
-
-\hypertarget{symmetrinen-kartta}{%
-\subsection{Symmetrinen kartta}\label{symmetrinen-kartta}}
+Aineistoon lisätään passiviisina riveinä Saksan ja Belgian maaprofiilit (DE, BE).
+Maiden massoja ei skaalta yhtä suuriksi, otoskoot vaikuttavat ratkaisuun.
 
 \begin{figure}
 
@@ -1275,7 +1274,27 @@ aineiston frekfvenssitaululla, jossa rivien massat eivät ole samat.
 \caption{Q1b: Saksan ja  Belgian aluejako }\label{fig:suppointCA2map1}
 \end{figure}
 
-\textbf{k} Maapisteet alueiden barysentrinen keskiarvo. Tulkinta.
+Saksan ja Belgian täydentävät pisteet ovat osiensa barysentrisiä keskiarvoja,
+etäisyys on sitä pienempi mitä suurempi on osuus. Saksan piste sijaitsee siksi
+lähempänä länsi-Saksan pistettä. Karttaa kannattaa verrata kuvaan jossa aluejakoa
+ei ole \ref(fig:simpleCA1map1), mutta Saksan ja Belgian osien sijoittuminen on kiinnostava.
+Itäinen Saksa on selvästi liberaalilla puolella, ensimmäisellä dimensiolla lähinnä Tanskaa.
+Läntinen Saksa on ensimmäisellä dimensiolla konservatiivisella puolella Belgian maapisteen
+tasolla. Belgian alueista Wallonia (bW) on liberaalilla puolella mutta kaikkein eniten oikealla.
+Bryssel ja Flander ovat konservatiivisella puolella, toinen länsi-Saksaa liberaalimpi ja toinen konservatiivisempi. Belgian osat hajoavat toiseen suuntaan kuin Saksan,
+liberaalein Flanders on myös kaikkein maltillisin ja Bryssel vastaavasti
+tiukempien mielipiteiden puolella. Sarakepisteiden suhteelliset sijainnit
+toisiinsa nähden eivät oleellisesti muutu.
+
+Bryssel ja Wallonia näyttävä olevan hyvin lievästi U-muotoisen maapisteiden
+parven sisällä. Tämä kaariefekti tai \emph{Guttman-efekti} on kartoissa yleinen.
+Se on tavallaan seuraus ratkaisun geometriasta. Rivipisteiden pilvi on
+sarakkeiden ideaalipisteiden virittämän verteksin sisällä, ja ainoa reitti
+verteksin kulmasta toiseen kulkee tasolla kaarveasti (VIITE: MG, CAiP).
+Voi myös sanoa, että kaariefektin taustalla on järjestysasteikon muuttujan
+korrelaatio (viite: LeRoux). Kaaren sisäpisteet ovat usein polarisoituneita
+ensimmäisen dimension ``ääripää-vastausten'' välillä. Tässä vaikutus on heikko,
+taulukossa \ref{tab:BeDealueTable1} ei mitää selvää polariaatiota näy.
 
 \begin{figure}
 
@@ -1286,59 +1305,35 @@ aineiston frekfvenssitaululla, jossa rivien massat eivät ole samat.
 \caption{Q1b: Saksan ja  Belgian aluejako }\label{fig:suppointCA2map2}
 \end{figure}
 
-\textbf{k} Kontribuutiokartta, kontribuutio värisävyinä ja massat pisteiden kokona.
-Yleiskuvaan riittävä, ei kovin selkeä yksityiskohdissa. Motivaatio seuraavalle
-jaksolle.Skaalataan asymmetrisen kuvan sarakevektoreita (jotka standardikoordinaateissa)
-hieman lähemmäs origoa.
+Kontribuutiokartasta täydentävät pisteet on jätetty pois, ne eivät vaikuta ratkaisuun.
+Pisteiden koko auttaa hahmottamaan niiden massojen eroja, sarakkeiden massoja ei
+juuri tässä kuvassa erota. Sarakkeiden kontribuutiot ovat samantapaiset kuin
+alkuperäisessä kartassa \ref{fig:G1-3asymmContrib1}. Rivipisteiden kontribuutioista
+osa on selvästi pienempiä, erityisesti länsi-Saksa kaksi Belgian aluetta (bB, bF).
+Unkarin ja Bulgarian kontribuutiot muuttuvat eri suuntiin, Unkarin pienenee ja
+Bulgarian kasvaa.
 
-\textbf{k} Kaukana on kaukana, mutta lähellä voi olla myös kaukana.
+\hypertarget{korrespondenssianalyysin-numeeriset-tulokset}{%
+\section{Korrespondenssianalyysin numeeriset tulokset}\label{korrespondenssianalyysin-numeeriset-tulokset}}
 
-\hypertarget{can-numeeriset-tulokset}{%
-\section{CA:n numeeriset tulokset}\label{can-numeeriset-tulokset}}
+Korrespondenssianalyysin numeeriset tulokset ovat tärkeitä tulkinnan varmistamiselle
+ja antavat tarkemman kuvan ratkaisusta. Nämä tulokset ovat erilaisia kokonaisinertian
+dekomponointeja. Kokonaisinertia (total inertia) profiilien ja keskiarvoprofiilin
+khii2-etäisyyksien massoilla painotettu summa (\eqref{eq:inert2}. Se kuvaa
+profiilipisteiden hajontaa ideaalipisteiden verteksin sisällä. Maksimi-inertia
+saavutetaan kun profiilit ovat verteksien kärkipisteissä, jokaisessa profiilissa on vain
+yksi luokittelumuuttujan arvo. Inertia on sama kuin ratkaisun dimensio, tässä esimerkissä
+4 (sarakkeiden lukumäärä - 1).\footnote{Luku perustuu CAiP:n lukuun 11 ja liitteeseen B}.
 
-\textbf{edit} Teorialiitteessä selitetään tarkemmin numeeristen tulosten tausta, tässä
-apuneuvo (a) kuvan tulkinnan varmistamiseen ja (b) approksimaation laadun
-tarkistamiseen.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{suppointCA2}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## 
-##  Principal inertias (eigenvalues):
-##            1        2        3        4       
-## Value      0.154101 0.032489 0.014294 0.008944
-## Percentage 73.44%   15.48%   6.81%    4.26%   
-## 
-## 
-##  Rows:
-##                bF        bW       bB       BG        dW        dE        DK
-## Mass     0.124279  0.060174 0.062753 0.113103  0.143313  0.067174  0.170453
-## ChiDist  0.341469  0.096258 0.239034 0.630991  0.219094  0.505720  0.634063
-## Inertia  0.014491  0.000558 0.003586 0.045032  0.006879  0.017180  0.068528
-## Dim. 1   0.400065 -0.090631 0.216912 1.502458  0.254323 -1.262007 -1.506022
-## Dim. 2  -1.254042  0.267998 0.789358 0.236498 -0.451124 -0.226595  1.121468
-##                FI       HU    BE (*)    DE (*)
-## Mass     0.136313 0.122436        NA        NA
-## ChiDist  0.347733 0.550404  0.157974  0.175013
-## Inertia  0.016483 0.037091        NA        NA
-## Dim. 1  -0.525222 1.215462  0.234127 -0.229593
-## Dim. 2  -1.500986 1.280342 -0.364834 -0.379468
-## 
-## 
-##  Columns:
-##                S        s         ?         e         E
-## Mass    0.099472 0.237627  0.167874  0.260960  0.234066
-## ChiDist 0.592824 0.354761  0.332288  0.280549  0.672594
-## Inertia 0.034959 0.029907  0.018536  0.020540  0.105887
-## Dim. 1  1.073310 0.787257  0.649789 -0.029859 -1.688108
-## Dim. 2  1.835133 0.290929 -0.119934 -1.451548  0.629110
-\end{verbatim}
+R-paketti ``ca'' (versio 0.71.1) listaa numeeriset tulokset suppeasti (print) ja laajemmin
+(summary), laajempi tulostus on alla.\footnote{Paketin pdf-dokumentissa s.20 kerrotaan, että print
+  tulostaa pääkoordinaatit (principal coordinates) mutta se tulostaakin standardikoordinaatit.}
 
 \textbf{k} Lyhyt selostus - nämä aika selkeitä
+
+Ensimmäisenä on listattu kokonaisinertia pääakseleittain. Tässä suhteelliset luvut
+on esitetty prosentteina. Muut luvut on luettavuuden vuoksi skaalattu, joko kerrottu
+tuhannella tai esitetty ``permills'' (summa on 1000).
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1381,6 +1376,36 @@ tarkistamiseen.
 ## 4 |    e |  261  871   98 |  -12   2   0 | -262 870 550 |
 ## 5 |    E |  234  999  505 | -663 971 667 |  113  28  93 |
 \end{verbatim}
+
+Rivi- ja sarakeprofiileista esitetään samat tiedot. Ensimmäisessä kolmen
+sarakkeen joukossa kerrotaan pisteen massa, laatu (qlt) ja inertiakontribuutio.
+
+Inertiakontribuutio on suhteellinen osuus kokonaisinertiasta. Aktiivisia rivejä on 9,
+joten tasaisesti jaettu inetia olisi noin 110. Tanska, Bulgaria ja Unkari ``selittävät''
+suurimman osan inertiasta. Belgian ja Saksan alueiden kontribuutiot ovat pieniä.
+Nämä inertiaosuudet liittyvät kokonaisinertiaan alkuperäisessä neljässä ulottuvuudessa.
+
+Laatu kertoo miten hyvin piste on esitetty kartalla, miten suuri osa sen
+inertiasta on esitetty kartalla. Kaksiulotteinen kartta kuten tässä on yleisin
+valinta, laatu kerrotaan valitulle dimensioiden määrälle. Laatu ei riipu massasta,
+vaan pisteen ja kartan akseleiden välisistä kulmista (kts. teorialiite). Saksan
+osien ero laadussa on iso,itä-Saksalla erittäin hyvä ja länsi-Saksalla huono.
+Belgian alueista Wallonia on kehtoiten esitetty, ja vain Flandersin laatu on
+kohtuullisen hyvä. Kovin hyvä ei ole täydentävien maapisteidenkään laatu.
+
+Kaksi seuraavaa lohkoa kertovat tulokset valituille dimenisoille eli ratkaisulle.
+Molempien dimensioiden (``k=1'', ``k=2'' ) pääkoordinaattattien (x 1000) lisäksi
+raportoidaan dimension \emph{suhteellinen kontribuutio} pisteen inertiaan (``cor'').
+Nämä tunnusluvut summautuvat laaduksi (qlt), ja ne voidaan tulkita korrelaation
+neliöiksi (kts. teorialiite).Erityisesti Belgian alueiden projektion laatu on
+huonompi ensimmäisellä dimensiolla. Itä-Saksa ja Bulgaria taas ovat hyvin esittyjä
+vain ensimmäisellä dimensiolla eivätkä juuri ollenkaan korreloi toisen dimension
+kanssa.
+
+Pisteen \emph{absoluuttinen kontribuutio} kertoo sen osuuden dimension inertiasta
+(summa 1000). Jos katsotaan sarakkeita, nähdään E-sarake ``selittää'' ensimmäisen
+dimension inertiasta lähes 70 prosenttia, ja dimensio saman verran
+kokonaisinertiasta.
 
 \textbf{k} Tulosteen käsitteiden esittely - tavoite kuvan laadun varmistus, akselien
 tulkinnan tarkistus. Tarkemmin teorialiitteessä. Tästä pitäisi nähdä, miksi seuraavat
@@ -4423,19 +4448,12 @@ julkaisutekniikan ympäristön.
 \CommentTok{# riviprofiilitaulukko aiheuttaa virheen PDF-tulostuksessa, JH_capaper.Rmd}
 \CommentTok{# tiedoston voi kuitenkin renderöidä knit-napilla RStudiossa pdf-tiedostoksi.}
 
-\CommentTok{# Kts. edellinen koodilohko - testailua pdf-ongelman ratkaisemiseksi}
-\CommentTok{# tallennetaan data tiedostoon, koodilohko BeDeAluedat1 passiviseksi}
-\CommentTok{# suppoint1_tab1 <- read_rds("suppoint1tab1.rds")}
-\CommentTok{# suppoint1_tab1 # tarkistus ok}
 
 \NormalTok{BeDealueTable <-}\StringTok{ }\NormalTok{ISSP2012esim1.dat }\OperatorTok{%>%}\StringTok{ }\KeywordTok{tableX}\NormalTok{(maa3, Q1b, }\DataTypeTok{type =} \StringTok{"row_perc"}\NormalTok{)}
 
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(BeDealueTable , }\DataTypeTok{digits =} \DecValTok{2}\NormalTok{, }\DataTypeTok{booktabs =} \OtherTok{TRUE}\NormalTok{,}
            \DataTypeTok{caption =} \StringTok{"Q1b vastaukset, Saksan ja Belgian alueet"}\NormalTok{)}
 
-\CommentTok{# (26.10.20) TÄSSÄ EHKÄ VIRHE - PDF-renderöinti antaa virheilmoituksen?}
-\CommentTok{# Ei todennäköistä, sillä toimii html-tulostuksessa. Kokeiltiin tämän lohkon}
-\CommentTok{# poistamista, ei auttanut ratkaisevasti.}
 
 \CommentTok{# Belgian ja Saksan aluejako maa3-muuttujassa}
 \CommentTok{# str(ISSP2012esim1.dat$maa3)}
@@ -4466,42 +4484,39 @@ julkaisutekniikan ympäristön.
 \CommentTok{# tarkistus 1}
 \CommentTok{# suppoint2_tab1}
 
-\CommentTok{# Huom! tämä komento vain kerran - tai koko Rmd-tiedosto uudestaan (17.10.20)}
-\CommentTok{# Korvattu maa-faktorin tyhjien luokkien poisolla (14.11.2020)}
-\CommentTok{# suppoint2_tab1 <- suppoint2_tab1[-c(2,4:6) ,]}
-\CommentTok{#suppoint2_tab1 # tarkistus 2}
-
 \CommentTok{# lisätään rivit maa3-muuttujan taulukkoon}
 
 \NormalTok{suppoint1_tab1 <-}\StringTok{ }\KeywordTok{rbind}\NormalTok{(suppoint1_tab1, suppoint2_tab1)}
 
-\CommentTok{# suppoint1_tab1 # tarkistus 3}
-\CommentTok{# Testailua pdf-ongelman ratkaisemiseksi - tallennetaa taulukko tiedostoksi}
-\CommentTok{# Ei ratkaisevasti auttanut (26.10.2020)}
-\CommentTok{# write_rds(suppoint1_tab1,"suppoint1tab1.rds")}
-
+\CommentTok{# suppoint1_tab1 }
 
 \CommentTok{# suppoint1_tab2 <- read_rds("suppoint1tab1.rds") - testaus joka siirsi virheen 07-rmd-tiedostoon. Sama virheilmoitustyyppi.}
 
 \NormalTok{suppointCA2 <-}\StringTok{ }\KeywordTok{ca}\NormalTok{(suppoint1_tab1[,}\DecValTok{1}\OperatorTok{:}\DecValTok{5}\NormalTok{], }\DataTypeTok{suprow =} \DecValTok{10}\OperatorTok{:}\DecValTok{11}\NormalTok{)}
 
+\CommentTok{# Sama kartta ilman täydentäviä pisteitä}
+
+\NormalTok{suppointCA2b <-}\StringTok{ }\KeywordTok{ca}\NormalTok{(suppoint1_tab1[}\DecValTok{1}\OperatorTok{:}\DecValTok{9}\NormalTok{,}\DecValTok{1}\OperatorTok{:}\DecValTok{5}\NormalTok{])}
+
 \CommentTok{# par(cex = 0.6)}
 \KeywordTok{plot}\NormalTok{(suppointCA2, }\DataTypeTok{main =} \StringTok{"Symmetrinen kartta 1 "}\NormalTok{,}
      \CommentTok{# mass = c(TRUE, TRUE),}
-     \CommentTok{# contrib = c(TRUE, TRUE),}
+     \CommentTok{# contrib = c(TRUE, FALSE),}
      \DataTypeTok{sub =} \StringTok{"Täydentävät pisteet DE ja BE"}\NormalTok{ )}
 
 
 
-\KeywordTok{plot}\NormalTok{(suppointCA2, }\DataTypeTok{main =} \StringTok{"kontribuutiokartta 1"}\NormalTok{,}
+\KeywordTok{plot}\NormalTok{(suppointCA2b, }\DataTypeTok{main =} \StringTok{"kontribuutiokartta 1 - absoluuttiset kontribuutiot"}\NormalTok{,}
         \DataTypeTok{map =} \StringTok{"rowgreen"}\NormalTok{,}
         \DataTypeTok{arrows =} \KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{),}
-        \DataTypeTok{mass =} \KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{, }\OtherTok{FALSE}\NormalTok{),}
+        \DataTypeTok{mass =} \KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{),}
         \DataTypeTok{contrib =} \KeywordTok{c}\NormalTok{(}\StringTok{"absolute"}\NormalTok{,}\StringTok{"absolute"}\NormalTok{),}
-        \DataTypeTok{sub =} \StringTok{"Täydentävät pisteet DE ja BE"}\NormalTok{ )}
+        \DataTypeTok{sub =} \StringTok{"Massat: pisteiden ja symbolien koko "}\NormalTok{ )}
 
 
-\NormalTok{suppointCA2}
+\CommentTok{# ca-paketin manuaali väittää, että tässä tulostetaan principal-koordinaatit mutta nämä ovat}
+\CommentTok{# standardikoordinaatteja.}
+\KeywordTok{print}\NormalTok{(suppointCA2)}
 
 
 \KeywordTok{summary}\NormalTok{(suppointCA2)}
@@ -5065,6 +5080,7 @@ julkaisutekniikan ympäristön.
 \CommentTok{# pois out.width='50%',}
 
 
+\CommentTok{# echo = FALSE toistaiseksi.}
 \CommentTok{#Testataan koodilohkojen listausta, näyttää toimivan mutta vaatii vielä säätämistä.}
 \CommentTok{#Ohje löytyi [Yihui Xienin blogista](https://yihui.name/en/2018/09/code-appendix/)}
 \CommentTok{#(luettu 26.10.2018).}
