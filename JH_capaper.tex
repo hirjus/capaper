@@ -110,41 +110,10 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
-% Yksinkertaistettu versio - vain sivutyyli
-%\documentclass[12pt,a4paper,leqno]{book}
-% dispositiopaperista, poistettiin ekalta riviltä {article}
-%%
-%% Poistetaan sellaisia, jotka näköjään saadaan automaattisesti
-%\usepackage[utf8]{inputenc}
-%\usepackage[T1]{fontenc}
-%\usepackage[finnish]{babel}
-%\usepackage{amsthm}
-%\usepackage{amsfonts}
-%\usepackage{amsmath}
-%\usepackage{amssymb}
-%\usepackage{graphicx}
-%\usepackage{float}
-%\usepackage{lipsum}
-%%
-%tämä kopioitu bookdown-demo - esimerkistä
-%%
-%\usepackage{booktabs}
-%\usepackage{amsthm} on jo yllä
-%lisää dispopaperista
-\pagestyle{plain}
-%\setcounter{page}{1}
-%\addtolength{\hoffset}{-1.15cm}
-%\addtolength{\textwidth}{2.3cm}
-%\addtolength{\voffset}{0.45cm}
-%\addtolength{\textheight}{-0.9cm}
-
-%tämä kopioitu bookdown-demo - esimerkistä
-%\makeatletter
-%\def\thm@space@setup{%
-%  \thm@preskip=8pt plus 2pt minus 4pt
-%  \thm@postskip=\thm@preskip
-%}
-%\makeatother
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 \ifxetex
   % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
   \usepackage{polyglossia}
@@ -1409,7 +1378,45 @@ kokonaisinertiasta.
 
 \textbf{k} Tulosteen käsitteiden esittely - tavoite kuvan laadun varmistus, akselien
 tulkinnan tarkistus. Tarkemmin teorialiitteessä. Tästä pitäisi nähdä, miksi seuraavat
-kartat ovat sellaisia kuin ovat.
+kartat ovat sellaisia kuin ovat. Nämä kolnme sitaattia tekstin tarkistuksen tueksi,
+eivät tule lopulliseen versioon (18.11.20)
+
+\textbf{k1} Contributions. The contribution of point to axis is a statistic that depends
+both on the distance from the point to the origin point along the axis and on
+the weight of the point. The contributions of points to axes are the main aid to
+interpretation.
+
+The contribution of a point to an axis is equal to the relative weight
+multiplied by the squared coordinate and divided by the eigenvalue.
+
+Note on relative contributions.
+Both the contribution of a point to an axis (Ctr) and the quality of
+representation (cos2) are relative contributions, since both are obtained by
+dividing the amount of variance of axis due to the point, by the variance of
+axis (Ctr) and by the amount of the overall variance due to the point (cos\^{}2),
+respectively. Tästä kuva teorialiitteessä.
+
+\textbf{k2} Varmuuden vuoksi: CAiP-laskentaliitteestä (s.263):
+
+mass: masses (1000) of the respective row and column points;
+
+qlt: quality of representation (out of 1000) of the point in the solution of
+chosen dimensionality, in this case two-dimensional
+
+inr: part of total inertia (out of 1000) of the point in the full space of the
+rows or columns
+
+k=1 and k=2: principal coordinates on first two dimensions, multiplied by 1000
+
+cor: relative contributions (out of 1000) of each dimension to the inertia of
+individual points. These are also interpreted as squared correlations (\_1000)
+
+ctr: contributions (out of 1000) of each point to the principal inertia of a dimension
+
+\textbf{k3} Kontribuutiot: yleisesti high contribution of a the point to the inertia of the
+axis -\textgreater{} high relative contribution of the axis to the intertia of the point.
+Ei päde kääntäen. ''Point 'secretaries' on the first axis is extremely
+well represented, but its contribution to the axis is minimal.
 
 \hypertarget{esimerkki-3d--kartasta---saksan-ja-belgian-dimensiot}{%
 \section{Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot}\label{esimerkki-3d--kartasta---saksan-ja-belgian-dimensiot}}
@@ -2723,6 +2730,19 @@ yhdellä kartalla.
 ``jack of all trades but master of none'', sellainen on data-analyytikko.
 
 **k21*' MCA-esimerkki, eikö ole mainio lähtökohta faktorianalyysille?
+
+\textbf{k} Tulevaisuus?
+
+``The applicability of a dimension-reduction technique on very large categorical
+data sets or on categorical data streams is limited due to the required singular
+value decomposition (SVD) of properly transformed data. The application of SVD
+to large and high-dimensional data is unfeasible because of the very large
+computational time and because it requires the whole data to be stored in memory
+(no data flows can be analysed). The aim of the present paper is to integrate an
+incremental SVD procedure in a multiple correspondence analysis (MCA)-like
+procedure in order to obtain a dimensionality reduction technique feasible for
+the application on very large categorical data or even on categorical
+data streams''\citep{RefWorks:doc:5f01c74be4b0d3d8328c72ca}.
 
 \hypertarget{liitteet}{%
 \chapter*{Liitteet}\label{liitteet}}

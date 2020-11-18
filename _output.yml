@@ -9,7 +9,7 @@ bookdown::gitbook:
 bookdown::pdf_book:
   #toc-depth: 2
   includes:
-      in_header: simple_preamble.tex
+      in_header: Testpreamble.tex
   #fig_caption: true tätä ei ole testidokkarissa
   # latex_engine: pdflatex   TESTI 14.11.20 
   latex_engine: xelatex 

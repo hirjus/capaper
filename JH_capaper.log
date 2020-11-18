@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.7)  18 NOV 2020 14:08
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.7)  18 NOV 2020 19:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -469,6 +469,51 @@ Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legac
 y)
 Package grffile Info: This package is an empty stub for compatibility on input 
 line 40.
+) (c:/Users/jh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
+(c:/Users/jh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (c:/Users/jh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+\linenopenalty=\count303
+\output=\toks24
+\linenoprevgraf=\count304
+\linenumbersep=\dimen184
+\linenumberwidth=\dimen185
+\c@linenumber=\count305
+\c@pagewiselinenumber=\count306
+\c@LN@truepage=\count307
+\c@internallinenumber=\count308
+\c@internallinenumbers=\count309
+\quotelinenumbersep=\dimen186
+\bframerule=\dimen187
+\bframesep=\dimen188
+\bframebox=\box57
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count310
+\c@FV@TrueTabCounter=\count311
+\FV@TabBox@Group=\box58
+\FV@TmpLength=\skip58
+\c@FV@HighlightLinesStart=\count312
+\c@FV@HighlightLinesStop=\count313
+\FV@LoopCount=\count314
+\FV@NCharsBox=\box59
+\FV@BreakIndent=\dimen189
+\FV@BreakIndentNChars=\count315
+\FV@BreakSymbolSepLeft=\dimen190
+\FV@BreakSymbolSepLeftNChars=\count316
+\FV@BreakSymbolSepRight=\dimen191
+\FV@BreakSymbolSepRightNChars=\count317
+\FV@BreakSymbolIndentLeft=\dimen192
+\FV@BreakSymbolIndentLeftNChars=\count318
+\FV@BreakSymbolIndentRight=\dimen193
+\FV@BreakSymbolIndentRightNChars=\count319
+\c@FancyVerbLineBreakLast=\count320
+\FV@LineBox=\box60
+\FV@LineIndentBox=\box61
+\FV@LineWidth=\dimen194
 )
 (c:/Users/jh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/polyglossia/polygloss
 ia.sty
@@ -484,10 +529,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 (c:/Users/jh/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.te
 x
-\XKV@toks=\toks24
-\XKV@tempa@toks=\toks25
+\XKV@toks=\toks25
+\XKV@tempa@toks=\toks26
 )
-\XKV@depth=\count303
+\XKV@depth=\count321
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (c:/Users/jh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/filehook/filehook.sty
@@ -571,10 +616,10 @@ Package polyglossia Info: Making " an active character on input line 29.
 Package polyglossia Info: Default language is finnish.
 (c:/Users/jh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip58
-\bibsep=\skip59
+\bibhang=\skip59
+\bibsep=\skip60
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count304
+\c@NAT@ctr=\count322
 )
 
 LaTeX Warning: Unused global option(s):
@@ -587,40 +632,40 @@ LaTeX Info: Redefining \ttfamily on input line 21.
 )
 \openout1 = `JH_capaper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 162.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 131.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 162.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 131.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 162.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 131.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 162.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 131.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 162.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 131.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 162.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 131.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 162.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 131.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -649,7 +694,7 @@ pt=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 162.
+(Font)              scaled to size 10.0pt on input line 131.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -688,18 +733,18 @@ pt=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 162.
+(Font)              scaled to size 10.0pt on input line 131.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 162.
+(Font)              `operators' in the math version `normal' on input line 131.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 162.
+ line 131.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 162.
+(Font)              `operators' in the math version `bold' on input line 131.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 162.
+t line 131.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -786,15 +831,15 @@ t=math;language=dflt;"
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 162.
+(Font)              `symbols' in the math version `normal' on input line 131.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 162.
+t line 131.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 162.
+(Font)              `symbols' in the math version `bold' on input line 131.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 162.
+t line 131.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -864,17 +909,17 @@ pt=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-62.
+31.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 162.
+t line 131.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 162
+(Font)              `largesymbols' in the math version `bold' on input line 131
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 162.
-Package hyperref Info: Link coloring OFF on input line 162.
+t line 131.
+Package hyperref Info: Link coloring OFF on input line 131.
 (c:/Users/jh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -885,11 +930,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 itlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count305
+\c@section@level=\count323
 )
-LaTeX Info: Redefining \ref on input line 162.
-LaTeX Info: Redefining \pageref on input line 162.
-LaTeX Info: Redefining \nameref on input line 162.
+LaTeX Info: Redefining \ref on input line 131.
+LaTeX Info: Redefining \pageref on input line 131.
+LaTeX Info: Redefining \nameref on input line 131.
 (./JH_capaper.out) (./JH_capaper.out)
 \@outlinefile=\write4
 \openout4 = `JH_capaper.out'.
@@ -928,38 +973,38 @@ LaTeX Info: Redefining \nameref on input line 162.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \rmfamily on input line 162.
-LaTeX Info: Redefining \sffamily on input line 162.
-LaTeX Info: Redefining \ttfamily on input line 162.
+LaTeX Info: Redefining \rmfamily on input line 131.
+LaTeX Info: Redefining \sffamily on input line 131.
+LaTeX Info: Redefining \ttfamily on input line 131.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 164.
+(Font)              scaled to size 12.0pt on input line 133.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 164.
+(Font)              scaled to size 8.0pt on input line 133.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 164.
+(Font)              scaled to size 6.0pt on input line 133.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-64.
+33.
 (c:/Users/jh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.0011pt on input line 164.
+(Font)              scaled to size 12.0011pt on input line 133.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00073pt on input line 164.
+(Font)              scaled to size 8.00073pt on input line 133.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00055pt on input line 164.
+(Font)              scaled to size 6.00055pt on input line 133.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 164.
+(Font)              scaled to size 11.99872pt on input line 133.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 164.
+(Font)              scaled to size 7.99915pt on input line 133.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 164.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 164
+(Font)              scaled to size 5.99936pt on input line 133.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 133
 .
 (c:/Users/jh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 164
+LaTeX Font Info:    Trying to load font information for U+msb on input line 133
 .
 (c:/Users/jh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -976,67 +1021,67 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 176.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 145.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 193.
+(Font)              scaled to size 7.0pt on input line 162.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 193.
+(Font)              scaled to size 5.0pt on input line 162.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 193.
+(Font)              scaled to size 10.00092pt on input line 162.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 193.
+(Font)              scaled to size 7.00064pt on input line 162.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 193.
+(Font)              scaled to size 5.00046pt on input line 162.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 193.
+(Font)              scaled to size 9.99893pt on input line 162.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 193.
+(Font)              scaled to size 6.99925pt on input line 162.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 193.
+(Font)              scaled to size 4.99947pt on input line 162.
 [5] [6
 
 ]
 Luku 1.
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a44e4b0ed2d44664d84' on pag
-e 7 undefined on input line 226.
+e 7 undefined on input line 195.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d75' on pag
-e 7 undefined on input line 235.
+e 7 undefined on input line 204.
 
 [7]
 
 Package natbib Warning: Citation `RefWorks:doc:5b6ef091e4b0984fd9b8c0ca' on pag
-e 8 undefined on input line 294.
+e 8 undefined on input line 263.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d78' on pag
-e 8 undefined on input line 298.
+e 8 undefined on input line 267.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d7c' on pag
-e 8 undefined on input line 300.
+e 8 undefined on input line 269.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d75' on pag
-e 8 undefined on input line 303.
+e 8 undefined on input line 272.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5b6b346fe4b0c619b11b8a3e' on pag
-e 8 undefined on input line 313.
+e 8 undefined on input line 282.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5b6b36dde4b09b7ec442bf8b' on pag
-e 8 undefined on input line 314.
+e 8 undefined on input line 283.
 
 
 Package natbib Warning: Citation `R-bookdown' on page 8 undefined on input line
- 314.
+ 283.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5c3759c2e4b0085b307c82b5' on pag
-e 8 undefined on input line 326.
+e 8 undefined on input line 295.
 
 [8] [9] [10
 
@@ -1044,50 +1089,50 @@ e 8 undefined on input line 326.
 Luku 2.
 
 Package natbib Warning: Citation `RefWorks:doc:5c0543a5e4b077eba1dc3cd8' on pag
-e 11 undefined on input line 380.
+e 11 undefined on input line 349.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--387
+Underfull \hbox (badness 10000) in paragraph at lines 351--356
 \TU/lmr/m/n/10 löytyvät Tampereen yliopiston Aila-tietoarkistosta ([]$[][][][][
 ] [] [] [] [][][][][][][][] [] [][][] [] [][][] [] [][] [] [][][][][][][][][] [
 ] [][][][][][][] [] [][][] []
  []
 
 
-Overfull \hbox (198.09021pt too wide) in paragraph at lines 398--409
+Overfull \hbox (198.09021pt too wide) in paragraph at lines 367--378
  [][] 
  []
 
 
 Package natbib Warning: Citation `RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a' on pag
-e 11 undefined on input line 412.
+e 11 undefined on input line 381.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a' on pag
-e 11 undefined on input line 415.
+e 11 undefined on input line 384.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5bb9041be4b06677e5e61f83' on pag
-e 11 undefined on input line 421.
+e 11 undefined on input line 390.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5c053d69e4b0191a580d6451' on pag
-e 11 undefined on input line 423.
+e 11 undefined on input line 392.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5bb9044fe4b0dfeb95352229' on pag
-e 11 undefined on input line 424.
+e 11 undefined on input line 393.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5bb90a0ae4b018435936a488' on pag
-e 11 undefined on input line 425.
+e 11 undefined on input line 394.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5f9439fde4b04741789a2187' on pag
-e 11 undefined on input line 427.
+e 11 undefined on input line 396.
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 439--447
+Underfull \hbox (badness 10000) in paragraph at lines 408--416
 [][][][][][][] [] [][][][] [] [][] [] [] [] [][][][][][][] [] [][] [] [][][][][
 ][][] [] [][][] [] [][][][][][][] [] [][][][][][][] [] [][][][][][][][][][][] [
 ] [][][][][] [] [][][] [] [][][][][][][][][] []
@@ -1098,35 +1143,35 @@ File: img/substvar_fi_Q1Q2.png Graphic file (type bmp)
 [12]
 
 Package natbib Warning: Citation `RefWorks:doc:5c3759c2e4b0085b307c82b5' on pag
-e 13 undefined on input line 519.
+e 13 undefined on input line 488.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5b6ef091e4b0984fd9b8c0ca' on pag
-e 13 undefined on input line 529.
+e 13 undefined on input line 498.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d7c' on pag
-e 13 undefined on input line 530.
+e 13 undefined on input line 499.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d78' on pag
-e 13 undefined on input line 531.
+e 13 undefined on input line 500.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5b6f159ce4b0bc0f31734b76' on pag
-e 13 undefined on input line 533.
+e 13 undefined on input line 502.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5b15542ee4b0e2616bc42dca' on pag
-e 13 undefined on input line 534.
+e 13 undefined on input line 503.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5bd08fb6e4b05c5447c9a9f9' on pag
-e 13 undefined on input line 543.
+e 13 undefined on input line 512.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5bd0a663e4b0c91dcf7c4be9' on pag
-e 13 undefined on input line 545.
+e 13 undefined on input line 514.
 
 [13] [14]
 Luku 3.
@@ -1155,7 +1200,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [24]
 
 Package natbib Warning: Citation `RefWorks:doc:5c768b09e4b02df9431e950a' on pag
-e 25 undefined on input line 1032.
+e 25 undefined on input line 1001.
 
 File: JH_capaper_files/figure-latex/G1-3asymmContrib1-1.pdf Graphic file (type 
 pdf)
@@ -1172,15 +1217,15 @@ File: JH_capaper_files/figure-latex/simpleCA3map2-1.pdf Graphic file (type pdf)
 <use JH_capaper_files/figure-latex/simpleCA3map2-1.pdf>
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d78' on pag
-e 28 undefined on input line 1150.
+e 28 undefined on input line 1119.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5c768b09e4b02df9431e950a' on pag
-e 28 undefined on input line 1150.
+e 28 undefined on input line 1119.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5c754c6de4b0947789165cde' on pag
-e 28 undefined on input line 1164.
+e 28 undefined on input line 1133.
 
 [28] [29] [30] [31] [32
 
@@ -1188,19 +1233,19 @@ e 28 undefined on input line 1164.
 Luku 4.
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d75' on pag
-e 33 undefined on input line 1230.
+e 33 undefined on input line 1199.
 
 File: JH_capaper_files/figure-latex/suppointCA2map1-1.pdf Graphic file (type pd
 f)
 <use JH_capaper_files/figure-latex/suppointCA2map1-1.pdf>
 
-LaTeX Warning: Reference `(' on page 33 undefined on input line 1280.
+LaTeX Warning: Reference `(' on page 33 undefined on input line 1249.
 
 [33] [34]
 File: JH_capaper_files/figure-latex/suppointCA2map2-1.pdf Graphic file (type pd
 f)
 <use JH_capaper_files/figure-latex/suppointCA2map2-1.pdf>
-[35] [36]
+[35] [36] [37]
 File: JH_capaper_files/figure-latex/suppointCA3map1-1.pdf Graphic file (type pd
 f)
 <use JH_capaper_files/figure-latex/suppointCA3map1-1.pdf>
@@ -1210,11 +1255,12 @@ f)
 File: JH_capaper_files/figure-latex/suppointCA3map3-1.pdf Graphic file (type pd
 f)
 <use JH_capaper_files/figure-latex/suppointCA3map3-1.pdf>
+[38] [39] [40]
 File: img/3dSymMap_1.png Graphic file (type bmp)
 <img/3dSymMap_1.png>
 File: img/3dSymMap_2.png Graphic file (type bmp)
 <img/3dSymMap_2.png>
-[37] [38] [39] [40] [41] [42]
+[41] [42]
 Luku 5.
 File: JH_capaper_files/figure-latex/gaCA1map-1.pdf Graphic file (type pdf)
 <use JH_capaper_files/figure-latex/gaCA1map-1.pdf>
@@ -1230,15 +1276,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Luku 6.
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a44e4b0ed2d44664d87' on pag
-e 51 undefined on input line 1851.
+e 51 undefined on input line 1858.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5ab76b43e4b003f4468d1f07' on pag
-e 51 undefined on input line 1852.
+e 51 undefined on input line 1859.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d78' on pag
-e 51 undefined on input line 1853.
+e 51 undefined on input line 1860.
 
 File: JH_capaper_files/figure-latex/maagaCA2sub2map1-1.pdf Graphic file (type p
 df)
@@ -1270,23 +1316,23 @@ File: JH_capaper_files/figure-latex/concat1map2-1.pdf Graphic file (type pdf)
 [63]
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d78' on pag
-e 64 undefined on input line 2326.
+e 64 undefined on input line 2333.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5b6f159ce4b0bc0f31734b76' on pag
-e 64 undefined on input line 2329.
+e 64 undefined on input line 2336.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d7c' on pag
-e 64 undefined on input line 2382.
+e 64 undefined on input line 2389.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a44e4b0ed2d44664d87' on pag
-e 64 undefined on input line 2384.
+e 64 undefined on input line 2391.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5ab76b43e4b003f4468d1f07' on pag
-e 64 undefined on input line 2385.
+e 64 undefined on input line 2392.
 
 [64]
 File: JH_capaper_files/figure-latex/MCA1map1-1.pdf Graphic file (type pdf)
@@ -1297,7 +1343,7 @@ File: JH_capaper_files/figure-latex/MCA1map2-1.pdf Graphic file (type pdf)
 [67]
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d7c' on pag
-e 68 undefined on input line 2492.
+e 68 undefined on input line 2499.
 
 File: JH_capaper_files/figure-latex/subsetMCA1map1-1.pdf Graphic file (type pdf
 )
@@ -1315,68 +1361,71 @@ File: JH_capaper_files/figure-latex/subsetMCA1map3-1.pdf Graphic file (type pdf
 Luku 8.
 
 Package natbib Warning: Citation `RefWorks:doc:5b15542ee4b0e2616bc42dca' on pag
-e 75 undefined on input line 2694.
+e 75 undefined on input line 2701.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5c223412e4b0508a6674dec0' on pag
-e 75 undefined on input line 2698.
+e 75 undefined on input line 2705.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5c223412e4b0508a6674dec0' on pag
-e 75 undefined on input line 2699.
+e 75 undefined on input line 2706.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5faaf996e4b05416e98ff547' on pag
-e 75 undefined on input line 2704.
+e 75 undefined on input line 2711.
+
+
+Package natbib Warning: Citation `RefWorks:doc:5f01c74be4b0d3d8328c72ca' on pag
+e 75 undefined on input line 2745.
 
 [75] [76
 
 ]
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d78' on pag
-e 77 undefined on input line 2739.
+e 77 undefined on input line 2759.
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 2746.
+(Font)              scaled to size 10.0pt on input line 2766.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/b/n' will be
-(Font)              scaled to size 7.0pt on input line 2746.
+(Font)              scaled to size 7.0pt on input line 2766.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/b/n' will be
-(Font)              scaled to size 5.0pt on input line 2746.
+(Font)              scaled to size 5.0pt on input line 2766.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/b/n' will be
-(Font)              scaled to size 10.00092pt on input line 2746.
+(Font)              scaled to size 10.00092pt on input line 2766.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/b/n' will be
-(Font)              scaled to size 7.00064pt on input line 2746.
+(Font)              scaled to size 7.00064pt on input line 2766.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/b/n' will be
-(Font)              scaled to size 5.00046pt on input line 2746.
+(Font)              scaled to size 5.00046pt on input line 2766.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/b/n' will be
-(Font)              scaled to size 9.99893pt on input line 2746.
+(Font)              scaled to size 9.99893pt on input line 2766.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/b/n' will be
-(Font)              scaled to size 6.99925pt on input line 2746.
+(Font)              scaled to size 6.99925pt on input line 2766.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/b/n' will be
-(Font)              scaled to size 4.99947pt on input line 2746.
+(Font)              scaled to size 4.99947pt on input line 2766.
 [77] [78]
 
 Package natbib Warning: Citation `RefWorks:doc:5b6ef091e4b0984fd9b8c0ca' on pag
-e 79 undefined on input line 2939.
+e 79 undefined on input line 2959.
 
 File: img/CAquality.png Graphic file (type bmp)
 <img/CAquality.png>
-[79] [80]
+[79] [80] [81]
 File: img/BookdownProc.pdf Graphic file (type pdf)
 <use img/BookdownProc.pdf>
-[81]
 ! Dimension too large.
 \fb@put@frame ...p \ifdim \dimen@ >\ht \@tempboxa 
                                                   \fb@putboxa #1\fb@afterfra...
-l.5191 \end{Shaded}
+l.5211 \end{Shaded}
                     
 Here is how much of TeX's memory you used:
- 18842 strings out of 479382
- 338994 string characters out of 5877656
- 1164544 words of memory out of 5000000
- 37909 multiletter control sequences out of 15000+600000
- 543032 words of font info for 96 fonts, out of 8000000 for 9000
+ 19603 strings out of 479382
+ 353939 string characters out of 5877656
+ 1248993 words of memory out of 5000000
+ 38653 multiletter control sequences out of 15000+600000
+ 543056 words of font info for 99 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 94i,8n,118p,497b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,10n,118p,489b,474s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on JH_capaper.pdf (81 pages).

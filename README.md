@@ -186,3 +186,7 @@ Korjailtiin teorialiitteen kaavoja, poistettiin toiset kaava-labelit sieltä
 **18.11.2020** Pieniä korjauksia ja editointeja. Tarkistettiin koodilohkot, kaikissa viimeisenä tyhjä rivi (newline). Tekstistä
 ei löydy inline R - koodin aloitusmerkintöjä (`r). PDF-virheilmoitus tuttu "Dimenison too large", näyttäisi viittaavan
 r-koodin automaattitulostukseen teknisessä liitteessä. TUlostus kaatuu, viitetiedot yms. jää pois.
+
+**18.11.2020** Pieniä korjauksia, muutama muistiinpano tekstin
+ tarkistuksen tueksi (määritelmiä jne), uusi viite yhteenvetolukuun. Kokeillaan uutta
+ tex-preamble-tiedostoa.
