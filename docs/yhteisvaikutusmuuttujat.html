@@ -159,6 +159,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="yhteisvaikutusmuuttujat.html"><a href="yhteisvaikutusmuuttujat.html"><i class="fa fa-check"></i><b>5</b> Yhteisvaikutusmuuttujat</a><ul>
 <li class="chapter" data-level="5.1" data-path="yhteisvaikutusmuuttujat.html"><a href="yhteisvaikutusmuuttujat.html#ikä-ja-sukupuoli"><i class="fa fa-check"></i><b>5.1</b> Ikä ja sukupuoli</a></li>
 <li class="chapter" data-level="5.2" data-path="yhteisvaikutusmuuttujat.html"><a href="yhteisvaikutusmuuttujat.html#ikä-sukupuoli-ja-maa"><i class="fa fa-check"></i><b>5.2</b> Ikä, sukupuoli ja maa</a></li>
+<li class="chapter" data-level="5.3" data-path="yhteisvaikutusmuuttujat.html"><a href="yhteisvaikutusmuuttujat.html#stabiilisuus"><i class="fa fa-check"></i><b>5.3</b> Stabiilisuus</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="osajoukon-korrespondenssianalyysi.html"><a href="osajoukon-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>6</b> Osajoukon korrespondenssianalyysi</a></li>
 <li class="chapter" data-level="7" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html"><i class="fa fa-check"></i><b>7</b> Monimuuttuja-korrespondenssianalyysi (MCA)</a><ul>
@@ -298,7 +299,92 @@ Kuva 5.2: Q1b: ikäluokka ja sukupuoli maittain
 </p>
 </div>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="yhteisvaikutusmuuttujat.html#cb7-1"></a><span class="co"># Vilkaistaan numeerisia tuloksia, kopioidaan tekstiin jos on tarpeellista</span></span>
-<span id="cb7-2"><a href="yhteisvaikutusmuuttujat.html#cb7-2"></a><span class="kw">summary</span>(maagaCA1)</span></code></pre></div>
+<span id="cb7-2"><a href="yhteisvaikutusmuuttujat.html#cb7-2"></a></span>
+<span id="cb7-3"><a href="yhteisvaikutusmuuttujat.html#cb7-3"></a><span class="kw">print</span>(maagaCA1)</span></code></pre></div>
+<pre><code>## 
+##  Principal inertias (eigenvalues):
+##            1        2        3        4       
+## Value      0.184895 0.038751 0.024006 0.015502
+## Percentage 70.26%   14.73%   9.12%    5.89%   
+## 
+## 
+##  Rows:
+##              BEf1      BEf2      BEf3      BEf4      BEf5     BEf6      BEm1
+## Mass     0.014245  0.024315  0.021368  0.024438  0.022842 0.022719  0.011298
+## ChiDist  0.401386  0.344292  0.199783  0.164967  0.240455 0.439918  0.469422
+## Inertia  0.002295  0.002882  0.000853  0.000665  0.001321 0.004397  0.002490
+## Dim. 1  -0.192908 -0.645510 -0.144265 -0.116669  0.308332 0.862093  0.661555
+## Dim. 2  -1.625273 -0.897934 -0.480404 -0.223840 -0.203533 0.778887 -0.592620
+##              BEm2      BEm3      BEm4      BEm5      BEm6      BGf1     BGf2
+## Mass     0.016579  0.019894  0.021614  0.022350  0.025543  0.004912 0.007860
+## ChiDist  0.276047  0.102584  0.250249  0.308070  0.392168  0.751086 0.693373
+## Inertia  0.001263  0.000209  0.001354  0.002121  0.003928  0.002771 0.003779
+## Dim. 1  -0.263692  0.040639  0.524364  0.593355  0.809427  1.272436 1.489306
+## Dim. 2  -0.632522 -0.146484 -0.498708 -0.319489 -0.023713 -0.047377 0.300670
+##             BGf3      BGf4     BGf5     BGf6     BGm1      BGm2     BGm3
+## Mass    0.011544  0.010438 0.014000 0.018298 0.004544  0.006263 0.007982
+## ChiDist 0.688564  0.538800 0.653467 0.681719 0.636676  0.627620 0.784126
+## Inertia 0.005473  0.003030 0.005978 0.008504 0.001842  0.002467 0.004908
+## Dim. 1  1.435410  1.206311 1.417403 1.458638 1.387090  1.295443 1.523242
+## Dim. 2  0.380068 -0.199915 0.334139 0.942930 0.805581 -0.659426 0.420697
+##              BGm4     BGm5     BGm6      DEf1      DEf2      DEf3      DEf4
+## Mass     0.007737 0.010316 0.009210  0.012526  0.014737  0.018666  0.022842
+## ChiDist  0.622138 0.529671 0.871456  0.237411  0.432439  0.436045  0.393174
+## Inertia  0.002995 0.002894 0.006995  0.000706  0.002756  0.003549  0.003531
+## Dim. 1   1.256092 1.217661 1.630600 -0.094359 -0.964139 -0.773449 -0.906287
+## Dim. 2  -0.411230 0.106062 0.934896 -0.758320 -0.302962 -1.138600 -0.093489
+##              DEf5      DEf6      DEm1      DEm2      DEm3      DEm4      DEm5
+## Mass     0.016579  0.022719  0.012649  0.012649  0.014982  0.021122  0.018789
+## ChiDist  0.337893  0.312735  0.292550  0.298896  0.255414  0.239923  0.277383
+## Inertia  0.001893  0.002222  0.001083  0.001130  0.000977  0.001216  0.001446
+## Dim. 1  -0.690438 -0.131007  0.288893  0.088588 -0.149437 -0.002440  0.176330
+## Dim. 2  -0.443502  0.459553 -1.271559 -1.314308 -1.064830 -0.450858 -1.024467
+##             DEm6      DKf1      DKf2      DKf3      DKf4      DKf5      DKf6
+## Mass    0.022228  0.010193  0.013509  0.016701  0.017930  0.015719  0.012158
+## ChiDist 0.373055  0.618958  0.974207  0.915861  0.912001  0.796636  0.447079
+## Inertia 0.003093  0.003905  0.012821  0.014009  0.014913  0.009976  0.002430
+## Dim. 1  0.566840 -1.318547 -2.065738 -1.896750 -1.920212 -1.751477 -0.791121
+## Dim. 2  1.230963  1.224334  1.977279  1.917537  1.838583  1.309298  1.085880
+##              DKm1      DKm2      DKm3      DKm4      DKm5     DKm6      FIf1
+## Mass     0.015228  0.012649  0.013386  0.015351  0.013017 0.014614  0.011544
+## ChiDist  0.347520  0.944015  0.746858  0.577246  0.425435 0.305128  0.501340
+## Inertia  0.001839  0.011272  0.007467  0.005115  0.002356 0.001361  0.002901
+## Dim. 1  -0.766023 -2.082325 -1.692619 -1.241148 -0.652736 0.206674 -0.970679
+## Dim. 2   0.508647  1.430786  0.679314  0.861313  0.985212 0.805173 -1.364560
+##              FIf2      FIf3      FIf4      FIf5      FIf6      FIm1      FIm2
+## Mass     0.011666  0.011544  0.014491  0.017438  0.011175  0.007123  0.008719
+## ChiDist  0.766236  0.551096  0.495644  0.338299  0.414096  0.411753  0.655833
+## Inertia  0.006850  0.003506  0.003560  0.001996  0.001916  0.001208  0.003750
+## Dim. 1  -1.696716 -0.984276 -0.924988 -0.557306  0.352194 -0.266716 -1.390905
+## Dim. 2  -0.559707 -1.756948 -1.483475 -1.152838 -1.760989 -1.762100 -1.272164
+##              FIm3      FIm4      FIm5      FIm6     HUf1      HUf2     HUf3
+## Mass     0.008719  0.012895  0.011789  0.009210 0.006631  0.010561 0.011666
+## ChiDist  0.435509  0.346131  0.408938  0.420689 0.596829  0.528993 0.632471
+## Inertia  0.001654  0.001545  0.001972  0.001630 0.002362  0.002955 0.004667
+## Dim. 1  -0.803330  0.044427  0.510847  0.780773 1.159811  1.018217 1.125535
+## Dim. 2  -1.344478 -1.605387 -1.387245 -1.118123 0.474792 -0.177617 1.513996
+##             HUf4     HUf5     HUf6     HUm1      HUm2     HUm3     HUm4
+## Mass    0.011175 0.011544 0.012772 0.006017  0.009210 0.012649 0.009824
+## ChiDist 0.654467 0.546586 0.835835 0.487239  0.557409 0.492095 0.513571
+## Inertia 0.004787 0.003449 0.008923 0.001429  0.002862 0.003063 0.002591
+## Dim. 1  1.142602 1.103056 1.481505 0.991480  0.799636 1.025502 1.088005
+## Dim. 2  1.501687 0.864556 1.274631 1.019905 -0.011945 0.980496 1.073058
+##             HUm5     HUm6
+## Mass    0.012526 0.007860
+## ChiDist 0.499875 0.710900
+## Inertia 0.003130 0.003972
+## Dim. 1  1.097228 1.202188
+## Dim. 2  0.572470 1.601967
+## 
+## 
+##  Columns:
+##                S        s         ?         e         E
+## Mass    0.099472 0.237627  0.167874  0.260960  0.234066
+## ChiDist 0.641178 0.439383  0.388506  0.322679  0.727480
+## Inertia 0.040894 0.045876  0.025338  0.027172  0.123874
+## Dim. 1  1.045509 0.846873  0.660109 -0.105643 -1.659727
+## Dim. 2  1.310121 0.516896 -0.057407 -1.573335  0.713757</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="yhteisvaikutusmuuttujat.html#cb9-1"></a><span class="kw">summary</span>(maagaCA1)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -393,11 +479,15 @@ Kuva 5.2: Q1b: ikäluokka ja sukupuoli maittain
 ## 3 |      |  168  535   96 |  284 534  73 |  -11   1   1 |
 ## 4 |    e |  261  941  103 |  -45  20   3 | -310 921 646 |
 ## 5 |    E |  234 1000  471 | -714 962 645 |  141  37 119 |</code></pre>
+</div>
+<div id="stabiilisuus" class="section level2">
+<h2><span class="header-section-number">5.3</span> Stabiilisuus</h2>
 <p><strong>k</strong> Stabiilius - teorialiitteessä laajemmin mutta tässä lyhyt vilkaisu.
 Taulukko alkaa harveta, edellä kerrottiin että aineisto painottuu kaikissa maissa
 vanhempiin ikäluokkiin.</p>
 <p><strong>yksinkertainen tarkistus?</strong> Löytyykö riviproviileja joilla pieni massa ja suuri
-kontribuutio? Ei löydy (Galkussa tuloksia), mutta jo kuvan tukkoisuus vaatii luokkien yhdistelyä. Aika työlästä!</p>
+kontribuutio? Ei löydy (Galkussa tuloksia), mutta jo kuvan tukkoisuus vaatii
+luokkien yhdistelyä. Aika työlästä!</p>
 
 </div>
 </div>

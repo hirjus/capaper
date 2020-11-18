@@ -2,6 +2,7 @@
 
 Jäsennysdokumentissa on muutama ajatus, ja viite. Kirjoitetaan tämä viimeiseksi.
 
+**k** Onko maiden vertailu järkevää?
 Blasius ja Thiessen
 "This paper provides empirically-based criteria for selecting Items and countries
 to develop measures of an underlying construct of interest that are comparable in
@@ -14,13 +15,33 @@ items is especially useful in situations where the psychometric properties of
 the items have not been well established in previous research."
 [@RefWorks:doc:5b15542ee4b0e2616bc42dca]
 
+**k** voiko järjestysasteikon muuttujilla tehdä vertailuja maiden välillä?
+
 "Surullinen totuus onnellisuustutkimuksesta" @RefWorks:doc:5c223412e4b0508a6674dec0 
 (ilman sulkuja) ja suluilla [@RefWorks:doc:5c223412e4b0508a6674dec0]
 
-Gifi-nimimerkillä kirjoittavat Jan De Leeuw jatkavat verkkokirjassaan (julkaistu bookdown-paketilla)
-[@RefWorks:doc:5faaf996e4b05416e98ff547] keskustelua konfirmatorisen ja data-analyyttisen
-eksploratiivisen lähestymistavan eroista. He ovat tiukasti eksploratiivisen linjan kannattajia,
-ja korostavat konfliktin pitkää historiaa. Nyt historia on heidän mielestään loppunut: "We shall not pay much attention any more to these turf and culture wars, because basically they are over. Data analysis, in its multitude of disguises and appearances, is the
-winner. Classical statistics departments are gone, or on their way out. They may not have changed their
-name, but their curricula and hiring practices are very different from what they were 20 or even 10 years
-ago." 
+**k** Eksploratiivinen data-analyysi ja todennäköisyysteoreettinen päättely
+
+Gifi-nimimerkillä kirjoittavat Jan De Leeuw jatkavat verkkokirjassaan 
+[@RefWorks:doc:5faaf996e4b05416e98ff547] keskustelua konfirmatorisen ja
+data-analyyttisen eksploratiivisen lähestymistavan eroista. He ovat tiukasti
+eksploratiivisen linjan kannattajia, ja korostavat konfliktin pitkää historiaa.
+Nyt historia on heidän mielestään loppunut: "We shall not pay much attention any
+more to these turf and culture wars, because basically they are over. Data
+analysis, in its multitude of disguises and appearances, is the winner.
+Classical statistics departments are gone, or on their way out. They may not
+have changed their name, but their curricula and hiring practices are very
+different from what they were 20 or even 10 years ago."
+
+**k** Miksi ei molempia? 
+
+**k1** Visualisointi on tehokasta tapa tutkia aineiston rakenetta, yhteyksiä
+muuttujien välillä ja eri havaintojoukkojen eroja. Ei automaattisesti helppoa, 
+mutta kahden luokitelumuuttujan taulukko on ehkä yleisin tapa esittää mitä
+tahansa dataa. CA on aika pätevä väline taulukon riippuvuuksien hahmottamiseen
+yhdellä kartalla.
+
+**k2** Jo oppikirjoista näkee, että tarvitaan monta menetelmää ja näkökulmaa.
+"jack of all trades but master of none", sellainen on data-analyytikko.
+
+**k21*' MCA-esimerkki, eikö ole mainio lähtökohta faktorianalyysille?

@@ -123,7 +123,6 @@ ISSP2012esim1b.dat <- mutate(ISSP2012esim1b.dat,
 #ISSP2012esim1b.dat %>% tableX(maa,ga,type = "row_perc") %>%
 #kable(digits = 2, caption = "ga: suhteelliset frekvenssit")
 
-
 ```
 
 
@@ -132,6 +131,7 @@ ISSP2012esim1b.dat <- mutate(ISSP2012esim1b.dat,
 pätevää analyysiä, yleiskuva muuttujasta.
 
 ```{r gaCA1, echo=FALSE}
+
 gaTestCA1 <- ca(~ga + Q1b,ISSP2012esim1b.dat)
 
 ```
@@ -193,10 +193,13 @@ ISSP2012esim1b.dat <- mutate(ISSP2012esim1b.dat,
 
 **edit** Yksi vaikeaselkoinen kartta täynnä pisteitä, tihrustellaan.
 ```{r maagaCAeka, echo=FALSE}
+
 maagaCA1 <- ca(~maaga + Q1b,ISSP2012esim1b.dat)
+
 ```
 
 ```{r maagaCA1map1,echo=FALSE, fig.cap = "Q1b: ikäluokka ja sukupuoli maittain",fig.asp = 1, out.width = "90%",fig.align = "center"}
+
 par(cex = 0.5)
 plot(maagaCA1, main = "symmetrinen kartta 1",
                 sub = "cex=0.5")
@@ -204,15 +207,21 @@ plot(maagaCA1, main = "symmetrinen kartta 1",
 ```
 
 ```{r maagaCA1num}
+
 # Vilkaistaan numeerisia tuloksia, kopioidaan tekstiin jos on tarpeellista
+
+print(maagaCA1)
+
 summary(maagaCA1)
 
 ```
 
+## Stabiilisuus
 
 **k** Stabiilius - teorialiitteessä laajemmin mutta tässä lyhyt vilkaisu.
 Taulukko alkaa harveta, edellä kerrottiin että aineisto painottuu kaikissa maissa
 vanhempiin ikäluokkiin. 
 
 **yksinkertainen tarkistus?** Löytyykö riviproviileja joilla pieni massa ja suuri
-kontribuutio? Ei löydy (Galkussa tuloksia), mutta jo kuvan tukkoisuus vaatii luokkien yhdistelyä. Aika työlästä!
+kontribuutio? Ei löydy (Galkussa tuloksia), mutta jo kuvan tukkoisuus vaatii
+luokkien yhdistelyä. Aika työlästä!

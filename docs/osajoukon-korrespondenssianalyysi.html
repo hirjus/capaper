@@ -159,6 +159,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="yhteisvaikutusmuuttujat.html"><a href="yhteisvaikutusmuuttujat.html"><i class="fa fa-check"></i><b>5</b> Yhteisvaikutusmuuttujat</a><ul>
 <li class="chapter" data-level="5.1" data-path="yhteisvaikutusmuuttujat.html"><a href="yhteisvaikutusmuuttujat.html#ikä-ja-sukupuoli"><i class="fa fa-check"></i><b>5.1</b> Ikä ja sukupuoli</a></li>
 <li class="chapter" data-level="5.2" data-path="yhteisvaikutusmuuttujat.html"><a href="yhteisvaikutusmuuttujat.html#ikä-sukupuoli-ja-maa"><i class="fa fa-check"></i><b>5.2</b> Ikä, sukupuoli ja maa</a></li>
+<li class="chapter" data-level="5.3" data-path="yhteisvaikutusmuuttujat.html"><a href="yhteisvaikutusmuuttujat.html#stabiilisuus"><i class="fa fa-check"></i><b>5.3</b> Stabiilisuus</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="osajoukon-korrespondenssianalyysi.html"><a href="osajoukon-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>6</b> Osajoukon korrespondenssianalyysi</a></li>
 <li class="chapter" data-level="7" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html"><i class="fa fa-check"></i><b>7</b> Monimuuttuja-korrespondenssianalyysi (MCA)</a><ul>
@@ -222,6 +223,7 @@ Esim. rivien osajoukon analyysiin voi ottaa sarakepisteitä täydeäntvinä pist
 normaalisti. Osajoukon profiilit muuttuvat, niiden summa ei enään ole yksi,
 barysentristä ominaisuutta ei voi suoraan käyttää täydentävien rivipisteiden
 koordinaattien laskemiseen.</p>
+<p><strong>k2</strong> Kuvien luettavuus ja pistekoko, hankala juttu</p>
 <div class="figure" style="text-align: center"><span id="fig:maagaCA2sub2map1"></span>
 <img src="JH_capaper_files/figure-html/maagaCA2sub2map1-1.png" alt="Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi" width="90%" />
 <p class="caption">
@@ -318,26 +320,26 @@ Samalla kuvasta näkee (ja numeerisist tuloksista voi vahvistaa), että S-piste 
 on lähempänä (kulma on pienempi) pystyakselia. Kontribuutio on suurempi (147 vs.
 71 x-akselille). Toisaalta x-akseli selittää selvästi suurimman osan kaikkien muiden
 sarakepisteiden inertiasta, ja y-akseli taas lähes täysin e-pisteen inertian.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="osajoukon-korrespondenssianalyysi.html#cb10-1"></a><span class="co"># Belgia, Bulgaria ja Unkari analysoidaan tiiviisti</span></span>
-<span id="cb10-2"><a href="osajoukon-korrespondenssianalyysi.html#cb10-2"></a><span class="co"># Belgia on vähän välitapaus Bulgarian ja Unkarin ja kolmen ensimmäisen maan</span></span>
-<span id="cb10-3"><a href="osajoukon-korrespondenssianalyysi.html#cb10-3"></a><span class="co"># kanssa. Kokeiluja voi tehdä neljällä maaryhmällä, kuvan lukukelpoisuus</span></span>
-<span id="cb10-4"><a href="osajoukon-korrespondenssianalyysi.html#cb10-4"></a><span class="co"># ratkaisee.</span></span>
-<span id="cb10-5"><a href="osajoukon-korrespondenssianalyysi.html#cb10-5"></a></span>
-<span id="cb10-6"><a href="osajoukon-korrespondenssianalyysi.html#cb10-6"></a><span class="co">#BGHUsubset &lt;- c(13:24,61:72)</span></span>
-<span id="cb10-7"><a href="osajoukon-korrespondenssianalyysi.html#cb10-7"></a><span class="co">#BEDEDKFIsubset &lt;- c(1:12, 25:36, 37:48, 49:60)</span></span>
-<span id="cb10-8"><a href="osajoukon-korrespondenssianalyysi.html#cb10-8"></a><span class="co">#DEDKFIsubset &lt;- c(25:36, 37:48, 49:60)</span></span>
-<span id="cb10-9"><a href="osajoukon-korrespondenssianalyysi.html#cb10-9"></a></span>
-<span id="cb10-10"><a href="osajoukon-korrespondenssianalyysi.html#cb10-10"></a>BEBGHUsubset &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">12</span>,<span class="dv">13</span><span class="op">:</span><span class="dv">24</span>,<span class="dv">61</span><span class="op">:</span><span class="dv">72</span>)</span>
-<span id="cb10-11"><a href="osajoukon-korrespondenssianalyysi.html#cb10-11"></a>maagaCA2sub3 &lt;-<span class="st"> </span><span class="kw">ca</span>(<span class="op">~</span>maaga <span class="op">+</span><span class="st"> </span>Q1b,ISSP2012esim1b.dat,<span class="dt">subsetrow =</span> BEBGHUsubset)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="osajoukon-korrespondenssianalyysi.html#cb12-1"></a><span class="co"># Belgia, Bulgaria ja Unkari analysoidaan tiiviisti</span></span>
+<span id="cb12-2"><a href="osajoukon-korrespondenssianalyysi.html#cb12-2"></a><span class="co"># Belgia on vähän välitapaus Bulgarian ja Unkarin ja kolmen ensimmäisen maan</span></span>
+<span id="cb12-3"><a href="osajoukon-korrespondenssianalyysi.html#cb12-3"></a><span class="co"># kanssa. Kokeiluja voi tehdä neljällä maaryhmällä, kuvan lukukelpoisuus</span></span>
+<span id="cb12-4"><a href="osajoukon-korrespondenssianalyysi.html#cb12-4"></a><span class="co"># ratkaisee.</span></span>
+<span id="cb12-5"><a href="osajoukon-korrespondenssianalyysi.html#cb12-5"></a></span>
+<span id="cb12-6"><a href="osajoukon-korrespondenssianalyysi.html#cb12-6"></a><span class="co">#BGHUsubset &lt;- c(13:24,61:72)</span></span>
+<span id="cb12-7"><a href="osajoukon-korrespondenssianalyysi.html#cb12-7"></a><span class="co">#BEDEDKFIsubset &lt;- c(1:12, 25:36, 37:48, 49:60)</span></span>
+<span id="cb12-8"><a href="osajoukon-korrespondenssianalyysi.html#cb12-8"></a><span class="co">#DEDKFIsubset &lt;- c(25:36, 37:48, 49:60)</span></span>
+<span id="cb12-9"><a href="osajoukon-korrespondenssianalyysi.html#cb12-9"></a></span>
+<span id="cb12-10"><a href="osajoukon-korrespondenssianalyysi.html#cb12-10"></a>BEBGHUsubset &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">12</span>,<span class="dv">13</span><span class="op">:</span><span class="dv">24</span>,<span class="dv">61</span><span class="op">:</span><span class="dv">72</span>)</span>
+<span id="cb12-11"><a href="osajoukon-korrespondenssianalyysi.html#cb12-11"></a>maagaCA2sub3 &lt;-<span class="st"> </span><span class="kw">ca</span>(<span class="op">~</span>maaga <span class="op">+</span><span class="st"> </span>Q1b,ISSP2012esim1b.dat,<span class="dt">subsetrow =</span> BEBGHUsubset)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:maagaCA2sub3map1"></span>
 <img src="JH_capaper_files/figure-html/maagaCA2sub3map1-1.png" alt="Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari" width="90%" />
 <p class="caption">
 Kuva 6.4: Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari
 </p>
 </div>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="osajoukon-korrespondenssianalyysi.html#cb11-1"></a><span class="co"># Vilkaistaa numeerisia tuloksia, kopioidaan tekstiin jos on tarpeen</span></span>
-<span id="cb11-2"><a href="osajoukon-korrespondenssianalyysi.html#cb11-2"></a><span class="co"># maagaCA2sub3</span></span>
-<span id="cb11-3"><a href="osajoukon-korrespondenssianalyysi.html#cb11-3"></a> <span class="kw">summary</span>(maagaCA2sub3)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="osajoukon-korrespondenssianalyysi.html#cb13-1"></a><span class="co"># Vilkaistaa numeerisia tuloksia, kopioidaan tekstiin jos on tarpeen</span></span>
+<span id="cb13-2"><a href="osajoukon-korrespondenssianalyysi.html#cb13-2"></a><span class="co"># maagaCA2sub3</span></span>
+<span id="cb13-3"><a href="osajoukon-korrespondenssianalyysi.html#cb13-3"></a> <span class="kw">summary</span>(maagaCA2sub3)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -396,12 +398,15 @@ Kuva 6.4: Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari
 ## 3 |      |  168  435  107 |  180 426  63 |   26   9   6 |
 ## 4 |    e |  261  640   65 | -138 639  57 |   -4   0   0 |
 ## 5 |    E |  234  966  368 | -426 965 494 |   10   1   1 |</code></pre>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="osajoukon-korrespondenssianalyysi.html#cb13-1"></a><span class="co"># kahden osaratkaisun kokonaisinertia</span></span>
-<span id="cb13-2"><a href="osajoukon-korrespondenssianalyysi.html#cb13-2"></a></span>
-<span id="cb13-3"><a href="osajoukon-korrespondenssianalyysi.html#cb13-3"></a><span class="co"># 0.143551 + 0.119602 = 0.263153</span></span>
-<span id="cb13-4"><a href="osajoukon-korrespondenssianalyysi.html#cb13-4"></a><span class="co"># koko datalla 0.263154</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="osajoukon-korrespondenssianalyysi.html#cb15-1"></a><span class="co"># kahden osaratkaisun kokonaisinertia</span></span>
+<span id="cb15-2"><a href="osajoukon-korrespondenssianalyysi.html#cb15-2"></a></span>
+<span id="cb15-3"><a href="osajoukon-korrespondenssianalyysi.html#cb15-3"></a><span class="co"># 0.143551 + 0.119602 = 0.263153</span></span>
+<span id="cb15-4"><a href="osajoukon-korrespondenssianalyysi.html#cb15-4"></a><span class="co"># koko datalla 0.263154</span></span></code></pre></div>
 <p>Kahden osajoukon inertioiden summa on sama kuin koko aineiston, Selitysasteet
-kuitenkin nousevat, mutta vielä oleellisempaa on kahden aika erilaisen ryhmän havaitseminen. Belgian jotkun pisteet: huono kvaliteetti (BEf1, BEf5,BEm1, BEm2). Bulgaria ja Unkari hyvin esitetty. Belgia on pulmallinen tapaus, omissa dimensioissaan.</p>
+kuitenkin nousevat, mutta vielä oleellisempaa on kahden aika erilaisen ryhmän
+havaitseminen.</p>
+<p>Belgian jotkun pisteet: huono kvaliteetti (BEf1, BEf5,BEm1, BEm2). Bulgaria ja
+Unkari hyvin esitetty. Belgia on pulmallinen tapaus, omissa dimensioissaan.</p>
 
 </div>
             </section>
