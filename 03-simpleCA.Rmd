@@ -29,7 +29,7 @@ Aineisto on kuuden maan vastaukset kysymykseen Q1b: ”Alle kouluikäinen lapsi
 todennäköisesti kärsii, jos hänen äitinsä käy työssä”. Kysymys on voimakkaasti
 muotoiltu (**edit**MG on jossain jutussa havainnut, että kyselyn kahdessa
 kysymyksessä on sana ”äiti” ja niiden vastausten jakaumat poikkeavat. Jos löydän
-lähteen lisään sen tähän).  Kysymykset on suunniteltu kokonaisuudeksi, ja niitä
+lähteen lisään sen tähän). Kysymykset on suunniteltu kokonaisuudeksi, ja niitä
 analysoidaan yhdessä luvussa 7, yhden taulukon analyysi esittelee menetelmän.
 (alaviite:Tämän havaitsi eräs lastensuojelun ammattilainen: kysymys on
 irrallisena monimerkityksellinen (vähintään ns. ”double - barreled”), eikä
@@ -748,7 +748,7 @@ skaalattu ja mittakaavan ero symmetriseen karttaan näkyy selvästi.
 
 **Barysentrinen periaate**
 
-Rivipisteet ja sarakepisteet yhdistää _barysentrinen_periaate_ . Jokainen rivipiste
+Rivipisteet ja sarakepisteet yhdistää _barysentrinen periaate_ . Jokainen rivipiste
 on ideaalipisteiden painotettu keskiarvo, painoina sarakkeiden käänteinen osuus
 riviprofiilissa.
 
@@ -771,8 +771,8 @@ plot(simpleCA1, map = "rowprincipal",
 
 ```
 
-Suomen profiili on kaukana S-sarakkeesta ja lähellä ? - saraketta, niiden osuus
-profiilissa on suuri. 
+Suomen profiili on kaukana S-sarakkeesta ja lähellä ? - saraketta, S-vastausten
+osuus on siis pieni ja ? - vastausten suuri.
 
 Ideaalipisteiden tulkinnan voi varmistaa sarake kerrallaan, projisjoimalla rivipisteet
 origon kautta piirretylle janalle. Kuvassa \@ref(fig:G1_3_asymmtulk2) nähdään mikä

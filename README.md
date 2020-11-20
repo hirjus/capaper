@@ -190,3 +190,6 @@ r-koodin automaattitulostukseen teknisessä liitteessä. TUlostus kaatuu, viitet
 **18.11.2020** Pieniä korjauksia, muutama muistiinpano tekstin
  tarkistuksen tueksi (määritelmiä jne), uusi viite yhteenvetolukuun. Kokeillaan uutta
  tex-preamble-tiedostoa.
+
+ **19.11.2020 versio 0.7** Luku 5 kirjoitettu, pieniä korjauksia ja editointeja
+ muualla. Viitetietokantaa korjattu (erikoismerkit).

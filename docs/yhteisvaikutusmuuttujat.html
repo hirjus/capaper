@@ -197,37 +197,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="yhteisvaikutusmuuttujat" class="section level1">
 <h1><span class="header-section-number">Luku 5</span> Yhteisvaikutusmuuttujat</h1>
-<p><strong>ks</strong> “Interactive coding”</p>
-<p><strong>edit</strong> Yksinkertaisin tapa ottaa muita muuttujia mukaan analyysiin.</p>
-<p><strong>k</strong> Kaksi yhteisvaikutusmuuttujaan (MG “interactive coding”), sukupuoli ja
-ikäluokka/kohortti ja tämän muuttujan yhdistäminen maa-muuttujaan.</p>
-<p><strong>k</strong> Poikkileikkausaineistossa vastaajaan ikä kuvaa sekä ikää että mitä erilaisimipia
-sukupolvivaikutuksia. Ei voi oikein erottaa toisistaan. Vastaajat ovat elämänsä eri
-vaiheissa kohdanneet lukuisia rajuja muutoksia toisen maailmansodan jälkeen. Nähtiin
-jo edellisessä jaksossa!</p>
-<p>Poikkileikkausaineistossa vastaajan ikä kertoo ikäluokan (kohortin), vastaajat ovat
-kokeen esim. kaksi mullistusten vuotta elämänsä eri vaiheissa. Kaksin nuorinta ikäluokka
-on ollut 1990 alle 14-vuotiaita ja vanhin ikäluokka yli 44-vuotiaita. Finannsikriisin
-vuonna 2008 toiseksi nuorin ikäluokka on ollut 22-31 vuotiaita, ja kaksi vanhinta
-yli 51-vuotiaita.</p>
+<p>Yksinkertaisin tapa tutkia taustamuuttujien yhteisvaikuksia on yhdistää kaksi
+muuttujaa uudeksi luokitelumuuttujaksi (“interactive coding”). Miehet ja naiset
+on luokiteltu kuuteen ikäluokkaan (1=15-25, 2 =26-35, 3=36-45, 4=46-55, 5=56-65,
+6= 66 tai vanhempi).</p>
+<p>Poikkileikkausaineistossa vastaajan ikä kertoo myös ikäluokan (kohortin).
+Vastaajat ovat kokeneet kaksi suurta mullistusten vuotta elämänsä eri vaiheissa.
+Kaksin nuorinta ikäluokka on ollut 1990 alle 14-vuotiaita ja vanhin ikäluokka
+yli 44-vuotiaita. Finannsikriisin vuonna 2008 toiseksi nuorin ikäluokka on ollut
+22-31 vuotiaita, ja kaksi vanhinta yli 51-vuotiaita. Pelkän ikävaikutuksen
+analyysi edellyttäisi vähintään kahden aineiston yhdistämistä.</p>
+<p>Jatkan esimerkkiä kolmen muuttujan yhteisvaikutusmuuttjalla, jossa oteaan mukaan
+myös maa. Käytännössä kolmen luokittelumuuttujan yhdistäminen tekee taulukosta
+jo hieman huteron, joissain soluissa havaintojen määrä pienenee. Tässä kaikissa
+soluissa on sentää viisi havaintoa tai enemmän. Pienten massojen ja harvinaisten
+luokkien vaikutukset on kuitenkin arvioitava, ne voivat joskus mutta onneksi
+harvoin määrittää sitä liikaa.</p>
 <div id="ikä-ja-sukupuoli" class="section level2">
 <h2><span class="header-section-number">5.1</span> Ikä ja sukupuoli</h2>
-<p><strong>edit</strong> Lyhyesti tämä, aineisto aggregoitu ikä- ja sukupuoliryhmiin.
-<strong>edit</strong> Voi myös lisätä täydentävinä pisteinä “peruskarttaan”, ei tehdä.</p>
-<p>Ikäluokat ovat (1=15-25, 2 =26-35, 3=36-45, 4=46-55, 5=56-65, 6= 66 tai vanhempi).
-Vuorovaikutusmuuttuja ga koodataan f1,…, f6 ja m1,…,m6. Muuttujien nimet
-kannattaa pitää mahdollisimman lyhyinä.</p>
 <p>Ikäjäkauma painottuu kaikissa maissa jonkinverran vanhempiin ikäluokkiin.
 Nuorempien ikäluokkien osuus on (alle 26-vuotiaat ja alle 26-35 - vuotiaat)
 varsinkin Bulgariassa (BG) ja Unkarissa (HU) pieni.</p>
-<p><strong>k</strong> Ikä- ja sukupuoliryhmät yli kaikkien maiden; profiilit keskiarvoja. Ei kovin
-pätevää analyysiä, yleiskuva muuttujasta.</p>
+<p>Ikäluokilla on luonnolinen järjestys, niiden pisteet voi yhdistää nuorimmasta
+vanhimpaan.</p>
 <div class="figure" style="text-align: center"><span id="fig:gaCA1map"></span>
 <img src="JH_capaper_files/figure-html/gaCA1map-1.png" alt="Q1b: ikäluokka ja sukupuoli" width="90%" />
 <p class="caption">
 Kuva 5.1: Q1b: ikäluokka ja sukupuoli
 </p>
 </div>
+<p>Ratkaisu on melko yksiulotteinen, ensimmäinen dimensio kuvaa 87 prosenttia
+kokonaisinertiasta. Dimenioiden tulkinta on suurinpiirtein sama kuin kuin
+edellisissä kartoissa, mutta S-sarake on kiusallisesti s-sarakkeen vasemmalla
+puolella. Numeerisista tuloksista näkee, että sarakkeiden s ja E osuus
+kokonaisinertiasta (sarake inr) on 768. Niiden kontribuutio x-akselille on
+yhteensä vielä suurempi (849). Muut sarakkeet taas kontribuoivat y-akselin
+inertiaan, mutta sen osuus kokonaisinertiasta on vain 9 prosenttia. Kun sarakkeet
+kuitenkin ovat aika hyvin esitettyjä (qlt), voidaan x- akseli tulkinta hieman
+karkeammin samaa mieltä - eri mieltä - tasolla samaksi liberaalien ja
+konservatiivisten asenteiden ulottuvuudeksi. Toinen dimensio kuvaa tiukempaa
+samanmielisyyttä (S), kontrastina neutraali (?) ja maltillinen erimielisyys (s).</p>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -262,28 +271,26 @@ Kuva 5.1: Q1b: ikäluokka ja sukupuoli
 ## 3 |      |  168  777   46 |   62 330  17 |  -73 447 223 |
 ## 4 |    e |  261  897   58 |  -68 473  32 |  -64 424 268 |
 ## 5 |    E |  234  997  464 | -286 962 513 |   55  35 177 |</code></pre>
-<p><strong>k</strong> Kommentteja Galkusta:
-Aika yksiuloitteinen (87 prosenttia ensimmäisellä dimensiolla!). Data on
-“as it is”, ei ole vakioitu ga-luokkien kokoja (massat max(f4 101), min (m1 57)).</p>
-<p>Miten pitäisi tulkita “oikealle kaatunut U - muoto” miehillä ja naisilla?
-Järjestys ei toimi, S s-sarakkeen vasemmalla puolella. Miehet konservatiivisempia,
-mutta maltillisempia? Nuorin ikäluokka on poikkeava. Epävarmoja tai maltillisesti
-e, sitten loikka vasemmalle ja sieltä konservatiiviseen suuntaa oikealle. Naisilla
-poikkeama f3 - f4. VAnhimmat ikäluokat tiukemmin konservatiivisa (f6, m6). Jos
-vertaa sukupuolten eroja samassa ikäluokassa, on aika samanlainen (miehet
-konservatiivisia, naiset liberaaleja). Naisista vain vanhin ikäluokka oikealla,
-miehistä nuorin ja kolme vanhinta.</p>
-<p>Tulkinnassa muistettava, että ikäluokat yli maiden. Voi verrata sekä
-edellisiin maa-vertailuihin että maan, ikäluokan ja sukupuolen yhteisvaikutusmuuttujan
-tuloksiin. MG tutkailee eri kysymyksellä tätä samaa asiaa, ja havaitsee että
-(a) maiden erot suuria ja sukupuolten pieniä (b) naiset liberaalimpia kuin miehet.
-** Viite?**</p>
-<p>Numeeriset tulokset: nuorimpien miesten (qlt 659) ja erityisesti
-keski-ikäisten miestén m3 (qlt 457) pisteet huonosti esitetty kartalla. Tulkitaan
-myös cor ja ctr, riveille ja sarakkeille.</p>
+<p>Rivien massat ovat yllättävän saman kokoisia, mutta kolmen ryhmän (f2, f6 ja m6)
+osuus kokonaisinertiasta on 616 ja niiden kontribuutio ensimmäiselle dimensiolle
+on 567. Vain 36-45-vuotiaiden miesten (m3) piste on huonosti esitetty (qlt = 457).
+Tulkinta on hankalaa miesten ja naisten nuorimman ryhmän osalta, vaikka efekti
+kartalla on iso. Molempien osuus kokonaisinertiasta on pieni (inr). Nuoret naiset
+(f1) on kuvattu kartalla erittäin hyvin. Nuorten miesten (m1) esityksen laatu
+on heikompi, ja kaikista suurin kontribuutio on vain y-akselille. Kun muut
+ikäryhmät (paitsi f3) ovat ikäjärjestyksessä vasemmalta oikealle, voi nuorimpien
+ja vanhimpien ikäryhmien sijainnin tulkita osittain toisen dimension (varma
+mielipide - epävarma mielipide) avulla.</p>
+<p>Selvästi kaikissa ikäluokissa miehet ovat konservatiimisempia kuin naiset.
+Nuorin ikäluokka on hieman vähemmän varma mielipiteistään kuin vanhin.
+Yksi mahdollinen selitys kartan tulkinnan ongelmille on se, että maiden väliset
+erot mielipiteissä ovat paljon suurempia kuin sukupuolten väliset maiden sisällä
+(ISSP 1994 aineisto, CAiP, s.126).</p>
 </div>
 <div id="ikä-sukupuoli-ja-maa" class="section level2">
 <h2><span class="header-section-number">5.2</span> Ikä, sukupuoli ja maa</h2>
+<p><strong>edit</strong> Yksi vaikeaselkoinen kartta täynnä pisteitä, tihrustellaan.
+Kommentoidaan numeeristen tulosten perusteella lyhyesti, oleelliset asiat.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="yhteisvaikutusmuuttujat.html#cb6-1"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span><span class="kw">mutate</span>(ISSP2012esim1b.dat,</span>
 <span id="cb6-2"><a href="yhteisvaikutusmuuttujat.html#cb6-2"></a>                             <span class="dt">maaga =</span> <span class="kw">paste</span>(maa, ga, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>))</span>
 <span id="cb6-3"><a href="yhteisvaikutusmuuttujat.html#cb6-3"></a></span>
@@ -291,100 +298,29 @@ myös cor ja ctr, riveille ja sarakkeille.</p>
 <span id="cb6-5"><a href="yhteisvaikutusmuuttujat.html#cb6-5"></a><span class="co"># ISSP2012esim1b.dat %&gt;% tableX(maa, maaga)</span></span>
 <span id="cb6-6"><a href="yhteisvaikutusmuuttujat.html#cb6-6"></a><span class="co"># head(ISSP2012esim2.dat)</span></span>
 <span id="cb6-7"><a href="yhteisvaikutusmuuttujat.html#cb6-7"></a><span class="co"># str(ISSP2012esim2.dat)</span></span></code></pre></div>
-<p><strong>edit</strong> Yksi vaikeaselkoinen kartta täynnä pisteitä, tihrustellaan.</p>
 <div class="figure" style="text-align: center"><span id="fig:maagaCA1map1"></span>
 <img src="JH_capaper_files/figure-html/maagaCA1map1-1.png" alt="Q1b: ikäluokka ja sukupuoli maittain" width="90%" />
 <p class="caption">
 Kuva 5.2: Q1b: ikäluokka ja sukupuoli maittain
 </p>
 </div>
+<p>Kuvasta saa jotenkin selvää, kun sen suurentaa mutta pisteitä on selvästi liikaa.
+Joitain muuttujien nimiä voisi lyhentää, kuva-alaa voisi rajata joihinkin osiin
+mutta osajoukon korrespondenssianalyysi tarjoaa pätevimmän vaihtoehdon.</p>
+<p><strong>edit</strong> numeerisia tuloksia ei listata lopullisessa raportissa.</p>
+<p>Sarakkeiden järjestys vasemmalta oikealle ja ylhäältä alas on sama kuin edellisissä
+kartoissa. Dimenisoiden tulkinta on sama, osuus inertiasta pienenee x-akselilla
+noin 6 prosenttiyksikköä. Pisteiden järjestys liberaalista konservatiiviseen
+alkaa Tanskan ja Suomen pisteistä, sitten tulee Saksan ja Belgian pisteitä ja
+konservatiisimpia ovat oikeassa laidassa Unkarin ja Bulgarian osajoukot. Toisella
+akselilla maltillisia ja neutraaleja ovat hyvin karkeasti Suomen pisteet ja lähes
+kaikki Saksan ja Belgian pisteet. Eri maiden osajoukkojen suhteita on hankalampi
+hahmottaa, erityisesti kartan oikealla laidalla.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="yhteisvaikutusmuuttujat.html#cb7-1"></a><span class="co"># Vilkaistaan numeerisia tuloksia, kopioidaan tekstiin jos on tarpeellista</span></span>
 <span id="cb7-2"><a href="yhteisvaikutusmuuttujat.html#cb7-2"></a></span>
-<span id="cb7-3"><a href="yhteisvaikutusmuuttujat.html#cb7-3"></a><span class="kw">print</span>(maagaCA1)</span></code></pre></div>
-<pre><code>## 
-##  Principal inertias (eigenvalues):
-##            1        2        3        4       
-## Value      0.184895 0.038751 0.024006 0.015502
-## Percentage 70.26%   14.73%   9.12%    5.89%   
-## 
-## 
-##  Rows:
-##              BEf1      BEf2      BEf3      BEf4      BEf5     BEf6      BEm1
-## Mass     0.014245  0.024315  0.021368  0.024438  0.022842 0.022719  0.011298
-## ChiDist  0.401386  0.344292  0.199783  0.164967  0.240455 0.439918  0.469422
-## Inertia  0.002295  0.002882  0.000853  0.000665  0.001321 0.004397  0.002490
-## Dim. 1  -0.192908 -0.645510 -0.144265 -0.116669  0.308332 0.862093  0.661555
-## Dim. 2  -1.625273 -0.897934 -0.480404 -0.223840 -0.203533 0.778887 -0.592620
-##              BEm2      BEm3      BEm4      BEm5      BEm6      BGf1     BGf2
-## Mass     0.016579  0.019894  0.021614  0.022350  0.025543  0.004912 0.007860
-## ChiDist  0.276047  0.102584  0.250249  0.308070  0.392168  0.751086 0.693373
-## Inertia  0.001263  0.000209  0.001354  0.002121  0.003928  0.002771 0.003779
-## Dim. 1  -0.263692  0.040639  0.524364  0.593355  0.809427  1.272436 1.489306
-## Dim. 2  -0.632522 -0.146484 -0.498708 -0.319489 -0.023713 -0.047377 0.300670
-##             BGf3      BGf4     BGf5     BGf6     BGm1      BGm2     BGm3
-## Mass    0.011544  0.010438 0.014000 0.018298 0.004544  0.006263 0.007982
-## ChiDist 0.688564  0.538800 0.653467 0.681719 0.636676  0.627620 0.784126
-## Inertia 0.005473  0.003030 0.005978 0.008504 0.001842  0.002467 0.004908
-## Dim. 1  1.435410  1.206311 1.417403 1.458638 1.387090  1.295443 1.523242
-## Dim. 2  0.380068 -0.199915 0.334139 0.942930 0.805581 -0.659426 0.420697
-##              BGm4     BGm5     BGm6      DEf1      DEf2      DEf3      DEf4
-## Mass     0.007737 0.010316 0.009210  0.012526  0.014737  0.018666  0.022842
-## ChiDist  0.622138 0.529671 0.871456  0.237411  0.432439  0.436045  0.393174
-## Inertia  0.002995 0.002894 0.006995  0.000706  0.002756  0.003549  0.003531
-## Dim. 1   1.256092 1.217661 1.630600 -0.094359 -0.964139 -0.773449 -0.906287
-## Dim. 2  -0.411230 0.106062 0.934896 -0.758320 -0.302962 -1.138600 -0.093489
-##              DEf5      DEf6      DEm1      DEm2      DEm3      DEm4      DEm5
-## Mass     0.016579  0.022719  0.012649  0.012649  0.014982  0.021122  0.018789
-## ChiDist  0.337893  0.312735  0.292550  0.298896  0.255414  0.239923  0.277383
-## Inertia  0.001893  0.002222  0.001083  0.001130  0.000977  0.001216  0.001446
-## Dim. 1  -0.690438 -0.131007  0.288893  0.088588 -0.149437 -0.002440  0.176330
-## Dim. 2  -0.443502  0.459553 -1.271559 -1.314308 -1.064830 -0.450858 -1.024467
-##             DEm6      DKf1      DKf2      DKf3      DKf4      DKf5      DKf6
-## Mass    0.022228  0.010193  0.013509  0.016701  0.017930  0.015719  0.012158
-## ChiDist 0.373055  0.618958  0.974207  0.915861  0.912001  0.796636  0.447079
-## Inertia 0.003093  0.003905  0.012821  0.014009  0.014913  0.009976  0.002430
-## Dim. 1  0.566840 -1.318547 -2.065738 -1.896750 -1.920212 -1.751477 -0.791121
-## Dim. 2  1.230963  1.224334  1.977279  1.917537  1.838583  1.309298  1.085880
-##              DKm1      DKm2      DKm3      DKm4      DKm5     DKm6      FIf1
-## Mass     0.015228  0.012649  0.013386  0.015351  0.013017 0.014614  0.011544
-## ChiDist  0.347520  0.944015  0.746858  0.577246  0.425435 0.305128  0.501340
-## Inertia  0.001839  0.011272  0.007467  0.005115  0.002356 0.001361  0.002901
-## Dim. 1  -0.766023 -2.082325 -1.692619 -1.241148 -0.652736 0.206674 -0.970679
-## Dim. 2   0.508647  1.430786  0.679314  0.861313  0.985212 0.805173 -1.364560
-##              FIf2      FIf3      FIf4      FIf5      FIf6      FIm1      FIm2
-## Mass     0.011666  0.011544  0.014491  0.017438  0.011175  0.007123  0.008719
-## ChiDist  0.766236  0.551096  0.495644  0.338299  0.414096  0.411753  0.655833
-## Inertia  0.006850  0.003506  0.003560  0.001996  0.001916  0.001208  0.003750
-## Dim. 1  -1.696716 -0.984276 -0.924988 -0.557306  0.352194 -0.266716 -1.390905
-## Dim. 2  -0.559707 -1.756948 -1.483475 -1.152838 -1.760989 -1.762100 -1.272164
-##              FIm3      FIm4      FIm5      FIm6     HUf1      HUf2     HUf3
-## Mass     0.008719  0.012895  0.011789  0.009210 0.006631  0.010561 0.011666
-## ChiDist  0.435509  0.346131  0.408938  0.420689 0.596829  0.528993 0.632471
-## Inertia  0.001654  0.001545  0.001972  0.001630 0.002362  0.002955 0.004667
-## Dim. 1  -0.803330  0.044427  0.510847  0.780773 1.159811  1.018217 1.125535
-## Dim. 2  -1.344478 -1.605387 -1.387245 -1.118123 0.474792 -0.177617 1.513996
-##             HUf4     HUf5     HUf6     HUm1      HUm2     HUm3     HUm4
-## Mass    0.011175 0.011544 0.012772 0.006017  0.009210 0.012649 0.009824
-## ChiDist 0.654467 0.546586 0.835835 0.487239  0.557409 0.492095 0.513571
-## Inertia 0.004787 0.003449 0.008923 0.001429  0.002862 0.003063 0.002591
-## Dim. 1  1.142602 1.103056 1.481505 0.991480  0.799636 1.025502 1.088005
-## Dim. 2  1.501687 0.864556 1.274631 1.019905 -0.011945 0.980496 1.073058
-##             HUm5     HUm6
-## Mass    0.012526 0.007860
-## ChiDist 0.499875 0.710900
-## Inertia 0.003130 0.003972
-## Dim. 1  1.097228 1.202188
-## Dim. 2  0.572470 1.601967
-## 
-## 
-##  Columns:
-##                S        s         ?         e         E
-## Mass    0.099472 0.237627  0.167874  0.260960  0.234066
-## ChiDist 0.641178 0.439383  0.388506  0.322679  0.727480
-## Inertia 0.040894 0.045876  0.025338  0.027172  0.123874
-## Dim. 1  1.045509 0.846873  0.660109 -0.105643 -1.659727
-## Dim. 2  1.310121 0.516896 -0.057407 -1.573335  0.713757</code></pre>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="yhteisvaikutusmuuttujat.html#cb9-1"></a><span class="kw">summary</span>(maagaCA1)</span></code></pre></div>
+<span id="cb7-3"><a href="yhteisvaikutusmuuttujat.html#cb7-3"></a><span class="co"># print(maagaCA1)</span></span>
+<span id="cb7-4"><a href="yhteisvaikutusmuuttujat.html#cb7-4"></a></span>
+<span id="cb7-5"><a href="yhteisvaikutusmuuttujat.html#cb7-5"></a><span class="kw">summary</span>(maagaCA1)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -479,15 +415,46 @@ Kuva 5.2: Q1b: ikäluokka ja sukupuoli maittain
 ## 3 |      |  168  535   96 |  284 534  73 |  -11   1   1 |
 ## 4 |    e |  261  941  103 |  -45  20   3 | -310 921 646 |
 ## 5 |    E |  234 1000  471 | -714 962 645 |  141  37 119 |</code></pre>
+<p>Sarakkeet on kohtailaisen hyvin esitetty, heikoimmin neutraali vaihtoehto (535).
+Kun sen suhteellinen kontribuutio (cor) on vain 1 toisella dimensiolla jää
+loppuosa x-akselille. Maltillisuuden dimensiota määrittää e-sarakke (ctr = 646),
+ja vain sitä. Ensimmäistä dimensiota määrittää vahvimmin E-sarake (ctr = 645)
+liberaaliin ja samaa mieltä olevien sarakkeet (s, S) konsertatiiviseen suuntaan.</p>
+<p>Kun aineistossa on 72 riviä on inertian suhteellisen kontribuution keskiarvo
+noin 14. Tämän ylittäviä kontribuutiota on Bulgaria naisilla (BGf2, BGf3, BGf5
+ja BGf6) kaikilla konservatiiviseen suuntaan. Sama pätee Unkarin naisille, muuten
+naisten ikäluokat kontribuoivat yleensä liberaaliin suuntaan. Suomen pisteiden
+absoluuttiset kontribuutiot lähes pelkästään toiselle dimenisolle maltilliseen
+suuntaan. Tanska taas kontribui vahvahsti jyrkempien mielipiteiden suuntaan.</p>
+<p>Kaikissa taulukon soluissa on vähintään viisi havaintoa, muutama pienen massan
+havainto kontribuoi kohtuullisen paljon. Kuvan laadun takia ryhmiä pitäisi
+yhdistellä.</p>
 </div>
 <div id="stabiilisuus" class="section level2">
 <h2><span class="header-section-number">5.3</span> Stabiilisuus</h2>
-<p><strong>k</strong> Stabiilius - teorialiitteessä laajemmin mutta tässä lyhyt vilkaisu.
-Taulukko alkaa harveta, edellä kerrottiin että aineisto painottuu kaikissa maissa
-vanhempiin ikäluokkiin.</p>
-<p><strong>yksinkertainen tarkistus?</strong> Löytyykö riviproviileja joilla pieni massa ja suuri
-kontribuutio? Ei löydy (Galkussa tuloksia), mutta jo kuvan tukkoisuus vaatii
-luokkien yhdistelyä. Aika työlästä!</p>
+<p>Tarkastelen tässä vain ratkaisustabiiliutta (solution stability). Siinä data on
+annettu, ja ratkaisun numeerisista tuloksista nähdään miten pisteet määritättävät
+akselit. Ulkoinen stabiilius on laajempi käsite, mikä on datan suhde esimerkiksi
+johonkin perusjoukkoon (CAiP, s. 225). Ratkaisu on stabiili niiden pisteiden
+suhteen jotka eivät vaikuta siihen.</p>
+<p>Korrespondenssianalyysiä ja erityisesti khii2- etäisyysmittaa on arvosteltu siitä,
+että se on liian herkkä harvinaisille luokittelumuuttujan arvoille.
+Yhteenvetoartikkelissan MG (Loose ends) tarttuu ”vaikuttavien poikkeavien
+havaintojen myyttiin”, ja pitää sitä lähes aina perusteettomana.</p>
+<p>Harvinaiset kategoriat ovat usein kartalla kaukana origosta, mutta jokaisella
+pisteellä on massa ja näillä ”outlayereilla” se on pieni. Niinpä niiden
+vaikutuskin on vaatimaton.</p>
+<p>Harvinaisten kategorioiden vaikututus voi olla suuri, joten numeerisista
+tuloksita on tarkistettava onko hyvin pienen massan pisteillä suuri kontribuutio
+ratkaisuun. Käytännössä näin voi käydä esimerkiksi silloin, kun jonkun
+harvinaisen luokittelumuuttujan arvon havainnot ovat keskittyneet muutamaan
+profiiliin joissa niiden osuus on suuri (CAiP, s 298). Luvussa 7 nähdään, miten
+melko vähäinen määrä puuttuvia vastuaksia kasaantuu samaan vastaajien osajoukkoon
+ja mitä seurauksia sillä on.</p>
+<p>Stabiiliutta voi helposti kokeilla määrittelemällä joitain pisteitä täydentäviksi
+pisteiksi.</p>
+<p>Edellisen kartan numeerisista tuloksista ei löydy pienen massan pisteitä joilla
+on merkittävä kontribuutio akseleihin.</p>
 
 </div>
 </div>

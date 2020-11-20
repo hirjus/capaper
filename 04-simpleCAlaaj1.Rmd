@@ -139,7 +139,7 @@ Bryssel ja Wallonia näyttävä olevan hyvin lievästi U-muotoisen maapisteiden
 parven sisällä. Tämä kaariefekti tai _Guttman-efekti_ on kartoissa yleinen.
 Se on tavallaan seuraus ratkaisun geometriasta. Rivipisteiden pilvi on
 sarakkeiden ideaalipisteiden virittämän verteksin sisällä, ja ainoa reitti
-verteksin kulmasta toiseen kulkee tasolla kaarveasti (VIITE: MG, CAiP).
+verteksin kulmasta toiseen kulkee tasolla kaarveasti (CAiP, s. 127).
 Voi myös sanoa, että kaariefektin taustalla on järjestysasteikon muuttujan
 korrelaatio (viite: LeRoux). Kaaren sisäpisteet ovat usein polarisoituneita
 ensimmäisen dimension "ääripää-vastausten" välillä. Tässä vaikutus on heikko,
@@ -174,13 +174,14 @@ ja antavat tarkemman kuvan ratkaisusta. Nämä tulokset ovat erilaisia kokonaisi
 dekomponointeja. Kokonaisinertia (total inertia) profiilien ja keskiarvoprofiilin
 khii2-etäisyyksien massoilla painotettu summa (\@ref(eq:inert2). Se kuvaa
 profiilipisteiden hajontaa ideaalipisteiden verteksin sisällä. Maksimi-inertia
-saavutetaan kun profiilit ovat verteksien kärkipisteissä, jokaisessa profiilissa on vain
-yksi luokittelumuuttujan arvo. Inertia on sama kuin ratkaisun dimensio, tässä esimerkissä
-4 (sarakkeiden lukumäärä - 1).^[Luku perustuu CAiP:n lukuun 11 ja liitteeseen B].
+saavutetaan kun profiilit ovat verteksien kärkipisteissä, jokaisessa profiilissa
+on vain yksi luokittelumuuttujan arvo. Inertia on sama kuin ratkaisun dimensio,
+tässä esimerkissä 4(sarakkeiden lukumäärä - 1). Tärkein lähde on CAiP:n luku 11
+ja liitte B.
 
 R-paketti "ca" (versio 0.71.1) listaa numeeriset tulokset suppeasti (print) ja laajemmin
-(summary), laajempi tulostus on alla.^[Paketin pdf-dokumentissa s.20 kerrotaan, että print
-tulostaa pääkoordinaatit (principal coordinates) mutta se tulostaakin standardikoordinaatit.]
+(summary), laajempi tulostus on alla.Paketin pdf-dokumentissa s.20 on kirjoitusvirhe, tiiviimmässä
+tulosteessa ei ole pääkoordinaattaja (principal coordinates) vaan standardikoordinaatit.
 
 
 

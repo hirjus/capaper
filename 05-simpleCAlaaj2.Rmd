@@ -1,31 +1,25 @@
 #  Yhteisvaikutusmuuttujat
 
-**ks** "Interactive coding" 
+Yksinkertaisin tapa tutkia taustamuuttujien yhteisvaikuksia on yhdistää kaksi
+muuttujaa uudeksi luokitelumuuttujaksi (“interactive coding”). Miehet ja naiset
+on luokiteltu kuuteen ikäluokkaan (1=15-25, 2 =26-35, 3=36-45, 4=46-55, 5=56-65,
+6= 66 tai vanhempi). 
 
-**edit** Yksinkertaisin tapa ottaa muita muuttujia mukaan analyysiin.
+Poikkileikkausaineistossa vastaajan ikä kertoo myös ikäluokan (kohortin).
+Vastaajat ovat kokeneet  kaksi suurta mullistusten vuotta elämänsä eri vaiheissa.
+Kaksin nuorinta ikäluokka on ollut 1990 alle 14-vuotiaita ja vanhin ikäluokka
+yli 44-vuotiaita. Finannsikriisin vuonna 2008 toiseksi nuorin ikäluokka on ollut
+22-31 vuotiaita, ja kaksi vanhinta yli 51-vuotiaita. Pelkän ikävaikutuksen
+analyysi edellyttäisi vähintään kahden aineiston yhdistämistä.
 
-**k** Kaksi yhteisvaikutusmuuttujaan (MG "interactive coding"), sukupuoli ja
- ikäluokka/kohortti ja tämän muuttujan yhdistäminen maa-muuttujaan.
-
-**k** Poikkileikkausaineistossa vastaajaan ikä kuvaa sekä ikää että mitä erilaisimipia
-sukupolvivaikutuksia. Ei voi oikein erottaa toisistaan. Vastaajat ovat elämänsä eri
-vaiheissa kohdanneet lukuisia rajuja muutoksia toisen maailmansodan jälkeen. Nähtiin
-jo edellisessä jaksossa!
-
-Poikkileikkausaineistossa vastaajan ikä kertoo ikäluokan (kohortin), vastaajat ovat
-kokeen esim. kaksi mullistusten vuotta elämänsä eri vaiheissa. Kaksin nuorinta ikäluokka
-on ollut 1990 alle 14-vuotiaita ja vanhin ikäluokka yli 44-vuotiaita. Finannsikriisin
-vuonna 2008 toiseksi nuorin ikäluokka on ollut 22-31 vuotiaita, ja kaksi vanhinta
-yli 51-vuotiaita.
+Jatkan esimerkkiä kolmen muuttujan yhteisvaikutusmuuttjalla, jossa oteaan mukaan
+myös maa. Käytännössä kolmen luokittelumuuttujan yhdistäminen tekee taulukosta
+jo hieman huteron, joissain soluissa havaintojen määrä pienenee. Tässä kaikissa
+soluissa on sentää viisi havaintoa tai enemmän. Pienten massojen ja harvinaisten
+luokkien vaikutukset on kuitenkin arvioitava, ne voivat joskus mutta onneksi
+harvoin määrittää sitä liikaa.
 
 ## Ikä ja sukupuoli
-
-**edit** Lyhyesti tämä, aineisto aggregoitu ikä- ja sukupuoliryhmiin.
-**edit** Voi myös lisätä täydentävinä pisteinä "peruskarttaan", ei tehdä.
-
-Ikäluokat ovat (1=15-25, 2 =26-35, 3=36-45, 4=46-55, 5=56-65, 6= 66 tai vanhempi).
-Vuorovaikutusmuuttuja ga koodataan f1,..., f6 ja m1,...,m6. Muuttujien nimet
-kannattaa pitää mahdollisimman lyhyinä.
 
 ```{r CAlaaj2-4agecat, echo=FALSE}
 # Iän ja sukupuolen vuorovaikutusmuuttujia
@@ -91,6 +85,9 @@ Ikäjäkauma painottuu kaikissa maissa jonkinverran vanhempiin ikäluokkiin.
 Nuorempien ikäluokkien osuus on (alle 26-vuotiaat ja alle 26-35 - vuotiaat)
 varsinkin Bulgariassa (BG) ja Unkarissa (HU) pieni.
 
+Ikäluokilla on luonnolinen järjestys, niiden pisteet voi yhdistää nuorimmasta
+vanhimpaan.
+
 ```{r CAlaaj2-ga, echo=FALSE}
 # ga - ikäluokka ja sukupuoli
 
@@ -126,10 +123,6 @@ ISSP2012esim1b.dat <- mutate(ISSP2012esim1b.dat,
 ```
 
 
-
-**k** Ikä- ja sukupuoliryhmät yli kaikkien maiden; profiilit keskiarvoja. Ei kovin
-pätevää analyysiä, yleiskuva muuttujasta.
-
 ```{r gaCA1, echo=FALSE}
 
 gaTestCA1 <- ca(~ga + Q1b,ISSP2012esim1b.dat)
@@ -150,34 +143,49 @@ lines(gaTestCA1.rpc[1:6,1],gaTestCA1.rpc[1:6,2])
 #miehet
 lines(gaTestCA1.rpc[7:12,1],gaTestCA1.rpc[7:12,2], col = "red")
 
+
+```
+
+Ratkaisu on melko yksiulotteinen, ensimmäinen dimensio kuvaa 87 prosenttia
+kokonaisinertiasta. Dimenioiden tulkinta on suurinpiirtein sama kuin kuin
+edellisissä kartoissa, mutta S-sarake on kiusallisesti s-sarakkeen vasemmalla
+puolella. Numeerisista tuloksista näkee, että sarakkeiden s ja E osuus
+kokonaisinertiasta (sarake inr) on 768. Niiden kontribuutio x-akselille on
+yhteensä vielä suurempi (849). Muut sarakkeet taas kontribuoivat y-akselin
+inertiaan, mutta sen osuus kokonaisinertiasta on vain 9 prosenttia. Kun sarakkeet
+kuitenkin ovat aika hyvin esitettyjä (qlt), voidaan x- akseli tulkinta hieman
+karkeammin samaa mieltä - eri mieltä - tasolla samaksi liberaalien ja
+konservatiivisten asenteiden ulottuvuudeksi. Toinen dimensio kuvaa tiukempaa
+samanmielisyyttä (S), kontrastina neutraali (?) ja maltillinen erimielisyys (s).
+
+```{r ikaspnumres1, echo=FALSE}
+
 summary(gaTestCA1)
 
 ```
-**k** Kommentteja Galkusta:
-Aika yksiuloitteinen (87 prosenttia ensimmäisellä dimensiolla!). Data on
-"as it is", ei ole vakioitu ga-luokkien kokoja (massat max(f4 101), min (m1 57)).
 
-Miten pitäisi tulkita "oikealle kaatunut U - muoto" miehillä ja naisilla?
-Järjestys ei toimi, S s-sarakkeen vasemmalla puolella. Miehet konservatiivisempia,
-mutta maltillisempia? Nuorin ikäluokka on poikkeava. Epävarmoja tai maltillisesti
-e, sitten loikka vasemmalle ja sieltä konservatiiviseen suuntaa oikealle. Naisilla
-poikkeama f3 - f4. VAnhimmat ikäluokat tiukemmin konservatiivisa (f6, m6). Jos
-vertaa sukupuolten eroja samassa ikäluokassa, on aika samanlainen (miehet
-konservatiivisia, naiset liberaaleja). Naisista vain vanhin ikäluokka oikealla,
-miehistä nuorin ja kolme vanhinta.
+Rivien massat ovat yllättävän saman kokoisia, mutta kolmen ryhmän (f2, f6 ja m6)
+osuus kokonaisinertiasta on 616 ja niiden kontribuutio ensimmäiselle dimensiolle
+on 567. Vain 36-45-vuotiaiden miesten (m3) piste on huonosti esitetty (qlt = 457).
+Tulkinta on hankalaa miesten ja naisten nuorimman ryhmän osalta, vaikka efekti
+kartalla on iso. Molempien osuus kokonaisinertiasta on pieni (inr). Nuoret naiset
+(f1) on kuvattu kartalla erittäin hyvin.  Nuorten miesten (m1) esityksen laatu
+on heikompi, ja kaikista suurin kontribuutio on vain y-akselille. Kun muut
+ikäryhmät (paitsi f3) ovat ikäjärjestyksessä vasemmalta oikealle, voi nuorimpien
+ja vanhimpien ikäryhmien sijainnin tulkita osittain toisen dimension (varma
+mielipide - epävarma mielipide) avulla.
 
-Tulkinnassa muistettava, että ikäluokat yli maiden. Voi verrata sekä
-edellisiin maa-vertailuihin että maan, ikäluokan ja sukupuolen yhteisvaikutusmuuttujan
-tuloksiin. MG tutkailee eri kysymyksellä tätä samaa asiaa, ja havaitsee että
-(a) maiden erot suuria ja sukupuolten pieniä (b) naiset liberaalimpia kuin miehet.
-** Viite?**
-
-Numeeriset tulokset: nuorimpien miesten (qlt 659) ja erityisesti
-keski-ikäisten miestén m3 (qlt 457) pisteet huonosti esitetty kartalla. Tulkitaan
-myös cor ja ctr, riveille ja sarakkeille.
+Selvästi kaikissa ikäluokissa miehet ovat konservatiimisempia kuin naiset.
+Nuorin ikäluokka on hieman vähemmän varma mielipiteistään kuin vanhin.
+Yksi mahdollinen selitys kartan tulkinnan ongelmille on se, että maiden väliset
+erot mielipiteissä ovat paljon suurempia kuin sukupuolten väliset maiden sisällä
+(ISSP 1994 aineisto, CAiP, s.126).
 
 
 ## Ikä, sukupuoli ja maa
+
+**edit** Yksi vaikeaselkoinen kartta täynnä pisteitä, tihrustellaan.
+Kommentoidaan numeeristen tulosten perusteella lyhyesti, oleelliset asiat.
 
 ```{r maaga1}
 ISSP2012esim1b.dat <- mutate(ISSP2012esim1b.dat,
@@ -191,7 +199,7 @@ ISSP2012esim1b.dat <- mutate(ISSP2012esim1b.dat,
 ```
 
 
-**edit** Yksi vaikeaselkoinen kartta täynnä pisteitä, tihrustellaan.
+
 ```{r maagaCAeka, echo=FALSE}
 
 maagaCA1 <- ca(~maaga + Q1b,ISSP2012esim1b.dat)
@@ -206,22 +214,84 @@ plot(maagaCA1, main = "symmetrinen kartta 1",
 
 ```
 
+Kuvasta saa jotenkin selvää, kun sen suurentaa mutta pisteitä on selvästi liikaa.
+Joitain muuttujien nimiä voisi lyhentää, kuva-alaa voisi rajata joihinkin osiin
+mutta osajoukon korrespondenssianalyysi tarjoaa pätevimmän vaihtoehdon.
+
+**edit** numeerisia tuloksia ei listata lopullisessa raportissa.
+
+Sarakkeiden järjestys vasemmalta oikealle ja ylhäältä alas on sama kuin edellisissä
+kartoissa. Dimenisoiden tulkinta on sama, osuus inertiasta pienenee x-akselilla
+noin 6 prosenttiyksikköä. Pisteiden järjestys liberaalista konservatiiviseen
+alkaa Tanskan ja Suomen pisteistä, sitten tulee Saksan ja Belgian pisteitä ja
+konservatiisimpia ovat oikeassa laidassa Unkarin ja Bulgarian osajoukot. Toisella
+akselilla maltillisia ja neutraaleja ovat hyvin karkeasti Suomen pisteet ja lähes
+kaikki Saksan ja Belgian pisteet. Eri maiden osajoukkojen suhteita on hankalampi
+hahmottaa, erityisesti kartan oikealla laidalla.
+
+
 ```{r maagaCA1num}
 
 # Vilkaistaan numeerisia tuloksia, kopioidaan tekstiin jos on tarpeellista
 
-print(maagaCA1)
+# print(maagaCA1)
 
 summary(maagaCA1)
 
 ```
 
+Sarakkeet on kohtailaisen hyvin esitetty, heikoimmin neutraali vaihtoehto (535).
+Kun sen suhteellinen kontribuutio (cor) on vain 1 toisella dimensiolla jää
+loppuosa x-akselille. Maltillisuuden dimensiota määrittää e-sarakke (ctr = 646),
+ja vain sitä. Ensimmäistä dimensiota määrittää vahvimmin E-sarake (ctr = 645)
+liberaaliin ja samaa mieltä olevien sarakkeet (s, S) konsertatiiviseen suuntaan.
+
+
+Kun aineistossa on 72 riviä on inertian suhteellisen kontribuution keskiarvo
+noin 14. Tämän ylittäviä kontribuutiota on Bulgaria naisilla (BGf2, BGf3, BGf5
+ja BGf6) kaikilla konservatiiviseen suuntaan. Sama pätee Unkarin naisille, muuten 
+naisten ikäluokat kontribuoivat yleensä liberaaliin suuntaan. Suomen pisteiden
+absoluuttiset kontribuutiot lähes pelkästään toiselle dimenisolle maltilliseen
+suuntaan. Tanska taas kontribui vahvahsti jyrkempien mielipiteiden suuntaan.
+
+Kaikissa taulukon soluissa on vähintään viisi havaintoa, muutama pienen massan
+havainto kontribuoi kohtuullisen paljon. Kuvan laadun takia ryhmiä pitäisi
+yhdistellä.
+
 ## Stabiilisuus
 
-**k** Stabiilius - teorialiitteessä laajemmin mutta tässä lyhyt vilkaisu.
-Taulukko alkaa harveta, edellä kerrottiin että aineisto painottuu kaikissa maissa
-vanhempiin ikäluokkiin. 
+Tarkastelen tässä vain ratkaisustabiiliutta (solution stability). Siinä data on
+annettu, ja ratkaisun numeerisista tuloksista nähdään miten pisteet määritättävät
+akselit. Ulkoinen stabiilius on laajempi käsite, mikä on datan suhde esimerkiksi
+johonkin perusjoukkoon (CAiP, s. 225). Ratkaisu on stabiili niiden pisteiden
+suhteen jotka eivät vaikuta siihen.
 
-**yksinkertainen tarkistus?** Löytyykö riviproviileja joilla pieni massa ja suuri
-kontribuutio? Ei löydy (Galkussa tuloksia), mutta jo kuvan tukkoisuus vaatii
-luokkien yhdistelyä. Aika työlästä!
+Korrespondenssianalyysiä ja erityisesti khii2- etäisyysmittaa on arvosteltu siitä,
+että se on liian herkkä harvinaisille luokittelumuuttujan arvoille.
+Yhteenvetoartikkelissan MG (Loose ends) tarttuu ”vaikuttavien poikkeavien
+havaintojen myyttiin”, ja pitää sitä lähes aina perusteettomana.
+
+Harvinaiset kategoriat ovat usein kartalla kaukana origosta, mutta jokaisella
+pisteellä on massa ja näillä ”outlayereilla” se on pieni. Niinpä niiden
+vaikutuskin on vaatimaton.
+
+Harvinaisten kategorioiden vaikututus voi olla suuri, joten numeerisista
+tuloksita on tarkistettava onko hyvin pienen massan pisteillä suuri kontribuutio
+ratkaisuun. Käytännössä näin voi käydä esimerkiksi silloin, kun jonkun
+harvinaisen luokittelumuuttujan arvon havainnot ovat keskittyneet muutamaan
+profiiliin joissa niiden osuus on suuri (CAiP, s 298). Luvussa 7 nähdään, miten
+melko vähäinen määrä puuttuvia vastuaksia kasaantuu samaan vastaajien osajoukkoon
+ja mitä seurauksia sillä on.
+
+Stabiiliutta voi helposti kokeilla määrittelemällä joitain pisteitä täydentäviksi
+pisteiksi.
+
+Edellisen kartan numeerisista tuloksista ei löydy pienen massan pisteitä joilla
+on merkittävä kontribuutio akseleihin.
+
+
+
+
+
+
+

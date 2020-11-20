@@ -953,7 +953,7 @@ kansainvälisessä vertailevassa tutkimuksessa. Järjestön julkaisuluettelossa 
 Saksalainen GESIS-tutkimuslaitos ylläpitää data-arkistoa, josta suurin osa
 datasta ja dokumentaatiosta on vapaasti saatavissa
 (https://www.gesis.org/en/issp/home). Suomessa tutkimuksen data ja dokumentaatio
-löytyvät Tampereen yliopiston Aila-tietoarkistosta
+löytyvät [Tampereen yliopiston Aila-tietoarkistosta]
 (https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&study_language=fi).
 
 GESIS-instituutin ”datakatalogista” löytää kätevästi kaiken dokumentaation,
@@ -1020,8 +1020,8 @@ The Economist - lehden artikkeli Saksojen yhdistymisen 30-vuotispäivänä
 (3.10.2020, "A report...reveals the interplay between policy and attitudes that
 influences the decision to work.").
 Artikkeli on maksumuurin takana mutta tutkimus on vapaasti
-luettavissa (DIW Weekly Report 38 / 2020, S. 403-410)
-(https://www.diw.de/de/diw_01.c.799302.de/publikationen/weekly_reports/2020_38_1/mothers_in_eastern_and_western_germany__employment_rates_and_attitudes_are_converging__full-time_employment_is_not.html)
+luettavissa 
+[(DIW Weekly Report 38 / 2020, S. 403-410)](https://www.diw.de/de/diw_01.c.799302.de/publikationen/weekly_reports/2020_38_1/mothers_in_eastern_and_western_germany__employment_rates_and_attitudes_are_converging__full-time_employment_is_not.html)
 
 Taulukon \@ref(tab:vartable1) kysymysten lyhyet versiot ovat datassa mukana.
 Sarakkeessa "muuttuja" on alkuperäisen aineiston muuttujanimi,
