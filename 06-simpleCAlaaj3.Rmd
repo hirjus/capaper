@@ -37,6 +37,13 @@ koordinaattien laskemiseen.
 
 **k2** Kuvien luettavuus ja pistekoko, hankala juttu
 
+**k** Kuvien järjestyksen perustelu. 1. symmetrinen, voidaan arvioida rivipisteiden
+ja sarakepisteiden etäisyyksiä. Akselien tulkinta.
+
+2. Kontribuutikartta: laatu, tulkinnan tarkentaminen
+
+3. Rivipisteiden etäisyydet - siksak
+
 
 ```{r maagaSubDKDEFI, echo=F}
 
@@ -45,13 +52,39 @@ maagaCA2sub2 <- ca(~maaga + Q1b,ISSP2012esim1b.dat,subsetrow = 25:60)
 
 ```
 
-```{r maagaCA2sub2map1, echo=F, fig.cap= "Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi", fig.asp = 1, out.width = "90%",fig.align = "center"}
+
+
+```{r maagaCA2sub2map1, echo=F, eval = T, fig.cap= "Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
 par(cex = 0.8)
 plot(maagaCA2sub2, main = "Q1b: Lapsi kärsii jos äiti käy töissä",
-     sub = "symmetrinen kartta - Tanska, Saksa ja Suomi (subset ca), cex = 0.8")
+     sub = "symmetrinen kartta - Tanska, Saksa ja Suomi (subset ca)"
+   )
 
 ```
+
+**k** Kontribuutiokartan tulkinta
+
+**k** Akseleiden tulkinta: 1. dimensio on kontrasti vahvasti eri mieltä olevien
+ja kaikkien muiden vastausten välillä. Toinen dimensio kontrasti e-vastauksen 
+ja kaikkien muiden vastausten kanssa, erityiesti S, s, ja myös neutraali ?.
+
+huom! ei tulkintaa sarakkeiden etäisyyksille, mutta kontribuutiolle on.
+
+```{r maagaCA2sub2map3,echo=F, fig.cap= "Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi", fig.asp = 1, out.width = "90%",fig.align = "center"}
+
+par(cex = 0.6)
+plot(maagaCA2sub2, map = "rowgreen",
+     mass = c(TRUE, TRUE),
+     contrib =c("relative", "absolute"),
+     arrows = c(FALSE, TRUE),
+     main = "Kontribuutiokartta: sarakkeiden(abs.) ja rivien(rel.) värisävy",
+     sub = "massat pisteiden kokoina, cex=0.06"
+      )
+
+```
+
+
 
 ```{r maagaCA2sub2map2,echo=F, fig.cap= "Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi", fig.asp = 1, out.width = "90%",fig.align = "center"}
 # ca-tulosobjekti maagaCA2sub2, DK DE FI
@@ -71,19 +104,7 @@ lines(maagaLinesDKDEFI[31:36,1],maagaLinesDKDEFI[31:36,2], col="red")  #FIm
 
 ```
 
-```{r maagaCA2sub2map3,echo=F, fig.cap= "Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi", fig.asp = 1, out.width = "90%",fig.align = "center"}
-
-par(cex = 0.6)
-plot(maagaCA2sub2, map = "rowgreen",
-     mass = c(TRUE, TRUE),
-     contrib =c("relative", "absolute"),
-     arrows = c(FALSE, TRUE),
-     main = "Kontribuutiokartta: sarakkeiden(abs.) ja rivien(rel.) värisävy",
-     sub = "massat pisteiden kokoina, cex=0.06"
-      )
-
-```
-
+**k** Rivipisteiden tulkinta
 
 
 ```{r maagaCA2sub2num1, echo=F}
@@ -138,18 +159,74 @@ maagaCA2sub3 <- ca(~maaga + Q1b,ISSP2012esim1b.dat,subsetrow = BEBGHUsubset)
 ```
 
 
-```{r  maagaCA2sub3map1,echo=F, fig.cap= "Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari", fig.asp = 1, out.width = "90%",fig.align = "center"}
+Kontribuutiokartalla ei voi tulkita sarakkeiden etäisyyksiä, joten ensin symmmetrinen kartta.
+
+```{r  maagaCA2sub3map1,echo=F, fig.cap= "Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari 1", fig.asp = 1, out.width = "90%",fig.align = "center"}
+
+par(cex = 0.6)
+plot(maagaCA2sub3, 
+     mass = c(TRUE, TRUE),
+     contrib =c("relative", "absolute"),
+     arrows = c(FALSE, FALSE),
+     main = "symmetrinen kartta: sarakkeiden ja rivien suhteelliset kontribuutiot värisävynä ",
+     sub = "massat pisteiden kokoina, cex=0.06"
+      )
+
+```
+
+Ensimmäisen dimension tulkinta pysyy samana, mutta nyt molemmat erimieliset
+(E, e) vastauskategoriat ovat selvästi oikealla. Ne ovat lähes x-akselin päällä,
+kun ensimmäisen osajoukon kartalla e-sarake oli oikealla ja alhaalla kontrastina
+S- ja s- vastauksille ja myös neutraalille vaihtoehdolle. Kartan toinen dimenisio
+erottelee nyt tiukasti ja lievemmin samaa mieltä olevat, neutraali vaihtoehto
+jää väliin. 
+
+Belgian nuoremmat ikäluokat ovat liberaalilla puolella, ja kiinnostavasti
+kaksi vanhinta miesten ryhmää on pystysuunnassa kaikkein maltillisimpia.
+Bulgarian ja Unkarin pisteen ovat x-akselilla tiukasti konservatiivisa.
+Vaihtelua on maltillisemman ja jyrkemmän konservatiivisuuden välillä
+pystysuuntaan. Toisen dimension kontrasti on myös hieman yllättäen 
+Bulgarian nuorimpien naisten (BGf1) Unkarin vanhimpiten naisten (HUf6)
+välillä.
+
+Kuvan \@ref(fig:maagaCA2sub2map2) tapaan ei Bulgarian ja Unkarin
+ikäluokkia kannata yhdistää. Järjestys toki löytyy, mutta ei ollenkaan
+niin selkeä. Saksan naisten ikäluokkakuva alkaa erkaantua hieman Suomen ja Taskan
+hyvin samanalaisista kuvioista. Saksan miehillä on jo eroja paljon toisen
+dimension suuntaan, Unkarin ja Bulgarian osajoukkojen erot ovat lähes
+pelkästään pystysuoria.
+
+Suhteellinen kontribuutio eli pisteen laatu (numeerisissa
+tuloksissa "cor") on esitetty värisävynä. Sarakkeista e ja "?" esitetty
+huonosti, riveistä Belgian nuorimmat miehet ja naiset.
+
+
+
+
+```{r  maagaCA2sub3map2,echo=F, fig.cap= "Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari 2", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
 par(cex = 0.6)
 plot(maagaCA2sub3, map = "rowgreen",
      mass = c(TRUE, TRUE),
      contrib =c("relative", "absolute"),
      arrows = c(FALSE, TRUE),
-     main = "Kontribuutiokartta: sarakkeiden(abs.) ja rivien(rel.) värisävy",
+     main = "Kontribuutiokartta: sarakkeiden(abs.) ja rivien(abs.) värisävy",
      sub = "massat pisteiden kokoina, cex=0.06"
       )
 
 ```
+
+Kontribuutiokartta \ref(fig:maagaCA2sub3map2) eroaa kartasta \ref(fig:maagaCA2sub2map3)
+kolmen akselin (E, S ja s) tasapainosemmalla vaikutuksella ratkaisuun. Konservatiiviset
+sarakepisteet ovat vaikuttavampia kuin E, maltillinen liberaali (s) ja neutraali vaihtoehto
+vaikuttavat vähemmän.
+
+**k** Yksityiskohdat ovat kiinnostavia, mutta graafisen analyysin
+päätavoite on yleiskuva. Tässä ekspolratiivinen data-analyysi
+kuitenkin kulkee hieman eri polkuja kuin tavaniomainen tilastollisten
+mallien analyysi. Seuratataan minne data kuljettaa, etstiään uusia
+näkökulmia. Iän ja sukupuolen yhteys vastauksiin on rakenteeltaan erilainen,
+se ei ole ongelma vaan datan ominaisuus.
 
 ```{r maagaCA2sub3num1}
 
@@ -166,9 +243,9 @@ plot(maagaCA2sub3, map = "rowgreen",
 
 
 Kahden osajoukon inertioiden summa on sama kuin koko aineiston, Selitysasteet
-kuitenkin nousevat, mutta vielä oleellisempaa on kahden aika erilaisen ryhmän
+nousevat hieman, mutta vielä oleellisempaa on kahden aika erilaisen ryhmän
 havaitseminen.
 
 Belgian jotkun pisteet: huono kvaliteetti (BEf1, BEf5,BEm1, BEm2). Bulgaria ja
-Unkari hyvin esitetty. Belgia on pulmallinen tapaus, omissa dimensioissaan.
+Unkari hyvin esitetty. Belgia on pulmallinen tapaus, ehkä taas omissa dimensioissaan.
 

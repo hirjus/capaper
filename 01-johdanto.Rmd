@@ -1,7 +1,8 @@
 # Johdanto
 
 **edit** Kirjoitetaan disposition pohjalta, keräillään kaikki yleiset
-ca-luonnehdinnat yhteen paikkaan eli johdantoon.
+ca-luonnehdinnat yhteen paikkaan eli johdantoon. Kirjoitetaan viimeiseksi, samoin
+yhteenvetoluku. Mahdollisimman lyhyt.
 
 
 **johdannon ydinsisältö**

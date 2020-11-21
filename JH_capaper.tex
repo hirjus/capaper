@@ -126,7 +126,7 @@
 
 \title{Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä}
 \author{Jussi Hirvonen}
-\date{Versio 0.7, tulostettu 2020-11-21}
+\date{Versio 0.8, tulostettu 2020-11-21}
 
 \begin{document}
 \maketitle
@@ -146,27 +146,19 @@
 \end{Highlighting}
 \end{Shaded}
 
-\textbf{PDF-tulostus oikuttelee ja kaatuu, mutta pdf-syntyy. MikTeX vaihdettu TinyTeX-engineen ja pdflatex -\textgreater{} xelatex (15.11.20).}
+\textbf{Raportti yhtenä html-tiedostona} (\url{https://hirjus.github.io/capaper/JH_capaper.html}), ja kaikki toimii.
+Tässä liitteet, lähdeviitteet ja koodilistaus.
 
-27.10.20 Vertailin testi-bookdownin ja capaperin asetuksia.
-Poistin YAML-headerista viimeisen rivin ``toc-depth: 2''. Onko eri latex-engine?
-Poistin ongelmia aiheuttavan taulukon (Saksan ja Belgian aluejako).
-Eivät auttaneet pdf-tulostuksen ongelmaan.
+\textbf{PDF-tulostus oikuttelee ja kaatuu, mutta pdf-syntyy}. MikTeX vaihdettu TinyTeX-engineen
+ja pdflatex -\textgreater{} xelatex (15.11.20). PDF-tulostus kaatuu \textbf{luultavasti} koodilistaukseen.
+Pandoc ei osaa rivittää koodia oikein tms. Koodilistauksen poistaminen ei auta, syystä tai toisesta.
 
-Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti
-\_bookdown.yml-tiedostossa.
+\textbf{Suunnitelma: PDF html-raportista -\textgreater{} pdfExchange-ohjelmalla sivunumerot ja kansilehdet}
 
-RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla),
-ja korjailla skandit jos niissä on vikaa.
+RefWorksistä tuotu jhca2020.bib-tiedosto tarkistettu ja korjailtu virheet. Ei enään ladata uutta (21.11.2020).
 
-Koodi näkyy Galkun tulosteessa (\url{https://hirjus.github.io/Galku}), jossa on myös
-pitkiä listauksia muunnosten tarkistuksista ja kuvia eri versioina.
-
-Koodi kopiodaan Galkusta, kommentoidaan pois tarkistuksia ja muita välitulostuksia.
-Koodin ydinasiat koitetaan pitää samana kuin Galkussa, isommat muuutoksen ensin siellä
-ja sitten tähän projektiin.
-
-Raportti yhtenä html-tiedostona (\url{https://hirjus.github.io/capaper/JH_capaper.html}).
+Data-analyysi ja koodi omana projektina: (\url{https://hirjus.github.io/Galku}). Tarkempia tulostuksia,
+muunnosten tarkistuksia ja enemmän kuvia, myös koodi näkyy.
 
 \textbf{12.11.20}
 Raportissa on hieman liian pitkiä ca:n numeeristen tulosten listauksia, poistetaan tai
@@ -183,7 +175,8 @@ Versiointi: 0.0n aloittelua, 0.n jäsentely koko paperille, 1.n.n valmiimpaa tek
 \chapter{Johdanto}\label{johdanto}}
 
 \textbf{edit} Kirjoitetaan disposition pohjalta, keräillään kaikki yleiset
-ca-luonnehdinnat yhteen paikkaan eli johdantoon.
+ca-luonnehdinnat yhteen paikkaan eli johdantoon. Kirjoitetaan viimeiseksi, samoin
+yhteenvetoluku. Mahdollisimman lyhyt.
 
 \textbf{johdannon ydinsisältö}
 
@@ -1178,8 +1171,6 @@ Koordinaattien yhteys voidaan esittää kahtena yksinkertaistettuna kaavana
     \label{eq:kontribfromstd1}
 \end{equation}
 
-Viite
-
 \hypertarget{tuxe4ydentuxe4vuxe4t-pisteet}{%
 \chapter{Täydentävät pisteet}\label{tuxe4ydentuxe4vuxe4t-pisteet}}
 
@@ -1861,6 +1852,18 @@ koordinaattien laskemiseen.
 
 \textbf{k2} Kuvien luettavuus ja pistekoko, hankala juttu
 
+\textbf{k} Kuvien järjestyksen perustelu. 1. symmetrinen, voidaan arvioida rivipisteiden
+ja sarakepisteiden etäisyyksiä. Akselien tulkinta.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  Kontribuutikartta: laatu, tulkinnan tarkentaminen
+\item
+  Rivipisteiden etäisyydet - siksak
+\end{enumerate}
+
 \begin{figure}
 
 {\centering \includegraphics[width=0.9\linewidth]{JH_capaper_files/figure-latex/maagaCA2sub2map1-1} 
@@ -1868,6 +1871,23 @@ koordinaattien laskemiseen.
 }
 
 \caption{Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi}\label{fig:maagaCA2sub2map1}
+\end{figure}
+
+\textbf{k} Kontribuutiokartan tulkinta
+
+\textbf{k} Akseleiden tulkinta: 1. dimensio on kontrasti vahvasti eri mieltä olevien
+ja kaikkien muiden vastausten välillä. Toinen dimensio kontrasti e-vastauksen
+ja kaikkien muiden vastausten kanssa, erityiesti S, s, ja myös neutraali ?.
+
+huom! ei tulkintaa sarakkeiden etäisyyksille, mutta kontribuutiolle on.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{JH_capaper_files/figure-latex/maagaCA2sub2map3-1} 
+
+}
+
+\caption{Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi}\label{fig:maagaCA2sub2map3}
 \end{figure}
 
 \begin{figure}
@@ -1879,14 +1899,7 @@ koordinaattien laskemiseen.
 \caption{Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi}\label{fig:maagaCA2sub2map2}
 \end{figure}
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{JH_capaper_files/figure-latex/maagaCA2sub2map3-1} 
-
-}
-
-\caption{Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi}\label{fig:maagaCA2sub2map3}
-\end{figure}
+\textbf{k} Rivipisteiden tulkinta
 
 \begin{verbatim}
 ## 
@@ -1990,14 +2003,63 @@ sarakepisteiden inertiasta, ja y-akseli taas lähes täysin e-pisteen inertian.
 \end{Highlighting}
 \end{Shaded}
 
+Kontribuutiokartalla ei voi tulkita sarakkeiden etäisyyksiä, joten ensin symmmetrinen kartta.
+
 \begin{figure}
 
 {\centering \includegraphics[width=0.9\linewidth]{JH_capaper_files/figure-latex/maagaCA2sub3map1-1} 
 
 }
 
-\caption{Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari}\label{fig:maagaCA2sub3map1}
+\caption{Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari 1}\label{fig:maagaCA2sub3map1}
 \end{figure}
+
+Ensimmäisen dimension tulkinta pysyy samana, mutta nyt molemmat erimieliset
+(E, e) vastauskategoriat ovat selvästi oikealla. Ne ovat lähes x-akselin päällä,
+kun ensimmäisen osajoukon kartalla e-sarake oli oikealla ja alhaalla kontrastina
+S- ja s- vastauksille ja myös neutraalille vaihtoehdolle. Kartan toinen dimenisio
+erottelee nyt tiukasti ja lievemmin samaa mieltä olevat, neutraali vaihtoehto
+jää väliin.
+
+Belgian nuoremmat ikäluokat ovat liberaalilla puolella, ja kiinnostavasti
+kaksi vanhinta miesten ryhmää on pystysuunnassa kaikkein maltillisimpia.
+Bulgarian ja Unkarin pisteen ovat x-akselilla tiukasti konservatiivisa.
+Vaihtelua on maltillisemman ja jyrkemmän konservatiivisuuden välillä
+pystysuuntaan. Toisen dimension kontrasti on myös hieman yllättäen
+Bulgarian nuorimpien naisten (BGf1) Unkarin vanhimpiten naisten (HUf6)
+välillä.
+
+Kuvan \ref{fig:maagaCA2sub2map2} tapaan ei Bulgarian ja Unkarin
+ikäluokkia kannata yhdistää. Järjestys toki löytyy, mutta ei ollenkaan
+niin selkeä. Saksan naisten ikäluokkakuva alkaa erkaantua hieman Suomen ja Taskan
+hyvin samanalaisista kuvioista. Saksan miehillä on jo eroja paljon toisen
+dimension suuntaan, Unkarin ja Bulgarian osajoukkojen erot ovat lähes
+pelkästään pystysuoria.
+
+Suhteellinen kontribuutio eli pisteen laatu (numeerisissa
+tuloksissa ``cor'') on esitetty värisävynä. Sarakkeista e ja ``?'' esitetty
+huonosti, riveistä Belgian nuorimmat miehet ja naiset.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{JH_capaper_files/figure-latex/maagaCA2sub3map2-1} 
+
+}
+
+\caption{Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari 2}\label{fig:maagaCA2sub3map2}
+\end{figure}
+
+Kontribuutiokartta \ref(fig:maagaCA2sub3map2) eroaa kartasta \ref(fig:maagaCA2sub2map3)
+kolmen akselin (E, S ja s) tasapainosemmalla vaikutuksella ratkaisuun. Konservatiiviset
+sarakepisteet ovat vaikuttavampia kuin E, maltillinen liberaali (s) ja neutraali vaihtoehto
+vaikuttavat vähemmän.
+
+\textbf{k} Yksityiskohdat ovat kiinnostavia, mutta graafisen analyysin
+päätavoite on yleiskuva. Tässä ekspolratiivinen data-analyysi
+kuitenkin kulkee hieman eri polkuja kuin tavaniomainen tilastollisten
+mallien analyysi. Seuratataan minne data kuljettaa, etstiään uusia
+näkökulmia. Iän ja sukupuolen yhteys vastauksiin on rakenteeltaan erilainen,
+se ei ole ongelma vaan datan ominaisuus.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2078,11 +2140,11 @@ sarakepisteiden inertiasta, ja y-akseli taas lähes täysin e-pisteen inertian.
 \end{Shaded}
 
 Kahden osajoukon inertioiden summa on sama kuin koko aineiston, Selitysasteet
-kuitenkin nousevat, mutta vielä oleellisempaa on kahden aika erilaisen ryhmän
+nousevat hieman, mutta vielä oleellisempaa on kahden aika erilaisen ryhmän
 havaitseminen.
 
 Belgian jotkun pisteet: huono kvaliteetti (BEf1, BEf5,BEm1, BEm2). Bulgaria ja
-Unkari hyvin esitetty. Belgia on pulmallinen tapaus, omissa dimensioissaan.
+Unkari hyvin esitetty. Belgia on pulmallinen tapaus, ehkä taas omissa dimensioissaan.
 
 \hypertarget{monimuuttuja-korrespondenssianalyysi-mca}{%
 \chapter{Monimuuttuja-korrespondenssianalyysi (MCA)}\label{monimuuttuja-korrespondenssianalyysi-mca}}
@@ -2736,17 +2798,23 @@ procedure in order to obtain a dimensionality reduction technique feasible for
 the application on very large categorical data or even on categorical
 data streams''\citep{RefWorks:doc:5f01c74be4b0d3d8328c72ca}.
 
-\hypertarget{liitteet}{%
-\chapter*{Liitteet}\label{liitteet}}
-\addcontentsline{toc}{chapter}{Liitteet}
+\hypertarget{luxe4hteet}{%
+\chapter*{Lähteet}\label{luxe4hteet}}
+\addcontentsline{toc}{chapter}{Lähteet}
+
+\hypertarget{refs}{}
+
+\hypertarget{appendix-liitteet}{%
+\appendix}
+
 
 \hypertarget{liite-1-korrespondenssianalyysin-teoriaa}{%
-\section*{Liite 1: Korrespondenssianalyysin teoriaa}\label{liite-1-korrespondenssianalyysin-teoriaa}}
-\addcontentsline{toc}{section}{Liite 1: Korrespondenssianalyysin teoriaa}
+\chapter*{Liite 1: Korrespondenssianalyysin teoriaa}\label{liite-1-korrespondenssianalyysin-teoriaa}}
+\addcontentsline{toc}{chapter}{Liite 1: Korrespondenssianalyysin teoriaa}
 
 \hypertarget{korrespondenssianalyysin-perusyhtuxe4luxf6t-ja-kaavat}{%
-\subsection*{Korrespondenssianalyysin perusyhtälöt ja kaavat}\label{korrespondenssianalyysin-perusyhtuxe4luxf6t-ja-kaavat}}
-\addcontentsline{toc}{subsection}{Korrespondenssianalyysin perusyhtälöt ja kaavat}
+\section*{Korrespondenssianalyysin perusyhtälöt ja kaavat}\label{korrespondenssianalyysin-perusyhtuxe4luxf6t-ja-kaavat}}
+\addcontentsline{toc}{section}{Korrespondenssianalyysin perusyhtälöt ja kaavat}
 
 Tässä lähteenä Greenacren kirja\citep{RefWorks:doc:5a857a43e4b0ed2d44664d78} (ca in practice) ja sen liite
 ``Theory of CA''.
@@ -2880,18 +2948,19 @@ Sarakkeiden pääkoordinaatit
 Pääakseleiden inertiat (principal inertias) \(\lambda_{k}\)
 
 \begin{equation}
-\lambda_{k} = \alpha_{k}^2, k = 1,\dots,K,
+\lambda_{k} = \alpha_{k}^2, \: k = 1,\dots,K,
 K = min \{ I-1, J-1 \}
 \end{equation}
 
-\textbf{edit 1} CA:ssa ratkaisun akseleiden inertiaa kutsutaan usein ominaisarvoksi,
+Ratkaisun dimenisio on myös maksimi-inertia. Tässä aineistossa ja vastaavissa
+kyselytutkimusdatoissa inertia on yleensä paljon maksimia pienempi. Asymmetrisissä
+kartoissa ideaalipisteet ovat kaukana origon lähelle pakkauteesta havaintojen
+pilvestä.
+
+Korespondenssianalyysi ratkaisun akseleiden inertiaa kutsutaan usein ominaisarvoksi,
 mutta periaatteessa SVD-ratkaisulla saadaan singulaariarvot, ja niiden neliöt ovat
 akseleiden inertioita. Ominaisarvojen ja sigulaariarvojen yhteys on läheinen ja
 riippuu diagonalisoitavan matriisin ominaisuuksista.
-
-\textbf{edit 1} ratkaisun dimenisio, maksimi-inertia.
-
-Bilineaarinen korresepondenssimalli
 
 Korrespondenssimatriisi \(\boldsymbol{P}\) voidaan esittää matriisi- ja
 alkiomuodossa ns. palautuskaavana (reconstitution formula).
@@ -2943,9 +3012,6 @@ ja \eqref{eq:barysentr4} kahdet pääkoordinaatit ovat perusta symmetrisille kar
 yhdistää barisentrinen painotetun keskiarvon riippuvuus, mutta mukana ovat skaalaustekijät
 \(\frac{1}{\sqrt{\lambda_{i}}}\). Skaalaustekijä on jokaisessa dimensiossa sen inertia, suurimmasta pienimpään.
 
-Kokeillaan vielä kaavaviitteitä: kaavojen \eqref{eq:khii21} ja \eqref{eq:khii22}
-yhteyden pitäisi olla selkeä.
-
 \textbf{Pisteet ja projektio aliavaruuteen}
 
 Kuva on kurssimateriaaleista\citep{RefWorks:doc:5b6ef091e4b0984fd9b8c0ca}.
@@ -2977,8 +3043,8 @@ olevat pisteet voivat olla alkuperäisessä avaruudessa kaukana toisistaan,
 jos niiden projektion laatu on huono.
 
 \hypertarget{matriisit-ja-niiden-havainnollistaminen}{%
-\subsection*{Matriisit ja niiden havainnollistaminen}\label{matriisit-ja-niiden-havainnollistaminen}}
-\addcontentsline{toc}{subsection}{Matriisit ja niiden havainnollistaminen}
+\section*{Matriisit ja niiden havainnollistaminen}\label{matriisit-ja-niiden-havainnollistaminen}}
+\addcontentsline{toc}{section}{Matriisit ja niiden havainnollistaminen}
 
 \textbf{edit} Nämä tässä varalla, jos matriisikaavoja tarvitaan lisää. Ehkä ei?
 
@@ -3077,22 +3143,9 @@ sijaintiin. Tämä menetelmä on ca-paketin mjca-funktion oletus.
 
 Kolmas vaihtoehto on ns. yhdistetty korrespondenssianalyysi (joint ca).
 
-\hypertarget{liite-2-suomenkielinen-lomake-esimerkki}{%
-\section*{Liite 2: Suomenkielinen lomake (esimerkki)}\label{liite-2-suomenkielinen-lomake-esimerkki}}
-\addcontentsline{toc}{section}{Liite 2: Suomenkielinen lomake (esimerkki)}
-
-Tämä kuva on myös tekstissä, kätevä tapa esittää siististi kysymysten pitkät
-versiot.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/substvar_fi_Q1Q2.png'}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{liite-3-tekninen-ympuxe4ristuxf6-ja-bookdown-paketti}{%
-\section*{Liite 3: Tekninen ympäristö ja Bookdown-paketti}\label{liite-3-tekninen-ympuxe4ristuxf6-ja-bookdown-paketti}}
-\addcontentsline{toc}{section}{Liite 3: Tekninen ympäristö ja Bookdown-paketti}
+\hypertarget{liite-2-tekninen-ympuxe4ristuxf6-ja-bookdown-paketti}{%
+\chapter*{Liite 2: Tekninen ympäristö ja Bookdown-paketti}\label{liite-2-tekninen-ympuxe4ristuxf6-ja-bookdown-paketti}}
+\addcontentsline{toc}{chapter}{Liite 2: Tekninen ympäristö ja Bookdown-paketti}
 
 Muokataan tiiviimpi pätkä esimerkkireposta bookdown-testi1. Tämä kuva kertoo vain
 julkaisutekniikan ympäristön.
@@ -3118,9 +3171,9 @@ julkaisutekniikan ympäristön.
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{liite-4-r---koodi}{%
-\section*{Liite 4: R - koodi}\label{liite-4-r---koodi}}
-\addcontentsline{toc}{section}{Liite 4: R - koodi}
+\hypertarget{liite-3-r---koodi}{%
+\chapter*{Liite 3: R - koodi}\label{liite-3-r---koodi}}
+\addcontentsline{toc}{chapter}{Liite 3: R - koodi}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -4761,7 +4814,18 @@ julkaisutekniikan ympäristön.
 
 \KeywordTok{par}\NormalTok{(}\DataTypeTok{cex =} \FloatTok{0.8}\NormalTok{)}
 \KeywordTok{plot}\NormalTok{(maagaCA2sub2, }\DataTypeTok{main =} \StringTok{"Q1b: Lapsi kärsii jos äiti käy töissä"}\NormalTok{,}
-     \DataTypeTok{sub =} \StringTok{"symmetrinen kartta - Tanska, Saksa ja Suomi (subset ca), cex = 0.8"}\NormalTok{)}
+     \DataTypeTok{sub =} \StringTok{"symmetrinen kartta - Tanska, Saksa ja Suomi (subset ca)"}
+\NormalTok{   )}
+
+
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{cex =} \FloatTok{0.6}\NormalTok{)}
+\KeywordTok{plot}\NormalTok{(maagaCA2sub2, }\DataTypeTok{map =} \StringTok{"rowgreen"}\NormalTok{,}
+     \DataTypeTok{mass =} \KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{),}
+     \DataTypeTok{contrib =}\KeywordTok{c}\NormalTok{(}\StringTok{"relative"}\NormalTok{, }\StringTok{"absolute"}\NormalTok{),}
+     \DataTypeTok{arrows =} \KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{),}
+     \DataTypeTok{main =} \StringTok{"Kontribuutiokartta: sarakkeiden(abs.) ja rivien(rel.) värisävy"}\NormalTok{,}
+     \DataTypeTok{sub =} \StringTok{"massat pisteiden kokoina, cex=0.06"}
+\NormalTok{      )}
 
 \CommentTok{# ca-tulosobjekti maagaCA2sub2, DK DE FI}
 
@@ -4777,16 +4841,6 @@ julkaisutekniikan ympäristön.
 \KeywordTok{lines}\NormalTok{(maagaLinesDKDEFI[}\DecValTok{19}\OperatorTok{:}\DecValTok{24}\NormalTok{,}\DecValTok{1}\NormalTok{],maagaLinesDKDEFI[}\DecValTok{19}\OperatorTok{:}\DecValTok{24}\NormalTok{,}\DecValTok{2}\NormalTok{], }\DataTypeTok{col=}\StringTok{"red"}\NormalTok{)  }\CommentTok{#DKm}
 \KeywordTok{lines}\NormalTok{(maagaLinesDKDEFI[}\DecValTok{25}\OperatorTok{:}\DecValTok{30}\NormalTok{,}\DecValTok{1}\NormalTok{],maagaLinesDKDEFI[}\DecValTok{25}\OperatorTok{:}\DecValTok{30}\NormalTok{,}\DecValTok{2}\NormalTok{], }\DataTypeTok{col=}\StringTok{"blue"}\NormalTok{) }\CommentTok{#FIf}
 \KeywordTok{lines}\NormalTok{(maagaLinesDKDEFI[}\DecValTok{31}\OperatorTok{:}\DecValTok{36}\NormalTok{,}\DecValTok{1}\NormalTok{],maagaLinesDKDEFI[}\DecValTok{31}\OperatorTok{:}\DecValTok{36}\NormalTok{,}\DecValTok{2}\NormalTok{], }\DataTypeTok{col=}\StringTok{"red"}\NormalTok{)  }\CommentTok{#FIm}
-
-
-\KeywordTok{par}\NormalTok{(}\DataTypeTok{cex =} \FloatTok{0.6}\NormalTok{)}
-\KeywordTok{plot}\NormalTok{(maagaCA2sub2, }\DataTypeTok{map =} \StringTok{"rowgreen"}\NormalTok{,}
-     \DataTypeTok{mass =} \KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{),}
-     \DataTypeTok{contrib =}\KeywordTok{c}\NormalTok{(}\StringTok{"relative"}\NormalTok{, }\StringTok{"absolute"}\NormalTok{),}
-     \DataTypeTok{arrows =} \KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{),}
-     \DataTypeTok{main =} \StringTok{"Kontribuutiokartta: sarakkeiden(abs.) ja rivien(rel.) värisävy"}\NormalTok{,}
-     \DataTypeTok{sub =} \StringTok{"massat pisteiden kokoina, cex=0.06"}
-\NormalTok{      )}
 
 
 \CommentTok{# Tarkastetaan numeeriset tulokset}
@@ -4810,11 +4864,21 @@ julkaisutekniikan ympäristön.
 
 
 \KeywordTok{par}\NormalTok{(}\DataTypeTok{cex =} \FloatTok{0.6}\NormalTok{)}
+\KeywordTok{plot}\NormalTok{(maagaCA2sub3, }
+     \DataTypeTok{mass =} \KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{),}
+     \DataTypeTok{contrib =}\KeywordTok{c}\NormalTok{(}\StringTok{"relative"}\NormalTok{, }\StringTok{"absolute"}\NormalTok{),}
+     \DataTypeTok{arrows =} \KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{, }\OtherTok{FALSE}\NormalTok{),}
+     \DataTypeTok{main =} \StringTok{"symmetrinen kartta: sarakkeiden ja rivien suhteelliset kontribuutiot värisävynä "}\NormalTok{,}
+     \DataTypeTok{sub =} \StringTok{"massat pisteiden kokoina, cex=0.06"}
+\NormalTok{      )}
+
+
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{cex =} \FloatTok{0.6}\NormalTok{)}
 \KeywordTok{plot}\NormalTok{(maagaCA2sub3, }\DataTypeTok{map =} \StringTok{"rowgreen"}\NormalTok{,}
      \DataTypeTok{mass =} \KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{),}
      \DataTypeTok{contrib =}\KeywordTok{c}\NormalTok{(}\StringTok{"relative"}\NormalTok{, }\StringTok{"absolute"}\NormalTok{),}
      \DataTypeTok{arrows =} \KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{),}
-     \DataTypeTok{main =} \StringTok{"Kontribuutiokartta: sarakkeiden(abs.) ja rivien(rel.) värisävy"}\NormalTok{,}
+     \DataTypeTok{main =} \StringTok{"Kontribuutiokartta: sarakkeiden(abs.) ja rivien(abs.) värisävy"}\NormalTok{,}
      \DataTypeTok{sub =} \StringTok{"massat pisteiden kokoina, cex=0.06"}
 \NormalTok{      )}
 
@@ -5187,9 +5251,6 @@ julkaisutekniikan ympäristön.
 
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/CAquality.png'}\NormalTok{)}
 
-
-
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/substvar_fi_Q1Q2.png'}\NormalTok{)}
 
 
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/BookdownProc.png'}\NormalTok{)}

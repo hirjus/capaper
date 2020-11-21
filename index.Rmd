@@ -1,7 +1,7 @@
 ---
 title: "Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä"
 author: "Jussi Hirvonen"
-date: "Versio 0.7, tulostettu `r Sys.Date()`"
+date: "Versio 0.8, tulostettu `r Sys.Date()`"
 output: pdf_document
 description: Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä.
 documentclass: book
@@ -25,27 +25,22 @@ options(tinytex.verbose = TRUE)
 ```
 
 
-**PDF-tulostus oikuttelee ja kaatuu, mutta pdf-syntyy. MikTeX vaihdettu TinyTeX-engineen ja pdflatex -> xelatex (15.11.20).**
+**Raportti yhtenä html-tiedostona** (https://hirjus.github.io/capaper/JH_capaper.html), ja kaikki toimii.
+Tässä liitteet, lähdeviitteet ja koodilistaus.
 
-27.10.20 Vertailin testi-bookdownin ja capaperin asetuksia.
-Poistin YAML-headerista viimeisen rivin "toc-depth: 2". Onko eri latex-engine?
-Poistin ongelmia aiheuttavan taulukon (Saksan ja Belgian aluejako).
-Eivät auttaneet pdf-tulostuksen ongelmaan.
+**PDF-tulostus oikuttelee ja kaatuu, mutta pdf-syntyy**. MikTeX vaihdettu TinyTeX-engineen
+ja pdflatex -> xelatex (15.11.20). PDF-tulostus kaatuu **luultavasti** koodilistaukseen.
+Pandoc ei osaa rivittää koodia oikein tms. Koodilistauksen poistaminen ei auta, syystä tai toisesta.
 
-Dokumettiin kuuluvat Rmd-tiedostot luetellaan eksplisiittisesti
-_bookdown.yml-tiedostossa.
+**Suunnitelma: PDF html-raportista -> pdfExchange-ohjelmalla sivunumerot ja kansilehdet**
 
-RefWorksistä eksportattu bib-tiedosto kannattaa avata ensin (Atomilla),
-ja korjailla skandit jos niissä on vikaa.
 
-Koodi näkyy Galkun tulosteessa (https://hirjus.github.io/Galku), jossa on myös
-pitkiä listauksia muunnosten tarkistuksista ja kuvia eri versioina.
+RefWorksistä tuotu jhca2020.bib-tiedosto tarkistettu ja korjailtu virheet. Ei enään ladata uutta (21.11.2020).
 
-Koodi kopiodaan Galkusta, kommentoidaan pois tarkistuksia ja muita välitulostuksia.
-Koodin ydinasiat koitetaan pitää samana kuin Galkussa, isommat muuutoksen ensin siellä
-ja sitten tähän projektiin.
+Data-analyysi ja koodi omana projektina: (https://hirjus.github.io/Galku). Tarkempia tulostuksia,
+muunnosten tarkistuksia ja enemmän kuvia, myös koodi näkyy.
 
-Raportti yhtenä html-tiedostona (https://hirjus.github.io/capaper/JH_capaper.html).
+
 
 **12.11.20**
 Raportissa on hieman liian pitkiä ca:n numeeristen tulosten listauksia, poistetaan tai

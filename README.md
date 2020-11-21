@@ -195,4 +195,8 @@ r-koodin automaattitulostukseen teknisessä liitteessä. TUlostus kaatuu, viitet
  muualla. Viitetietokantaa korjattu (erikoismerkit).
 
  **21.11.2020** Pieniä lisäyksiä, muutama viite. Korjasin R-pakettien bibtex-tiedostossa
- Mullerin nimen "saksalaisen y-kirjaimen" kelvolliseksi.
+ Mullerin nimen "saksalaisen y-kirjaimen" kelvolliseksi. Lähdeluettelo ennen liitteitä,
+ voi vaihtaa takaisin tarvittaessa.
+ 
+ **21.11.2020 versio 0.8** Subset-analyysit valmiit, liikaa numeeristen tulosten listauksia. Tekstiä viimeisteltävä, muutama
+ kappale teoriasta lisättävä.
