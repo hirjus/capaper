@@ -626,7 +626,6 @@ valikoituja kuvia. Graafinen data-analyysi on vaivatonta vasta sitten kun se teh
 En jatkossa esitä kuvailevia akseleiden nimiä kuvissa,
 akseleiden nimeäminen on kuvan tulkinnan toinen askel.
 
-Liitteessä 1 on esitetty korrespondenssianalyysin matemaattisen ratkaisun periaate. 
 
 **k** Kuva tai kartta - käytän termejä synonyymeinä - on se taso, joka parhaiten
 ”selittää” neliulotteisen pisteparven hajontaa suhteessa koko aineiston
@@ -980,3 +979,23 @@ kohti origoa kertomalla ne massojen neliöjuurilla. Näin kuva selkenee, ja "kut
 pisteen etäisyys origosta ("vektori") kertoo sen kontribuution pääakseleille. Näiden pisteiden
 välisillä etäisyyksillä ei ole suoraa tulkintaa.
 
+Jako standardi- ja pääkoordinaatteihin on suora seuraus korrespondenssianalyysin
+matemaattisesta ratkaisusta. Greenacre esittelee kaksoiskuvia käsittelevässä
+kirjassaan [@RefWorks:doc:5a857a43e4b0ed2d44664d7c] selkeästi koordinaattien
+yhteyden ratkaisualgoritmiin, singulaariarvohajoitelmaan.
+ 
+
+Koordinaattien yhteys voidaan esittää kahtena yksinkertaistettuna kaavana
+( @RefWorks:doc:5b8175eee4b08da192f99a35, s.174 ):
+
+\begin{equation}
+  pääkoordinaatit = standardikoordinatit \times \sqrt{pääakselien \: inertiat}
+    (\#eq:pcfromstd1)
+\end{equation}
+
+\begin{equation}
+  kontribuutiokoordinaatit = \sqrt{massat} \times  standardikoordinatit 
+    (\#eq:kontribfromstd1)
+\end{equation}
+
+Viite

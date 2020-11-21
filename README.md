@@ -193,3 +193,6 @@ r-koodin automaattitulostukseen teknisessä liitteessä. TUlostus kaatuu, viitet
 
  **19.11.2020 versio 0.7** Luku 5 kirjoitettu, pieniä korjauksia ja editointeja
  muualla. Viitetietokantaa korjattu (erikoismerkit).
+
+ **21.11.2020** Pieniä lisäyksiä, muutama viite. Korjasin R-pakettien bibtex-tiedostossa
+ Mullerin nimen "saksalaisen y-kirjaimen" kelvolliseksi.

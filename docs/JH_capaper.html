@@ -194,7 +194,7 @@ img {
 <div id="header">
 <h1 class="title">Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</h1>
 <h4 class="author"><em>Jussi Hirvonen</em></h4>
-<h4 class="date"><em>Versio 0.7, tulostettu 2020-11-20</em></h4>
+<h4 class="date"><em>Versio 0.7, tulostettu 2020-11-21</em></h4>
 </div>
 <div id="alkutoimia" class="section level1 unnumbered">
 <h1>Alkutoimia</h1>
@@ -1023,7 +1023,6 @@ paljon vaivannäköä, tässä tutkielmassa esitetään vain datan analysoinnin
 valikoituja kuvia. Graafinen data-analyysi on vaivatonta vasta sitten kun se tehty.
 En jatkossa esitä kuvailevia akseleiden nimiä kuvissa,
 akseleiden nimeäminen on kuvan tulkinnan toinen askel.</p>
-<p>Liitteessä 1 on esitetty korrespondenssianalyysin matemaattisen ratkaisun periaate.</p>
 <p><strong>k</strong> Kuva tai kartta - käytän termejä synonyymeinä - on se taso, joka parhaiten
 ”selittää” neliulotteisen pisteparven hajontaa suhteessa koko aineiston
 keskiarvopisteeseen eli sentroidiin. Matemaattisesti ratkaisu saadaan
@@ -1272,6 +1271,21 @@ mutta sarakepisteiden etäisyyksillä ei ole suoraa tulkintaa,</p>
 kohti origoa kertomalla ne massojen neliöjuurilla. Näin kuva selkenee, ja “kutistetun”
 pisteen etäisyys origosta (“vektori”) kertoo sen kontribuution pääakseleille. Näiden pisteiden
 välisillä etäisyyksillä ei ole suoraa tulkintaa.</p>
+<p>Jako standardi- ja pääkoordinaatteihin on suora seuraus korrespondenssianalyysin
+matemaattisesta ratkaisusta. Greenacre esittelee kaksoiskuvia käsittelevässä
+kirjassaan <span class="citation">(Greenacre <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span> selkeästi koordinaattien
+yhteyden ratkaisualgoritmiin, singulaariarvohajoitelmaan.</p>
+<p>Koordinaattien yhteys voidaan esittää kahtena yksinkertaistettuna kaavana
+( <span class="citation">Greenacre ja Primicerio (<a href="#ref-RefWorks:doc:5b8175eee4b08da192f99a35" role="doc-biblioref">2013</a>)</span>, s.174 ):</p>
+<p><span class="math display" id="eq:pcfromstd1">\[\begin{equation}
+  pääkoordinaatit = standardikoordinatit \times \sqrt{pääakselien \: inertiat}
+    \tag{3.7}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:kontribfromstd1">\[\begin{equation}
+  kontribuutiokoordinaatit = \sqrt{massat} \times  standardikoordinatit 
+    \tag{3.8}
+\end{equation}\]</span></p>
+<p>Viite</p>
 
 </div>
 </div>
@@ -1580,37 +1594,45 @@ kuvissa selityksen.</p>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="co"># summary(suppointCA3)</span></span>
 <span id="cb4-4"><a href="#cb4-4"></a><span class="co"># Error in rsc %*% diag(sv) : non-conformable arguments</span></span>
 <span id="cb4-5"><a href="#cb4-5"></a><span class="co"># outo juttu, ei toimi! - TÄMÄ POISTETAAN</span></span></code></pre></div>
-<strong>Kolme karttaa</strong>
-<div class="figure" style="text-align: center"><span id="fig:suppointCA3map1"></span>
-<img src="JH_capaper_files/figure-html/suppointCA3map1-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
-<p class="caption">
-Kuva 4.3: Q1b: Saksan ja Belgian aluejako
-</p>
-</div>
+<p><strong>Kaksi karttaa</strong> - <strong>edit</strong> 2d-ratkaisu esitetty, nyt 3d. ca-ratkaisun akselit ovat “nested”/sisäkkäisiä.
+<strong>edit</strong> “Kolmisormisääntö” auttaa tulkitsemaan kaksiulotteisia “oikean käden”
+kuvia. Ensimmäinen dimensio on oikean käden peukalo, toinen etusormi ja kolmas
+keskisormi.</p>
+<p>Esimerkki kolmiulotteisen ratkaisun tarkasta tulkinnasta ( <span class="citation">Roux ja Rouanet (<a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>)</span> , s.365),
+Ranskan poliitiikan dimensiot (“French political space”) 1990-luvun lopulla.</p>
+<p>Ensimmäisen ja kolmannen dimesion kuvassa näkyy pisteparven hajonta tärkeimmän
+dimension ympärillä. Sarakepisteiden järjestys säilyy samana, samoin maapisteiden
+oikealta vasemmalle.</p>
 <div class="figure" style="text-align: center"><span id="fig:suppointCA3map2"></span>
 <img src="JH_capaper_files/figure-html/suppointCA3map2-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
 <p class="caption">
-Kuva 4.4: Q1b: Saksan ja Belgian aluejako
+Kuva 4.3: Q1b: Saksan ja Belgian aluejako
 </p>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:suppointCA3map3"></span>
 <img src="JH_capaper_files/figure-html/suppointCA3map3-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
 <p class="caption">
-Kuva 4.5: Q1b: Saksan ja Belgian aluejako
+Kuva 4.4: Q1b: Saksan ja Belgian aluejako
 </p>
 </div>
-<p><strong>k</strong> Tulkinta.</p>
-<p><strong>k</strong> kokeilu 3d-grafiikalla - toinen riittää</p>
+<p>Toisen ja kolmannen dimension kartalla on esitetty noin viidesosa kokonaisinertiasta.
+Tässä Belgian pisteet ovat kuvan diagonaalilla.</p>
+<p><strong>k</strong> <strong>edit</strong> Tulkinta on aika hankalaa, ehkä riittää että toteaa selvän
+kolmiulotteisen rakenteen jossa Belgian alueiden ero näkyy.</p>
+<p>Kahdesta projektiosta näkee kolmannen dimension suuntaiset suurimmat poikkeamat,
+niitä voi vertailla rivi- ja sarakepisteiden laatuun kaksiulotteisella kartalla.</p>
+<p><strong>k</strong> kokeilu 3d-grafiikalla - toinen riittää. Dynaamisella kuvalla pistepilvien
+rakenteen hahmottaisi helpommin.</p>
 <div class="figure" style="text-align: center"><span id="fig:3dklippi1"></span>
 <img src="img/3dSymMap_1.PNG" alt="Saksan ja  Belgian aluejako - 3d-kuva1" width="90%" />
 <p class="caption">
-Kuva 4.6: Saksan ja Belgian aluejako - 3d-kuva1
+Kuva 4.5: Saksan ja Belgian aluejako - 3d-kuva1
 </p>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:3dklippi2"></span>
 <img src="img/3dSymMap_2.PNG" alt="Saksan ja  Belgian aluejako - 3d-kuva2" width="90%" />
 <p class="caption">
-Kuva 4.7: Saksan ja Belgian aluejako - 3d-kuva2
+Kuva 4.6: Saksan ja Belgian aluejako - 3d-kuva2
 </p>
 </div>
 
@@ -4336,11 +4358,11 @@ Kuva 8.2: Tulostiedoston prosessointi
 <span id="cb27-1484"><a href="#cb27-1484"></a>                <span class="dt">sub =</span> <span class="st">&quot;symmetrinen kartta - 1. ja 2. dimensio&quot;</span>)</span>
 <span id="cb27-1485"><a href="#cb27-1485"></a></span>
 <span id="cb27-1486"><a href="#cb27-1486"></a><span class="kw">plot</span>(suppointCA3, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>),</span>
-<span id="cb27-1487"><a href="#cb27-1487"></a>                <span class="dt">main =</span> <span class="st">&quot;Kolmen dimension ratkaisu&quot;</span>,</span>
+<span id="cb27-1487"><a href="#cb27-1487"></a>                <span class="dt">main =</span> <span class="st">&quot;Kolmen dimension ratkaisu 1&quot;</span>,</span>
 <span id="cb27-1488"><a href="#cb27-1488"></a>                <span class="dt">sub =</span> <span class="st">&quot;symmetrinen kartta - 1. ja 3. dimensio&quot;</span>)</span>
 <span id="cb27-1489"><a href="#cb27-1489"></a></span>
 <span id="cb27-1490"><a href="#cb27-1490"></a><span class="kw">plot</span>(suppointCA3, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>),</span>
-<span id="cb27-1491"><a href="#cb27-1491"></a>                <span class="dt">main =</span> <span class="st">&quot;Kolmen dimension ratkaisu&quot;</span>,</span>
+<span id="cb27-1491"><a href="#cb27-1491"></a>                <span class="dt">main =</span> <span class="st">&quot;Kolmen dimension ratkaisu 2&quot;</span>,</span>
 <span id="cb27-1492"><a href="#cb27-1492"></a>                <span class="dt">sub =</span> <span class="st">&quot;symmetrinen kartta - 2. ja 3. dimensio&quot;</span>)</span>
 <span id="cb27-1493"><a href="#cb27-1493"></a></span>
 <span id="cb27-1494"><a href="#cb27-1494"></a></span>
@@ -4981,6 +5003,9 @@ Kuva 8.2: Tulostiedoston prosessointi
 </div>
 <div id="ref-RefWorks:doc:5a857a44e4b0ed2d44664d87">
 <p>Greenacre, Michael, ja Rafael Pardo. 2006. ”Subset Correspondence Analysis: Visualizing Relationships Among a Selected Set of Response Categories From a Questionnaire Survey”. <em>Sociological Methods &amp; Research</em> 35 (2): 193–218. <a href="https://doi.org/10.1177/0049124106290316">https://doi.org/10.1177/0049124106290316</a>.</p>
+</div>
+<div id="ref-RefWorks:doc:5b8175eee4b08da192f99a35">
+<p>Greenacre, Michael, ja Raul Primicerio. 2013. <em>Multivariate Analysis of Ecological Data</em>. Bilbao: Fundacion BBVA. <a href="https://www.fbbva.es/microsite/multivariate-statistics/maed.html">https://www.fbbva.es/microsite/multivariate-statistics/maed.html</a>.</p>
 </div>
 <div id="ref-RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a">
 <p>ISSP. 2016. ”ZA5900: International Social Survey Programme: Family and Changing Gender Roles IV - ISSP 2012 - data ja dokumentaatio (selattava versio)”. <a href="https://zacat.gesis.org/webview/index.jsp?object=http://zacat.gesis.org/obj/fStudy/ZA5900">https://zacat.gesis.org/webview/index.jsp?object=http://zacat.gesis.org/obj/fStudy/ZA5900</a>.</p>

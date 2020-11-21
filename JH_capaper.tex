@@ -126,7 +126,7 @@
 
 \title{Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä}
 \author{Jussi Hirvonen}
-\date{Versio 0.7, tulostettu 2020-11-20}
+\date{Versio 0.7, tulostettu 2020-11-21}
 
 \begin{document}
 \maketitle
@@ -836,8 +836,6 @@ valikoituja kuvia. Graafinen data-analyysi on vaivatonta vasta sitten kun se teh
 En jatkossa esitä kuvailevia akseleiden nimiä kuvissa,
 akseleiden nimeäminen on kuvan tulkinnan toinen askel.
 
-Liitteessä 1 on esitetty korrespondenssianalyysin matemaattisen ratkaisun periaate.
-
 \textbf{k} Kuva tai kartta - käytän termejä synonyymeinä - on se taso, joka parhaiten
 ''selittää'' neliulotteisen pisteparven hajontaa suhteessa koko aineiston
 keskiarvopisteeseen eli sentroidiin. Matemaattisesti ratkaisu saadaan
@@ -1162,6 +1160,26 @@ kohti origoa kertomalla ne massojen neliöjuurilla. Näin kuva selkenee, ja ``ku
 pisteen etäisyys origosta (``vektori'') kertoo sen kontribuution pääakseleille. Näiden pisteiden
 välisillä etäisyyksillä ei ole suoraa tulkintaa.
 
+Jako standardi- ja pääkoordinaatteihin on suora seuraus korrespondenssianalyysin
+matemaattisesta ratkaisusta. Greenacre esittelee kaksoiskuvia käsittelevässä
+kirjassaan \citep{RefWorks:doc:5a857a43e4b0ed2d44664d7c} selkeästi koordinaattien
+yhteyden ratkaisualgoritmiin, singulaariarvohajoitelmaan.
+
+Koordinaattien yhteys voidaan esittää kahtena yksinkertaistettuna kaavana
+( \citet{RefWorks:doc:5b8175eee4b08da192f99a35}, s.174 ):
+
+\begin{equation}
+  pääkoordinaatit = standardikoordinatit \times \sqrt{pääakselien \: inertiat}
+    \label{eq:pcfromstd1}
+\end{equation}
+
+\begin{equation}
+  kontribuutiokoordinaatit = \sqrt{massat} \times  standardikoordinatit 
+    \label{eq:kontribfromstd1}
+\end{equation}
+
+Viite
+
 \hypertarget{tuxe4ydentuxe4vuxe4t-pisteet}{%
 \chapter{Täydentävät pisteet}\label{tuxe4ydentuxe4vuxe4t-pisteet}}
 
@@ -1439,16 +1457,17 @@ kuvissa selityksen.
 \end{Highlighting}
 \end{Shaded}
 
-\textbf{Kolme karttaa}
+\textbf{Kaksi karttaa} - \textbf{edit} 2d-ratkaisu esitetty, nyt 3d. ca-ratkaisun akselit ovat ``nested''/sisäkkäisiä.
+\textbf{edit} ``Kolmisormisääntö'' auttaa tulkitsemaan kaksiulotteisia ``oikean käden''
+kuvia. Ensimmäinen dimensio on oikean käden peukalo, toinen etusormi ja kolmas
+keskisormi.
 
-\begin{figure}
+Esimerkki kolmiulotteisen ratkaisun tarkasta tulkinnasta ( \citet{RefWorks:doc:5a857a43e4b0ed2d44664d75} , s.365),
+Ranskan poliitiikan dimensiot (``French political space'') 1990-luvun lopulla.
 
-{\centering \includegraphics[width=0.9\linewidth]{JH_capaper_files/figure-latex/suppointCA3map1-1} 
-
-}
-
-\caption{Q1b: Saksan ja  Belgian aluejako }\label{fig:suppointCA3map1}
-\end{figure}
+Ensimmäisen ja kolmannen dimesion kuvassa näkyy pisteparven hajonta tärkeimmän
+dimension ympärillä. Sarakepisteiden järjestys säilyy samana, samoin maapisteiden
+oikealta vasemmalle.
 
 \begin{figure}
 
@@ -1468,9 +1487,17 @@ kuvissa selityksen.
 \caption{Q1b: Saksan ja  Belgian aluejako }\label{fig:suppointCA3map3}
 \end{figure}
 
-\textbf{k} Tulkinta.
+Toisen ja kolmannen dimension kartalla on esitetty noin viidesosa kokonaisinertiasta.
+Tässä Belgian pisteet ovat kuvan diagonaalilla.
 
-\textbf{k} kokeilu 3d-grafiikalla - toinen riittää
+\textbf{k} \textbf{edit} Tulkinta on aika hankalaa, ehkä riittää että toteaa selvän
+kolmiulotteisen rakenteen jossa Belgian alueiden ero näkyy.
+
+Kahdesta projektiosta näkee kolmannen dimension suuntaiset suurimmat poikkeamat,
+niitä voi vertailla rivi- ja sarakepisteiden laatuun kaksiulotteisella kartalla.
+
+\textbf{k} kokeilu 3d-grafiikalla - toinen riittää. Dynaamisella kuvalla pistepilvien
+rakenteen hahmottaisi helpommin.
 
 \begin{figure}
 
@@ -4583,11 +4610,11 @@ julkaisutekniikan ympäristön.
                 \DataTypeTok{sub =} \StringTok{"symmetrinen kartta - 1. ja 2. dimensio"}\NormalTok{)}
 
 \KeywordTok{plot}\NormalTok{(suppointCA3, }\DataTypeTok{dim =} \KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{3}\NormalTok{),}
-                \DataTypeTok{main =} \StringTok{"Kolmen dimension ratkaisu"}\NormalTok{,}
+                \DataTypeTok{main =} \StringTok{"Kolmen dimension ratkaisu 1"}\NormalTok{,}
                 \DataTypeTok{sub =} \StringTok{"symmetrinen kartta - 1. ja 3. dimensio"}\NormalTok{)}
 
 \KeywordTok{plot}\NormalTok{(suppointCA3, }\DataTypeTok{dim =} \KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{),}
-                \DataTypeTok{main =} \StringTok{"Kolmen dimension ratkaisu"}\NormalTok{,}
+                \DataTypeTok{main =} \StringTok{"Kolmen dimension ratkaisu 2"}\NormalTok{,}
                 \DataTypeTok{sub =} \StringTok{"symmetrinen kartta - 2. ja 3. dimensio"}\NormalTok{)}
 
 

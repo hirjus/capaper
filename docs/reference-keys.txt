@@ -19,10 +19,11 @@ fig:G1-3asymmContrib1
 fig:G1-3asymmContrib2
 fig:simpleCA3map1
 fig:simpleCA3map2
+eq:pcfromstd1
+eq:kontribfromstd1
 tab:BeDealueTable1
 fig:suppointCA2map1
 fig:suppointCA2map2
-fig:suppointCA3map1
 fig:suppointCA3map2
 fig:suppointCA3map3
 fig:3dklippi1
