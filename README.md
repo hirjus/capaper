@@ -200,3 +200,6 @@ r-koodin automaattitulostukseen teknisessä liitteessä. TUlostus kaatuu, viitet
  
  **21.11.2020 versio 0.8** Subset-analyysit valmiit, liikaa numeeristen tulosten listauksia. Tekstiä viimeisteltävä, muutama
  kappale teoriasta lisättävä.
+ 
+ **22.11.2020** Lisättiin kolme pdf-tiedostoa: kansilehti, sisällysluettelo ja tiivistelmä.
+ Kansilehti ja tiivistelmä OverLeafissa, sisällysluettelo tehty MS Wordillä.

@@ -24,6 +24,7 @@ options(tinytex.verbose = TRUE)
 
 ```
 
+**Tämä luku poistetaan kun tutkielma on valmis**
 
 **Raportti yhtenä html-tiedostona** (https://hirjus.github.io/capaper/JH_capaper.html), ja kaikki toimii.
 Tässä liitteet, lähdeviitteet ja koodilistaus.
@@ -34,18 +35,18 @@ Pandoc ei osaa rivittää koodia oikein tms. Koodilistauksen poistaminen ei auta
 
 **Suunnitelma: PDF html-raportista -> pdfExchange-ohjelmalla sivunumerot ja kansilehdet**
 
+**22.11.2020 luonnos kansilehdeksi, sisällysluetteloksi ja tiivistelmän aihio**
+
+(https://hirjus.github.io/capaper/GraduKansilehti1.pdf)
+(https://hirjus.github.io/capaper/wordTOC.pdf)
+(https://hirjus.github.io/capaper/GtiivisTesti1.pdf)
+
+
 
 RefWorksistä tuotu jhca2020.bib-tiedosto tarkistettu ja korjailtu virheet. Ei enään ladata uutta (21.11.2020).
 
 Data-analyysi ja koodi omana projektina: (https://hirjus.github.io/Galku). Tarkempia tulostuksia,
 muunnosten tarkistuksia ja enemmän kuvia, myös koodi näkyy.
-
-
-
-**12.11.20**
-Raportissa on hieman liian pitkiä ca:n numeeristen tulosten listauksia, poistetaan tai
-lyhennetään rajusti poimimalla oleellisia rivejä. Periaatteessa vain yksi (Saksan ja Belgian jako)
-jää, siinä kerrotaan miten tuloksia luetaan.
 
 
 ```{r jhpaketit, include=FALSE}
