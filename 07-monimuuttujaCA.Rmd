@@ -186,14 +186,14 @@ Hyvin yksinkertainen esimerkki.
 aika pulmallisia, varianssin dekomponointi ei onnistu jos reunajakaumat ovat
 alitauluissa erilaisia.
 
-## Matched matrices
+**Matched matrices** **edit** Ei omaa lukua, vaan pari kappaletta matriisien pinoamisesta
+ja yhdistelystä.
 
 **k** lyhyesti matriisien yhdistelystä hyvin yleisenä analyysin menetelmänä.
 Voidaan tarkastella luonteeltaan erilaisten muuttujaryhmien tai muuttujien
 yhteyksiä kuten edellisessä esimerkissä. 
 
-**Huom! (16.10.20** Jos ja kun ei tehdä analyysiä, ei tarvitse omaa jaksoa.
-Kannattaa mainita, ehkävain teoriajaksossa? Idea: matriisien yhdistämisellä
+**k**Idea: matriisien yhdistämisellä
 saadaan ote monenlaiseen tutkimusongelmaan. Benzecri: data-analyysissä on vain
 löydettävä oikea matriisi joka diagonalisoidaan.
 
@@ -202,6 +202,24 @@ Ref:CAip ss. 177 [@RefWorks:doc:5a857a43e4b0ed2d44664d78], HY2017_MCA, Greenacre
 (sovellus ISSP 1989,4 kysymystä 'pitäisikö äidin olla kotona', 8 maata), tässä
 artikkelissa "SVD-based methods",joista yksi CA (muut biplots, PCA, compositional data/log ratios).
 [@RefWorks:doc:5b6f159ce4b0bc0f31734b76]
+
+Ryhmien välisen ja ryhmien sisäinen inertian erottaminen, **ABBA**
+on yksi ratkaisu (ABBA matrix, teknisesti block circular matrix).
+
+Edellisen menetelmän variantti, jossa ryhmien väliset ja sisäiset erot saadaan
+esiin. Inertian jakaminen.
+
+Samanlaisten rivien ja sarakkeiden kaksi samankokoista taulua, esimerkiksi
+sukupuolivaikutusten arviointi. Alkuperäinen taulukko jaetaan kahdeksi tauluksi
+sukupuolen mukaan. Matriisien yhdistäminen (concatenation) riveittäin tai
+sarakkeittain ei näytä optimaalisesti mm - matriisien eroja.
+
+
+Luokittelu voi olla myös kahden indikaattorimuuttujan avulla jako neljään
+taulukkoon (esim. miehet vs. naiset länsieuroopassa verratuna samaan asetelmaan
+itä-Euroopassa). Samaa ideaa laajennetaan.
+
+Esimerkkinä "Attitudes to women working in 2012".
 
 **ABBA**"We consider the joint analysis of two matched matrices which have common
 rows and columns, for example multivariate data observed at two time points or split
@@ -217,22 +235,7 @@ biplots optimally display the overall cross-cultural differences as well as the 
 differences. The case of more than two matched matrices is also discussed."
 
 
-Edellisen menetelmän variantti, jossa ryhmien väliset ja sisäiset erot saadaan
-esiin. Inertian jakaminen.
 
-Samanlaisten rivien ja sarakkeiden kaksi samankokoista taulua, esimerkiksi
-sukupuolivaikutusten arviointi. Alkuperäinen taulukko jaetaan kahdeksi tauluksi
-sukupuolen mukaan. Matriisien yhdistäminen (concatenation) riveittäin tai
-sarakkeittain ei näytä optimaalisesti mm - matriisien eroja.
-
-Ryhmien välisen ja ryhmien sisäinen inertian erottaminen, **ABBA**
-on yksi ratkaisu (ABBA matrix, teknisesti block circular matrix).
-
-Luokittelu voi olla myös kahden indikaattorimuuttujan avulla jako neljään
-taulukkoon (esim. miehet vs. naiset länsieuroopassa verratuna samaan asetelmaan
-itä-Euroopassa). Samaa ideaa laajennetaan.
-
-Esimerkkinä "Attitudes to women working in 2012".
 
 
 ## MCA - monimuuttujakorrespondenssianalyysi

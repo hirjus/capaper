@@ -69,7 +69,7 @@ plot(maagaCA2sub2, main = "Q1b: Lapsi kärsii jos äiti käy töissä",
 ja kaikkien muiden vastausten välillä. Toinen dimensio kontrasti e-vastauksen 
 ja kaikkien muiden vastausten kanssa, erityiesti S, s, ja myös neutraali ?.
 
-huom! ei tulkintaa sarakkeiden etäisyyksille, mutta kontribuutiolle on.
+**k** Ei tulkintaa sarakkeiden etäisyyksille, mutta kontribuutiolle on.
 
 ```{r maagaCA2sub2map3,echo=F, fig.cap= "Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
@@ -84,6 +84,11 @@ plot(maagaCA2sub2, map = "rowgreen",
 
 ```
 
+Karttoja \@ref(fig:maagaCA2sub2map1) ja \@ref(fig:maagaCA2sub2map3) joutuu katsomaan
+aika tarkkaan ennnekkuin uskoo, että akseleiden skaalaus on akateeminen pulmma
+vailla käytännön merkitystä (kts. jakso 3.3.4). Dataa analysoidaan graafisesti, ja kuvat
+_näyttävät_ erilaisilta. Pääakselien inertioiden neliöjuuret ovat `r round(sqrt(0.10709),3)` ja `r round(sqrt(0.02498),3)`,
+sarakkeet voisi siis tulkita myös kontribuutiokuvista.
 
 
 ```{r maagaCA2sub2map2,echo=F, fig.cap= "Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi", fig.asp = 1, out.width = "90%",fig.align = "center"}
@@ -142,7 +147,7 @@ on lähempänä (kulma on pienempi) pystyakselia. Kontribuutio on suurempi (147 
 71 x-akselille). Toisaalta x-akseli selittää selvästi suurimman osan kaikkien muiden
 sarakepisteiden inertiasta, ja y-akseli taas lähes täysin e-pisteen inertian.
 
-```{r maagaBEBGHU, echo=T}
+```{r maagaBEBGHU, echo=F}
 
 # Belgia, Bulgaria ja Unkari analysoidaan tiiviisti
 # Belgia on vähän välitapaus Bulgarian ja Unkarin ja kolmen ensimmäisen maan
@@ -197,8 +202,8 @@ dimension suuntaan, Unkarin ja Bulgarian osajoukkojen erot ovat lähes
 pelkästään pystysuoria.
 
 Suhteellinen kontribuutio eli pisteen laatu (numeerisissa
-tuloksissa "cor") on esitetty värisävynä. Sarakkeista e ja "?" esitetty
-huonosti, riveistä Belgian nuorimmat miehet ja naiset.
+tuloksissa "cor") on esitetty värisävynä. Sarakkeista e ja "?" on
+esitetty huonosti, riveistä Belgian nuorimmat miehet ja naiset.
 
 
 
@@ -228,7 +233,7 @@ mallien analyysi. Seuratataan minne data kuljettaa, etstiään uusia
 näkökulmia. Iän ja sukupuolen yhteys vastauksiin on rakenteeltaan erilainen,
 se ei ole ongelma vaan datan ominaisuus.
 
-```{r maagaCA2sub3num1}
+```{r maagaCA2sub3num1, echo = F}
 
 # Vilkaistaa numeerisia tuloksia, kopioidaan tekstiin jos on tarpeen
 # maagaCA2sub3
@@ -242,7 +247,8 @@ se ei ole ongelma vaan datan ominaisuus.
 ```
 
 
-Kahden osajoukon inertioiden summa on sama kuin koko aineiston, Selitysasteet
+Kahden osajoukon inertioiden  summa on sama kuin koko aineiston
+( `r round(0.143551,3)` + `r round(0.119602,3)` =  `r round((0.143551 + 0.119602),3)`),  Selitysasteet
 nousevat hieman, mutta vielä oleellisempaa on kahden aika erilaisen ryhmän
 havaitseminen.
 

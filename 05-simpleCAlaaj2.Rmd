@@ -218,7 +218,9 @@ Kuvasta saa jotenkin selvää, kun sen suurentaa mutta pisteitä on selvästi li
 Joitain muuttujien nimiä voisi lyhentää, kuva-alaa voisi rajata joihinkin osiin
 mutta osajoukon korrespondenssianalyysi tarjoaa pätevimmän vaihtoehdon.
 
-**edit** numeerisia tuloksia ei listata lopullisessa raportissa.
+**edit: Numeeristen tulosten listaus?**
+Numeeriset tulokset vievät paljon tilaa, mutta toisaalta niistä voi "lukea" miten
+kartta on rakentunut. Ne voisi ehkä jättää näkyviin ainakin seuraavassa luvussa?
 
 Sarakkeiden järjestys vasemmalta oikealle ja ylhäältä alas on sama kuin edellisissä
 kartoissa. Dimenisoiden tulkinta on sama, osuus inertiasta pienenee x-akselilla
@@ -230,7 +232,7 @@ kaikki Saksan ja Belgian pisteet. Eri maiden osajoukkojen suhteita on hankalampi
 hahmottaa, erityisesti kartan oikealla laidalla.
 
 
-```{r maagaCA1num}
+```{r maagaCA1num, eval = TRUE, echo = TRUE}
 
 # Vilkaistaan numeerisia tuloksia, kopioidaan tekstiin jos on tarpeellista
 
@@ -288,10 +290,3 @@ pisteiksi.
 
 Edellisen kartan numeerisista tuloksista ei löydy pienen massan pisteitä joilla
 on merkittävä kontribuutio akseleihin.
-
-
-
-
-
-
-

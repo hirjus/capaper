@@ -24,6 +24,7 @@ options(tinytex.verbose = TRUE)
 
 ```
 
+**Tämä luku poistetaan kun tutkielma on valmis**
 
 **Raportti yhtenä html-tiedostona** (https://hirjus.github.io/capaper/JH_capaper.html), ja kaikki toimii.
 Tässä liitteet, lähdeviitteet ja koodilistaus.
@@ -34,18 +35,18 @@ Pandoc ei osaa rivittää koodia oikein tms. Koodilistauksen poistaminen ei auta
 
 **Suunnitelma: PDF html-raportista -> pdfExchange-ohjelmalla sivunumerot ja kansilehdet**
 
+**22.11.2020 luonnos kansilehdeksi, sisällysluetteloksi ja tiivistelmän aihio**
+
+(https://hirjus.github.io/capaper/GraduKansilehti1.pdf)
+(https://hirjus.github.io/capaper/wordTOC.pdf)
+(https://hirjus.github.io/capaper/GtiivisTesti1.pdf)
+
+
 
 RefWorksistä tuotu jhca2020.bib-tiedosto tarkistettu ja korjailtu virheet. Ei enään ladata uutta (21.11.2020).
 
 Data-analyysi ja koodi omana projektina: (https://hirjus.github.io/Galku). Tarkempia tulostuksia,
 muunnosten tarkistuksia ja enemmän kuvia, myös koodi näkyy.
-
-
-
-**12.11.20**
-Raportissa on hieman liian pitkiä ca:n numeeristen tulosten listauksia, poistetaan tai
-lyhennetään rajusti poimimalla oleellisia rivejä. Periaatteessa vain yksi (Saksan ja Belgian jako)
-jää, siinä kerrotaan miten tuloksia luetaan.
 
 
 ```{r jhpaketit, include=FALSE}
@@ -1912,7 +1913,7 @@ khii2-etäisyyksien poikkeamien summan eli on mahdollisimman lähellä pisteitä
 duaalisuus on korrespondenssianalyysin perusominaisuuksia.
 
 
-## Korrespondenssianalyysin esimerkki: symmetrinen kartta
+## Symmetrinen kartta
 
 ```{r simpleCA1map1, echo=FALSE, fig.cap= "Q1b: lapsi kärsii jos äiti on töissä",fig.asp = 1, out.width = "90%",fig.align = "center"}
 
@@ -1959,18 +1960,16 @@ tulkinta perustuu siihen, mitä mitä yhteistä on kaikilla elementeillä jotka 
 origon vasemmalla puolella ja vastaavasti origon oikealla puolella. Samalla tavalla
 tulkitaan toinen akseli, mitä on ylhäällä ja alhaalla.
 
-**edit**Käytän jatkossa muuttujista niiden symboleja sanallisen kuvauksen sijaan.
-
 Tässä tapauksessa taulukon rivit ovat havaintoja (”samples” ) ja sarakkeet
 muuttujia, ja akselien tulkinta tehdään muuttujien avulla. Vasemmalla on E ja
 oikealla puolella samanmieliset vastaukset s ja S. Neutraali ”?” on s-vastausten
 vasemmalla puolella. Kun erot ovat suhteellisia, ei kuvan perusteella voi sanoa
 kuinka paljon.
 
-Sarakkeet voi projisoida ensimmäiselle akselille (ts. katsoa niiden x-koordinaatin)
-, ja tässä ne ovat "oikeassa järjestyksessä".
-Jos vastausvaihtoehdoille haluaisi antaa numeeriset arvot, x-akselin koordinaatti
-olisi ehkä parempi kun järjestysnumero? 
+Sarakkeet  ovat oikeassa järjestyksessä, mutta niiden koordinaatit
+x-akselilla eivät olen tasavälisiä. Jos muuttuja jostain syystä halutaaan
+esittää välimatka- tai suhdeasteikon muuttujana koordinaatti ensimmäisellä
+dimensiolla on hyvä vaihtoehto.
 
 Ensimmäisen dimenosion tulkinta on aika selkeä. Toinen akseli on kontrasti
 lievemmän tai maltillisemman erimielisyyden ja muiden vastausten kanssa.
@@ -2129,7 +2128,7 @@ skaalattu ja mittakaavan ero symmetriseen karttaan näkyy selvästi.
 
 
 
-**Barysentrinen periaate**
+### Barysentrinen periaate
 
 Rivipisteet ja sarakepisteet yhdistää _barysentrinen periaate_ . Jokainen rivipiste
 on ideaalipisteiden painotettu keskiarvo, painoina sarakkeiden käänteinen osuus
@@ -2171,7 +2170,7 @@ Sen huono puoli on ideaalipisteiden karkaaminen kauas origosta ja rivipisteiden
 pakkautuminen pieneksi parveksi. Jos rivipisteiden hajonta on suuri,
 kuva on käytännöllinen. Kyselytutkimusaineistoissa näin ei yleensä ole.
 
-## Kontribuutiot kartalla
+### Kontribuutiot kartalla
 
 Analyyseissä käytetty r-paketti "ca" esittää kartoilla myös pisteiden massat pisteen
 symbolin kokona, mutta tässä aineistossa eroja on vaikea nähdä. Tärkeämpi on pisteiden
@@ -2245,7 +2244,7 @@ Sarakkeiden laatu näyttäisi olevan hyvä, mutta rivipisteistä Saksa ja erityi
 Belgia erottuvat hieman heikommin esitettyinä.
 
 
-## Massat
+### Massat
 
 **edit** Onko vakioitujen massojen kartta liian aikaisin? Tämä ei ole pääasia, vaan selvennys.
 Miksi tässä? Perusteltava, miksi en vakioi massoja maille, sukupuolille jne. (a)
@@ -2313,7 +2312,7 @@ massojen skaalauksella. Korrespondenssianalyysi on inertian eli kokonaishajonnan
 dekomponointia, jakamista osiin.
 
 
-## Karttojen erot
+### Karttojen erot
 
 Yksinkertaisen korrespondenssianalyysin peruskuva on symmetrinen kartta. Ehkä
 yllättäen sen "...tulkinta on edelleen menetelmän kaikkein kiistanalaisin aspekti.”
@@ -2677,8 +2676,17 @@ pitää päättää milloin se on tarpeeksi hyvä. Tai mille pisteille hyvä, mi
 **edit 26.10.2020** summary-funktio ei toimi, kun dimensioita CA-ratkaisussa kolme.
 Numeeriset tulokset voisi laskea "käsityönä". Kehno kvalitetti 2d-ratkaisussa saa
 kuvissa selityksen.
+
+**Kaksi karttaa** - **edit** 2d-ratkaisu esitetty, nyt 3d.  ca-ratkaisun akselit ovat "nested"/sisäkkäisiä.
+**edit** "Kolmisormisääntö" auttaa tulkitsemaan kaksiulotteisia "oikean käden"
+kuvia. Ensimmäinen dimensio on oikean käden peukalo, toinen etusormi ja kolmas
+keskisormi.
+
+Esimerkki kolmiulotteisen ratkaisun tarkasta tulkinnasta ( @RefWorks:doc:5a857a43e4b0ed2d44664d75 , s.365),
+Ranskan poliitiikan dimensiot ("French political space") 1990-luvun lopulla.
+
  
-```{r BeDealueetCA3d, echo=TRUE}
+```{r BeDealueetCA3d, echo = FALSE}
 suppointCA3 <- ca(~maa3 + Q1b,ISSP2012esim1.dat, nd = 3)
 
 # summary(suppointCA3)
@@ -2687,7 +2695,7 @@ suppointCA3 <- ca(~maa3 + Q1b,ISSP2012esim1.dat, nd = 3)
 
 ```
  
- 
+
  
 ```{r suppointCA3map1, echo=FALSE, eval=FALSE, fig.cap= "Q1b: Saksan ja  Belgian aluejako ",fig.asp = 1, out.width = "90%",fig.align = "center"}
 plot(suppointCA3, dim = c(1,2),
@@ -2696,13 +2704,7 @@ plot(suppointCA3, dim = c(1,2),
 
 ```
  
-**Kaksi karttaa** - **edit** 2d-ratkaisu esitetty, nyt 3d.  ca-ratkaisun akselit ovat "nested"/sisäkkäisiä.
-**edit** "Kolmisormisääntö" auttaa tulkitsemaan kaksiulotteisia "oikean käden"
-kuvia. Ensimmäinen dimensio on oikean käden peukalo, toinen etusormi ja kolmas
-keskisormi.
 
-Esimerkki kolmiulotteisen ratkaisun tarkasta tulkinnasta ( @RefWorks:doc:5a857a43e4b0ed2d44664d75 , s.365),
-Ranskan poliitiikan dimensiot ("French political space") 1990-luvun lopulla.
 
 Ensimmäisen ja kolmannen dimesion kuvassa näkyy pisteparven hajonta tärkeimmän
 dimension ympärillä. Sarakepisteiden järjestys säilyy samana, samoin maapisteiden
@@ -2723,18 +2725,26 @@ plot(suppointCA3, dim = c(2,3),
 
 ```
 
+
 Toisen ja kolmannen dimension kartalla on esitetty noin viidesosa kokonaisinertiasta.
 Tässä Belgian pisteet ovat kuvan diagonaalilla.
 
-**k** **edit** Tulkinta on aika hankalaa, ehkä riittää että toteaa selvän
+**k** Tulkinta on aika hankalaa, ehkä riittää että toteaa selvän
 kolmiulotteisen rakenteen jossa Belgian alueiden ero näkyy.
 
 Kahdesta projektiosta näkee kolmannen dimension suuntaiset suurimmat poikkeamat,
 niitä voi vertailla rivi- ja sarakepisteiden laatuun kaksiulotteisella kartalla.
 
+**k** Kolmiulotteisen kuvan tulkinta pitäisi aloittaa alusta, rivi- ja sarakepisteet
+hajaantuvat ulos tasosta. Ratkaisu on kuitenkin "sisäkkäinen" / "nested", kaksiuloteisen kartan
+pisteet vain siirtyvät kolmannen hieman ulos tasosta. Kolmannen dimension osuus kokonaisinertiasta
+on noin seitsemän prosenttia. Belgian alueiden ero näkyy erityisesti kartassa \@ref(fig:suppointCA3map3)
+ja \@ref(fig:3dklippi2), samoin E-sarakkeen kohtalainen muutos.
 
-**k** kokeilu 3d-grafiikalla - toinen riittää. Dynaamisella kuvalla pistepilvien
-rakenteen hahmottaisi helpommin.
+**edit** - toinen ehkä riittää?
+
+**k** Kuvakaappaukset ca-paketin kolmiulotteisista kuvista eivät kovin hyvin näitä eroja. Dynaamisella kuvalla pistepilvien
+rakenteen hahmottaisi helpommin, tämä onnistuu useissa R-ympäristöissä.
 
 ```{r 3dklippi1, echo=FALSE, fig.cap="Saksan ja  Belgian aluejako - 3d-kuva1", out.width = "90%",fig.align = "center"}
 
@@ -2972,7 +2982,9 @@ Kuvasta saa jotenkin selvää, kun sen suurentaa mutta pisteitä on selvästi li
 Joitain muuttujien nimiä voisi lyhentää, kuva-alaa voisi rajata joihinkin osiin
 mutta osajoukon korrespondenssianalyysi tarjoaa pätevimmän vaihtoehdon.
 
-**edit** numeerisia tuloksia ei listata lopullisessa raportissa.
+**edit: Numeeristen tulosten listaus?**
+Numeeriset tulokset vievät paljon tilaa, mutta toisaalta niistä voi "lukea" miten
+kartta on rakentunut. Ne voisi ehkä jättää näkyviin ainakin seuraavassa luvussa?
 
 Sarakkeiden järjestys vasemmalta oikealle ja ylhäältä alas on sama kuin edellisissä
 kartoissa. Dimenisoiden tulkinta on sama, osuus inertiasta pienenee x-akselilla
@@ -2984,7 +2996,7 @@ kaikki Saksan ja Belgian pisteet. Eri maiden osajoukkojen suhteita on hankalampi
 hahmottaa, erityisesti kartan oikealla laidalla.
 
 
-```{r maagaCA1num}
+```{r maagaCA1num, eval = TRUE, echo = TRUE}
 
 # Vilkaistaan numeerisia tuloksia, kopioidaan tekstiin jos on tarpeellista
 
@@ -3042,13 +3054,6 @@ pisteiksi.
 
 Edellisen kartan numeerisista tuloksista ei löydy pienen massan pisteitä joilla
 on merkittävä kontribuutio akseleihin.
-
-
-
-
-
-
-
 
 <!--chapter:end:05-simpleCAlaaj2.Rmd-->
 
@@ -3123,7 +3128,7 @@ plot(maagaCA2sub2, main = "Q1b: Lapsi kärsii jos äiti käy töissä",
 ja kaikkien muiden vastausten välillä. Toinen dimensio kontrasti e-vastauksen 
 ja kaikkien muiden vastausten kanssa, erityiesti S, s, ja myös neutraali ?.
 
-huom! ei tulkintaa sarakkeiden etäisyyksille, mutta kontribuutiolle on.
+**k** Ei tulkintaa sarakkeiden etäisyyksille, mutta kontribuutiolle on.
 
 ```{r maagaCA2sub2map3,echo=F, fig.cap= "Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
@@ -3138,6 +3143,11 @@ plot(maagaCA2sub2, map = "rowgreen",
 
 ```
 
+Karttoja \@ref(fig:maagaCA2sub2map1) ja \@ref(fig:maagaCA2sub2map3) joutuu katsomaan
+aika tarkkaan ennnekkuin uskoo, että akseleiden skaalaus on akateeminen pulmma
+vailla käytännön merkitystä (kts. jakso 3.3.4). Dataa analysoidaan graafisesti, ja kuvat
+_näyttävät_ erilaisilta. Pääakselien inertioiden neliöjuuret ovat `r round(sqrt(0.10709),3)` ja `r round(sqrt(0.02498),3)`,
+sarakkeet voisi siis tulkita myös kontribuutiokuvista.
 
 
 ```{r maagaCA2sub2map2,echo=F, fig.cap= "Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi", fig.asp = 1, out.width = "90%",fig.align = "center"}
@@ -3196,7 +3206,7 @@ on lähempänä (kulma on pienempi) pystyakselia. Kontribuutio on suurempi (147 
 71 x-akselille). Toisaalta x-akseli selittää selvästi suurimman osan kaikkien muiden
 sarakepisteiden inertiasta, ja y-akseli taas lähes täysin e-pisteen inertian.
 
-```{r maagaBEBGHU, echo=T}
+```{r maagaBEBGHU, echo=F}
 
 # Belgia, Bulgaria ja Unkari analysoidaan tiiviisti
 # Belgia on vähän välitapaus Bulgarian ja Unkarin ja kolmen ensimmäisen maan
@@ -3251,8 +3261,8 @@ dimension suuntaan, Unkarin ja Bulgarian osajoukkojen erot ovat lähes
 pelkästään pystysuoria.
 
 Suhteellinen kontribuutio eli pisteen laatu (numeerisissa
-tuloksissa "cor") on esitetty värisävynä. Sarakkeista e ja "?" esitetty
-huonosti, riveistä Belgian nuorimmat miehet ja naiset.
+tuloksissa "cor") on esitetty värisävynä. Sarakkeista e ja "?" on
+esitetty huonosti, riveistä Belgian nuorimmat miehet ja naiset.
 
 
 
@@ -3282,7 +3292,7 @@ mallien analyysi. Seuratataan minne data kuljettaa, etstiään uusia
 näkökulmia. Iän ja sukupuolen yhteys vastauksiin on rakenteeltaan erilainen,
 se ei ole ongelma vaan datan ominaisuus.
 
-```{r maagaCA2sub3num1}
+```{r maagaCA2sub3num1, echo = F}
 
 # Vilkaistaa numeerisia tuloksia, kopioidaan tekstiin jos on tarpeen
 # maagaCA2sub3
@@ -3296,7 +3306,8 @@ se ei ole ongelma vaan datan ominaisuus.
 ```
 
 
-Kahden osajoukon inertioiden summa on sama kuin koko aineiston, Selitysasteet
+Kahden osajoukon inertioiden  summa on sama kuin koko aineiston
+( `r round(0.143551,3)` + `r round(0.119602,3)` =  `r round((0.143551 + 0.119602),3)`),  Selitysasteet
 nousevat hieman, mutta vielä oleellisempaa on kahden aika erilaisen ryhmän
 havaitseminen.
 
@@ -3494,14 +3505,14 @@ Hyvin yksinkertainen esimerkki.
 aika pulmallisia, varianssin dekomponointi ei onnistu jos reunajakaumat ovat
 alitauluissa erilaisia.
 
-## Matched matrices
+**Matched matrices** **edit** Ei omaa lukua, vaan pari kappaletta matriisien pinoamisesta
+ja yhdistelystä.
 
 **k** lyhyesti matriisien yhdistelystä hyvin yleisenä analyysin menetelmänä.
 Voidaan tarkastella luonteeltaan erilaisten muuttujaryhmien tai muuttujien
 yhteyksiä kuten edellisessä esimerkissä. 
 
-**Huom! (16.10.20** Jos ja kun ei tehdä analyysiä, ei tarvitse omaa jaksoa.
-Kannattaa mainita, ehkävain teoriajaksossa? Idea: matriisien yhdistämisellä
+**k**Idea: matriisien yhdistämisellä
 saadaan ote monenlaiseen tutkimusongelmaan. Benzecri: data-analyysissä on vain
 löydettävä oikea matriisi joka diagonalisoidaan.
 
@@ -3510,6 +3521,24 @@ Ref:CAip ss. 177 [@RefWorks:doc:5a857a43e4b0ed2d44664d78], HY2017_MCA, Greenacre
 (sovellus ISSP 1989,4 kysymystä 'pitäisikö äidin olla kotona', 8 maata), tässä
 artikkelissa "SVD-based methods",joista yksi CA (muut biplots, PCA, compositional data/log ratios).
 [@RefWorks:doc:5b6f159ce4b0bc0f31734b76]
+
+Ryhmien välisen ja ryhmien sisäinen inertian erottaminen, **ABBA**
+on yksi ratkaisu (ABBA matrix, teknisesti block circular matrix).
+
+Edellisen menetelmän variantti, jossa ryhmien väliset ja sisäiset erot saadaan
+esiin. Inertian jakaminen.
+
+Samanlaisten rivien ja sarakkeiden kaksi samankokoista taulua, esimerkiksi
+sukupuolivaikutusten arviointi. Alkuperäinen taulukko jaetaan kahdeksi tauluksi
+sukupuolen mukaan. Matriisien yhdistäminen (concatenation) riveittäin tai
+sarakkeittain ei näytä optimaalisesti mm - matriisien eroja.
+
+
+Luokittelu voi olla myös kahden indikaattorimuuttujan avulla jako neljään
+taulukkoon (esim. miehet vs. naiset länsieuroopassa verratuna samaan asetelmaan
+itä-Euroopassa). Samaa ideaa laajennetaan.
+
+Esimerkkinä "Attitudes to women working in 2012".
 
 **ABBA**"We consider the joint analysis of two matched matrices which have common
 rows and columns, for example multivariate data observed at two time points or split
@@ -3525,22 +3554,7 @@ biplots optimally display the overall cross-cultural differences as well as the 
 differences. The case of more than two matched matrices is also discussed."
 
 
-Edellisen menetelmän variantti, jossa ryhmien väliset ja sisäiset erot saadaan
-esiin. Inertian jakaminen.
 
-Samanlaisten rivien ja sarakkeiden kaksi samankokoista taulua, esimerkiksi
-sukupuolivaikutusten arviointi. Alkuperäinen taulukko jaetaan kahdeksi tauluksi
-sukupuolen mukaan. Matriisien yhdistäminen (concatenation) riveittäin tai
-sarakkeittain ei näytä optimaalisesti mm - matriisien eroja.
-
-Ryhmien välisen ja ryhmien sisäinen inertian erottaminen, **ABBA**
-on yksi ratkaisu (ABBA matrix, teknisesti block circular matrix).
-
-Luokittelu voi olla myös kahden indikaattorimuuttujan avulla jako neljään
-taulukkoon (esim. miehet vs. naiset länsieuroopassa verratuna samaan asetelmaan
-itä-Euroopassa). Samaa ideaa laajennetaan.
-
-Esimerkkinä "Attitudes to women working in 2012".
 
 
 ## MCA - monimuuttujakorrespondenssianalyysi

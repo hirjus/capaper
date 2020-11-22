@@ -528,7 +528,7 @@ khii2-etäisyyksien poikkeamien summan eli on mahdollisimman lähellä pisteitä
 duaalisuus on korrespondenssianalyysin perusominaisuuksia.
 
 
-## Korrespondenssianalyysin esimerkki: symmetrinen kartta
+## Symmetrinen kartta
 
 ```{r simpleCA1map1, echo=FALSE, fig.cap= "Q1b: lapsi kärsii jos äiti on töissä",fig.asp = 1, out.width = "90%",fig.align = "center"}
 
@@ -575,18 +575,16 @@ tulkinta perustuu siihen, mitä mitä yhteistä on kaikilla elementeillä jotka 
 origon vasemmalla puolella ja vastaavasti origon oikealla puolella. Samalla tavalla
 tulkitaan toinen akseli, mitä on ylhäällä ja alhaalla.
 
-**edit**Käytän jatkossa muuttujista niiden symboleja sanallisen kuvauksen sijaan.
-
 Tässä tapauksessa taulukon rivit ovat havaintoja (”samples” ) ja sarakkeet
 muuttujia, ja akselien tulkinta tehdään muuttujien avulla. Vasemmalla on E ja
 oikealla puolella samanmieliset vastaukset s ja S. Neutraali ”?” on s-vastausten
 vasemmalla puolella. Kun erot ovat suhteellisia, ei kuvan perusteella voi sanoa
 kuinka paljon.
 
-Sarakkeet voi projisoida ensimmäiselle akselille (ts. katsoa niiden x-koordinaatin)
-, ja tässä ne ovat "oikeassa järjestyksessä".
-Jos vastausvaihtoehdoille haluaisi antaa numeeriset arvot, x-akselin koordinaatti
-olisi ehkä parempi kun järjestysnumero? 
+Sarakkeet  ovat oikeassa järjestyksessä, mutta niiden koordinaatit
+x-akselilla eivät olen tasavälisiä. Jos muuttuja jostain syystä halutaaan
+esittää välimatka- tai suhdeasteikon muuttujana koordinaatti ensimmäisellä
+dimensiolla on hyvä vaihtoehto.
 
 Ensimmäisen dimenosion tulkinta on aika selkeä. Toinen akseli on kontrasti
 lievemmän tai maltillisemman erimielisyyden ja muiden vastausten kanssa.
@@ -745,7 +743,7 @@ skaalattu ja mittakaavan ero symmetriseen karttaan näkyy selvästi.
 
 
 
-**Barysentrinen periaate**
+### Barysentrinen periaate
 
 Rivipisteet ja sarakepisteet yhdistää _barysentrinen periaate_ . Jokainen rivipiste
 on ideaalipisteiden painotettu keskiarvo, painoina sarakkeiden käänteinen osuus
@@ -787,7 +785,7 @@ Sen huono puoli on ideaalipisteiden karkaaminen kauas origosta ja rivipisteiden
 pakkautuminen pieneksi parveksi. Jos rivipisteiden hajonta on suuri,
 kuva on käytännöllinen. Kyselytutkimusaineistoissa näin ei yleensä ole.
 
-## Kontribuutiot kartalla
+### Kontribuutiot kartalla
 
 Analyyseissä käytetty r-paketti "ca" esittää kartoilla myös pisteiden massat pisteen
 symbolin kokona, mutta tässä aineistossa eroja on vaikea nähdä. Tärkeämpi on pisteiden
@@ -861,7 +859,7 @@ Sarakkeiden laatu näyttäisi olevan hyvä, mutta rivipisteistä Saksa ja erityi
 Belgia erottuvat hieman heikommin esitettyinä.
 
 
-## Massat
+### Massat
 
 **edit** Onko vakioitujen massojen kartta liian aikaisin? Tämä ei ole pääasia, vaan selvennys.
 Miksi tässä? Perusteltava, miksi en vakioi massoja maille, sukupuolille jne. (a)
@@ -929,7 +927,7 @@ massojen skaalauksella. Korrespondenssianalyysi on inertian eli kokonaishajonnan
 dekomponointia, jakamista osiin.
 
 
-## Karttojen erot
+### Karttojen erot
 
 Yksinkertaisen korrespondenssianalyysin peruskuva on symmetrinen kartta. Ehkä
 yllättäen sen "...tulkinta on edelleen menetelmän kaikkein kiistanalaisin aspekti.”

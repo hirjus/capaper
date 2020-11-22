@@ -197,9 +197,11 @@ r-koodin automaattitulostukseen teknisessä liitteessä. TUlostus kaatuu, viitet
  **21.11.2020** Pieniä lisäyksiä, muutama viite. Korjasin R-pakettien bibtex-tiedostossa
  Mullerin nimen "saksalaisen y-kirjaimen" kelvolliseksi. Lähdeluettelo ennen liitteitä,
  voi vaihtaa takaisin tarvittaessa.
- 
+
  **21.11.2020 versio 0.8** Subset-analyysit valmiit, liikaa numeeristen tulosten listauksia. Tekstiä viimeisteltävä, muutama
  kappale teoriasta lisättävä.
- 
+
  **22.11.2020** Lisättiin kolme pdf-tiedostoa: kansilehti, sisällysluettelo ja tiivistelmä.
  Kansilehti ja tiivistelmä OverLeafissa, sisällysluettelo tehty MS Wordillä.
+
+**22.11.2020** Pieniä muutoksia rakenteeseen, tekstin editointia ja korjailua.

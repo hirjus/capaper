@@ -289,8 +289,17 @@ pitää päättää milloin se on tarpeeksi hyvä. Tai mille pisteille hyvä, mi
 **edit 26.10.2020** summary-funktio ei toimi, kun dimensioita CA-ratkaisussa kolme.
 Numeeriset tulokset voisi laskea "käsityönä". Kehno kvalitetti 2d-ratkaisussa saa
 kuvissa selityksen.
+
+**Kaksi karttaa** - **edit** 2d-ratkaisu esitetty, nyt 3d.  ca-ratkaisun akselit ovat "nested"/sisäkkäisiä.
+**edit** "Kolmisormisääntö" auttaa tulkitsemaan kaksiulotteisia "oikean käden"
+kuvia. Ensimmäinen dimensio on oikean käden peukalo, toinen etusormi ja kolmas
+keskisormi.
+
+Esimerkki kolmiulotteisen ratkaisun tarkasta tulkinnasta ( @RefWorks:doc:5a857a43e4b0ed2d44664d75 , s.365),
+Ranskan poliitiikan dimensiot ("French political space") 1990-luvun lopulla.
+
  
-```{r BeDealueetCA3d, echo=TRUE}
+```{r BeDealueetCA3d, echo = FALSE}
 suppointCA3 <- ca(~maa3 + Q1b,ISSP2012esim1.dat, nd = 3)
 
 # summary(suppointCA3)
@@ -299,7 +308,7 @@ suppointCA3 <- ca(~maa3 + Q1b,ISSP2012esim1.dat, nd = 3)
 
 ```
  
- 
+
  
 ```{r suppointCA3map1, echo=FALSE, eval=FALSE, fig.cap= "Q1b: Saksan ja  Belgian aluejako ",fig.asp = 1, out.width = "90%",fig.align = "center"}
 plot(suppointCA3, dim = c(1,2),
@@ -308,13 +317,7 @@ plot(suppointCA3, dim = c(1,2),
 
 ```
  
-**Kaksi karttaa** - **edit** 2d-ratkaisu esitetty, nyt 3d.  ca-ratkaisun akselit ovat "nested"/sisäkkäisiä.
-**edit** "Kolmisormisääntö" auttaa tulkitsemaan kaksiulotteisia "oikean käden"
-kuvia. Ensimmäinen dimensio on oikean käden peukalo, toinen etusormi ja kolmas
-keskisormi.
 
-Esimerkki kolmiulotteisen ratkaisun tarkasta tulkinnasta ( @RefWorks:doc:5a857a43e4b0ed2d44664d75 , s.365),
-Ranskan poliitiikan dimensiot ("French political space") 1990-luvun lopulla.
 
 Ensimmäisen ja kolmannen dimesion kuvassa näkyy pisteparven hajonta tärkeimmän
 dimension ympärillä. Sarakepisteiden järjestys säilyy samana, samoin maapisteiden
@@ -335,18 +338,26 @@ plot(suppointCA3, dim = c(2,3),
 
 ```
 
+
 Toisen ja kolmannen dimension kartalla on esitetty noin viidesosa kokonaisinertiasta.
 Tässä Belgian pisteet ovat kuvan diagonaalilla.
 
-**k** **edit** Tulkinta on aika hankalaa, ehkä riittää että toteaa selvän
+**k** Tulkinta on aika hankalaa, ehkä riittää että toteaa selvän
 kolmiulotteisen rakenteen jossa Belgian alueiden ero näkyy.
 
 Kahdesta projektiosta näkee kolmannen dimension suuntaiset suurimmat poikkeamat,
 niitä voi vertailla rivi- ja sarakepisteiden laatuun kaksiulotteisella kartalla.
 
+**k** Kolmiulotteisen kuvan tulkinta pitäisi aloittaa alusta, rivi- ja sarakepisteet
+hajaantuvat ulos tasosta. Ratkaisu on kuitenkin "sisäkkäinen" / "nested", kaksiuloteisen kartan
+pisteet vain siirtyvät kolmannen hieman ulos tasosta. Kolmannen dimension osuus kokonaisinertiasta
+on noin seitsemän prosenttia. Belgian alueiden ero näkyy erityisesti kartassa \@ref(fig:suppointCA3map3)
+ja \@ref(fig:3dklippi2), samoin E-sarakkeen kohtalainen muutos.
 
-**k** kokeilu 3d-grafiikalla - toinen riittää. Dynaamisella kuvalla pistepilvien
-rakenteen hahmottaisi helpommin.
+**edit** - toinen ehkä riittää?
+
+**k** Kuvakaappaukset ca-paketin kolmiulotteisista kuvista eivät kovin hyvin näitä eroja. Dynaamisella kuvalla pistepilvien
+rakenteen hahmottaisi helpommin, tämä onnistuu useissa R-ympäristöissä.
 
 ```{r 3dklippi1, echo=FALSE, fig.cap="Saksan ja  Belgian aluejako - 3d-kuva1", out.width = "90%",fig.align = "center"}
 

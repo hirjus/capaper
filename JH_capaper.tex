@@ -126,7 +126,7 @@
 
 \title{Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä}
 \author{Jussi Hirvonen}
-\date{Versio 0.8, tulostettu 2020-11-21}
+\date{Versio 0.8, tulostettu 2020-11-22}
 
 \begin{document}
 \maketitle
@@ -146,6 +146,8 @@
 \end{Highlighting}
 \end{Shaded}
 
+\textbf{Tämä luku poistetaan kun tutkielma on valmis}
+
 \textbf{Raportti yhtenä html-tiedostona} (\url{https://hirjus.github.io/capaper/JH_capaper.html}), ja kaikki toimii.
 Tässä liitteet, lähdeviitteet ja koodilistaus.
 
@@ -155,15 +157,16 @@ Pandoc ei osaa rivittää koodia oikein tms. Koodilistauksen poistaminen ei auta
 
 \textbf{Suunnitelma: PDF html-raportista -\textgreater{} pdfExchange-ohjelmalla sivunumerot ja kansilehdet}
 
+\textbf{22.11.2020 luonnos kansilehdeksi, sisällysluetteloksi ja tiivistelmän aihio}
+
+(\url{https://hirjus.github.io/capaper/GraduKansilehti1.pdf})
+(\url{https://hirjus.github.io/capaper/wordTOC.pdf})
+(\url{https://hirjus.github.io/capaper/GtiivisTesti1.pdf})
+
 RefWorksistä tuotu jhca2020.bib-tiedosto tarkistettu ja korjailtu virheet. Ei enään ladata uutta (21.11.2020).
 
 Data-analyysi ja koodi omana projektina: (\url{https://hirjus.github.io/Galku}). Tarkempia tulostuksia,
 muunnosten tarkistuksia ja enemmän kuvia, myös koodi näkyy.
-
-\textbf{12.11.20}
-Raportissa on hieman liian pitkiä ca:n numeeristen tulosten listauksia, poistetaan tai
-lyhennetään rajusti poimimalla oleellisia rivejä. Periaatteessa vain yksi (Saksan ja Belgian jako)
-jää, siinä kerrotaan miten tuloksia luetaan.
 
 Gitbook-tulosteessa ei saa koodia ``piilotettua'', asetus ``code\_folding: hide'' vaatii
 teeman (theme). \_output.yml - tiedostoon lisätty html\_book - formaatti, siinä
@@ -750,8 +753,8 @@ khii2-etäisyyksien poikkeamien summan eli on mahdollisimman lähellä pisteitä
 \textbf{K} rivi- ja sarakeongelma ratkaisu johtaa saamaan lopputulokseen. Tämä
 duaalisuus on korrespondenssianalyysin perusominaisuuksia.
 
-\hypertarget{korrespondenssianalyysin-esimerkki-symmetrinen-kartta}{%
-\section{Korrespondenssianalyysin esimerkki: symmetrinen kartta}\label{korrespondenssianalyysin-esimerkki-symmetrinen-kartta}}
+\hypertarget{symmetrinen-kartta}{%
+\section{Symmetrinen kartta}\label{symmetrinen-kartta}}
 
 \begin{figure}
 
@@ -778,18 +781,16 @@ tulkinta perustuu siihen, mitä mitä yhteistä on kaikilla elementeillä jotka 
 origon vasemmalla puolella ja vastaavasti origon oikealla puolella. Samalla tavalla
 tulkitaan toinen akseli, mitä on ylhäällä ja alhaalla.
 
-\textbf{edit}Käytän jatkossa muuttujista niiden symboleja sanallisen kuvauksen sijaan.
-
 Tässä tapauksessa taulukon rivit ovat havaintoja (''samples'' ) ja sarakkeet
 muuttujia, ja akselien tulkinta tehdään muuttujien avulla. Vasemmalla on E ja
 oikealla puolella samanmieliset vastaukset s ja S. Neutraali ''?'' on s-vastausten
 vasemmalla puolella. Kun erot ovat suhteellisia, ei kuvan perusteella voi sanoa
 kuinka paljon.
 
-Sarakkeet voi projisoida ensimmäiselle akselille (ts. katsoa niiden x-koordinaatin)
-, ja tässä ne ovat ``oikeassa järjestyksessä''.
-Jos vastausvaihtoehdoille haluaisi antaa numeeriset arvot, x-akselin koordinaatti
-olisi ehkä parempi kun järjestysnumero?
+Sarakkeet ovat oikeassa järjestyksessä, mutta niiden koordinaatit
+x-akselilla eivät olen tasavälisiä. Jos muuttuja jostain syystä halutaaan
+esittää välimatka- tai suhdeasteikon muuttujana koordinaatti ensimmäisellä
+dimensiolla on hyvä vaihtoehto.
 
 Ensimmäisen dimenosion tulkinta on aika selkeä. Toinen akseli on kontrasti
 lievemmän tai maltillisemman erimielisyyden ja muiden vastausten kanssa.
@@ -941,7 +942,8 @@ etäisyydellä on tulkinta, samoin rivipisteiden välisellä etäisyydellä.
 Sarakepisteiden välisillä etäisyyksillä ei ole tulkintaa. Sarakepisteet on
 skaalattu ja mittakaavan ero symmetriseen karttaan näkyy selvästi.
 
-\textbf{Barysentrinen periaate}
+\hypertarget{barysentrinen-periaate}{%
+\subsection{Barysentrinen periaate}\label{barysentrinen-periaate}}
 
 Rivipisteet ja sarakepisteet yhdistää \emph{barysentrinen periaate} . Jokainen rivipiste
 on ideaalipisteiden painotettu keskiarvo, painoina sarakkeiden käänteinen osuus
@@ -973,7 +975,7 @@ pakkautuminen pieneksi parveksi. Jos rivipisteiden hajonta on suuri,
 kuva on käytännöllinen. Kyselytutkimusaineistoissa näin ei yleensä ole.
 
 \hypertarget{kontribuutiot-kartalla}{%
-\section{Kontribuutiot kartalla}\label{kontribuutiot-kartalla}}
+\subsection{Kontribuutiot kartalla}\label{kontribuutiot-kartalla}}
 
 Analyyseissä käytetty r-paketti ``ca'' esittää kartoilla myös pisteiden massat pisteen
 symbolin kokona, mutta tässä aineistossa eroja on vaikea nähdä. Tärkeämpi on pisteiden
@@ -1041,7 +1043,7 @@ Sarakkeiden laatu näyttäisi olevan hyvä, mutta rivipisteistä Saksa ja erityi
 Belgia erottuvat hieman heikommin esitettyinä.
 
 \hypertarget{massat}{%
-\section{Massat}\label{massat}}
+\subsection{Massat}\label{massat}}
 
 \textbf{edit} Onko vakioitujen massojen kartta liian aikaisin? Tämä ei ole pääasia, vaan selvennys.
 Miksi tässä? Perusteltava, miksi en vakioi massoja maille, sukupuolille jne. (a)
@@ -1103,7 +1105,7 @@ massojen skaalauksella. Korrespondenssianalyysi on inertian eli kokonaishajonnan
 dekomponointia, jakamista osiin.
 
 \hypertarget{karttojen-erot}{%
-\section{Karttojen erot}\label{karttojen-erot}}
+\subsection{Karttojen erot}\label{karttojen-erot}}
 
 Yksinkertaisen korrespondenssianalyysin peruskuva on symmetrinen kartta. Ehkä
 yllättäen sen ``\ldots tulkinta on edelleen menetelmän kaikkein kiistanalaisin aspekti.''
@@ -1438,16 +1440,6 @@ pitää päättää milloin se on tarpeeksi hyvä. Tai mille pisteille hyvä, mi
 Numeeriset tulokset voisi laskea ``käsityönä''. Kehno kvalitetti 2d-ratkaisussa saa
 kuvissa selityksen.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{suppointCA3 <-}\StringTok{ }\KeywordTok{ca}\NormalTok{(}\OperatorTok{~}\NormalTok{maa3 }\OperatorTok{+}\StringTok{ }\NormalTok{Q1b,ISSP2012esim1.dat, }\DataTypeTok{nd =} \DecValTok{3}\NormalTok{)}
-
-\CommentTok{# summary(suppointCA3)}
-\CommentTok{# Error in rsc %*% diag(sv) : non-conformable arguments}
-\CommentTok{# outo juttu, ei toimi! - TÄMÄ POISTETAAN}
-\end{Highlighting}
-\end{Shaded}
-
 \textbf{Kaksi karttaa} - \textbf{edit} 2d-ratkaisu esitetty, nyt 3d. ca-ratkaisun akselit ovat ``nested''/sisäkkäisiä.
 \textbf{edit} ``Kolmisormisääntö'' auttaa tulkitsemaan kaksiulotteisia ``oikean käden''
 kuvia. Ensimmäinen dimensio on oikean käden peukalo, toinen etusormi ja kolmas
@@ -1481,14 +1473,22 @@ oikealta vasemmalle.
 Toisen ja kolmannen dimension kartalla on esitetty noin viidesosa kokonaisinertiasta.
 Tässä Belgian pisteet ovat kuvan diagonaalilla.
 
-\textbf{k} \textbf{edit} Tulkinta on aika hankalaa, ehkä riittää että toteaa selvän
+\textbf{k} Tulkinta on aika hankalaa, ehkä riittää että toteaa selvän
 kolmiulotteisen rakenteen jossa Belgian alueiden ero näkyy.
 
 Kahdesta projektiosta näkee kolmannen dimension suuntaiset suurimmat poikkeamat,
 niitä voi vertailla rivi- ja sarakepisteiden laatuun kaksiulotteisella kartalla.
 
-\textbf{k} kokeilu 3d-grafiikalla - toinen riittää. Dynaamisella kuvalla pistepilvien
-rakenteen hahmottaisi helpommin.
+\textbf{k} Kolmiulotteisen kuvan tulkinta pitäisi aloittaa alusta, rivi- ja sarakepisteet
+hajaantuvat ulos tasosta. Ratkaisu on kuitenkin ``sisäkkäinen'' / ``nested'', kaksiuloteisen kartan
+pisteet vain siirtyvät kolmannen hieman ulos tasosta. Kolmannen dimension osuus kokonaisinertiasta
+on noin seitsemän prosenttia. Belgian alueiden ero näkyy erityisesti kartassa \ref{fig:suppointCA3map3}
+ja \ref{fig:3dklippi2}, samoin E-sarakkeen kohtalainen muutos.
+
+\textbf{edit} - toinen ehkä riittää?
+
+\textbf{k} Kuvakaappaukset ca-paketin kolmiulotteisista kuvista eivät kovin hyvin näitä eroja. Dynaamisella kuvalla pistepilvien
+rakenteen hahmottaisi helpommin, tämä onnistuu useissa R-ympäristöissä.
 
 \begin{figure}
 
@@ -1646,7 +1646,9 @@ Kuvasta saa jotenkin selvää, kun sen suurentaa mutta pisteitä on selvästi li
 Joitain muuttujien nimiä voisi lyhentää, kuva-alaa voisi rajata joihinkin osiin
 mutta osajoukon korrespondenssianalyysi tarjoaa pätevimmän vaihtoehdon.
 
-\textbf{edit} numeerisia tuloksia ei listata lopullisessa raportissa.
+\textbf{edit: Numeeristen tulosten listaus?}
+Numeeriset tulokset vievät paljon tilaa, mutta toisaalta niistä voi ``lukea'' miten
+kartta on rakentunut. Ne voisi ehkä jättää näkyviin ainakin seuraavassa luvussa?
 
 Sarakkeiden järjestys vasemmalta oikealle ja ylhäältä alas on sama kuin edellisissä
 kartoissa. Dimenisoiden tulkinta on sama, osuus inertiasta pienenee x-akselilla
@@ -1879,7 +1881,7 @@ ja sarakepisteiden etäisyyksiä. Akselien tulkinta.
 ja kaikkien muiden vastausten välillä. Toinen dimensio kontrasti e-vastauksen
 ja kaikkien muiden vastausten kanssa, erityiesti S, s, ja myös neutraali ?.
 
-huom! ei tulkintaa sarakkeiden etäisyyksille, mutta kontribuutiolle on.
+\textbf{k} Ei tulkintaa sarakkeiden etäisyyksille, mutta kontribuutiolle on.
 
 \begin{figure}
 
@@ -1889,6 +1891,12 @@ huom! ei tulkintaa sarakkeiden etäisyyksille, mutta kontribuutiolle on.
 
 \caption{Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi}\label{fig:maagaCA2sub2map3}
 \end{figure}
+
+Karttoja \ref{fig:maagaCA2sub2map1} ja \ref{fig:maagaCA2sub2map3} joutuu katsomaan
+aika tarkkaan ennnekkuin uskoo, että akseleiden skaalaus on akateeminen pulmma
+vailla käytännön merkitystä (kts. jakso 3.3.4). Dataa analysoidaan graafisesti, ja kuvat
+\emph{näyttävät} erilaisilta. Pääakselien inertioiden neliöjuuret ovat 0.327 ja 0.158,
+sarakkeet voisi siis tulkita myös kontribuutiokuvista.
 
 \begin{figure}
 
@@ -1987,22 +1995,6 @@ on lähempänä (kulma on pienempi) pystyakselia. Kontribuutio on suurempi (147 
 71 x-akselille). Toisaalta x-akseli selittää selvästi suurimman osan kaikkien muiden
 sarakepisteiden inertiasta, ja y-akseli taas lähes täysin e-pisteen inertian.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{# Belgia, Bulgaria ja Unkari analysoidaan tiiviisti}
-\CommentTok{# Belgia on vähän välitapaus Bulgarian ja Unkarin ja kolmen ensimmäisen maan}
-\CommentTok{# kanssa. Kokeiluja voi tehdä neljällä maaryhmällä, kuvan lukukelpoisuus}
-\CommentTok{# ratkaisee.}
-
-\CommentTok{#BGHUsubset <- c(13:24,61:72)}
-\CommentTok{#BEDEDKFIsubset <- c(1:12, 25:36, 37:48, 49:60)}
-\CommentTok{#DEDKFIsubset <- c(25:36, 37:48, 49:60)}
-
-\NormalTok{BEBGHUsubset <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{12}\NormalTok{,}\DecValTok{13}\OperatorTok{:}\DecValTok{24}\NormalTok{,}\DecValTok{61}\OperatorTok{:}\DecValTok{72}\NormalTok{)}
-\NormalTok{maagaCA2sub3 <-}\StringTok{ }\KeywordTok{ca}\NormalTok{(}\OperatorTok{~}\NormalTok{maaga }\OperatorTok{+}\StringTok{ }\NormalTok{Q1b,ISSP2012esim1b.dat,}\DataTypeTok{subsetrow =}\NormalTok{ BEBGHUsubset)}
-\end{Highlighting}
-\end{Shaded}
-
 Kontribuutiokartalla ei voi tulkita sarakkeiden etäisyyksiä, joten ensin symmmetrinen kartta.
 
 \begin{figure}
@@ -2037,8 +2029,8 @@ dimension suuntaan, Unkarin ja Bulgarian osajoukkojen erot ovat lähes
 pelkästään pystysuoria.
 
 Suhteellinen kontribuutio eli pisteen laatu (numeerisissa
-tuloksissa ``cor'') on esitetty värisävynä. Sarakkeista e ja ``?'' esitetty
-huonosti, riveistä Belgian nuorimmat miehet ja naiset.
+tuloksissa ``cor'') on esitetty värisävynä. Sarakkeista e ja ``?'' on
+esitetty huonosti, riveistä Belgian nuorimmat miehet ja naiset.
 
 \begin{figure}
 
@@ -2060,14 +2052,6 @@ kuitenkin kulkee hieman eri polkuja kuin tavaniomainen tilastollisten
 mallien analyysi. Seuratataan minne data kuljettaa, etstiään uusia
 näkökulmia. Iän ja sukupuolen yhteys vastauksiin on rakenteeltaan erilainen,
 se ei ole ongelma vaan datan ominaisuus.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{# Vilkaistaa numeerisia tuloksia, kopioidaan tekstiin jos on tarpeen}
-\CommentTok{# maagaCA2sub3}
- \KeywordTok{summary}\NormalTok{(maagaCA2sub3)}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{verbatim}
 ## 
@@ -2130,16 +2114,8 @@ se ei ole ongelma vaan datan ominaisuus.
 ## 5 |    E |  234  966  368 | -426 965 494 |   10   1   1 |
 \end{verbatim}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{# kahden osaratkaisun kokonaisinertia}
-
-\CommentTok{# 0.143551 + 0.119602 = 0.263153}
-\CommentTok{# koko datalla 0.263154}
-\end{Highlighting}
-\end{Shaded}
-
-Kahden osajoukon inertioiden summa on sama kuin koko aineiston, Selitysasteet
+Kahden osajoukon inertioiden summa on sama kuin koko aineiston
+( 0.144 + 0.12 = 0.263), Selitysasteet
 nousevat hieman, mutta vielä oleellisempaa on kahden aika erilaisen ryhmän
 havaitseminen.
 
@@ -2372,15 +2348,14 @@ Hyvin yksinkertainen esimerkki.
 aika pulmallisia, varianssin dekomponointi ei onnistu jos reunajakaumat ovat
 alitauluissa erilaisia.
 
-\hypertarget{matched-matrices}{%
-\section{Matched matrices}\label{matched-matrices}}
+\textbf{Matched matrices} \textbf{edit} Ei omaa lukua, vaan pari kappaletta matriisien pinoamisesta
+ja yhdistelystä.
 
 \textbf{k} lyhyesti matriisien yhdistelystä hyvin yleisenä analyysin menetelmänä.
 Voidaan tarkastella luonteeltaan erilaisten muuttujaryhmien tai muuttujien
 yhteyksiä kuten edellisessä esimerkissä.
 
-\textbf{Huom! (16.10.20} Jos ja kun ei tehdä analyysiä, ei tarvitse omaa jaksoa.
-Kannattaa mainita, ehkävain teoriajaksossa? Idea: matriisien yhdistämisellä
+\textbf{k}Idea: matriisien yhdistämisellä
 saadaan ote monenlaiseen tutkimusongelmaan. Benzecri: data-analyysissä on vain
 löydettävä oikea matriisi joka diagonalisoidaan.
 
@@ -2388,6 +2363,23 @@ Ref:CAip ss. 177 \citep{RefWorks:doc:5a857a43e4b0ed2d44664d78}, HY2017\_MCA, Gre
 (sovellus ISSP 1989,4 kysymystä `pitäisikö äidin olla kotona', 8 maata), tässä
 artikkelissa ``SVD-based methods'',joista yksi CA (muut biplots, PCA, compositional data/log ratios).
 \citep{RefWorks:doc:5b6f159ce4b0bc0f31734b76}
+
+Ryhmien välisen ja ryhmien sisäinen inertian erottaminen, \textbf{ABBA}
+on yksi ratkaisu (ABBA matrix, teknisesti block circular matrix).
+
+Edellisen menetelmän variantti, jossa ryhmien väliset ja sisäiset erot saadaan
+esiin. Inertian jakaminen.
+
+Samanlaisten rivien ja sarakkeiden kaksi samankokoista taulua, esimerkiksi
+sukupuolivaikutusten arviointi. Alkuperäinen taulukko jaetaan kahdeksi tauluksi
+sukupuolen mukaan. Matriisien yhdistäminen (concatenation) riveittäin tai
+sarakkeittain ei näytä optimaalisesti mm - matriisien eroja.
+
+Luokittelu voi olla myös kahden indikaattorimuuttujan avulla jako neljään
+taulukkoon (esim. miehet vs.~naiset länsieuroopassa verratuna samaan asetelmaan
+itä-Euroopassa). Samaa ideaa laajennetaan.
+
+Esimerkkinä ``Attitudes to women working in 2012''.
 
 \textbf{ABBA}``We consider the joint analysis of two matched matrices which have common
 rows and columns, for example multivariate data observed at two time points or split
@@ -2401,23 +2393,6 @@ The methodology is applied to data from the International Social Survey Program
 comparing male and female attitudes on working wives across eight countries. The resulting
 biplots optimally display the overall cross-cultural differences as well as the male--female
 differences. The case of more than two matched matrices is also discussed.''
-
-Edellisen menetelmän variantti, jossa ryhmien väliset ja sisäiset erot saadaan
-esiin. Inertian jakaminen.
-
-Samanlaisten rivien ja sarakkeiden kaksi samankokoista taulua, esimerkiksi
-sukupuolivaikutusten arviointi. Alkuperäinen taulukko jaetaan kahdeksi tauluksi
-sukupuolen mukaan. Matriisien yhdistäminen (concatenation) riveittäin tai
-sarakkeittain ei näytä optimaalisesti mm - matriisien eroja.
-
-Ryhmien välisen ja ryhmien sisäinen inertian erottaminen, \textbf{ABBA}
-on yksi ratkaisu (ABBA matrix, teknisesti block circular matrix).
-
-Luokittelu voi olla myös kahden indikaattorimuuttujan avulla jako neljään
-taulukkoon (esim. miehet vs.~naiset länsieuroopassa verratuna samaan asetelmaan
-itä-Euroopassa). Samaa ideaa laajennetaan.
-
-Esimerkkinä ``Attitudes to women working in 2012''.
 
 \hypertarget{mca---monimuuttujakorrespondenssianalyysi}{%
 \section{MCA - monimuuttujakorrespondenssianalyysi}\label{mca---monimuuttujakorrespondenssianalyysi}}
