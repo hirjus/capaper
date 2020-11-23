@@ -184,8 +184,7 @@ erot mielipiteissä ovat paljon suurempia kuin sukupuolten väliset maiden sisä
 
 ## Ikä, sukupuoli ja maa
 
-**edit** Yksi vaikeaselkoinen kartta täynnä pisteitä, tihrustellaan.
-Kommentoidaan numeeristen tulosten perusteella lyhyesti, oleelliset asiat.
+
 
 ```{r maaga1}
 ISSP2012esim1b.dat <- mutate(ISSP2012esim1b.dat,
@@ -218,9 +217,6 @@ Kuvasta saa jotenkin selvää, kun sen suurentaa mutta pisteitä on selvästi li
 Joitain muuttujien nimiä voisi lyhentää, kuva-alaa voisi rajata joihinkin osiin
 mutta osajoukon korrespondenssianalyysi tarjoaa pätevimmän vaihtoehdon.
 
-**edit: Numeeristen tulosten listaus?**
-Numeeriset tulokset vievät paljon tilaa, mutta toisaalta niistä voi "lukea" miten
-kartta on rakentunut. Ne voisi ehkä jättää näkyviin ainakin seuraavassa luvussa?
 
 Sarakkeiden järjestys vasemmalta oikealle ja ylhäältä alas on sama kuin edellisissä
 kartoissa. Dimenisoiden tulkinta on sama, osuus inertiasta pienenee x-akselilla

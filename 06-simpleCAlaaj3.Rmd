@@ -1,48 +1,42 @@
 # Osajoukon korrespondenssianalyysi
 
-**k** Osajoukon korrespondenssianalyysin tarve: kuvat menevät tukkoon. Kun muuttujia
-on paljon kartat ovat täynnä pisteitä ja niitä on vaikea lukea. Usein myös havaitaan,
-että ratkaisun päädimensiot kertovat ylllätyksettömän ilmeisen tarinan, ja
-kiinnostavammat yhteydet ovat piilossa ylemmissä dimensioissa (MG ja Pardo, "Vihreä
-kirja" ss. 198).
-
-**k** Teoreettinen idea: inertian dekomoponointi (taas). Lasketaan ensin 
-ca-ratkaisu ja rajataan aineisto. Yksinkertainen toteuttaa. Massat ja reunajakaumat
-säilyvä, ja siksi aineiston ("pilven") kokonaisinertia voidaan jakaa osiin
-osajoukkojen inertiaksi. Uusia yhteyksiä näkyviin, tarkempi kuva datasta.
-
-Kuvan tukkoisuuteen voi toki vaikuttaa muillakin keinoilla. Muuttujien arvoja voi
-yhdistellä, kuvasta voi jättää pois pisteitä joiden kontribuutio on pieni tai kuvaa
-voi yksinkertaisesti suurentaa analyysivaiheessa näytöllä.
-
-Kuva-aluetta voi myös rajata johonkin osaan kuvaa. Kaikki pisteet ovat kuitenkin
-mukana määräämässä ratkaisun geometriaa.
-
-Rivejä tai sarakkeita voi myös muuttaa passiivisiksi, mutta silloin ei saavuteta
-käytännöllistä inertian dekomponointi-ominaisuutta. MCA-jaksossa osajoukon
-analysointi on pääasia ja mahdollisia vaihtoehtoja käsitellään hieman lisää.
+Graafisessa data-analyysissä kuvien on oltava selkeitä, mutta
+korrespondenssianalyysin ja monimuutujakorrespondenssianalyysin kartat ovat usein
+liian täynnä pisteitä. Ongelmaa voi lievenätää jättämällä pois ratkaisuun vain
+vähän vaikutttavia pisteitä, keksimällä mahdollisimman lyhyitä symboleja
+muuttujille tai rajaamalla kuvaa. Ongelma on kuitenkin syvempi, usein kartta
+kertoo aika yllätyksettömän ja ilmeisen tarinan. Kiinnostavammat yhteydet
+pysyvät piilossa ylemmissä dimensioissa.  MCA-kartan perusongelma on se, että
+siinä yritetään esittää monia erityyppisiä yhteyksiä simultaanisesti ja nämä
+yhteydet eivät ole “isolated to particular dimensions”
+( @RefWorks:doc:5a857a44e4b0ed2d44664d87 , 198).
 
 
-Lähteet MG ja Prado (2006)[@RefWorks:doc:5a857a44e4b0ed2d44664d87], 
-"vihreä kirja" [@RefWorks:doc:5ab76b43e4b003f4468d1f07],
-CAiP [@RefWorks:doc:5a857a43e4b0ed2d44664d78].
+Osajoukon korrespondenssianalyysi (subset CA, MCA) on yksi vastaus tähän
+pulmaan. Teoreettiset perusteet on esitetty Greenacren ja Pardon artikkelissa
+[@RefWorks:doc:5a857a44e4b0ed2d44664d87] ja sen laajennetussa versiossa (emt.),
+esimerkkiaineistona ISSP:n 1994 data. Selkeä oppikirjaesitys on CAiP (ss. 161-). 
 
-**k** Simple CA subset
 
-**k1** Täydentävät pisteet voi ottaa mukaan jos ne eivät ole rajatusta "pilvestä".
-Esim. rivien osajoukon analyysiin voi ottaa sarakepisteitä täydeäntvinä pisteinä
-normaalisti. Osajoukon profiilit muuttuvat, niiden summa ei enään ole yksi,
-barysentristä ominaisuutta ei voi suoraan käyttää täydentävien rivipisteiden
-koordinaattien laskemiseen.
+Eräs selkeä sovelluskohde yhteiskuntatieteellisissä kyselyaineistoissa on
+puuttuvien vastausten analyysi, johon palataan seuraavassa luvussa.
 
-**k2** Kuvien luettavuus ja pistekoko, hankala juttu
+Osajoukon korrespondenssianlyysin idea on säilyttää koko aineiston massat ja
+khii2-etäisyyksien painot mutta analysoida vain osaa aineistosta. Koko aineiston
+sentroidi säilyy kartan keksipisteenä. Osajoukkojen inertioiden summa on koko
+aineiston inertia.
 
-**k** Kuvien järjestyksen perustelu. 1. symmetrinen, voidaan arvioida rivipisteiden
-ja sarakepisteiden etäisyyksiä. Akselien tulkinta.
+Osajoukon voi valita havaintojen tai muuttujien suhteen. Täydentäviä pisteitä
+voi helposti lisätä kartalle , jos ne eivät kuulu siihen joukkoon josta
+osajoukko on valittu.  Osajoukon profiilit muuttuvat, niiden summa ei enään ole
+yksi ja barysentristä periaatetta ei voi suoraan käyttää täydentävän pisteen
+koordinaattien laskemiseen. Tässä esimerkissä emme voi suoraan ca-paketin avulla
+sijoittaa esimerkiksi maapisteitä kartoille.
 
-2. Kontribuutikartta: laatu, tulkinnan tarkentaminen
+Karttaa \@ref(fig:maagaCA1map1) katsomalla on helppo jakaa aineisto aluksi vain kahteen ryhmään.
+Suomi, Tanska ja Saksa ovat pääakselin oikealla puolella.
+Bulgaria ja Unkari yhdessä Belgian kanssa ovat toinen ryhmä.
 
-3. Rivipisteiden etäisyydet - siksak
 
 
 ```{r maagaSubDKDEFI, echo=F}

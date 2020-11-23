@@ -64,7 +64,10 @@ knitr::include_graphics('img/stacked1.png')
 
 ```
 
-Lisättiin kuva
+Pierre Bourdieun tunnettu tutkimus La Distiction (1979) soveltaa tätä menetelmää.
+Ranskan väestö luokitellaan ammattiryhmiin ja taulukoidaan useiden elämäntapaa
+kuvaavien muuttujien kanssa. Taulukot yhdistetään pinoamalla ne
+päällekkäin ( @RefWorks:doc:5ab76b43e4b003f4468d1f07 , s.21).
 
 ```{r concatDat1, echo=F}
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.7)  22 NOV 2020 14:23
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.7)  23 NOV 2020 19:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1185,6 +1185,7 @@ File: JH_capaper_files/figure-latex/g1-2kuva1-1.pdf Graphic file (type pdf)
 File: JH_capaper_files/figure-latex/g1-2kuva2-1.pdf Graphic file (type pdf)
 <use JH_capaper_files/figure-latex/g1-2kuva2-1.pdf>
 [17] [18]
+Missing character: There is no ä in font lmmi10!
 File: JH_capaper_files/figure-latex/simpleCA1map1-1.pdf Graphic file (type pdf)
 
 <use JH_capaper_files/figure-latex/simpleCA1map1-1.pdf>
@@ -1230,16 +1231,16 @@ e 28 undefined on input line 1112.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5c754c6de4b0947789165cde' on pag
-e 28 undefined on input line 1126.
+e 28 undefined on input line 1127.
 
 [28] [29] [30]
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d7c' on pag
-e 31 undefined on input line 1160.
+e 31 undefined on input line 1161.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5b8175eee4b08da192f99a35' on pag
-e 31 undefined on input line 1164.
+e 31 undefined on input line 1165.
 
 Missing character: There is no ä in font lmmi10!
 Missing character: There is no ä in font lmmi10!
@@ -1251,13 +1252,13 @@ Missing character: There is no ä in font lmmi10!
 Luku 4.
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d75' on pag
-e 33 undefined on input line 1210.
+e 33 undefined on input line 1211.
 
 File: JH_capaper_files/figure-latex/suppointCA2map1-1.pdf Graphic file (type pd
 f)
 <use JH_capaper_files/figure-latex/suppointCA2map1-1.pdf>
 
-LaTeX Warning: Reference `(' on page 33 undefined on input line 1260.
+LaTeX Warning: Reference `(' on page 33 undefined on input line 1261.
 
 [33] [34]
 File: JH_capaper_files/figure-latex/suppointCA2map2-1.pdf Graphic file (type pd
@@ -1266,7 +1267,7 @@ f)
 [35] [36] [37]
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d75' on pag
-e 38 undefined on input line 1448.
+e 38 undefined on input line 1449.
 
 File: JH_capaper_files/figure-latex/suppointCA3map2-1.pdf Graphic file (type pd
 f)
@@ -1288,24 +1289,17 @@ File: JH_capaper_files/figure-latex/gaCA1map-1.pdf Graphic file (type pdf)
 [43] [44]
 File: JH_capaper_files/figure-latex/maagaCA1map1-1.pdf Graphic file (type pdf)
 <use JH_capaper_files/figure-latex/maagaCA1map1-1.pdf>
-[45] [46] [47]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[48] [49] [50
+[45] [46] [47] [48] [49] [50
 
 ]
 Luku 6.
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a44e4b0ed2d44664d87' on pag
-e 51 undefined on input line 1843.
+e 51 undefined on input line 1824.
 
 
-Package natbib Warning: Citation `RefWorks:doc:5ab76b43e4b003f4468d1f07' on pag
-e 51 undefined on input line 1844.
-
-
-Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d78' on pag
-e 51 undefined on input line 1845.
+Package natbib Warning: Citation `RefWorks:doc:5a857a44e4b0ed2d44664d87' on pag
+e 51 undefined on input line 1828.
 
 File: JH_capaper_files/figure-latex/maagaCA2sub2map1-1.pdf Graphic file (type p
 df)
@@ -1313,31 +1307,36 @@ df)
 File: JH_capaper_files/figure-latex/maagaCA2sub2map3-1.pdf Graphic file (type p
 df)
 <use JH_capaper_files/figure-latex/maagaCA2sub2map3-1.pdf>
-[51] [52] [53]
 File: JH_capaper_files/figure-latex/maagaCA2sub2map2-1.pdf Graphic file (type p
 df)
 <use JH_capaper_files/figure-latex/maagaCA2sub2map2-1.pdf>
-[54] [55]
+[51] [52] [53] [54]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[55]
 File: JH_capaper_files/figure-latex/maagaCA2sub3map1-1.pdf Graphic file (type p
 df)
 <use JH_capaper_files/figure-latex/maagaCA2sub3map1-1.pdf>
-[56]
 File: JH_capaper_files/figure-latex/maagaCA2sub3map2-1.pdf Graphic file (type p
 df)
 <use JH_capaper_files/figure-latex/maagaCA2sub3map2-1.pdf>
 
-LaTeX Warning: Reference `(' on page 57 undefined on input line 2044.
+LaTeX Warning: Reference `(' on page 56 undefined on input line 2025.
 
 
-LaTeX Warning: Reference `(' on page 57 undefined on input line 2044.
+LaTeX Warning: Reference `(' on page 56 undefined on input line 2025.
 
-[57] [58] [59] [60
+[56] [57] [58] [59] [60]
+Luku 7.
+[61
 
 ]
-Luku 7.
-[61]
 File: img/stacked1.png Graphic file (type bmp)
 <img/stacked1.png>
+
+Package natbib Warning: Citation `RefWorks:doc:5ab76b43e4b003f4468d1f07' on pag
+e 62 undefined on input line 2219.
+
 File: JH_capaper_files/figure-latex/concat1map1-1.pdf Graphic file (type pdf)
 <use JH_capaper_files/figure-latex/concat1map1-1.pdf>
 [62] [63] [64]
@@ -1346,33 +1345,34 @@ File: JH_capaper_files/figure-latex/concat1map2-1.pdf Graphic file (type pdf)
 [65]
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d78' on pag
-e 66 undefined on input line 2362.
+e 66 undefined on input line 2346.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5b6f159ce4b0bc0f31734b76' on pag
-e 66 undefined on input line 2365.
+e 66 undefined on input line 2349.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d7c' on pag
-e 66 undefined on input line 2418.
+e 66 undefined on input line 2402.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a44e4b0ed2d44664d87' on pag
-e 66 undefined on input line 2420.
+e 66 undefined on input line 2404.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5ab76b43e4b003f4468d1f07' on pag
-e 66 undefined on input line 2421.
+e 66 undefined on input line 2405.
 
 [66]
 File: JH_capaper_files/figure-latex/MCA1map1-1.pdf Graphic file (type pdf)
 <use JH_capaper_files/figure-latex/MCA1map1-1.pdf>
+[67] [68]
 File: JH_capaper_files/figure-latex/MCA1map2-1.pdf Graphic file (type pdf)
 <use JH_capaper_files/figure-latex/MCA1map2-1.pdf>
-[67] [68] [69]
+[69]
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d7c' on pag
-e 70 undefined on input line 2528.
+e 70 undefined on input line 2512.
 
 File: JH_capaper_files/figure-latex/subsetMCA1map1-1.pdf Graphic file (type pdf
 )
@@ -1380,32 +1380,33 @@ File: JH_capaper_files/figure-latex/subsetMCA1map1-1.pdf Graphic file (type pdf
 File: JH_capaper_files/figure-latex/subsetMCA1map2-1.pdf Graphic file (type pdf
 )
 <use JH_capaper_files/figure-latex/subsetMCA1map2-1.pdf>
+[70]
 File: JH_capaper_files/figure-latex/subsetMCA1map3-1.pdf Graphic file (type pdf
 )
 <use JH_capaper_files/figure-latex/subsetMCA1map3-1.pdf>
-[70] [71] [72] [73] [74] [75] [76
+[71] [72] [73] [74] [75] [76
 
 ]
 Luku 8.
 
 Package natbib Warning: Citation `RefWorks:doc:5b15542ee4b0e2616bc42dca' on pag
-e 77 undefined on input line 2730.
+e 77 undefined on input line 2714.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5c223412e4b0508a6674dec0' on pag
-e 77 undefined on input line 2734.
+e 77 undefined on input line 2718.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5c223412e4b0508a6674dec0' on pag
-e 77 undefined on input line 2735.
+e 77 undefined on input line 2719.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5faaf996e4b05416e98ff547' on pag
-e 77 undefined on input line 2740.
+e 77 undefined on input line 2724.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5f01c74be4b0d3d8328c72ca' on pag
-e 77 undefined on input line 2774.
+e 77 undefined on input line 2758.
 
 [77] [78
 
@@ -1414,30 +1415,30 @@ e 77 undefined on input line 2774.
 ]
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d78' on pag
-e 81 undefined on input line 2794.
+e 81 undefined on input line 2778.
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 2801.
+(Font)              scaled to size 10.0pt on input line 2785.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/b/n' will be
-(Font)              scaled to size 7.0pt on input line 2801.
+(Font)              scaled to size 7.0pt on input line 2785.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/b/n' will be
-(Font)              scaled to size 5.0pt on input line 2801.
+(Font)              scaled to size 5.0pt on input line 2785.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/b/n' will be
-(Font)              scaled to size 10.00092pt on input line 2801.
+(Font)              scaled to size 10.00092pt on input line 2785.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/b/n' will be
-(Font)              scaled to size 7.00064pt on input line 2801.
+(Font)              scaled to size 7.00064pt on input line 2785.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/b/n' will be
-(Font)              scaled to size 5.00046pt on input line 2801.
+(Font)              scaled to size 5.00046pt on input line 2785.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/b/n' will be
-(Font)              scaled to size 9.99893pt on input line 2801.
+(Font)              scaled to size 9.99893pt on input line 2785.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/b/n' will be
-(Font)              scaled to size 6.99925pt on input line 2801.
+(Font)              scaled to size 6.99925pt on input line 2785.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/b/n' will be
-(Font)              scaled to size 4.99947pt on input line 2801.
+(Font)              scaled to size 4.99947pt on input line 2785.
 [81] [82]
 
 Package natbib Warning: Citation `RefWorks:doc:5b6ef091e4b0984fd9b8c0ca' on pag
-e 83 undefined on input line 2992.
+e 83 undefined on input line 2976.
 
 File: img/CAquality.png Graphic file (type bmp)
 <img/CAquality.png>
@@ -1452,12 +1453,12 @@ File: img/BookdownProc.pdf Graphic file (type pdf)
 ! Dimension too large.
 \fb@put@frame ...p \ifdim \dimen@ >\ht \@tempboxa 
                                                   \fb@putboxa #1\fb@afterfra...
-l.5241 \end{Shaded}
+l.5225 \end{Shaded}
                     
 Here is how much of TeX's memory you used:
  19596 strings out of 479382
  353681 string characters out of 5877656
- 1247862 words of memory out of 5000000
+ 1248862 words of memory out of 5000000
  38652 multiletter control sequences out of 15000+600000
  543032 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191

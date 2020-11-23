@@ -192,7 +192,7 @@ img {
 <div id="header">
 <h1 class="title">Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</h1>
 <h4 class="author"><em>Jussi Hirvonen</em></h4>
-<h4 class="date"><em>Versio 0.8, tulostettu 2020-11-22</em></h4>
+<h4 class="date"><em>Versio 0.8, tulostettu 2020-11-23</em></h4>
 </div>
 <div id="alkutoimia" class="section level1 unnumbered">
 <h1>Alkutoimia</h1>
@@ -934,7 +934,7 @@ riviprofiilien keskiarvoprofiilin vastaavat alkioit <span class="math inline">\(
 neliöiden painotettuna summana, jossa painoina ovat rivien massat <span class="math inline">\(m_{i}\)</span> ja
 summa lasketaan yli rivien <span class="math inline">\({i}\)</span>.</p>
 <p><span class="math display" id="eq:inert2">\[\begin{equation}
- \phi^{2} = \sum_{i} (massa \: m_{i}) \times (profiilin \: i \: \chi^{2} - etaisyys \: sentroidista)^{2}
+ \phi^{2} = \sum_{i} (massa \: m_{i}) \times (profiilin \: i \: \chi^{2} - etäisyys \: sentroidista)^{2}
  \tag{3.6}
 \end{equation}\]</span></p>
 <p><strong>edit</strong> Tässä esitystavassa viite on CAiP, teorialiitteessä tarkemmin. Tarkoitus on esittää
@@ -1240,7 +1240,8 @@ kun akselien inertioiden (principal inertias) neliöjuuret eivät ole liian eris
 <p>Jos pääinertioiden neliöjuuret ovat hyvin eri suuruisia, tulkintaongelmia voi tulla, mutta
 niillä ei käytännössä ole merkitystä. Siksi hän pitää skaalausdebattia akateemisena
 kiistana, käytännön sovelluksissa sillä ei ole merkitystä. Kiista on ollut aika
-sitkeä (esimerkiksi 1989 Greenacren kommentoi skaalausta perusteellisesti <span class="citation">(Greenacre <a href="#ref-RefWorks:doc:5c754c6de4b0947789165cde" role="doc-biblioref">1989</a>)</span>), mutta lienee laantunut.</p>
+sitkeä (esimerkiksi 1989 Greenacren kommentoi skaalausta perusteellisesti
+<span class="citation">(Greenacre <a href="#ref-RefWorks:doc:5c754c6de4b0947789165cde" role="doc-biblioref">1989</a>)</span>), mutta lienee laantunut.</p>
 <p>Symmetinen kartta hyvä vaihtoehto, sillä asymmetrisessä skaalaus vie
 ideaalipisteet usein kauas pääkoordinaateissa esitetyt pisteet pakkautuvat kuvan
 keskelle. Toisaalta jos dataa tulkitaan ”asymmetrisesti” kontribuutiokartta on
@@ -1727,8 +1728,6 @@ erot mielipiteissä ovat paljon suurempia kuin sukupuolten väliset maiden sisä
 </div>
 <div id="ikä-sukupuoli-ja-maa" class="section level2">
 <h2><span class="header-section-number">5.2</span> Ikä, sukupuoli ja maa</h2>
-<p><strong>edit</strong> Yksi vaikeaselkoinen kartta täynnä pisteitä, tihrustellaan.
-Kommentoidaan numeeristen tulosten perusteella lyhyesti, oleelliset asiat.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>ISSP2012esim1b.dat &lt;-<span class="st"> </span><span class="kw">mutate</span>(ISSP2012esim1b.dat,</span>
 <span id="cb5-2"><a href="#cb5-2"></a>                             <span class="dt">maaga =</span> <span class="kw">paste</span>(maa, ga, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>))</span>
 <span id="cb5-3"><a href="#cb5-3"></a></span>
@@ -1745,9 +1744,6 @@ Kuva 5.2: Q1b: ikäluokka ja sukupuoli maittain
 <p>Kuvasta saa jotenkin selvää, kun sen suurentaa mutta pisteitä on selvästi liikaa.
 Joitain muuttujien nimiä voisi lyhentää, kuva-alaa voisi rajata joihinkin osiin
 mutta osajoukon korrespondenssianalyysi tarjoaa pätevimmän vaihtoehdon.</p>
-<p><strong>edit: Numeeristen tulosten listaus?</strong>
-Numeeriset tulokset vievät paljon tilaa, mutta toisaalta niistä voi “lukea” miten
-kartta on rakentunut. Ne voisi ehkä jättää näkyviin ainakin seuraavassa luvussa?</p>
 <p>Sarakkeiden järjestys vasemmalta oikealle ja ylhäältä alas on sama kuin edellisissä
 kartoissa. Dimenisoiden tulkinta on sama, osuus inertiasta pienenee x-akselilla
 noin 6 prosenttiyksikköä. Pisteiden järjestys liberaalista konservatiiviseen
@@ -1900,39 +1896,35 @@ on merkittävä kontribuutio akseleihin.</p>
 </div>
 <div id="osajoukon-korrespondenssianalyysi" class="section level1">
 <h1><span class="header-section-number">Luku 6</span> Osajoukon korrespondenssianalyysi</h1>
-<p><strong>k</strong> Osajoukon korrespondenssianalyysin tarve: kuvat menevät tukkoon. Kun muuttujia
-on paljon kartat ovat täynnä pisteitä ja niitä on vaikea lukea. Usein myös havaitaan,
-että ratkaisun päädimensiot kertovat ylllätyksettömän ilmeisen tarinan, ja
-kiinnostavammat yhteydet ovat piilossa ylemmissä dimensioissa (MG ja Pardo, “Vihreä
-kirja” ss. 198).</p>
-<p><strong>k</strong> Teoreettinen idea: inertian dekomoponointi (taas). Lasketaan ensin
-ca-ratkaisu ja rajataan aineisto. Yksinkertainen toteuttaa. Massat ja reunajakaumat
-säilyvä, ja siksi aineiston (“pilven”) kokonaisinertia voidaan jakaa osiin
-osajoukkojen inertiaksi. Uusia yhteyksiä näkyviin, tarkempi kuva datasta.</p>
-<p>Kuvan tukkoisuuteen voi toki vaikuttaa muillakin keinoilla. Muuttujien arvoja voi
-yhdistellä, kuvasta voi jättää pois pisteitä joiden kontribuutio on pieni tai kuvaa
-voi yksinkertaisesti suurentaa analyysivaiheessa näytöllä.</p>
-<p>Kuva-aluetta voi myös rajata johonkin osaan kuvaa. Kaikki pisteet ovat kuitenkin
-mukana määräämässä ratkaisun geometriaa.</p>
-<p>Rivejä tai sarakkeita voi myös muuttaa passiivisiksi, mutta silloin ei saavuteta
-käytännöllistä inertian dekomponointi-ominaisuutta. MCA-jaksossa osajoukon
-analysointi on pääasia ja mahdollisia vaihtoehtoja käsitellään hieman lisää.</p>
-<p>Lähteet MG ja Prado (2006)<span class="citation">(M. Greenacre ja Pardo <a href="#ref-RefWorks:doc:5a857a44e4b0ed2d44664d87" role="doc-biblioref">2006</a>)</span>,
-“vihreä kirja” <span class="citation">(M. Greenacre ja Blasius <a href="#ref-RefWorks:doc:5ab76b43e4b003f4468d1f07" role="doc-biblioref">2006</a>)</span>,
-CAiP <span class="citation">(M. J. Greenacre <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>.</p>
-<p><strong>k</strong> Simple CA subset</p>
-<p><strong>k1</strong> Täydentävät pisteet voi ottaa mukaan jos ne eivät ole rajatusta “pilvestä”.
-Esim. rivien osajoukon analyysiin voi ottaa sarakepisteitä täydeäntvinä pisteinä
-normaalisti. Osajoukon profiilit muuttuvat, niiden summa ei enään ole yksi,
-barysentristä ominaisuutta ei voi suoraan käyttää täydentävien rivipisteiden
-koordinaattien laskemiseen.</p>
-<p><strong>k2</strong> Kuvien luettavuus ja pistekoko, hankala juttu</p>
-<p><strong>k</strong> Kuvien järjestyksen perustelu. 1. symmetrinen, voidaan arvioida rivipisteiden
-ja sarakepisteiden etäisyyksiä. Akselien tulkinta.</p>
-<ol start="2" style="list-style-type: decimal">
-<li><p>Kontribuutikartta: laatu, tulkinnan tarkentaminen</p></li>
-<li><p>Rivipisteiden etäisyydet - siksak</p></li>
-</ol>
+<p>Graafisessa data-analyysissä kuvien on oltava selkeitä, mutta
+korrespondenssianalyysin ja monimuutujakorrespondenssianalyysin kartat ovat usein
+liian täynnä pisteitä. Ongelmaa voi lievenätää jättämällä pois ratkaisuun vain
+vähän vaikutttavia pisteitä, keksimällä mahdollisimman lyhyitä symboleja
+muuttujille tai rajaamalla kuvaa. Ongelma on kuitenkin syvempi, usein kartta
+kertoo aika yllätyksettömän ja ilmeisen tarinan. Kiinnostavammat yhteydet
+pysyvät piilossa ylemmissä dimensioissa. MCA-kartan perusongelma on se, että
+siinä yritetään esittää monia erityyppisiä yhteyksiä simultaanisesti ja nämä
+yhteydet eivät ole “isolated to particular dimensions”
+( <span class="citation">M. Greenacre ja Pardo (<a href="#ref-RefWorks:doc:5a857a44e4b0ed2d44664d87" role="doc-biblioref">2006</a>)</span> , 198).</p>
+<p>Osajoukon korrespondenssianalyysi (subset CA, MCA) on yksi vastaus tähän
+pulmaan. Teoreettiset perusteet on esitetty Greenacren ja Pardon artikkelissa
+<span class="citation">(M. Greenacre ja Pardo <a href="#ref-RefWorks:doc:5a857a44e4b0ed2d44664d87" role="doc-biblioref">2006</a>)</span> ja sen laajennetussa versiossa (emt.),
+esimerkkiaineistona ISSP:n 1994 data. Selkeä oppikirjaesitys on CAiP (ss. 161-).</p>
+<p>Eräs selkeä sovelluskohde yhteiskuntatieteellisissä kyselyaineistoissa on
+puuttuvien vastausten analyysi, johon palataan seuraavassa luvussa.</p>
+<p>Osajoukon korrespondenssianlyysin idea on säilyttää koko aineiston massat ja
+khii2-etäisyyksien painot mutta analysoida vain osaa aineistosta. Koko aineiston
+sentroidi säilyy kartan keksipisteenä. Osajoukkojen inertioiden summa on koko
+aineiston inertia.</p>
+<p>Osajoukon voi valita havaintojen tai muuttujien suhteen. Täydentäviä pisteitä
+voi helposti lisätä kartalle , jos ne eivät kuulu siihen joukkoon josta
+osajoukko on valittu. Osajoukon profiilit muuttuvat, niiden summa ei enään ole
+yksi ja barysentristä periaatetta ei voi suoraan käyttää täydentävän pisteen
+koordinaattien laskemiseen. Tässä esimerkissä emme voi suoraan ca-paketin avulla
+sijoittaa esimerkiksi maapisteitä kartoille.</p>
+<p>Karttaa <a href="#fig:maagaCA1map1">5.2</a> katsomalla on helppo jakaa aineisto aluksi vain kahteen ryhmään.
+Suomi, Tanska ja Saksa ovat pääakselin oikealla puolella.
+Bulgaria ja Unkari yhdessä Belgian kanssa ovat toinen ryhmä.</p>
 <div class="figure" style="text-align: center"><span id="fig:maagaCA2sub2map1"></span>
 <img src="JH_capaper_files/figure-html/maagaCA2sub2map1-1.png" alt="Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi" width="90%" />
 <p class="caption">
@@ -2211,7 +2203,10 @@ tulosten kanssa suuntaa.</p>
 Kuva 7.1: Pinotut ja yhdistetyt taulut - periaate
 </p>
 </div>
-<p>Lisättiin kuva</p>
+<p>Pierre Bourdieun tunnettu tutkimus La Distiction (1979) soveltaa tätä menetelmää.
+Ranskan väestö luokitellaan ammattiryhmiin ja taulukoidaan useiden elämäntapaa
+kuvaavien muuttujien kanssa. Taulukot yhdistetään pinoamalla ne
+päällekkäin ( <span class="citation">M. Greenacre ja Blasius (<a href="#ref-RefWorks:doc:5ab76b43e4b003f4468d1f07" role="doc-biblioref">2006</a>)</span> , s.21).</p>
 <p>Kun yhdistty taulu rakennetaan matriiseista, karttojen muuttujanimiä joudutaan
 siistimään. Kuvat voivat myös herkästi kääntyä akselien ympäri, ne kannataa
 kääntää vertailun helpottamiseksi samanlaisiksi kuin muut.</p>

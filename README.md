@@ -205,3 +205,5 @@ r-koodin automaattitulostukseen teknisessä liitteessä. TUlostus kaatuu, viitet
  Kansilehti ja tiivistelmä OverLeafissa, sisällysluettelo tehty MS Wordillä.
 
 **22.11.2020** Pieniä muutoksia rakenteeseen, tekstin editointia ja korjailua.
+
+**23.11.2020** Johdatantokappale lukuun 6, pieniä korjauksia ja editointeja.

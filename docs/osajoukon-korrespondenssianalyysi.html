@@ -195,39 +195,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="osajoukon-korrespondenssianalyysi" class="section level1">
 <h1><span class="header-section-number">Luku 6</span> Osajoukon korrespondenssianalyysi</h1>
-<p><strong>k</strong> Osajoukon korrespondenssianalyysin tarve: kuvat menevät tukkoon. Kun muuttujia
-on paljon kartat ovat täynnä pisteitä ja niitä on vaikea lukea. Usein myös havaitaan,
-että ratkaisun päädimensiot kertovat ylllätyksettömän ilmeisen tarinan, ja
-kiinnostavammat yhteydet ovat piilossa ylemmissä dimensioissa (MG ja Pardo, “Vihreä
-kirja” ss. 198).</p>
-<p><strong>k</strong> Teoreettinen idea: inertian dekomoponointi (taas). Lasketaan ensin
-ca-ratkaisu ja rajataan aineisto. Yksinkertainen toteuttaa. Massat ja reunajakaumat
-säilyvä, ja siksi aineiston (“pilven”) kokonaisinertia voidaan jakaa osiin
-osajoukkojen inertiaksi. Uusia yhteyksiä näkyviin, tarkempi kuva datasta.</p>
-<p>Kuvan tukkoisuuteen voi toki vaikuttaa muillakin keinoilla. Muuttujien arvoja voi
-yhdistellä, kuvasta voi jättää pois pisteitä joiden kontribuutio on pieni tai kuvaa
-voi yksinkertaisesti suurentaa analyysivaiheessa näytöllä.</p>
-<p>Kuva-aluetta voi myös rajata johonkin osaan kuvaa. Kaikki pisteet ovat kuitenkin
-mukana määräämässä ratkaisun geometriaa.</p>
-<p>Rivejä tai sarakkeita voi myös muuttaa passiivisiksi, mutta silloin ei saavuteta
-käytännöllistä inertian dekomponointi-ominaisuutta. MCA-jaksossa osajoukon
-analysointi on pääasia ja mahdollisia vaihtoehtoja käsitellään hieman lisää.</p>
-<p>Lähteet MG ja Prado (2006)<span class="citation">(M. Greenacre ja Pardo <a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d87" role="doc-biblioref">2006</a>)</span>,
-“vihreä kirja” <span class="citation">(M. Greenacre ja Blasius <a href="lähteet.html#ref-RefWorks:doc:5ab76b43e4b003f4468d1f07" role="doc-biblioref">2006</a>)</span>,
-CAiP <span class="citation">(M. J. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>.</p>
-<p><strong>k</strong> Simple CA subset</p>
-<p><strong>k1</strong> Täydentävät pisteet voi ottaa mukaan jos ne eivät ole rajatusta “pilvestä”.
-Esim. rivien osajoukon analyysiin voi ottaa sarakepisteitä täydeäntvinä pisteinä
-normaalisti. Osajoukon profiilit muuttuvat, niiden summa ei enään ole yksi,
-barysentristä ominaisuutta ei voi suoraan käyttää täydentävien rivipisteiden
-koordinaattien laskemiseen.</p>
-<p><strong>k2</strong> Kuvien luettavuus ja pistekoko, hankala juttu</p>
-<p><strong>k</strong> Kuvien järjestyksen perustelu. 1. symmetrinen, voidaan arvioida rivipisteiden
-ja sarakepisteiden etäisyyksiä. Akselien tulkinta.</p>
-<ol start="2" style="list-style-type: decimal">
-<li><p>Kontribuutikartta: laatu, tulkinnan tarkentaminen</p></li>
-<li><p>Rivipisteiden etäisyydet - siksak</p></li>
-</ol>
+<p>Graafisessa data-analyysissä kuvien on oltava selkeitä, mutta
+korrespondenssianalyysin ja monimuutujakorrespondenssianalyysin kartat ovat usein
+liian täynnä pisteitä. Ongelmaa voi lievenätää jättämällä pois ratkaisuun vain
+vähän vaikutttavia pisteitä, keksimällä mahdollisimman lyhyitä symboleja
+muuttujille tai rajaamalla kuvaa. Ongelma on kuitenkin syvempi, usein kartta
+kertoo aika yllätyksettömän ja ilmeisen tarinan. Kiinnostavammat yhteydet
+pysyvät piilossa ylemmissä dimensioissa. MCA-kartan perusongelma on se, että
+siinä yritetään esittää monia erityyppisiä yhteyksiä simultaanisesti ja nämä
+yhteydet eivät ole “isolated to particular dimensions”
+( <span class="citation">M. Greenacre ja Pardo (<a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d87" role="doc-biblioref">2006</a>)</span> , 198).</p>
+<p>Osajoukon korrespondenssianalyysi (subset CA, MCA) on yksi vastaus tähän
+pulmaan. Teoreettiset perusteet on esitetty Greenacren ja Pardon artikkelissa
+<span class="citation">(M. Greenacre ja Pardo <a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d87" role="doc-biblioref">2006</a>)</span> ja sen laajennetussa versiossa (emt.),
+esimerkkiaineistona ISSP:n 1994 data. Selkeä oppikirjaesitys on CAiP (ss. 161-).</p>
+<p>Eräs selkeä sovelluskohde yhteiskuntatieteellisissä kyselyaineistoissa on
+puuttuvien vastausten analyysi, johon palataan seuraavassa luvussa.</p>
+<p>Osajoukon korrespondenssianlyysin idea on säilyttää koko aineiston massat ja
+khii2-etäisyyksien painot mutta analysoida vain osaa aineistosta. Koko aineiston
+sentroidi säilyy kartan keksipisteenä. Osajoukkojen inertioiden summa on koko
+aineiston inertia.</p>
+<p>Osajoukon voi valita havaintojen tai muuttujien suhteen. Täydentäviä pisteitä
+voi helposti lisätä kartalle , jos ne eivät kuulu siihen joukkoon josta
+osajoukko on valittu. Osajoukon profiilit muuttuvat, niiden summa ei enään ole
+yksi ja barysentristä periaatetta ei voi suoraan käyttää täydentävän pisteen
+koordinaattien laskemiseen. Tässä esimerkissä emme voi suoraan ca-paketin avulla
+sijoittaa esimerkiksi maapisteitä kartoille.</p>
+<p>Karttaa <a href="yhteisvaikutusmuuttujat.html#fig:maagaCA1map1">5.2</a> katsomalla on helppo jakaa aineisto aluksi vain kahteen ryhmään.
+Suomi, Tanska ja Saksa ovat pääakselin oikealla puolella.
+Bulgaria ja Unkari yhdessä Belgian kanssa ovat toinen ryhmä.</p>
 <div class="figure" style="text-align: center"><span id="fig:maagaCA2sub2map1"></span>
 <img src="JH_capaper_files/figure-html/maagaCA2sub2map1-1.png" alt="Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi" width="90%" />
 <p class="caption">
