@@ -208,4 +208,5 @@ r-koodin automaattitulostukseen teknisessä liitteessä. TUlostus kaatuu, viitet
 
 **23.11.2020** Johdatantokappale lukuun 6, pieniä korjauksia ja editointeja.
 
-**23.11.2020** Tekstin editointia, viitteiden lisäyksiä ja tarkistuksia.
+**23.11.2020** Tekstin editointia, viitteiden lisäyksiä ja tarkistuksia. Toinen
+samanmoinen päivitys.

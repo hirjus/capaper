@@ -1906,22 +1906,21 @@ _massa_ ja _$\chi^{2}$ - etäisyys_ -- on esitely tarkemmin liitteessä 1.
 Rivi- ja sarakeprofiilien taulukoista näkee helposti, että keskiarvoprofiilien
 alkiot ovat massoja. Rivien keskiarvoprofiilin alkiot ovat sarakemassoja, ja sama
 pätee sarakkeille. Tämä rivi- ja sarakeongelmien duaalisuus on yksinkertaisen
-korrespondenssianalyysin keskeinen idea (CAiP, s. 57). Rivi- ja sarakeongelma
-ratkaisu johtaa saamaan lopputulokseen.
+korrespondenssianalyysin keskeinen idea (CAiP, s. 57). Rivi- tai sarakeongelman
+ratkaisu tuottaa saman tuloksen.
 
 Ratkaisun dimensio on sarakkeiden tai rivien lukumäärä vähennettynä yhdellä,
-pienempi kahdesta vaihtoehdosta.
+pienempi kahdesta vaihtoehdosta. Se on myös kokonaisinertian teoreettinen maksimi.
 
-Korrespondenssianalyysi on oleellisesti pääkomponenttianalyysiä, etäisyysmitta on
+Korrespondenssianalyysi on läheistä sukua pääkomponenttianalyysille.Etäisyysmitta on
 khii2-etäisyys (käytän tekstissä tätä kirjoitusasua) ja mukana ovat massat painoina.
 Ratkaisussa etsitään haluttu yleensä kaksiulotteinen ratkaisu (taso), joka minimoi pisteiden
 khii2-etäisyyksien poikkeamien summan eli on mahdollisimman lähellä pisteitä.
 Alkuperäisen täyden dimension (full space) data projisoidaan tälle tasolle.
 
 
-
-
 ## Symmetrinen kartta
+
 
 ```{r simpleCA1map1, echo=FALSE, fig.cap= "Q1b: lapsi kärsii jos äiti on töissä",fig.asp = 1, out.width = "90%",fig.align = "center"}
 
@@ -2049,8 +2048,10 @@ suhteesta. Tarkemmin teorialiitteessä, tässä heuristisesti jotta kuvia osaa t
 Korrespondenssianalyysille on vakiintunut oma käsitteistö, joista tärkeimmät on
 jo mainittu. Kun tulkinta perustuu ”ääripäihin”, puhutaan kontrasteista ja
 distinktiosta. Luokittelumuuttujan arvot taas ovat modaliteetteja.
-Tärkein periaate on se, että kaikki on suhteellista. Ydinkäsitteitä ovat
-_korrespondenssianalyysin ”tripletti”: khii2-etäisyys, massat ja profiilit_.
+Tärkein periaate on se, että kaikki on suhteellista.
+
+Ydinkäsitteitä ovat
+_korrespondenssianalyysin ”tripletti”:khii2-etäisyys, massat ja profiilit_.
 
 Kolmikkoa täydentää  ”kvartetti”, neljä siitä johdettua käsitettä: _inertia_ eli
 (painotettu) varianssi, _sentroidi_ (painotettu keskiarvo, barysentrinen periaate),
@@ -2091,8 +2092,8 @@ voidaan järkevästi esittää suhteelisina lukumäärinä (relative amounts), s
 suhdeasteikon (ratio scale) muuttujana. Tässä oleellista on tulkittavuus
 tutkimusongelman näkökulmasta. Välttämätön ehto on sama mittayksikkö: lukumäärä,
 rahayksikkö, pituusmitta kelpaavat. (CAiP s. 15).
-Toinen ehto on ei-negatiivisuus (nolla tai nollaa suurempi luku) ,
-kts. kuitenkin GDA (tietyilllä ehdoilla myös neg. arvot. Rajat ovat melko
+Toinen ehto on ei-negatiivisuus(nolla sallittu) ja tietyin ehdoin myös
+negatiiviset luvut [@RefWorks:doc:5a857a43e4b0ed2d44664d75 s. 60]. Rajat ovat melko
 joustavat, kun mukaan otetaan erilaiset uudelleenskaalaukset ja transformaatiot.
 Tämä oli menetelmän perusidea jo Benzecrillä(CAiP ch 26, s. 201).
 
@@ -2255,15 +2256,6 @@ Belgia erottuvat hieman heikommin esitettyinä.
 
 ### Massat
 
-**edit** Onko vakioitujen massojen kartta liian aikaisin? Tämä ei ole pääasia, vaan selvennys.
-Miksi tässä? Perusteltava, miksi en vakioi massoja maille, sukupuolille jne. (a)
-perusteltua kun tarkempi tutkimusongelma, esim. erottelut maiden ja sukupuolten
-välillä. Varianssianalyysin tapaan varianssin hajoittaminen ryhmisen sisäiseen ja
-ryhmien väliseen. Kts. teorialiitteestä esim. ABBA. (b) CA "perusmuodossa", massa
-on yksi kolmesta tärkeimmästä käsitteestä. (c) on aika työlästä!
-
-**edit** Galkussa verrattu molempien painotusten khii2-etäisyyksiä, jos tarpeen
-niin teoria-liitteeseen.
 
 Massat ovat korrespondenssianalyysin keskeinen käsite, ja niiden kaksoisrooli on
 menetelmän ytimessä. Massat ovat normalisoiva muunnos khii2-etäisyysmitalle ja
@@ -2325,8 +2317,8 @@ dekomponointia, jakamista osiin.
 
 Yksinkertaisen korrespondenssianalyysin peruskuva on symmetrinen kartta. Ehkä
 yllättäen sen "...tulkinta on edelleen menetelmän kaikkein kiistanalaisin aspekti.”
-[@RefWorks:doc:5a857a43e4b0ed2d44664d78] (s.295),[@RefWorks:doc:5c768b09e4b02df9431e950a].
-vrt. myös, Johdanto, SPSS - kritiikki.
+(CAiP s.295, @RefWorks:doc:5c768b09e4b02df9431e950a.)
+
 
 Sarake- ja rivisteet esitetään siinä ikään kuin päällekkäin, samassa koordinaatistossa.
 Niiden pääkoordinaatit ovat kuitenkin eri pistejoukoista tai avaruuksista. Asymmetrisessä
@@ -2578,28 +2570,23 @@ tässä esimerkissä 4(sarakkeiden lukumäärä - 1). Tärkein lähde on CAiP:n 
 ja liitte B.
 
 R-paketti "ca" (versio 0.71.1) listaa numeeriset tulokset suppeasti (print) ja laajemmin
-(summary), laajempi tulostus on alla.Paketin pdf-dokumentissa s.20 on kirjoitusvirhe, tiiviimmässä
-tulosteessa ei ole pääkoordinaattaja (principal coordinates) vaan standardikoordinaatit.
-
+(summary), laajempi tulostus on alla.
 
 
 ```{r suppointCA2numres1,echo=FALSE, eval=FALSE}
 
-# ca-paketin manuaali väittää, että tässä tulostetaan principal-koordinaatit mutta nämä ovat
-# standardikoordinaatteja.
 print(suppointCA2)
 
 ```
 
 
 
-**k** Lyhyt selostus - nämä aika selkeitä
-
 Ensimmäisenä on listattu kokonaisinertia pääakseleittain. Tässä suhteelliset luvut
 on esitetty prosentteina. Muut luvut on luettavuuden vuoksi skaalattu, joko kerrottu
 tuhannella tai esitetty "permills" (summa on 1000).
 
-```{r suppointCA2numres2,echo=TRUE}
+
+```{r suppointCA2numres2,echo=FALSE}
 
 summary(suppointCA2)
 
@@ -2756,6 +2743,7 @@ ja \@ref(fig:3dklippi2), samoin E-sarakkeen kohtalainen muutos.
 
 **k** Kuvakaappaukset ca-paketin kolmiulotteisista kuvista eivät kovin hyvin näitä eroja. Dynaamisella kuvalla pistepilvien
 rakenteen hahmottaisi helpommin, tämä onnistuu useissa R-ympäristöissä.
+
 
 ```{r 3dklippi1, echo=FALSE, fig.cap="Saksan ja  Belgian aluejako - 3d-kuva1", out.width = "90%",fig.align = "center"}
 
@@ -2961,7 +2949,7 @@ erot mielipiteissä ovat paljon suurempia kuin sukupuolten väliset maiden sisä
 
 
 
-```{r maaga1}
+```{r maaga1, echo=FALSE}
 ISSP2012esim1b.dat <- mutate(ISSP2012esim1b.dat,
                              maaga = paste(maa, ga, sep = ""))
 
@@ -3090,7 +3078,7 @@ yhteydet eivät ole “isolated to particular dimensions”
 ( @RefWorks:doc:5a857a44e4b0ed2d44664d87 , 198).
 
 
-Osajoukon korrespondenssianalyysi (subset CA, MCA) on yksi vastaus tähän
+Osajoukon korrespondenssianalyysi (subset CA, subset MCA) on yksi vastaus tähän
 pulmaan. Teoreettiset perusteet on esitetty Greenacren ja Pardon artikkelissa
 [@RefWorks:doc:5a857a44e4b0ed2d44664d87] ja sen laajennetussa versiossa (emt.),
 esimerkkiaineistona ISSP:n 1994 data. Selkeä oppikirjaesitys on CAiP (ss. 161-). 
@@ -3111,7 +3099,7 @@ yksi ja barysentristä periaatetta ei voi suoraan käyttää täydentävän pist
 koordinaattien laskemiseen. Tässä esimerkissä emme voi suoraan ca-paketin avulla
 sijoittaa esimerkiksi maapisteitä kartoille.
 
-Karttaa \@ref(fig:maagaCA1map1) katsomalla on helppo jakaa aineisto aluksi vain kahteen ryhmään.
+Kartan \@ref(fig:maagaCA1map1) avulla on helppo jakaa aineisto aluksi vain kahteen ryhmään.
 Suomi, Tanska ja Saksa ovat pääakselin oikealla puolella.
 Bulgaria ja Unkari yhdessä Belgian kanssa ovat toinen ryhmä.
 

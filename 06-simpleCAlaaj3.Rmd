@@ -12,7 +12,7 @@ yhteydet eivät ole “isolated to particular dimensions”
 ( @RefWorks:doc:5a857a44e4b0ed2d44664d87 , 198).
 
 
-Osajoukon korrespondenssianalyysi (subset CA, MCA) on yksi vastaus tähän
+Osajoukon korrespondenssianalyysi (subset CA, subset MCA) on yksi vastaus tähän
 pulmaan. Teoreettiset perusteet on esitetty Greenacren ja Pardon artikkelissa
 [@RefWorks:doc:5a857a44e4b0ed2d44664d87] ja sen laajennetussa versiossa (emt.),
 esimerkkiaineistona ISSP:n 1994 data. Selkeä oppikirjaesitys on CAiP (ss. 161-). 
@@ -33,7 +33,7 @@ yksi ja barysentristä periaatetta ei voi suoraan käyttää täydentävän pist
 koordinaattien laskemiseen. Tässä esimerkissä emme voi suoraan ca-paketin avulla
 sijoittaa esimerkiksi maapisteitä kartoille.
 
-Karttaa \@ref(fig:maagaCA1map1) katsomalla on helppo jakaa aineisto aluksi vain kahteen ryhmään.
+Kartan \@ref(fig:maagaCA1map1) avulla on helppo jakaa aineisto aluksi vain kahteen ryhmään.
 Suomi, Tanska ja Saksa ovat pääakselin oikealla puolella.
 Bulgaria ja Unkari yhdessä Belgian kanssa ovat toinen ryhmä.
 

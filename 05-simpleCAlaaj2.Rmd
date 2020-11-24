@@ -186,7 +186,7 @@ erot mielipiteissä ovat paljon suurempia kuin sukupuolten väliset maiden sisä
 
 
 
-```{r maaga1}
+```{r maaga1, echo=FALSE}
 ISSP2012esim1b.dat <- mutate(ISSP2012esim1b.dat,
                              maaga = paste(maa, ga, sep = ""))
 

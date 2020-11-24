@@ -70,9 +70,10 @@ data
 aineiston-rajaaminen-maat-ja-muuttujat
 yksinkertainen-korrespondenssianalyysi
 äiti-töissä---kärsiikö-lapsi
-korrespondenssianalyysin-esimerkki-symmetrinen-kartta
+symmetrinen-kartta
 korrespondenssianalyysin-peruskäsitteet
 asymmetrinen-kartta-ja-ideaalipisteet
+barysentrinen-periaate
 kontribuutiot-kartalla
 massat
 karttojen-erot
@@ -87,6 +88,5 @@ stabiilisuus
 osajoukon-korrespondenssianalyysi
 monimuuttuja-korrespondenssianalyysi-mca
 pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables
-matched-matrices
 mca---monimuuttujakorrespondenssianalyysi
 yhteenveto

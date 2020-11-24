@@ -523,22 +523,21 @@ _massa_ ja _$\chi^{2}$ - etäisyys_ -- on esitely tarkemmin liitteessä 1.
 Rivi- ja sarakeprofiilien taulukoista näkee helposti, että keskiarvoprofiilien
 alkiot ovat massoja. Rivien keskiarvoprofiilin alkiot ovat sarakemassoja, ja sama
 pätee sarakkeille. Tämä rivi- ja sarakeongelmien duaalisuus on yksinkertaisen
-korrespondenssianalyysin keskeinen idea (CAiP, s. 57). Rivi- ja sarakeongelma
-ratkaisu johtaa saamaan lopputulokseen.
+korrespondenssianalyysin keskeinen idea (CAiP, s. 57). Rivi- tai sarakeongelman
+ratkaisu tuottaa saman tuloksen.
 
 Ratkaisun dimensio on sarakkeiden tai rivien lukumäärä vähennettynä yhdellä,
-pienempi kahdesta vaihtoehdosta.
+pienempi kahdesta vaihtoehdosta. Se on myös kokonaisinertian teoreettinen maksimi.
 
-Korrespondenssianalyysi on oleellisesti pääkomponenttianalyysiä, etäisyysmitta on
+Korrespondenssianalyysi on läheistä sukua pääkomponenttianalyysille.Etäisyysmitta on
 khii2-etäisyys (käytän tekstissä tätä kirjoitusasua) ja mukana ovat massat painoina.
 Ratkaisussa etsitään haluttu yleensä kaksiulotteinen ratkaisu (taso), joka minimoi pisteiden
 khii2-etäisyyksien poikkeamien summan eli on mahdollisimman lähellä pisteitä.
 Alkuperäisen täyden dimension (full space) data projisoidaan tälle tasolle.
 
 
-
-
 ## Symmetrinen kartta
+
 
 ```{r simpleCA1map1, echo=FALSE, fig.cap= "Q1b: lapsi kärsii jos äiti on töissä",fig.asp = 1, out.width = "90%",fig.align = "center"}
 
@@ -666,8 +665,10 @@ suhteesta. Tarkemmin teorialiitteessä, tässä heuristisesti jotta kuvia osaa t
 Korrespondenssianalyysille on vakiintunut oma käsitteistö, joista tärkeimmät on
 jo mainittu. Kun tulkinta perustuu ”ääripäihin”, puhutaan kontrasteista ja
 distinktiosta. Luokittelumuuttujan arvot taas ovat modaliteetteja.
-Tärkein periaate on se, että kaikki on suhteellista. Ydinkäsitteitä ovat
-_korrespondenssianalyysin ”tripletti”: khii2-etäisyys, massat ja profiilit_.
+Tärkein periaate on se, että kaikki on suhteellista.
+
+Ydinkäsitteitä ovat
+_korrespondenssianalyysin ”tripletti”:khii2-etäisyys, massat ja profiilit_.
 
 Kolmikkoa täydentää  ”kvartetti”, neljä siitä johdettua käsitettä: _inertia_ eli
 (painotettu) varianssi, _sentroidi_ (painotettu keskiarvo, barysentrinen periaate),
@@ -708,8 +709,8 @@ voidaan järkevästi esittää suhteelisina lukumäärinä (relative amounts), s
 suhdeasteikon (ratio scale) muuttujana. Tässä oleellista on tulkittavuus
 tutkimusongelman näkökulmasta. Välttämätön ehto on sama mittayksikkö: lukumäärä,
 rahayksikkö, pituusmitta kelpaavat. (CAiP s. 15).
-Toinen ehto on ei-negatiivisuus (nolla tai nollaa suurempi luku) ,
-kts. kuitenkin GDA (tietyilllä ehdoilla myös neg. arvot. Rajat ovat melko
+Toinen ehto on ei-negatiivisuus(nolla sallittu) ja tietyin ehdoin myös
+negatiiviset luvut [@RefWorks:doc:5a857a43e4b0ed2d44664d75 s. 60]. Rajat ovat melko
 joustavat, kun mukaan otetaan erilaiset uudelleenskaalaukset ja transformaatiot.
 Tämä oli menetelmän perusidea jo Benzecrillä(CAiP ch 26, s. 201).
 
@@ -872,15 +873,6 @@ Belgia erottuvat hieman heikommin esitettyinä.
 
 ### Massat
 
-**edit** Onko vakioitujen massojen kartta liian aikaisin? Tämä ei ole pääasia, vaan selvennys.
-Miksi tässä? Perusteltava, miksi en vakioi massoja maille, sukupuolille jne. (a)
-perusteltua kun tarkempi tutkimusongelma, esim. erottelut maiden ja sukupuolten
-välillä. Varianssianalyysin tapaan varianssin hajoittaminen ryhmisen sisäiseen ja
-ryhmien väliseen. Kts. teorialiitteestä esim. ABBA. (b) CA "perusmuodossa", massa
-on yksi kolmesta tärkeimmästä käsitteestä. (c) on aika työlästä!
-
-**edit** Galkussa verrattu molempien painotusten khii2-etäisyyksiä, jos tarpeen
-niin teoria-liitteeseen.
 
 Massat ovat korrespondenssianalyysin keskeinen käsite, ja niiden kaksoisrooli on
 menetelmän ytimessä. Massat ovat normalisoiva muunnos khii2-etäisyysmitalle ja
@@ -942,8 +934,8 @@ dekomponointia, jakamista osiin.
 
 Yksinkertaisen korrespondenssianalyysin peruskuva on symmetrinen kartta. Ehkä
 yllättäen sen "...tulkinta on edelleen menetelmän kaikkein kiistanalaisin aspekti.”
-[@RefWorks:doc:5a857a43e4b0ed2d44664d78] (s.295),[@RefWorks:doc:5c768b09e4b02df9431e950a].
-vrt. myös, Johdanto, SPSS - kritiikki.
+(CAiP s.295, @RefWorks:doc:5c768b09e4b02df9431e950a.)
+
 
 Sarake- ja rivisteet esitetään siinä ikään kuin päällekkäin, samassa koordinaatistossa.
 Niiden pääkoordinaatit ovat kuitenkin eri pistejoukoista tai avaruuksista. Asymmetrisessä

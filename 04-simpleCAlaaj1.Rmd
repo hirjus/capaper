@@ -181,28 +181,23 @@ tässä esimerkissä 4(sarakkeiden lukumäärä - 1). Tärkein lähde on CAiP:n 
 ja liitte B.
 
 R-paketti "ca" (versio 0.71.1) listaa numeeriset tulokset suppeasti (print) ja laajemmin
-(summary), laajempi tulostus on alla.Paketin pdf-dokumentissa s.20 on kirjoitusvirhe, tiiviimmässä
-tulosteessa ei ole pääkoordinaattaja (principal coordinates) vaan standardikoordinaatit.
-
+(summary), laajempi tulostus on alla.
 
 
 ```{r suppointCA2numres1,echo=FALSE, eval=FALSE}
 
-# ca-paketin manuaali väittää, että tässä tulostetaan principal-koordinaatit mutta nämä ovat
-# standardikoordinaatteja.
 print(suppointCA2)
 
 ```
 
 
 
-**k** Lyhyt selostus - nämä aika selkeitä
-
 Ensimmäisenä on listattu kokonaisinertia pääakseleittain. Tässä suhteelliset luvut
 on esitetty prosentteina. Muut luvut on luettavuuden vuoksi skaalattu, joko kerrottu
 tuhannella tai esitetty "permills" (summa on 1000).
 
-```{r suppointCA2numres2,echo=TRUE}
+
+```{r suppointCA2numres2,echo=FALSE}
 
 summary(suppointCA2)
 
@@ -359,6 +354,7 @@ ja \@ref(fig:3dklippi2), samoin E-sarakkeen kohtalainen muutos.
 
 **k** Kuvakaappaukset ca-paketin kolmiulotteisista kuvista eivät kovin hyvin näitä eroja. Dynaamisella kuvalla pistepilvien
 rakenteen hahmottaisi helpommin, tämä onnistuu useissa R-ympäristöissä.
+
 
 ```{r 3dklippi1, echo=FALSE, fig.cap="Saksan ja  Belgian aluejako - 3d-kuva1", out.width = "90%",fig.align = "center"}
 
