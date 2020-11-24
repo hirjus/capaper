@@ -199,35 +199,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 periaatteet voi esittää kahden luokitelumuuttujan ristiintaulukoinnin eli
 kontigenssitaulun analyysin avulla. Kyse ei ole pelkästään helposta esimerkistä,
 vaan peruskäsitteet ja geometrisiin perusteisiin nojaava graafinen analyysi ovat
-oleellisilta osin samat myös monimutkaisemmissa menetelmän sovelluksissa.
-MG&amp;Hastie korostivat tätä, ja MG:n oppikirjat ovat hyvä esimerkki perusteellisesta
-yksinkertaisen taulukon analyysin esitystavasta. GDA-kirja (viite) korostaa
-ranskalaisen perinteen mukaisesti matemaattista teoriaperustaa, mutta myös siinä
-menetelmä peruskäsitteet ja tulkinnat esitellään yksinkertaisella esimerkillä
-(Fisherin Cairness-data, Mustonen (viite) käyttää samaa dataa).</p>
+oleellisilta osin samat myös monimutkaisemmissa menetelmän sovelluksissa. <span class="citation">(Greenacre ja Hastie <a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d84" role="doc-biblioref">1987</a>)</span>.</p>
+<p>Greenacren oppikirjat ovat hyvä esimerkki
+perusteellisesta yksinkertaisen taulukon analyysin esitystavasta.
+<span class="citation">Roux ja Rouanet (<a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>)</span> esittelvät menetelmän
+ranskalaisen perinteen mukaisesti korostaen matemaattista teoriaperustaa,
+mutta myös siinä menetelmä peruskäsitteet ja tulkinnat esitellään yksinkertaisella
+esimerkillä. <span class="citation">Mustonen (<a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d95" role="doc-biblioref">1995</a>)</span> käyttää samaa Fisherin
+Cairness-aineistoa korrespondenssianalyysin esittelyyn</p>
 <p>Esitän tässä jaksossa korrespondenssianalyysin peruskäsitteet intuitiivisesti,
 matemaattiset yksityiskohdat löytyvät liittestä 1. Esitystavan etu on taulukon
-pieni koko, johtopäätökset voi helposti tarkastaa datasta.
-Näin päästään nopeasti pääasiaan, graafiseen analyysiin.</p>
-<p>Tämä ei ole ainoa mahdollinen näkökulma, korrespondenssianalyysillä on useita
-vaihtoehtoisia tulkintoja. Se voidaan ymmärtää myös moniulotteisen
-varianssianalyysin kaltaiseksi hajonnan dekomponoinnin menetelmäksi.
-GDA-kirjassa numeeriset tulokset ovat tulkinnan lähtökohtana ja vasta sitten
-katsotaan graafista esitystä. CAiP (viite) pitää numeerisia tuloksia tärkeinä,
-niiden avulla varmistetaan kuvan tulkinnan pätevyys.</p>
+pieni koko, johtopäätökset voi helposti tarkastaa datasta. Datan analyysin tärkein
+väline on kuva, yleensä kaksiulotteinen kartta. Tulkinta ja erityisesti väärien
+johtopäätösten välttäminen vaati kartan tulkinnan varmistamista ratkaisun
+numeerista tuloksista. Kun analysoitava taulukko, sen rivien ja sarakkeiden
+riippuvuuksia kuvaava kartta ja kartan perustana olevat numeeriset tulokset
+esitetään yhdessä on helpompi ymmärtää tulkinnan perussäännöt.</p>
+<p>Greenacren oppikirjojen ja <span class="citation">Roux ja Rouanet (<a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>)</span> esitystavassa
+on pieni ero. Molemmille juuri graafinen analyysi on oleellista, mutta ranskalaiset
+tutkijat korostavat numeeristen tulosten ensisijaisuuta. Analyysi pitää aloittaa
+tutkimalla numeerisen ratkaisun ominaisuuksia. Greenacren mielestä numeerisia tuloksia
+tarvitaan johtopäätösten varmistamiseen, ensin katsotaan karttaa. Eroa ei kannata
+liioitella, molempia tarvitaan. Eksploratiivisessa data-analyysissä näkökulmaa
+muutetaan kun datan ominaisuudet tai omituisuudet havaitaan. Kun kartat ovat aina
+approksimaatiota, numeerisia tuloksia tarvitaan.</p>
 <div id="äiti-töissä---kärsiikö-lapsi" class="section level2">
 <h2><span class="header-section-number">3.1</span> Äiti töissä - kärsiikö lapsi?</h2>
 <p>Aineisto on kuuden maan vastaukset kysymykseen Q1b: ”Alle kouluikäinen lapsi
 todennäköisesti kärsii, jos hänen äitinsä käy työssä”. Kysymys on voimakkaasti
-muotoiltu (<strong>edit</strong>MG on jossain jutussa havainnut, että kyselyn kahdessa
-kysymyksessä on sana ”äiti” ja niiden vastausten jakaumat poikkeavat. Jos löydän
-lähteen lisään sen tähän). Kysymykset on suunniteltu kokonaisuudeksi, ja niitä
-analysoidaan yhdessä luvussa 7, yhden taulukon analyysi esittelee menetelmän.
-(alaviite:Tämän havaitsi eräs lastensuojelun ammattilainen: kysymys on
-irrallisena monimerkityksellinen (vähintään ns. ”double - barreled”), eikä
-siihen voi oikein järjevästi vastata. Pitäisi tietää missä lapsi on, mitä hän
-tekee). Havainnot joissa tieto vastauksesta puuttuu on poistettu aineistosta.
-Taustamuuttujia ovat vastaajan sukupuoli ja ikä.</p>
+muotoiltu. Eräs lastensuojelun ammattilainen piti vastaamista mahdottomana; pitää
+tietää missä lapsi on , mitä hän tekee. Kysymykset on kuitenkin suunniteltu
+kokonaisuudeksi, ja niitä analysoidaan yhdessä luvussa 7. Yhden taulukon analyysi
+esittelee menetelmän, oikeassa tutkimuksessa pitää käyttää vähintään koko
+kysymyssarjaa.</p>
+<p>Havainnot joissa tieto vastauksesta puuttuu on poistettu aineistosta.
+Taustamuuttujia ovat vastaajan sukupuoli ja ikä. Taulukoissa vastausvaihtoehtojen
+tunnuksina käytetään samoja symboleja kuin kuvissa (E = täysin eri mielä,
+e = eri mieltä ? = ei samaa eikä eri mieltä, s = samaa mieltä, S = täysin samaa
+mieltä).</p>
 <p>Frekvenssitaulukossa <a href="yksinkertainen-korrespondenssianalyysi.html#tab:simpeCA-frekTa1">3.1</a> on esitetty vastausten suhteellinen jakauma,
 lukumäärät on jaettu havaintojen lukumäärällä (8143). Korrespondenssianalyysissä
 kaikki on suhteellista, ja analyysi perustuu tähän taulukkoon. Taulukon
@@ -316,8 +325,8 @@ osuuden. Näitä suhteellisia osuuksia kutsustaan korrespondenssianalyysissä
 <p>Muuttujien luonne on usein erilainen. Tähän aineistoon sopii
 riviprosenttientaulukko, vertaillaan vastausten jakaumia maiden välillä. Taulukon
 sarakkeet ovat muuttujia ja rivit havaintoja. Rivit on saatu summaamalla
-(aggregoimalla) vastaukset maittain.
-(viite: MG kutsuu näitä rivejä termillä samples, osajoukot).</p>
+(aggregoimalla) vastaukset maittain. Greenacre käyttää näistä yksittäisten
+vastausten (havaintojen) summariveistä termiä “sample”.</p>
 <table>
 <caption><span id="tab:simpeCA-rprosTa1">Taulukko 3.2: </span>Kysymyksen Q1b vastaukset, riviprosentit</caption>
 <thead>
@@ -506,7 +515,7 @@ kohtalainen (17 %).
 Sarakeprofiilikuvassa <a href="yksinkertainen-korrespondenssianalyysi.html#fig:g1-2kuva1">3.1</a> täysin eri mieltä - vastaus (E) on
 selvästi erilainen ja sen massa on suuri (23%). Kaikki luvut ovat suhteellisia,
 havaintojen lukumäärä ei vaikuta tulkintaan periaatteessa mitenkään.</p>
-<p>Mikä on rivien (havaintojen) ja sarakkeiden (muuttujien) yhteys?</p>
+<p>Mikä on rivien ja sarakkeiden yhteys?</p>
 <p>Kahden luokittelumuuttujan riippuvuutta voidaan testata <span class="math inline">\(\chi^{2}\)</span> - testillä.
 Riippumattomuushypoteesin mukainen odotettu solufrekvenssi on taulukon
 <a href="yksinkertainen-korrespondenssianalyysi.html#tab:simpeCA-frekTa1">3.1</a> reunajakaumien alkioiden tulo.</p>
@@ -516,8 +525,9 @@ frekvenssien erotukset muodossa</p>
   \chi^{2} = \frac{(havaittu - odotettu)^2} {odotettu}
     \tag{3.1}
 \end{equation}\]</span></p>
-<p>Tämä voidaan esittää ca:han sopivammalla tavalla parilla muunnoksella, jolloin
-saamme riveittäin vastaavat termit rivisummalla painotettuna:</p>
+<p>Tämä voidaan esittää korrespondenssianalyysin esittelyyn sopivammalla tavalla
+parilla muunnoksella, jolloin saamme riveittäin vastaavat termit rivisummalla
+painotettuna.</p>
 <p><span class="math display" id="eq:khii22">\[\begin{equation}
   rivisumma \times \frac{(havaittu \: riviprofiili - odotettu \: riviprofiili)^2} {odotettu \: riviprofiili}
     \tag{3.2}
@@ -530,21 +540,20 @@ rivin massaksi, ja niiden summa muotoon <span class="math inline">\(\frac{\chi^{
  \end{equation}\]</span></p>
 <p>Jakajassa ei ole vapausastekorjausta (n-1), korrespondenssianalyysi on
 deskriptiivistä data-analyysiä.</p>
-<p>Tunnusluku <span class="math inline">\(\phi^{2}\)</span> on korrespondenssianalyysissä kokonaisinertia (total
+<p>Tunnusluku <span class="math inline">\(\phi^{2}\)</span> on korrespondenssianalyysissä <em>kokonaisinertia</em> (total
 inertia). Se kuvaa, kuinka paljon varianssia taulukossa on ja on riippumaton
 havaintojen lukumäärästä. Tilastotieteessä tunnusluvulla on useita vaihtoehtoisia
-nimiä (esim. mean square contingency coefficient), ja sen neliöjuurta kutsutaan
+nimiä (esim. mean square contingency coefficient) ja sen neliöjuurta kutsutaan
 <span class="math inline">\(\phi\)</span> - kertoimeksi.</p>
-<p>Korrespondenssianalyysin algoritmit operoivat suhteellisten frekvenssien
-taulukkolla. Kaavojen <a href="yksinkertainen-korrespondenssianalyysi.html#eq:khii21">(3.1)</a> ja <a href="yksinkertainen-korrespondenssianalyysi.html#eq:khii22">(3.2)</a> yhteyden pitäisi olla
-selkeä.</p>
+<p>Korrespondenssianalyysin ratkaisussa käytetään suhteellisten frekvenssien
+taulukkoa.</p>
 <p>Frekvenssitaulukossa (jossa kaikki taulukon luvut on jaettu havaintojen
 lukumäärällä N riviprofiilien 1 ja 3 (euklidinen) etäisyys on</p>
 <p><span class="math display" id="eq:euclid1">\[\begin{equation}
  \sqrt{(p_{11} - p_{31})^2 + (p_{12} - p_{32})^2 + (p_{13} - _{33})^2+ (p_{14} - _{34})^2+ (p_{15} - _{35})^2}
  \tag{3.4}
  \end{equation}\]</span></p>
-<p>Rivien <span class="math inline">\(\chi^{2}\)</span> - etäisyys on painotettueuklidinen etäisyys, jossa painoina
+<p>Rivien <span class="math inline">\(\chi^{2}\)</span> - etäisyys on painotettu euklidinen etäisyys, jossa painoina
 ovat riviprofiilin odotetut arvot. Ne ovat riippumattomuushypoteesin mukaisesti
 riviprofiilien keskiarvoprofiilin vastaavat alkioit <span class="math inline">\(r_{i}\)</span> .</p>
 <p><span class="math display" id="eq:euclid2">\[\begin{equation}
@@ -558,22 +567,20 @@ summa lasketaan yli rivien <span class="math inline">\({i}\)</span>.</p>
  \phi^{2} = \sum_{i} (massa \: m_{i}) \times (profiilin \: i \: \chi^{2} - etäisyys \: sentroidista)^{2}
  \tag{3.6}
 \end{equation}\]</span></p>
-<p><strong>edit</strong> Tässä esitystavassa viite on CAiP, teorialiitteessä tarkemmin. Tarkoitus on esittää
-yksinkertaisesti taulukon datan analyysin käsitteet ja CA:n peruskäsitteet profiili,
-massa ja <span class="math inline">\(\chi^{2}\)</span> - etäisyys</p>
+<p>Korrespondenssianalyysin kolmen peruskäsitteen “tripletti” – <em>profiili</em>,
+<em>massa</em> ja <em><span class="math inline">\(\chi^{2}\)</span> - etäisyys</em> – on esitely tarkemmin liitteessä 1.</p>
 <p>Rivi- ja sarakeprofiilien taulukoista näkee helposti, että keskiarvoprofiilien
 alkiot ovat massoja. Rivien keskiarvoprofiilin alkiot ovat sarakemassoja, ja sama
 pätee sarakkeille. Tämä rivi- ja sarakeongelmien duaalisuus on yksinkertaisen
-korrespondenssianalyysin keskeinen idea. Greenacren perusoppikirjassa ensimmäiset
-luvut esittelevät lähes kaikki menetelmän perusideat eri näkökulmilla
-tällaiseen taulukkoon (CAiP).</p>
-<p><strong>k</strong> ca-ratkaisu: rivi- ja sarekepilvien dimensio on sarakkeiden tai rivien
-lukumäärä vähennettynä yhdellä, pienempi kahdesta vaihtoehdosta. Tämä seuraa
-yksikertaisesti rivi- ja sarakeprofiilien suhteellisuudesta, niiden summat ovat 1.</p>
-<p><strong>k</strong> Etsitään kaksiulotteinen ratkaisu (taso), joka minimoi pisteiden
-khii2-etäisyyksien poikkeamien summan eli on mahdollisimman lähellä pisteitä.</p>
-<p><strong>K</strong> rivi- ja sarakeongelma ratkaisu johtaa saamaan lopputulokseen. Tämä
-duaalisuus on korrespondenssianalyysin perusominaisuuksia.</p>
+korrespondenssianalyysin keskeinen idea (CAiP, s. 57). Rivi- ja sarakeongelma
+ratkaisu johtaa saamaan lopputulokseen.</p>
+<p>Ratkaisun dimensio on sarakkeiden tai rivien lukumäärä vähennettynä yhdellä,
+pienempi kahdesta vaihtoehdosta.</p>
+<p>Korrespondenssianalyysi on oleellisesti pääkomponenttianalyysiä, etäisyysmitta on
+khii2-etäisyys (käytän tekstissä tätä kirjoitusasua) ja mukana ovat massat painoina.
+Ratkaisussa etsitään haluttu yleensä kaksiulotteinen ratkaisu (taso), joka minimoi pisteiden
+khii2-etäisyyksien poikkeamien summan eli on mahdollisimman lähellä pisteitä.
+Alkuperäisen täyden dimension (full space) data projisoidaan tälle tasolle.</p>
 </div>
 <div id="symmetrinen-kartta" class="section level2">
 <h2><span class="header-section-number">3.2</span> Symmetrinen kartta</h2>
@@ -583,24 +590,25 @@ duaalisuus on korrespondenssianalyysin perusominaisuuksia.</p>
 Kuva 3.3: Q1b: lapsi kärsii jos äiti on töissä
 </p>
 </div>
-<p>Kartassa (symmetrisessä kartassa) on jo nimetty molemmat akselit, mutta tulkinta
-aloitetaan prosenteista. Ne kertovat, kuinka paljon aineiston inertiasta eli
-hajonnasta on kaksiulotteisesssa projektiossa saatu kuvattua akseleille.</p>
-<p>Ensimmäinen akseli saa aina suurimman osan inertiasta, tässä 76 prosenttia.
-Kun toinen akseli kuvaa 15 prosenttia koko inertiasta, on kartalla esitetty 91
-prosenttia aineiston hajonnasta. Loput 9 prosenttia jää 3. ja 4. dimensiolle.
-Nämä ”selitysosuudet” ovat samantapainen laskelma kuin perinteisen regressiomallin
-”selitetty” vaihtelu ja ”jäännösvaihtelu”.</p>
+<p>Kartassa on jo nimetty molemmat akselit, mutta tulkinnan voi aloittaa
+akseleille merkityistä prosenteista. Ne kertovat, kuinka paljon aineiston
+inertiasta eli hajonnasta on kaksiulotteisesssa projektiossa saatu kuvattua
+akseleille.</p>
+<p>Akselit ovat sisäkkäisiä (nested) Ensimmäinen akseli saa aina suurimman osan
+inertiasta, tässä 76 prosenttia. Kun toinen akseli kuvaa 15 prosenttia koko inertiasta,
+on kartalla esitetty 91 prosenttia aineiston hajonnasta. Loput 9 prosenttia jää
+3. ja 4. dimensiolle. Nämä ”selitysosuudet” ovat samantapainen laskelma kuin
+perinteisen regressiomallin ”selitetty” vaihtelu ja ”jäännösvaihtelu”.</p>
 <p><em>Kontrastit</em> määrittävät akselien tulkinnan . Benzacrin ohjeen mukaan (1992,
-teoksessa GDA s. 49) katsotaan mitä on oikealla ja mitä vasemmalla. Akselien
-tulkinta perustuu siihen, mitä mitä yhteistä on kaikilla elementeillä jotka ovat
-origon vasemmalla puolella ja vastaavasti origon oikealla puolella. Samalla tavalla
-tulkitaan toinen akseli, mitä on ylhäällä ja alhaalla.</p>
-<p>Tässä tapauksessa taulukon rivit ovat havaintoja (”samples” ) ja sarakkeet
-muuttujia, ja akselien tulkinta tehdään muuttujien avulla. Vasemmalla on E ja
-oikealla puolella samanmieliset vastaukset s ja S. Neutraali ”?” on s-vastausten
-vasemmalla puolella. Kun erot ovat suhteellisia, ei kuvan perusteella voi sanoa
-kuinka paljon.</p>
+teoksessa <span class="citation">(Roux ja Rouanet <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>)</span>, s. 49) katsotaan mitä on
+oikealla ja mitä vasemmalla. Akselien tulkinta perustuu siihen, mitä mitä yhteistä
+on kaikilla elementeillä jotka ovat origon vasemmalla puolella ja vastaavasti
+origon oikealla puolella. Samalla tavalla tulkitaan toinen akseli, mitä on
+ylhäällä ja alhaalla. Tulkinta tehdään akseleiden suuntaan.</p>
+<p>Kun taulukon rivit ovat havaintoja ja sarakkeet muuttujia, akselien tulkinta
+tehdään muuttujien avulla. Vasemmalla on E ja oikealla puolella samanmieliset
+vastaukset s ja S. Neutraali ”?” on s-vastausten vasemmalla puolella.
+Kaikki erot ovat suhteellisia, kuvan perusteella voi sanoa kuinka paljon.</p>
 <p>Sarakkeet ovat oikeassa järjestyksessä, mutta niiden koordinaatit
 x-akselilla eivät olen tasavälisiä. Jos muuttuja jostain syystä halutaaan
 esittää välimatka- tai suhdeasteikon muuttujana koordinaatti ensimmäisellä

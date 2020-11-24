@@ -205,7 +205,7 @@ Kaksin nuorinta ikäluokka on ollut 1990 alle 14-vuotiaita ja vanhin ikäluokka
 yli 44-vuotiaita. Finannsikriisin vuonna 2008 toiseksi nuorin ikäluokka on ollut
 22-31 vuotiaita, ja kaksi vanhinta yli 51-vuotiaita. Pelkän ikävaikutuksen
 analyysi edellyttäisi vähintään kahden aineiston yhdistämistä.</p>
-<p>Jatkan esimerkkiä kolmen muuttujan yhteisvaikutusmuuttjalla, jossa oteaan mukaan
+<p>Jatkan esimerkkiä kolmen muuttujan yhteisvaikutusmuuttajalla, mukaan
 myös maa. Käytännössä kolmen luokittelumuuttujan yhdistäminen tekee taulukosta
 jo hieman huteron, joissain soluissa havaintojen määrä pienenee. Tässä kaikissa
 soluissa on sentää viisi havaintoa tai enemmän. Pienten massojen ja harvinaisten
@@ -269,7 +269,7 @@ samanmielisyyttä (S), kontrastina neutraali (?) ja maltillinen erimielisyys (s)
 ## 3 |      |  168  777   46 |   62 330  17 |  -73 447 223 |
 ## 4 |    e |  261  897   58 |  -68 473  32 |  -64 424 268 |
 ## 5 |    E |  234  997  464 | -286 962 513 |   55  35 177 |</code></pre>
-<p>Rivien massat ovat yllättävän saman kokoisia, mutta kolmen ryhmän (f2, f6 ja m6)
+<p>Rivien massat ovat melko saman kokoisia, mutta kolmen ryhmän (f2, f6 ja m6)
 osuus kokonaisinertiasta on 616 ja niiden kontribuutio ensimmäiselle dimensiolle
 on 567. Vain 36-45-vuotiaiden miesten (m3) piste on huonosti esitetty (qlt = 457).
 Tulkinta on hankalaa miesten ja naisten nuorimman ryhmän osalta, vaikka efekti
@@ -311,11 +311,14 @@ konservatiisimpia ovat oikeassa laidassa Unkarin ja Bulgarian osajoukot. Toisell
 akselilla maltillisia ja neutraaleja ovat hyvin karkeasti Suomen pisteet ja lähes
 kaikki Saksan ja Belgian pisteet. Eri maiden osajoukkojen suhteita on hankalampi
 hahmottaa, erityisesti kartan oikealla laidalla.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="yhteisvaikutusmuuttujat.html#cb6-1"></a><span class="co"># Vilkaistaan numeerisia tuloksia, kopioidaan tekstiin jos on tarpeellista</span></span>
-<span id="cb6-2"><a href="yhteisvaikutusmuuttujat.html#cb6-2"></a></span>
-<span id="cb6-3"><a href="yhteisvaikutusmuuttujat.html#cb6-3"></a><span class="co"># print(maagaCA1)</span></span>
-<span id="cb6-4"><a href="yhteisvaikutusmuuttujat.html#cb6-4"></a></span>
-<span id="cb6-5"><a href="yhteisvaikutusmuuttujat.html#cb6-5"></a><span class="kw">summary</span>(maagaCA1)</span></code></pre></div>
+<p>Numeeristen tulosten taulukko on pitkä, mutta kartan informaatio pitää tarkistaa.
+Numeeriset tulokset eivät ole pelkkää diagnostiikkaa ja kartatan esittämien
+riippuvuuksien varmistamista. Niistä näkee myös tarkemmin mahdolliset kiinnostavat
+piirteet datassa. Regeressiomallien tulosten raporteissa diagnostiikka on enintään
+liitteenä, mutta eksploratiivisessa data-analyysissä se ohjaa analyysiä myös eteenpäin.</p>
+<p>Tässä voi nähdä myös todennäköisyysteoriaan perustuvan tilastollisen mallintamisen vahvan
+puolen, aineiston rakenne ja muuttujien yhteydet saadaan parhaassa tapauksesa esitettyä
+paljon tiiviimmin.</p>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -434,8 +437,8 @@ johonkin perusjoukkoon (CAiP, s. 225). Ratkaisu on stabiili niiden pisteiden
 suhteen jotka eivät vaikuta siihen.</p>
 <p>Korrespondenssianalyysiä ja erityisesti khii2- etäisyysmittaa on arvosteltu siitä,
 että se on liian herkkä harvinaisille luokittelumuuttujan arvoille.
-Yhteenvetoartikkelissan MG (Loose ends) tarttuu ”vaikuttavien poikkeavien
-havaintojen myyttiin”, ja pitää sitä lähes aina perusteettomana.</p>
+Yhteenvetoartikkelissan <span class="citation">M. Greenacre (<a href="lähteet.html#ref-RefWorks:doc:5c768b09e4b02df9431e950a" role="doc-biblioref">2006</a>)</span> tarttuu ”vaikuttavien
+poikkeavien havaintojen myyttiin”, ja pitää sitä lähes aina perusteettomana.</p>
 <p>Harvinaiset kategoriat ovat usein kartalla kaukana origosta, mutta jokaisella
 pisteellä on massa ja näillä ”outlayereilla” se on pieni. Niinpä niiden
 vaikutuskin on vaatimaton.</p>
@@ -448,7 +451,7 @@ melko vähäinen määrä puuttuvia vastuaksia kasaantuu samaan vastaajien osajo
 ja mitä seurauksia sillä on.</p>
 <p>Stabiiliutta voi helposti kokeilla määrittelemällä joitain pisteitä täydentäviksi
 pisteiksi.</p>
-<p>Edellisen kartan numeerisista tuloksista ei löydy pienen massan pisteitä joilla
+<p>Kartan <a href="yhteisvaikutusmuuttujat.html#fig:maagaCA1map1">5.2</a> numeerisista tuloksista ei löydy pienen massan pisteitä joilla
 on merkittävä kontribuutio akseleihin.</p>
 
 </div>

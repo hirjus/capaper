@@ -52,18 +52,12 @@ maagaCA2sub2 <- ca(~maaga + Q1b,ISSP2012esim1b.dat,subsetrow = 25:60)
 
 par(cex = 0.8)
 plot(maagaCA2sub2, main = "Q1b: Lapsi kärsii jos äiti käy töissä",
-     sub = "symmetrinen kartta - Tanska, Saksa ja Suomi (subset ca)"
+     sub = "symmetrinen kartta - osajoukko Tanska, Saksa ja Suomi)"
    )
 
 ```
 
-**k** Kontribuutiokartan tulkinta
 
-**k** Akseleiden tulkinta: 1. dimensio on kontrasti vahvasti eri mieltä olevien
-ja kaikkien muiden vastausten välillä. Toinen dimensio kontrasti e-vastauksen 
-ja kaikkien muiden vastausten kanssa, erityiesti S, s, ja myös neutraali ?.
-
-**k** Ei tulkintaa sarakkeiden etäisyyksille, mutta kontribuutiolle on.
 
 ```{r maagaCA2sub2map3,echo=F, fig.cap= "Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
@@ -79,10 +73,11 @@ plot(maagaCA2sub2, map = "rowgreen",
 ```
 
 Karttoja \@ref(fig:maagaCA2sub2map1) ja \@ref(fig:maagaCA2sub2map3) joutuu katsomaan
-aika tarkkaan ennnekkuin uskoo, että akseleiden skaalaus on akateeminen pulmma
-vailla käytännön merkitystä (kts. jakso 3.3.4). Dataa analysoidaan graafisesti, ja kuvat
-_näyttävät_ erilaisilta. Pääakselien inertioiden neliöjuuret ovat `r round(sqrt(0.10709),3)` ja `r round(sqrt(0.02498),3)`,
-sarakkeet voisi siis tulkita myös kontribuutiokuvista.
+aika tarkkaan ennenkuin uskoo, että akseleiden skaalaus on akateeminen pulma
+vailla käytännön merkitystä (kts.luku 3.3.4). Dataa analysoidaan graafisesti, ja kuvat
+_näyttävät_ erilaisilta. Pääakselien inertioiden neliöjuuret ovat
+`r round(sqrt(0.10709),3)` ja `r round(sqrt(0.02498),3)`,
+sarakkeiden etäisyyksiä voisi tulkita myös kontribuutiokuvista.
 
 
 ```{r maagaCA2sub2map2,echo=F, fig.cap= "Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi", fig.asp = 1, out.width = "90%",fig.align = "center"}
@@ -118,9 +113,9 @@ summary(maagaCA2sub2)
 
 **Tulkintaa**
 
-Kolmen maan osajoukon ratkaisussa 2. dimensiolla (maltillinen liberaali?) on
-inertiasta 17 prosenttia, edellä ollut paljon yksiulotteisempia ratkaisuja. Huono kvaliteetti
-on DEf1 (467) ja DEf6 (48!), DEm4 (285). Tanskan havainnoista vanhimmat miehet
+Kolmen maan osajoukon ratkaisussa 2. dimensiolla (maltillinen liberaali - tiukka konservatiivi) on
+inertiasta 17 prosenttia, edellä ollut paljon yksiulotteisempia ratkaisuja. Huono kvaliteetti (qlt) 
+on ryhmillä DEf1 (467) ja DEf6 (48), DEm4 (285). Tanskan havainnoista vanhimmat miehet
 (DKm6,291) ovat kaikkein huonoimmin esitettyjä ratkaisussa, ja hieman nuoremmatkin
 (DKm5, 682). Suomen aineistossa vain nuoret miehet (FIm1, 624) on esitetty kartalla
 huonosti. Kaksi dimensiot selittävät osajoukon kokonaishajonnasta 92%, mutta muutaman
@@ -128,7 +123,7 @@ ryhmän hajonta on muissa dimensioissa. Saksan naisten iäkkäin ikäluokka (DEf
 ja keski-ikäisen miehet (DEm4) vain näyttävät olevan lähekkäin origon tuntumassa,
 samoin muutama muu huonosti tasoon sijoitettu piste.
 
-Huonosti kuvatuista pisteistä ei kuva ei siis kerro oikeastaan mitään muuta.
+Huonosti kuvatuista pisteistäkuva ei oikeastaan mitään muuta.
 
 Sarakkeet on esitetty kohtalaisen hyvin, ja symmetrisessä kartassa tärkeimmälle
 dimensioille projisodut sarakepisteet ovat odotetussa järjestyksessä.
@@ -158,7 +153,7 @@ maagaCA2sub3 <- ca(~maaga + Q1b,ISSP2012esim1b.dat,subsetrow = BEBGHUsubset)
 ```
 
 
-Kontribuutiokartalla ei voi tulkita sarakkeiden etäisyyksiä, joten ensin symmmetrinen kartta.
+
 
 ```{r  maagaCA2sub3map1,echo=F, fig.cap= "Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari 1", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
@@ -239,13 +234,16 @@ se ei ole ongelma vaan datan ominaisuus.
 # koko datalla 0.263154
 
 ```
-
+ **edit: tässä toistoa** 
 
 Kahden osajoukon inertioiden  summa on sama kuin koko aineiston
 ( `r round(0.143551,3)` + `r round(0.119602,3)` =  `r round((0.143551 + 0.119602),3)`),  Selitysasteet
-nousevat hieman, mutta vielä oleellisempaa on kahden aika erilaisen ryhmän
-havaitseminen.
+nousevat hieman, ja aineiston riippuvuuden rakenteesta saadaaan esiin selviä eroja.
+Osajoukkojen analyysi täydentää ja tarkentaa yleiskuvaa (\@ref:fig:maagaCA1map1)
 
-Belgian jotkun pisteet: huono kvaliteetti (BEf1, BEf5,BEm1, BEm2). Bulgaria ja
+Belgian pisteistä osalla on  huono kvaliteetti (BEf1, BEf5,BEm1, BEm2). Bulgaria ja
 Unkari hyvin esitetty. Belgia on pulmallinen tapaus, ehkä taas omissa dimensioissaan.
+Belgian poikkeavuus (annetulla aluejaolla) on kiinnostava havainto, korrespondenssianalyysin
+tavoite ei ole pelkästään kohtuullisen luotettava yleiskuva taulukon riippuvuuksista. Poikkeavat
+havainnot eivät ole ongelma, vaan datan ominaisuus.
 

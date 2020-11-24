@@ -936,9 +936,9 @@ validate_that(length(levels(ISSP2012jh1d.dat$urbrum)) == 6)
 
 Käytän tutkielmassa International Social Survey - projektin (ISSP) vuoden 2012
 kyselytutkimusta “Perhe , työ ja sukupuoliroolit”(International Social Survey
-Programme: Family and Changing Gender Roles IV). Tutkielman tärkeimmissä lähteissä
-(esim. CAiP, Biplots) tutkimuksen aikaisemmat versiot ovat esimerkkiaineistona,
-samoin Greenacren luennoilla 2017.
+Programme: Family and Changing Gender Roles IV). Tutkimuksen aikasempien
+toteutusten dataa on käytetty tutkielman tärkeimmissä lähteteissä esimerkkidatana.
+
 
 Länsi-Saksan ja USA:n tutkimuslaitosten yhteistyö vakiintui ISSP-organisaatioksi
 1984 (http://www.issp.org). Vuonna 2015 neljän perustajajäsenen joukko oli kasvanut 49 maahan.
@@ -946,21 +946,24 @@ Vertailevan tutkimuksen aineistoja on kerätty monista teemoista, perhearvoista
 ja naisten työmarkkina-asemasta neljä kertaa (1988, 1994,2002,2012).
 USA:n edustajana mukana ollut Tom W. Smith näkee aineistojen arvon juuri
 kansainvälisessä vertailevassa tutkimuksessa. Järjestön julkaisuluettelossa oli
-2012 yli 5200, ja viime vuosina yli 400 vuodessa lisää.
-[@RefWorks:doc:5c0543a5e4b077eba1dc3cd8].
+2012 yli 5200 julkaisua. Viime vuosina luetteloon on lisätty noin 400 julkaisua
+vuodessa [@RefWorks:doc:5c0543a5e4b077eba1dc3cd8].
 
 
-Saksalainen GESIS-tutkimuslaitos ylläpitää data-arkistoa, josta suurin osa
-datasta ja dokumentaatiosta on vapaasti saatavissa
+Data ja dokumetaatio on vapaasti saatavilla saksalaisen GESIS-tutkimuslaitoksen
+ylläpitämästä data-arkistosta
 (https://www.gesis.org/en/issp/home). Suomessa tutkimuksen data ja dokumentaatio
 löytyvät [Tampereen yliopiston Aila-tietoarkistosta]
 (https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&study_language=fi).
 
-GESIS-instituutin ”datakatalogista” löytää kätevästi kaiken dokumentaation,
+GESIS-instituutin ”datakatalogista”(https://zacat.gesis.org) 
+löytää kätevästi kaiken dokumentaation[@RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a],
 mutta edes saksalaiset eivät voi estää www-sivustojen innokaita uudistajia.
-Kaikki linkit lähdeluettelossa vievät vain GESIS-arkistosivulle,
-josta löytää pitkän listan pdf-dokumentteja. Taulukossa \@Ref(tab:ISSPdocsTable)
-on neljän tärkeimmän dokumentin tiedostonimi.
+Monet linkit lähdeluettelossa vievät GESIS-arkistosivulle,
+josta löytyy pitkä lista pdf-dokumentteja [@RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a]. 
+
+Taulukkoon \@ref(tab:ISSPdocsTable) on koottu neljän tärkeimmän dokumentin
+tiedostonimet ja lyhyt kuvaus.
 
 
 ```{r ISSPdocsTable, echo = FALSE, include = TRUE}
@@ -986,15 +989,11 @@ knitr::kable(ISSPdocsT.tbl, booktab = TRUE,
 ```
 
 
-Tutkimuksen viitetieto, linkki vie dokumenttiluetteloon koska hanke on päättynyt.
-Kaksi versiota, käytetään ensimmäistä [@RefWorks:doc:5b6c7b0de4b0fd36f5bb4c2a] . 
 
-Data ja dokumentaatio (ml. käyttöehdot) löytyvät GESIS-instituutin
-datakatalogista (https://zacat.gesis.org)[@RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a].
 
-Tätä kirjoittaessa (10.11.2020) tutkimuksen aineisto löytyy osoitteesta
+Tätä kirjoittaessa (10.11.2020) ISSP 2012 - aineisto löytyy osoitteesta
 [https://zacat.gesis.org/webview/index.jsp?object=http://zacat.gesis.org/obj/fStudy/ZA5900].
-Datakatalogista löytää tällä hetkellä (10.11.2020) dokumetit ja datan helpoiten.
+
 
 
 Koodikirjan ("Variable report") [@RefWorks:doc:5bb9041be4b06677e5e61f83] selostaa
@@ -1016,17 +1015,15 @@ vastausvaihtoehdon pois, joten Espanja jää pois.
 
 Substanssimuuttujat ovat yksi ”kysymyspatteri”, jolla luodataan asenteita
 naisten roolista työmarkkinoilla. Aiheen pysyvää ajankohtaisuutta kuvaa hyvin
-The Economist - lehden artikkeli Saksojen yhdistymisen 30-vuotispäivänä
+The Economist - lehden artikkeli Saksojen jälleenyhdistymisen 30-vuotispäivänä
 (3.10.2020, "A report...reveals the interplay between policy and attitudes that
 influences the decision to work.").
-Artikkeli on maksumuurin takana mutta tutkimus on vapaasti
-luettavissa 
+Artikkeli on maksumuurin takana mutta tutkimus on vapaasti luettavissa 
 [(DIW Weekly Report 38 / 2020, S. 403-410)](https://www.diw.de/de/diw_01.c.799302.de/publikationen/weekly_reports/2020_38_1/mothers_in_eastern_and_western_germany__employment_rates_and_attitudes_are_converging__full-time_employment_is_not.html)
 
 Taulukon \@ref(tab:vartable1) kysymysten lyhyet versiot ovat datassa mukana.
 Sarakkeessa "muuttuja" on alkuperäisen aineiston muuttujanimi,
-kysymyksen tunnus on valittuun dataan luotu muuttujanimi. Vertailu muihin samalla
-aineistoilla tehtyihin tutkimuksiin on helpompaa.
+kysymyksen tunnus on valittuun dataan luotu muuttujanimi.
 
 
 ```{r vartable1, echo=FALSE, include=TRUE}
@@ -1075,7 +1072,9 @@ knitr::kable(jhVarTable1.tbl, booktab = TRUE,
 
 ```
 
-**k** Kyselylomakkeilla kysymykset olivat hieman pidempiä, kuvassa \@ref(fig:suom-kys) osa suomenkielistä lomaketta.
+Kyselylomakkeilla kysymykset olivat hieman pidempiä. Kuva \@ref(fig:suom-kys)
+on osa suomenkielistä lomaketta.
+
 
 ```{r suom-kys,echo=F, out.width='50%', fig.align='center',fig.cap='Suomenkielinen lomake'}
 knitr::include_graphics('img/substvar_fi_Q1Q2.png')
@@ -1085,7 +1084,8 @@ knitr::include_graphics('img/substvar_fi_Q1Q2.png')
 
 
 Valituista taustamuuttujista monet on kerätty haastattelulla. 
-Tiedonkeruu, otantamenetelmät ja yksikkövastauskadon huomioiminen on tehty joka
+Tiedonkeruu, otantamenetelmät ja yksikkövastauskadon (unit non-response, otokseen
+valitulta ei saada mitään tietoja) huomioiminen on tehty joka
 maassa omalla tavallaan. Aineistoissa on mukana painot joilla tulokset voidaan
 korottaa perusjoukon tasolle, mutta kansainvälisiä vertailupainoja ei syystä tai
 toisesta ole. Taustamuuttujat kuten koulutustaso on harmonisoitu
@@ -1107,7 +1107,7 @@ Poistin aineistosta havainnot, joissa tieto iästä tai sukupuolesta puuttuu
 Aineiston luokittelu- ja järjestysasteikon muuttujat muunnetaan R-ohjelmiston
 factor-tietotyypiksi. Teen muunnokset useammassa vaiheessa heti kun data on
 luettu SPSS-tiedosta. Käsittelyssä koitan noudattaa helposti toistettavan
-tutkimuksen periaatteita (McNamara ja Horton [@RefWorks:doc:5c3759c2e4b0085b307c82b5] ),
+tutkimuksen periaatteita [@RefWorks:doc:5c3759c2e4b0085b307c82b5].
 koodi ei saisi olla kovin virhealtista (”haurasta”) ja tarkistuksia tehdään
 paljon. Data-analyysin ja ehkä erityisesti korrespondenssianalyysin idea on
 kuitenkin operoida matriiseilla, lisätä ja poistaa rivejä ja sarakkeita ja
@@ -1129,21 +1129,18 @@ perustuvan menetelmän" vertailuun[@RefWorks:doc:5b6f159ce4b0bc0f31734b76]. Blas
 ja Thiessen ([@RefWorks:doc:5b15542ee4b0e2616bc42dca]) arvioivat aineiston laatua
 ja ja maiden vertailtavuutta vuoden 1994 aineistolla.
 
-Substanssitutkimusta en käsittele, näiden esimerkkien lisäksi ISSP:n ja
-GESIS-instituutin www-palveluista löytyy paljon muitankin.
-
-
 Sukupuoliroolien (gender roles) ja niihin liittyvien asenteiden vertailevaa
 kansainvälistä (cross-cultural) tutkimusta on tehty paljon. Tutkimusongelman
 sisällöllisten ja teoreettisen kysymysten nykytilaa kuvaa tuore artikkeli
 [@RefWorks:doc:5bd08fb6e4b05c5447c9a9f9]. 
 
-Toisessa esimerkissä [@RefWorks:doc:5bd0a663e4b0c91dcf7c4be9] tutkitaan ensin 18
+@RefWorks:doc:5bd0a663e4b0c91dcf7c4be9 tutkivat ensin 18
 OECD-maan perhepolitiikan muutoksia kolmen viime vuosikymmenen ajalta. Näkökulma on
 työllisyyspolitiikka ja menetelmänä monimuuttuja-korrespondenssianalyysi (MCA).
 Havaituille kehityssuunnille etsitään toisessa vaiheessa selityksiä. Aineistona
 on viisi kansainväliseen vertailuun soveltuvaa aineistoa, yhtenä niistä ISSP:n
 data kolmelta kierrokselta (1988,1994,2002).
+
 
 
 

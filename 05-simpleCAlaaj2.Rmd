@@ -12,7 +12,7 @@ yli 44-vuotiaita. Finannsikriisin vuonna 2008 toiseksi nuorin ikäluokka on ollu
 22-31 vuotiaita, ja kaksi vanhinta yli 51-vuotiaita. Pelkän ikävaikutuksen
 analyysi edellyttäisi vähintään kahden aineiston yhdistämistä.
 
-Jatkan esimerkkiä kolmen muuttujan yhteisvaikutusmuuttjalla, jossa oteaan mukaan
+Jatkan esimerkkiä kolmen muuttujan yhteisvaikutusmuuttajalla, mukaan
 myös maa. Käytännössä kolmen luokittelumuuttujan yhdistäminen tekee taulukosta
 jo hieman huteron, joissain soluissa havaintojen määrä pienenee. Tässä kaikissa
 soluissa on sentää viisi havaintoa tai enemmän. Pienten massojen ja harvinaisten
@@ -164,7 +164,7 @@ summary(gaTestCA1)
 
 ```
 
-Rivien massat ovat yllättävän saman kokoisia, mutta kolmen ryhmän (f2, f6 ja m6)
+Rivien massat ovat melko saman kokoisia, mutta kolmen ryhmän (f2, f6 ja m6)
 osuus kokonaisinertiasta on 616 ja niiden kontribuutio ensimmäiselle dimensiolle
 on 567. Vain 36-45-vuotiaiden miesten (m3) piste on huonosti esitetty (qlt = 457).
 Tulkinta on hankalaa miesten ja naisten nuorimman ryhmän osalta, vaikka efekti
@@ -227,8 +227,20 @@ akselilla maltillisia ja neutraaleja ovat hyvin karkeasti Suomen pisteet ja läh
 kaikki Saksan ja Belgian pisteet. Eri maiden osajoukkojen suhteita on hankalampi
 hahmottaa, erityisesti kartan oikealla laidalla.
 
+Numeeristen tulosten taulukko on pitkä, mutta kartan informaatio pitää tarkistaa.
+Numeeriset tulokset eivät ole pelkkää diagnostiikkaa ja kartatan esittämien
+riippuvuuksien varmistamista. Niistä näkee myös tarkemmin mahdolliset kiinnostavat
+piirteet datassa. Regeressiomallien tulosten raporteissa diagnostiikka on enintään
+liitteenä, mutta eksploratiivisessa data-analyysissä se ohjaa analyysiä myös eteenpäin.
 
-```{r maagaCA1num, eval = TRUE, echo = TRUE}
+Tässä voi nähdä myös todennäköisyysteoriaan perustuvan tilastollisen mallintamisen vahvan
+puolen, aineiston rakenne ja muuttujien yhteydet saadaan parhaassa tapauksesa esitettyä
+paljon tiiviimmin.
+
+
+
+
+```{r maagaCA1num, eval = TRUE, echo = FALSE}
 
 # Vilkaistaan numeerisia tuloksia, kopioidaan tekstiin jos on tarpeellista
 
@@ -266,8 +278,8 @@ suhteen jotka eivät vaikuta siihen.
 
 Korrespondenssianalyysiä ja erityisesti khii2- etäisyysmittaa on arvosteltu siitä,
 että se on liian herkkä harvinaisille luokittelumuuttujan arvoille.
-Yhteenvetoartikkelissan MG (Loose ends) tarttuu ”vaikuttavien poikkeavien
-havaintojen myyttiin”, ja pitää sitä lähes aina perusteettomana.
+Yhteenvetoartikkelissan @RefWorks:doc:5c768b09e4b02df9431e950a tarttuu ”vaikuttavien
+poikkeavien havaintojen myyttiin”, ja pitää sitä lähes aina perusteettomana.
 
 Harvinaiset kategoriat ovat usein kartalla kaukana origosta, mutta jokaisella
 pisteellä on massa ja näillä ”outlayereilla” se on pieni. Niinpä niiden
@@ -284,5 +296,5 @@ ja mitä seurauksia sillä on.
 Stabiiliutta voi helposti kokeilla määrittelemällä joitain pisteitä täydentäviksi
 pisteiksi.
 
-Edellisen kartan numeerisista tuloksista ei löydy pienen massan pisteitä joilla
+Kartan \@ref(fig:maagaCA1map1) numeerisista tuloksista ei löydy pienen massan pisteitä joilla
 on merkittävä kontribuutio akseleihin.

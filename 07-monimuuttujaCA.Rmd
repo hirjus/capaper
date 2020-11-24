@@ -653,7 +653,7 @@ plot.mjca(Qmuuttujat2.mca,
 Kun kartalle lisätään havainnot, nähdään selvästi kuinka suuri hajonta on havaintojen
 pilvessä verrattuna vastauskategorioiden pilveen.
 
-Asymmetrinen kartta näyttäisi olevan paras vaihtoehto, vastausvaihtoehdot erottuvat selvemmin.
+
 
 ```{r subsetMCA1map3,echo=F, fig.cap= "MCA: Seitsemän kysymystä - 25 maata, kartta 5", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
@@ -666,10 +666,21 @@ plot.mjca(Qmuuttujat2.mca, map = "rowprincipal",
 
 ```
 
-**edit1** Jostain syystä en saa toimimaan mjca-funktiossa subsecat - parametrin kanssa
-täydentäviä muuttujia supcol.
 
-**edit2**
+
+**k1** inertian "adjusted", kts. liite1.
+
+Vilkaistaan 3d-ratkaisua - onko kolmella keskimmäisellä vaihtoehdolla "dimenison
+of middleness"? 
+
+Dimension of middelness, on viitteitä mutta ei ihan selvä.
+
+Neutraalin vaihtoehdon (?) sarakkeet ovat huonosti esitettyjä, mutta vain kolme selvästi (e1? 475 c1? 571 ja b1? 573).
+
+**TÄHÄN VOISI LOPETTAA - EI KAHTA PITÄÄ TULOSTETTA KUN NIITÄ EI TARKEMMIN ANALYSOIDA** 
+
+
+**edit2 - harkitaan näitä**
 **MCA - numeeriset tulokset**
 
 ```{r MCAnumres}
@@ -679,8 +690,8 @@ summary(Qmuuttujat2.mca)
 
 ```
 
-Vilkaistaan 3d-ratkaisua - onko kolmella keskimmäisellä vaihtoehdolla "dimenison
-of middleness"? 
+
+
 
 **edit** tämä poistetaan lopullisesta versiosta.
 

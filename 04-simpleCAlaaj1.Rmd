@@ -21,7 +21,6 @@ Toinen käyttötapaus on pienen massan profiili. Tällaisella pisteellä voi oll
 vaikutus ratkaisuun, mutta passiivisena pisteenä se sijoitetaan muiden pisteiden 
 määrittämälle kartalle. Jo sisällöllisistä syistä pienen massan pisteiden esitystä
 kannattaa harkita, ne sijaitsevat kaukana origosta ja huonontavat kuvan laatua.
-Esimerkkiaineistossa puuttuvat vastaukset voisi ottaa mukaan täydentävänä pisteenä.
 
 Kolmas mahdollisuus on jakaa pistejoukkoja osajoukkoihin ja esittää niiden
 summaprofiili täydentävänä pisteenä. Summaprofiili on osiensa painotettu
@@ -29,9 +28,10 @@ summaprofiili täydentävänä pisteenä. Summaprofiili on osiensa painotettu
 oteta ratkaisuun kahta kertaa. Profiilien yhdistämiseen liittyy
 korrespondenssianalyysin tärkein periaate, jakaumaekvivalenssi (_distributional
 equivalence_). Profiileiltaan samanlaiset rivit voidaan yhdistää, analyysin tulokset
-eivät muutu. Khii2-etäisyysmitta taas on ainoa etäisyysmitta joka toutettaa tämän
-periaatteen. En esittele tätä ydinkäsitettä tämän enempää (kts. esim. CAiP tai
-perusteellinen matemaattinen esitys [@RefWorks:doc:5a857a43e4b0ed2d44664d75]).
+eivät muutu. Khii2-etäisyysmitta on ainoa etäisyysmitta joka toutettaa tämän
+periaatteen. En esittele tätä ydinkäsitettä tämän enempää, se on ollut menetelmän
+kehittämisessä tärkein tavoite. @RefWorks:doc:5a857a43e4b0ed2d44664d75 esittelevät
+menetelmän matemaattiset perusteet laajemmin. 
 
 Täydentävien profiilien lisääminen vaatii jo yksinkertaisia matriisioperaatioita.
 Korrespondenssianalyysi on käytännössä matriisien muokkausta tutkimusongelman
@@ -125,12 +125,13 @@ plot(suppointCA2, main = "Symmetrinen kartta 1 ",
 
 Saksan ja Belgian täydentävät pisteet ovat osiensa barysentrisiä keskiarvoja,
 etäisyys on sitä pienempi mitä suurempi on osuus. Saksan piste sijaitsee siksi
-lähempänä länsi-Saksan pistettä. Karttaa kannattaa verrata kuvaan jossa aluejakoa
-ei ole \ref(fig:simpleCA1map1), mutta Saksan ja Belgian osien sijoittuminen on kiinnostava.
+lähempänä länsi-Saksan pistettä. Jos karttaa vertaa kuvaan \ref(fig:simpleCA1map1)
+ei eroja juuri ole. Saksan ja Belgian osien sijoittuminen on kiinnostava.
 Itäinen Saksa on selvästi liberaalilla puolella, ensimmäisellä dimensiolla lähinnä Tanskaa.
 Läntinen Saksa on ensimmäisellä dimensiolla konservatiivisella puolella Belgian maapisteen
 tasolla. Belgian alueista Wallonia (bW) on liberaalilla puolella mutta kaikkein eniten oikealla.
-Bryssel ja Flander ovat konservatiivisella puolella, toinen länsi-Saksaa liberaalimpi ja toinen konservatiivisempi. Belgian osat hajoavat toiseen suuntaan kuin Saksan,
+Bryssel ja Flander ovat konservatiivisella puolella, toinen länsi-Saksaa
+liberaalimpi ja toinen konservatiivisempi. Belgian osat hajoavat toiseen suuntaan kuin Saksan,
 liberaalein Flanders on myös kaikkein maltillisin ja Bryssel vastaavasti
 tiukempien mielipiteiden puolella. Sarakepisteiden suhteelliset sijainnit
 toisiinsa nähden eivät oleellisesti muutu.

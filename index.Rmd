@@ -24,6 +24,8 @@ options(tinytex.verbose = TRUE)
 
 ```
 
+Versiointi: 0.0n aloittelua, 0.n jäsentely koko paperille, 1.n.n valmiimpaa tekstiä.
+
 **Tämä luku poistetaan kun tutkielma on valmis**
 
 **Raportti yhtenä html-tiedostona** (https://hirjus.github.io/capaper/JH_capaper.html), ja kaikki toimii.
@@ -41,12 +43,13 @@ Pandoc ei osaa rivittää koodia oikein tms. Koodilistauksen poistaminen ei auta
 (https://hirjus.github.io/capaper/wordTOC.pdf)
 (https://hirjus.github.io/capaper/GtiivisTesti1.pdf)
 
+Tiivistelmästä löytyy uudempi pohja, jota käytetään.
 
 
-RefWorksistä tuotu jhca2020.bib-tiedosto tarkistettu ja korjailtu virheet. Ei enään ladata uutta (21.11.2020).
+RefWorksistä tuotu jhca2020.bib-tiedosto tarkistettu ja korjailtu virheet. Ei enään ladata uutta (21.11.2020),
+packages.bib (r-pakettien viitekanta) tarkistettu ja korjattu erikoismerkit. Ei päivitetä enään (24.11.20)
 
-Data-analyysi ja koodi omana projektina: (https://hirjus.github.io/Galku). Tarkempia tulostuksia,
-muunnosten tarkistuksia ja enemmän kuvia, myös koodi näkyy.
+Data-analyysi: (https://hirjus.github.io/Galku).
 
 
 ```{r jhpaketit, include=FALSE}
@@ -70,14 +73,12 @@ library(assertthat)
 
 ```
 
-Gitbook-tulosteessa ei saa koodia "piilotettua", asetus "code_folding: hide" vaatii
-teeman (theme). _output.yml - tiedostoon lisätty html_book - formaatti, siinä
-voi tarvittaessa käyttää piilotusta.
 
- Versiointi: 0.0n aloittelua, 0.n jäsentely koko paperille, 1.n.n valmiimpaa tekstiä.
 
-```{r include=FALSE}
+ 
 
+```{r include=FALSE, echo = FALSE, eval = FALSE}
+# eval = FALSE 24.11.2020
 # automatically create a bib database for R packages
 knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'

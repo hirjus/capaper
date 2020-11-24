@@ -214,9 +214,9 @@ yhdistää barisentrinen painotetun keskiarvon riippuvuus, mutta mukana ovat ska
 
 Kuva on kurssimateriaaleista[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca].
 
-```{r projectionimg1, out.width='70%', fig.align='center',fig.cap='Pisteen projektio aliavaruuteen'}
-knitr::include_graphics('img/CAquality.png')
+```{r projectionimg1, out.width='70%', echo = F, fig.align='center',fig.cap='Pisteen projektio aliavaruuteen'}
 
+knitr::include_graphics('img/CAquality.png')
 
 ```
 Kuvassa on esitetty korrespondenssianalyysin ratkaisun minimointiongelma. Pisteen
@@ -231,16 +231,14 @@ olevat pisteet voivat olla alkuperäisessä avaruudessa kaukana toisistaan,
 jos niiden projektion laatu on huono.
 
 
-
-
-
 ## Matriisit ja niiden havainnollistaminen {-}
-**edit** Nämä tässä varalla, jos matriisikaavoja tarvitaan lisää. Ehkä ei?
+
+**edit: kaavaesimerkkejä - poistetaan lopullisesta versiosta**
 
 Korrespondenssianalyysin sovelluksissa tutkimusongelman ratkaisu on usein sopivan
 matriisin rakentaminen.
 
-**edit: kaavaesimerkkejä**
+
 
 \begin{equation}
 A = \begin{bmatrix}
@@ -324,9 +322,8 @@ että vain erilaiset vastaukset määrittävät rivien etäisyyksiä.
 
 Burtin matriisi on erikoistapaus yhdistetyistä matriiseista. Siihen on koottu kaikki tutkittavien
 muuttujien pareittan muodostetut taulukot. Diagonaalilla ovat muuttujien ristiintaulukoinnit
-itsensä kanssa. Ratkaisu riippuu vain näistä parittaisista taulukoista.
-
-Burtin matriisi on kätevä välivaihe matriisien yhdistelyssä.
+itsensä kanssa. Ratkaisu riippuu vain näistä parittaisista taulukoista. Burtin matriisi on
+kätevä välivaihe matriisien yhdistelyssä.
 
 Molemmat matriisit paisuttavat keinotekoisesti kokonaisinertiaa, ja esimerkikisi kaksiulotteisen kartan
 selitetyn inertian osuudet jäävät melko pieniksi. Ratkaisuna on inertian oikaisu tai korjaus
@@ -342,7 +339,7 @@ Kolmas vaihtoehto on ns. yhdistetty korrespondenssianalyysi (joint ca).
 Muokataan tiiviimpi pätkä esimerkkireposta bookdown-testi1. Tämä kuva kertoo vain
 julkaisutekniikan ympäristön.
 
-```{r L3bdprocess1, out.width = '70%', fig.align='center',fig.cap='Tulostiedoston prosessointi'}
+```{r L3bdprocess1, echo = FALSE, out.width = '70%', fig.align='center',fig.cap='Tulostiedoston prosessointi'}
 
 knitr::include_graphics('img/BookdownProc.png')
 
@@ -350,6 +347,14 @@ knitr::include_graphics('img/BookdownProc.png')
 
 ```
 
+**Käyttöjärjestelmä ja R-ympäristö**
+
+
+```{r Renviron1, echo=FALSE}
+
+sessionInfo()
+
+```
 
 
 
