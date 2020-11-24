@@ -333,6 +333,27 @@ sijaintiin. Tämä menetelmä on ca-paketin mjca-funktion oletus.
 
 Kolmas vaihtoehto on ns. yhdistetty korrespondenssianalyysi (joint ca).
 
+Greenacre on kirjoittanut useissa yhteyksissä MCA:n geometrisen tulkinnan ongelmista.
+@RefWorks:doc:5a857a44e4b0ed2d44664d84 (s. 447) sanovat asian näin:“Finally, although
+we have motivated simple correspondence analysis from the geometric point of view,
+the geometry of the indicator matrix in multiple correspondence analysis is
+admittedly not convincing. Distances between the row profiles of an indicator
+matrix and projections of articficial column vertices have less intuitive appeal.
+However, the scaling interpretation remains attractive in this case; the displays
+are graphical representations of optimal scale values for the categories.”
+
+Greenacre jatkaa samasta aiheesta artikkelikokoelmassa
+[@RefWorks:doc:5ab76b43e4b003f4468d1f07 , s. 41, s. 61]: "Yleistys useammalle
+kuin kahdelle muuttujalle ei ole ilmeinen eikä hyvin määritelty". Siti MCA
+onnistuu esittämään hyvin kiinnostavia yhteyksiä muuttujien välillä (“succesfully
+recovers interesting patterns of association”). Kriittisyys ei kuitenkaan
+estä häntä soveltamasta MCA-analyysiä. Tulkitsen tämän niin, että menetelmää voi
+aivan hyvin soveltaa, mutta geometrista tulkintaa ei voi suoraan siirtää CA-kartoista
+MCA.karttoihin. Greenacre esittelee perusteellisesti MCA-sovelluksia kaksoiskuvia
+käsittelevässä kirjassaan [@RefWorks:doc:5a857a43e4b0ed2d44664d7c]. Ehkä
+korrespondenssianalyysin matemaattinen teoria ei ole vielä täysin valmis?
+
+
 
 # Liite 2: Tekninen ympäristö ja Bookdown-paketti {-}
 

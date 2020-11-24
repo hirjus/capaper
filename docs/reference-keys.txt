@@ -87,6 +87,6 @@ ikä-sukupuoli-ja-maa
 stabiilisuus
 osajoukon-korrespondenssianalyysi
 monimuuttuja-korrespondenssianalyysi-mca
-pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables
+pinotut-ja-yhdistetyt-taulukot
 mca---monimuuttujakorrespondenssianalyysi
 yhteenveto

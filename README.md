@@ -210,3 +210,6 @@ r-koodin automaattitulostukseen teknisessä liitteessä. TUlostus kaatuu, viitet
 
 **23.11.2020** Tekstin editointia, viitteiden lisäyksiä ja tarkistuksia. Toinen
 samanmoinen päivitys.
+
+**24.11.2020** Luku 7, puuttuu vielä MCA-analyysin siistitty teksti. Teorialiitteeseen lisätty
+tekstiä MCA-tulkinnoista.

@@ -164,7 +164,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="osajoukon-korrespondenssianalyysi.html"><a href="osajoukon-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>6</b> Osajoukon korrespondenssianalyysi</a></li>
 <li class="chapter" data-level="7" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html"><i class="fa fa-check"></i><b>7</b> Monimuuttuja-korrespondenssianalyysi (MCA)</a><ul>
-<li class="chapter" data-level="7.1" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables"><i class="fa fa-check"></i><b>7.1</b> Pinotut ja yhdistetyt taulukot (stacked and concatenated tables)</a></li>
+<li class="chapter" data-level="7.1" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#pinotut-ja-yhdistetyt-taulukot"><i class="fa fa-check"></i><b>7.1</b> Pinotut ja yhdistetyt taulukot</a></li>
 <li class="chapter" data-level="7.2" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#mca---monimuuttujakorrespondenssianalyysi"><i class="fa fa-check"></i><b>7.2</b> MCA - monimuuttujakorrespondenssianalyysi</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="yhteenveto.html"><a href="yhteenveto.html"><i class="fa fa-check"></i><b>8</b> Yhteenveto</a></li>
@@ -195,71 +195,56 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="monimuuttuja-korrespondenssianalyysi-mca" class="section level1">
 <h1><span class="header-section-number">Luku 7</span> Monimuuttuja-korrespondenssianalyysi (MCA)</h1>
-<p><strong>k</strong> MG:n jäsentely CA:n tutkimusasetelmista (within - between), kokoaan myös
-edeltävät analyysit “saman katon alle”.</p>
-<p><strong>k</strong> Idea: taulukoiden yhdistely “supertaulukoksi” tai matriisiksi, analysoidaan kahden muuttujan
-ristiintaulukoinnin laajennuksena useita kahden muuttujan ristiintaulukointeja.</p>
-<p><strong>k</strong> MCA stacked&amp;concat - analyysin erikoistapauksena.</p>
-<p><strong>k</strong> CA SVD:tä soveltavana ratkaisualgoritmina, jolle “syötetään” sopiva matriisi. Benzecri: löydettettävä vain
-matriisi joka dekomponoidaan.</p>
-<p><strong>k1</strong> kahden muuttujuajoukon väliset yhteydet</p>
-<p><strong>k2</strong> yhden muuttujajoukon muuttujien väliset yhteydet</p>
-<p><strong>k3</strong> wrt samples ja wrt variables</p>
-<p><strong>k4</strong> Yksinkertaisesta monimutkaisempaan
-0. Täydentävät pisteet tulkinnan apuna, yleistyökaluna (“jack of all trades but
-master of none”) esitelty ensimmäisenä. Tärkeä lisä kaikissa analyyseissä.</p>
-<ol style="list-style-type: decimal">
-<li><p>yhteisvaikutusmuuttujat <strong>K4-1</strong>
--max kolmen muuttujan yhtesivaikutusmuuttuja - taulukko harsoontuu</p></li>
-<li><p>Yksi “selitettävä” muuttuja, useampi “selittävä” <strong>K4-2"</strong></p></li>
-</ol>
-<ul>
-<li>pinotut taulukot (käytännössä matriisit, helpompi pinota R:ssä, Burtin taulun käyttö)</li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
-<li>Taulukoiden yhdistäminen yleisemmin <strong>K4-3</strong></li>
-</ol>
-<ul>
-<li>monta “selittäjää” ja “selitettävää”: taulukoita päällekkäin ja rinnakkain, lohkomatriisi</li>
-<li>ABBA: voidaan esim. jakaa taulukko (viite) osatauluiksi</li>
-<li>tästä hieman tarkemmin teorialiitteessä;symmetriset taulut (esim. vastaukset
-eri vuosina, isän ja pojan ammatti), matched matrices</li>
-</ul>
-<ol start="4" style="list-style-type: decimal">
-<li>MCA <strong>K4-4</strong></li>
-</ol>
-<p><strong>K-n</strong></p>
-<p><strong>tulkinnan tärkeimmät periaatteet</strong></p>
-<ul>
-<li>kaikki erot suhteellisia eroja</li>
-<li>ca-ratkaisu approksimaatio; voi olla hyvä, mutta myös huono
--CA on hajonnan (intertian) dekomponoinnin menetelmä.</li>
-<li>Toiset (esim. MG,“ranskalaiset”) painottavat graafista menetelmää ja kuvien oikeaa tulkintaa),
-voi ymmärtää myös moniulotteisenä skaalauksena (MDS: etsi skaalaus, joka maksimoi
-korrelaation) tai moniulotteisena varianssianalyysinä (ANOVA)</li>
-<li>tulkinnan tarkennus molemmissa alaluvuissa</li>
-</ul>
-<p>**edit* Tässä jaksossa korostuu data-analyyin eksplotatiivinen luonne, datan kaivelu
-ja näkökulmien muuntelu. Missä dimensiossa yhteydet ja riippuvuudet piileksivät?
-Kartta on tässä mielessä kartta(vaikka hieman outo), osoittaa yhdessä numeeristen
-tulosten kanssa suuntaa.</p>
-<div id="pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables" class="section level2">
-<h2><span class="header-section-number">7.1</span> Pinotut ja yhdistetyt taulukot (stacked and concatenated tables)</h2>
-<p>Pinotut taulut: perusidea</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb7-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;img/stacked1.png&#39;</span>)</span></code></pre></div>
+<p>Usean muuttujan samanaikainen analyysi voidaan korrespondenssianalyysissä
+jakaa kahteen erialaiseen tutkimusasetelmaan. Ensimmäisessä tutkitaan kahden
+erilaisen muuttujaryhmän välisiä suhteita, toisessa yhden homogeenisen
+muuttujaryhmän sisäisiä suhteita.</p>
+<p>Esimerkkiaineistossa haastateltavien
+vastaukset substanssikysymyksiin ovat oma ryhmänsä ja taustamuuttujat toinen
+ryhmä. Kahden muuttujaryhmän välisiä suhteita voidaan tutkia rakentamalla yhdistetty matriisi useasta kahden muuttujan ristiintaulukoinnista.
+Tämä pinottujen ja yhdistettyjen (stacked and concatenated) taulukoiden
+menetelmä (CAiP s. 129) ei kerro muuttujaryhmien sisäisistä yhteyksistä,
+joita edellä analysoitiin vuorovaikutusmuuttujien avulla.</p>
+<p>Toinen asetelma on keskenään homogeenisten muuttujien välisten suhteiden analyysi.
+Monimuuttujakorrespondenssianalyysi (multiple correspondence analysis, MCA)
+soveltuu hyvin kyselytutkimusten vastausten analyysiin. MCA - kartoilla voidaan
+yksittäiset havainnot, mutta usein on järkevämpää esittää kartalla
+taustamuuttujien keskiarvot. Keskiarvopisteisiin voi simuloimalla lisätä
+luottamusellipsit (CAiP, s. 299).</p>
+<p>Esitän molemmista analyyseistä yhden esimerkin. MCA-esimerkissä otan käyttöön
+kaikki aineiston havainnot ja useita vastausmuuttujia, puuttuvat tiedot ovat
+mukana yhtenä luokittelumuuttujan arvona.</p>
+<p>Yksinkertaisen korrespondenssianalyysin yleistys usean muuttujan samanaikaiseen
+analyysiin ei ole aivan yksikertainen asia. Silti MCA toimii käytännössä usein
+hyvin juuri kyseltutkimusten analyysissä. Vaikka geometrinen tulkinta ei ole
+läheskään niin selkeä kuin yksinkertaisessa korrespondenssianalyysissä,
+skaalaustulkinta on pätevä. MCA-kartat esittävät luokittelumuuttujien arvot
+optimaalisesti, kartalla esitettyjen havaintopisteiden hajonta on maksimaalinen
+<span class="citation">(Greenacre ja Hastie <a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d84" role="doc-biblioref">1987</a> , s. 447, kts. myös Liite 1)</span>.</p>
+<div id="pinotut-ja-yhdistetyt-taulukot" class="section level2">
+<h2><span class="header-section-number">7.1</span> Pinotut ja yhdistetyt taulukot</h2>
+<p>Pinottujen taulukoiden idea on esitetty kuvassa <a href="monimuuttuja-korrespondenssianalyysi-mca.html#fig:stackedimg1">7.1</a>. Taulukossa
+kaksi “selitettävää” muuttujaa on ristiintaulukoitu kolmen taustamuuttujan kanssa.</p>
+<p>Jos reunajakaumat ovat samat eli puuttuvia tietoja ei ole, taulukon kokonaisinertia
+on osataulukoiden inertioiden keskiarvo. Taulukon analyysi on yhden kysymyksen
+ja yhden taustamuuttujan parittaisten suhteiden analyysiä, yksi pari kerrallaan.</p>
+<p>Pierre Bourdieun tunnettu tutkimus La Distiction (1979) sovelsi tätä menetelmää.
+Ranskan väestö luokitellaan ammattiryhmiin ja taulukoidaan useiden elämäntapaa
+kuvaavien muuttujien kanssa. Taulukot yhdistetään pinoamalla ne
+päällekkäin ( <span class="citation">M. Greenacre ja Blasius (<a href="lähteet.html#ref-RefWorks:doc:5ab76b43e4b003f4468d1f07" role="doc-biblioref">2006</a>)</span> , s.21).</p>
 <div class="figure" style="text-align: center"><span id="fig:stackedimg1"></span>
 <img src="img/stacked1.png" alt="Pinotut ja yhdistetyt taulut - periaate" width="50%" />
 <p class="caption">
 Kuva 7.1: Pinotut ja yhdistetyt taulut - periaate
 </p>
 </div>
-<p>Pierre Bourdieun tunnettu tutkimus La Distiction (1979) soveltaa tätä menetelmää.
-Ranskan väestö luokitellaan ammattiryhmiin ja taulukoidaan useiden elämäntapaa
-kuvaavien muuttujien kanssa. Taulukot yhdistetään pinoamalla ne
-päällekkäin ( <span class="citation">M. Greenacre ja Blasius (<a href="lähteet.html#ref-RefWorks:doc:5ab76b43e4b003f4468d1f07" role="doc-biblioref">2006</a>)</span> , s.21).</p>
+<p>Seuraavassa esimerkissä “selitettäviä” luokittelumuuttujia on vain yksi. Tällainen
+pinotun taulun analyysi on eräänlainen kaikkien siihen kuuluvien taulukoiden
+“keskiarvokartta” (CAiP, s 136)</p>
 <p>Kun yhdistty taulu rakennetaan matriiseista, karttojen muuttujanimiä joudutaan
-siistimään. Kuvat voivat myös herkästi kääntyä akselien ympäri, ne kannataa
-kääntää vertailun helpottamiseksi samanlaisiksi kuin muut.</p>
+tiivistämään. Toinen tekninen detalji on kartan kääntäminen. Kuvat kääntyvät
+herkästi akselien ympäri, vertailun helpottamiseksi ne kannattaa kääntää
+samanlaisiksi kuin muut.</p>
 <div class="figure" style="text-align: center"><span id="fig:concat1map1"></span>
 <img src="JH_capaper_files/figure-html/concat1map1-1.png" alt="Q1b: Lapsi kärsii jos äiti käy työssä" width="90%" />
 <p class="caption">
@@ -268,14 +253,12 @@ Kuva 7.2: Q1b: Lapsi kärsii jos äiti käy työssä
 </div>
 <p><strong>Kartan tulkinta; miten eroaa yhteisvaikutusmuuttujan analyysistä?</strong></p>
 <p>Perustulkinta akseleille ei muutu, eikä maapisteiden sijoittuminenkaan.</p>
-<p>Mikä on maapisteiden ja kahden selittävän (eksogeenisen) muuttujan pisteiden yhteys sarakepisteisiin?</p>
 <p>Koko aineiston kartassa ikäluokkapisteet ja sukupuolipisteet ovat pakkautuneet maapisteitä tiiviimmin origon ympärille. Ikäluokkapisteiden (koko aineiston keskiarvot) selvä kontrasti on vanhimman (a6)ja toiseksi nuorimman välillä 1. dimenision suuntaan.</p>
 <p>Ikäluokkapisteet ovat koko aineiston keskiarvopisteitä, niiden sijantia voi tulkita pistejoukko kerrallaan kuten maapisteidenkin. Mitään yhteisvaikutuksia ei analysoida eksplisiittisesti. Karttaa voi verrata sukupuoli-ikäluokka yhteisvaikutusmuuttujan analyysin aiemmin. Naispiste on tiukassa nipussa ikäluokkien a3 ja a4 kanssa aivan origon vasemmalla puolella. Miesten keskiarvopiste on hieman origosta oikealle, yhdessä ikäluokan a5 kanssa.</p>
-<p>Taustamuuttujat: numeeristen tulosten tarkastelua</p>
 <p>Lisäpisteet on hyvin esitetty, niiden etäisyyksiä voi luotettavasti arvioida kuvasta. Poikkeus on nuorin ikäluokka (a1, qlt = 501). Inertian osuudet (inr) ovat yhtä vaatimattomia kuin Belgian (28) ja Saksan (29), (m =20, f = 17, a2 = 40, a6 = 83), samoin kontribuutiot akseleiden inertiaan. 1. dimension kontribuutio (ctr) on suuri (&gt;800) kaikilla paitsi nuorimmalla ikäryhmällä (a1) jolla 2. dimension selittää lähes puolet sen inertiasta (470).</p>
 <p>Vilkaistaan taas numeerisa tuloksia, varmistetaan tulkinta. Tämän voi poistaa
 lopullisesta versiosta.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb8-1"></a><span class="kw">summary</span>(Concat1jh.CA1)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb7-1"></a><span class="kw">summary</span>(Concat1jh.CA1)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -312,67 +295,34 @@ lopullisesta versiosta.</p>
 ## 3 |      |  168  640   80 |  150 639  66 |   -6   1   1 |
 ## 4 |    e |  261  970   97 |  -35  44   6 | -160 926 657 |
 ## 5 |    E |  234 1000  504 | -390 962 628 |   77  38 138 |</code></pre>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-1"></a><span class="co"># 14 riviä, inertiakontribuution keskiarvo</span></span>
-<span id="cb10-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-2"></a><span class="co"># 1000/14 = 71 </span></span></code></pre></div>
-<p><strong>edit</strong> Galkussa myös subsetCA-kartta, josta Unkari ja Bulgaria on jätetty pois.
-Ei mitään oleellista lisätietoa, joten ei esitetä tässä. Ensimmäisen dimension
-osuus interitasta laskee ja toisen kasvaa. Kartan selkeys ei parane.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb9-1"></a><span class="co"># 14 riviä, inertiakontribuution keskiarvo</span></span>
+<span id="cb9-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb9-2"></a><span class="co"># 1000/14 = 71 </span></span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:concat1map2"></span>
-<img src="JH_capaper_files/figure-html/concat1map2-1.png" alt="Q1b: Lapsi kärsii jos äiti käy työssä" width="90%" />
+<img src="JH_capaper_files/figure-html/concat1map2-1.png" alt="Q1b: Lapsi kärsii jos äiti käy työssä - pinottu taulukko" width="90%" />
 <p class="caption">
-Kuva 7.3: Q1b: Lapsi kärsii jos äiti käy työssä
+Kuva 7.3: Q1b: Lapsi kärsii jos äiti käy työssä - pinottu taulukko
 </p>
 </div>
 <p>Sarekkeista E-sarake (täysin eri mieltä) määrittää akseleita vahvasti, kontrastina
 kaksi konservatiivista vastausta (S ja s) ja myös neutraali vaihtoehto (e).
-Numeerista tuloksista nähdään, että ikäluokat vaikuttavat juuri ensimmäiseen tärkeimpään dimensioon.</p>
+Numeerista tuloksista nähdään, että ikäluokat vaikuttavat juuri ensimmäiseen
+tärkeimpään dimensioon.</p>
 <p>Belgian ja Saksan pisteet on esitetty kartassa huonosti, samoin nuorin ikäluokka.
 Muiden pisteiden sijaintia voidaan arvioida myös sarakkeiden ja rivipisteiden
 välillä. Ikäluokkien kontrasti on selvä toiseksi nuorimman (a2) ja vanhimman (a6)
 välillä.</p>
-<p><strong>edit</strong> Ikäluokkapisteet asymmetrisessä kontribuutiokartassa sarakkeiden keskiarvona,
-samoin maapisteet. Esimerkiksi vanhimmassa ikäluokassa on suhteellisesti paljon
-vastauksia samaa mieltä olevia ja neutraaleja ja vähän erimielisiä.</p>
-<p>Hyvin yksinkertainen esimerkki.</p>
-<p><strong>edit</strong> Mutta tässä esimerkkiaineisto, jossa ei puuttuvia tietoja. Ne olisivatkin
+<p>Esimerkkiaineistossa ei ole puuttuvia tietoja. Ne olisivatkin
 aika pulmallisia, varianssin dekomponointi ei onnistu jos reunajakaumat ovat
-alitauluissa erilaisia.</p>
-<p><strong>Matched matrices</strong> <strong>edit</strong> Ei omaa lukua, vaan pari kappaletta matriisien pinoamisesta
-ja yhdistelystä.</p>
-<p><strong>k</strong> lyhyesti matriisien yhdistelystä hyvin yleisenä analyysin menetelmänä.
-Voidaan tarkastella luonteeltaan erilaisten muuttujaryhmien tai muuttujien
-yhteyksiä kuten edellisessä esimerkissä.</p>
-<p><strong>k</strong>Idea: matriisien yhdistämisellä
-saadaan ote monenlaiseen tutkimusongelmaan. Benzecri: data-analyysissä on vain
-löydettävä oikea matriisi joka diagonalisoidaan.</p>
-<p>Ref:CAip ss. 177 <span class="citation">(M. J. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>, HY2017_MCA, Greenacre JAS 2013
-(sovellus ISSP 1989,4 kysymystä ‘pitäisikö äidin olla kotona’, 8 maata), tässä
-artikkelissa “SVD-based methods”,joista yksi CA (muut biplots, PCA, compositional data/log ratios).
-<span class="citation">(Greenacre <a href="lähteet.html#ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76" role="doc-biblioref">2003</a>)</span></p>
-<p>Ryhmien välisen ja ryhmien sisäinen inertian erottaminen, <strong>ABBA</strong>
-on yksi ratkaisu (ABBA matrix, teknisesti block circular matrix).</p>
-<p>Edellisen menetelmän variantti, jossa ryhmien väliset ja sisäiset erot saadaan
-esiin. Inertian jakaminen.</p>
-<p>Samanlaisten rivien ja sarakkeiden kaksi samankokoista taulua, esimerkiksi
-sukupuolivaikutusten arviointi. Alkuperäinen taulukko jaetaan kahdeksi tauluksi
-sukupuolen mukaan. Matriisien yhdistäminen (concatenation) riveittäin tai
-sarakkeittain ei näytä optimaalisesti mm - matriisien eroja.</p>
-<p>Luokittelu voi olla myös kahden indikaattorimuuttujan avulla jako neljään
-taulukkoon (esim. miehet vs. naiset länsieuroopassa verratuna samaan asetelmaan
-itä-Euroopassa). Samaa ideaa laajennetaan.</p>
-<p>Esimerkkinä “Attitudes to women working in 2012”.</p>
-<p><strong>ABBA</strong>“We consider the joint analysis of two matched matrices which have common
-rows and columns, for example multivariate data observed at two time points or split
-according to a dichotomous variable. Methods of interest include principal components
-analysis for interval-scaled data, correspondence analysis for frequency data, log-ratio
-analysis of compositional data and linear biplots in general, all of which depend on the
-singular value decomposition. A simple result in matrix algebra shows that by setting up
-two matched matrices in a particular block format, matrix sum and difference components
-can be analysed using a single application of the singular value decomposition algorithm.
-The methodology is applied to data from the International Social Survey Program
-comparing male and female attitudes on working wives across eight countries. The resulting
-biplots optimally display the overall cross-cultural differences as well as the male–female
-differences. The case of more than two matched matrices is also discussed.”</p>
+alitaulukoissa selvästi erilaisia.</p>
+<p>Matriisien yhdistely on monipuolinen laajennus. Eräs kiinnostava malli on
+ABBA, kahden rakenteeltaan samanlaisen matriisin yhdistäminen lohkoina. Nimi
+kertoo yhdistetyn matriisin rakenteen (block circulant matrix),
+päällekkäin pinotut A ja B liitetään toiseen pinottuun matriisiin B ja A.</p>
+<p>Matriiseilla on samat rivit ja sarakkeet, esimerkiksi miesten ja naisten
+vastausprofiilit yhteen kysymykseen aittain luokiteltuina.Kokonaisinertia
+saadaan dekomponoitua ryhmien sisäiseen ja väliseen hajontaan kahdelle kartalle.
+Toinen kuvaa maiden välisiä eroja ja toinen maiden sisäisiä sukupuolten välisiä
+eroja (CAiP ss. 177-)</p>
 </div>
 <div id="mca---monimuuttujakorrespondenssianalyysi" class="section level2">
 <h2><span class="header-section-number">7.2</span> MCA - monimuuttujakorrespondenssianalyysi</h2>
@@ -387,45 +337,38 @@ Faktorianalyysi tässä selkein vertailukohde</p>
 <p><strong>k</strong> Matemaattisesti kaikki muuttuu paljon mutkikkaammaksi, ja yksinkertaisen
 perustapauksen selkeät tulkinnat eivät toimi. Tärkeä asia: CA:n skaalausominaisuudet ja
 visuaalinen tulkinta pätevät edelleen.</p>
-<p><strong>edit</strong> Teorialiitteessä tästä enemmän, ranskalaiset hieman eri mieltä
-<strong>Viitteitä</strong></p>
+<p><strong>Viitteitä</strong></p>
 <p>MG ja MG&amp;Prado ovat tutkineet ISSP-datalla tätä ongelmaa.
-Biplots In practice - kirja <span class="citation">(Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span>, ss.142-
-“dimensions of middleness”. Mg ja Prado artikkelissaan
-<span class="citation">(M. Greenacre ja Pardo <a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d87" role="doc-biblioref">2006</a>)</span> ja samasta teemasta laajentaen
-kokoomateoksessa <span class="citation">(M. Greenacre ja Blasius <a href="lähteet.html#ref-RefWorks:doc:5ab76b43e4b003f4468d1f07" role="doc-biblioref">2006</a>)</span>, ss. 197-217.
-Aineistona jälkimmäisessä tutkimuksessa on sama kysymyssarja kuin tässä 1994
-datasta. Kysymyksissä on jonkin verran eroja. Ensimmäisessä artikkelissa he kommentoivat vertaisarvioitsijoiden ehdotuksia. Kuvia voisi selkiyttää esittämällä vain osan
-pisteistä sarjassa karttoja, mutta ratkaisu perustuisi siinäkin koko dataan ja
-sitä nimenomaan ei haluta. Toinen ehdotus on yhdistää ne vastausvaihtoehdot jotka
-eivät ole tutkimuksen kohteena yhdeksi yhdistetyksi kategoriaksi. Tällöin osajoukon
-korrespondenssianalyysin kätevä inertia dekomponointi osajoukille ei toimisi. Ratkaisu
-ei toimi ollenkaan yleisimmissä osajoukoissa.</p>
+<span class="citation">(Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a> , ss.142-)</span>, “dimensions of middleness”.</p>
+<p><span class="citation">(M. Greenacre ja Pardo <a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d87" role="doc-biblioref">2006</a>)</span> ja samasta teemasta laajentaen
+kokoomateoksessa <span class="citation">(M. Greenacre ja Blasius <a href="lähteet.html#ref-RefWorks:doc:5ab76b43e4b003f4468d1f07" role="doc-biblioref">2006</a>)</span>, ss. 197-217.</p>
+<p>Aineistona jälkimmäisessä tutkimuksessa on sama kysymyssarja kuin tässä 1994
+datasta. Kysymyksissä on jonkin verran eroja.</p>
 <p><strong>k</strong> Data</p>
 <p><strong>k</strong> Taustamuuttujien taulukoissa on yllättävän isoja eroja, jotkut taulukoiden luokat
 ovat nollia tai hyvin vähän havaintoja. Luokkia pitäisi yhdistellä,jo pelkästään
 “kuvaroskan” takia. Ei tehdä.</p>
 <p><strong>k</strong> Puuttuvat havainnot, muutama numero vain mitä “listwise delete” saa aikaan.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-1"></a><span class="co">#Puuttuvien tietojen yleiskuva</span></span>
-<span id="cb11-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-2"></a></span>
-<span id="cb11-3"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-3"></a><span class="co"># Puuttuvat tiedot aineistossa - viite datan dokumentointiin jossa taulukot.</span></span>
-<span id="cb11-4"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-4"></a><span class="co"># Vaihtelee maittain ja muuttujittain, paljon.</span></span>
-<span id="cb11-5"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-5"></a></span>
-<span id="cb11-6"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-6"></a><span class="co"># Koko data (G1_1_data2.Rmd - skriptissä valitut muuttujat ja 25 maata)</span></span>
-<span id="cb11-7"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-7"></a><span class="co">#</span></span>
-<span id="cb11-8"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-8"></a><span class="co">#sum(!complete.cases(ISSP2012jh1d.dat)) = 9455</span></span>
-<span id="cb11-9"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-9"></a><span class="co">#dim(ISSP2012jh1d.dat) = 32823</span></span>
-<span id="cb11-10"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-10"></a><span class="co">#9455/32823 = 0.2880602</span></span>
-<span id="cb11-11"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-11"></a></span>
-<span id="cb11-12"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-12"></a><span class="co"># Puuttuvat tiedot valitussa MCA-aineistossa</span></span>
-<span id="cb11-13"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-13"></a></span>
-<span id="cb11-14"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-14"></a><span class="co">#missingMCAvars1 &lt;-  c(&quot;Q1a&quot;,&quot;Q1b&quot;, &quot;Q1c&quot;, &quot;Q1d&quot;,&quot;Q1e&quot;,&quot;Q2a&quot;,&quot;Q2b&quot;,&quot;edu&quot;,</span></span>
-<span id="cb11-15"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-15"></a><span class="co">#                 &quot;sosta&quot;, &quot;urbru&quot;, &quot;maa&quot;, &quot;ika&quot;, &quot;sp&quot; )</span></span>
-<span id="cb11-16"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-16"></a><span class="co">#missingTestMCA1.dat &lt;- ISSP2012jh1d.dat %&gt;% select(all_of(missingMCAvars1))</span></span>
-<span id="cb11-17"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-17"></a></span>
-<span id="cb11-18"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-18"></a><span class="co">#sum(!complete.cases(missingTestMCA1.dat)) = 6101</span></span>
-<span id="cb11-19"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-19"></a><span class="co">#dim(missingTestMCA1.dat) = 32823</span></span>
-<span id="cb11-20"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-20"></a><span class="co">#6101/32823 = 0.1858758 Puuttellisten havaintojen osuus.</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-1"></a><span class="co">#Puuttuvien tietojen yleiskuva</span></span>
+<span id="cb10-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-2"></a></span>
+<span id="cb10-3"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-3"></a><span class="co"># Puuttuvat tiedot aineistossa - viite datan dokumentointiin jossa taulukot.</span></span>
+<span id="cb10-4"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-4"></a><span class="co"># Vaihtelee maittain ja muuttujittain, paljon.</span></span>
+<span id="cb10-5"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-5"></a></span>
+<span id="cb10-6"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-6"></a><span class="co"># Koko data (G1_1_data2.Rmd - skriptissä valitut muuttujat ja 25 maata)</span></span>
+<span id="cb10-7"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-7"></a><span class="co">#</span></span>
+<span id="cb10-8"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-8"></a><span class="co">#sum(!complete.cases(ISSP2012jh1d.dat)) = 9455</span></span>
+<span id="cb10-9"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-9"></a><span class="co">#dim(ISSP2012jh1d.dat) = 32823</span></span>
+<span id="cb10-10"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-10"></a><span class="co">#9455/32823 = 0.2880602</span></span>
+<span id="cb10-11"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-11"></a></span>
+<span id="cb10-12"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-12"></a><span class="co"># Puuttuvat tiedot valitussa MCA-aineistossa</span></span>
+<span id="cb10-13"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-13"></a></span>
+<span id="cb10-14"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-14"></a><span class="co">#missingMCAvars1 &lt;-  c(&quot;Q1a&quot;,&quot;Q1b&quot;, &quot;Q1c&quot;, &quot;Q1d&quot;,&quot;Q1e&quot;,&quot;Q2a&quot;,&quot;Q2b&quot;,&quot;edu&quot;,</span></span>
+<span id="cb10-15"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-15"></a><span class="co">#                 &quot;sosta&quot;, &quot;urbru&quot;, &quot;maa&quot;, &quot;ika&quot;, &quot;sp&quot; )</span></span>
+<span id="cb10-16"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-16"></a><span class="co">#missingTestMCA1.dat &lt;- ISSP2012jh1d.dat %&gt;% select(all_of(missingMCAvars1))</span></span>
+<span id="cb10-17"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-17"></a></span>
+<span id="cb10-18"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-18"></a><span class="co">#sum(!complete.cases(missingTestMCA1.dat)) = 6101</span></span>
+<span id="cb10-19"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-19"></a><span class="co">#dim(missingTestMCA1.dat) = 32823</span></span>
+<span id="cb10-20"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-20"></a><span class="co">#6101/32823 = 0.1858758 Puuttellisten havaintojen osuus.</span></span></code></pre></div>
 <p>Koko tähän tutkimukseen valitussa aineistossa (25 maata ja muuttujat, poistettu
 havainnot joissa ikä tai sukupuoli puuttuu) 71% havainnoista on kaikki tiedot.</p>
 <p>MCA-analyyseihin valitun 7 + 3 = 10 muuttujan aineiston havainnoista 81% on
@@ -511,7 +454,7 @@ of middleness”?</p>
 <p><strong>TÄHÄN VOISI LOPETTAA - EI KAHTA PITÄÄ TULOSTETTA KUN NIITÄ EI TARKEMMIN ANALYSOIDA</strong></p>
 <p><strong>edit2 - harkitaan näitä</strong>
 <strong>MCA - numeeriset tulokset</strong></p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb12-1"></a><span class="kw">summary</span>(Qmuuttujat2.mca)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-1"></a><span class="kw">summary</span>(Qmuuttujat2.mca)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -567,8 +510,8 @@ of middleness”?</p>
 ## 34 |  b2e |   40  711   24 |  -76  53   2 |  269 658  45 |
 ## 35 |  b2E |   39  939   37 |  630 932 119 |  -55   7   2 |</code></pre>
 <p><strong>edit</strong> tämä poistetaan lopullisesta versiosta.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb14-1"></a>Qmuuttujat2d3  &lt;-<span class="st"> </span><span class="kw">mjca</span>(mcaDat11jh.dat, <span class="dt">ps=</span><span class="st">&quot;&quot;</span>, <span class="dt">nd =</span> <span class="dv">3</span>,<span class="dt">subsetcat=</span>eiPvastaukset)</span>
-<span id="cb14-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb14-2"></a><span class="kw">summary</span>(Qmuuttujat2d3)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb13-1"></a>Qmuuttujat2d3  &lt;-<span class="st"> </span><span class="kw">mjca</span>(mcaDat11jh.dat, <span class="dt">ps=</span><span class="st">&quot;&quot;</span>, <span class="dt">nd =</span> <span class="dv">3</span>,<span class="dt">subsetcat=</span>eiPvastaukset)</span>
+<span id="cb13-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb13-2"></a><span class="kw">summary</span>(Qmuuttujat2d3)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 

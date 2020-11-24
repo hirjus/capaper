@@ -1,73 +1,64 @@
 # Monimuuttuja-korrespondenssianalyysi (MCA)
 
-**k** MG:n jäsentely CA:n  tutkimusasetelmista (within - between), kokoaan myös 
-edeltävät analyysit "saman katon alle".
+Usean muuttujan samanaikainen analyysi voidaan korrespondenssianalyysissä
+jakaa kahteen erialaiseen tutkimusasetelmaan.  Ensimmäisessä tutkitaan kahden
+erilaisen muuttujaryhmän välisiä suhteita, toisessa yhden homogeenisen
+muuttujaryhmän sisäisiä suhteita.
 
-**k** Idea: taulukoiden yhdistely "supertaulukoksi" tai matriisiksi, analysoidaan kahden muuttujan
-ristiintaulukoinnin laajennuksena useita kahden muuttujan ristiintaulukointeja.
+Esimerkkiaineistossa haastateltavien
+vastaukset substanssikysymyksiin ovat oma ryhmänsä ja taustamuuttujat toinen
+ryhmä. Kahden muuttujaryhmän välisiä suhteita voidaan tutkia rakentamalla yhdistetty matriisi useasta kahden muuttujan ristiintaulukoinnista. 
+Tämä pinottujen ja yhdistettyjen (stacked and concatenated) taulukoiden
+menetelmä (CAiP s. 129) ei kerro muuttujaryhmien sisäisistä yhteyksistä,
+joita edellä analysoitiin vuorovaikutusmuuttujien avulla.
 
-**k** MCA stacked&concat - analyysin erikoistapauksena.
+Toinen asetelma on keskenään homogeenisten muuttujien välisten suhteiden analyysi.
+Monimuuttujakorrespondenssianalyysi (multiple correspondence analysis, MCA)
+soveltuu hyvin kyselytutkimusten vastausten analyysiin. MCA - kartoilla voidaan
+yksittäiset havainnot, mutta usein on järkevämpää esittää kartalla
+taustamuuttujien keskiarvot. Keskiarvopisteisiin voi simuloimalla lisätä
+luottamusellipsit (CAiP, s. 299).
 
-**k** CA SVD:tä soveltavana ratkaisualgoritmina, jolle "syötetään" sopiva matriisi. Benzecri: löydettettävä vain
-matriisi joka dekomponoidaan.
+Esitän molemmista analyyseistä yhden esimerkin. MCA-esimerkissä otan käyttöön
+kaikki aineiston havainnot ja useita vastausmuuttujia, puuttuvat tiedot ovat
+mukana yhtenä luokittelumuuttujan arvona.
 
-**k1** kahden muuttujuajoukon väliset yhteydet
-
-**k2** yhden muuttujajoukon muuttujien väliset yhteydet
-
-**k3** wrt samples ja wrt variables
-
-**k4** Yksinkertaisesta monimutkaisempaan
-0. Täydentävät pisteet tulkinnan apuna, yleistyökaluna ("jack of all trades but
-master of none") esitelty ensimmäisenä. Tärkeä lisä kaikissa analyyseissä.
-
-1. yhteisvaikutusmuuttujat **K4-1**
--max kolmen muuttujan yhtesivaikutusmuuttuja - taulukko harsoontuu
-
-
-2. Yksi "selitettävä" muuttuja, useampi "selittävä" **K4-2"**
-- pinotut taulukot (käytännössä matriisit, helpompi pinota R:ssä, Burtin taulun käyttö)
-
-3. Taulukoiden yhdistäminen yleisemmin  **K4-3**
-
-- monta "selittäjää" ja "selitettävää": taulukoita päällekkäin ja rinnakkain, lohkomatriisi
-- ABBA: voidaan esim. jakaa taulukko (viite) osatauluiksi
-- tästä hieman tarkemmin teorialiitteessä;symmetriset taulut (esim. vastaukset
-eri vuosina, isän ja pojan ammatti), matched matrices
-
-4. MCA **K4-4**
-
-**K-n**
-
-**tulkinnan tärkeimmät periaatteet**
-
-- kaikki erot suhteellisia eroja
-- ca-ratkaisu approksimaatio; voi olla hyvä, mutta myös huono
--CA on hajonnan (intertian) dekomponoinnin menetelmä. 
-- Toiset (esim. MG,"ranskalaiset") painottavat graafista menetelmää ja kuvien oikeaa tulkintaa),
-voi ymmärtää myös moniulotteisenä skaalauksena (MDS: etsi skaalaus, joka maksimoi
-korrelaation) tai moniulotteisena varianssianalyysinä (ANOVA)
-- tulkinnan tarkennus molemmissa alaluvuissa
-
-**edit* Tässä jaksossa korostuu data-analyyin eksplotatiivinen luonne, datan kaivelu
-ja näkökulmien muuntelu. Missä dimensiossa yhteydet ja riippuvuudet piileksivät?
-Kartta on tässä mielessä kartta(vaikka hieman outo), osoittaa yhdessä numeeristen
-tulosten kanssa suuntaa.
+Yksinkertaisen korrespondenssianalyysin yleistys usean muuttujan samanaikaiseen
+analyysiin ei ole aivan yksikertainen asia. Silti MCA toimii käytännössä usein
+hyvin juuri kyseltutkimusten analyysissä. Vaikka geometrinen tulkinta ei ole
+läheskään niin selkeä kuin yksinkertaisessa korrespondenssianalyysissä,
+skaalaustulkinta on pätevä. MCA-kartat esittävät luokittelumuuttujien arvot
+optimaalisesti, kartalla esitettyjen havaintopisteiden hajonta on maksimaalinen
+[@RefWorks:doc:5a857a44e4b0ed2d44664d84 , s. 447, kts. myös Liite 1].
 
 
-## Pinotut ja yhdistetyt taulukot (stacked and concatenated tables)
+## Pinotut ja yhdistetyt taulukot
 
-Pinotut taulut: perusidea
-```{r stackedimg1, out.width='50%', fig.align='center',fig.cap='Pinotut ja yhdistetyt taulut - periaate'}
+Pinottujen taulukoiden idea on esitetty kuvassa \@ref(fig:stackedimg1). Taulukossa
+kaksi "selitettävää" muuttujaa on ristiintaulukoitu kolmen taustamuuttujan kanssa.
+
+Jos reunajakaumat ovat samat eli puuttuvia tietoja ei ole, taulukon kokonaisinertia
+on osataulukoiden inertioiden keskiarvo. Taulukon analyysi on yhden kysymyksen
+ja yhden taustamuuttujan parittaisten suhteiden analyysiä, yksi pari kerrallaan.
+
+Pierre Bourdieun tunnettu tutkimus La Distiction (1979) sovelsi tätä menetelmää.
+Ranskan väestö luokitellaan ammattiryhmiin ja taulukoidaan useiden elämäntapaa
+kuvaavien muuttujien kanssa. Taulukot yhdistetään pinoamalla ne
+päällekkäin ( @RefWorks:doc:5ab76b43e4b003f4468d1f07 , s.21).
+
+
+```{r stackedimg1, out.width='50%', echo=FALSE, fig.align='center',fig.cap='Pinotut ja yhdistetyt taulut - periaate'}
 
 knitr::include_graphics('img/stacked1.png')
 
 ```
 
-Pierre Bourdieun tunnettu tutkimus La Distiction (1979) soveltaa tätä menetelmää.
-Ranskan väestö luokitellaan ammattiryhmiin ja taulukoidaan useiden elämäntapaa
-kuvaavien muuttujien kanssa. Taulukot yhdistetään pinoamalla ne
-päällekkäin ( @RefWorks:doc:5ab76b43e4b003f4468d1f07 , s.21).
+Seuraavassa esimerkissä "selitettäviä" luokittelumuuttujia on vain yksi. Tällainen
+pinotun taulun analyysi on eräänlainen kaikkien siihen kuuluvien taulukoiden 
+"keskiarvokartta" (CAiP, s 136)
+
+
+
 
 ```{r concatDat1, echo=F}
 
@@ -98,9 +89,11 @@ ISSP2012Concat2jh.dat <- rbind(ISSP2012Concat2jh.dat, Concat1jh.Burt[14:19 ,1:5]
 Concat1jh.CA1 <- ca(ISSP2012Concat2jh.dat)
 
 ```
+
 Kun yhdistty taulu rakennetaan matriiseista, karttojen muuttujanimiä joudutaan
-siistimään. Kuvat voivat myös herkästi kääntyä akselien ympäri, ne kannataa
-kääntää vertailun helpottamiseksi samanlaisiksi kuin muut.
+tiivistämään. Toinen tekninen detalji on kartan kääntäminen. Kuvat kääntyvät
+herkästi akselien ympäri, vertailun helpottamiseksi ne kannattaa kääntää
+samanlaisiksi kuin muut.
 
 ```{r concatSiisti1, echo=F}
 
@@ -114,6 +107,9 @@ Concat1jh.CA1$rownames <- c("BE", "BG", "DE", "DK", "FI", "HU", "m", "f",
                             "a1", "a2", "a3", "a4", "a5", "a6")
 
 ```
+
+
+
 ```{r concat1map1,echo=F, fig.cap= "Q1b: Lapsi kärsii jos äiti käy työssä", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
 # pisteiden kasautumien haittaa haittaa tulkintaa
@@ -129,13 +125,10 @@ plot(Concat1jh.CA1,
 
 Perustulkinta akseleille ei muutu, eikä maapisteiden sijoittuminenkaan.
 
-Mikä on maapisteiden ja kahden selittävän (eksogeenisen) muuttujan pisteiden yhteys sarakepisteisiin?
-
 Koko aineiston kartassa ikäluokkapisteet ja sukupuolipisteet ovat pakkautuneet maapisteitä tiiviimmin origon ympärille. Ikäluokkapisteiden (koko aineiston keskiarvot) selvä kontrasti on vanhimman (a6)ja toiseksi nuorimman välillä 1. dimenision suuntaan.
 
-Ikäluokkapisteet ovat koko aineiston keskiarvopisteitä, niiden sijantia voi tulkita pistejoukko kerrallaan kuten maapisteidenkin. Mitään yhteisvaikutuksia ei analysoida eksplisiittisesti. Karttaa voi verrata sukupuoli-ikäluokka yhteisvaikutusmuuttujan analyysin aiemmin. Naispiste on tiukassa nipussa ikäluokkien a3 ja a4 kanssa aivan origon vasemmalla puolella. Miesten keskiarvopiste on hieman origosta oikealle, yhdessä ikäluokan a5 kanssa.
+Ikäluokkapisteet ovat koko aineiston keskiarvopisteitä, niiden sijantia voi tulkita pistejoukko kerrallaan kuten maapisteidenkin. Mitään yhteisvaikutuksia ei analysoida eksplisiittisesti. Karttaa voi verrata sukupuoli-ikäluokka yhteisvaikutusmuuttujan analyysin aiemmin. Naispiste on tiukassa nipussa ikäluokkien a3 ja a4 kanssa aivan origon vasemmalla puolella. Miesten keskiarvopiste on hieman origosta oikealle, yhdessä ikäluokan a5 kanssa. 
 
-Taustamuuttujat: numeeristen tulosten tarkastelua
 
 Lisäpisteet on hyvin esitetty, niiden etäisyyksiä voi luotettavasti arvioida kuvasta. Poikkeus on nuorin ikäluokka (a1, qlt = 501). Inertian osuudet (inr) ovat yhtä vaatimattomia kuin Belgian (28) ja Saksan (29), (m =20, f = 17, a2 = 40, a6 = 83), samoin kontribuutiot akseleiden inertiaan. 1. dimension kontribuutio (ctr) on suuri (>800) kaikilla paitsi nuorimmalla ikäryhmällä (a1) jolla 2. dimension selittää lähes puolet sen inertiasta (470).
 
@@ -152,92 +145,47 @@ summary(Concat1jh.CA1)
 
 ```
 
-**edit** Galkussa myös subsetCA-kartta, josta Unkari ja Bulgaria on jätetty pois.
-Ei mitään oleellista lisätietoa, joten ei esitetä tässä. Ensimmäisen dimension
-osuus interitasta laskee ja toisen kasvaa. Kartan selkeys ei parane.
 
-```{r concat1map2,echo=F, fig.cap= "Q1b: Lapsi kärsii jos äiti käy työssä", fig.asp = 1, out.width = "90%",fig.align = "center"}
+
+```{r concat1map2,echo=F, fig.cap= "Q1b: Lapsi kärsii jos äiti käy työssä - pinottu taulukko", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
 par(cex = 0.6)
 plot(Concat1jh.CA1, map = "rowgreen",
-     mass = c(TRUE, TRUE),
+     #mass = c(TRUE, TRUE) ei oikein erotu kuvassa
      contrib =c("relative", "absolute"),
      arrows = c(FALSE, TRUE),
-     main = "Pinottu taulukko, kontribuuutiokartta (suhteellinen, absoluuttinen)",
-     sub = "a1-a6 ikäluokat, m = miehet, f = naiset, massat pisteiden koko"
+     main = "taustamuuttujat a1-a6 ikäluokat, m = miehet, f = naiset",
+     sub =  "sarakkeet absoluuttinen kontribuutio, rivit suhteellinen"
      )
 
 ```
 
 Sarekkeista E-sarake (täysin eri mieltä) määrittää akseleita vahvasti, kontrastina
 kaksi konservatiivista vastausta (S ja s) ja myös neutraali vaihtoehto (e).
-Numeerista tuloksista nähdään, että ikäluokat vaikuttavat juuri ensimmäiseen tärkeimpään dimensioon.
+Numeerista tuloksista nähdään, että ikäluokat vaikuttavat juuri ensimmäiseen
+tärkeimpään dimensioon.
 
 Belgian ja Saksan pisteet on esitetty kartassa huonosti, samoin nuorin ikäluokka.
 Muiden pisteiden sijaintia voidaan arvioida myös sarakkeiden ja rivipisteiden
 välillä. Ikäluokkien kontrasti on selvä toiseksi nuorimman (a2) ja vanhimman (a6)
 välillä.
 
-**edit** Ikäluokkapisteet asymmetrisessä kontribuutiokartassa sarakkeiden keskiarvona,
-samoin maapisteet. Esimerkiksi vanhimmassa ikäluokassa on suhteellisesti paljon
-vastauksia samaa mieltä olevia ja neutraaleja ja vähän erimielisiä.
 
-
-Hyvin yksinkertainen esimerkki.
-
-**edit** Mutta tässä esimerkkiaineisto, jossa ei puuttuvia tietoja. Ne olisivatkin
+Esimerkkiaineistossa ei ole puuttuvia tietoja. Ne olisivatkin
 aika pulmallisia, varianssin dekomponointi ei onnistu jos reunajakaumat ovat
-alitauluissa erilaisia.
-
-**Matched matrices** **edit** Ei omaa lukua, vaan pari kappaletta matriisien pinoamisesta
-ja yhdistelystä.
-
-**k** lyhyesti matriisien yhdistelystä hyvin yleisenä analyysin menetelmänä.
-Voidaan tarkastella luonteeltaan erilaisten muuttujaryhmien tai muuttujien
-yhteyksiä kuten edellisessä esimerkissä. 
-
-**k**Idea: matriisien yhdistämisellä
-saadaan ote monenlaiseen tutkimusongelmaan. Benzecri: data-analyysissä on vain
-löydettävä oikea matriisi joka diagonalisoidaan.
+alitaulukoissa selvästi erilaisia.
 
 
-Ref:CAip ss. 177 [@RefWorks:doc:5a857a43e4b0ed2d44664d78], HY2017_MCA, Greenacre JAS 2013
-(sovellus ISSP 1989,4 kysymystä 'pitäisikö äidin olla kotona', 8 maata), tässä
-artikkelissa "SVD-based methods",joista yksi CA (muut biplots, PCA, compositional data/log ratios).
-[@RefWorks:doc:5b6f159ce4b0bc0f31734b76]
+Matriisien yhdistely on monipuolinen laajennus. Eräs kiinnostava malli on 
+ABBA, kahden rakenteeltaan samanlaisen matriisin yhdistäminen lohkoina. Nimi
+kertoo yhdistetyn matriisin rakenteen (block circulant matrix),
+päällekkäin pinotut A ja B liitetään toiseen pinottuun matriisiin B ja A.
 
-Ryhmien välisen ja ryhmien sisäinen inertian erottaminen, **ABBA**
-on yksi ratkaisu (ABBA matrix, teknisesti block circular matrix).
-
-Edellisen menetelmän variantti, jossa ryhmien väliset ja sisäiset erot saadaan
-esiin. Inertian jakaminen.
-
-Samanlaisten rivien ja sarakkeiden kaksi samankokoista taulua, esimerkiksi
-sukupuolivaikutusten arviointi. Alkuperäinen taulukko jaetaan kahdeksi tauluksi
-sukupuolen mukaan. Matriisien yhdistäminen (concatenation) riveittäin tai
-sarakkeittain ei näytä optimaalisesti mm - matriisien eroja.
-
-
-Luokittelu voi olla myös kahden indikaattorimuuttujan avulla jako neljään
-taulukkoon (esim. miehet vs. naiset länsieuroopassa verratuna samaan asetelmaan
-itä-Euroopassa). Samaa ideaa laajennetaan.
-
-Esimerkkinä "Attitudes to women working in 2012".
-
-**ABBA**"We consider the joint analysis of two matched matrices which have common
-rows and columns, for example multivariate data observed at two time points or split
-according to a dichotomous variable. Methods of interest include principal components
-analysis for interval-scaled data, correspondence analysis for frequency data, log-ratio
-analysis of compositional data and linear biplots in general, all of which depend on the
-singular value decomposition. A simple result in matrix algebra shows that by setting up
-two matched matrices in a particular block format, matrix sum and difference components
-can be analysed using a single application of the singular value decomposition algorithm.
-The methodology is applied to data from the International Social Survey Program
-comparing male and female attitudes on working wives across eight countries. The resulting
-biplots optimally display the overall cross-cultural differences as well as the male–female
-differences. The case of more than two matched matrices is also discussed."
-
-
+Matriiseilla on samat rivit ja sarakkeet, esimerkiksi miesten ja naisten
+vastausprofiilit yhteen kysymykseen aittain luokiteltuina.Kokonaisinertia
+saadaan dekomponoitua ryhmien sisäiseen ja väliseen hajontaan kahdelle kartalle.
+Toinen kuvaa maiden välisiä eroja ja toinen maiden sisäisiä sukupuolten välisiä
+eroja (CAiP ss. 177-)
 
 
 
@@ -257,21 +205,17 @@ Faktorianalyysi tässä selkein vertailukohde
 perustapauksen selkeät tulkinnat eivät toimi. Tärkeä asia: CA:n skaalausominaisuudet ja
 visuaalinen tulkinta pätevät edelleen.
 
-**edit** Teorialiitteessä tästä enemmän, ranskalaiset hieman eri mieltä
+
 **Viitteitä**
 
 MG ja MG&Prado ovat tutkineet ISSP-datalla tätä ongelmaa.
-Biplots In practice - kirja [@RefWorks:doc:5a857a43e4b0ed2d44664d7c], ss.142-
-"dimensions of middleness". Mg ja Prado artikkelissaan 
+[@RefWorks:doc:5a857a43e4b0ed2d44664d7c , ss.142-], "dimensions of middleness".
+
 [@RefWorks:doc:5a857a44e4b0ed2d44664d87] ja samasta teemasta laajentaen
 kokoomateoksessa [@RefWorks:doc:5ab76b43e4b003f4468d1f07], ss. 197-217.
+
 Aineistona jälkimmäisessä tutkimuksessa on sama kysymyssarja kuin tässä 1994
-datasta. Kysymyksissä on jonkin verran eroja. Ensimmäisessä artikkelissa he kommentoivat vertaisarvioitsijoiden ehdotuksia. Kuvia voisi selkiyttää esittämällä vain osan
-pisteistä sarjassa karttoja, mutta ratkaisu perustuisi siinäkin koko dataan ja
-sitä nimenomaan ei haluta. Toinen ehdotus on yhdistää ne vastausvaihtoehdot jotka
-eivät ole tutkimuksen kohteena yhdeksi yhdistetyksi kategoriaksi. Tällöin osajoukon
-korrespondenssianalyysin kätevä inertia dekomponointi osajoukille ei toimisi. Ratkaisu 
-ei toimi ollenkaan yleisimmissä osajoukoissa.
+datasta. Kysymyksissä on jonkin verran eroja.
 
 **k** Data
 
