@@ -215,3 +215,7 @@ samanmoinen päivitys.
 tekstiä MCA-tulkinnoista.
 
 **25.11.2020** Pieniä korjauksia, luvun 7 viimeistelyä.
+
+**25.11.2020 versio 0.9** Johtanto ja yhteenvetoluku puuttuvat,
+ samoin tekninen liite. Teorialiitettä editoitava, valmiissa luvuissa myös
+ poistettavaa. Ei oikoluettu.

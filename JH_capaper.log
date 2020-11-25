@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.7)  25 NOV 2020 10:15
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.7)  25 NOV 2020 16:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1358,124 +1358,122 @@ File: JH_capaper_files/figure-latex/concat1map1-1.pdf Graphic file (type pdf)
 File: JH_capaper_files/figure-latex/concat1map2-1.pdf Graphic file (type pdf)
 <use JH_capaper_files/figure-latex/concat1map2-1.pdf>
 [64] [65]
-
-Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d7c' on pag
-e 66 undefined on input line 2300.
-
-
-Package natbib Warning: Citation `RefWorks:doc:5a857a44e4b0ed2d44664d87' on pag
-e 66 undefined on input line 2302.
-
-
-Package natbib Warning: Citation `RefWorks:doc:5ab76b43e4b003f4468d1f07' on pag
-e 66 undefined on input line 2303.
-
-[66]
 File: JH_capaper_files/figure-latex/MCA1map1-1.pdf Graphic file (type pdf)
 <use JH_capaper_files/figure-latex/MCA1map1-1.pdf>
 File: JH_capaper_files/figure-latex/MCA1map2-1.pdf Graphic file (type pdf)
 <use JH_capaper_files/figure-latex/MCA1map2-1.pdf>
-
-Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d7c' on pag
-e 67 undefined on input line 2407.
-
-[67] [68] [69]
 File: JH_capaper_files/figure-latex/subsetMCA1map3-1.pdf Graphic file (type pdf
 )
 <use JH_capaper_files/figure-latex/subsetMCA1map3-1.pdf>
-[70] [71] [72] [73] [74
+[66] [67] [68] [69]
 
-]
+Package natbib Warning: Citation `RefWorks:doc:5a857a44e4b0ed2d44664d87' on pag
+e 70 undefined on input line 2373.
+
+
+Package natbib Warning: Citation `RefWorks:doc:5ab76b43e4b003f4468d1f07' on pag
+e 70 undefined on input line 2374.
+
+
+Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d7c' on pag
+e 70 undefined on input line 2378.
+
+
+LaTeX Warning: Reference `(' on page 70 undefined on input line 2379.
+
+[70]
 Luku 8.
 
 Package natbib Warning: Citation `RefWorks:doc:5b15542ee4b0e2616bc42dca' on pag
-e 75 undefined on input line 2594.
+e 71 undefined on input line 2405.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5c223412e4b0508a6674dec0' on pag
-e 75 undefined on input line 2598.
+e 71 undefined on input line 2409.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5c223412e4b0508a6674dec0' on pag
-e 75 undefined on input line 2599.
+e 71 undefined on input line 2410.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5faaf996e4b05416e98ff547' on pag
-e 75 undefined on input line 2604.
+e 71 undefined on input line 2415.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5f01c74be4b0d3d8328c72ca' on pag
-e 75 undefined on input line 2638.
+e 71 undefined on input line 2449.
 
-[75] [76
+[71
 
-] [77] [78
+] [72
+
+] [73] [74
 
 ]
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d78' on pag
-e 79 undefined on input line 2658.
+e 75 undefined on input line 2469.
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 2661.
+(Font)              scaled to size 10.0pt on input line 2472.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/b/n' will be
-(Font)              scaled to size 7.0pt on input line 2661.
+(Font)              scaled to size 7.0pt on input line 2472.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/b/n' will be
-(Font)              scaled to size 5.0pt on input line 2661.
+(Font)              scaled to size 5.0pt on input line 2472.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/b/n' will be
-(Font)              scaled to size 10.00092pt on input line 2661.
+(Font)              scaled to size 10.00092pt on input line 2472.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/b/n' will be
-(Font)              scaled to size 7.00064pt on input line 2661.
+(Font)              scaled to size 7.00064pt on input line 2472.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/b/n' will be
-(Font)              scaled to size 5.00046pt on input line 2661.
+(Font)              scaled to size 5.00046pt on input line 2472.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/b/n' will be
-(Font)              scaled to size 9.99893pt on input line 2661.
+(Font)              scaled to size 9.99893pt on input line 2472.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/b/n' will be
-(Font)              scaled to size 6.99925pt on input line 2661.
+(Font)              scaled to size 6.99925pt on input line 2472.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/b/n' will be
-(Font)              scaled to size 4.99947pt on input line 2661.
+(Font)              scaled to size 4.99947pt on input line 2472.
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d75' on pag
-e 79 undefined on input line 2665.
+e 75 undefined on input line 2476.
 
-[79] [80]
+[75] [76]
 
 Package natbib Warning: Citation `RefWorks:doc:5b6ef091e4b0984fd9b8c0ca' on pag
-e 81 undefined on input line 2852.
+e 77 undefined on input line 2663.
 
 File: img/CAquality.png Graphic file (type bmp)
 <img/CAquality.png>
-[81] [82]
+[77] [78]
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a44e4b0ed2d44664d84' on pag
-e 83 undefined on input line 2973.
+e 79 undefined on input line 2784.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5ab76b43e4b003f4468d1f07' on pag
-e 83 undefined on input line 2982.
+e 79 undefined on input line 2793.
 
 
 Package natbib Warning: Citation `RefWorks:doc:5a857a43e4b0ed2d44664d7c' on pag
-e 83 undefined on input line 2989.
+e 79 undefined on input line 2800.
 
-[83] [84
+[79] [80
 
 ]
 File: img/BookdownProc.pdf Graphic file (type pdf)
 <use img/BookdownProc.pdf>
-[85] [86]
+[81] [82]
 ! Dimension too large.
 \fb@put@frame ...p \ifdim \dimen@ >\ht \@tempboxa 
                                                   \fb@putboxa #1\fb@afterfra...
-l.5157 \end{Shaded}
+l.4976 \end{Shaded}
                     
 Here is how much of TeX's memory you used:
  19580 strings out of 479382
  352921 string characters out of 5877656
- 1249493 words of memory out of 5000000
+ 1250853 words of memory out of 5000000
  38638 multiletter control sequences out of 15000+600000
  543032 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  94i,10n,118p,489b,474s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on JH_capaper.pdf (86 pages).
+Output written on JH_capaper.pdf (82 pages).

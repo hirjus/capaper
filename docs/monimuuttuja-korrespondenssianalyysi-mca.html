@@ -245,14 +245,7 @@ ikäluokan ja sukupuolen kanssa liitetään maarivien taulukkoon.</p>
 <p>Pisteiden määrä kartoilla kasvaa, ja muuttujanimiä joudutaan tiivistämään.
 Toinen tekninen detalji on kartan kääntäminen. Kuvat kääntyvät herkästi akselien
 ympäri, vertailun helpottamiseksi koordinaattien etumerkkejä joutuu joskus
-muuttamaan (kts. koodiliite).</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb7-1"></a><span class="co"># pisteiden kasautumien haittaa haittaa tulkintaa</span></span>
-<span id="cb7-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb7-2"></a></span>
-<span id="cb7-3"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb7-3"></a><span class="kw">par</span>(<span class="dt">cex =</span> <span class="fl">0.6</span>) </span>
-<span id="cb7-4"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb7-4"></a><span class="kw">plot</span>(Concat1jh.CA1,</span>
-<span id="cb7-5"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb7-5"></a>     <span class="dt">main =</span> <span class="st">&quot;Pinottu taulukko - symmetrinen kartta&quot;</span>,</span>
-<span id="cb7-6"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb7-6"></a>     <span class="dt">sub =</span> <span class="st">&quot;ikäluokat a1-a6, m = miehet, f = naiset&quot;</span></span>
-<span id="cb7-7"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb7-7"></a>     )</span></code></pre></div>
+muuttamaan (kts. Liite 3: R-koodi).</p>
 <div class="figure" style="text-align: center"><span id="fig:concat1map1"></span>
 <img src="JH_capaper_files/figure-html/concat1map1-1.png" alt="Q1b: Lapsi kärsii jos äiti käy työssä" width="90%" />
 <p class="caption">
@@ -280,7 +273,7 @@ yhteisvaikutusmuuttuja. Pinottu taulu on vaihtoehtoinen tapa, ja kartasta
 kuin naiset, iäkkäämmät ovat konservatiivisempia kuin nuoret. Nuorin ikäluokka
 poikkeaa muista.</p>
 <p><strong>tämä poistetaan lopullisesta versiosta</strong></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb8-1"></a><span class="kw">summary</span>(Concat1jh.CA1)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb7-1"></a><span class="kw">summary</span>(Concat1jh.CA1)</span></code></pre></div>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -317,8 +310,8 @@ poikkeaa muista.</p>
 ## 3 |      |  168  640   80 |  150 639  66 |   -6   1   1 |
 ## 4 |    e |  261  970   97 |  -35  44   6 | -160 926 657 |
 ## 5 |    E |  234 1000  504 | -390 962 628 |   77  38 138 |</code></pre>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-1"></a><span class="co"># 14 riviä, inertiakontribuution keskiarvo</span></span>
-<span id="cb10-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb10-2"></a><span class="co"># 1000/14 = 71 </span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb9-1"></a><span class="co"># 14 riviä, inertiakontribuution keskiarvo</span></span>
+<span id="cb9-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb9-2"></a><span class="co"># 1000/14 = 71 </span></span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:concat1map2"></span>
 <img src="JH_capaper_files/figure-html/concat1map2-1.png" alt="Q1b: Lapsi kärsii jos äiti käy työssä" width="90%" />
 <p class="caption">
@@ -353,76 +346,45 @@ eroja (CAiP ss. 177-)</p>
 </div>
 <div id="mca---monimuuttujakorrespondenssianalyysi" class="section level2">
 <h2><span class="header-section-number">7.2</span> MCA - monimuuttujakorrespondenssianalyysi</h2>
-<p><strong>k</strong> Terminologiasta: monta muuttujaa on jo ollut käytössä. MCA on monimuuttujamenetelmä
-samassa mielessä kuin faktorianalyysi. Analysoidaan usean statukseltaan samanlaisen
-muuttujan välisiä suhteita, ja myös niiden yhteyksiä tutkimusongelman kannalta
-“eksogeenisiin” taustamuuttujiin tai “selittäjiin”. Surveytutkimuksen kyselylomakkeen
-kysymyspatterit luotaavat tietoa joistain taustalla olevista asenteista.</p>
-<p><strong>edit</strong> yksi kappale, jossa tutkimusasetelmaa verrataan tilastollisten mallien
-asetelmaan? Jako “selittäjiin” ja selitettävään, moniyhtälömallit?
-Faktorianalyysi tässä selkein vertailukohde</p>
-<p><strong>k</strong> Matemaattisesti kaikki muuttuu paljon mutkikkaammaksi, ja yksinkertaisen
-perustapauksen selkeät tulkinnat eivät toimi. Tärkeä asia: CA:n skaalausominaisuudet ja
-visuaalinen tulkinta pätevät edelleen.</p>
-<p><strong>Viitteitä</strong></p>
-<p>MG ja MG&amp;Prado ovat tutkineet ISSP-datalla tätä ongelmaa.
-<span class="citation">(Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a> , ss.142-)</span>, “dimensions of middleness”.</p>
-<p><span class="citation">(M. Greenacre ja Pardo <a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d87" role="doc-biblioref">2006</a>)</span> ja samasta teemasta laajentaen
-kokoomateoksessa <span class="citation">(M. Greenacre ja Blasius <a href="lähteet.html#ref-RefWorks:doc:5ab76b43e4b003f4468d1f07" role="doc-biblioref">2006</a>)</span>, ss. 197-217.</p>
-<p>Aineistona jälkimmäisessä tutkimuksessa on sama kysymyssarja kuin tässä 1994
-datasta. Kysymyksissä on jonkin verran eroja.</p>
-<p><strong>k</strong> Data</p>
-<p><strong>k</strong> Taustamuuttujien taulukoissa on yllättävän isoja eroja, jotkut taulukoiden luokat
-ovat nollia tai hyvin vähän havaintoja. Luokkia pitäisi yhdistellä,jo pelkästään
-“kuvaroskan” takia. Ei tehdä.</p>
-<p><strong>k</strong> Puuttuvat havainnot, muutama numero vain mitä “listwise delete” saa aikaan.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-1"></a><span class="co">#Puuttuvien tietojen yleiskuva</span></span>
-<span id="cb11-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-2"></a></span>
-<span id="cb11-3"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-3"></a><span class="co"># Puuttuvat tiedot aineistossa - viite datan dokumentointiin jossa taulukot.</span></span>
-<span id="cb11-4"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-4"></a><span class="co"># Vaihtelee maittain ja muuttujittain, paljon.</span></span>
-<span id="cb11-5"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-5"></a></span>
-<span id="cb11-6"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-6"></a><span class="co"># Koko data (G1_1_data2.Rmd - skriptissä valitut muuttujat ja 25 maata)</span></span>
-<span id="cb11-7"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-7"></a><span class="co">#</span></span>
-<span id="cb11-8"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-8"></a><span class="co">#sum(!complete.cases(ISSP2012jh1d.dat)) = 9455</span></span>
-<span id="cb11-9"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-9"></a><span class="co">#dim(ISSP2012jh1d.dat) = 32823</span></span>
-<span id="cb11-10"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-10"></a><span class="co">#9455/32823 = 0.2880602</span></span>
-<span id="cb11-11"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-11"></a></span>
-<span id="cb11-12"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-12"></a><span class="co"># Puuttuvat tiedot valitussa MCA-aineistossa</span></span>
-<span id="cb11-13"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-13"></a></span>
-<span id="cb11-14"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-14"></a><span class="co">#missingMCAvars1 &lt;-  c(&quot;Q1a&quot;,&quot;Q1b&quot;, &quot;Q1c&quot;, &quot;Q1d&quot;,&quot;Q1e&quot;,&quot;Q2a&quot;,&quot;Q2b&quot;,&quot;edu&quot;,</span></span>
-<span id="cb11-15"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-15"></a><span class="co">#                 &quot;sosta&quot;, &quot;urbru&quot;, &quot;maa&quot;, &quot;ika&quot;, &quot;sp&quot; )</span></span>
-<span id="cb11-16"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-16"></a><span class="co">#missingTestMCA1.dat &lt;- ISSP2012jh1d.dat %&gt;% select(all_of(missingMCAvars1))</span></span>
-<span id="cb11-17"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-17"></a></span>
-<span id="cb11-18"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-18"></a><span class="co">#sum(!complete.cases(missingTestMCA1.dat)) = 6101</span></span>
-<span id="cb11-19"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-19"></a><span class="co">#dim(missingTestMCA1.dat) = 32823</span></span>
-<span id="cb11-20"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb11-20"></a><span class="co">#6101/32823 = 0.1858758 Puuttellisten havaintojen osuus.</span></span></code></pre></div>
-<p>Koko tähän tutkimukseen valitussa aineistossa (25 maata ja muuttujat, poistettu
-havainnot joissa ikä tai sukupuoli puuttuu) 71% havainnoista on kaikki tiedot.</p>
-<p>MCA-analyyseihin valitun 7 + 3 = 10 muuttujan aineiston havainnoista 81% on
-vailla puuttuvia tietoja. Jos puuttuvat tiedot poistetaan (ns. “listwise delete”,
-poistetaan jos yksi tai useampi tieto puuttuu) viidesosa datasta jää pois.</p>
-<p><strong>k</strong> Miten liittyy tähän? CA on koko aineiston kuvailevaa analyysiä, ei päättelyä
-otoksesta perusjoukon tasolle. Miten puuttuvia vastauksia voisi kuvailla? Toisaalta
-edellisen jakson menetelmien soveltaminen on mahdotonta, jos jotain ei tehdä
-(reunajakaumat oltava samoja).</p>
-<p>MCA1 - seitsemän kysymystä (jokaisessa viisi vaihtoehtoa)</p>
-<p>Aineistossa on 32 823 havaintoa ja seitsemän muuttujaa.</p>
+<p>MCA on yhdistettyjen (”pinottujen”) taulukoiden erikoistapaus, samantyyppiset
+muuttujat taulukoidaan keskenään. Tulos riippuu siis vain muuttujien
+parittaisista yhteyksistä.</p>
+<p>Tätä ”supertaulukkoa” kutsutaan <em>Burtin matriisiksi</em>.
+<em>Indikaattorimatriisi</em> on toinen tapa esittää data. Indikaattorimatriisin
+sarakkeet ovat luokittelumuuttujan arvoja (kategorioita) ja rivit yksittäisiä
+vastausprofiileja. Profiilissa on rivi nollia ja ykkösiä, 1 valitun vaihtoehdon
+sarakkeessa.</p>
+<p>En tässä jaksossa esitä numeerisia tuloksia, niiden tutkimisella voi jatkaa
+analyysiä.</p>
+<p>Tavoite on tutkia seitsemän kysymyksen vastausvaihtoehtojen yhteyksiä,
+miten ne asettuvat kaksiulotteiselle kartalle. Aikaisemmissa jaksoissa etsittiin
+yhteyksistä uusia piirteitä ja tarkennettiin analyysiä. Nyt hahmotetaan ison
+aineiston muuttujien välisiä yhteyksiä ja erityisesti puuttuvien tietojen ongelmaa.</p>
+<p>Koko datassa (kts. luku 2) on 32823 havaintoa 25 maasta. Niistä täydellisiä on
+71 prosenttia. Jos valitaan kuusi taustamuuttujaa (edu, sosta, urbru,
+maa, ika, sp) ja seitsemän kysymystä, täydellinen havaintoja on 81 prosenttia.</p>
+<p>Pelkissä kysymyksissä (Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b) puuttuvia tietoja on
+14 prosentissa havaintoja (4554). Kaikkien puutteellisten havaintojen poistamien
+(”listwise delete”) on sitä huonompi vaihtoehto mitä enemmän muuttujia on.</p>
+<p>Kaikissa kysymyksissä on viisi vastausvaihtoehtoa ja kuudes kategoria puuttuvalle
+tiedolle. Analyysi kannattaa aloittaa tästä pulmasta, yksi hyvä ratkaisu on
+osajoukon MCA (subset MCA).</p>
 <div class="figure" style="text-align: center"><span id="fig:MCA1map1"></span>
 <img src="JH_capaper_files/figure-html/MCA1map1-1.png" alt="MCA: Seitsemän kysymystä - 25 maata, kartta 1" width="90%" />
 <p class="caption">
 Kuva 7.4: MCA: Seitsemän kysymystä - 25 maata, kartta 1
 </p>
 </div>
-<p><strong>k Perustulkinta:</strong> Inertian selitysosuudet ovat paljon pienempiä, ja ratkaisu
+<p>Inertian selitysosuudet ovat paljon pienempiä, ja ratkaisu
 on selvästi kaksiulotteinen. Puuttuvat vastaukset erottuvat omana ryhmänä, ja
 varsinaiset vastaukset ovat pakkautuneet y-akselin oikealle puolelle. Niiden erot
 näkyvät vain toisessa dimensiossa. Ensimmäinen dimensio kuvaa vastaamattomuutta
 (syystä tai toisesta) vs. kaikkia vastauksia. Kokonaisinertiaa on korjattu
-pienemmäksi (ns. adjustedineritia, kts. liite 1),
+pienemmäksi (adjusted inetia, kts. liite 1),
 selitetyn inertian osuus on realistinen arvio.</p>
 <p>Pystyakselin suuntaan kontrasti näyttäisi olevan konservatiiviset ylhäällä,
 modernit ja liberaalimmat alhaalla. Pisteitä on vaikea erottaa toisistaan.</p>
-<p>Karttaa voi parantaa lisäämällä siihen vastaajien (n= 32 823) pisteet (viite MG - ekologiakirja, jossa vanhempi ISSP-data).</p>
+<p>Karttaa voi parantaa lisäämällä siihen vastaajien pisteet.</p>
 <div class="figure" style="text-align: center"><span id="fig:MCA1map2"></span>
 <img src="JH_capaper_files/figure-html/MCA1map2-1.png" alt="MCA: Seitsemän kysymystä - 25 maata, kartta 2" width="90%" />
 <p class="caption">
@@ -432,156 +394,48 @@ Kuva 7.5: MCA: Seitsemän kysymystä - 25 maata, kartta 2
 <p>Jokainen havainto on sarakevektoreiden keskiarvopiste. Sarakevektoreita ei voi
 tulkita yhtä selkeästi kuin yksinkertaisessa korrespondenssianalyysissä. Ne eivät
 edusta kysymystä vaan kysymyksen yhtä vastauskategoriaa.</p>
-<p>Rivipiste on vastauksiaan vastaavien sarakepisteiden keskiarvopiste. Jos vastaaja on valinnut
-vaihtoehdot (a1S, a2s,…, b2?) se on näiden pisteiden keskiarvopiste.</p>
-<p>Oleellista MCA-kartan tulkinnassa on kuitenkin yleiskuvan muodostaminen, geometrinen
-tulkinta on hieman hankala. Skaalausominaisuudet MCA kuitenkin säilyttää (kts. liite 1).</p>
-<p>Myös riviprofiilit ovat samanlaisia, jokaisella rivilla on kuudessa kategoriassa (vastaukset
-ja puuttuva tieto) nollia ja yksi ykkönen. Rivien välistä etäisyyttä määrittelevä ainoastaa
-“erimielisyydet”, ja GDA-kirjan (<strong>viite</strong>) ohjeen mukaan MCA-karttojen tulkinta pitäisi aloittaa
-yksilöiden pilven ääripäistä.</p>
-<p>Pistepilven muoto kertoo , kuinka pienenevä joukko vastaajia lähestyy kiilana
-puuttivien tietojen pisteitä. Kaikkiin kysymyksiin vastanneet ovat massana kuvan oikeassa laidassa. Pistepilvet
-oikealta vasemmalle kuvaavat kuinka moneen kysymykseen on jätetty vastaamatta.</p>
-<p>(MG-vastaava kuva <span class="citation">(Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span>, luku 14. “dimenisions of middleness”.)
-Pieni joukko määrää koko kartan koordinaatiston.</p>
+<p>Pistepilven muoto näyttää, miten pienenevä joukko vastaajia lähestyy kiilana
+puuttivien tietojen pisteitä. Kaikkiin kysymyksiin vastanneet ovat massana kuvan
+oikeassa laidassa. Pistepilvet oikealta vasemmalle kuvaavat kuinka moneen
+kysymykseen on jätetty vastaamatta.</p>
 <p><strong>Osajoukon MCA</strong></p>
-<p><strong>k</strong> Osajoukon MCA ratkaisee ongelman tyylikkäästi.</p>
-<p><strong>k</strong> Tulkinta: kontrasti “ääripäiden” välillä, vahvat mielipiteet (S ja E) hallitsevat vasenta alakulmaa ja oikeaa laitaa x-akselin tuntumassa. Maltilliset
-vastaukset ja neutraali vaihtoehto ovat ylhäällä vasemmalla.</p>
-<p><strong>k</strong> Johtopäätös: seitsemän kysymystä erottelee hyvin vastaajat
-liberaali - konservatiivi - aksellilla. Maltilliset ja neutraalit vastaukset sijaitsevat ääripäiden välissä. Karttaan voi hahmotella diagonaalin suuntaisen
-akselin vahvojen mielipiteiden ryppäiden välille. Muut vastaukset ovat
-ns. kaariefektin mukaisesti näiden välisellä U-muotoisella linjalla. Tämä kuuluisa Guttan efekti kertoo järjestysasteikon muuttujien korrelaatiosta, hyvä asia kun
-kysymyksillä luodataan asenteita naisten työssäkäyntiin. Kaariefekti on myös “geometrinen välttämättömyys”, tarkemmin teorialiitteessä.</p>
-<p><strong>edit: karttojen otsikot tarkistettava</strong></p>
+<p>Osajoukon MCA sopii hyvin sekä puuttuvien tietojen että täydellisten vastausten
+analyysiin. Asymmetrisessä kartassa sarakkeet skaalautuvat pois orgiosta ja
+näkyvät paremmin. Kuvaan on piirretty havaintopisteet, joista voi hahmottaa
+havaintojen sijoittumista kartalla.</p>
 <div class="figure" style="text-align: center"><span id="fig:subsetMCA1map3"></span>
 <img src="JH_capaper_files/figure-html/subsetMCA1map3-1.png" alt="MCA: Seitsemän kysymystä - 25 maata, kartta 3" width="90%" />
 <p class="caption">
 Kuva 7.6: MCA: Seitsemän kysymystä - 25 maata, kartta 3
 </p>
 </div>
-<p><strong>k1</strong> inertian “adjusted”, kts. liite1.</p>
-<p>Vilkaistaan 3d-ratkaisua - onko kolmella keskimmäisellä vaihtoehdolla “dimenison
-of middleness”?</p>
-<p>Dimension of middelness, on viitteitä mutta ei ihan selvä.</p>
-<p>Neutraalin vaihtoehdon (?) sarakkeet ovat huonosti esitettyjä, mutta vain kolme selvästi
-(e1? 475 c1? 571 ja b1? 573).</p>
-<p><strong>TÄHÄN VOISI LOPETTAA - EI KAHTA PITKÄÄ TULOSTETTA KUN NIITÄ EI TARKEMMIN ANALYSOIDA</strong></p>
-<p><strong>edit2 - harkitaan näitä</strong>
-<strong>MCA - numeeriset tulokset</strong></p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb12-1"></a><span class="kw">summary</span>(Qmuuttujat2.mca)</span></code></pre></div>
-<pre><code>## 
-## Principal inertias (eigenvalues):
-## 
-##  dim    value      %   cum%   scree plot               
-##  1      0.129087  55.0  55.0  ***************          
-##  2      0.064296  27.4  82.4  *******                  
-##  3      0.014807   6.3  88.7  **                       
-##  4      0.008871   3.8  92.5  *                        
-##  5      0.000538   0.2  92.7                           
-##  6      0.000221   0.1  92.8                           
-##  7      0.000156   0.1  92.9                           
-##  8      6.9e-050   0.0  92.9                           
-##  9      1e-06000   0.0  92.9                           
-##         -------- -----                                 
-##  Total: 0.234728                                       
-## 
-## 
-## Columns:
-##      name   mass  qlt  inr    k=1 cor ctr    k=2 cor ctr  
-## 1  |  a1S |   48  975   29 |  441 916  73 | -112  59   9 |
-## 2  |  a1s |   54  869   20 | -117 206   6 |  210 663  37 |
-## 3  |  a1? |   15  653   27 | -354 626  14 |   73  26   1 |
-## 4  |  a1e |   18  788   29 | -451 709  28 | -150  79   6 |
-## 5  |  a1E |    5  884   30 | -339 113   4 | -887 771  56 |
-## 6  |  b1S |   12  818   37 | -367 133  12 | -831 685 128 |
-## 7  |  b1s |   37  696   28 | -387 689  42 |  -39   7   1 |
-## 8  |  b1? |   26  527   25 | -194 269   8 |  189 258  14 |
-## 9  |  b1e |   39  555   25 |   98  67   3 |  266 488  43 |
-## 10 |  b1E |   24  889   43 |  821 858 126 | -156  31   9 |
-## 11 |  c1S |   12  826   38 | -379 141  14 | -836 685 134 |
-## 12 |  c1s |   36  698   29 | -393 692  43 |  -35   6   1 |
-## 13 |  c1? |   26  517   25 | -198 282   8 |  181 235  13 |
-## 14 |  c1e |   38  550   26 |   79  41   2 |  281 509  46 |
-## 15 |  c1E |   26  890   43 |  815 865 134 | -137  24   8 |
-## 16 |  d1S |   12  851   34 | -247  80   6 | -768 771 112 |
-## 17 |  d1s |   33  751   26 | -347 744  31 |  -35   8   1 |
-## 18 |  d1? |   32  561   23 | -157 336   6 |  129 226   8 |
-## 19 |  d1e |   34  620   24 |   72  47   1 |  249 572  33 |
-## 20 |  d1E |   22  944   38 |  791 932 106 |  -91  12   3 |
-## 21 |  e1S |   15  910   31 | -142  44   2 | -631 866  90 |
-## 22 |  e1s |   36  752   23 | -263 738  19 |   35  13   1 |
-## 23 |  e1? |   34  350   22 |  -56  70   1 |  112 279   7 |
-## 24 |  e1e |   32  597   23 |   56  48   1 |  189 549  18 |
-## 25 |  e1E |   15 1012   32 |  726 985  62 | -119  26   3 |
-## 26 |  a2S |   49 1005   24 |  335 870  43 | -132 134  13 |
-## 27 |  a2s |   59  989   19 | -154 428  11 |  176 561  28 |
-## 28 |  a2? |   22  584   24 | -203 582   7 |  -12   2   0 |
-## 29 |  a2e |    8  794   26 | -338 565   7 | -215 228   6 |
-## 30 |  a2E |    2  870   27 |   33   1   0 | -851 869  20 |
-## 31 |  b2S |   12  922   33 | -345 173  11 | -718 750  94 |
-## 32 |  b2s |   22  783   28 | -431 736  32 | -108  46   4 |
-## 33 |  b2? |   27  640   25 | -281 582  16 |   89  58   3 |
-## 34 |  b2e |   40  711   24 |  -76  53   2 |  269 658  45 |
-## 35 |  b2E |   39  939   37 |  630 932 119 |  -55   7   2 |</code></pre>
-<p><strong>edit</strong> tämä poistetaan lopullisesta versiosta.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb14-1"></a>Qmuuttujat2d3  &lt;-<span class="st"> </span><span class="kw">mjca</span>(mcaDat11jh.dat, <span class="dt">ps=</span><span class="st">&quot;&quot;</span>, <span class="dt">nd =</span> <span class="dv">3</span>,<span class="dt">subsetcat=</span>eiPvastaukset)</span>
-<span id="cb14-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb14-2"></a><span class="kw">summary</span>(Qmuuttujat2d3)</span></code></pre></div>
-<pre><code>## 
-## Principal inertias (eigenvalues):
-## 
-##  dim    value      %   cum%   scree plot               
-##  1      0.129087  55.0  55.0  ***************          
-##  2      0.064296  27.4  82.4  *******                  
-##  3      0.014807   6.3  88.7  **                       
-##  4      0.008871   3.8  92.5  *                        
-##  5      0.000538   0.2  92.7                           
-##  6      0.000221   0.1  92.8                           
-##  7      0.000156   0.1  92.9                           
-##  8      6.9e-050   0.0  92.9                           
-##  9      1e-06000   0.0  92.9                           
-##         -------- -----                                 
-##  Total: 0.234728                                       
-## 
-## 
-## Columns:
-##      name   mass  qlt  inr    k=1 cor ctr    k=2 cor ctr    k=3 cor ctr  
-## 1  |  a1S |   48  976   29 |  441 916  73 | -112  59   9 |  -18   1   1 |
-## 2  |  a1s |   54  966   20 | -117 206   6 |  210 663  37 |   81  98  24 |
-## 3  |  a1? |   15  786   27 | -354 626  14 |   73  26   1 | -163 133  26 |
-## 4  |  a1e |   18  837   29 | -451 709  28 | -150  79   6 | -119  49  17 |
-## 5  |  a1E |    5  935   30 | -339 113   4 | -887 771  56 |  229  51  16 |
-## 6  |  b1S |   12  869   37 | -367 133  12 | -831 685 128 |  226  51  41 |
-## 7  |  b1s |   37  798   28 | -387 689  42 |  -39   7   1 | -149 102  55 |
-## 8  |  b1? |   26  573   25 | -194 269   8 |  189 258  14 |  -80  46  11 |
-## 9  |  b1e |   39  836   25 |   98  67   3 |  266 488  43 |  201 281 107 |
-## 10 |  b1E |   24  910   43 |  821 858 126 | -156  31   9 | -129  21  27 |
-## 11 |  c1S |   12  876   38 | -379 141  14 | -836 685 134 |  226  50  43 |
-## 12 |  c1s |   36  805   29 | -393 692  43 |  -35   6   1 | -155 107  58 |
-## 13 |  c1? |   26  571   25 | -198 282   8 |  181 235  13 |  -87  54  13 |
-## 14 |  c1e |   38  843   26 |   79  41   2 |  281 509  46 |  213 293 116 |
-## 15 |  c1E |   26  908   43 |  815 865 134 | -137  24   8 | -119  18  25 |
-## 16 |  d1S |   12  902   34 | -247  80   6 | -768 771 112 |  197  51  32 |
-## 17 |  d1s |   33  828   26 | -347 744  31 |  -35   8   1 | -112  77  28 |
-## 18 |  d1? |   32  647   23 | -157 336   6 |  129 226   8 |  -80  86  14 |
-## 19 |  d1e |   34  896   24 |   72  47   1 |  249 572  33 |  173 276  69 |
-## 20 |  d1E |   22  956   38 |  791 932 106 |  -91  12   3 |  -90  12  12 |
-## 21 |  e1S |   15  949   31 | -142  44   2 | -631 866  90 |  135  40  18 |
-## 22 |  e1s |   36  793   23 | -263 738  19 |   35  13   1 |  -62  42  10 |
-## 23 |  e1? |   34  475   22 |  -56  70   1 |  112 279   7 |  -75 126  13 |
-## 24 |  e1e |   32  847   23 |   56  48   1 |  189 549  18 |  128 250  35 |
-## 25 |  e1E |   15 1023   32 |  726 985  62 | -119  26   3 |  -78  11   6 |
-## 26 |  a2S |   49 1005   24 |  335 870  43 | -132 134  13 |   -2   0   0 |
-## 27 |  a2s |   59 1011   19 | -154 428  11 |  176 561  28 |   35  22   5 |
-## 28 |  a2? |   22  770   24 | -203 582   7 |  -12   2   0 | -115 186  19 |
-## 29 |  a2e |    8  796   26 | -338 565   7 | -215 228   6 |   23   3   0 |
-## 30 |  a2E |    2  920   27 |   33   1   0 | -851 869  20 |  202  49   5 |
-## 31 |  b2S |   12  961   33 | -345 173  11 | -718 750  94 |  162  38  21 |
-## 32 |  b2s |   22  873   28 | -431 736  32 | -108  46   4 | -151  91  35 |
-## 33 |  b2? |   27  741   25 | -281 582  16 |   89  58   3 | -117 101  25 |
-## 34 |  b2e |   40  939   24 |  -76  53   2 |  269 658  45 |  159 228  68 |
-## 35 |  b2E |   39  944   37 |  630 932 119 |  -55   7   2 |  -45   5   5 |</code></pre>
+<p>Kontrasti on “ääripäiden” välillä, vahvat mielipiteet (S ja E) hallitsevat vasenta
+alakulmaa ja oikeaa laitaa x-akselin tuntumassa. Maltilliset vastaukset ja
+neutraali vaihtoehto ovat ylhäällä vasemmalla. Liberaalit vastaukset ovat oikealla
+ylhäällä ja jokaiselle löytää vastinparin vasemmalta alhaalta, konservatiivien
+kulmasta.Konservatiivisten vastausten joukosta lähimpänä liberaalia ryvästä on
+“e1S” (“Kotirouvana oleminen on aivan yhtä antoisaa kuin ansiotyön tekeminen”
+- täysin samaa mieltä). Vastaavasti “a2S” (“Sekä miehen että naisen tulee
+osallistua perheen toimeentulon hankkimiseen” - täysin samaa mieltä) on lähimpänä
+konsertvatiivista kulmaa. Molemmat “ääripäiden maltilliset” pisteet ovat myös
+omassa ryhmässään lähimpänä maltillisten ja neutraalien vastausten ryhmää.</p>
+<p>Karttaan voi hahmotella diagonaalin suuntaisen
+akselin vahvojen mielipiteiden ryppäiden välille. Muut vastaukset ovat
+mukaisesti näiden välisellä U-muotoisella linjalla (Guttman-efekti).</p>
+<p>Osajoukon korrespondessianalyysin esitelleissä artikkeleissa
+(<span class="citation">(M. Greenacre ja Pardo <a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d87" role="doc-biblioref">2006</a>)</span> ja samasta teemasta laajentaen
+kokoomateoksessa <span class="citation">(M. Greenacre ja Blasius <a href="lähteet.html#ref-RefWorks:doc:5ab76b43e4b003f4468d1f07" role="doc-biblioref">2006</a>)</span>, ss. 197-217.)
+Aineistona jälkimmäisessä tutkimuksessa on sama kysymyssarja kuin tässä 1994
+datasta. Kysymyksissä on jonkin verran eroja.</p>
+<p><span class="citation">Greenacre (<a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span> (s. 139-) analysoi lähes samoja kysymyksiä
+ISSP-datalla 2012. Tulokset ovat hyvin samantapaisia. Karttaa (fig:subsetMCA1map3)
+vastaavan kuvan jatkoanalyysi on vasemman yläkulman pisteiden tarkempi analyysi.
+Greenacre havaitsee, että nämä neutraalit ja maltilliset vastaukset eivät ole
+hyvin esitettyjä kaksiulotteisella kartalla, vaan ne karkaavat korkeampiin
+ulottuvuuksiin, “dimenisions of middleness”.</p>
+<p>Tässä aineistossa kolmiulotteinen MCA antaa samantapaisia viitteitä, mutta vain osa
+keskikategeorioista on huonosti esitetty myös siinä. Huono kvaliteeetti on vain
+osalla sarakkeita (e1? 475, c1? 71 ja b1? 573).</p>
 
 </div>
 </div>

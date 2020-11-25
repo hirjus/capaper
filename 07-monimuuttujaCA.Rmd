@@ -61,7 +61,7 @@ ikäluokan ja sukupuolen kanssa liitetään maarivien taulukkoon.
 Pisteiden määrä kartoilla kasvaa, ja muuttujanimiä joudutaan tiivistämään.
 Toinen tekninen detalji on kartan kääntäminen. Kuvat kääntyvät herkästi akselien
 ympäri, vertailun helpottamiseksi koordinaattien etumerkkejä joutuu joskus
-muuttamaan (kts. koodiliite).
+muuttamaan (kts. Liite 3: R-koodi).
 
 
 ```{r concatDat1, echo=F}
@@ -111,7 +111,7 @@ Concat1jh.CA1$rownames <- c("BE", "BG", "DE", "DK", "FI", "HU", "m", "f",
 
 
 
-```{r concat1map1,fig.cap= "Q1b: Lapsi kärsii jos äiti käy työssä", fig.asp = 1, out.width = "90%",fig.align = "center"}
+```{r concat1map1, echo = FALSE, fig.cap= "Q1b: Lapsi kärsii jos äiti käy työssä", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
 # pisteiden kasautumien haittaa haittaa tulkintaa
 
@@ -215,36 +215,41 @@ eroja (CAiP ss. 177-)
 
 ## MCA - monimuuttujakorrespondenssianalyysi
 
-**k** Terminologiasta: monta muuttujaa on jo ollut käytössä. MCA on monimuuttujamenetelmä
-samassa mielessä kuin faktorianalyysi. Analysoidaan usean statukseltaan samanlaisen
-muuttujan välisiä suhteita, ja myös niiden yhteyksiä tutkimusongelman kannalta
-"eksogeenisiin" taustamuuttujiin tai "selittäjiin". Surveytutkimuksen kyselylomakkeen
-kysymyspatterit luotaavat tietoa joistain taustalla olevista asenteista.
-
-**edit** yksi kappale, jossa tutkimusasetelmaa verrataan tilastollisten mallien
-asetelmaan? Jako "selittäjiin" ja selitettävään, moniyhtälömallit?
-Faktorianalyysi tässä selkein vertailukohde
-
-**k** Matemaattisesti kaikki muuttuu paljon mutkikkaammaksi, ja yksinkertaisen
-perustapauksen selkeät tulkinnat eivät toimi. Tärkeä asia: CA:n skaalausominaisuudet ja
-visuaalinen tulkinta pätevät edelleen.
+MCA on yhdistettyjen (”pinottujen”)  taulukoiden erikoistapaus, samantyyppiset
+muuttujat taulukoidaan keskenään. Tulos riippuu siis vain muuttujien
+parittaisista yhteyksistä.
 
 
-**Viitteitä**
+Tätä ”supertaulukkoa” kutsutaan _Burtin matriisiksi_.
+_Indikaattorimatriisi_ on toinen tapa esittää data. Indikaattorimatriisin
+sarakkeet ovat luokittelumuuttujan arvoja (kategorioita) ja rivit yksittäisiä
+vastausprofiileja. Profiilissa on rivi nollia ja ykkösiä, 1 valitun vaihtoehdon
+sarakkeessa.
 
-MG ja MG&Prado ovat tutkineet ISSP-datalla tätä ongelmaa.
-[@RefWorks:doc:5a857a43e4b0ed2d44664d7c , ss.142-], "dimensions of middleness".
+En tässä jaksossa esitä numeerisia tuloksia, niiden tutkimisella voi jatkaa
+analyysiä.
 
-[@RefWorks:doc:5a857a44e4b0ed2d44664d87] ja samasta teemasta laajentaen
-kokoomateoksessa [@RefWorks:doc:5ab76b43e4b003f4468d1f07], ss. 197-217.
+Tavoite on tutkia seitsemän kysymyksen vastausvaihtoehtojen yhteyksiä,
+miten ne asettuvat kaksiulotteiselle kartalle. Aikaisemmissa jaksoissa etsittiin
+yhteyksistä uusia piirteitä ja tarkennettiin analyysiä. Nyt hahmotetaan ison
+aineiston muuttujien välisiä yhteyksiä ja erityisesti puuttuvien tietojen ongelmaa.
 
-Aineistona jälkimmäisessä tutkimuksessa on sama kysymyssarja kuin tässä 1994
-datasta. Kysymyksissä on jonkin verran eroja.
+Koko datassa (kts. luku 2) on 32823 havaintoa 25 maasta. Niistä täydellisiä on
+71 prosenttia. Jos valitaan kuusi taustamuuttujaa (edu, sosta, urbru,
+maa, ika, sp) ja seitsemän kysymystä, täydellinen havaintoja on 81 prosenttia.
 
-**k** Data
+Pelkissä kysymyksissä (Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b) puuttuvia tietoja on
+14 prosentissa havaintoja (4554). Kaikkien puutteellisten havaintojen poistamien
+(”listwise delete”) on sitä huonompi vaihtoehto mitä enemmän muuttujia on.
+
+Kaikissa kysymyksissä on viisi vastausvaihtoehtoa ja kuudes kategoria puuttuvalle
+tiedolle. Analyysi kannattaa aloittaa tästä pulmasta, yksi hyvä ratkaisu on
+osajoukon MCA (subset MCA).
+
+
 
 ```{r 07mcaIsodat1, echo=F, include=F, error= TRUE}
-
+# Tätä dataa ei käytetä - pelkät kysymykset
 # str(ISSP2012jh1d.dat) - luotu skripteissä G1_1_data2.Rmd ja G1_1_data_fct1.Rmd
 # Tarkistukset näkyvät Galkussa - tässä ei tulosteta
 # Kommentoidaan pois tarkistuksia (14.11.2020)
@@ -435,14 +440,9 @@ MCAdata1jh.dat <- MCAdata1jh.dat %>% mutate(a1 = Q1am,
 ```
 
 
-**k** Taustamuuttujien taulukoissa on yllättävän isoja eroja, jotkut taulukoiden luokat
-ovat nollia tai hyvin vähän havaintoja. Luokkia pitäisi yhdistellä,jo pelkästään
-"kuvaroskan" takia. Ei tehdä.
 
 
-**k** Puuttuvat havainnot, muutama numero vain mitä "listwise delete" saa aikaan.
-
-```{r MCAmissing,  eval = FALSE, include = TRUE, echo = TRUE}
+```{r MCAmissing,  eval = FALSE, echo = FALSE}
 
 #Puuttuvien tietojen yleiskuva
 
@@ -465,22 +465,17 @@ ovat nollia tai hyvin vähän havaintoja. Luokkia pitäisi yhdistellä,jo pelkä
 #dim(missingTestMCA1.dat) = 32823
 #6101/32823 = 0.1858758 Puuttellisten havaintojen osuus.
 
+#Pelkät kysymykset
+
+#missingMCAvars2 <- c("Q1a","Q1b", "Q1c", "Q1d","Q1e","Q2a","Q2b")
+#missingTestMCA2.dat <- ISSP2012jh1d.dat %>% select(all_of(missingMCAvars2))
+#sum(!complete.cases(missingTestMCA2.dat))
+# puuttuvia tietoja 4554
+# 4553/32823 = 0.1387137
+
 ```
 
-Koko tähän tutkimukseen valitussa aineistossa (25 maata ja muuttujat, poistettu
-havainnot joissa ikä tai sukupuoli puuttuu) 71% havainnoista on kaikki tiedot.
 
-MCA-analyyseihin valitun 7 + 3 = 10 muuttujan aineiston havainnoista 81% on
-vailla puuttuvia tietoja. Jos puuttuvat tiedot poistetaan (ns. "listwise delete",
-poistetaan jos yksi tai useampi tieto puuttuu) viidesosa datasta jää pois.
-
-
-**k** Miten liittyy tähän? CA on koko aineiston kuvailevaa analyysiä, ei päättelyä
-otoksesta perusjoukon tasolle. Miten puuttuvia vastauksia voisi kuvailla? Toisaalta
-edellisen jakson menetelmien soveltaminen on mahdotonta, jos jotain ei tehdä
-(reunajakaumat oltava samoja).
-
-MCA1 - seitsemän kysymystä (jokaisessa viisi vaihtoehtoa)
 
 ```{r MCA1, echo=F}
 
@@ -497,7 +492,6 @@ Qmuuttujat1.mca <- mjca(mcaDat11jh.dat, ps="")
 
 ```
 
-Aineistossa on 32 823 havaintoa ja seitsemän muuttujaa.
 
 
 ```{r MCA1map1,echo=F, fig.cap= "MCA: Seitsemän kysymystä - 25 maata, kartta 1", fig.asp = 1, out.width = "90%",fig.align = "center"}
@@ -511,18 +505,19 @@ plot.mjca(Qmuuttujat1.mca, labels = c(1,2),
 
 ```
 
-**k Perustulkinta:** Inertian selitysosuudet ovat paljon pienempiä, ja ratkaisu
+Inertian selitysosuudet ovat paljon pienempiä, ja ratkaisu
 on selvästi kaksiulotteinen. Puuttuvat vastaukset erottuvat omana ryhmänä, ja
 varsinaiset vastaukset ovat pakkautuneet y-akselin oikealle puolelle. Niiden erot
 näkyvät vain toisessa dimensiossa. Ensimmäinen dimensio kuvaa vastaamattomuutta
 (syystä tai toisesta) vs. kaikkia vastauksia. Kokonaisinertiaa on korjattu
-pienemmäksi (ns. adjustedineritia, kts. liite 1),
+pienemmäksi (adjusted inetia, kts. liite 1),
 selitetyn inertian osuus on realistinen arvio.
 
 Pystyakselin suuntaan kontrasti näyttäisi olevan konservatiiviset ylhäällä,
 modernit ja liberaalimmat alhaalla. Pisteitä on vaikea erottaa toisistaan.
 
-Karttaa voi parantaa lisäämällä siihen vastaajien (n= 32 823) pisteet (viite MG - ekologiakirja, jossa vanhempi ISSP-data).
+Karttaa voi parantaa lisäämällä siihen vastaajien pisteet.
+
 
 ```{r  MCA1map2,echo=F, fig.cap= "MCA: Seitsemän kysymystä - 25 maata, kartta 2", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
@@ -540,28 +535,18 @@ Jokainen havainto on sarakevektoreiden keskiarvopiste. Sarakevektoreita ei voi
 tulkita yhtä selkeästi kuin yksinkertaisessa korrespondenssianalyysissä. Ne eivät
 edusta kysymystä vaan kysymyksen yhtä vastauskategoriaa.
 
+Pistepilven muoto näyttää, miten pienenevä joukko vastaajia lähestyy kiilana
+puuttivien tietojen pisteitä. Kaikkiin kysymyksiin vastanneet ovat massana kuvan
+oikeassa laidassa. Pistepilvet oikealta vasemmalle kuvaavat kuinka moneen
+kysymykseen on jätetty vastaamatta.
 
-Rivipiste on vastauksiaan vastaavien sarakepisteiden keskiarvopiste. Jos vastaaja on valinnut
-vaihtoehdot (a1S, a2s,..., b2?) se on näiden pisteiden keskiarvopiste.
-
-Oleellista MCA-kartan tulkinnassa on kuitenkin yleiskuvan muodostaminen, geometrinen 
-tulkinta on hieman hankala. Skaalausominaisuudet MCA kuitenkin säilyttää (kts. liite 1).
-
-Myös riviprofiilit ovat samanlaisia, jokaisella rivilla on kuudessa kategoriassa (vastaukset
-ja puuttuva tieto) nollia ja yksi ykkönen. Rivien välistä etäisyyttä määrittelevä ainoastaa 
-"erimielisyydet", ja GDA-kirjan (**viite**) ohjeen mukaan MCA-karttojen tulkinta pitäisi aloittaa
-yksilöiden pilven ääripäistä. 
-
-Pistepilven muoto kertoo , kuinka pienenevä joukko vastaajia lähestyy kiilana
-puuttivien tietojen pisteitä. Kaikkiin kysymyksiin vastanneet ovat massana kuvan oikeassa laidassa. Pistepilvet
-oikealta vasemmalle kuvaavat kuinka moneen kysymykseen on jätetty vastaamatta.
-
-(MG-vastaava kuva [@RefWorks:doc:5a857a43e4b0ed2d44664d7c], luku 14. "dimenisions of middleness".)
-Pieni joukko määrää koko kartan koordinaatiston.
 
 **Osajoukon MCA**
 
-**k** Osajoukon MCA ratkaisee ongelman tyylikkäästi.
+Osajoukon MCA sopii hyvin sekä puuttuvien tietojen että täydellisten vastausten
+analyysiin. Asymmetrisessä kartassa sarakkeet skaalautuvat  pois orgiosta ja
+näkyvät paremmin. Kuvaan on piirretty havaintopisteet, joista voi hahmottaa
+havaintojen sijoittumista kartalla.
 
 
 ```{r subsetMCA1, echo=F}
@@ -604,14 +589,8 @@ Qmuuttujat2.mca <- mjca(mcaDat11jh.dat, ps="", subsetcat=eiPvastaukset)
 #          sub = "subset: ei puuttuvien vastausten kategorioita(*P)")
 
 ```
-**k** Tulkinta: kontrasti "ääripäiden" välillä, vahvat mielipiteet (S ja E) hallitsevat vasenta alakulmaa ja oikeaa laitaa x-akselin tuntumassa. Maltilliset
-vastaukset ja neutraali vaihtoehto ovat ylhäällä vasemmalla. 
 
-**k** Johtopäätös: seitsemän kysymystä erottelee hyvin vastaajat
-liberaali - konservatiivi - aksellilla. Maltilliset ja neutraalit vastaukset sijaitsevat ääripäiden välissä. Karttaan voi hahmotella diagonaalin suuntaisen 
-akselin vahvojen mielipiteiden ryppäiden välille. Muut vastaukset ovat 
-ns. kaariefektin mukaisesti näiden välisellä U-muotoisella linjalla. Tämä kuuluisa Guttan efekti kertoo järjestysasteikon muuttujien korrelaatiosta, hyvä asia kun 
-kysymyksillä luodataan asenteita naisten työssäkäyntiin. Kaariefekti on myös "geometrinen välttämättömyys", tarkemmin teorialiitteessä.
+
 
 ```{r subsetMCA1map2,echo=F, eval = F, echo = F, fig.cap= "MCA: Seitsemän kysymystä - 25 maata, kartta 4", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
@@ -626,7 +605,7 @@ plot.mjca(Qmuuttujat2.mca,
 
 ```
 
-**edit: karttojen otsikot tarkistettava**
+
 
 ```{r subsetMCA1map3,echo=F, fig.cap= "MCA: Seitsemän kysymystä - 25 maata, kartta 3", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
@@ -639,38 +618,56 @@ plot.mjca(Qmuuttujat2.mca, map = "rowprincipal",
 
 ```
 
+Kontrasti on  "ääripäiden" välillä, vahvat mielipiteet (S ja E) hallitsevat vasenta
+alakulmaa ja oikeaa laitaa x-akselin tuntumassa. Maltilliset vastaukset ja
+neutraali vaihtoehto ovat ylhäällä vasemmalla. Liberaalit vastaukset ovat oikealla
+ylhäällä ja jokaiselle löytää vastinparin vasemmalta alhaalta, konservatiivien
+kulmasta.Konservatiivisten vastausten joukosta lähimpänä liberaalia ryvästä on
+"e1S" ("Kotirouvana oleminen on aivan yhtä antoisaa kuin ansiotyön tekeminen"
+- täysin samaa mieltä). Vastaavasti "a2S" ("Sekä miehen että naisen tulee
+osallistua perheen toimeentulon hankkimiseen" - täysin samaa mieltä) on lähimpänä
+konsertvatiivista kulmaa. Molemmat "ääripäiden maltilliset" pisteet ovat myös
+omassa ryhmässään lähimpänä maltillisten ja neutraalien vastausten ryhmää.
 
 
-**k1** inertian "adjusted", kts. liite1.
-
-Vilkaistaan 3d-ratkaisua - onko kolmella keskimmäisellä vaihtoehdolla "dimenison
-of middleness"? 
-
-Dimension of middelness, on viitteitä mutta ei ihan selvä.
-
-Neutraalin vaihtoehdon (?) sarakkeet ovat huonosti esitettyjä, mutta vain kolme selvästi
-(e1? 475 c1? 571 ja b1? 573). 
-
-**TÄHÄN VOISI LOPETTAA - EI KAHTA PITKÄÄ TULOSTETTA KUN NIITÄ EI TARKEMMIN ANALYSOIDA** 
+Karttaan voi hahmotella diagonaalin suuntaisen 
+akselin vahvojen mielipiteiden ryppäiden välille. Muut vastaukset ovat 
+mukaisesti näiden välisellä U-muotoisella linjalla (Guttman-efekti).
 
 
-**edit2 - harkitaan näitä**
-**MCA - numeeriset tulokset**
+Osajoukon korrespondessianalyysin esitelleissä artikkeleissa
+([@RefWorks:doc:5a857a44e4b0ed2d44664d87] ja samasta teemasta laajentaen
+kokoomateoksessa [@RefWorks:doc:5ab76b43e4b003f4468d1f07], ss. 197-217.)
+Aineistona jälkimmäisessä tutkimuksessa on sama kysymyssarja kuin tässä 1994
+datasta. Kysymyksissä on jonkin verran eroja.
 
-```{r MCAnumres}
+@RefWorks:doc:5a857a43e4b0ed2d44664d7c (s. 139-) analysoi lähes samoja kysymyksiä
+ISSP-datalla 2012. Tulokset ovat hyvin samantapaisia. Karttaa \ref(fig:subsetMCA1map3)
+vastaavan kuvan jatkoanalyysi on vasemman yläkulman pisteiden tarkempi analyysi.
+Greenacre havaitsee, että nämä neutraalit ja maltilliset vastaukset eivät ole
+hyvin esitettyjä kaksiulotteisella kartalla, vaan ne karkaavat korkeampiin
+ulottuvuuksiin, "dimenisions of middleness".
 
+Tässä aineistossa kolmiulotteinen MCA antaa samantapaisia viitteitä, mutta vain osa
+keskikategeorioista on huonosti esitetty myös siinä. Huono kvaliteeetti on vain 
+osalla sarakkeita (e1? 475, c1? 71 ja b1? 573).
+
+
+
+```{r MCAnumres, echo=F, eval=F}
+
+# pois 25.11.2020
 summary(Qmuuttujat2.mca)
-
 
 ```
 
 
 
 
-**edit** tämä poistetaan lopullisesta versiosta.
 
-```{r MCA3d}
 
+```{r MCA3d, echo =FALSE, eval = FALSE}
+# Pois 25.11.2020
 Qmuuttujat2d3  <- mjca(mcaDat11jh.dat, ps="", nd = 3,subsetcat=eiPvastaukset)
 summary(Qmuuttujat2d3)
 
