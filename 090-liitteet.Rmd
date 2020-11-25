@@ -10,19 +10,19 @@
 ## Korrespondenssianalyysin perusyhtälöt ja kaavat {-}
 
 
-Tässä lähteenä Greenacren kirja[@RefWorks:doc:5a857a43e4b0ed2d44664d78] (ca in practice) ja sen liite
-"Theory of CA".
-
-**edit**  Muistiinpanoja löytyy, joissa viitataan myös Biplots in practice - kirjaan.
-Kevään 2017 kurssin luentokalvoja on myös käytetty. Lisäillään vielä käsitteitä
-LeRouxin ja Rouanetin kirjasta, jos on tarvis.
+Perusyhtälöt on esitetty teoksen "Correspondece Analysis in Practice"[@RefWorks:doc:5a857a43e4b0ed2d44664d78]
+liitteen "Theory of Correspondece Analysis" mukaisesti.
 
 Datamatriisilla $\boldsymbol{N}$ on $I$ riviä ja $J$ sarakketta ($I x J$ ).
 Alkiot ovat ei-negatiivisia (eli nollat sallittuja) ja samassa mitta-asteikossa.
 Jos mitta-asteikko on intervalli- tai suhdeasteikko, mittayksiköiden on oltava
-samoja (esim. euroja, metrejä). Taulukon alkioiden summa on
+samoja (esim. euroja, metrejä). Tietyin ehdoin myös negatiiviset luvut ovat
+sallittuja [@RefWorks:doc:5a857a43e4b0ed2d44664d75 s. 60].
+
+
+Taulukon alkioiden summa on
 $\sum_{i} \sum_{j}n_{ij} = n$, missä $i = 1, \dots , I$ ja $j = 1, \dots , J$.
-GDA-kirjassa on tarkennettu tätä vaatimusta ei-negatiivisuudesta.
+
 
 Korrespondenssimatriisi  $\boldsymbol{P}$ saadaan jakamalla matriisin
 $\boldsymbol{N}$  alkiot niiden summalla $n$ .
@@ -33,9 +33,7 @@ $\boldsymbol{c}$ (= $(c_{1}, \dots, c_{J})$).
 Niitä vastaavat diagonaalimatriisit ovat $\boldsymbol{D_r}$ ja
 $\boldsymbol{D_c}$.
 
-Korrespondenssianalyysin ratkaistaan singluaariarvohajoitelman avulla. Hyvin
-yleinen tulos, jostain syystä tilastotieteessä tullu tunnetuksi melko myöhään
-(Mustonen 1985).
+Korrespondenssianalyysin ratkaistaan singluaariarvohajoitelman avulla.
 
 Singulaariarvohajoitelma (singular value decomposition) tuottaa ratkaisun kun
 sitä sovelletaan standardoituun residuaalimatriisiin $\boldsymbol{S}$.
@@ -59,10 +57,10 @@ Residuaalimatriisi voidaan esittää myös ns. kontingenssi-suhdelukujen
 \end{equation}
 
 Toinen esitystapa on hyödyllinen, kun tarkastellaan CA:n yhteyksiä muihin
-läheisiin menetelmiin. Näitä menetelmiä kuten myös korrespondenssianalyysiä kutsutaan monilla
-nimillä:"suhteellisten osuuksien datan" analyysi (log ratio analysis of compositiona data),
-moniulotteinen skaalaus, lineaarinen diskriminanttianalyysi, kanoninen korrelaatioanalyysi,
-pääkomponettianalyysi, kaksoiskuvat ja muutä SVD-hajoitelmaan perustuvat dimensioden
+läheisiin menetelmiin. Näitä ovat esimerkiksi "suhteellisten osuuksien datan"
+ analyysi (log ratio analysis of compositiona data),moniulotteinen skaalaus,
+lineaarinen diskriminanttianalyysi, kanoninen korrelaatioanalyysi,
+pääkomponettianalyysi, kaksoiskuvat ja muut SVD-hajoitelmaan perustuvat dimensioden
 vähentämisen menetelmät.
 
 Samat kaavat voi esittää myös alkiomuodossa:
@@ -79,10 +77,10 @@ s_{ij} = \sqrt{r_{i}} \left( \frac{p_{ij}}{r_{i}c_{j}} \right) \sqrt{c_{j}} \;\;
 (\#eq:contrat21)
 \end{equation}
 
-Alkimuodosasa esitetyistä  kaavoista näkee intuitivisesti rivi- ja sarakeratkaisujen sidoksen.
+Alkimuodosasa esitetyistä  kaavoista näkee rivi- ja sarakeratkaisujen sidoksen.
 Ratkaisujen duaalisuus on teoreettinen tulos, jonka voi perustella täsmällisesti
-algebrallisen geometrian avulla. Käytännössä rivi- ja sarekeongelman duaalisuus tarkoittaa sitä,
-että vain toinen ongelma on ratkaistava.
+algebrallisen geometrian avulla. Käytännössä rivi- ja sarekeongelman duaalisuus
+ tarkoittaa sitä, että vain toinen ongelma on ratkaistava.
 
 Singulaariarvohajoitelma (singular value decomposition, SVD) matriisille $\boldsymbol{S}$ on
 
@@ -99,7 +97,7 @@ Matriisit $\boldsymbol{U}$ ja $\boldsymbol{V}$ ovat ortogonaalisia
 singulaarivektoreiden matriiseja. Singulaariarvohajoitelman merkitys dimensioiden
 vähentämiselle perustuu Eckart - Young - teoreemaan. Teoreema kertoo
 että saamme pienimmän neliösumman $m$ - ulotteisen approksimaation matriisille
-$\boldsymbol{S}$ (CAinP, ss. 244) matriisien $\boldsymbol{U}$ ja $\boldsymbol{V}$
+$\boldsymbol{S}$  matriisien $\boldsymbol{U}$ ja $\boldsymbol{V}$
 ensimmäisten sarakkeiden ja ensimmäisten singulaariarvojen avulla.
 
 \begin{equation}
@@ -111,7 +109,7 @@ Korrrespondenssianalyysin ratkaisualgoritmissa tätä tulosta on muokattava niin
 että rivien ja sarakkeiden massat huomioidaan pienimmän neliösumman
 approksimaatiossa painoina.
 
-Näin saadaan standardikoordinaatit ja principal-koordinaatit riveille ja
+Näin saadaan standardikoordinaatit ja pääkoordinaatit riveille ja
 sarakkeille.
 
 Rivien standardikoordinaatit
@@ -153,8 +151,8 @@ kyselytutkimusdatoissa inertia on yleensä paljon maksimia pienempi. Asymmetrisi
 kartoissa ideaalipisteet ovat kaukana origon lähelle pakkauteesta havaintojen
 pilvestä.
 
-Korespondenssianalyysi ratkaisun akseleiden inertiaa kutsutaan usein ominaisarvoksi,
-mutta periaatteessa SVD-ratkaisulla saadaan singulaariarvot, ja niiden neliöt ovat
+Korespondenssianalyysi ratkaisun akseleiden inertioita kutsutaan usein ominaisarvoiksi,
+mutta periaatteessa SVD-ratkaisulla saadaan singulaariarvot. Niiden neliöt ovat
 akseleiden inertioita. Ominaisarvojen ja sigulaariarvojen yhteys on läheinen ja
 riippuu diagonalisoitavan matriisin ominaisuuksista.
 
@@ -175,10 +173,10 @@ p_ {ij}= r_{i}c_{j} \left(1 + \sum_{k=1}^{K} \sqrt{\lambda_{k}} \phi_{ik} \gamma
 Tässä viitataan s. 101 (13.4), 109 (14.9), ja 109-110 (14.10 ja 14.11).
 Palautuskavoilla on monta esitystapaa bilineaarisessa mallissa.
 
-Rivien ja sarakkeiden riippuvuus ja transitioyhtälöt. ss. 244, 108-109 skalaariversiot.
+Rivien ja sarakkeiden riippuvuutta kuvaavat transitioyhtälöt (transition equations).
 
-Pääkoordinaatit standardikoordinaattien funktiona
-(ns. barysentrinen ominaisuus - barycentric relationships)
+Pääkoordinaatit standardikoordinaattien funktiona (barysentrinen ominaisuus,
+barycentric relationships):
 
 \begin{equation}
 \boldsymbol{F} = \boldsymbol{D}_{r}^{-1} \boldsymbol{P}\boldsymbol{\Gamma}
@@ -190,7 +188,7 @@ Pääkoordinaatit standardikoordinaattien funktiona
 (\#eq:barysentr2)
 \end{equation}
 
-Pääkoordinaatit pääkoordinaattien funktiointa:
+Pääkoordinaatit pääkoordinaattien funktiona:
 
 \begin{equation}
 \boldsymbol{F} = \boldsymbol{D}_{r}^{-1} \boldsymbol{P}\boldsymbol{G}\boldsymbol{D}_{\lambda}^{-\frac{1}{2}}
@@ -206,8 +204,8 @@ Yhtälöt \@ref(eq:barysentr1) ja \@ref(eq:barysentr1) esittävät profiilipiste
 painotettuina keskiarvoina, painoina profiilin elementit. Asymmetriset kartat
 (rivien tai sarakkeiden suhteen) perustuvat näihin yhtälöihin. Yhtälöiden \@ref(eq:barysentr3)
 ja \@ref(eq:barysentr4) kahdet pääkoordinaatit ovat perusta symmetrisille kartoille. Myös niitä
-yhdistää barisentrinen painotetun keskiarvon riippuvuus, mutta mukana ovat skaalaustekijät
- $\frac{1}{\sqrt{\lambda_{i}}}$. Skaalaustekijä on jokaisessa dimensiossa sen inertia, suurimmasta pienimpään.
+yhdistää barysentrinen painotetun keskiarvon riippuvuus, mutta mukana ovat skaalaustekijät
+ $\frac{1}{\sqrt{\lambda_{i}}}$.
 
 
 **Pisteet ja projektio aliavaruuteen**

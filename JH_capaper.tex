@@ -126,7 +126,7 @@
 
 \title{Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä}
 \author{Jussi Hirvonen}
-\date{Versio 0.8, tulostettu 2020-11-24}
+\date{Versio 0.9, tulostettu 2020-11-25}
 
 \begin{document}
 \maketitle
@@ -736,16 +736,16 @@ summa lasketaan yli rivien \({i}\).
 Korrespondenssianalyysin kolmen peruskäsitteen ``tripletti'' -- \emph{profiili},
 \emph{massa} ja \emph{\(\chi^{2}\) - etäisyys} -- on esitely tarkemmin liitteessä 1.
 
-Rivi- ja sarakeprofiilien taulukoista näkee helposti, että keskiarvoprofiilien
+Rivi- ja sarakeprofiilien taulukoista huomaa, että keskiarvoprofiilien
 alkiot ovat massoja. Rivien keskiarvoprofiilin alkiot ovat sarakemassoja, ja sama
 pätee sarakkeille. Tämä rivi- ja sarakeongelmien duaalisuus on yksinkertaisen
-korrespondenssianalyysin keskeinen idea (CAiP, s. 57). Rivi- ja sarakeongelma
-ratkaisu johtaa saamaan lopputulokseen.
+korrespondenssianalyysin keskeinen idea (CAiP, s. 57). Rivi- tai sarakeongelman
+ratkaisu tuottaa saman tuloksen.
 
 Ratkaisun dimensio on sarakkeiden tai rivien lukumäärä vähennettynä yhdellä,
-pienempi kahdesta vaihtoehdosta.
+pienempi kahdesta vaihtoehdosta. Se on myös kokonaisinertian teoreettinen maksimi.
 
-Korrespondenssianalyysi on oleellisesti pääkomponenttianalyysiä, etäisyysmitta on
+Korrespondenssianalyysi on läheistä sukua pääkomponenttianalyysille.Etäisyysmitta on
 khii2-etäisyys (käytän tekstissä tätä kirjoitusasua) ja mukana ovat massat painoina.
 Ratkaisussa etsitään haluttu yleensä kaksiulotteinen ratkaisu (taso), joka minimoi pisteiden
 khii2-etäisyyksien poikkeamien summan eli on mahdollisimman lähellä pisteitä.
@@ -860,8 +860,10 @@ suhteesta. Tarkemmin teorialiitteessä, tässä heuristisesti jotta kuvia osaa t
 Korrespondenssianalyysille on vakiintunut oma käsitteistö, joista tärkeimmät on
 jo mainittu. Kun tulkinta perustuu ''ääripäihin'', puhutaan kontrasteista ja
 distinktiosta. Luokittelumuuttujan arvot taas ovat modaliteetteja.
-Tärkein periaate on se, että kaikki on suhteellista. Ydinkäsitteitä ovat
-\emph{korrespondenssianalyysin ''tripletti'': khii2-etäisyys, massat ja profiilit}.
+Tärkein periaate on se, että kaikki on suhteellista.
+
+Ydinkäsitteitä ovat
+\emph{korrespondenssianalyysin ''tripletti'':khii2-etäisyys, massat ja profiilit}.
 
 Kolmikkoa täydentää ''kvartetti'', neljä siitä johdettua käsitettä: \emph{inertia} eli
 (painotettu) varianssi, \emph{sentroidi} (painotettu keskiarvo, barysentrinen periaate),
@@ -900,11 +902,11 @@ lukumäärädataan (count data). Periaatteessa mikä tahansa data sopii, kunhan 
 voidaan järkevästi esittää suhteelisina lukumäärinä (relative amounts), siis
 suhdeasteikon (ratio scale) muuttujana. Tässä oleellista on tulkittavuus
 tutkimusongelman näkökulmasta. Välttämätön ehto on sama mittayksikkö: lukumäärä,
-rahayksikkö, pituusmitta kelpaavat. (CAiP s. 15).
-Toinen ehto on ei-negatiivisuus (nolla tai nollaa suurempi luku) ,
-kts. kuitenkin GDA (tietyilllä ehdoilla myös neg. arvot. Rajat ovat melko
-joustavat, kun mukaan otetaan erilaiset uudelleenskaalaukset ja transformaatiot.
-Tämä oli menetelmän perusidea jo Benzecrillä(CAiP ch 26, s. 201).
+rahayksikkö, pituusmitta kelpaavat. (CAiP s. 15). Taulukon lukujen on oltava
+ei-negatiivisia (positiivisia, nolla sallittu).
+
+Rajat ovat joustavia, kun mukaan otetaan erilaiset uudelleenskaalaukset
+ja transformaatiot. Tämä oli menetelmän perusidea jo Benzecrillä(CAiP ch 26, s. 201).
 
 Menetelmää sovelletaan profiileihin jotka painotetaan massoilla, ja
 profiilien etäisyyksiä mitataan khii2-etäisyysmitalla. Jos datan voi esittää
@@ -1044,16 +1046,6 @@ Belgia erottuvat hieman heikommin esitettyinä.
 \hypertarget{massat}{%
 \subsection{Massat}\label{massat}}
 
-\textbf{edit} Onko vakioitujen massojen kartta liian aikaisin? Tämä ei ole pääasia, vaan selvennys.
-Miksi tässä? Perusteltava, miksi en vakioi massoja maille, sukupuolille jne. (a)
-perusteltua kun tarkempi tutkimusongelma, esim. erottelut maiden ja sukupuolten
-välillä. Varianssianalyysin tapaan varianssin hajoittaminen ryhmisen sisäiseen ja
-ryhmien väliseen. Kts. teorialiitteestä esim. ABBA. (b) CA ``perusmuodossa'', massa
-on yksi kolmesta tärkeimmästä käsitteestä. (c) on aika työlästä!
-
-\textbf{edit} Galkussa verrattu molempien painotusten khii2-etäisyyksiä, jos tarpeen
-niin teoria-liitteeseen.
-
 Massat ovat korrespondenssianalyysin keskeinen käsite, ja niiden kaksoisrooli on
 menetelmän ytimessä. Massat ovat normalisoiva muunnos khii2-etäisyysmitalle ja
 profiilien painoja. Tässä jälkimmäisessä roolissa massat liittyvät tutkimusongelmaan,
@@ -1108,8 +1100,7 @@ dekomponointia, jakamista osiin.
 
 Yksinkertaisen korrespondenssianalyysin peruskuva on symmetrinen kartta. Ehkä
 yllättäen sen ``\ldots tulkinta on edelleen menetelmän kaikkein kiistanalaisin aspekti.''
-\citep{RefWorks:doc:5a857a43e4b0ed2d44664d78} (s.295),\citep{RefWorks:doc:5c768b09e4b02df9431e950a}.
-vrt. myös, Johdanto, SPSS - kritiikki.
+(CAiP s.295, \citet{RefWorks:doc:5c768b09e4b02df9431e950a}.)
 
 Sarake- ja rivisteet esitetään siinä ikään kuin päällekkäin, samassa koordinaatistossa.
 Niiden pääkoordinaatit ovat kuitenkin eri pistejoukoista tai avaruuksista. Asymmetrisessä
@@ -1308,20 +1299,11 @@ tässä esimerkissä 4(sarakkeiden lukumäärä - 1). Tärkein lähde on CAiP:n 
 ja liitte B.
 
 R-paketti ``ca'' (versio 0.71.1) listaa numeeriset tulokset suppeasti (print) ja laajemmin
-(summary), laajempi tulostus on alla.Paketin pdf-dokumentissa s.20 on kirjoitusvirhe, tiiviimmässä
-tulosteessa ei ole pääkoordinaattaja (principal coordinates) vaan standardikoordinaatit.
-
-\textbf{k} Lyhyt selostus - nämä aika selkeitä
+(summary), laajempi tulostus on alla.
 
 Ensimmäisenä on listattu kokonaisinertia pääakseleittain. Tässä suhteelliset luvut
 on esitetty prosentteina. Muut luvut on luettavuuden vuoksi skaalattu, joko kerrottu
 tuhannella tai esitetty ``permills'' (summa on 1000).
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{summary}\NormalTok{(suppointCA2)}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{verbatim}
 ## 
@@ -1619,18 +1601,6 @@ erot mielipiteissä ovat paljon suurempia kuin sukupuolten väliset maiden sisä
 \hypertarget{ikuxe4-sukupuoli-ja-maa}{%
 \section{Ikä, sukupuoli ja maa}\label{ikuxe4-sukupuoli-ja-maa}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{ISSP2012esim1b.dat <-}\StringTok{ }\KeywordTok{mutate}\NormalTok{(ISSP2012esim1b.dat,}
-                             \DataTypeTok{maaga =} \KeywordTok{paste}\NormalTok{(maa, ga, }\DataTypeTok{sep =} \StringTok{""}\NormalTok{))}
-
-\CommentTok{# tarkistus, muunnos ok}
-\CommentTok{# ISSP2012esim1b.dat %>% tableX(maa, maaga)}
-\CommentTok{# head(ISSP2012esim2.dat)}
-\CommentTok{# str(ISSP2012esim2.dat)}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{figure}
 
 {\centering \includegraphics[width=0.9\linewidth]{JH_capaper_files/figure-latex/maagaCA1map1-1} 
@@ -1823,7 +1793,7 @@ siinä yritetään esittää monia erityyppisiä yhteyksiä simultaanisesti ja n
 yhteydet eivät ole ``isolated to particular dimensions''
 ( \citet{RefWorks:doc:5a857a44e4b0ed2d44664d87} , 198).
 
-Osajoukon korrespondenssianalyysi (subset CA, MCA) on yksi vastaus tähän
+Osajoukon korrespondenssianalyysi (subset CA, subset MCA) on yksi vastaus tähän
 pulmaan. Teoreettiset perusteet on esitetty Greenacren ja Pardon artikkelissa
 \citep{RefWorks:doc:5a857a44e4b0ed2d44664d87} ja sen laajennetussa versiossa (emt.),
 esimerkkiaineistona ISSP:n 1994 data. Selkeä oppikirjaesitys on CAiP (ss. 161-).
@@ -1843,7 +1813,7 @@ yksi ja barysentristä periaatetta ei voi suoraan käyttää täydentävän pist
 koordinaattien laskemiseen. Tässä esimerkissä emme voi suoraan ca-paketin avulla
 sijoittaa esimerkiksi maapisteitä kartoille.
 
-Karttaa \ref{fig:maagaCA1map1} katsomalla on helppo jakaa aineisto aluksi vain kahteen ryhmään.
+Kartan \ref{fig:maagaCA1map1} avulla on helppo jakaa aineisto aluksi vain kahteen ryhmään.
 Suomi, Tanska ja Saksa ovat pääakselin oikealla puolella.
 Bulgaria ja Unkari yhdessä Belgian kanssa ovat toinen ryhmä.
 
@@ -2102,103 +2072,51 @@ havainnot eivät ole ongelma, vaan datan ominaisuus.
 \hypertarget{monimuuttuja-korrespondenssianalyysi-mca}{%
 \chapter{Monimuuttuja-korrespondenssianalyysi (MCA)}\label{monimuuttuja-korrespondenssianalyysi-mca}}
 
-\textbf{k} MG:n jäsentely CA:n tutkimusasetelmista (within - between), kokoaan myös
-edeltävät analyysit ``saman katon alle''.
+Usean muuttujan samanaikainen analyysi voidaan korrespondenssianalyysissä
+jakaa kahteen erialaiseen tutkimusasetelmaan. Ensimmäisessä tutkitaan kahden
+erilaisen muuttujaryhmän välisiä suhteita, toisessa yhden homogeenisen
+muuttujaryhmän sisäisiä suhteita.
 
-\textbf{k} Idea: taulukoiden yhdistely ``supertaulukoksi'' tai matriisiksi, analysoidaan kahden muuttujan
-ristiintaulukoinnin laajennuksena useita kahden muuttujan ristiintaulukointeja.
+Esimerkkiaineistossa haastateltavien
+vastaukset substanssikysymyksiin ovat oma ryhmänsä ja taustamuuttujat toinen
+ryhmä. Kahden muuttujaryhmän välisiä suhteita voidaan tutkia rakentamalla yhdistetty matriisi useasta kahden muuttujan ristiintaulukoinnista.
+Tämä pinottujen ja yhdistettyjen (stacked and concatenated) taulukoiden
+menetelmä (CAiP s. 129) ei kerro muuttujaryhmien sisäisistä yhteyksistä,
+joita edellä analysoitiin vuorovaikutusmuuttujien avulla.
 
-\textbf{k} MCA stacked\&concat - analyysin erikoistapauksena.
+Toinen asetelma on keskenään homogeenisten muuttujien välisten suhteiden analyysi.
+Monimuuttujakorrespondenssianalyysi (multiple correspondence analysis, MCA)
+soveltuu hyvin kyselytutkimusten vastausten analyysiin. MCA - kartoilla voidaan
+esitttää myös havainnot yksittäiset havainnot, mutta usein on järkevämpää
+käyttää kartalla taustamuuttujien keskiarvopisteitä. Keskiarvopisteisiin voi simuloimalla lisätä
+luottamusellipsit (CAiP, s. 299).
 
-\textbf{k} CA SVD:tä soveltavana ratkaisualgoritmina, jolle ``syötetään'' sopiva matriisi. Benzecri: löydettettävä vain
-matriisi joka dekomponoidaan.
+Esitän molemmista analyyseistä yhden esimerkin. MCA-esimerkissä otan käyttöön
+kaikki aineiston havainnot ja useita vastausmuuttujia, puuttuvat tiedot ovat
+mukana yhtenä luokittelumuuttujan arvona.
 
-\textbf{k1} kahden muuttujuajoukon väliset yhteydet
+Yksinkertaisen korrespondenssianalyysin yleistys usean muuttujan samanaikaiseen
+analyysiin ei ole aivan yksikertainen asia. Silti MCA toimii käytännössä usein
+hyvin juuri kyseltutkimusten analyysissä. Vaikka geometrinen tulkinta ei ole
+läheskään niin selkeä kuin yksinkertaisessa korrespondenssianalyysissä,
+skaalaustulkinta on pätevä. MCA-kartat esittävät luokittelumuuttujien arvot
+optimaalisesti, kartalla esitettyjen havaintopisteiden hajonta on maksimaalinen
+\citep[ , s. 447, kts. myös Liite 1]{RefWorks:doc:5a857a44e4b0ed2d44664d84}.
 
-\textbf{k2} yhden muuttujajoukon muuttujien väliset yhteydet
+\hypertarget{pinotut-ja-yhdistetyt-taulukot}{%
+\section{Pinotut ja yhdistetyt taulukot}\label{pinotut-ja-yhdistetyt-taulukot}}
 
-\textbf{k3} wrt samples ja wrt variables
+Pinottujen taulukoiden idea on esitetty kuvassa \ref{fig:stackedimg1}. Taulukossa
+kaksi ``selitettävää'' muuttujaa on ristiintaulukoitu kolmen taustamuuttujan kanssa.
 
-\textbf{k4} Yksinkertaisesta monimutkaisempaan
-0. Täydentävät pisteet tulkinnan apuna, yleistyökaluna (``jack of all trades but
-master of none'') esitelty ensimmäisenä. Tärkeä lisä kaikissa analyyseissä.
+Jos reunajakaumat ovat samat eli puuttuvia tietoja ei ole, taulukon kokonaisinertia
+on osataulukoiden inertioiden keskiarvo. Taulukon analyysi on yhden kysymyksen
+ja yhden taustamuuttujan parittaisten suhteiden analyysiä, yksi pari kerrallaan.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  yhteisvaikutusmuuttujat \textbf{K4-1}
-  -max kolmen muuttujan yhtesivaikutusmuuttuja - taulukko harsoontuu
-\item
-  Yksi ``selitettävä'' muuttuja, useampi ``selittävä'' \textbf{K4-2"}
-\end{enumerate}
-
-\begin{itemize}
-\tightlist
-\item
-  pinotut taulukot (käytännössä matriisit, helpompi pinota R:ssä, Burtin taulun käyttö)
-\end{itemize}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\tightlist
-\item
-  Taulukoiden yhdistäminen yleisemmin \textbf{K4-3}
-\end{enumerate}
-
-\begin{itemize}
-\tightlist
-\item
-  monta ``selittäjää'' ja ``selitettävää'': taulukoita päällekkäin ja rinnakkain, lohkomatriisi
-\item
-  ABBA: voidaan esim. jakaa taulukko (viite) osatauluiksi
-\item
-  tästä hieman tarkemmin teorialiitteessä;symmetriset taulut (esim. vastaukset
-  eri vuosina, isän ja pojan ammatti), matched matrices
-\end{itemize}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\tightlist
-\item
-  MCA \textbf{K4-4}
-\end{enumerate}
-
-\textbf{K-n}
-
-\textbf{tulkinnan tärkeimmät periaatteet}
-
-\begin{itemize}
-\tightlist
-\item
-  kaikki erot suhteellisia eroja
-\item
-  ca-ratkaisu approksimaatio; voi olla hyvä, mutta myös huono
-  -CA on hajonnan (intertian) dekomponoinnin menetelmä.
-\item
-  Toiset (esim. MG,``ranskalaiset'') painottavat graafista menetelmää ja kuvien oikeaa tulkintaa),
-  voi ymmärtää myös moniulotteisenä skaalauksena (MDS: etsi skaalaus, joka maksimoi
-  korrelaation) tai moniulotteisena varianssianalyysinä (ANOVA)
-\item
-  tulkinnan tarkennus molemmissa alaluvuissa
-\end{itemize}
-
-**edit* Tässä jaksossa korostuu data-analyyin eksplotatiivinen luonne, datan kaivelu
-ja näkökulmien muuntelu. Missä dimensiossa yhteydet ja riippuvuudet piileksivät?
-Kartta on tässä mielessä kartta(vaikka hieman outo), osoittaa yhdessä numeeristen
-tulosten kanssa suuntaa.
-
-\hypertarget{pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables}{%
-\section{Pinotut ja yhdistetyt taulukot (stacked and concatenated tables)}\label{pinotut-ja-yhdistetyt-taulukot-stacked-and-concatenated-tables}}
-
-Pinotut taulut: perusidea
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/stacked1.png'}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+Pierre Bourdieun tunnettu tutkimus La Distiction (1979) sovelsi tätä menetelmää.
+Ranskan väestö luokitellaan ammattiryhmiin ja taulukoidaan useiden elämäntapaa
+kuvaavien muuttujien kanssa. Taulukot yhdistetään pinoamalla ne
+päällekkäin ( \citet{RefWorks:doc:5ab76b43e4b003f4468d1f07} , s.21).
 
 \begin{figure}
 
@@ -2209,14 +2127,27 @@ Pinotut taulut: perusidea
 \caption{Pinotut ja yhdistetyt taulut - periaate}\label{fig:stackedimg1}
 \end{figure}
 
-Pierre Bourdieun tunnettu tutkimus La Distiction (1979) soveltaa tätä menetelmää.
-Ranskan väestö luokitellaan ammattiryhmiin ja taulukoidaan useiden elämäntapaa
-kuvaavien muuttujien kanssa. Taulukot yhdistetään pinoamalla ne
-päällekkäin ( \citet{RefWorks:doc:5ab76b43e4b003f4468d1f07} , s.21).
+Seuraavassa esimerkissä ``selitettäviä'' luokittelumuuttujia on vain yksi. Tällainen
+pinotun taulun analyysi on eräänlainen kaikkien siihen kuuluvien taulukoiden
+``keskiarvokartta'' (CAiP, s 136). Kysymyksen Q1b vastauksten ristiintaulkointi
+ikäluokan ja sukupuolen kanssa liitetään maarivien taulukkoon.
 
-Kun yhdistty taulu rakennetaan matriiseista, karttojen muuttujanimiä joudutaan
-siistimään. Kuvat voivat myös herkästi kääntyä akselien ympäri, ne kannataa
-kääntää vertailun helpottamiseksi samanlaisiksi kuin muut.
+Pisteiden määrä kartoilla kasvaa, ja muuttujanimiä joudutaan tiivistämään.
+Toinen tekninen detalji on kartan kääntäminen. Kuvat kääntyvät herkästi akselien
+ympäri, vertailun helpottamiseksi koordinaattien etumerkkejä joutuu joskus
+muuttamaan (kts. koodiliite).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# pisteiden kasautumien haittaa haittaa tulkintaa}
+
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{cex =} \FloatTok{0.6}\NormalTok{) }
+\KeywordTok{plot}\NormalTok{(Concat1jh.CA1,}
+     \DataTypeTok{main =} \StringTok{"Pinottu taulukko - symmetrinen kartta"}\NormalTok{,}
+     \DataTypeTok{sub =} \StringTok{"ikäluokat a1-a6, m = miehet, f = naiset"}
+\NormalTok{     )}
+\end{Highlighting}
+\end{Shaded}
 
 \begin{figure}
 
@@ -2227,22 +2158,32 @@ kääntää vertailun helpottamiseksi samanlaisiksi kuin muut.
 \caption{Q1b: Lapsi kärsii jos äiti käy työssä}\label{fig:concat1map1}
 \end{figure}
 
-\textbf{Kartan tulkinta; miten eroaa yhteisvaikutusmuuttujan analyysistä?}
+Tulkinta ei muutu, eikä maapisteiden sijaintikaan.
 
-Perustulkinta akseleille ei muutu, eikä maapisteiden sijoittuminenkaan.
+Koko aineiston kartassa ikäluokkapisteet ja sukupuolipisteet ovat pakkautuneet
+maapisteitä tiiviimmin origon ympärille. Ikäluokkapisteiden (koko aineiston
+keskiarvot) selvä kontrasti on vanhimman (a6)ja toiseksi
+nuorimman välillä 1. dimenision suuntaan.
 
-Mikä on maapisteiden ja kahden selittävän (eksogeenisen) muuttujan pisteiden yhteys sarakepisteisiin?
+Ikäluokkapisteet ovat koko aineiston keskiarvopisteitä, niiden sijantia voi
+tulkita pistejoukko kerrallaan kuten maapisteidenkin. Naispiste on tiukassa
+nipussa ikäluokkien a3 ja a4 kanssa aivan origon vasemmalla puolella. Miesten
+keskiarvopiste on hieman origosta oikealle,yhdessä ikäluokan a5 kanssa.
 
-Koko aineiston kartassa ikäluokkapisteet ja sukupuolipisteet ovat pakkautuneet maapisteitä tiiviimmin origon ympärille. Ikäluokkapisteiden (koko aineiston keskiarvot) selvä kontrasti on vanhimman (a6)ja toiseksi nuorimman välillä 1. dimenision suuntaan.
+Lisäpisteet on hyvin esitetty, niiden etäisyyksiä voi luotettavasti arvioida
+kuvasta. Poikkeus on nuorin ikäluokka (a1, qlt = 501). Inertian osuudet (inr)
+ovat yhtä vaatimattomia kuin Belgian (28) ja Saksan (29),
+(m =20, f = 17, a2 = 40, a6 = 83), samoin kontribuutiot akseleiden inertiaan.
+1. dimension kontribuutio (ctr) on suuri (\textgreater800) kaikilla paitsi nuorimmalla
+ikäryhmällä (a1) jolla 2. dimension selittää lähes puolet sen inertiasta (470).
 
-Ikäluokkapisteet ovat koko aineiston keskiarvopisteitä, niiden sijantia voi tulkita pistejoukko kerrallaan kuten maapisteidenkin. Mitään yhteisvaikutuksia ei analysoida eksplisiittisesti. Karttaa voi verrata sukupuoli-ikäluokka yhteisvaikutusmuuttujan analyysin aiemmin. Naispiste on tiukassa nipussa ikäluokkien a3 ja a4 kanssa aivan origon vasemmalla puolella. Miesten keskiarvopiste on hieman origosta oikealle, yhdessä ikäluokan a5 kanssa.
+Karttaa vertaa karttaan \ref{fig:gaCA1map} jossa on esitetty iän ja sukupuolen
+yhteisvaikutusmuuttuja. Pinottu taulu on vaihtoehtoinen tapa, ja kartasta
+\ref{fig:concat1map1} voi päätellä samat asiat: miehet ovat konservatiivisempia
+kuin naiset, iäkkäämmät ovat konservatiivisempia kuin nuoret. Nuorin ikäluokka
+poikkeaa muista.
 
-Taustamuuttujat: numeeristen tulosten tarkastelua
-
-Lisäpisteet on hyvin esitetty, niiden etäisyyksiä voi luotettavasti arvioida kuvasta. Poikkeus on nuorin ikäluokka (a1, qlt = 501). Inertian osuudet (inr) ovat yhtä vaatimattomia kuin Belgian (28) ja Saksan (29), (m =20, f = 17, a2 = 40, a6 = 83), samoin kontribuutiot akseleiden inertiaan. 1. dimension kontribuutio (ctr) on suuri (\textgreater800) kaikilla paitsi nuorimmalla ikäryhmällä (a1) jolla 2. dimension selittää lähes puolet sen inertiasta (470).
-
-Vilkaistaan taas numeerisa tuloksia, varmistetaan tulkinta. Tämän voi poistaa
-lopullisesta versiosta.
+\textbf{tämä poistetaan lopullisesta versiosta}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2296,10 +2237,6 @@ lopullisesta versiosta.
 \end{Highlighting}
 \end{Shaded}
 
-\textbf{edit} Galkussa myös subsetCA-kartta, josta Unkari ja Bulgaria on jätetty pois.
-Ei mitään oleellista lisätietoa, joten ei esitetä tässä. Ensimmäisen dimension
-osuus interitasta laskee ja toisen kasvaa. Kartan selkeys ei parane.
-
 \begin{figure}
 
 {\centering \includegraphics[width=0.9\linewidth]{JH_capaper_files/figure-latex/concat1map2-1} 
@@ -2309,70 +2246,36 @@ osuus interitasta laskee ja toisen kasvaa. Kartan selkeys ei parane.
 \caption{Q1b: Lapsi kärsii jos äiti käy työssä}\label{fig:concat1map2}
 \end{figure}
 
-Sarekkeista E-sarake (täysin eri mieltä) määrittää akseleita vahvasti, kontrastina
-kaksi konservatiivista vastausta (S ja s) ja myös neutraali vaihtoehto (e).
-Numeerista tuloksista nähdään, että ikäluokat vaikuttavat juuri ensimmäiseen tärkeimpään dimensioon.
+Kontribuutionkartan sarekkeista E-sarake (täysin eri mieltä) määrittää akseleita
+vahvasti, kontrastina kaksi konservatiivista vastausta (S ja s) ja myös
+neutraali vaihtoehto (e). Numeeriset tulokset kertovat, että ikäluokat
+vaikuttavat juuri ensimmäiseen tärkeimpään dimensioon.
 
 Belgian ja Saksan pisteet on esitetty kartassa huonosti, samoin nuorin ikäluokka.
 Muiden pisteiden sijaintia voidaan arvioida myös sarakkeiden ja rivipisteiden
 välillä. Ikäluokkien kontrasti on selvä toiseksi nuorimman (a2) ja vanhimman (a6)
 välillä.
 
-\textbf{edit} Ikäluokkapisteet asymmetrisessä kontribuutiokartassa sarakkeiden keskiarvona,
-samoin maapisteet. Esimerkiksi vanhimmassa ikäluokassa on suhteellisesti paljon
-vastauksia samaa mieltä olevia ja neutraaleja ja vähän erimielisiä.
+Kontribuutiokartalla voi arvioida hieman tarkemmin ikäluokkien ja vastausvaihtoehtojen
+yhteyttä sarake kerrallaan. Maltillisesti eri mieltä olevien osuus on suhteellisesti
+suurin nuorimmassa ikäluokassa. Jos a1 - pisteen projisoi konservatiivisen
+S-vastauksen janalle se ei ikäluokista konservatiivisin. Ikäluokat a2 ja a6 ovat
+ääripäitä, muut ikäluokat sijoittuvat lähelle toisiaan mutta liberaalille puolelle.
 
-Hyvin yksinkertainen esimerkki.
-
-\textbf{edit} Mutta tässä esimerkkiaineisto, jossa ei puuttuvia tietoja. Ne olisivatkin
+Esimerkkiaineistossa ei ole puuttuvia tietoja. Ne olisivatkin
 aika pulmallisia, varianssin dekomponointi ei onnistu jos reunajakaumat ovat
-alitauluissa erilaisia.
+alitaulukoissa selvästi erilaisia.
 
-\textbf{Matched matrices} \textbf{edit} Ei omaa lukua, vaan pari kappaletta matriisien pinoamisesta
-ja yhdistelystä.
+Matriisien yhdistely on monipuolinen laajennus. Eräs kiinnostava malli on
+ABBA, kahden rakenteeltaan samanlaisen matriisin yhdistäminen lohkoina. Nimi
+kertoo yhdistetyn matriisin rakenteen (block circulant matrix),
+päällekkäin pinotut A ja B liitetään toiseen pinottuun matriisiin B ja A.
 
-\textbf{k} lyhyesti matriisien yhdistelystä hyvin yleisenä analyysin menetelmänä.
-Voidaan tarkastella luonteeltaan erilaisten muuttujaryhmien tai muuttujien
-yhteyksiä kuten edellisessä esimerkissä.
-
-\textbf{k}Idea: matriisien yhdistämisellä
-saadaan ote monenlaiseen tutkimusongelmaan. Benzecri: data-analyysissä on vain
-löydettävä oikea matriisi joka diagonalisoidaan.
-
-Ref:CAip ss. 177 \citep{RefWorks:doc:5a857a43e4b0ed2d44664d78}, HY2017\_MCA, Greenacre JAS 2013
-(sovellus ISSP 1989,4 kysymystä `pitäisikö äidin olla kotona', 8 maata), tässä
-artikkelissa ``SVD-based methods'',joista yksi CA (muut biplots, PCA, compositional data/log ratios).
-\citep{RefWorks:doc:5b6f159ce4b0bc0f31734b76}
-
-Ryhmien välisen ja ryhmien sisäinen inertian erottaminen, \textbf{ABBA}
-on yksi ratkaisu (ABBA matrix, teknisesti block circular matrix).
-
-Edellisen menetelmän variantti, jossa ryhmien väliset ja sisäiset erot saadaan
-esiin. Inertian jakaminen.
-
-Samanlaisten rivien ja sarakkeiden kaksi samankokoista taulua, esimerkiksi
-sukupuolivaikutusten arviointi. Alkuperäinen taulukko jaetaan kahdeksi tauluksi
-sukupuolen mukaan. Matriisien yhdistäminen (concatenation) riveittäin tai
-sarakkeittain ei näytä optimaalisesti mm - matriisien eroja.
-
-Luokittelu voi olla myös kahden indikaattorimuuttujan avulla jako neljään
-taulukkoon (esim. miehet vs.~naiset länsieuroopassa verratuna samaan asetelmaan
-itä-Euroopassa). Samaa ideaa laajennetaan.
-
-Esimerkkinä ``Attitudes to women working in 2012''.
-
-\textbf{ABBA}``We consider the joint analysis of two matched matrices which have common
-rows and columns, for example multivariate data observed at two time points or split
-according to a dichotomous variable. Methods of interest include principal components
-analysis for interval-scaled data, correspondence analysis for frequency data, log-ratio
-analysis of compositional data and linear biplots in general, all of which depend on the
-singular value decomposition. A simple result in matrix algebra shows that by setting up
-two matched matrices in a particular block format, matrix sum and difference components
-can be analysed using a single application of the singular value decomposition algorithm.
-The methodology is applied to data from the International Social Survey Program
-comparing male and female attitudes on working wives across eight countries. The resulting
-biplots optimally display the overall cross-cultural differences as well as the male--female
-differences. The case of more than two matched matrices is also discussed.''
+Matriiseilla on samat rivit ja sarakkeet, esimerkiksi miesten ja naisten
+vastausprofiilit yhteen kysymykseen aittain luokiteltuina.Kokonaisinertia
+saadaan dekomponoitua ryhmien sisäiseen ja väliseen hajontaan kahdelle kartalle.
+Toinen kuvaa maiden välisiä eroja ja toinen maiden sisäisiä sukupuolten välisiä
+eroja (CAiP ss. 177-)
 
 \hypertarget{mca---monimuuttujakorrespondenssianalyysi}{%
 \section{MCA - monimuuttujakorrespondenssianalyysi}\label{mca---monimuuttujakorrespondenssianalyysi}}
@@ -2391,21 +2294,16 @@ Faktorianalyysi tässä selkein vertailukohde
 perustapauksen selkeät tulkinnat eivät toimi. Tärkeä asia: CA:n skaalausominaisuudet ja
 visuaalinen tulkinta pätevät edelleen.
 
-\textbf{edit} Teorialiitteessä tästä enemmän, ranskalaiset hieman eri mieltä
 \textbf{Viitteitä}
 
 MG ja MG\&Prado ovat tutkineet ISSP-datalla tätä ongelmaa.
-Biplots In practice - kirja \citep{RefWorks:doc:5a857a43e4b0ed2d44664d7c}, ss.142-
-``dimensions of middleness''. Mg ja Prado artikkelissaan
+\citep[ , ss.142-]{RefWorks:doc:5a857a43e4b0ed2d44664d7c}, ``dimensions of middleness''.
+
 \citep{RefWorks:doc:5a857a44e4b0ed2d44664d87} ja samasta teemasta laajentaen
 kokoomateoksessa \citep{RefWorks:doc:5ab76b43e4b003f4468d1f07}, ss. 197-217.
+
 Aineistona jälkimmäisessä tutkimuksessa on sama kysymyssarja kuin tässä 1994
-datasta. Kysymyksissä on jonkin verran eroja. Ensimmäisessä artikkelissa he kommentoivat vertaisarvioitsijoiden ehdotuksia. Kuvia voisi selkiyttää esittämällä vain osan
-pisteistä sarjassa karttoja, mutta ratkaisu perustuisi siinäkin koko dataan ja
-sitä nimenomaan ei haluta. Toinen ehdotus on yhdistää ne vastausvaihtoehdot jotka
-eivät ole tutkimuksen kohteena yhdeksi yhdistetyksi kategoriaksi. Tällöin osajoukon
-korrespondenssianalyysin kätevä inertia dekomponointi osajoukille ei toimisi. Ratkaisu
-ei toimi ollenkaan yleisimmissä osajoukoissa.
+datasta. Kysymyksissä on jonkin verran eroja.
 
 \textbf{k} Data
 
@@ -2447,8 +2345,6 @@ MCA-analyyseihin valitun 7 + 3 = 10 muuttujan aineiston havainnoista 81\% on
 vailla puuttuvia tietoja. Jos puuttuvat tiedot poistetaan (ns. ``listwise delete'',
 poistetaan jos yksi tai useampi tieto puuttuu) viidesosa datasta jää pois.
 
-\textbf{k} lyhyt kappale - puuttuvien tietojen käsittely on laaja aihe. Otantamenetelmissä ja survey-aineistojen (kyselytutkimusten) oppaissa käsitelty monipuolisesti.
-
 \textbf{k} Miten liittyy tähän? CA on koko aineiston kuvailevaa analyysiä, ei päättelyä
 otoksesta perusjoukon tasolle. Miten puuttuvia vastauksia voisi kuvailla? Toisaalta
 edellisen jakson menetelmien soveltaminen on mahdotonta, jos jotain ei tehdä
@@ -2467,10 +2363,13 @@ Aineistossa on 32 823 havaintoa ja seitsemän muuttujaa.
 \caption{MCA: Seitsemän kysymystä - 25 maata, kartta 1}\label{fig:MCA1map1}
 \end{figure}
 
-\textbf{k} Perustulkinta: Inertian selitysosuudet ovat paljon pienempiä, ja ratkaisu
+\textbf{k Perustulkinta:} Inertian selitysosuudet ovat paljon pienempiä, ja ratkaisu
 on selvästi kaksiulotteinen. Puuttuvat vastaukset erottuvat omana ryhmänä, ja
 varsinaiset vastaukset ovat pakkautuneet y-akselin oikealle puolelle. Niiden erot
-näkyvät vain toisessa dimensiossa. Ensimmäinen dimensio kuvaa vastaamattomuutta (syystä tai toisesta) vs.~kaikkia vastauksia.
+näkyvät vain toisessa dimensiossa. Ensimmäinen dimensio kuvaa vastaamattomuutta
+(syystä tai toisesta) vs.~kaikkia vastauksia. Kokonaisinertiaa on korjattu
+pienemmäksi (ns. adjustedineritia, kts. liite 1),
+selitetyn inertian osuus on realistinen arvio.
 
 Pystyakselin suuntaan kontrasti näyttäisi olevan konservatiiviset ylhäällä,
 modernit ja liberaalimmat alhaalla. Pisteitä on vaikea erottaa toisistaan.
@@ -2488,13 +2387,13 @@ Karttaa voi parantaa lisäämällä siihen vastaajien (n= 32 823) pisteet (viite
 
 Jokainen havainto on sarakevektoreiden keskiarvopiste. Sarakevektoreita ei voi
 tulkita yhtä selkeästi kuin yksinkertaisessa korrespondenssianalyysissä. Ne eivät
-edusta kysymystä vaan kysymyksen yhtä vastauskategoriaa, pitkä jono nollia ja ykkösiä.
+edusta kysymystä vaan kysymyksen yhtä vastauskategoriaa.
+
 Rivipiste on vastauksiaan vastaavien sarakepisteiden keskiarvopiste. Jos vastaaja on valinnut
 vaihtoehdot (a1S, a2s,\ldots, b2?) se on näiden pisteiden keskiarvopiste.
 
 Oleellista MCA-kartan tulkinnassa on kuitenkin yleiskuvan muodostaminen, geometrinen
-tulkinta on hieman hankala. Skaalausominaisuudet MCA kuitenkin säilyttää (\textbf{Viite},
-teorialiitteessä hieman tarkemmin).
+tulkinta on hieman hankala. Skaalausominaisuudet MCA kuitenkin säilyttää (kts. liite 1).
 
 Myös riviprofiilit ovat samanlaisia, jokaisella rivilla on kuudessa kategoriassa (vastaukset
 ja puuttuva tieto) nollia ja yksi ykkönen. Rivien välistä etäisyyttä määrittelevä ainoastaa
@@ -2512,15 +2411,6 @@ Pieni joukko määrää koko kartan koordinaatiston.
 
 \textbf{k} Osajoukon MCA ratkaisee ongelman tyylikkäästi.
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{JH_capaper_files/figure-latex/subsetMCA1map1-1} 
-
-}
-
-\caption{MCA: Seitsemän kysymystä - 25 maata, kartta 3}\label{fig:subsetMCA1map1}
-\end{figure}
-
 \textbf{k} Tulkinta: kontrasti ``ääripäiden'' välillä, vahvat mielipiteet (S ja E) hallitsevat vasenta alakulmaa ja oikeaa laitaa x-akselin tuntumassa. Maltilliset
 vastaukset ja neutraali vaihtoehto ovat ylhäällä vasemmalla.
 
@@ -2530,17 +2420,7 @@ akselin vahvojen mielipiteiden ryppäiden välille. Muut vastaukset ovat
 ns. kaariefektin mukaisesti näiden välisellä U-muotoisella linjalla. Tämä kuuluisa Guttan efekti kertoo järjestysasteikon muuttujien korrelaatiosta, hyvä asia kun
 kysymyksillä luodataan asenteita naisten työssäkäyntiin. Kaariefekti on myös ``geometrinen välttämättömyys'', tarkemmin teorialiitteessä.
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{JH_capaper_files/figure-latex/subsetMCA1map2-1} 
-
-}
-
-\caption{MCA: Seitsemän kysymystä - 25 maata, kartta 4}\label{fig:subsetMCA1map2}
-\end{figure}
-
-Kun kartalle lisätään havainnot, nähdään selvästi kuinka suuri hajonta on havaintojen
-pilvessä verrattuna vastauskategorioiden pilveen.
+\textbf{edit: karttojen otsikot tarkistettava}
 
 \begin{figure}
 
@@ -2548,7 +2428,7 @@ pilvessä verrattuna vastauskategorioiden pilveen.
 
 }
 
-\caption{MCA: Seitsemän kysymystä - 25 maata, kartta 5}\label{fig:subsetMCA1map3}
+\caption{MCA: Seitsemän kysymystä - 25 maata, kartta 3}\label{fig:subsetMCA1map3}
 \end{figure}
 
 \textbf{k1} inertian ``adjusted'', kts. liite1.
@@ -2558,9 +2438,10 @@ of middleness''?
 
 Dimension of middelness, on viitteitä mutta ei ihan selvä.
 
-Neutraalin vaihtoehdon (?) sarakkeet ovat huonosti esitettyjä, mutta vain kolme selvästi (e1? 475 c1? 571 ja b1? 573).
+Neutraalin vaihtoehdon (?) sarakkeet ovat huonosti esitettyjä, mutta vain kolme selvästi
+(e1? 475 c1? 571 ja b1? 573).
 
-\textbf{TÄHÄN VOISI LOPETTAA - EI KAHTA PITÄÄ TULOSTETTA KUN NIITÄ EI TARKEMMIN ANALYSOIDA}
+\textbf{TÄHÄN VOISI LOPETTAA - EI KAHTA PITKÄÄ TULOSTETTA KUN NIITÄ EI TARKEMMIN ANALYSOIDA}
 
 \textbf{edit2 - harkitaan näitä}
 \textbf{MCA - numeeriset tulokset}
@@ -2774,19 +2655,17 @@ data streams''\citep{RefWorks:doc:5f01c74be4b0d3d8328c72ca}.
 \section*{Korrespondenssianalyysin perusyhtälöt ja kaavat}\label{korrespondenssianalyysin-perusyhtuxe4luxf6t-ja-kaavat}}
 \addcontentsline{toc}{section}{Korrespondenssianalyysin perusyhtälöt ja kaavat}
 
-Tässä lähteenä Greenacren kirja\citep{RefWorks:doc:5a857a43e4b0ed2d44664d78} (ca in practice) ja sen liite
-``Theory of CA''.
-
-\textbf{edit} Muistiinpanoja löytyy, joissa viitataan myös Biplots in practice - kirjaan.
-Kevään 2017 kurssin luentokalvoja on myös käytetty. Lisäillään vielä käsitteitä
-LeRouxin ja Rouanetin kirjasta, jos on tarvis.
+Perusyhtälöt on esitetty teoksen ``Correspondece Analysis in Practice''\citep{RefWorks:doc:5a857a43e4b0ed2d44664d78}
+liitteen ``Theory of Correspondece Analysis'' mukaisesti.
 
 Datamatriisilla \(\boldsymbol{N}\) on \(I\) riviä ja \(J\) sarakketta (\(I x J\) ).
 Alkiot ovat ei-negatiivisia (eli nollat sallittuja) ja samassa mitta-asteikossa.
 Jos mitta-asteikko on intervalli- tai suhdeasteikko, mittayksiköiden on oltava
-samoja (esim. euroja, metrejä). Taulukon alkioiden summa on
+samoja (esim. euroja, metrejä). Tietyin ehdoin myös negatiiviset luvut ovat
+sallittuja \citep[ s. 60]{RefWorks:doc:5a857a43e4b0ed2d44664d75}.
+
+Taulukon alkioiden summa on
 \(\sum_{i} \sum_{j}n_{ij} = n\), missä \(i = 1, \dots , I\) ja \(j = 1, \dots , J\).
-GDA-kirjassa on tarkennettu tätä vaatimusta ei-negatiivisuudesta.
 
 Korrespondenssimatriisi \(\boldsymbol{P}\) saadaan jakamalla matriisin
 \(\boldsymbol{N}\) alkiot niiden summalla \(n\) .
@@ -2797,9 +2676,7 @@ Merkitään matriisin \(\boldsymbol{P}\) rivisummien vektoria
 Niitä vastaavat diagonaalimatriisit ovat \(\boldsymbol{D_r}\) ja
 \(\boldsymbol{D_c}\).
 
-Korrespondenssianalyysin ratkaistaan singluaariarvohajoitelman avulla. Hyvin
-yleinen tulos, jostain syystä tilastotieteessä tullu tunnetuksi melko myöhään
-(Mustonen 1985).
+Korrespondenssianalyysin ratkaistaan singluaariarvohajoitelman avulla.
 
 Singulaariarvohajoitelma (singular value decomposition) tuottaa ratkaisun kun
 sitä sovelletaan standardoituun residuaalimatriisiin \(\boldsymbol{S}\).
@@ -2823,10 +2700,10 @@ Residuaalimatriisi voidaan esittää myös ns. kontingenssi-suhdelukujen
 \end{equation}
 
 Toinen esitystapa on hyödyllinen, kun tarkastellaan CA:n yhteyksiä muihin
-läheisiin menetelmiin. Näitä menetelmiä kuten myös korrespondenssianalyysiä kutsutaan monilla
-nimillä:``suhteellisten osuuksien datan'' analyysi (log ratio analysis of compositiona data),
-moniulotteinen skaalaus, lineaarinen diskriminanttianalyysi, kanoninen korrelaatioanalyysi,
-pääkomponettianalyysi, kaksoiskuvat ja muutä SVD-hajoitelmaan perustuvat dimensioden
+läheisiin menetelmiin. Näitä ovat esimerkiksi ``suhteellisten osuuksien datan''
+analyysi (log ratio analysis of compositiona data),moniulotteinen skaalaus,
+lineaarinen diskriminanttianalyysi, kanoninen korrelaatioanalyysi,
+pääkomponettianalyysi, kaksoiskuvat ja muut SVD-hajoitelmaan perustuvat dimensioden
 vähentämisen menetelmät.
 
 Samat kaavat voi esittää myös alkiomuodossa:
@@ -2842,10 +2719,10 @@ s_{ij} = \sqrt{r_{i}} \left( \frac{p_{ij}}{r_{i}c_{j}} \right) \sqrt{c_{j}} \;\;
 \label{eq:contrat21}
 \end{equation}
 
-Alkimuodosasa esitetyistä kaavoista näkee intuitivisesti rivi- ja sarakeratkaisujen sidoksen.
+Alkimuodosasa esitetyistä kaavoista näkee rivi- ja sarakeratkaisujen sidoksen.
 Ratkaisujen duaalisuus on teoreettinen tulos, jonka voi perustella täsmällisesti
-algebrallisen geometrian avulla. Käytännössä rivi- ja sarekeongelman duaalisuus tarkoittaa sitä,
-että vain toinen ongelma on ratkaistava.
+algebrallisen geometrian avulla. Käytännössä rivi- ja sarekeongelman duaalisuus
+tarkoittaa sitä, että vain toinen ongelma on ratkaistava.
 
 Singulaariarvohajoitelma (singular value decomposition, SVD) matriisille \(\boldsymbol{S}\) on
 
@@ -2861,7 +2738,7 @@ Matriisit \(\boldsymbol{U}\) ja \(\boldsymbol{V}\) ovat ortogonaalisia
 singulaarivektoreiden matriiseja. Singulaariarvohajoitelman merkitys dimensioiden
 vähentämiselle perustuu Eckart - Young - teoreemaan. Teoreema kertoo
 että saamme pienimmän neliösumman \(m\) - ulotteisen approksimaation matriisille
-\(\boldsymbol{S}\) (CAinP, ss. 244) matriisien \(\boldsymbol{U}\) ja \(\boldsymbol{V}\)
+\(\boldsymbol{S}\) matriisien \(\boldsymbol{U}\) ja \(\boldsymbol{V}\)
 ensimmäisten sarakkeiden ja ensimmäisten singulaariarvojen avulla.
 
 \begin{equation}
@@ -2873,7 +2750,7 @@ Korrrespondenssianalyysin ratkaisualgoritmissa tätä tulosta on muokattava niin
 että rivien ja sarakkeiden massat huomioidaan pienimmän neliösumman
 approksimaatiossa painoina.
 
-Näin saadaan standardikoordinaatit ja principal-koordinaatit riveille ja
+Näin saadaan standardikoordinaatit ja pääkoordinaatit riveille ja
 sarakkeille.
 
 Rivien standardikoordinaatit
@@ -2915,8 +2792,8 @@ kyselytutkimusdatoissa inertia on yleensä paljon maksimia pienempi. Asymmetrisi
 kartoissa ideaalipisteet ovat kaukana origon lähelle pakkauteesta havaintojen
 pilvestä.
 
-Korespondenssianalyysi ratkaisun akseleiden inertiaa kutsutaan usein ominaisarvoksi,
-mutta periaatteessa SVD-ratkaisulla saadaan singulaariarvot, ja niiden neliöt ovat
+Korespondenssianalyysi ratkaisun akseleiden inertioita kutsutaan usein ominaisarvoiksi,
+mutta periaatteessa SVD-ratkaisulla saadaan singulaariarvot. Niiden neliöt ovat
 akseleiden inertioita. Ominaisarvojen ja sigulaariarvojen yhteys on läheinen ja
 riippuu diagonalisoitavan matriisin ominaisuuksista.
 
@@ -2936,10 +2813,10 @@ p_ {ij}= r_{i}c_{j} \left(1 + \sum_{k=1}^{K} \sqrt{\lambda_{k}} \phi_{ik} \gamma
 Tässä viitataan s. 101 (13.4), 109 (14.9), ja 109-110 (14.10 ja 14.11).
 Palautuskavoilla on monta esitystapaa bilineaarisessa mallissa.
 
-Rivien ja sarakkeiden riippuvuus ja transitioyhtälöt. ss. 244, 108-109 skalaariversiot.
+Rivien ja sarakkeiden riippuvuutta kuvaavat transitioyhtälöt (transition equations).
 
-Pääkoordinaatit standardikoordinaattien funktiona
-(ns. barysentrinen ominaisuus - barycentric relationships)
+Pääkoordinaatit standardikoordinaattien funktiona (barysentrinen ominaisuus,
+barycentric relationships):
 
 \begin{equation}
 \boldsymbol{F} = \boldsymbol{D}_{r}^{-1} \boldsymbol{P}\boldsymbol{\Gamma}
@@ -2951,7 +2828,7 @@ Pääkoordinaatit standardikoordinaattien funktiona
 \label{eq:barysentr2}
 \end{equation}
 
-Pääkoordinaatit pääkoordinaattien funktiointa:
+Pääkoordinaatit pääkoordinaattien funktiona:
 
 \begin{equation}
 \boldsymbol{F} = \boldsymbol{D}_{r}^{-1} \boldsymbol{P}\boldsymbol{G}\boldsymbol{D}_{\lambda}^{-\frac{1}{2}}
@@ -2967,8 +2844,8 @@ Yhtälöt \eqref{eq:barysentr1} ja \eqref{eq:barysentr1} esittävät profiilipis
 painotettuina keskiarvoina, painoina profiilin elementit. Asymmetriset kartat
 (rivien tai sarakkeiden suhteen) perustuvat näihin yhtälöihin. Yhtälöiden \eqref{eq:barysentr3}
 ja \eqref{eq:barysentr4} kahdet pääkoordinaatit ovat perusta symmetrisille kartoille. Myös niitä
-yhdistää barisentrinen painotetun keskiarvon riippuvuus, mutta mukana ovat skaalaustekijät
-\(\frac{1}{\sqrt{\lambda_{i}}}\). Skaalaustekijä on jokaisessa dimensiossa sen inertia, suurimmasta pienimpään.
+yhdistää barysentrinen painotetun keskiarvon riippuvuus, mutta mukana ovat skaalaustekijät
+\(\frac{1}{\sqrt{\lambda_{i}}}\).
 
 \textbf{Pisteet ja projektio aliavaruuteen}
 
@@ -3091,6 +2968,26 @@ diagonaalilla olevat alimatriisit. Näillä korjauksilla ei ole vaikutusta karta
 sijaintiin. Tämä menetelmä on ca-paketin mjca-funktion oletus.
 
 Kolmas vaihtoehto on ns. yhdistetty korrespondenssianalyysi (joint ca).
+
+Greenacre on kirjoittanut useissa yhteyksissä MCA:n geometrisen tulkinnan ongelmista.
+\citet{RefWorks:doc:5a857a44e4b0ed2d44664d84} (s. 447) sanovat asian näin:``Finally, although
+we have motivated simple correspondence analysis from the geometric point of view,
+the geometry of the indicator matrix in multiple correspondence analysis is
+admittedly not convincing. Distances between the row profiles of an indicator
+matrix and projections of articficial column vertices have less intuitive appeal.
+However, the scaling interpretation remains attractive in this case; the displays
+are graphical representations of optimal scale values for the categories.''
+
+Greenacre jatkaa samasta aiheesta artikkelikokoelmassa
+\citep[ , s. 41, s. 61]{RefWorks:doc:5ab76b43e4b003f4468d1f07}: ``Yleistys useammalle
+kuin kahdelle muuttujalle ei ole ilmeinen eikä hyvin määritelty''. Siti MCA
+onnistuu esittämään hyvin kiinnostavia yhteyksiä muuttujien välillä (``succesfully
+recovers interesting patterns of association''). Kriittisyys ei kuitenkaan
+estä häntä soveltamasta MCA-analyysiä. Tulkitsen tämän niin, että menetelmää voi
+aivan hyvin soveltaa, mutta geometrista tulkintaa ei voi suoraan siirtää CA-kartoista
+MCA.karttoihin. Greenacre esittelee perusteellisesti MCA-sovelluksia kaksoiskuvia
+käsittelevässä kirjassaan \citep{RefWorks:doc:5a857a43e4b0ed2d44664d7c}. Ehkä
+korrespondenssianalyysin matemaattinen teoria ei ole vielä täysin valmis?
 
 \hypertarget{liite-2-tekninen-ympuxe4ristuxf6-ja-bookdown-paketti}{%
 \chapter*{Liite 2: Tekninen ympäristö ja Bookdown-paketti}\label{liite-2-tekninen-ympuxe4ristuxf6-ja-bookdown-paketti}}
@@ -4632,8 +4529,6 @@ julkaisutekniikan ympäristön.
         \DataTypeTok{sub =} \StringTok{"Massat: pisteiden ja symbolien koko "}\NormalTok{ )}
 
 
-\CommentTok{# ca-paketin manuaali väittää, että tässä tulostetaan principal-koordinaatit mutta nämä ovat}
-\CommentTok{# standardikoordinaatteja.}
 \KeywordTok{print}\NormalTok{(suppointCA2)}
 
 
@@ -4921,10 +4816,11 @@ julkaisutekniikan ympäristön.
 
 
 \CommentTok{# pisteiden kasautumien haittaa haittaa tulkintaa}
+
 \KeywordTok{par}\NormalTok{(}\DataTypeTok{cex =} \FloatTok{0.6}\NormalTok{) }
 \KeywordTok{plot}\NormalTok{(Concat1jh.CA1,}
-     \DataTypeTok{main =} \StringTok{"Pinottu taulukko - symmetrinen kuva1"}\NormalTok{,}
-     \DataTypeTok{sub =} \StringTok{"a1-a6 ikäluokat, m = miehet, f = naiset, Q1b (cex=0.6)"}
+     \DataTypeTok{main =} \StringTok{"Pinottu taulukko - symmetrinen kartta"}\NormalTok{,}
+     \DataTypeTok{sub =} \StringTok{"ikäluokat a1-a6, m = miehet, f = naiset"}
 \NormalTok{     )}
 
 
@@ -4936,11 +4832,12 @@ julkaisutekniikan ympäristön.
 
 \KeywordTok{par}\NormalTok{(}\DataTypeTok{cex =} \FloatTok{0.6}\NormalTok{)}
 \KeywordTok{plot}\NormalTok{(Concat1jh.CA1, }\DataTypeTok{map =} \StringTok{"rowgreen"}\NormalTok{,}
-     \DataTypeTok{mass =} \KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{),}
+     \CommentTok{#mass = c(TRUE, TRUE) ei oikein erotu kuvassa}
      \DataTypeTok{contrib =}\KeywordTok{c}\NormalTok{(}\StringTok{"relative"}\NormalTok{, }\StringTok{"absolute"}\NormalTok{),}
      \DataTypeTok{arrows =} \KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{),}
-     \DataTypeTok{main =} \StringTok{"Pinottu taulukko, kontribuuutiokartta (suhteellinen, absoluuttinen)"}\NormalTok{,}
-     \DataTypeTok{sub =} \StringTok{"a1-a6 ikäluokat, m = miehet, f = naiset, massat pisteiden koko"}
+     \DataTypeTok{main =} \StringTok{"Pinottu taulukko, kontribuutiokartta"}\NormalTok{,}
+     \DataTypeTok{sub =}  \StringTok{"    sarakkeet absoluuttinen kontribuutio, rivit suhteellinen,}
+\StringTok{     taustamuuttujat a1-a6 ikäluokat, m = miehet, f = naiset"}
 \NormalTok{     )}
 
 
@@ -5165,8 +5062,8 @@ julkaisutekniikan ympäristön.
 
 \KeywordTok{par}\NormalTok{(}\DataTypeTok{cex =} \FloatTok{0.6}\NormalTok{)}
 \KeywordTok{plot.mjca}\NormalTok{(Qmuuttujat1.mca, }\DataTypeTok{labels =} \KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{),}
-          \DataTypeTok{main =} \StringTok{"Kysymykset Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b"}\NormalTok{,}
-          \DataTypeTok{sub =} \StringTok{"vastaukset S-s-?-e-E-P "}
+          \DataTypeTok{main =} \StringTok{"Symmetrinen kartta"}\NormalTok{,}
+          \DataTypeTok{sub =} \StringTok{"Kysymykset Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b, vastaukset S-s-?-e-E-P "}
 \NormalTok{          )}
 
 
@@ -5174,8 +5071,8 @@ julkaisutekniikan ympäristön.
 \KeywordTok{par}\NormalTok{(}\DataTypeTok{cex=}\FloatTok{0.6}\NormalTok{)}
 \KeywordTok{plot.mjca}\NormalTok{(Qmuuttujat1.mca, }\DataTypeTok{what =} \KeywordTok{c}\NormalTok{(}\StringTok{"all"}\NormalTok{,}\StringTok{"all"}\NormalTok{),}\DataTypeTok{labels =} \KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{2}\NormalTok{),}
           \DataTypeTok{col =} \KeywordTok{c}\NormalTok{(}\StringTok{"lightblue"}\NormalTok{, }\StringTok{"red"}\NormalTok{),}
-           \DataTypeTok{main =} \StringTok{"Kysymykset Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b"}\NormalTok{,}
-          \DataTypeTok{sub =} \StringTok{"vastaukset S-s-?-e-E-P, havainnot (n = 32 823) "}
+           \DataTypeTok{main =} \StringTok{"Symmetrinen kartta"}\NormalTok{,}
+          \DataTypeTok{sub =} \StringTok{"Kysymykset Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b,vastaukset S-s-?-e-E-P, havainnot (n = 32 823)"}
 \NormalTok{          )}
 
 
@@ -5207,11 +5104,15 @@ julkaisutekniikan ympäristön.
 
 \NormalTok{Qmuuttujat2.mca <-}\StringTok{ }\KeywordTok{mjca}\NormalTok{(mcaDat11jh.dat, }\DataTypeTok{ps=}\StringTok{""}\NormalTok{, }\DataTypeTok{subsetcat=}\NormalTok{eiPvastaukset)}
 
-\KeywordTok{plot.mjca}\NormalTok{(Qmuuttujat2.mca,}
-          \DataTypeTok{main=}\StringTok{"Seitsemän kysymystä, viisi vastausvaihtoehtoa"}\NormalTok{,}
-          \DataTypeTok{sub =} \StringTok{"subset: ei puuttuvien vastausten kategorioita(*P)"}\NormalTok{)}
+\CommentTok{# Kontribuutiokartta on tarpeeksi selkeä, muutujien tunnukset erottuvat.}
+\CommentTok{# Jätetään tämä kuva pois (25.11.20)}
+\CommentTok{#}
+\CommentTok{#plot.mjca(Qmuuttujat2.mca,}
+\CommentTok{#          main="Seitsemän kysymystä, viisi vastausvaihtoehtoa",}
+\CommentTok{#          sub = "subset: ei puuttuvien vastausten kategorioita(*P)")}
 
 
+\CommentTok{# jätettään symmetrinen kartta pois, asymmetrinen on parempi (25.11.20)}
 
 \KeywordTok{plot.mjca}\NormalTok{(Qmuuttujat2.mca,}
           \DataTypeTok{what =} \KeywordTok{c}\NormalTok{(}\StringTok{"all"}\NormalTok{,}\StringTok{"all"}\NormalTok{),}\DataTypeTok{labels =} \KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{2}\NormalTok{),}
@@ -5224,8 +5125,8 @@ julkaisutekniikan ympäristön.
 \KeywordTok{plot.mjca}\NormalTok{(Qmuuttujat2.mca, }\DataTypeTok{map =} \StringTok{"rowprincipal"}\NormalTok{,}
           \DataTypeTok{what =} \KeywordTok{c}\NormalTok{(}\StringTok{"all"}\NormalTok{,}\StringTok{"all"}\NormalTok{),}\DataTypeTok{labels =} \KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{2}\NormalTok{),}
           \DataTypeTok{col =} \KeywordTok{c}\NormalTok{(}\StringTok{"lightblue"}\NormalTok{, }\StringTok{"red"}\NormalTok{),}
-          \DataTypeTok{main=}\StringTok{"Seitsemän kysymystä, viisi vastausvaihtoehtoa - asymmetrinen kartta"}\NormalTok{,}
-          \DataTypeTok{sub =} \StringTok{"subset: ei puuttuvien vastausten kategoriaa (*P)"}\NormalTok{)}
+          \DataTypeTok{main=}\StringTok{"Asymmetrinen kartta - osajoukko: ei puuttuvia vastauksia"}\NormalTok{,}
+          \DataTypeTok{sub =} \StringTok{"Kysymykset Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b, vastaukset S-s-?-e-E-P"}\NormalTok{)}
 
 
 

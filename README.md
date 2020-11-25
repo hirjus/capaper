@@ -213,3 +213,5 @@ samanmoinen päivitys.
 
 **24.11.2020** Luku 7, puuttuu vielä MCA-analyysin siistitty teksti. Teorialiitteeseen lisätty
 tekstiä MCA-tulkinnoista.
+
+**25.11.2020** Pieniä korjauksia, luvun 7 viimeistelyä.

@@ -197,17 +197,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Liite 1: Korrespondenssianalyysin teoriaa</h1>
 <div id="korrespondenssianalyysin-perusyhtälöt-ja-kaavat" class="section level2 unnumbered">
 <h2>Korrespondenssianalyysin perusyhtälöt ja kaavat</h2>
-<p>Tässä lähteenä Greenacren kirja<span class="citation">(M. J. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span> (ca in practice) ja sen liite
-“Theory of CA”.</p>
-<p><strong>edit</strong> Muistiinpanoja löytyy, joissa viitataan myös Biplots in practice - kirjaan.
-Kevään 2017 kurssin luentokalvoja on myös käytetty. Lisäillään vielä käsitteitä
-LeRouxin ja Rouanetin kirjasta, jos on tarvis.</p>
+<p>Perusyhtälöt on esitetty teoksen “Correspondece Analysis in Practice”<span class="citation">(M. J. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>
+liitteen “Theory of Correspondece Analysis” mukaisesti.</p>
 <p>Datamatriisilla <span class="math inline">\(\boldsymbol{N}\)</span> on <span class="math inline">\(I\)</span> riviä ja <span class="math inline">\(J\)</span> sarakketta (<span class="math inline">\(I x J\)</span> ).
 Alkiot ovat ei-negatiivisia (eli nollat sallittuja) ja samassa mitta-asteikossa.
 Jos mitta-asteikko on intervalli- tai suhdeasteikko, mittayksiköiden on oltava
-samoja (esim. euroja, metrejä). Taulukon alkioiden summa on
-<span class="math inline">\(\sum_{i} \sum_{j}n_{ij} = n\)</span>, missä <span class="math inline">\(i = 1, \dots , I\)</span> ja <span class="math inline">\(j = 1, \dots , J\)</span>.
-GDA-kirjassa on tarkennettu tätä vaatimusta ei-negatiivisuudesta.</p>
+samoja (esim. euroja, metrejä). Tietyin ehdoin myös negatiiviset luvut ovat
+sallittuja <span class="citation">(Roux ja Rouanet <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>, 60)</span>.</p>
+<p>Taulukon alkioiden summa on
+<span class="math inline">\(\sum_{i} \sum_{j}n_{ij} = n\)</span>, missä <span class="math inline">\(i = 1, \dots , I\)</span> ja <span class="math inline">\(j = 1, \dots , J\)</span>.</p>
 <p>Korrespondenssimatriisi <span class="math inline">\(\boldsymbol{P}\)</span> saadaan jakamalla matriisin
 <span class="math inline">\(\boldsymbol{N}\)</span> alkiot niiden summalla <span class="math inline">\(n\)</span> .</p>
 <p>Merkitään matriisin <span class="math inline">\(\boldsymbol{P}\)</span> rivisummien vektoria
@@ -215,9 +213,7 @@ GDA-kirjassa on tarkennettu tätä vaatimusta ei-negatiivisuudesta.</p>
 <span class="math inline">\(\boldsymbol{c}\)</span> (= <span class="math inline">\((c_{1}, \dots, c_{J})\)</span>).
 Niitä vastaavat diagonaalimatriisit ovat <span class="math inline">\(\boldsymbol{D_r}\)</span> ja
 <span class="math inline">\(\boldsymbol{D_c}\)</span>.</p>
-<p>Korrespondenssianalyysin ratkaistaan singluaariarvohajoitelman avulla. Hyvin
-yleinen tulos, jostain syystä tilastotieteessä tullu tunnetuksi melko myöhään
-(Mustonen 1985).</p>
+<p>Korrespondenssianalyysin ratkaistaan singluaariarvohajoitelman avulla.</p>
 <p>Singulaariarvohajoitelma (singular value decomposition) tuottaa ratkaisun kun
 sitä sovelletaan standardoituun residuaalimatriisiin <span class="math inline">\(\boldsymbol{S}\)</span>.</p>
 <p><span class="math display" id="eq:svd1">\[\begin{equation}
@@ -235,10 +231,10 @@ sitä sovelletaan standardoituun residuaalimatriisiin <span class="math inline">
 \tag{8.3}
 \end{equation}\]</span></p>
 <p>Toinen esitystapa on hyödyllinen, kun tarkastellaan CA:n yhteyksiä muihin
-läheisiin menetelmiin. Näitä menetelmiä kuten myös korrespondenssianalyysiä kutsutaan monilla
-nimillä:“suhteellisten osuuksien datan” analyysi (log ratio analysis of compositiona data),
-moniulotteinen skaalaus, lineaarinen diskriminanttianalyysi, kanoninen korrelaatioanalyysi,
-pääkomponettianalyysi, kaksoiskuvat ja muutä SVD-hajoitelmaan perustuvat dimensioden
+läheisiin menetelmiin. Näitä ovat esimerkiksi “suhteellisten osuuksien datan”
+analyysi (log ratio analysis of compositiona data),moniulotteinen skaalaus,
+lineaarinen diskriminanttianalyysi, kanoninen korrelaatioanalyysi,
+pääkomponettianalyysi, kaksoiskuvat ja muut SVD-hajoitelmaan perustuvat dimensioden
 vähentämisen menetelmät.</p>
 <p>Samat kaavat voi esittää myös alkiomuodossa:</p>
 <p><span class="math display" id="eq:contrat11">\[\begin{equation}
@@ -250,10 +246,10 @@ s_{ij} = \frac{p_{ij}-r_{i}c_{j}} { \sqrt{r_{i}c_{j} } }
 s_{ij} = \sqrt{r_{i}} \left( \frac{p_{ij}}{r_{i}c_{j}} \right) \sqrt{c_{j}} \;\;\; .
 \tag{8.5}
 \end{equation}\]</span></p>
-<p>Alkimuodosasa esitetyistä kaavoista näkee intuitivisesti rivi- ja sarakeratkaisujen sidoksen.
+<p>Alkimuodosasa esitetyistä kaavoista näkee rivi- ja sarakeratkaisujen sidoksen.
 Ratkaisujen duaalisuus on teoreettinen tulos, jonka voi perustella täsmällisesti
-algebrallisen geometrian avulla. Käytännössä rivi- ja sarekeongelman duaalisuus tarkoittaa sitä,
-että vain toinen ongelma on ratkaistava.</p>
+algebrallisen geometrian avulla. Käytännössä rivi- ja sarekeongelman duaalisuus
+tarkoittaa sitä, että vain toinen ongelma on ratkaistava.</p>
 <p>Singulaariarvohajoitelma (singular value decomposition, SVD) matriisille <span class="math inline">\(\boldsymbol{S}\)</span> on</p>
 <p><span class="math display" id="eq:svd2">\[\begin{equation}
 \boldsymbol{S} = \boldsymbol{U} \boldsymbol{D_{\alpha}} \boldsymbol{V}^{T}
@@ -265,7 +261,7 @@ singulaariarvot suuruusjärjestyksessä <span class="math inline">\(\alpha_{1}\g
 singulaarivektoreiden matriiseja. Singulaariarvohajoitelman merkitys dimensioiden
 vähentämiselle perustuu Eckart - Young - teoreemaan. Teoreema kertoo
 että saamme pienimmän neliösumman <span class="math inline">\(m\)</span> - ulotteisen approksimaation matriisille
-<span class="math inline">\(\boldsymbol{S}\)</span> (CAinP, ss. 244) matriisien <span class="math inline">\(\boldsymbol{U}\)</span> ja <span class="math inline">\(\boldsymbol{V}\)</span>
+<span class="math inline">\(\boldsymbol{S}\)</span> matriisien <span class="math inline">\(\boldsymbol{U}\)</span> ja <span class="math inline">\(\boldsymbol{V}\)</span>
 ensimmäisten sarakkeiden ja ensimmäisten singulaariarvojen avulla.</p>
 <p><span class="math display" id="eq:svd3">\[\begin{equation}
 \boldsymbol{S}_{(m)} = \boldsymbol{U}_{(m)} \boldsymbol{D}_{\alpha(m)} \boldsymbol{V}_{(m)}^{T}
@@ -274,7 +270,7 @@ ensimmäisten sarakkeiden ja ensimmäisten singulaariarvojen avulla.</p>
 <p>Korrrespondenssianalyysin ratkaisualgoritmissa tätä tulosta on muokattava niin,
 että rivien ja sarakkeiden massat huomioidaan pienimmän neliösumman
 approksimaatiossa painoina.</p>
-<p>Näin saadaan standardikoordinaatit ja principal-koordinaatit riveille ja
+<p>Näin saadaan standardikoordinaatit ja pääkoordinaatit riveille ja
 sarakkeille.</p>
 <p>Rivien standardikoordinaatit</p>
 <p><span class="math display" id="eq:rivistd1">\[\begin{equation}
@@ -305,8 +301,8 @@ K = min \{ I-1, J-1 \}
 kyselytutkimusdatoissa inertia on yleensä paljon maksimia pienempi. Asymmetrisissä
 kartoissa ideaalipisteet ovat kaukana origon lähelle pakkauteesta havaintojen
 pilvestä.</p>
-<p>Korespondenssianalyysi ratkaisun akseleiden inertiaa kutsutaan usein ominaisarvoksi,
-mutta periaatteessa SVD-ratkaisulla saadaan singulaariarvot, ja niiden neliöt ovat
+<p>Korespondenssianalyysi ratkaisun akseleiden inertioita kutsutaan usein ominaisarvoiksi,
+mutta periaatteessa SVD-ratkaisulla saadaan singulaariarvot. Niiden neliöt ovat
 akseleiden inertioita. Ominaisarvojen ja sigulaariarvojen yhteys on läheinen ja
 riippuu diagonalisoitavan matriisin ominaisuuksista.</p>
 <p>Korrespondenssimatriisi <span class="math inline">\(\boldsymbol{P}\)</span> voidaan esittää matriisi- ja
@@ -321,9 +317,9 @@ p_ {ij}= r_{i}c_{j} \left(1 + \sum_{k=1}^{K} \sqrt{\lambda_{k}} \phi_{ik} \gamma
 \end{equation}\]</span></p>
 <p>Tässä viitataan s. 101 (13.4), 109 (14.9), ja 109-110 (14.10 ja 14.11).
 Palautuskavoilla on monta esitystapaa bilineaarisessa mallissa.</p>
-<p>Rivien ja sarakkeiden riippuvuus ja transitioyhtälöt. ss. 244, 108-109 skalaariversiot.</p>
-<p>Pääkoordinaatit standardikoordinaattien funktiona
-(ns. barysentrinen ominaisuus - barycentric relationships)</p>
+<p>Rivien ja sarakkeiden riippuvuutta kuvaavat transitioyhtälöt (transition equations).</p>
+<p>Pääkoordinaatit standardikoordinaattien funktiona (barysentrinen ominaisuus,
+barycentric relationships):</p>
 <p><span class="math display" id="eq:barysentr1">\[\begin{equation}
 \boldsymbol{F} = \boldsymbol{D}_{r}^{-1} \boldsymbol{P}\boldsymbol{\Gamma}
 \tag{8.14}
@@ -332,7 +328,7 @@ Palautuskavoilla on monta esitystapaa bilineaarisessa mallissa.</p>
 \boldsymbol{G} = \boldsymbol{D}_{c}^{-1} \boldsymbol{P}^{T}\boldsymbol{\Phi}
 \tag{8.15}
 \end{equation}\]</span></p>
-<p>Pääkoordinaatit pääkoordinaattien funktiointa:</p>
+<p>Pääkoordinaatit pääkoordinaattien funktiona:</p>
 <p><span class="math display" id="eq:barysentr3">\[\begin{equation}
 \boldsymbol{F} = \boldsymbol{D}_{r}^{-1} \boldsymbol{P}\boldsymbol{G}\boldsymbol{D}_{\lambda}^{-\frac{1}{2}}
 \tag{8.16}
@@ -345,8 +341,8 @@ Palautuskavoilla on monta esitystapaa bilineaarisessa mallissa.</p>
 painotettuina keskiarvoina, painoina profiilin elementit. Asymmetriset kartat
 (rivien tai sarakkeiden suhteen) perustuvat näihin yhtälöihin. Yhtälöiden <a href="liite-1-korrespondenssianalyysin-teoriaa.html#eq:barysentr3">(8.16)</a>
 ja <a href="liite-1-korrespondenssianalyysin-teoriaa.html#eq:barysentr4">(8.17)</a> kahdet pääkoordinaatit ovat perusta symmetrisille kartoille. Myös niitä
-yhdistää barisentrinen painotetun keskiarvon riippuvuus, mutta mukana ovat skaalaustekijät
-<span class="math inline">\(\frac{1}{\sqrt{\lambda_{i}}}\)</span>. Skaalaustekijä on jokaisessa dimensiossa sen inertia, suurimmasta pienimpään.</p>
+yhdistää barysentrinen painotetun keskiarvon riippuvuus, mutta mukana ovat skaalaustekijät
+<span class="math inline">\(\frac{1}{\sqrt{\lambda_{i}}}\)</span>.</p>
 <p><strong>Pisteet ja projektio aliavaruuteen</strong></p>
 <p>Kuva on kurssimateriaaleista<span class="citation">(M. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca" role="doc-biblioref">2017</a>)</span>.</p>
 <div class="figure" style="text-align: center"><span id="fig:projectionimg1"></span>

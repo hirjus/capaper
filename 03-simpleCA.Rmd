@@ -520,7 +520,7 @@ summa lasketaan yli rivien ${i}$.
 Korrespondenssianalyysin kolmen peruskäsitteen "tripletti" -- _profiili_,
 _massa_ ja _$\chi^{2}$ - etäisyys_ -- on esitely tarkemmin liitteessä 1.
 
-Rivi- ja sarakeprofiilien taulukoista näkee helposti, että keskiarvoprofiilien
+Rivi- ja sarakeprofiilien taulukoista huomaa, että keskiarvoprofiilien
 alkiot ovat massoja. Rivien keskiarvoprofiilin alkiot ovat sarakemassoja, ja sama
 pätee sarakkeille. Tämä rivi- ja sarakeongelmien duaalisuus on yksinkertaisen
 korrespondenssianalyysin keskeinen idea (CAiP, s. 57). Rivi- tai sarakeongelman
@@ -708,11 +708,11 @@ lukumäärädataan (count data). Periaatteessa mikä tahansa data sopii, kunhan 
 voidaan järkevästi esittää suhteelisina lukumäärinä (relative amounts), siis
 suhdeasteikon (ratio scale) muuttujana. Tässä oleellista on tulkittavuus
 tutkimusongelman näkökulmasta. Välttämätön ehto on sama mittayksikkö: lukumäärä,
-rahayksikkö, pituusmitta kelpaavat. (CAiP s. 15).
-Toinen ehto on ei-negatiivisuus(nolla sallittu) ja tietyin ehdoin myös
-negatiiviset luvut [@RefWorks:doc:5a857a43e4b0ed2d44664d75 s. 60]. Rajat ovat melko
-joustavat, kun mukaan otetaan erilaiset uudelleenskaalaukset ja transformaatiot.
-Tämä oli menetelmän perusidea jo Benzecrillä(CAiP ch 26, s. 201).
+rahayksikkö, pituusmitta kelpaavat. (CAiP s. 15). Taulukon lukujen on oltava
+ei-negatiivisia (positiivisia, nolla sallittu).
+
+Rajat ovat joustavia, kun mukaan otetaan erilaiset uudelleenskaalaukset
+ja transformaatiot. Tämä oli menetelmän perusidea jo Benzecrillä(CAiP ch 26, s. 201).
 
 Menetelmää sovelletaan profiileihin jotka painotetaan massoilla, ja
 profiilien etäisyyksiä mitataan khii2-etäisyysmitalla. Jos datan voi esittää

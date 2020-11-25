@@ -15,8 +15,8 @@ joita edellä analysoitiin vuorovaikutusmuuttujien avulla.
 Toinen asetelma on keskenään homogeenisten muuttujien välisten suhteiden analyysi.
 Monimuuttujakorrespondenssianalyysi (multiple correspondence analysis, MCA)
 soveltuu hyvin kyselytutkimusten vastausten analyysiin. MCA - kartoilla voidaan
-yksittäiset havainnot, mutta usein on järkevämpää esittää kartalla
-taustamuuttujien keskiarvot. Keskiarvopisteisiin voi simuloimalla lisätä
+esitttää myös havainnot yksittäiset havainnot, mutta usein on järkevämpää
+käyttää kartalla taustamuuttujien keskiarvopisteitä. Keskiarvopisteisiin voi simuloimalla lisätä
 luottamusellipsit (CAiP, s. 299).
 
 Esitän molemmista analyyseistä yhden esimerkin. MCA-esimerkissä otan käyttöön
@@ -55,9 +55,13 @@ knitr::include_graphics('img/stacked1.png')
 
 Seuraavassa esimerkissä "selitettäviä" luokittelumuuttujia on vain yksi. Tällainen
 pinotun taulun analyysi on eräänlainen kaikkien siihen kuuluvien taulukoiden 
-"keskiarvokartta" (CAiP, s 136)
+"keskiarvokartta" (CAiP, s 136). Kysymyksen Q1b vastauksten ristiintaulkointi
+ikäluokan ja sukupuolen kanssa liitetään maarivien taulukkoon.
 
-
+Pisteiden määrä kartoilla kasvaa, ja muuttujanimiä joudutaan tiivistämään.
+Toinen tekninen detalji on kartan kääntäminen. Kuvat kääntyvät herkästi akselien
+ympäri, vertailun helpottamiseksi koordinaattien etumerkkejä joutuu joskus
+muuttamaan (kts. koodiliite).
 
 
 ```{r concatDat1, echo=F}
@@ -90,10 +94,7 @@ Concat1jh.CA1 <- ca(ISSP2012Concat2jh.dat)
 
 ```
 
-Kun yhdistty taulu rakennetaan matriiseista, karttojen muuttujanimiä joudutaan
-tiivistämään. Toinen tekninen detalji on kartan kääntäminen. Kuvat kääntyvät
-herkästi akselien ympäri, vertailun helpottamiseksi ne kannattaa kääntää
-samanlaisiksi kuin muut.
+
 
 ```{r concatSiisti1, echo=F}
 
@@ -110,31 +111,47 @@ Concat1jh.CA1$rownames <- c("BE", "BG", "DE", "DK", "FI", "HU", "m", "f",
 
 
 
-```{r concat1map1,echo=F, fig.cap= "Q1b: Lapsi kärsii jos äiti käy työssä", fig.asp = 1, out.width = "90%",fig.align = "center"}
+```{r concat1map1,fig.cap= "Q1b: Lapsi kärsii jos äiti käy työssä", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
 # pisteiden kasautumien haittaa haittaa tulkintaa
+
 par(cex = 0.6) 
 plot(Concat1jh.CA1,
-     main = "Pinottu taulukko - symmetrinen kuva1",
-     sub = "a1-a6 ikäluokat, m = miehet, f = naiset, Q1b (cex=0.6)"
+     main = "Pinottu taulukko - symmetrinen kartta",
+     sub = "ikäluokat a1-a6, m = miehet, f = naiset"
      )
 
 ```
 
-**Kartan tulkinta; miten eroaa yhteisvaikutusmuuttujan analyysistä?**
 
-Perustulkinta akseleille ei muutu, eikä maapisteiden sijoittuminenkaan.
+Tulkinta ei muutu, eikä maapisteiden sijaintikaan.
 
-Koko aineiston kartassa ikäluokkapisteet ja sukupuolipisteet ovat pakkautuneet maapisteitä tiiviimmin origon ympärille. Ikäluokkapisteiden (koko aineiston keskiarvot) selvä kontrasti on vanhimman (a6)ja toiseksi nuorimman välillä 1. dimenision suuntaan.
+Koko aineiston kartassa ikäluokkapisteet ja sukupuolipisteet ovat pakkautuneet
+maapisteitä tiiviimmin origon ympärille. Ikäluokkapisteiden (koko aineiston
+keskiarvot) selvä kontrasti on vanhimman (a6)ja toiseksi
+nuorimman välillä 1. dimenision suuntaan. 
 
-Ikäluokkapisteet ovat koko aineiston keskiarvopisteitä, niiden sijantia voi tulkita pistejoukko kerrallaan kuten maapisteidenkin. Mitään yhteisvaikutuksia ei analysoida eksplisiittisesti. Karttaa voi verrata sukupuoli-ikäluokka yhteisvaikutusmuuttujan analyysin aiemmin. Naispiste on tiukassa nipussa ikäluokkien a3 ja a4 kanssa aivan origon vasemmalla puolella. Miesten keskiarvopiste on hieman origosta oikealle, yhdessä ikäluokan a5 kanssa. 
+Ikäluokkapisteet ovat koko aineiston keskiarvopisteitä, niiden sijantia voi
+tulkita pistejoukko kerrallaan kuten maapisteidenkin. Naispiste on tiukassa
+nipussa ikäluokkien a3 ja a4 kanssa aivan origon vasemmalla puolella. Miesten
+keskiarvopiste on hieman origosta oikealle,yhdessä ikäluokan a5 kanssa.
 
 
-Lisäpisteet on hyvin esitetty, niiden etäisyyksiä voi luotettavasti arvioida kuvasta. Poikkeus on nuorin ikäluokka (a1, qlt = 501). Inertian osuudet (inr) ovat yhtä vaatimattomia kuin Belgian (28) ja Saksan (29), (m =20, f = 17, a2 = 40, a6 = 83), samoin kontribuutiot akseleiden inertiaan. 1. dimension kontribuutio (ctr) on suuri (>800) kaikilla paitsi nuorimmalla ikäryhmällä (a1) jolla 2. dimension selittää lähes puolet sen inertiasta (470).
+Lisäpisteet on hyvin esitetty, niiden etäisyyksiä voi luotettavasti arvioida
+kuvasta. Poikkeus on nuorin ikäluokka (a1, qlt = 501). Inertian osuudet (inr)
+ovat yhtä vaatimattomia kuin Belgian (28) ja Saksan (29),
+(m =20, f = 17, a2 = 40, a6 = 83), samoin kontribuutiot akseleiden inertiaan.
+1. dimension kontribuutio (ctr) on suuri (>800) kaikilla paitsi nuorimmalla
+ikäryhmällä (a1) jolla 2. dimension selittää lähes puolet sen inertiasta (470).
+
+Karttaa vertaa karttaan \@ref(fig:gaCA1map) jossa on esitetty iän ja sukupuolen
+yhteisvaikutusmuuttuja. Pinottu taulu on vaihtoehtoinen tapa, ja kartasta 
+\@ref(fig:concat1map1) voi päätellä samat asiat: miehet ovat konservatiivisempia
+kuin naiset, iäkkäämmät ovat konservatiivisempia kuin nuoret. Nuorin ikäluokka
+poikkeaa muista.
 
 
-Vilkaistaan taas numeerisa tuloksia, varmistetaan tulkinta. Tämän voi poistaa
-lopullisesta versiosta.
+**tämä poistetaan lopullisesta versiosta**
 
 ```{r concatCA1num}
 
@@ -147,28 +164,35 @@ summary(Concat1jh.CA1)
 
 
 
-```{r concat1map2,echo=F, fig.cap= "Q1b: Lapsi kärsii jos äiti käy työssä - pinottu taulukko", fig.asp = 1, out.width = "90%",fig.align = "center"}
+```{r concat1map2,echo=F, fig.cap= "Q1b: Lapsi kärsii jos äiti käy työssä", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
 par(cex = 0.6)
 plot(Concat1jh.CA1, map = "rowgreen",
      #mass = c(TRUE, TRUE) ei oikein erotu kuvassa
      contrib =c("relative", "absolute"),
      arrows = c(FALSE, TRUE),
-     main = "taustamuuttujat a1-a6 ikäluokat, m = miehet, f = naiset",
-     sub =  "sarakkeet absoluuttinen kontribuutio, rivit suhteellinen"
+     main = "Pinottu taulukko, kontribuutiokartta",
+     sub =  "    sarakkeet absoluuttinen kontribuutio, rivit suhteellinen,
+     taustamuuttujat a1-a6 ikäluokat, m = miehet, f = naiset"
      )
 
 ```
 
-Sarekkeista E-sarake (täysin eri mieltä) määrittää akseleita vahvasti, kontrastina
-kaksi konservatiivista vastausta (S ja s) ja myös neutraali vaihtoehto (e).
-Numeerista tuloksista nähdään, että ikäluokat vaikuttavat juuri ensimmäiseen
-tärkeimpään dimensioon.
+Kontribuutionkartan sarekkeista E-sarake (täysin eri mieltä) määrittää akseleita
+vahvasti, kontrastina kaksi konservatiivista vastausta (S ja s) ja myös
+neutraali vaihtoehto (e). Numeeriset tulokset kertovat, että ikäluokat
+vaikuttavat juuri ensimmäiseen tärkeimpään dimensioon.
 
 Belgian ja Saksan pisteet on esitetty kartassa huonosti, samoin nuorin ikäluokka.
 Muiden pisteiden sijaintia voidaan arvioida myös sarakkeiden ja rivipisteiden
 välillä. Ikäluokkien kontrasti on selvä toiseksi nuorimman (a2) ja vanhimman (a6)
 välillä.
+
+Kontribuutiokartalla voi arvioida hieman tarkemmin ikäluokkien ja vastausvaihtoehtojen
+yhteyttä sarake kerrallaan. Maltillisesti eri mieltä olevien osuus on suhteellisesti 
+suurin nuorimmassa ikäluokassa. Jos a1 - pisteen projisoi konservatiivisen
+S-vastauksen janalle se ei ikäluokista konservatiivisin. Ikäluokat a2 ja a6 ovat
+ääripäitä, muut ikäluokat sijoittuvat lähelle toisiaan mutta liberaalille puolelle.
 
 
 Esimerkkiaineistossa ei ole puuttuvia tietoja. Ne olisivatkin
@@ -450,7 +474,6 @@ MCA-analyyseihin valitun 7 + 3 = 10 muuttujan aineiston havainnoista 81% on
 vailla puuttuvia tietoja. Jos puuttuvat tiedot poistetaan (ns. "listwise delete",
 poistetaan jos yksi tai useampi tieto puuttuu) viidesosa datasta jää pois.
 
-**k** lyhyt kappale - puuttuvien tietojen käsittely on laaja aihe. Otantamenetelmissä ja survey-aineistojen (kyselytutkimusten) oppaissa käsitelty monipuolisesti.
 
 **k** Miten liittyy tähän? CA on koko aineiston kuvailevaa analyysiä, ei päättelyä
 otoksesta perusjoukon tasolle. Miten puuttuvia vastauksia voisi kuvailla? Toisaalta
@@ -481,16 +504,20 @@ Aineistossa on 32 823 havaintoa ja seitsemän muuttujaa.
 
 par(cex = 0.6)
 plot.mjca(Qmuuttujat1.mca, labels = c(1,2),
-          main = "Kysymykset Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b",
-          sub = "vastaukset S-s-?-e-E-P "
+          main = "Symmetrinen kartta",
+          sub = "Kysymykset Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b, vastaukset S-s-?-e-E-P "
           )
 
 
 ```
-**k** Perustulkinta: Inertian selitysosuudet ovat paljon pienempiä, ja ratkaisu
+
+**k Perustulkinta:** Inertian selitysosuudet ovat paljon pienempiä, ja ratkaisu
 on selvästi kaksiulotteinen. Puuttuvat vastaukset erottuvat omana ryhmänä, ja
 varsinaiset vastaukset ovat pakkautuneet y-akselin oikealle puolelle. Niiden erot
-näkyvät vain toisessa dimensiossa. Ensimmäinen dimensio kuvaa vastaamattomuutta (syystä tai toisesta) vs. kaikkia vastauksia.
+näkyvät vain toisessa dimensiossa. Ensimmäinen dimensio kuvaa vastaamattomuutta
+(syystä tai toisesta) vs. kaikkia vastauksia. Kokonaisinertiaa on korjattu
+pienemmäksi (ns. adjustedineritia, kts. liite 1),
+selitetyn inertian osuus on realistinen arvio.
 
 Pystyakselin suuntaan kontrasti näyttäisi olevan konservatiiviset ylhäällä,
 modernit ja liberaalimmat alhaalla. Pisteitä on vaikea erottaa toisistaan.
@@ -502,8 +529,8 @@ Karttaa voi parantaa lisäämällä siihen vastaajien (n= 32 823) pisteet (viite
 par(cex=0.6)
 plot.mjca(Qmuuttujat1.mca, what = c("all","all"),labels = c(0,2),
           col = c("lightblue", "red"),
-           main = "Kysymykset Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b",
-          sub = "vastaukset S-s-?-e-E-P, havainnot (n = 32 823) "
+           main = "Symmetrinen kartta",
+          sub = "Kysymykset Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b,vastaukset S-s-?-e-E-P, havainnot (n = 32 823)"
           )
 
 
@@ -511,13 +538,14 @@ plot.mjca(Qmuuttujat1.mca, what = c("all","all"),labels = c(0,2),
 
 Jokainen havainto on sarakevektoreiden keskiarvopiste. Sarakevektoreita ei voi
 tulkita yhtä selkeästi kuin yksinkertaisessa korrespondenssianalyysissä. Ne eivät
-edusta kysymystä vaan kysymyksen yhtä vastauskategoriaa, pitkä jono nollia ja ykkösiä.
+edusta kysymystä vaan kysymyksen yhtä vastauskategoriaa.
+
+
 Rivipiste on vastauksiaan vastaavien sarakepisteiden keskiarvopiste. Jos vastaaja on valinnut
 vaihtoehdot (a1S, a2s,..., b2?) se on näiden pisteiden keskiarvopiste.
 
 Oleellista MCA-kartan tulkinnassa on kuitenkin yleiskuvan muodostaminen, geometrinen 
-tulkinta on hieman hankala. Skaalausominaisuudet MCA kuitenkin säilyttää (**Viite**, 
-teorialiitteessä hieman tarkemmin).
+tulkinta on hieman hankala. Skaalausominaisuudet MCA kuitenkin säilyttää (kts. liite 1).
 
 Myös riviprofiilit ovat samanlaisia, jokaisella rivilla on kuudessa kategoriassa (vastaukset
 ja puuttuva tieto) nollia ja yksi ykkönen. Rivien välistä etäisyyttä määrittelevä ainoastaa 
@@ -568,10 +596,12 @@ eiPvastaukset <- (1:42)[-c(6,12,18,24,30,36,42)]
 
 Qmuuttujat2.mca <- mjca(mcaDat11jh.dat, ps="", subsetcat=eiPvastaukset)
 
-plot.mjca(Qmuuttujat2.mca,
-          main="Seitsemän kysymystä, viisi vastausvaihtoehtoa",
-          sub = "subset: ei puuttuvien vastausten kategorioita(*P)")
-
+# Kontribuutiokartta on tarpeeksi selkeä, muutujien tunnukset erottuvat.
+# Jätetään tämä kuva pois (25.11.20)
+#
+#plot.mjca(Qmuuttujat2.mca,
+#          main="Seitsemän kysymystä, viisi vastausvaihtoehtoa",
+#          sub = "subset: ei puuttuvien vastausten kategorioita(*P)")
 
 ```
 **k** Tulkinta: kontrasti "ääripäiden" välillä, vahvat mielipiteet (S ja E) hallitsevat vasenta alakulmaa ja oikeaa laitaa x-akselin tuntumassa. Maltilliset
@@ -583,7 +613,9 @@ akselin vahvojen mielipiteiden ryppäiden välille. Muut vastaukset ovat
 ns. kaariefektin mukaisesti näiden välisellä U-muotoisella linjalla. Tämä kuuluisa Guttan efekti kertoo järjestysasteikon muuttujien korrelaatiosta, hyvä asia kun 
 kysymyksillä luodataan asenteita naisten työssäkäyntiin. Kaariefekti on myös "geometrinen välttämättömyys", tarkemmin teorialiitteessä.
 
-```{r subsetMCA1map2,echo=F, fig.cap= "MCA: Seitsemän kysymystä - 25 maata, kartta 4", fig.asp = 1, out.width = "90%",fig.align = "center"}
+```{r subsetMCA1map2,echo=F, eval = F, echo = F, fig.cap= "MCA: Seitsemän kysymystä - 25 maata, kartta 4", fig.asp = 1, out.width = "90%",fig.align = "center"}
+
+# jätettään symmetrinen kartta pois, asymmetrinen on parempi (25.11.20)
 
 plot.mjca(Qmuuttujat2.mca,
           what = c("all","all"),labels = c(0,2),
@@ -594,18 +626,15 @@ plot.mjca(Qmuuttujat2.mca,
 
 ```
 
-Kun kartalle lisätään havainnot, nähdään selvästi kuinka suuri hajonta on havaintojen
-pilvessä verrattuna vastauskategorioiden pilveen.
+**edit: karttojen otsikot tarkistettava**
 
-
-
-```{r subsetMCA1map3,echo=F, fig.cap= "MCA: Seitsemän kysymystä - 25 maata, kartta 5", fig.asp = 1, out.width = "90%",fig.align = "center"}
+```{r subsetMCA1map3,echo=F, fig.cap= "MCA: Seitsemän kysymystä - 25 maata, kartta 3", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
 plot.mjca(Qmuuttujat2.mca, map = "rowprincipal",
           what = c("all","all"),labels = c(0,2),
           col = c("lightblue", "red"),
-          main="Seitsemän kysymystä, viisi vastausvaihtoehtoa - asymmetrinen kartta",
-          sub = "subset: ei puuttuvien vastausten kategoriaa (*P)")
+          main="Asymmetrinen kartta - osajoukko: ei puuttuvia vastauksia",
+          sub = "Kysymykset Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b, vastaukset S-s-?-e-E-P")
 
 
 ```
@@ -619,9 +648,10 @@ of middleness"?
 
 Dimension of middelness, on viitteitä mutta ei ihan selvä.
 
-Neutraalin vaihtoehdon (?) sarakkeet ovat huonosti esitettyjä, mutta vain kolme selvästi (e1? 475 c1? 571 ja b1? 573).
+Neutraalin vaihtoehdon (?) sarakkeet ovat huonosti esitettyjä, mutta vain kolme selvästi
+(e1? 475 c1? 571 ja b1? 573). 
 
-**TÄHÄN VOISI LOPETTAA - EI KAHTA PITÄÄ TULOSTETTA KUN NIITÄ EI TARKEMMIN ANALYSOIDA** 
+**TÄHÄN VOISI LOPETTAA - EI KAHTA PITKÄÄ TULOSTETTA KUN NIITÄ EI TARKEMMIN ANALYSOIDA** 
 
 
 **edit2 - harkitaan näitä**
