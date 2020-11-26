@@ -704,10 +704,12 @@ tässä muodossa, menetelmää voi käyttää.</p>
 <div id="asymmetrinen-kartta-ja-ideaalipisteet" class="section level3">
 <h3><span class="header-section-number">3.3.1</span> Asymmetrinen kartta ja ideaalipisteet</h3>
 <p>Symmetrinen kartta <a href="yksinkertainen-korrespondenssianalyysi.html#fig:simpleCA1map1">3.3</a> on peruskuva ja esimerkiksi tässä
-käytetyn R-paketin “ca” oletus. Siinä molemmat pisteparvet on esitetty
+käytetyn R-paketin oletus. Siinä molemmat pisteparvet on esitetty
 pääkoordinaateissa (prinipal coordinates) ikäänkuin päällekkäin, samassa kuvassa.</p>
-<p>Toinen vaihtoehto on asymmetrinen kartta. Sarakkeet ovat aineistossa muuttujia,
-joten ne voi esittää ns. standardikoordinaateissa ja rivipisteet pääkoordinaateissa.</p>
+<p>Toinen vaihtoehto on asymmetrinen kartta, jossa toinen pistejoukko esitetään
+standardikoordinaateissa ja toinen pääkoordinaateissa. Asymmetrisessä
+kartassa <a href="yksinkertainen-korrespondenssianalyysi.html#fig:G1-3asymm2">3.4</a> sarakkeet on esitetty standardikoordinaateissa
+ja rivit pääkoordinaateissa.</p>
 <p>Sarakepisteitä kutsutaan ideaalipisteiksi, ne edustavat kuviteellisia maita joissa
 kaikki vastaukset ovat samoja. Matemaattisesti kartalle projisoidut ideaalipisteet
 ovat (tässä esimerkissä) neliulotteisen avaruuden verteksin (monikulmion)
@@ -720,7 +722,7 @@ Kuva 3.4: Q1b: lapsi kärsii jos äiti on töissä
 </div>
 <p>Sarakepisteet kuvaavat maksimi-inertiaa, ja rivipisteiden paljon pienempi hajonta
 kuvaa niiden poikkeamaa tästä hypoteettisesta tilanteesta. Sarakepisteet
-skaalautuvat origosta ulospäin, Asymmetrisessä kartassa rivi- ja sarakepisteiden
+skaalautuvat origosta ulospäin. Asymmetrisessä kartassa rivi- ja sarakepisteiden
 etäisyydellä on tulkinta, samoin rivipisteiden välisellä etäisyydellä.
 Sarakepisteiden välisillä etäisyyksillä ei ole tulkintaa. Sarakepisteet on
 skaalattu ja mittakaavan ero symmetriseen karttaan näkyy selvästi.</p>
@@ -730,9 +732,8 @@ skaalattu ja mittakaavan ero symmetriseen karttaan näkyy selvästi.</p>
 <p>Rivipisteet ja sarakepisteet yhdistää <em>barysentrinen periaate</em> . Jokainen rivipiste
 on ideaalipisteiden painotettu keskiarvo, painoina sarakkeiden käänteinen osuus
 riviprofiilissa.</p>
-<strong>edit</strong> kuva ei ehkä tarpeen? Tehdään vähän pienempi (out.width = 60%, muuten 90%).
 <div class="figure" style="text-align: center"><span id="fig:G1-3asymm3"></span>
-<img src="JH_capaper_files/figure-html/G1-3asymm3-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="70%" />
+<img src="JH_capaper_files/figure-html/G1-3asymm3-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
 <p class="caption">
 Kuva 3.5: Q1b: lapsi kärsii jos äiti on töissä
 </p>
@@ -764,9 +765,10 @@ tai sarakkeen osuuden akselin inertiasta. Vaikutuksessa on mukana pisteen massa.
 <p>Suhteellinen kontribuutio taas kertoo akselin osuuden pisteen inertiasta.
 Tämä tunnusluku kuvaa pisteen projektion laatua, kuinka hyvin se on kartalla esitetty.</p>
 <p>Kontribuutiokartta on asymmetrinen kartta, jossa sarakevektorit on skaalattu
-(kerrottu) massojen neliöillä. Näin sarakevektorit “kutistuvat” kohti origoa mutta
-vektorin pituus kertoo edelleen sen suhteellisen massan. Kartta sopii niin pienen
-kuin suuren inertian tilanteisiin(kts. esim. <span class="citation">(M. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5c768b09e4b02df9431e950a" role="doc-biblioref">2006</a>)</span>)</p>
+kertomalla ne massojen neliöjuurilla. Näin sarakevektorit “kutistuvat” kohti
+origoa mutta vektorin pituus kertoo edelleen sen suhteellisen massan.
+Kartta sopii niin pienen kuin suuren inertian tilanteisiin
+<span class="citation">(M. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5c768b09e4b02df9431e950a" role="doc-biblioref">2006</a>)</span>.</p>
 <p><strong>Absoluuttiset kontribuutiot</strong></p>
 <p>Absoluuttisten kontribuutioiden jakautumista akseleille voi varovaisesti päätellä
 sarakevektorin ja akseleiden välisistä kulmista. Mitä lähempänä sarakevektori on akselia,
@@ -782,11 +784,11 @@ Kuva 3.7: Q1b: lapsi kärsii jos äiti on töissä
 </p>
 </div>
 <p>Sarakkeista ratkaisuun vaikuttaa selvästi eniten E, ja juuri ensimmäiseen
-dimensioon. Toista dimennsiota määrittää vahviten e, mutta myös kaikki muut
+dimensioon. Toista dimensiota määrittää vahviten e, mutta myös kaikki muut
 sarakkeet x-akselin yläpuolella. Samaa mieltä olevien (S ja s) vaikutus näyttäisi
 jakautuvan selvimmin molemmille dimensioille.</p>
 <p>Vaikka massojen suhteellisia eroja ei kovin helposti pistekoosta erota, se näkyy
-epäsuorasti Saksan melko vahvimpana kontribuutiona. Bulgarian vähäisin kontribuutio
+epäsuorasti Saksan melko vahvana kontribuutiona. Bulgarian pieni kontribuutio
 näyttäisi olevan ensimmäiselle dimensiolle.</p>
 <p><strong>Suhteelliset kontribuutiot</strong></p>
 <div class="figure" style="text-align: center"><span id="fig:G1-3asymmContrib2"></span>
