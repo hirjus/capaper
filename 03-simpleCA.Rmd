@@ -15,11 +15,11 @@ esimerkillä. @RefWorks:doc:5a857a44e4b0ed2d44664d95 käyttää samaa Fisherin
 Cairness-aineistoa korrespondenssianalyysin esittelyyn
 
 Esitän tässä jaksossa korrespondenssianalyysin peruskäsitteet intuitiivisesti,
-matemaattiset yksityiskohdat löytyvät liittestä 1. Esitystavan etu on taulukon
-pieni koko, johtopäätökset voi helposti tarkastaa datasta. Datan analyysin tärkein
+matemaattiset yksityiskohdat löytyvät liitteestä 1. Kun taulukko on
+pieni, johtopäätökset voi helposti tarkastaa datasta. Datan analyysin tärkein
 väline on kuva, yleensä kaksiulotteinen kartta. Tulkinta ja erityisesti väärien
 johtopäätösten välttäminen vaati kartan tulkinnan varmistamista ratkaisun
-numeerista tuloksista. Kun analysoitava taulukko, sen rivien ja sarakkeiden
+numeerisista tuloksista. Kun analysoitava taulukko, sen rivien ja sarakkeiden
 riippuvuuksia kuvaava kartta ja kartan perustana olevat numeeriset tulokset
 esitetään yhdessä on helpompi ymmärtää tulkinnan perussäännöt.
 
@@ -36,8 +36,8 @@ approksimaatiota, numeerisia tuloksia tarvitaan.
 
 Aineisto on kuuden maan vastaukset kysymykseen Q1b: ”Alle kouluikäinen lapsi
 todennäköisesti kärsii, jos hänen äitinsä käy työssä”. Kysymys on voimakkaasti
-muotoiltu. Eräs lastensuojelun ammattilainen piti vastaamista mahdottomana; pitää
-tietää missä lapsi on , mitä hän tekee. Kysymykset on kuitenkin suunniteltu
+muotoiltu. Eräs lastensuojelun ammattilainen piti vastaamista mahdottomana,
+pitäisi tietää missä lapsi on ja mitä hän tekee. Kysymykset on kuitenkin suunniteltu
 kokonaisuudeksi, ja niitä analysoidaan yhdessä luvussa 7. Yhden taulukon analyysi
 esittelee menetelmän, oikeassa tutkimuksessa pitää käyttää vähintään koko
 kysymyssarjaa.
@@ -358,15 +358,10 @@ simpleCA3 <- ca(johdesim1_rowproc.tab)
 ```
 
 
-
-**k** Rivit on saatu alkuperäisestä aineistosta osajoukkojen summina. MG:n
-terminologialla "samples".
-
-
 Korrespondenssianalyysin perusidea on analysoida rivien ja sarakkeiden yhteyttä
 (korrespondenssia) rivi- tai sarakeprofiilien hajonnan avulla. Hajontaa mitataan
 poikkeamilla keskiarvorivistä tai sarakkeesta, ja massat otetaan huomioon,
-kun hajonnat lasketaan yhteen.
+kun poikkeamat lasketaan yhteen.
 
 
 ```{r g1-2kuva1, fig.cap = "Q1b:Sarakeprofiilit ja keskiarvoprofiili", echo = FALSE, include = TRUE}
@@ -436,7 +431,7 @@ p + scale_x_discrete(name = " ")
 
 ```
 
-Kuvasta 3.2 \@ref(fig:g1-2kuva2) esimerkiksi näkee, että Tanska (DK) näyttäisi
+Kuvasta \@ref(fig:g1-2kuva2) esimerkiksi näkee, että Tanska (DK) näyttäisi
 poikkeava keskiarvorivistä paljon, samoin Bulgaria.
 Bulgarian massa on kuitenkin aineiston pienin (11,31 %), Tanskan taas
 kohtalainen (17 %).
@@ -519,7 +514,6 @@ summa lasketaan yli rivien ${i}$.
 
 Korrespondenssianalyysin kolmen peruskäsitteen "tripletti" -- _profiili_,
 _massa_ ja _$\chi^{2}$ - etäisyys_ -- on esitely tarkemmin liitteessä 1.
-
 Rivi- ja sarakeprofiilien taulukoista huomaa, että keskiarvoprofiilien
 alkiot ovat massoja. Rivien keskiarvoprofiilin alkiot ovat sarakemassoja, ja sama
 pätee sarakkeille. Tämä rivi- ja sarakeongelmien duaalisuus on yksinkertaisen
@@ -589,21 +583,21 @@ ylhäällä ja alhaalla. Tulkinta tehdään akseleiden suuntaan.
 Kun taulukon rivit ovat havaintoja ja sarakkeet muuttujia, akselien tulkinta
 tehdään muuttujien avulla. Vasemmalla on E ja oikealla puolella samanmieliset
 vastaukset s ja S. Neutraali ”?” on s-vastausten vasemmalla puolella.
-Kaikki erot ovat suhteellisia, kuvan perusteella voi sanoa kuinka paljon.
+Kuvan perusteella ei voi sanoa kuinka paljon, kaikki erot ovat suhteellisia.
 
 Sarakkeet  ovat oikeassa järjestyksessä, mutta niiden koordinaatit
 x-akselilla eivät olen tasavälisiä. Jos muuttuja jostain syystä halutaaan
 esittää välimatka- tai suhdeasteikon muuttujana koordinaatti ensimmäisellä
-dimensiolla on hyvä vaihtoehto.
+dimensiolla on yksi vaihtoehto.
 
 Ensimmäisen dimenosion tulkinta on aika selkeä. Toinen akseli on kontrasti
-lievemmän tai maltillisemman erimielisyyden ja muiden vastausten kanssa.
+lievemmän tai maltillisemman erimielisyyden (e) ja muiden vastausten kanssa.
 Se on 1. dimension suuntaan kaikkein lähimpänä origoa. Hieman varoivaisemmin
 akselin voi tulkita maltillisen ja jyrkemmän tai varmemman mielipiteen kontrastiksi.
 
 Maiden vertailu tehdään näiden akselien suuntaan. Sekä sarekepisteiden että
 rivipisteiden keskinäiset välimatkat approksimoivat optimaalisesti niiden
-(khii2)etäisyyksiä. Sarake- ja rivipisteiden välisillä etäisyyksillä ei ole
+khii2-etäisyyksiä. Sarake- ja rivipisteiden välisillä etäisyyksillä ei ole
 mitään suoraa tulkintaa. Pisteiden etäisyydet samassa pistepilvessä ovat
 suhteellisia, Saksa on konsevatiivisempi kuin Suomi mutta emme tiedä kuinka paljon.
 Maiden järjestys oikealta vasemmalle on selkeä, Tanska on vasemmalla
@@ -613,8 +607,9 @@ jyrkimmät mielipiteet löytyvät Unkarista ja Tanskasta.
 
 Näitä tulkintoja voi vertailla edellä esitettyihin kahteen kuvaan rivi- ja
 sarakeprofiileista. Kartta kertoo aika paljon enemmän.
+
 Kartta on approksimaatio neliulotteisen pistepilven hajonnalle. Vain origo on
-siinä tarkasti esitetty, se on koko aineiston keskiarvopiste, ja pisteiden
+siinä tarkasti esitetty. Se on koko aineiston keskiarvopiste, ja pisteiden
 hajonta sen ympärillä kuvaa poikkeamaa riippumattomuushypoteesista.
 
 Tärkeä geometrinen periaate on se, että kaukana on kaukana myös alkuperäisessä
@@ -631,26 +626,20 @@ analyysivaiheessa oltava lukukelpoisia, ja symbolien kokoa joutuu isoissa
 aineistoissa säätämään. Tulosten esittäminen lopullisessa muodossa vaatii jo
 paljon vaivannäköä, tässä tutkielmassa esitetään vain datan analysoinnin
 valikoituja kuvia. Graafinen data-analyysi on vaivatonta vasta sitten kun se tehty.
-En jatkossa esitä kuvailevia akseleiden nimiä kuvissa,
-akseleiden nimeäminen on kuvan tulkinnan toinen askel.
+En jatkossa esitä kuvailevia akseleiden nimiä kuvissa, akseleiden nimeäminen on
+kuvan tulkinnan perusta.
 
 
-**k** Kuva tai kartta - käytän termejä synonyymeinä - on se taso, joka parhaiten
-”selittää” neliulotteisen pisteparven hajontaa suhteessa koko aineiston
-keskiarvopisteeseen eli sentroidiin. Matemaattisesti ratkaisu saadaan
-soveltamalla singulaariarvohajoitelmaa, ja tulokseksi saadaa taso joka on
-lähimpänä pistepilviä. Etäisyyttä mitataan massoilla painotetulla
-khii2-etäisyysmitalla.
-
-**k** Intuitiivisesti idea on aivan sama kuin pääkomponenttianalyysissä
+**edit - onko tarpeen?** 
+Ratkaisun idea on aivan sama kuin pääkomponenttianalyysissä
 (PCA, principal component analysis). Ratkaisu löydetään akseli kerrallaan.
 Ensi pistepilvestä etsitää akseli, jolle ortogonaalisesti projisoitujen
 pisteiden hajonta on suurin. Sitten etsitään sille kohtisuora toinen akseli
 samalla säännöllä, ja näin jatketaan kunnes koko pilven hajota on jaettu näille
 uusille akseleille. tavoitteena on muutaman dimension approksimaatio
-moniulotteiselle datalle, yleensä kaksiulottoinen kartta.
+moniulotteiselle datalle, yleensä kaksiulottoinen kartta. CA on paintotettu PCA.
 
-**k** CA on paintotettu PCA
+
 
 ## Korrespondenssianalyysin peruskäsitteet
 

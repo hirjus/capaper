@@ -75,14 +75,14 @@ ei aina ole helppoa ja nopeaa.
 Korrespondenssianalyysi on 80-luvun alusta vähitellen vakiinnuttanut asemansa
 yhtenä ei-parametrisen kuvailevan data-analyysin menetelmänä. Kansainvälinen
 tutkijaverkosto CARME (Correspondence analysis and related methods network)
-järjesti ensimmäisen konferenssin 1991 ( http://www.carme-n.org ).
+järjesti ensimmäisen konferenssin 1991 (http://www.carme-n.org).
 
 
 Korrespondenssianalyysi esitellään oppikirjoissa muiden menetelmien rinnalla.
 Hyviä esimerkkejä ovat ekologisen datan monimuuttujamenetelmien [@RefWorks:doc:5b8175eee4b08da192f99a35],
 kaksoisikuvien [@RefWorks:doc:5a857a43e4b0ed2d44664d7c] ja
-"koostumusdatan" (compositional data) [@RefWorks:doc:5f934955e4b08d20366a5bd1] kirjat.
-Suomessa korrespondenssianalyysi esitellään ainakin kahdessa oppikirjassa
+"koostumusdatan" (compositional data) [@RefWorks:doc:5f934955e4b08d20366a5bd1]
+kirjat. Suomessa korrespondenssianalyysi esitellään ainakin kahdessa oppikirjassa
 (@RefWorks:doc:5a857a44e4b0ed2d44664d95 , @RefWorks:doc:5a857a44e4b0ed2d44664da4).
 
 
@@ -92,8 +92,8 @@ Korrespondenssianalyysi ja koulukunta syntyi ja vakiintui Ranskassa Jean - Paul 
 Vasta 80-luvulla menetelmä ylitti kielimuurin, ehkä osittain menetelmää
 soveltaneen sosiologi Pierre Bourdieun kansainvälisesti tunnettujen tutkimusten
 ansiosta. Benzecrin oppilaista Greenacre on oppikirjoillaan vaikuttanut paljon
-menetelmän vakiinnuttamiseen osaksi tilastotieteen perustekniikoita.Hänen
-oppikirjojensa kannessa ei turhaa lue "...in practice".
+menetelmän vakiinnuttamiseen osaksi tilastotieteen perustekniikoita. Näiden
+kirjojen kansissa ei turhaan lue "...in practice".
 
 Toisena muurina on pidetty ranskalaisen koulukunnan tiukkaa “bourbakilaista”
 matemaattista esitystapaa. @RefWorks:doc:5a857a43e4b0ed2d44664d75 esittelevät tämän
@@ -108,7 +108,7 @@ Tarina on kiinnostava ja tärkeäkin osa tieteenhistoriaa, mutta eristys on pä�
 ## Tutkielman rakenne
 
 
-Datan kuvailun jälkeen CA:n peruskäsitteet esitellään yksikertaisen esimerkin
+Datan esittelyn jälkeen CA:n peruskäsitteet esitellään yksikertaisen esimerkin
 avulla luvussa 3. 
 
 
@@ -121,9 +121,10 @@ tehdään osajoukon korrespondenssianalyysillä luvussa 6.
 
 
 Luvussa 7 esitellään lyhyesti kaksi tapaa tutkia useamman muuttujan yhteyksiä.
-Taulukoita yhdistämällä voidaan analysoida kahden muuttujaryhmän välisiä yhteyksiä.
+Taulukoita yhdistämällä voidaan analysoida _kahden muuttujaryhmän välisiä yhteyksiä_.
 Monimuuttujakorrespondenssianalyysia sovelletaan isoon aineistoon ja tällaisten
-aineistojen yleiseen ongelmaan, puuttuviin tietoihin.
+aineistojen yleiseen ongelmaan, puuttuviin tietoihin. Menetelmällä tutkitaan
+_yhden muuttujajoukon sisäisiä yhteyksiä_.
 
  
 Luvussa 8 kerrotaan, mistä alettiin ja mitä tuloksia saatiin.
@@ -135,7 +136,7 @@ Tutkielmassa on kolme liitettä.
 Liite 1 esittelee tiiviisti menetelmän teorian.
 Korrespondenssianalyysin numeerisia tuloksia havainnollistetaan kuvalla, ja
 monimuuttujakorrespondenssianalyysin (MCA) käsitteitä esitellään hieman enemmän.
-MCA:n teoriaa ei laajemmin esitellä, mutta tulkinnan ongelmia esitellään lyhyesti.
+MCA:n teoriaa ei käsitellä laajemmin, mutta tulkinnan ongelmat esitellään lyhyesti.
 
 Tutkielma on tehty R-tilastohjelmalla, ja korrespondenssianalyyseissä on käytetty
 ca-pakettia( @ca2007 ).  
@@ -144,7 +145,7 @@ Tutkielman koodi on julkaistu Github-palvelussa (https://github.com/hirjus/capap
 samoin tutkielman käsikirjoitus ( https://hirjus.github.io/capaper/  )
 ja alustava data-analyysi.
 
-Tekninen ympäristö on kuvattu tarkemmin liitteessä 2., myös sen ongelmat.
+Tekninen ympäristö on kuvattu tarkemmin liitteessä 2, myös sen ongelmat.
 
 Liitteessä 3 on listattu tutkielman R-koodi.
 
