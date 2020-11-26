@@ -62,9 +62,10 @@ eq:barysentr4
 fig:projectionimg1
 fig:L3bdprocess1
 johdanto
-tutkielman-tavoite
-tärkeimmät-lähteet-ja-ohjelmistot
+tutkielman-tavoite-ja-toteutus
 korrespondenssianalyysin-historiaa
+tutkielman-rakenne
+tärkeimmät-lähteet
 data
 aineiston-rajaaminen-maat-ja-muuttujat
 yksinkertainen-korrespondenssianalyysi

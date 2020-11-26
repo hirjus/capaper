@@ -223,5 +223,6 @@ tekstiä MCA-tulkinnoista.
  **26.11.2020** Tekninen liite ja yhteenveto lisätty, johdanto puuttuu vielä.
 
  **26.11.2020 versio 1.0** Tekstissä on vielä hieman poistettavaa,
-  samoin teorialiitteessä. Lukujen 3.2 ja 3.3 saumakohdassa on siivottavaa enemmän.
-  Tekstissä on toistoa ja oikeinkirjoitusta ei vielä ole tarkastettu.
+  samoin teorialiitteessä. Lukujen 3.2 ja 3.3 saumakohdassa on siivottavaa enemmän. Tekstissä on toistoa ja oikeinkirjoitusta ei vielä ole tarkastettu.
+
+**26.11.2020** Johdantoluvusta korjattu pari kirjoitusvirhettä ja viitetietoa.

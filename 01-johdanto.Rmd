@@ -79,9 +79,10 @@ järjesti ensimmäisen konferenssin 1991 ( http://www.carme-n.org ).
 
 
 Korrespondenssianalyysi esitellään oppikirjoissa muiden menetelmien rinnalla.
-MG (ecological data)[@RefWorks:doc:5b8175eee4b08da192f99a35], kaksoisikuvat ja
-compositional data [@RefWorks:doc:5f934955e4b08d20366a5bd1]. Suomessa
-korrespondenssianalyysi esitellään kahdessa oppikirjassa
+Hyviä esimerkkejä ovat ekologisen datan monimuuttujamenetelmien [@RefWorks:doc:5b8175eee4b08da192f99a35],
+kaksoisikuvien [@RefWorks:doc:5a857a43e4b0ed2d44664d7c] ja
+"koostumusdatan" (compositional data) [@RefWorks:doc:5f934955e4b08d20366a5bd1] kirjat.
+Suomessa korrespondenssianalyysi esitellään ainakin kahdessa oppikirjassa
 (@RefWorks:doc:5a857a44e4b0ed2d44664d95 , @RefWorks:doc:5a857a44e4b0ed2d44664da4).
 
 
@@ -92,10 +93,10 @@ Vasta 80-luvulla menetelmä ylitti kielimuurin, ehkä osittain menetelmää
 soveltaneen sosiologi Pierre Bourdieun kansainvälisesti tunnettujen tutkimusten
 ansiosta. Benzecrin oppilaista Greenacre on oppikirjoillaan vaikuttanut paljon
 menetelmän vakiinnuttamiseen osaksi tilastotieteen perustekniikoita.Hänen
-oppikirjojensa nimet eivät turhaa pääty "...in practice".
+oppikirjojensa kannessa ei turhaa lue "...in practice".
 
 Toisena muurina on pidetty ranskalaisen koulukunnan tiukkaa “bourbakilaista”
-matemaattista esitystapaa.@RefWorks:doc:5a857a43e4b0ed2d44664d75 esittelee tämän
+matemaattista esitystapaa. @RefWorks:doc:5a857a43e4b0ed2d44664d75 esittelevät tämän
 lähestymistavan englanniksi. Lyhyt historiallinen katsaus
 ja menetelmä soveltamisen perusajatusten esittely
 valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita.
