@@ -126,7 +126,7 @@
 
 \title{Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä}
 \author{Jussi Hirvonen}
-\date{Versio 0.9, tulostettu 2020-11-25}
+\date{Versio 1.0, tulostettu 2020-11-26}
 
 \begin{document}
 \maketitle
@@ -145,8 +145,6 @@
 \KeywordTok{options}\NormalTok{(}\DataTypeTok{tinytex.verbose =} \OtherTok{TRUE}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
-
-Versiointi: 0.0n aloittelua, 0.n jäsentely koko paperille, 1.n.n valmiimpaa tekstiä.
 
 \textbf{Tämä luku poistetaan kun tutkielma on valmis}
 
@@ -175,154 +173,149 @@ Data-analyysi: (\url{https://hirjus.github.io/Galku}).
 \hypertarget{johdanto}{%
 \chapter{Johdanto}\label{johdanto}}
 
-\textbf{edit} Kirjoitetaan disposition pohjalta, keräillään kaikki yleiset
-ca-luonnehdinnat yhteen paikkaan eli johdantoon. Kirjoitetaan viimeiseksi, samoin
-yhteenvetoluku. Mahdollisimman lyhyt.
+Korrespondenssianalyysi on deskriptiivinen data-analyysin menetelmä, joka
+soveltuu erityisesti luokitteluasteikon muuttujien yhteyksien analyysiin.
+Yksinkertainen esimerkki on kahden luokittelumuuttuja taulukko. Yksinkertainen
+korrespondenssianalyysi esittää taulukon rivien ja sarakkeiden riippuvuuden
+graafisesti, kaksiulotteisena karttana. Kahden muuttujan analyysin perusideat
+soveltuvat myös useamman muuttujan yhteyksien kuvaamiseen.
 
-\textbf{johdannon ydinsisältö}
+Taulukoita on kaikkialla, mutta niiden graafinen analyysi ei ole kovin yleistä.
 
-\textbf{1}. CA:n periaatteet voi esitellä yksinkertaisen kahden luokittelumuuttujan
-taulukon analyysin avulla. Kun taulukko on pieni, on helppo vertailla CA:n
-karttoja dataan. Yksinkertainen kahden luokittelumuuttujan
-korrespondenssianalyysi antaa graafisen analyysin ``\ldots perussäännöt
-tulkinnalle. Kaikki muut korrespondenssianalyysin muodot ovat saman algoritmin
-soveltamista toisen tyyppiisiin datamatriiseihin, ja tulkintaa sovelletaan vastaavasti''.(\citep{RefWorks:doc:5a857a44e4b0ed2d44664d84} s. 437). Tämä Greenacren ja Hastien artikkelissaan
-esittämä periaate helpottaa huomattavasti juuri graafisen data-analyysin
-eli korrespondenssianalyysin karttojen tulkinnan perussääntöjen oivaltamista. Juuri kartat,
-samassa kuvassa esitettävät havainnot ja muuttujat ovat CA:n tärkein menetelmä, mutta ei
-aivan helppo.
+\hypertarget{tutkielman-tavoite-ja-toteutus}{%
+\section{Tutkielman tavoite ja toteutus}\label{tutkielman-tavoite-ja-toteutus}}
 
-\textbf{2}. CA on kuitenkin vahvimmillaan isojen ja monimutkaisten aineistojen analyysissä.
-Siksi ns. monimuuttujakorrespondenssianalyysin lyhyessä esittelyssä aineistoa
-laajennetaan, sillä ``on erittäin vaikeaa osoittaa kotiakvaarioissa, että verkko on
-tehokas''(\citep{RefWorks:doc:5a857a43e4b0ed2d44664d75}, s.15).
+Tämän tutkielman tavoite on esittää korrespondenssianalyysin periaatteet
+data-analyysin sovellusten avulla. Tutustuin aiheeseen Michael Greenacren
+luennoilla Helsingissä keväällä 2017.
+Aivan huomaamatta tein harjoitustehtävinä karttoja, joita en oikein ymmärtänyt.
 
-\textbf{loppuosa johdannosta vielä vanhoja tekstipätkiä (16.11.2020)}
+Pyrin esittelemään menetelmän niin, että data-analyysistä kiinnostunut lukija
+oivaltaa karttojen tulkinnan perusperiaatteet. Tilastotieteessä on aina ollut
+osana käytännöllinen, soveltajille suunnattu menetelmien esittely. En kirjoita
+kuitenkaan oppikirjaa, vaan tutkielman, jossa esittelen aineiston analyysin
+avulla menetelmää. Analyysien r-koodi on vapaasti saatavilla verkossa, kuten
+tämän tutkielman käsikirjoitus.
 
-\hypertarget{tutkielman-tavoite}{%
-\section{Tutkielman tavoite}\label{tutkielman-tavoite}}
+En etsi datasta vastauksia joihinkin substanssikysymyksiin vaan havainnollistan
+menetelmän mahdollisuuksia datan analyysissä. Tavoitteena on myös oman
+ymmärryksen lisääminen.
 
-\textbf{k} Tässä kerrotaan, miksi tämä työ on kirjoitettu. Esitellään menetelmä
-käyttämällä oikeaa dataa. Täsmällisempi esitys sirotellaan esimerkkiaineiston
-analyysin tulosten esittelyn lomaan. Pitäisikö tässä tuoda esille ns. ``ranskalaisen
-koulukunnan'' matemaattisen perusteiden korostus, ja data-analyysin filosofia?
-Ehkä ei, koska sen pohdinta ei ole pääasia. Se tietysti mainitaan, ja asiaa pohditaan.
+Tutkielman toteutus on rakennettu kolmelle perusajatukselle.
 
-\textbf{ks} Esitellään korrespondenssianalyysin käsitteet ja graafisen analyysin
-periaatteet.
+Yksinkertainen kahden luokittelumuuttujan korrespondenssianalyysi antaa graafisen
+analyysin ''\ldots perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin
+muodot ovat saman algoritmin soveltamista toisen tyyppisiin datamatriiseihin,
+ja tulkintaa sovelletaan vastaavasti (with the consequent adaptation of the
+interpretation)''(\citet{RefWorks:doc:5a857a44e4b0ed2d44664d84} s. 437).
 
-\textbf{k} -mitä ca on?
-- dimensioiden vähentäminen ja visualisointi
+Tutkielma laajin osa on yksinkertaisen korrespondenssianalyysin tulosten ja
+peruskäsitteiden esittelyä.
 
-\begin{itemize}
-\item
-  mihin dataan se soveltuu: kahden luokittemuuttujan taulukon lukumäärädata (count data)
-  tai suhdeasteikon muuttujia samassa mittayksikössä (esim. euroissa).
-\item
-  määrittele graafinen, deskriptiivinen, eksploratiivinen data-analyysi
-\item
-  yksinkertainen ca, useamman muuttujan ca
-\end{itemize}
+Toiseksi käytän laajaa ja laadukasta kansainvälisen haastattelututkimuksen aineistoa.
+Korrespondenssianalyysi sopii survey-aineistojen analyysiin mainiosti, ja samaa
+dataa on käytetty alan oppikirjoissa ja artikkeleissa esimerkkiaineistona.
+Laaja ja mutkikas aineisto antaa oikean kuvan data-analyysistä ja samalla ohjaa
+analyysin kulkua. Data yllättää aina. Menetelmän on taivuttava tarvittaessa
+uusiin suuntiin. Tutkielman data-analyysissä jouduin moneen kertaan miettimään
+mihin suuntaan kannattaisi edetä. Datan analyysi tuo esiin jotain sen
+ominaisuuksia, vaikka mitään sisällöllistä tutkimusongelmaa ei ole määritelty.
 
-\textbf{zxy} Miksi eksporatiivinen (määrittele!) ja deskriptiivinen (määrittele!)
-menetelmä on esitettävä ``in vivo'', toiminnassa? Oppikirjoissa (viitteitä)
-erityisesti MG on havainnolistanut CA:n matemaattista ja geometristä taustaa
-synteettisillä aineistoilla. Turha kopioida tähän. Menetelmän ydin on
-yksinkertaisen graafisen esityksen -- kartan -- avulla tulkita monimutkaisen
-empiirisen aineiston muuttujien riippuvuuksia. Yhteyksiä ei tiivistetä
-todennäköisyyspäättelyn kriteereillä tilastolliseen malliin, vaan deskripriivisen
-analyysin hengessä esitellään koko aineisto. Mallin sijaan vähennetään ulottuvuuksia,
-ja siinä menetetään informaatiota. Tavoitteena on säilyttää yleensä kaksiulotteisessa
-kuvassa mahdollisimman suuri osa alkuperäisen datan vaihtelusta. Eksploratiivinen
-data-analyysi on vuoropuhelua aineiston kanssa. Analyysiä tarkennetaan, rajataan
-ja muokataan, kun aineisto paljastaa jotain kiinnostavaa tai yllättävää. Tästä
-saa jonkinlaisen aasinsillan matriisiyhtälöiden puolustukseksi.
-Saksan ja Belgian datan jakaminen on hyvä esimerkki, on ``osattava tarttua''
-menetelmän tulosmatriiseihin.
-
-\textbf{k} esitystavan perustelu
-
-\begin{itemize}
-\tightlist
-\item
-  kenelle kirjoitettu? Menetelmästä kiinnostuneelle tilastotieteen ja data-analyysin
-  perusteet tuntevalle. R-ohjelmisto ei ole rajoitus, SPSS ja SAS sopivat
-  (SPSS - MG:llä kriittinen huomio ``loose ends - paperissa'' tai CAip-teorialiitteessä).
-\end{itemize}
-
-\hypertarget{tuxe4rkeimmuxe4t-luxe4hteet-ja-ohjelmistot}{%
-\section{Tärkeimmät lähteet ja ohjelmistot}\label{tuxe4rkeimmuxe4t-luxe4hteet-ja-ohjelmistot}}
-
-Michael Greenacre luennoi lyhyen kurssin korrespondenssianalyysistä Helsingin
-yliopistossa keväällä 2017\citep{RefWorks:doc:5b6ef091e4b0984fd9b8c0ca}. Luennot ja
-laskuharjoitukset perehdyttivät minut ensimmäistä kertaa tähän menetelmään, ja
-kurssin materiaaleihin olen usein palannut.
-Michael Greenacren kärsivällisesti kirjoitettu ``Correrspondence Analysis in
-Practice'' (jatkossa ``CAiP'') \citep{RefWorks:doc:5a857a43e4b0ed2d44664d78} ja sen
-aikasemmat versiot ovat tehneet menetelmää laajasti tunnetuksi.``Biplots in Practice''
-(jatkossa ``Biplots'') \citep{RefWorks:doc:5a857a43e4b0ed2d44664d7c} esittää menetelman
-osana yleisempää kaksoiskuvien ideaa.
-
-Ranskalaisen lähestymistan perusoppikirja\citep{RefWorks:doc:5a857a43e4b0ed2d44664d75} (GDA-kirja?)
-esittelee menetelmän matemaattiset perusteet.
-Lyhyt historiallinen katsaus ja menetelmä soveltamisen perusajatusten esittely
-valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita.
-Kirjoittajat esittelevät perusteellisesti joitain empiirisiä tutkimuksia, ja
-lyhyt mutta naseva matriisilaskennan kritiikki on hyvä panna merkille.
-
-\textbf{edit} Hyvin lyhyesti, lause tai pari. On oma liite tekneisestä ympäristöstä.
-
-\textbf{zxy} R, ca-paketti. löytyy myös muita paketteja.
-Rmarkdown\citep{RefWorks:doc:5b6b346fe4b0c619b11b8a3e}, ja
-bookdown (\citep{RefWorks:doc:5b6b36dde4b09b7ec442bf8b} ja toinen viite \citep{R-bookdown}).
-Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.
-
-\textbf{k} Helposti toistettavan tutkimukset periaatteet
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Datastan perusmuunnokset ja muuttujatyypit tehdään kun data luetaan
-  R-ohjelmistoon.
-\item
-  Koodi selkeää ja dokumentoitua. Tärkeä lähde \citep{RefWorks:doc:5c3759c2e4b0085b307c82b5}
-\item
-  R, LaTeX, pandoc - versiot dokumentoidaan
-\end{enumerate}
-
-Tarkemmin liittessä.
+Kolmanneksi keskityn graafiseen analyysiin, kuvien tulkintaan.
+Korrespondenssianalyysin idea on esittää mutkikkaat riippuvuudet ja yhteydet
+kuvana. Samalla tavoite on tiivistää moniulotteisen datan informaatiosta
+mahdollisimman paljon kaksiulotteiselle kartalle. Informaatiota menetetään,
+ja tulkinnan varmistaminen numeerisista tuloksista estää virhepäätelmät. Kartan
+lukeminen ei ole aivan helppoa, mutta perussäännöt ovat melko selkeät.
+Graafinen data-analyysi on tasapainoilua datan analyysin ja tulosten esittämisen
+välillä. Tässä painottuu data-analyysi, ei vaativa viimeisteltyjen
+graafisten esitysten suunnittelu ja toteutus. Graafinen data-analyysi
+ei aina ole helppoa ja nopeaa.
 
 \hypertarget{korrespondenssianalyysin-historiaa}{%
 \section{Korrespondenssianalyysin historiaa}\label{korrespondenssianalyysin-historiaa}}
 
-\textbf{k1} Tiivis esitys lähteineen. Historian voi aloittaa jo pari vuosikymmentä
-vallineesta tilanteesta. CA on yksi deskriptiivinen (ei-tn-teoriaan perustuvaa
-päättelyä) menetelmä muiden joukossa, eristyneisyys murtui hitaasti 80-luvun aikana.
+Korrespondenssianalyysi on 80-luvun alusta vähitellen vakiinnuttanut asemansa
+yhtenä ei-parametrisen kuvailevan data-analyysin menetelmänä. Kansainvälinen
+tutkijaverkosto CARME (Correspondence analysis and related methods network)
+järjesti ensimmäisen konferenssin 1991 ( \url{http://www.carme-n.org} ).
 
-\textbf{k2} Historialla on vain historiallista merkitystä. Kiinnostava juttu, mutta
-aika laaja ja lavea.
+Korrespondenssianalyysi esitellään oppikirjoissa muiden menetelmien rinnalla.
+MG (ecological data)\citep{RefWorks:doc:5b8175eee4b08da192f99a35}, kaksoisikuvat ja
+compositional data \citep{RefWorks:doc:5f934955e4b08d20366a5bd1}. Suomessa
+korrespondenssianalyysi esitellään kahdessa oppikirjassa
+(\citet{RefWorks:doc:5a857a44e4b0ed2d44664d95} , \citet{RefWorks:doc:5a857a44e4b0ed2d44664da4}).
 
-\textbf{k3} Peruskäsitys monessa lähteessä (vihreä kirja, GDA-kirja jne.): synty ja
-kukoistus Ranskassa, loistava eristys (splendid isolation), pikku hiljaa hyväksyntä.
+Korrespondenssianalyysi ja koulukunta syntyi ja vakiintui Ranskassa Jean - Paul Benzecrin
+(1932-2019) ympärille 60-luvulla. 70-luku oli ``loistavan eristyksen'' aikaa,
+``Analyse des Donnees'' -liikkeen kultainen kausi Ranskassa mutta ei muualla.
+Vasta 80-luvulla menetelmä ylitti kielimuurin, ehkä osittain menetelmää
+soveltaneen sosiologi Pierre Bourdieun kansainvälisesti tunnettujen tutkimusten
+ansiosta. Benzecrin oppilaista Greenacre on oppikirjoillaan vaikuttanut paljon
+menetelmän vakiinnuttamiseen osaksi tilastotieteen perustekniikoita.Hänen
+oppikirjojensa nimet eivät turhaa pääty ``\ldots in practice''.
 
-Syiksi esitetään kaksoismuuria: abstrakti matemaattinen (``bourbakilainen'') perusta
-ja esitystapa ja kieli.
+Toisena muurina on pidetty ranskalaisen koulukunnan tiukkaa ``bourbakilaista''
+matemaattista esitystapaa.@RefWorks:doc:5a857a43e4b0ed2d44664d75 esittelee tämän
+lähestymistavan englanniksi. Lyhyt historiallinen katsaus
+ja menetelmä soveltamisen perusajatusten esittely
+valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita.
+Kirjassa esitellään myös hyvin perusteellisesti muutama empiirinen tutkimus.
 
-\textbf{k4} Mitä historiasta on hyvä tietää.
-1. Matemaattinen perusta on ``tosi'', mutta onko menetelmän soveltaminen riippuvainen
-siitä? Ei ole ollut.
+Tarina on kiinnostava ja tärkeäkin osa tieteenhistoriaa, mutta eristys on päättynyt.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\item
-  Ristiriita data-analyyttisen/kuvailevan jne. lähestymistavan ja tilastollisen
-  mallintamisen välillä - on läsnä edelleen mutta turha korostaa. Myös tilastollisen
-  mallintamisen ja päättelyn sisällä on kiistoja, erilaisia näkemysiä ja kuiluja.
-\item
-  ``Esoteerinen tieteenfilosofia''? Kiinnostava aihe, ehkä. Murgtag-sitaatti.
-\end{enumerate}
+\hypertarget{tutkielman-rakenne}{%
+\section{Tutkielman rakenne}\label{tutkielman-rakenne}}
+
+Datan kuvailun jälkeen CA:n peruskäsitteet esitellään yksikertaisen esimerkin
+avulla luvussa 3.
+
+Luvuissa 4 - 5 analyysiin lisätään täydentäviä pisteitä tulkinnan tueksi
+ja muodostetaan luokittelumuuttujien yhteisvaikutusmuuttujia (ikä ja sukupuoli).
+
+Kolmen muuttujan yhteisvaikutusmuuttujan (maa, sukupuoli ja ikäluokka) analyysi
+tehdään osajoukon korrespondenssianalyysillä luvussa 6.
+
+Luvussa 7 esitellään lyhyesti kaksi tapaa tutkia useamman muuttujan yhteyksiä.
+Taulukoita yhdistämällä voidaan analysoida kahden muuttujaryhmän välisiä yhteyksiä.
+Monimuuttujakorrespondenssianalyysia sovelletaan isoon aineistoon ja tällaisten
+aineistojen yleiseen ongelmaan, puuttuviin tietoihin.
+
+Luvussa 8 kerrotaan, mistä alettiin ja mitä tuloksia saatiin.
+
+Tutkielmassa on kolme liitettä.
+
+Liite 1 esittelee tiiviisti menetelmän teorian.
+Korrespondenssianalyysin numeerisia tuloksia havainnollistetaan kuvalla, ja
+monimuuttujakorrespondenssianalyysin (MCA) käsitteitä esitellään hieman enemmän.
+MCA:n teoriaa ei laajemmin esitellä, mutta tulkinnan ongelmia esitellään lyhyesti.
+
+Tutkielma on tehty R-tilastohjelmalla, ja korrespondenssianalyyseissä on käytetty
+ca-pakettia( \citet{ca2007} ).
+
+Tutkielman koodi on julkaistu Github-palvelussa (\url{https://github.com/hirjus/capaper}),
+samoin tutkielman käsikirjoitus ( \url{https://hirjus.github.io/capaper/} )
+ja alustava data-analyysi.
+
+Tekninen ympäristö on kuvattu tarkemmin liitteessä 2., myös sen ongelmat.
+
+Liitteessä 3 on listattu tutkielman R-koodi.
+
+\hypertarget{tuxe4rkeimmuxe4t-luxe4hteet}{%
+\section{Tärkeimmät lähteet}\label{tuxe4rkeimmuxe4t-luxe4hteet}}
+
+Tutkielman tärkein lähde on \citep{RefWorks:doc:5a857a43e4b0ed2d44664d78} (jatkossa CAiP),
+ja muitakin saman tekijän artikkeleita on käytetty paljon. Kevään 2017
+kurssimateriaali\citep{RefWorks:doc:5b6ef091e4b0984fd9b8c0ca} ja laskuharjoitusten koodi
+on ollut hyödyllinen pikaopas peruskäsitteisiin ja r-toteutuksen ratkaisuihin.
+
+\citet{RefWorks:doc:5ab76b43e4b003f4468d1f07} toimittama Carme-verkoston kolmas
+artikkelikokoelma on ajantasainen perusteos.Perusteelliset artikkelit kattavat
+myös korrespondenssianalyysin tärkeimmät aiheet.
+
+Data on ensin luettava ohjelman ymmärtämään muotoon, ja erilaiset muunnokset kannattaa
+tehdä heti kun data luetaan. \citet{RefWorks:doc:5c3759c2e4b0085b307c82b5} kertovat,
+miten luokittelumuuttujia pitää R-koodissa käsitellä.
 
 \hypertarget{data}{%
 \chapter{Data}\label{data}}
@@ -964,11 +957,18 @@ riviprofiilissa.
 Suomen profiili on kaukana S-sarakkeesta ja lähellä ? - saraketta, S-vastausten
 osuus on siis pieni ja ? - vastausten suuri.
 
-Ideaalipisteiden tulkinnan voi varmistaa sarake kerrallaan, projisjoimalla rivipisteet
-origon kautta piirretylle janalle. Kuvassa @ref(fig:G1\_3\_asymmtulk2) nähdään mikä
+Ideaalipisteiden tulkinnan voi varmistaa sarake kerrallaan, projisoimalla rivipisteet
+origon kautta piirretylle janalle. Kuvassa \ref{fig:G1-3-asymmtulk2} nähdään mikä
 on maiden järjestys E-vastausvaihtoehdossa.
 
-\begin{center}\includegraphics[width=0.9\linewidth]{img/simpleCAasymmTulk2} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{img/simpleCAasymmTulk2} 
+
+}
+
+\caption{Rivipisteiden projektiot}\label{fig:G1-3-asymmtulk2}
+\end{figure}
 
 Asymmetrinen kartta antaa kaksi uutta näkökulmaa rivien ja sarakkeiden suhteeseen.
 Sen huono puoli on ideaalipisteiden karkaaminen kauas origosta ja rivipisteiden
@@ -1160,7 +1160,7 @@ Koordinaattien yhteys voidaan esittää kahtena yksinkertaistettuna kaavana
 \end{equation}
 
 \begin{equation}
-  kontribuutiokoordinaatit = \sqrt{massat} \times  standardikoordinatit 
+  kontribuutiokoordinaatit = \sqrt{massat} \times  standardikoordinatit
     \label{eq:kontribfromstd1}
 \end{equation}
 
@@ -2389,64 +2389,51 @@ osalla sarakkeita (e1? 475, c1? 71 ja b1? 573).
 \hypertarget{yhteenveto}{%
 \chapter{Yhteenveto}\label{yhteenveto}}
 
-Jäsennysdokumentissa on muutama ajatus, ja viite. Kirjoitetaan tämä viimeiseksi.
+Tutkielman data-analyysi päättyi vaiheeseen, josta voi jatkaa laajan aineiston
+analyysiä. Analyysin kysymykset näyttävät erottelevan hyvin ja johdonmukaisesti
+vastaajat konservatiivisen ja liberaalimman modernimman mielipiteen välillä.
+Neutraali vaihtoehto ja ''dimensios of middleness'' kannattaa huomioida.
+Puuttuvat tiedot voi korrespondenssianalyysissä analysoida omana osajoukkona
+ja päättää miten menettelee.
 
-\textbf{k} Onko maiden vertailu järkevää?
-Blasius ja Thiessen
-``This paper provides empirically-based criteria for selecting Items and countries
-to develop measures of an underlying construct of interest that are comparable in
-cross-national research. Using data from the 1994 International Social Survey
-Program and applying multiple correspondence analysis to a set of common items
-in each of the 24 participating countries, we show that both the quality of the
-data, as well as its underlying structure - and therefore meaning - vary
-considerably between countries. The approach we use for screening countries and
-items is especially useful in situations where the psychometric properties of
-the items have not been well established in previous research.''
-\citep{RefWorks:doc:5b15542ee4b0e2616bc42dca}
+Korrespondenssianalyysi sopii hyvin yksinkertaisen kahden luokittelumuuttujan
+riippuvuuksien visualisointiin. Kuvan oikea analyysi onnistuu pienellä
+harjoittelulla. Tämä ei ole mitätön asia, taulukoita on kaikkialla. Menetelmä
+laajenee joustavasti myös mutkikkaampiin tutkimusasetelmiin.
 
-\textbf{k} voiko järjestysasteikon muuttujilla tehdä vertailuja maiden välillä?
+Useiden muuttujien samanaikainen analyysi onnistuu kahdella tavalla, taulukoita
+yhdistelemällä tai monimuuttujakorrespondenssianalyysillä (MCA). Tulkinta muuttuu
+vaativammaksi, mutta MCA-esimerkki luvussa 7 esittää myös menetelmän pätevyyden.
 
-``Surullinen totuus onnellisuustutkimuksesta'' \citet{RefWorks:doc:5c223412e4b0508a6674dec0}
-(ilman sulkuja) ja suluilla \citep{RefWorks:doc:5c223412e4b0508a6674dec0}
+Aineiston sisällöllisesti tärkeät muuttujat ovat järjestysasteikon muuttujia.
+Tutkimusasetelmissa vertailtiin eri ryhmiä ja kuvattiin niiden yhteyksiä
+vastauskategorioihin. Korrespondenssianalyysi on luokitteluasteikon muuttujille
+sopiva menetelmä, järjestysasteikon muuttujien ''oikeita etäisyyksiä'' voidaan
+arvioida.
 
-\textbf{k} Eksploratiivinen data-analyysi ja todennäköisyysteoreettinen päättely
+Data-analyysi osoitti, että maiden tai muiden ryhmien vertailu ei ole niin
+yksinkertaista kuin ehkä luullaan. \citet{RefWorks:doc:5b15542ee4b0e2616bc42dca}
+tutkivat MCA-menetelmällä ISSP:n 1994 kerättyä aineistoa. He osoittavat, että
+datan laatu ja rakenne vaihtelee paljon maiden välillä (''\ldots both the quality of
+the data, as well as its underlying structure - and therefore meaning - vary
+considerably between countries.'').
 
-Gifi-nimimerkillä kirjoittavat Jan De Leeuw jatkavat verkkokirjassaan
-\citep{RefWorks:doc:5faaf996e4b05416e98ff547} keskustelua konfirmatorisen ja
-data-analyyttisen eksploratiivisen lähestymistavan eroista. He ovat tiukasti
-eksploratiivisen linjan kannattajia, ja korostavat konfliktin pitkää historiaa.
-Nyt historia on heidän mielestään loppunut: ``We shall not pay much attention any
-more to these turf and culture wars, because basically they are over. Data
-analysis, in its multitude of disguises and appearances, is the winner.
-Classical statistics departments are gone, or on their way out. They may not
-have changed their name, but their curricula and hiring practices are very
-different from what they were 20 or even 10 years ago.''
+Datan laadun ja rakenteen lisäksi järjestysasteikon käyttöön yleisempi ongelma.
+Voiko vastaajien ryhmiä vertailla keskenään järjestysasteikollisen muuttujan
+jonkinlaisilla keskiarvoilla? \citet{RefWorks:doc:5c223412e4b0508a6674dec0} osoittavat
+että tämä onnistuu vain harvoin. ``Our goal is not to provide a litany of
+concerns -- which can be done for most social scientific metrics -- but rather to
+establish that standard happiness measures cannot rank the average happiness of
+two groups without strong additional assumptions about the underlying distribution
+of happiness. We expect that even if we achieve consensus on these assumptions,
+many comparisons will remain unranked.'' Korrespondenssianalyysillä vertailun
+voi tehdä ilman jakaumaoletuksia, katsoa miltä data näyttää.
 
-\textbf{k} Miksi ei molempia?
-
-\textbf{k1} Visualisointi on tehokasta tapa tutkia aineiston rakenetta, yhteyksiä
-muuttujien välillä ja eri havaintojoukkojen eroja. Ei automaattisesti helppoa,
-mutta kahden luokitelumuuttujan taulukko on ehkä yleisin tapa esittää mitä
-tahansa dataa. CA on aika pätevä väline taulukon riippuvuuksien hahmottamiseen
-yhdellä kartalla.
-
-\textbf{k2} Jo oppikirjoista näkee, että tarvitaan monta menetelmää ja näkökulmaa.
-``jack of all trades but master of none'', sellainen on data-analyytikko.
-
-**k21*' MCA-esimerkki, eikö ole mainio lähtökohta faktorianalyysille?
-
-\textbf{k} Tulevaisuus?
-
-``The applicability of a dimension-reduction technique on very large categorical
-data sets or on categorical data streams is limited due to the required singular
-value decomposition (SVD) of properly transformed data. The application of SVD
-to large and high-dimensional data is unfeasible because of the very large
-computational time and because it requires the whole data to be stored in memory
-(no data flows can be analysed). The aim of the present paper is to integrate an
-incremental SVD procedure in a multiple correspondence analysis (MCA)-like
-procedure in order to obtain a dimensionality reduction technique feasible for
-the application on very large categorical data or even on categorical
-data streams''\citep{RefWorks:doc:5f01c74be4b0d3d8328c72ca}.
+Tutkielma on tehty r-ohjelmistolla ja raportointi rmarkdown - koodilla. Teksti
+ja koodi ovat samassa dokumentissa, samoin analyysin tulokset. Ne voi tulostaa
+eri formaateissa, ja Github.com - palvelussa voi versionhallinnan lisäksi julkaista
+html-raportit. Ongelmiakin oli, ne ja teknisen ympäristön yksityiskohdat on
+kuvattu liitteessä 3.
 
 \hypertarget{luxe4hteet}{%
 \chapter*{Lähteet}\label{luxe4hteet}}
@@ -2682,10 +2669,6 @@ pisteet ovat kaukana myös alkuperäisessä avaruudessa. Projektiossa lähekkäi
 olevat pisteet voivat olla alkuperäisessä avaruudessa kaukana toisistaan,
 jos niiden projektion laatu on huono.
 
-\hypertarget{matriisit-ja-niiden-havainnollistaminen}{%
-\section*{Matriisit ja niiden havainnollistaminen}\label{matriisit-ja-niiden-havainnollistaminen}}
-\addcontentsline{toc}{section}{Matriisit ja niiden havainnollistaminen}
-
 \textbf{edit: kaavaesimerkkejä - poistetaan lopullisesta versiosta}
 
 Korrespondenssianalyysin sovelluksissa tutkimusongelman ratkaisu on usein sopivan
@@ -2752,8 +2735,9 @@ ABBA on erityistapaus yleisemmästä moniulotteisen taulukon (multiway table) an
 jossa useita kahden muuttujan taulukoita ``pinotaan'' päällekkäin ja rinnakkain.
 Voimme ottaa yhden kysymyksen vastausten lisäksi analyysiin mukaan useamman
 kysymyksen vastaukset laajentamalla kahden päällekkäisen matriisin taulukkoa oikealle.
+\textbf{edit poistetava pätkä loppuu tähän}
 
-\textbf{Monimuuttuja-korrespondenssianalyysi MCA}
+\textbf{Monimuuttujakorrespondenssianalyysi MCA}
 
 Usean muuttujan korrespondenssianalyysissä tutkitaan usean muuttujan välisiä yhteyksiä.
 Kartan tulkinnan apuna siihen voidaan lisätä havaintojen sijaan niiden keskiarvopisteitä
@@ -2804,8 +2788,36 @@ korrespondenssianalyysin matemaattinen teoria ei ole vielä täysin valmis?
 \chapter*{Liite 2: Tekninen ympäristö ja Bookdown-paketti}\label{liite-2-tekninen-ympuxe4ristuxf6-ja-bookdown-paketti}}
 \addcontentsline{toc}{chapter}{Liite 2: Tekninen ympäristö ja Bookdown-paketti}
 
-Muokataan tiiviimpi pätkä esimerkkireposta bookdown-testi1. Tämä kuva kertoo vain
-julkaisutekniikan ympäristön.
+Analysoin aineistona r-paketilla ca, vaihtoehdoista voi mainita ranskalaisten kehittämän
+FactoMineR - paketin ja muitakin löytyy. Korrespondenssianalyysin voi tehdä myös monella
+muulla ohjelmistolla (esim. Survo, SAS ja SPSS). Greenacre ei ole tyytyväinen SPSS:n
+toteutukseen: ``In SPSS's CA program in the Categories module,an alternative biplot
+is given that has not been illustrated in this book, called the''symmetrical normalization``,
+which may be confused with the symmetric map described in this book. It is not exactly the
+same thing, however,since it uses standard coordinates scaled by the square roots of the singular
+values (i.e.~fourth roots of the principal inertias) instead of the singularvalues themselves.
+Curiously, the symmetric map, one of the most popular display options of
+French researchers, has never been available in SPSS (module Categories),
+and it is still not possible in IBM SPSS version 20 to obtain a joint map of the rows
+and columns in principalcoordinates''(CAiP, s. 296). En ole tarkastanut onko pitääkö kritiikki
+yhä paikkansa.
+
+\textbf{Bookdown}
+
+Bookdown-paketti laajentaa R-ohjelmiston julkaisuominaisuuksia \citep{RefWorks:doc:5b6b36dde4b09b7ec442bf8b}.
+Sen avulla voi tuottaa monipuolisesti julkaisuja samalla lähdekoodilla eri formaatteihin.
+
+Html-formaatti sopii mainiosti data-analyysiin, taulukkoita ja kuvia ei tarvitse asetella paperikoon
+mukaan sivuille. PDF-formaatilla on omat etunsa, koko dokumentti on yksi tiedosto. Olen
+käyttänyt bookdown-pakettia vailla suurempia ongelmia. Jos ongelmia tulee, niiden syiden
+selvittämien ei ole helppoa. Kuva \ref{fig:L3bdprocess1} näyttää bookdownin julkaisuprosessin
+vaiheet. PDF on ongelmallinen, tässä projektissa pdf-tulostus lakkasi toimimasta
+kaksi kertaa. Tutkielman pdf-versio on tulosetettu selaimella, html-tiedosto on
+bookdown-paketin tulostustvaihtoehto html\_book.
+
+Ongelmat ovat varmasti ratkaistavissa, ja bookdown-paketti tai sen muokatut
+versiot ovat laajassa käytössä monissa yliopistoissa. Kyse on vain
+LateX-osaamattomuudesta tai ymmärtämättömyydestä.
 
 \begin{figure}
 
@@ -2816,7 +2828,37 @@ julkaisutekniikan ympäristön.
 \caption{Tulostiedoston prosessointi}\label{fig:L3bdprocess1}
 \end{figure}
 
+\textbf{Git ja Github}
+
+Käytin Github-palvelun versionhallintaa ja www-palvelua raporttien julkaisemiseen.
+
+Tutkielman luonnos (\url{https://hirjus.github.io/capaper/}) ja lähdekoodi
+(\url{https://github.com/hirjus/capaper}) löytyvät sieltä. Data on pakattuna tiedostona.
+
 \textbf{Käyttöjärjestelmä ja R-ympäristö}
+
+RStudio-sovelluksen ja käyttämäni TeX-versiot ovat
+
+RStudio Version 1.3.1093, latex engine xelatex
+
+XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX)
+
+Bookdown-asetuksissa käyntin latex-muunnokseen aluksi pdflatex-valintaa ja
+vaihdoin sen myöhemmin xelatex-vaihtoehtoon.
+Ero ei ole merkittävä.
+
+TeX-jakeluna käytin bookdown-paketin kehittäjän suosittelemaa
+TinyTeX - versiota (\url{https://yihui.org/tinytex/}) ja
+r-pakettia tinytex.Niiden etu on tarvittavien LaTex-pakettien
+automaattinen asentaminen.
+
+R-ympäristön tarkemmat tietot:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sessionInfo}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
 
 \begin{verbatim}
 ## R version 3.6.3 (2020-02-29)
@@ -4215,8 +4257,8 @@ julkaisutekniikan ympäristön.
 \CommentTok{# sarakkeet vektorikuvina}
 
 \CommentTok{# par(cex = 0.7)}
-\KeywordTok{plot}\NormalTok{(simpleCA1, }\DataTypeTok{map =} \StringTok{"rowprincipal"}\NormalTok{, }
-     \DataTypeTok{arrows =} \KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{,}\OtherTok{TRUE}\NormalTok{), }
+\KeywordTok{plot}\NormalTok{(simpleCA1, }\DataTypeTok{map =} \StringTok{"rowprincipal"}\NormalTok{,}
+     \DataTypeTok{arrows =} \KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{,}\OtherTok{TRUE}\NormalTok{),}
      \DataTypeTok{main =} \StringTok{"asymmetrinen kartta 1"}
 \NormalTok{    )}
 
@@ -4228,12 +4270,13 @@ julkaisutekniikan ympäristön.
 
 \CommentTok{# X11()}
 \KeywordTok{par}\NormalTok{(}\DataTypeTok{cex =} \DecValTok{1}\NormalTok{)}
-\KeywordTok{plot}\NormalTok{(simpleCA1, }\DataTypeTok{map =} \StringTok{"rowprincipal"}\NormalTok{, }
+\KeywordTok{plot}\NormalTok{(simpleCA1, }\DataTypeTok{map =} \StringTok{"rowprincipal"}\NormalTok{,}
      \DataTypeTok{arrows =} \KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{,}\OtherTok{FALSE}\NormalTok{),}
      \CommentTok{# main = "barysentrinen periaate - asymmetrinen kartta 2",}
      \DataTypeTok{sub =} \StringTok{"Suomen profiili sarakkeiden barysentrisenä keskiarvona"}\NormalTok{)}
      \KeywordTok{segments}\NormalTok{(simpleCA1.rpc[}\DecValTok{5}\NormalTok{,}\DecValTok{1}\NormalTok{],simpleCA1.rpc[}\DecValTok{5}\NormalTok{,}\DecValTok{2}\NormalTok{],simpleCA1}\OperatorTok{$}\NormalTok{colcoord[, }\DecValTok{1}\NormalTok{],}
 \NormalTok{         simpleCA1}\OperatorTok{$}\NormalTok{colcoord[, }\DecValTok{2}\NormalTok{], }\DataTypeTok{col =} \StringTok{"pink"}\NormalTok{)}
+
 
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{'img/simpleCAasymmTulk2.png'}\NormalTok{)}
 

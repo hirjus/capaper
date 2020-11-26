@@ -1,140 +1,165 @@
 # Johdanto
 
-**edit** Kirjoitetaan disposition pohjalta, keräillään kaikki yleiset
-ca-luonnehdinnat yhteen paikkaan eli johdantoon. Kirjoitetaan viimeiseksi, samoin
-yhteenvetoluku. Mahdollisimman lyhyt.
+
+Korrespondenssianalyysi on deskriptiivinen data-analyysin menetelmä, joka
+soveltuu erityisesti luokitteluasteikon muuttujien yhteyksien analyysiin.
+Yksinkertainen esimerkki on kahden luokittelumuuttuja taulukko. Yksinkertainen
+korrespondenssianalyysi esittää taulukon rivien ja sarakkeiden riippuvuuden
+graafisesti, kaksiulotteisena karttana. Kahden muuttujan analyysin perusideat
+soveltuvat myös useamman muuttujan yhteyksien kuvaamiseen.
+
+Taulukoita on kaikkialla, mutta niiden graafinen analyysi ei ole kovin yleistä.
 
 
-**johdannon ydinsisältö**
-
-**1**. CA:n periaatteet voi esitellä yksinkertaisen kahden luokittelumuuttujan
-taulukon analyysin avulla. Kun taulukko on pieni, on helppo vertailla CA:n
-karttoja dataan. Yksinkertainen kahden luokittelumuuttujan
-korrespondenssianalyysi antaa graafisen analyysin "...perussäännöt
-tulkinnalle. Kaikki muut korrespondenssianalyysin muodot ovat saman algoritmin
-soveltamista toisen tyyppiisiin datamatriiseihin, ja tulkintaa sovelletaan vastaavasti
-".([@RefWorks:doc:5a857a44e4b0ed2d44664d84] s. 437). Tämä Greenacren ja Hastien artikkelissaan
-esittämä periaate helpottaa huomattavasti juuri graafisen data-analyysin
-eli korrespondenssianalyysin karttojen tulkinnan perussääntöjen oivaltamista. Juuri kartat,
-samassa kuvassa esitettävät havainnot ja muuttujat ovat CA:n tärkein menetelmä, mutta ei
-aivan helppo.
-
-**2**. CA on kuitenkin vahvimmillaan isojen ja monimutkaisten aineistojen analyysissä.
-Siksi ns. monimuuttujakorrespondenssianalyysin lyhyessä esittelyssä aineistoa
-laajennetaan, sillä "on erittäin vaikeaa osoittaa kotiakvaarioissa, että verkko on
-tehokas"([@RefWorks:doc:5a857a43e4b0ed2d44664d75], s.15).
-
-**loppuosa johdannosta vielä vanhoja tekstipätkiä (16.11.2020)**
+## Tutkielman tavoite ja toteutus
 
 
-## Tutkielman tavoite
-
-**k** Tässä kerrotaan, miksi tämä työ on kirjoitettu. Esitellään menetelmä
-käyttämällä oikeaa dataa. Täsmällisempi esitys sirotellaan esimerkkiaineiston
-analyysin tulosten esittelyn lomaan. Pitäisikö tässä tuoda esille ns. "ranskalaisen
-koulukunnan" matemaattisen perusteiden korostus, ja data-analyysin filosofia?
-Ehkä ei, koska sen pohdinta ei ole pääasia. Se tietysti mainitaan, ja asiaa pohditaan.
+Tämän tutkielman tavoite on esittää korrespondenssianalyysin periaatteet
+data-analyysin sovellusten avulla. Tutustuin aiheeseen Michael Greenacren
+luennoilla Helsingissä keväällä 2017.
+Aivan huomaamatta tein harjoitustehtävinä karttoja, joita en oikein ymmärtänyt.
 
 
-**ks** Esitellään korrespondenssianalyysin käsitteet ja graafisen analyysin
-periaatteet.
-
-**k** -mitä ca on?
-- dimensioiden vähentäminen ja visualisointi
-
-- mihin dataan se soveltuu: kahden luokittemuuttujan taulukon lukumäärädata (count data)
-tai suhdeasteikon muuttujia samassa mittayksikössä (esim. euroissa).
-
-- määrittele graafinen, deskriptiivinen, eksploratiivinen data-analyysi
-- yksinkertainen ca, useamman muuttujan ca
+Pyrin esittelemään menetelmän niin, että data-analyysistä kiinnostunut lukija
+oivaltaa karttojen tulkinnan perusperiaatteet. Tilastotieteessä on aina ollut
+osana käytännöllinen, soveltajille suunnattu menetelmien esittely. En kirjoita
+kuitenkaan oppikirjaa, vaan tutkielman, jossa esittelen aineiston analyysin
+avulla menetelmää. Analyysien r-koodi on vapaasti saatavilla verkossa, kuten
+tämän tutkielman käsikirjoitus.
 
 
-
-**zxy** Miksi eksporatiivinen (määrittele!) ja deskriptiivinen (määrittele!)
-menetelmä on esitettävä "in vivo", toiminnassa? Oppikirjoissa (viitteitä)
-erityisesti MG on havainnolistanut CA:n matemaattista ja geometristä taustaa
-synteettisillä aineistoilla. Turha kopioida tähän. Menetelmän ydin on
-yksinkertaisen graafisen esityksen -- kartan -- avulla tulkita monimutkaisen
-empiirisen aineiston muuttujien riippuvuuksia. Yhteyksiä ei tiivistetä
-todennäköisyyspäättelyn kriteereillä tilastolliseen malliin, vaan deskripriivisen
-analyysin hengessä esitellään koko aineisto. Mallin sijaan vähennetään ulottuvuuksia,
-ja siinä menetetään informaatiota. Tavoitteena on säilyttää yleensä kaksiulotteisessa
-kuvassa mahdollisimman suuri osa alkuperäisen datan vaihtelusta. Eksploratiivinen
-data-analyysi on vuoropuhelua aineiston kanssa. Analyysiä tarkennetaan, rajataan
-ja muokataan, kun aineisto paljastaa jotain kiinnostavaa tai yllättävää. Tästä
-saa jonkinlaisen aasinsillan matriisiyhtälöiden puolustukseksi.
-Saksan ja Belgian datan jakaminen on hyvä esimerkki, on "osattava tarttua"
-menetelmän tulosmatriiseihin.
+En etsi datasta vastauksia joihinkin substanssikysymyksiin vaan havainnollistan
+menetelmän mahdollisuuksia datan analyysissä. Tavoitteena on myös oman
+ymmärryksen lisääminen.
 
 
-**k** esitystavan perustelu
-
-- kenelle kirjoitettu? Menetelmästä kiinnostuneelle tilastotieteen ja data-analyysin
-perusteet tuntevalle. R-ohjelmisto ei ole rajoitus, SPSS ja SAS sopivat
-(SPSS - MG:llä kriittinen huomio "loose ends - paperissa" tai CAip-teorialiitteessä).
-
-## Tärkeimmät lähteet ja ohjelmistot
+Tutkielman toteutus on rakennettu kolmelle perusajatukselle.
 
 
-
-Michael Greenacre luennoi lyhyen kurssin korrespondenssianalyysistä Helsingin
-yliopistossa keväällä 2017[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca]. Luennot ja
-laskuharjoitukset perehdyttivät minut ensimmäistä kertaa tähän menetelmään, ja
-kurssin materiaaleihin olen usein palannut.
-Michael Greenacren kärsivällisesti kirjoitettu "Correrspondence Analysis in
-Practice" (jatkossa "CAiP") [@RefWorks:doc:5a857a43e4b0ed2d44664d78] ja sen
-aikasemmat versiot ovat tehneet menetelmää laajasti tunnetuksi."Biplots in Practice"
-(jatkossa "Biplots") [@RefWorks:doc:5a857a43e4b0ed2d44664d7c] esittää menetelman
-osana yleisempää kaksoiskuvien ideaa. 
+Yksinkertainen kahden luokittelumuuttujan korrespondenssianalyysi antaa graafisen
+analyysin ”...perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin
+muodot ovat saman algoritmin soveltamista toisen tyyppisiin datamatriiseihin,
+ja tulkintaa sovelletaan vastaavasti (with the consequent adaptation of the
+interpretation)”(@RefWorks:doc:5a857a44e4b0ed2d44664d84 s. 437).
 
 
-Ranskalaisen lähestymistan perusoppikirja[@RefWorks:doc:5a857a43e4b0ed2d44664d75] (GDA-kirja?)
-esittelee menetelmän matemaattiset perusteet.
-Lyhyt historiallinen katsaus ja menetelmä soveltamisen perusajatusten esittely
-valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita.
-Kirjoittajat esittelevät perusteellisesti joitain empiirisiä tutkimuksia, ja
-lyhyt mutta naseva matriisilaskennan kritiikki on hyvä panna merkille.
+Tutkielma laajin osa on yksinkertaisen korrespondenssianalyysin tulosten ja
+peruskäsitteiden esittelyä.
 
 
-**edit** Hyvin lyhyesti, lause tai pari. On oma liite tekneisestä ympäristöstä.
+Toiseksi käytän laajaa ja laadukasta kansainvälisen haastattelututkimuksen aineistoa.
+Korrespondenssianalyysi sopii survey-aineistojen analyysiin mainiosti, ja samaa
+dataa on käytetty alan oppikirjoissa ja artikkeleissa esimerkkiaineistona.
+Laaja ja mutkikas aineisto antaa oikean kuvan data-analyysistä ja samalla ohjaa
+analyysin kulkua. Data yllättää aina. Menetelmän on taivuttava tarvittaessa
+uusiin suuntiin. Tutkielman data-analyysissä jouduin moneen kertaan miettimään
+mihin suuntaan kannattaisi edetä. Datan analyysi tuo esiin jotain sen
+ominaisuuksia, vaikka mitään sisällöllistä tutkimusongelmaa ei ole määritelty.
 
-**zxy** R, ca-paketti. löytyy myös muita paketteja.
-Rmarkdown[@RefWorks:doc:5b6b346fe4b0c619b11b8a3e], ja
-bookdown ([@RefWorks:doc:5b6b36dde4b09b7ec442bf8b] ja toinen viite [@R-bookdown]).
-Mikäs tuo jälkimmäinen on? PDF-lähdeluettelossa ei ole url-osoitteita.
 
-**k** Helposti toistettavan tutkimukset periaatteet
+Kolmanneksi keskityn graafiseen analyysiin, kuvien tulkintaan.
+Korrespondenssianalyysin idea on esittää mutkikkaat riippuvuudet ja yhteydet
+kuvana. Samalla tavoite on tiivistää moniulotteisen datan informaatiosta
+mahdollisimman paljon kaksiulotteiselle kartalle. Informaatiota menetetään,
+ja tulkinnan varmistaminen numeerisista tuloksista estää virhepäätelmät. Kartan
+lukeminen ei ole aivan helppoa, mutta perussäännöt ovat melko selkeät.
+Graafinen data-analyysi on tasapainoilua datan analyysin ja tulosten esittämisen
+välillä. Tässä painottuu data-analyysi, ei vaativa viimeisteltyjen
+graafisten esitysten suunnittelu ja toteutus. Graafinen data-analyysi
+ei aina ole helppoa ja nopeaa.
 
-1. Datastan perusmuunnokset ja muuttujatyypit tehdään kun data luetaan
-R-ohjelmistoon.
-2. Koodi selkeää ja dokumentoitua. Tärkeä lähde [@RefWorks:doc:5c3759c2e4b0085b307c82b5]
-3. R, LaTeX, pandoc - versiot dokumentoidaan
-
-Tarkemmin liittessä.
 
 ## Korrespondenssianalyysin historiaa
 
-**k1** Tiivis esitys lähteineen. Historian voi aloittaa jo pari vuosikymmentä
-vallineesta tilanteesta. CA on yksi deskriptiivinen (ei-tn-teoriaan perustuvaa
-päättelyä) menetelmä muiden joukossa, eristyneisyys murtui hitaasti 80-luvun aikana.
 
-**k2** Historialla on vain historiallista merkitystä. Kiinnostava juttu, mutta
-aika laaja ja lavea.
-
-**k3** Peruskäsitys monessa lähteessä (vihreä kirja, GDA-kirja jne.): synty ja
-kukoistus Ranskassa, loistava eristys (splendid isolation), pikku hiljaa hyväksyntä.
-
-Syiksi esitetään kaksoismuuria: abstrakti matemaattinen ("bourbakilainen") perusta
-ja esitystapa ja kieli.
-
-**k4** Mitä historiasta on hyvä tietää.
-1. Matemaattinen perusta on "tosi", mutta onko menetelmän soveltaminen riippuvainen
-siitä? Ei ole ollut.
-
-2. Ristiriita data-analyyttisen/kuvailevan jne. lähestymistavan ja tilastollisen
-mallintamisen välillä - on läsnä edelleen mutta turha korostaa. Myös tilastollisen
-mallintamisen ja päättelyn sisällä on kiistoja, erilaisia näkemysiä ja kuiluja.
-
-3. "Esoteerinen tieteenfilosofia"? Kiinnostava aihe, ehkä. Murgtag-sitaatti.
+Korrespondenssianalyysi on 80-luvun alusta vähitellen vakiinnuttanut asemansa
+yhtenä ei-parametrisen kuvailevan data-analyysin menetelmänä. Kansainvälinen
+tutkijaverkosto CARME (Correspondence analysis and related methods network)
+järjesti ensimmäisen konferenssin 1991 ( http://www.carme-n.org ).
 
 
+Korrespondenssianalyysi esitellään oppikirjoissa muiden menetelmien rinnalla.
+MG (ecological data)[@RefWorks:doc:5b8175eee4b08da192f99a35], kaksoisikuvat ja
+compositional data [@RefWorks:doc:5f934955e4b08d20366a5bd1]. Suomessa
+korrespondenssianalyysi esitellään kahdessa oppikirjassa
+(@RefWorks:doc:5a857a44e4b0ed2d44664d95 , @RefWorks:doc:5a857a44e4b0ed2d44664da4).
+
+
+Korrespondenssianalyysi ja koulukunta syntyi ja vakiintui Ranskassa Jean - Paul Benzecrin
+(1932-2019) ympärille 60-luvulla.  70-luku oli “loistavan eristyksen” aikaa,
+“Analyse des Donnees” -liikkeen kultainen kausi Ranskassa mutta ei muualla.
+Vasta 80-luvulla menetelmä ylitti kielimuurin, ehkä osittain menetelmää
+soveltaneen sosiologi Pierre Bourdieun kansainvälisesti tunnettujen tutkimusten
+ansiosta. Benzecrin oppilaista Greenacre on oppikirjoillaan vaikuttanut paljon
+menetelmän vakiinnuttamiseen osaksi tilastotieteen perustekniikoita.Hänen
+oppikirjojensa nimet eivät turhaa pääty "...in practice".
+
+Toisena muurina on pidetty ranskalaisen koulukunnan tiukkaa “bourbakilaista”
+matemaattista esitystapaa.@RefWorks:doc:5a857a43e4b0ed2d44664d75 esittelee tämän
+lähestymistavan englanniksi. Lyhyt historiallinen katsaus
+ja menetelmä soveltamisen perusajatusten esittely
+valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita.
+Kirjassa esitellään myös hyvin perusteellisesti muutama empiirinen tutkimus.
+
+
+Tarina on kiinnostava ja tärkeäkin osa tieteenhistoriaa, mutta eristys on päättynyt. 
+
+## Tutkielman rakenne
+
+
+Datan kuvailun jälkeen CA:n peruskäsitteet esitellään yksikertaisen esimerkin
+avulla luvussa 3. 
+
+
+Luvuissa 4 - 5 analyysiin lisätään täydentäviä pisteitä tulkinnan tueksi
+ja muodostetaan luokittelumuuttujien yhteisvaikutusmuuttujia (ikä ja sukupuoli).
+
+
+Kolmen muuttujan yhteisvaikutusmuuttujan (maa, sukupuoli ja ikäluokka) analyysi
+tehdään osajoukon korrespondenssianalyysillä luvussa 6.
+
+
+Luvussa 7 esitellään lyhyesti kaksi tapaa tutkia useamman muuttujan yhteyksiä.
+Taulukoita yhdistämällä voidaan analysoida kahden muuttujaryhmän välisiä yhteyksiä.
+Monimuuttujakorrespondenssianalyysia sovelletaan isoon aineistoon ja tällaisten
+aineistojen yleiseen ongelmaan, puuttuviin tietoihin.
+
+ 
+Luvussa 8 kerrotaan, mistä alettiin ja mitä tuloksia saatiin.
+
+
+Tutkielmassa on kolme liitettä.
+
+
+Liite 1 esittelee tiiviisti menetelmän teorian.
+Korrespondenssianalyysin numeerisia tuloksia havainnollistetaan kuvalla, ja
+monimuuttujakorrespondenssianalyysin (MCA) käsitteitä esitellään hieman enemmän.
+MCA:n teoriaa ei laajemmin esitellä, mutta tulkinnan ongelmia esitellään lyhyesti.
+
+Tutkielma on tehty R-tilastohjelmalla, ja korrespondenssianalyyseissä on käytetty
+ca-pakettia( @ca2007 ).  
+
+Tutkielman koodi on julkaistu Github-palvelussa (https://github.com/hirjus/capaper),
+samoin tutkielman käsikirjoitus ( https://hirjus.github.io/capaper/  )
+ja alustava data-analyysi.
+
+Tekninen ympäristö on kuvattu tarkemmin liitteessä 2., myös sen ongelmat.
+
+Liitteessä 3 on listattu tutkielman R-koodi.
+
+## Tärkeimmät lähteet
+
+Tutkielman tärkein lähde on [@RefWorks:doc:5a857a43e4b0ed2d44664d78] (jatkossa CAiP),
+ja muitakin saman tekijän artikkeleita on käytetty paljon. Kevään 2017
+kurssimateriaali[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca] ja laskuharjoitusten koodi
+on ollut hyödyllinen pikaopas peruskäsitteisiin ja r-toteutuksen ratkaisuihin.
+
+@RefWorks:doc:5ab76b43e4b003f4468d1f07 toimittama Carme-verkoston kolmas
+artikkelikokoelma  on ajantasainen perusteos.Perusteelliset artikkelit kattavat
+myös korrespondenssianalyysin tärkeimmät aiheet.
+
+
+
+Data on ensin luettava ohjelman ymmärtämään muotoon, ja erilaiset muunnokset kannattaa
+tehdä heti kun data luetaan. @RefWorks:doc:5c3759c2e4b0085b307c82b5 kertovat,
+miten luokittelumuuttujia pitää R-koodissa käsitellä.

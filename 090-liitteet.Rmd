@@ -303,7 +303,7 @@ Voimme ottaa yhden kysymyksen vastausten lisäksi analyysiin mukaan useamman
 kysymyksen vastaukset laajentamalla kahden päällekkäisen matriisin taulukkoa oikealle.
 **edit poistetava pätkä loppuu tähän**
 
-**Monimuuttuja-korrespondenssianalyysi MCA**
+**Monimuuttujakorrespondenssianalyysi MCA**
 
 Usean muuttujan korrespondenssianalyysissä tutkitaan usean muuttujan välisiä yhteyksiä.
 Kartan tulkinnan apuna siihen voidaan lisätä havaintojen sijaan niiden keskiarvopisteitä
