@@ -219,3 +219,5 @@ tekstiä MCA-tulkinnoista.
 **25.11.2020 versio 0.9** Johtanto ja yhteenvetoluku puuttuvat,
  samoin tekninen liite. Teorialiitettä editoitava, valmiissa luvuissa myös
  poistettavaa. Ei oikoluettu.
+
+ **26.11.2020** Tekninen liite ja yhteenveto lisätty, johdanto puuttuu vielä.

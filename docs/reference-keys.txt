@@ -15,6 +15,7 @@ eq:inert2
 fig:simpleCA1map1
 fig:G1-3asymm2
 fig:G1-3asymm3
+fig:G1-3-asymmtulk2
 fig:G1-3asymmContrib1
 fig:G1-3asymmContrib2
 fig:simpleCA3map1
@@ -40,8 +41,6 @@ fig:concat1map1
 fig:concat1map2
 fig:MCA1map1
 fig:MCA1map2
-fig:subsetMCA1map1
-fig:subsetMCA1map2
 fig:subsetMCA1map3
 eq:svd1
 eq:contrat1

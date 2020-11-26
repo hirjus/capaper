@@ -8,14 +8,14 @@ oleellisilta osin samat myös monimutkaisemmissa menetelmän sovelluksissa. [@Re
 
 Greenacren oppikirjat ovat hyvä esimerkki
 perusteellisesta yksinkertaisen taulukon analyysin esitystavasta.
-@RefWorks:doc:5a857a43e4b0ed2d44664d75 esittelvät menetelmän 
+@RefWorks:doc:5a857a43e4b0ed2d44664d75 esittelvät menetelmän
 ranskalaisen perinteen mukaisesti korostaen matemaattista teoriaperustaa,
 mutta myös siinä menetelmä peruskäsitteet ja tulkinnat esitellään yksinkertaisella
 esimerkillä. @RefWorks:doc:5a857a44e4b0ed2d44664d95 käyttää samaa Fisherin
 Cairness-aineistoa korrespondenssianalyysin esittelyyn
 
 Esitän tässä jaksossa korrespondenssianalyysin peruskäsitteet intuitiivisesti,
-matemaattiset yksityiskohdat löytyvät liittestä 1. Esitystavan etu on taulukon 
+matemaattiset yksityiskohdat löytyvät liittestä 1. Esitystavan etu on taulukon
 pieni koko, johtopäätökset voi helposti tarkastaa datasta. Datan analyysin tärkein
 väline on kuva, yleensä kaksiulotteinen kartta. Tulkinta ja erityisesti väärien
 johtopäätösten välttäminen vaati kartan tulkinnan varmistamista ratkaisun
@@ -24,7 +24,7 @@ riippuvuuksia kuvaava kartta ja kartan perustana olevat numeeriset tulokset
 esitetään yhdessä on helpompi ymmärtää tulkinnan perussäännöt.
 
 Greenacren oppikirjojen ja @RefWorks:doc:5a857a43e4b0ed2d44664d75 esitystavassa
-on pieni ero. Molemmille juuri graafinen analyysi on oleellista, mutta ranskalaiset 
+on pieni ero. Molemmille juuri graafinen analyysi on oleellista, mutta ranskalaiset
 tutkijat korostavat numeeristen tulosten ensisijaisuuta. Analyysi pitää aloittaa
 tutkimalla numeerisen ratkaisun ominaisuuksia. Greenacren mielestä numeerisia tuloksia
 tarvitaan johtopäätösten varmistamiseen, ensin katsotaan karttaa. Eroa ei kannata
@@ -439,7 +439,7 @@ p + scale_x_discrete(name = " ")
 Kuvasta 3.2 \@ref(fig:g1-2kuva2) esimerkiksi näkee, että Tanska (DK) näyttäisi
 poikkeava keskiarvorivistä paljon, samoin Bulgaria.
 Bulgarian massa on kuitenkin aineiston pienin (11,31 %), Tanskan taas
-kohtalainen (17 %). 
+kohtalainen (17 %).
 Sarakeprofiilikuvassa \@ref(fig:g1-2kuva1) täysin eri mieltä - vastaus (E) on
 selvästi erilainen ja sen massa on suuri (23%). Kaikki luvut ovat suhteellisia,
 havaintojen lukumäärä ei vaikuta tulkintaan periaatteessa mitenkään.
@@ -476,7 +476,7 @@ rivin massaksi, ja niiden summa muotoon $\frac{\chi^{2}}{n}$.
   (\#eq:inert1)
  \end{equation}
 
-Jakajassa ei ole vapausastekorjausta (n-1), korrespondenssianalyysi on 
+Jakajassa ei ole vapausastekorjausta (n-1), korrespondenssianalyysi on
 deskriptiivistä data-analyysiä.
 
 
@@ -602,7 +602,7 @@ Se on 1. dimension suuntaan kaikkein lähimpänä origoa. Hieman varoivaisemmin
 akselin voi tulkita maltillisen ja jyrkemmän tai varmemman mielipiteen kontrastiksi.
 
 Maiden vertailu tehdään näiden akselien suuntaan. Sekä sarekepisteiden että
-rivipisteiden keskinäiset välimatkat approksimoivat optimaalisesti niiden 
+rivipisteiden keskinäiset välimatkat approksimoivat optimaalisesti niiden
 (khii2)etäisyyksiä. Sarake- ja rivipisteiden välisillä etäisyyksillä ei ole
 mitään suoraa tulkintaa. Pisteiden etäisyydet samassa pistepilvessä ovat
 suhteellisia, Saksa on konsevatiivisempi kuin Suomi mutta emme tiedä kuinka paljon.
@@ -659,7 +659,7 @@ tulokset vasta seuraavassa luvussa. Tässä "mitä kuvasta näkee", ei muuta (pa
 varoitukset - mitä ei näe). Idea koko ajan taulukon sarakkeiden ja riveien yhteyksien
 visualisointi.
 
-**edit** Tärkeää selkeä kuvaus pääkoordinaattien ja standardikoordinaattien 
+**edit** Tärkeää selkeä kuvaus pääkoordinaattien ja standardikoordinaattien
 suhteesta. Tarkemmin teorialiitteessä, tässä heuristisesti jotta kuvia osaa tulkita.
 
 Korrespondenssianalyysille on vakiintunut oma käsitteistö, joista tärkeimmät on
@@ -739,8 +739,8 @@ kärkipisteitä. Rivipisteet ovat tämän verteksin sisällä.
 # sarakkeet vektorikuvina
 
 # par(cex = 0.7)
-plot(simpleCA1, map = "rowprincipal", 
-     arrows = c(FALSE,TRUE), 
+plot(simpleCA1, map = "rowprincipal",
+     arrows = c(FALSE,TRUE),
      main = "asymmetrinen kartta 1"
     )
 
@@ -771,7 +771,7 @@ simpleCA1.rpc <- simpleCA1$rowcoord %*% diag(simpleCA1$sv)
 
 # X11()
 par(cex = 1)
-plot(simpleCA1, map = "rowprincipal", 
+plot(simpleCA1, map = "rowprincipal",
      arrows = c(FALSE,FALSE),
      # main = "barysentrinen periaate - asymmetrinen kartta 2",
      sub = "Suomen profiili sarakkeiden barysentrisenä keskiarvona")
@@ -783,17 +783,18 @@ plot(simpleCA1, map = "rowprincipal",
 Suomen profiili on kaukana S-sarakkeesta ja lähellä ? - saraketta, S-vastausten
 osuus on siis pieni ja ? - vastausten suuri.
 
-Ideaalipisteiden tulkinnan voi varmistaa sarake kerrallaan, projisjoimalla rivipisteet
-origon kautta piirretylle janalle. Kuvassa \@ref(fig:G1_3_asymmtulk2) nähdään mikä
+Ideaalipisteiden tulkinnan voi varmistaa sarake kerrallaan, projisoimalla rivipisteet
+origon kautta piirretylle janalle. Kuvassa \@ref(fig:G1-3-asymmtulk2) nähdään mikä
 on maiden järjestys E-vastausvaihtoehdossa.
 
-```{r G1_3_asymmtulk2, echo = FALSE, out.width='90%', fig.align='center'}
+```{r G1-3-asymmtulk2, echo = FALSE, fig.cap= "Rivipisteiden projektiot",fig.asp = 1, out.width='90%', fig.align='center'}
+
 knitr::include_graphics('img/simpleCAasymmTulk2.png')
 
 ```
 
 Asymmetrinen kartta antaa kaksi uutta näkökulmaa rivien ja sarakkeiden suhteeseen.
-Sen huono puoli on ideaalipisteiden karkaaminen kauas origosta ja rivipisteiden 
+Sen huono puoli on ideaalipisteiden karkaaminen kauas origosta ja rivipisteiden
 pakkautuminen pieneksi parveksi. Jos rivipisteiden hajonta on suuri,
 kuva on käytännöllinen. Kyselytutkimusaineistoissa näin ei yleensä ole.
 
@@ -845,7 +846,7 @@ sarakkeet x-akselin yläpuolella. Samaa mieltä olevien (S ja s) vaikutus näytt
 jakautuvan selvimmin molemmille dimensioille.
 
 Vaikka massojen suhteellisia eroja ei kovin helposti pistekoosta erota, se näkyy
-epäsuorasti Saksan melko vahvimpana kontribuutiona. Bulgarian vähäisin kontribuutio 
+epäsuorasti Saksan melko vahvimpana kontribuutiona. Bulgarian vähäisin kontribuutio
 näyttäisi olevan ensimmäiselle dimensiolle.
 
 **Suhteelliset kontribuutiot**
@@ -880,7 +881,7 @@ profiilien painoja. Tässä jälkimmäisessä roolissa massat liittyvät tutkimu
 mitä halutaan vertailla? Kun vertaillaan eri maita, ei ole kovin perusteltua käyttää
 massoina eri maiden otoskokoja. Jos taas halutaan vertailla vaikkapa miesten ja
 naisten vastauksia on luonnollista normalisoida miesten ja naisten massat yhtä
-suuriksi. Rivi- ja sarakemassat ovat verrannollisia taulukon rivi- ja sarakesummiin, 
+suuriksi. Rivi- ja sarakemassat ovat verrannollisia taulukon rivi- ja sarakesummiin,
 frekvenssitaulukon reunajakaumiin. Ne voidaan tutkimusongelmaan sopivalla tavalla
 skaalata uudelleen. CAiP(s. 23) esimerkissä viiden koulutustaso-ryhmän massat skaalataan
 verrannollisiksi niiden väestötason osuuksiin, ei otoksen osuuksiin. Tällainen datan
@@ -923,9 +924,9 @@ plot(simpleCA3, map = "rowgreen",
 
 ```
 
-En ole vakioinut vertailtavien ryhmien (tässä maat) suhteellisia osuuksia. Syy on 
+En ole vakioinut vertailtavien ryhmien (tässä maat) suhteellisia osuuksia. Syy on
 yksinkertainen: esittelen menetelmää sen perusmuodossa ilman kovin täsmällisiä
-tutkimusongelmia. Oikeiden tutkimuskymysten vastausia pitää tietysti etsiä järkevillä 
+tutkimusongelmia. Oikeiden tutkimuskymysten vastausia pitää tietysti etsiä järkevillä
 massojen skaalauksella. Korrespondenssianalyysi on inertian eli kokonaishajonnan
 dekomponointia, jakamista osiin.
 
@@ -966,13 +967,13 @@ skalaaritulo "palauttaa" alkuperäisen datan, tässä tapauksessa taulukon solun
 
 Näistä vain kaksi voidaan optimaalisesti esittää yhtä aikaa.
 
-_Symmetrisessä kartassa_ khii2-etäisyydet rivipisteiden välillä ja sarakepisteiden 
+_Symmetrisessä kartassa_ khii2-etäisyydet rivipisteiden välillä ja sarakepisteiden
 välillä esitetään optimaalisesti. Rivi- ja sarakepisteiden välisiä etäisyyksiä ei
 esitetä optimaalisesti, mutta ne voidaan tulkita kohtalaisen hyvin jos pääakselien
 inertioiden neliöjuuret eivät ole liian erisuuruisia.
 
 _Asymmetrisessä kartassa_ pääkoordinaateissa esitetyn pistejoukon etäisyydet
-kuvataan optimaalisesti, standardikoordinaateissa esitetyt pisteet ovat "ääriprofiileja", 
+kuvataan optimaalisesti, standardikoordinaateissa esitetyt pisteet ovat "ääriprofiileja",
 verteksin kulmapisteitä. Rivi- ja sarakepisteiden etäisyydet esitetään optimaalisesti,
 mutta sarakepisteiden etäisyyksillä ei ole suoraa tulkintaa,
 
@@ -985,7 +986,7 @@ Jako standardi- ja pääkoordinaatteihin on suora seuraus korrespondenssianalyys
 matemaattisesta ratkaisusta. Greenacre esittelee kaksoiskuvia käsittelevässä
 kirjassaan [@RefWorks:doc:5a857a43e4b0ed2d44664d7c] selkeästi koordinaattien
 yhteyden ratkaisualgoritmiin, singulaariarvohajoitelmaan.
- 
+
 
 Koordinaattien yhteys voidaan esittää kahtena yksinkertaistettuna kaavana
 ( @RefWorks:doc:5b8175eee4b08da192f99a35, s.174 ):
@@ -996,8 +997,6 @@ Koordinaattien yhteys voidaan esittää kahtena yksinkertaistettuna kaavana
 \end{equation}
 
 \begin{equation}
-  kontribuutiokoordinaatit = \sqrt{massat} \times  standardikoordinatit 
+  kontribuutiokoordinaatit = \sqrt{massat} \times  standardikoordinatit
     (\#eq:kontribfromstd1)
 \end{equation}
-
-
