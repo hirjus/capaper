@@ -1083,7 +1083,6 @@ knitr::include_graphics('img/substvar_fi_Q1Q2.png')
 ```
 
 
-
 Valituista taustamuuttujista monet on kerätty haastattelulla. 
 Tiedonkeruu, otantamenetelmät ja yksikkövastauskadon (unit non-response, otokseen
 valitulta ei saada mitään tietoja) huomioiminen on tehty joka

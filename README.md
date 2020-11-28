@@ -234,4 +234,5 @@ vielä 3.3.1 - 3.3.4 asti.
 Poistettiin luvun 3.3. johdannon luonnostelu, jaksot päätasolle. Poistettiin jakso "barysentrinen periaate",
 tulkinta epäselvä.
 
-**28.11.2020** Luvun 3 sisältö korjattu.
+**28.11.2020** Luvun 3 sisältö korjattu. Luvun 4 sisältö korjattu ja hieman täydennetty,
+3d-kuvien lyhyt johdattelu puuttuu.

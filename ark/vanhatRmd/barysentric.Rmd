@@ -1,0 +1,33 @@
+## Barysentrinen periaate
+
+**28.11.2020**
+Poistettii luvusta 3, tulkita ei pidä paikkaansa. Alkuperäisessä täydessä avaruudessa rivipiste on
+ideaalipisteiden, "barysenrisen koordinaatiston kärkipisteiden" (viitataanko tässä triangular coordinate system?)
+keskiarvopiste. Mutta tässä se projisoidaan tasoon. Ihan taulukkoon vertaamalla näkee, että tulkintani
+on pielessä
+
+Rivipisteet ja sarakepisteet yhdistää _barysentrinen periaate_ . Jokainen rivipiste
+on ideaalipisteiden painotettu keskiarvo, painoina sarakkeiden käänteinen osuus
+riviprofiilissa.
+
+
+```{r G1-3asymm3,echo = FALSE,fig.cap= "Q1b: lapsi kärsii jos äiti on töissä",fig.asp = 1, out.width = "90%",fig.align = "center"}
+
+# Piirretään Suomen riviprofiilista janat sarakepisteisiin - barysentinen keskiarvo
+# Rivipisteet pääkoordinaatteina (principal coordinates)
+
+simpleCA1.rpc <- simpleCA1$rowcoord %*% diag(simpleCA1$sv)
+
+# X11()
+par(cex = 1)
+plot(simpleCA1, map = "rowprincipal",
+     arrows = c(FALSE,FALSE),
+     # main = "barysentrinen periaate - asymmetrinen kartta 2",
+     sub = "Suomen profiili sarakkeiden barysentrisenä keskiarvona")
+     segments(simpleCA1.rpc[5,1],simpleCA1.rpc[5,2],simpleCA1$colcoord[, 1],
+         simpleCA1$colcoord[, 2], col = "pink")
+
+```
+
+Suomen profiili on kaukana S-sarakkeesta ja lähellä ? - saraketta, S-vastausten
+osuus on siis pieni ja ? - vastausten suuri.

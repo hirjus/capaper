@@ -196,7 +196,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 lisäinformaatiota tulkinnan avuksi. Täydentävät pisteet (supplementary points,
 CAiP s. 89-) ovat rivejä tai sarakkeita jotka lisätään karttaan. Mikä tahansa
 rivi tai sarake voidaan voidaan lisätä kuvaan, jos se on järkevästi vertailukelpoinen
-kartan määtittäneiden profiilien kanssa.</p>
+kartan määrittäneiden profiilien kanssa.</p>
 <p>Tällainen piste on kartan laskennassa <em>passiivinen</em>, sillä on sijainti kartalla
 mutta ei massaa eikä vaikutusta inertiaan. Passiivisilla pisteillä ei ole vaikutusta
 (kontribuutiota) kartan pääakseleihin.</p>
@@ -214,12 +214,14 @@ kannattaa harkita, ne sijaitsevat kaukana origosta ja huonontavat kuvan laatua.<
 summaprofiili täydentävänä pisteenä. Summaprofiili on osiensa painotettu
 (barysentrinen) keskiarvo. Kun se esiteteään passiivisena pisteenä, havaintoja ei
 oteta ratkaisuun kahta kertaa. Profiilien yhdistämiseen liittyy
-korrespondenssianalyysin tärkein periaate, jakaumaekvivalenssi (<em>distributional
-equivalence</em>). Profiileiltaan samanlaiset rivit voidaan yhdistää, analyysin tulokset
-eivät muutu. Khii2-etäisyysmitta on ainoa etäisyysmitta joka toutettaa tämän
-periaatteen. En esittele tätä ydinkäsitettä tämän enempää, se on ollut menetelmän
-kehittämisessä tärkein tavoite. <span class="citation">LeRoux ja Rouanet (<a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>)</span> esittelevät
-menetelmän matemaattiset perusteet laajemmin.</p>
+korrespondenssianalyysin tärkein ominaisuus, jakaumaekvivalenssi (<em>distributional
+equivalence</em>). Se on ollut menetelmän kehittämisen tärkein tavoiteltu ominaisuus,
+Profiileiltaan samanlaiset rivit voidaan yhdistää, analyysin tulokset
+eivät muutu. Khii2-etäisyysmitta on ainoa etäisyysmitta joka toteuttaa tämän
+periaatteen.</p>
+<p><span class="citation">LeRoux ja Rouanet (<a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>)</span> esittelevät
+menetelmän matemaattiset perusteet ja jakaumaekvivalenssin perusteellisesti.
+Havainnolinen esitys löytyy Greenacren oppikirjasta(CAiP).</p>
 <p>Täydentävien profiilien lisääminen vaatii jo yksinkertaisia matriisioperaatioita.
 Korrespondenssianalyysi on käytännössä matriisien muokkausta tutkimusongelman
 tarpeisiin.</p>
@@ -343,7 +345,7 @@ Kuva 4.1: Q1b: Saksan ja Belgian aluejako
 </div>
 <p>Saksan ja Belgian täydentävät pisteet ovat osiensa barysentrisiä keskiarvoja,
 etäisyys on sitä pienempi mitä suurempi on osuus. Saksan piste sijaitsee siksi
-lähempänä länsi-Saksan pistettä. Jos karttaa vertaa kuvaan (fig:simpleCA1map1)
+lähempänä länsi-Saksan pistettä. Jos karttaa vertaa kuvaan <a href="yksinkertainen-korrespondenssianalyysi.html#fig:simpleCA1map1">3.3</a>
 ei eroja juuri ole. Saksan ja Belgian osien sijoittuminen on kiinnostava.
 Itäinen Saksa on selvästi liberaalilla puolella, ensimmäisellä dimensiolla lähinnä Tanskaa.
 Läntinen Saksa on ensimmäisellä dimensiolla konservatiivisella puolella Belgian maapisteen
@@ -355,13 +357,14 @@ tiukempien mielipiteiden puolella. Sarakepisteiden suhteelliset sijainnit
 toisiinsa nähden eivät oleellisesti muutu.</p>
 <p>Bryssel ja Wallonia näyttävä olevan hyvin lievästi U-muotoisen maapisteiden
 parven sisällä. Tämä kaariefekti tai <em>Guttman-efekti</em> on kartoissa yleinen.
-Se on tavallaan seuraus ratkaisun geometriasta. Rivipisteiden pilvi on
+Se on tavallaan ratkaisun geometriasta. Rivipisteiden pilvi on
 sarakkeiden ideaalipisteiden virittämän verteksin sisällä, ja ainoa reitti
 verteksin kulmasta toiseen kulkee tasolla kaarveasti (CAiP, s. 127).
 Voi myös sanoa, että kaariefektin taustalla on järjestysasteikon muuttujan
-korrelaatio (viite: LeRoux). Kaaren sisäpisteet ovat usein polarisoituneita
-ensimmäisen dimension “ääripää-vastausten” välillä. Tässä vaikutus on heikko,
-taulukossa <a href="täydentävät-pisteet.html#tab:BeDealueTable1">4.1</a> ei mitää selvää polariaatiota näy.</p>
+korrelaatio (<span class="citation">(LeRoux ja Rouanet <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>)</span>, s. 220). Kaaren sisäpisteet
+ovat usein polarisoituneita ensimmäisen dimension “ääripää-vastausten” välillä.
+Tässä vaikutus on heikko, taulukossa <a href="täydentävät-pisteet.html#tab:BeDealueTable1">4.1</a> ei mitää selvää
+polarisaatiota näy.</p>
 <div class="figure" style="text-align: center"><span id="fig:suppointCA2map2"></span>
 <img src="JH_capaper_files/figure-html/suppointCA2map2-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
 <p class="caption">
@@ -369,11 +372,12 @@ Kuva 4.2: Q1b: Saksan ja Belgian aluejako
 </p>
 </div>
 <p>Kontribuutiokartasta täydentävät pisteet on jätetty pois, ne eivät vaikuta ratkaisuun.
-Pisteiden koko auttaa hahmottamaan niiden massojen eroja, sarakkeiden massoja ei
-juuri tässä kuvassa erota. Sarakkeiden kontribuutiot ovat samantapaiset kuin
-alkuperäisessä kartassa <a href="yksinkertainen-korrespondenssianalyysi.html#fig:G1-3asymmContrib1">3.6</a>. Rivipisteiden kontribuutioista
+Saksan ja Belgian osien massat ovat tietenkin pienemepiä.</p>
+<p>Sarakkeiden kontribuutiot ovat samantapaiset kuin alkuperäisessä kartassa
+<a href="yksinkertainen-korrespondenssianalyysi.html#fig:G1-3asymmContrib1">3.6</a>. Rivipisteiden kontribuutioista
 osa on selvästi pienempiä, erityisesti länsi-Saksa kaksi Belgian aluetta (bB, bF).
-Unkarin ja Bulgarian kontribuutiot muuttuvat eri suuntiin, Unkarin pienenee ja
+Kuvan perusteella ei voi sanoa johtuuko tämä pelkästään massojen pienentymisestä.</p>
+<p>Unkarin ja Bulgarian kontribuutiot muuttuvat eri suuntiin, Unkarin pienenee ja
 Bulgarian kasvaa.</p>
 </div>
 <div id="korrespondenssianalyysin-numeeriset-tulokset" class="section level2">
@@ -381,14 +385,14 @@ Bulgarian kasvaa.</p>
 <p>Korrespondenssianalyysin numeeriset tulokset ovat tärkeitä tulkinnan varmistamiselle
 ja antavat tarkemman kuvan ratkaisusta. Nämä tulokset ovat erilaisia kokonaisinertian
 dekomponointeja. Kokonaisinertia (total inertia) profiilien ja keskiarvoprofiilin
-khii2-etäisyyksien massoilla painotettu summa (<a href="yksinkertainen-korrespondenssianalyysi.html#eq:inert2">(3.6)</a>. Se kuvaa
+khii2-etäisyyksien massoilla painotettu summa <a href="yksinkertainen-korrespondenssianalyysi.html#eq:inert2">(3.6)</a>. Se kuvaa
 profiilipisteiden hajontaa ideaalipisteiden verteksin sisällä. Maksimi-inertia
 saavutetaan kun profiilit ovat verteksien kärkipisteissä, jokaisessa profiilissa
 on vain yksi luokittelumuuttujan arvo. Inertia on sama kuin ratkaisun dimensio,
-tässä esimerkissä 4(sarakkeiden lukumäärä - 1). Tärkein lähde on CAiP:n luku 11
-ja liitte B.</p>
-<p>R-paketti “ca” (versio 0.71.1) listaa numeeriset tulokset suppeasti (print) ja laajemmin
-(summary), laajempi tulostus on alla.</p>
+tässä esimerkissä 4(sarakkeiden lukumäärä - 1). Numeeristen tulosten esittelyn tärkein
+lähde on (CAiP, luku 11 ja liitte B).</p>
+<p>R-paketti “ca” listaa numeeriset tulokset suppeasti (print) ja laajemmin
+(summary). Alla on laajempi tulostus.</p>
 <p>Ensimmäisenä on listattu kokonaisinertia pääakseleittain. Tässä suhteelliset luvut
 on esitetty prosentteina. Muut luvut on luettavuuden vuoksi skaalattu, joko kerrottu
 tuhannella tai esitetty “permills” (summa on 1000).</p>
@@ -427,59 +431,42 @@ tuhannella tai esitetty “permills” (summa on 1000).</p>
 ## 5 |    E |  234  999  505 | -663 971 667 |  113  28  93 |</code></pre>
 <p>Rivi- ja sarakeprofiileista esitetään samat tiedot. Ensimmäisessä kolmen
 sarakkeen joukossa kerrotaan pisteen massa, laatu (qlt) ja inertiakontribuutio.</p>
-<p>Inertiakontribuutio on suhteellinen osuus kokonaisinertiasta. Aktiivisia rivejä on 9,
+<p>Inertiakontribuutio (inr) on suhteellinen osuus kokonaisinertiasta. Aktiivisia rivejä on 9,
 joten tasaisesti jaettu inetia olisi noin 110. Tanska, Bulgaria ja Unkari “selittävät”
 suurimman osan inertiasta. Belgian ja Saksan alueiden kontribuutiot ovat pieniä.
-Nämä inertiaosuudet liittyvät kokonaisinertiaan alkuperäisessä neljässä ulottuvuudessa.</p>
+Nämä inertiaosuudet ovat osuuksia kokonaisinertiasta alkuperäisessä neljässä
+ulottuvuudessa.</p>
 <p>Laatu kertoo miten hyvin piste on esitetty kartalla, miten suuri osa sen
 inertiasta on esitetty kartalla. Kaksiulotteinen kartta kuten tässä on yleisin
 valinta, laatu kerrotaan valitulle dimensioiden määrälle. Laatu ei riipu massasta,
 vaan pisteen ja kartan akseleiden välisistä kulmista (kts. teorialiite). Saksan
-osien ero laadussa on iso,itä-Saksalla erittäin hyvä ja länsi-Saksalla huono.
+osien ero laadussa on iso,itä-Saksalla se on erittäin hyvä ja länsi-Saksalla huono.
 Belgian alueista Wallonia on kehtoiten esitetty, ja vain Flandersin laatu on
 kohtuullisen hyvä. Kovin hyvä ei ole täydentävien maapisteidenkään laatu.</p>
-<p>Kaksi seuraavaa lohkoa kertovat tulokset valituille dimenisoille eli ratkaisulle.
-Molempien dimensioiden (“k=1”, “k=2” ) pääkoordinaattattien (x 1000) lisäksi
-raportoidaan dimension <em>suhteellinen kontribuutio</em> pisteen inertiaan (“cor”).
-Nämä tunnusluvut summautuvat laaduksi (qlt), ja ne voidaan tulkita korrelaation
-neliöiksi (kts. teorialiite).Erityisesti Belgian alueiden projektion laatu on
-huonompi ensimmäisellä dimensiolla. Itä-Saksa ja Bulgaria taas ovat hyvin esittyjä
-vain ensimmäisellä dimensiolla eivätkä juuri ollenkaan korreloi toisen dimension
-kanssa.</p>
+<p>Kaksi seuraavaa kolmen sarakkeen ryhmää kertovat tulokset valituille dimenisoille
+eli ratkaisulle. Molempien dimensioiden (“k=1”, “k=2” ) pääkoordinaattattien
+(x 1000) lisäksi raportoidaan dimension <em>suhteellinen kontribuutio</em> pisteen
+inertiaan (“cor”). Nämä tunnusluvut summautuvat laaduksi (qlt),
+ja ne voidaan tulkita korrelaation neliöiksi (kts. teorialiite).</p>
+<p>Erityisesti Belgian alueiden projektion laatu on huonompi ensimmäisellä dimensiolla.
+Itä-Saksa ja Bulgaria taas ovat hyvin esittyjä vain ensimmäisellä dimensiolla
+eivätkä juuri ollenkaan korreloi toisen dimension kanssa.</p>
 <p>Pisteen <em>absoluuttinen kontribuutio</em> kertoo sen osuuden dimension inertiasta
-(summa 1000). Jos katsotaan sarakkeita, nähdään E-sarake “selittää” ensimmäisen
-dimension inertiasta lähes 70 prosenttia, ja dimensio saman verran
-kokonaisinertiasta.</p>
-<p><strong>k</strong> Tulosteen käsitteiden esittely - tavoite kuvan laadun varmistus, akselien
-tulkinnan tarkistus. Tarkemmin teorialiitteessä. Tästä pitäisi nähdä, miksi seuraavat
-kartat ovat sellaisia kuin ovat. Nämä kolnme sitaattia tekstin tarkistuksen tueksi,
-eivät tule lopulliseen versioon (18.11.20)</p>
-<p><strong>k1</strong> Contributions. The contribution of point to axis is a statistic that depends
-both on the distance from the point to the origin point along the axis and on
-the weight of the point. The contributions of points to axes are the main aid to
-interpretation.</p>
-<p>The contribution of a point to an axis is equal to the relative weight
-multiplied by the squared coordinate and divided by the eigenvalue.</p>
-<p>Note on relative contributions.
-Both the contribution of a point to an axis (Ctr) and the quality of
-representation (cos2) are relative contributions, since both are obtained by
-dividing the amount of variance of axis due to the point, by the variance of
-axis (Ctr) and by the amount of the overall variance due to the point (cos^2),
-respectively. Tästä kuva teorialiitteessä.</p>
-<p><strong>k2</strong> Varmuuden vuoksi: CAiP-laskentaliitteestä (s.263):</p>
-<p>mass: masses (1000) of the respective row and column points;</p>
-<p>qlt: quality of representation (out of 1000) of the point in the solution of
-chosen dimensionality, in this case two-dimensional</p>
-<p>inr: part of total inertia (out of 1000) of the point in the full space of the
-rows or columns</p>
-<p>k=1 and k=2: principal coordinates on first two dimensions, multiplied by 1000</p>
-<p>cor: relative contributions (out of 1000) of each dimension to the inertia of
-individual points. These are also interpreted as squared correlations (_1000)</p>
-<p>ctr: contributions (out of 1000) of each point to the principal inertia of a dimension</p>
-<p><strong>k3</strong> Kontribuutiot: yleisesti high contribution of a the point to the inertia of the
-axis -&gt; high relative contribution of the axis to the intertia of the point.
-Ei päde kääntäen. ”Point ’secretaries’ on the first axis is extremely
-well represented, but its contribution to the axis is minimal.</p>
+(summa 1000). E-sarake “selittää” ensimmäisen dimension inertiasta noin 66
+prosenttia, ja dimensio saman verran kokonaisinertiasta. Absoluuttinen kontribuutio
+riippuu massasta ja siitä paljonko piste poikkeaa koko aineiston keskiarvopisteestä.</p>
+<p>Numeerisista tuloksista voidaan varmistaa akseleiden tulkinta sarakkeiden avulla.
+Sarakkeet ovat hyvin esitettyjä tasossa, ainoastaan neutraali vaihtoehto on
+heikommin kuvattu mutta sillä ei ollut roolia tulkinnassa.</p>
+<p>E-sarakkeen vaikutuksen suunta ensimmäisella dimensiolla näkyy pääkoordinaatin
+etumerkistä (k1 = -663), ja sen kontrastina ovat S- ja s- sarakkeet positiiviseen
+suuntaan. Toinen dimensio on kontrasti S- ja e-sarakkeiden välillä ja ne selittävät
+akselin inertian. Kaikki tämä voitiin päätellä kuvasta, ja numeeriset tulokset
+vahvistavat tulkinnan. Sarake S on ainoa jonka kontribuutio on merkittävä
+molemmille dimensioille.</p>
+<p>Jos pisteen kontribuutio akselille on iso, akselin suhteellinen kontribuutio (cor)
+pisteen inertiaan on suuri. Kääntäen tämä ei päde, piste voi olla akselilla hyvin
+esitetty mutta kontribuutio on silti pieni.</p>
 </div>
 <div id="esimerkki-3d--kartasta---saksan-ja-belgian-dimensiot" class="section level2">
 <h2><span class="header-section-number">4.3</span> Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot</h2>
