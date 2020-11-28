@@ -254,24 +254,8 @@ pisteen inertiaan on suuri. Kääntäen tämä ei päde, piste voi olla akselill
 esitetty mutta kontribuutio on silti pieni.
 
 
-## Esimerkki 3d- kartasta - Saksan ja Belgian dimensiot
+## Esimerkki kolmiulotteisesta kartasta
 
-**k** Ei kovin hyviä kuvia, mutta periaate on tärkeä. Kartta on approksimaatio,
-pitää päättää milloin se on tarpeeksi hyvä. Tai mille pisteille hyvä, mille huonompi.
- 
-**edit 26.10.2020** summary-funktio ei toimi, kun dimensioita CA-ratkaisussa kolme.
-Numeeriset tulokset voisi laskea "käsityönä". Kehno kvalitetti 2d-ratkaisussa saa
-kuvissa selityksen.
-
-**Kaksi karttaa** - **edit** 2d-ratkaisu esitetty, nyt 3d.  ca-ratkaisun akselit ovat "nested"/sisäkkäisiä.
-**edit** "Kolmisormisääntö" auttaa tulkitsemaan kaksiulotteisia "oikean käden"
-kuvia. Ensimmäinen dimensio on oikean käden peukalo, toinen etusormi ja kolmas
-keskisormi.
-
-Esimerkki kolmiulotteisen ratkaisun tarkasta tulkinnasta ( @RefWorks:doc:5a857a43e4b0ed2d44664d75 , s.365),
-Ranskan poliitiikan dimensiot ("French political space") 1990-luvun lopulla.
-
- 
 ```{r BeDealueetCA3d, echo = FALSE}
 suppointCA3 <- ca(~maa3 + Q1b,ISSP2012esim1.dat, nd = 3)
 
@@ -280,7 +264,16 @@ suppointCA3 <- ca(~maa3 + Q1b,ISSP2012esim1.dat, nd = 3)
 # outo juttu, ei toimi! - TÄMÄ POISTETAAN
 
 ```
- 
+
+
+Belgian ja länsi-Saksan pisteet on esitetty huonosti kaksiulotteisella kartalla.
+Kolmiulotteinen ratkaisu näyttää miten ne sijoittuvat kolmannnen akselin suunnassa.
+Tässä tarkastelu on vain diagnostiikkaa. Toisenlainen esimerkki on tutkimus Ranskan
+poliitiikan dimensiosta ("French political space") 1990-luvun lopulla
+[@RefWorks:doc:5a857a43e4b0ed2d44664d75, s.365]. Siinä Ranskan poliittiset
+puolueet sijoitetaan kolmelle sisällöllisesti perustellulle dimensiolle.
+
+Kolmannen dimension hajonnan voi esittää kahten karttana.
 
  
 ```{r suppointCA3map1, echo=FALSE, eval=FALSE, fig.cap= "Q1b: Saksan ja  Belgian aluejako ",fig.asp = 1, out.width = "90%",fig.align = "center"}
@@ -289,12 +282,13 @@ plot(suppointCA3, dim = c(1,2),
                 sub = "symmetrinen kartta - 1. ja 2. dimensio")
 
 ```
- 
 
 
 Ensimmäisen ja kolmannen dimesion kuvassa näkyy pisteparven hajonta tärkeimmän
 dimension ympärillä. Sarakepisteiden järjestys säilyy samana, samoin maapisteiden
-oikealta vasemmalle.
+oikealta vasemmalle. Kaikki pisteet paitsi Wallonia hajoavat kolmannen akselin
+suuntaan. Belgian kahden pisteen (bB ja bF) eron havaitsee helposti, samoin Unkarin
+ja Bulgarian. 
  
 ```{r suppointCA3map2, echo=FALSE, fig.cap= "Q1b: Saksan ja  Belgian aluejako ",fig.asp = 1, out.width = "90%",fig.align = "center"}
 plot(suppointCA3, dim = c(1,3),
@@ -313,24 +307,15 @@ plot(suppointCA3, dim = c(2,3),
 
 
 Toisen ja kolmannen dimension kartalla on esitetty noin viidesosa kokonaisinertiasta.
-Tässä Belgian pisteet ovat kuvan diagonaalilla.
+Tässäkin kuvassa Brysselin (bB) ja Unkarin pisteet ovat kontrastina Flanderisin, 
+Bulgarian ja Tanskan pisteille.
 
-**k** Tulkinta on aika hankalaa, ehkä riittää että toteaa selvän
-kolmiulotteisen rakenteen jossa Belgian alueiden ero näkyy.
+Diagnostisisessa tarkastelussa on helpompaa käyttää dynaamisia kolmiulotteisia
+kuvia. R-ympäristössä saa grafiikkaikkunaan tulostettua kolmiulotteisen kuvan, 
+jota voi käännellä ja katsoa eri kulmista. Näin saa paljon helpommin käsityksen
+kolmannen dimenison hajonnasta.
 
-Kahdesta projektiosta näkee kolmannen dimension suuntaiset suurimmat poikkeamat,
-niitä voi vertailla rivi- ja sarakepisteiden laatuun kaksiulotteisella kartalla.
-
-**k** Kolmiulotteisen kuvan tulkinta pitäisi aloittaa alusta, rivi- ja sarakepisteet
-hajaantuvat ulos tasosta. Ratkaisu on kuitenkin "sisäkkäinen" / "nested", kaksiuloteisen kartan
-pisteet vain siirtyvät kolmannen hieman ulos tasosta. Kolmannen dimension osuus kokonaisinertiasta
-on noin seitsemän prosenttia. Belgian alueiden ero näkyy erityisesti kartassa \@ref(fig:suppointCA3map3)
-ja \@ref(fig:3dklippi2), samoin E-sarakkeen kohtalainen muutos.
-
-**edit** - toinen ehkä riittää?
-
-**k** Kuvakaappaukset ca-paketin kolmiulotteisista kuvista eivät kovin hyvin näitä eroja. Dynaamisella kuvalla pistepilvien
-rakenteen hahmottaisi helpommin, tämä onnistuu useissa R-ympäristöissä.
+Tässä on tyydyttävä kahteen kuvakaappaukseen.
 
 
 ```{r 3dklippi1, echo=FALSE, fig.cap="Saksan ja  Belgian aluejako - 3d-kuva1", out.width = "90%",fig.align = "center"}
@@ -346,3 +331,6 @@ knitr::include_graphics('img/3dSymMap_2.PNG')
 
 ```
 
+Miten kaksiulotteisessa kartassa huonosti esitettyjen pisteiden analyysiä voisi
+jatkaa? Siihen nämä kartat eivät suoraan anna mitään vastausta. Vaihtoehtoisia
+tapoja esitellään seuraavissa luvuissa.
