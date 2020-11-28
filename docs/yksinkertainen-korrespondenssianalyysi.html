@@ -695,20 +695,21 @@ on maiden järjestys E-vastausvaihtoehdossa.</p>
 Kuva 3.5: Rivipisteiden projektiot
 </p>
 </div>
-<p>Asymmetrinen kartta antaa kaksi uutta näkökulmaa rivien ja sarakkeiden suhteeseen.
+<p>Asymmetrinen kartta antaa toisen näkökulman rivien ja sarakkeiden suhteeseen.
 Sen huono puoli on ideaalipisteiden karkaaminen kauas origosta ja rivipisteiden
 pakkautuminen pieneksi parveksi. Jos rivipisteiden hajonta on suuri,
 kuva on käytännöllinen. Kyselytutkimusaineistoissa näin ei yleensä ole.</p>
 </div>
 <div id="kontribuutiot-kartalla" class="section level2">
 <h2><span class="header-section-number">3.4</span> Kontribuutiot kartalla</h2>
-<p>Analyyseissä käytetty r-paketti “ca” esittää kartoilla myös pisteiden massat pisteen
-symbolin kokona, mutta tässä aineistossa eroja on vaikea nähdä. Tärkeämpi on pisteiden
-<em>kontribuutioiden</em> esittämien värisävynä.</p>
+<p>Kartassa <a href="yksinkertainen-korrespondenssianalyysi.html#fig:simpleCA1map1">3.3</a> on esitetty myös pisteiden massat. Tässä aineistossa
+pisteiden tai sarakesymbolien kokoerot eivät kovin selvästi erotu, mutta yleiskuvan
+ne kertovat.</p>
+<p>Rivipisteiden ja sarakkeiden <em>kontribuutiot</em> voidaan myös esittämien värisävynä.</p>
 <p>Kun kartalla pistejoukon inertia kuvataan akseleille, on jokaisella pisteellä oma
-osuutensa akseleiden kuvaamasta inertiasta. Absoluuttinen kontribuutio kertoo rivin
+osuutensa akseleiden kuvaamasta inertiasta. <em>Absoluuttinen kontribuutio</em> kertoo rivin
 tai sarakkeen osuuden akselin inertiasta. Vaikutuksessa on mukana pisteen massa.</p>
-<p>Suhteellinen kontribuutio taas kertoo akselin osuuden pisteen inertiasta.
+<p><em>Suhteellinen kontribuutio</em> kertoo akselin osuuden pisteen inertiasta.
 Tämä tunnusluku kuvaa pisteen projektion laatua, kuinka hyvin se on kartalla esitetty.</p>
 <p>Kontribuutiokartta on asymmetrinen kartta, jossa sarakevektorit on skaalattu
 kertomalla ne massojen neliöjuurilla. Näin sarakevektorit “kutistuvat” kohti
@@ -717,12 +718,12 @@ Kartta sopii niin pienen kuin suuren inertian tilanteisiin
 <span class="citation">(M. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5c768b09e4b02df9431e950a" role="doc-biblioref">2006</a>)</span>.</p>
 <p><strong>Absoluuttiset kontribuutiot</strong></p>
 <p>Absoluuttisten kontribuutioiden jakautumista akseleille voi varovaisesti päätellä
-sarakevektorin ja akseleiden välisistä kulmista. Mitä lähempänä sarakevektori on akselia,
-sitä suurempi on sen osuus akselin inertiasta. Samanlaisia päätelmiä voi tehdä myös
-rivipisteistä hahmottamalla janan niistä origoon.</p>
+sarakevektorin ja akseleiden välisistä kulmista. Mitä lähempänä sarakevektori on
+akselia, sitä suurempi on sen osuus akselin inertiasta. Samanlaisia päätelmiä
+voi tehdä myös rivipisteistä hahmottamalla niistä janan origoon.</p>
 <p>Käsitteisiin palataan tarkemmin seuraavissa luvuissa ja teorialiitteessä, ja liian
-tarkkaan karttaa ei kannata tutkia. Numeeriset tulokset ovat yksityiskohdissa selkeämpiä.</p>
-<p><strong>edit</strong> käytän termiä “vektori” vain kuvaan piirretyn “nuolen” nimityksenä.</p>
+tarkkaan karttaa ei kannata tutkia. Numeeriset tulokset ovat yksityiskohdissa
+selkeämpiä.</p>
 <div class="figure" style="text-align: center"><span id="fig:G1-3asymmContrib1"></span>
 <img src="JH_capaper_files/figure-html/G1-3asymmContrib1-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
 <p class="caption">
@@ -730,44 +731,50 @@ Kuva 3.6: Q1b: lapsi kärsii jos äiti on töissä
 </p>
 </div>
 <p>Sarakkeista ratkaisuun vaikuttaa selvästi eniten E, ja juuri ensimmäiseen
-dimensioon. Toista dimensiota määrittää vahviten e, mutta myös kaikki muut
-sarakkeet x-akselin yläpuolella. Samaa mieltä olevien (S ja s) vaikutus näyttäisi
-jakautuvan selvimmin molemmille dimensioille.</p>
+dimensioon joka selittää suurimman osan kokonaisinertiasta. Toista dimensiota määrittää
+vahviten e, mutta myös kaikki muut sarakkeet x-akselin yläpuolella. Samaa mieltä
+olevien (S ja s) vaikutus näyttäisi jakautuvan selvimmin molemmille dimensioille.</p>
 <p>Vaikka massojen suhteellisia eroja ei kovin helposti pistekoosta erota, se näkyy
 epäsuorasti Saksan melko vahvana kontribuutiona. Bulgarian pieni kontribuutio
-näyttäisi olevan ensimmäiselle dimensiolle.</p>
+näyttäisi olevan ensimmäiselle dimensiolle. Belgian kontribuutio ratkaisuun on
+pienempi kuin Saksan vaikka sen massa on hieman suurempi. Belgian ja Saksan
+pisteet ovat suhteellisesti lähempänä origoa jo suuren massansa ansiosta.</p>
 <p><strong>Suhteelliset kontribuutiot</strong></p>
+<p>Sarakkeiden laatu näyttäisi olevan hyvä, mutta rivipisteistä Saksa ja erityisesti
+Belgia erottuvat hieman heikommin esitettyinä.</p>
 <div class="figure" style="text-align: center"><span id="fig:G1-3asymmContrib2"></span>
 <img src="JH_capaper_files/figure-html/G1-3asymmContrib2-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
 <p class="caption">
 Kuva 3.7: Q1b: lapsi kärsii jos äiti on töissä
 </p>
 </div>
+<p>Massojen ja kontribuutioiden esittäminen kartoilla näyttää selkeimmin poikkeavat
+pisteet. Kontribuutioiden graafinen tarkastelu antaa myös yleiskuvan, jonka voi
+varmistaa numeerisista tuloksista.</p>
 <p>Kaikki edellä esitetyt pääättelyt perustuvat tietysti kaksiulotteideen projektioon.
 Jos pisteet on esitetty hyvin eli niiden inertiasta (poikkeamasta keskiarvosta)
 suuri osa on kuvattu kartalle, rivipiste on sitä lähempänä ideaalipistettä mitä
 suurempi ideaalipisteen osuus on sen profiilissa.</p>
-<p>Sarakkeiden laatu näyttäisi olevan hyvä, mutta rivipisteistä Saksa ja erityisesti
-Belgia erottuvat hieman heikommin esitettyinä.</p>
 </div>
 <div id="massat" class="section level2">
 <h2><span class="header-section-number">3.5</span> Massat</h2>
 <p>Massat ovat korrespondenssianalyysin keskeinen käsite, ja niiden kaksoisrooli on
-menetelmän ytimessä. Massat ovat normalisoiva muunnos khii2-etäisyysmitalle ja
-profiilien painoja. Tässä jälkimmäisessä roolissa massat liittyvät tutkimusongelmaan,
-mitä halutaan vertailla? Kun vertaillaan eri maita, ei ole kovin perusteltua käyttää
-massoina eri maiden otoskokoja. Jos taas halutaan vertailla vaikkapa miesten ja
+menetelmässä tärkeä. Massat ovat normalisoiva muunnos khii2-etäisyysmitalle ja
+profiilien painoja.</p>
+<p>Tässä jälkimmäisessä roolissa massat liittyvät tutkimusongelmaan,
+mitä halutaan vertailla? Kun vertaillaan eri maita, ei ole kovin perusteltua
+käyttää massoina eri maiden otoskokoja. Jos taas halutaan vertailla vaikkapa miesten ja
 naisten vastauksia on luonnollista normalisoida miesten ja naisten massat yhtä
 suuriksi. Rivi- ja sarakemassat ovat verrannollisia taulukon rivi- ja sarakesummiin,
 frekvenssitaulukon reunajakaumiin. Ne voidaan tutkimusongelmaan sopivalla tavalla
-skaalata uudelleen. CAiP(s. 23) esimerkissä viiden koulutustaso-ryhmän massat skaalataan
-verrannollisiksi niiden väestötason osuuksiin, ei otoksen osuuksiin. Tällainen datan
-esikäsittely on normaali osa korrespondenssianalyysin soveltamista.</p>
-<p>Jos massat halutaan vakioida yhtä suuriksi osajoukoissa, ratkaisu on yksinkertainen.
+skaalata uudelleen. Kun esimerkiksi vertaillaan viittä koulutustaso-ryhmää
+massat skaalataan verrannollisiksi niiden väestötason osuuksiin (CAiP, s. 23).
+Tällainen datan esikäsittely on normaali osa korrespondenssianalyysin soveltamista.</p>
+<p>Jos massat halutaan vakioida osajoukoissa yhtä suuriksi, ratkaisu on yksinkertainen.
 Korrespondenssianalyysin taulukoksi otetaan riviprofiilitaulukko, jossa rivien summat
 ovat yksi.</p>
 <p>Kuvassa <a href="yksinkertainen-korrespondenssianalyysi.html#fig:simpleCA3map1">3.8</a> on tehty näin, ja kartta eroaa hämmästyttävän
-vähän maiden otoskokoja massoina käyttävästä kartasta.</p>
+vähän maiden otoskokoja massoina käyttävästä kartasta <a href="yksinkertainen-korrespondenssianalyysi.html#fig:simpleCA1map1">3.3</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:simpleCA3map1"></span>
 <img src="JH_capaper_files/figure-html/simpleCA3map1-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
 <p class="caption">
@@ -775,26 +782,26 @@ Kuva 3.8: Q1b: lapsi kärsii jos äiti on töissä
 </p>
 </div>
 <p>Pienimpien otosten maat (Bulgaria, Unkari) liikahtavat hieman origoa kohti,
-Bulgaria hieman enemmän kohti maltillista puolta x-akselia.</p>
-<p>Kontribuutiokarttakaan ei eroa edellä esitetystä kartasta.
-<strong>edit</strong> Tämä kuva on ehkä tarpeeton?</p>
+Bulgaria hieman enemmän kohti maltillista puolta y-akselin suuntaan.</p>
 <div class="figure" style="text-align: center"><span id="fig:simpleCA3map2"></span>
 <img src="JH_capaper_files/figure-html/simpleCA3map2-1.png" alt="Q1b: lapsi kärsii jos äiti on töissä" width="90%" />
 <p class="caption">
 Kuva 3.9: Q1b: lapsi kärsii jos äiti on töissä
 </p>
 </div>
+<p>Kontribuutiokartta <a href="yksinkertainen-korrespondenssianalyysi.html#fig:simpleCA3map2">3.9</a> ei juuri eroa edellä esitetystä
+kartasta <a href="yksinkertainen-korrespondenssianalyysi.html#fig:G1-3asymmContrib1">3.6</a>.</p>
 <p>En ole vakioinut vertailtavien ryhmien (tässä maat) suhteellisia osuuksia. Syy on
 yksinkertainen: esittelen menetelmää sen perusmuodossa ilman kovin täsmällisiä
 tutkimusongelmia. Oikeiden tutkimuskymysten vastausia pitää tietysti etsiä järkevillä
-massojen skaalauksella. Korrespondenssianalyysi on inertian eli kokonaishajonnan
-dekomponointia, jakamista osiin.</p>
+massojen skaalauksella. Korrespondenssianalyysi on inertian dekomponointia,
+jakamista osiin.</p>
 </div>
 <div id="karttojen-erot" class="section level2">
 <h2><span class="header-section-number">3.6</span> Karttojen erot</h2>
 <p>Yksinkertaisen korrespondenssianalyysin peruskuva on symmetrinen kartta. Ehkä
-yllättäen sen “…tulkinta on edelleen menetelmän kaikkein kiistanalaisin aspekti.”
-(CAiP s.295, <span class="citation">M. Greenacre (<a href="lähteet.html#ref-RefWorks:doc:5c768b09e4b02df9431e950a" role="doc-biblioref">2006</a>)</span>.)</p>
+yllättäen sen “…tulkinta on edelleen menetelmän kaikkein kiistanalaisin aspekti”
+(CAiP s.295, <span class="citation">M. Greenacre (<a href="lähteet.html#ref-RefWorks:doc:5c768b09e4b02df9431e950a" role="doc-biblioref">2006</a>)</span>).</p>
 <p>Sarake- ja rivisteet esitetään siinä ikään kuin päällekkäin, samassa koordinaatistossa.
 Niiden pääkoordinaatit ovat kuitenkin eri pistejoukoista tai avaruuksista. Asymmetrisessä
 kartassa pisteet ovat samassa avaruudessa, ja ero on Greenacren mukaan vain skaalaus.
@@ -804,20 +811,19 @@ suuntavektorit niin pääkoordinaateissa kuin standardikoordinaateissa ovat läh
 kun akselien inertioiden (principal inertias) neliöjuuret eivät ole liian erisuuruisia.</p>
 <p>Jos pääinertioiden neliöjuuret ovat hyvin eri suuruisia, tulkintaongelmia voi tulla, mutta
 niillä ei käytännössä ole merkitystä. Siksi hän pitää skaalausdebattia akateemisena
-kiistana, käytännön sovelluksissa sillä ei ole merkitystä. Kiista on ollut aika
-sitkeä (esimerkiksi 1989 Greenacren kommentoi skaalausta perusteellisesti
-<span class="citation">(Greenacre <a href="lähteet.html#ref-RefWorks:doc:5c754c6de4b0947789165cde" role="doc-biblioref">1989</a>)</span>), mutta lienee laantunut.</p>
+kiistana, käytännön sovelluksissa sillä ei ole merkitystä.
+<span class="citation">Greenacre (<a href="lähteet.html#ref-RefWorks:doc:5c754c6de4b0947789165cde" role="doc-biblioref">1989</a>)</span> kommentoi skaalausta perusteellisesti,
+kiista on ollut aika sitkeä mutta lienee laantunut.</p>
 <p>Symmetinen kartta hyvä vaihtoehto, sillä asymmetrisessä skaalaus vie
-ideaalipisteet usein kauas pääkoordinaateissa esitetyt pisteet pakkautuvat kuvan
-keskelle. Toisaalta jos dataa tulkitaan ”asymmetrisesti” kontribuutiokartta on
-hyvä vaihtoehto. Silloin rivipisteiden etäisyydet esitetään optimaalisesti,
-sarakkeiden suuntavektoreille projisoiduilla pistellä on kaksoiskuva-tulkinta
-(biplot) ja niiden pituudetkin kertovat jotain.</p>
-<p>Greenacren mukaan kartoilla voi tavoitella kolmea eri asiaa, joista vain kaksi
-voi totetua yhtä aikaa. Kuvassa voi esittää rivipisteiden etäisyydet,
-sarakepisteiden etäisyydet tai rivi- ja sarakepisteiden etäisyydet. Jäkimmäinen on
-kaksoiskuvien (biplot) ns. skalaaritulo-ominaisuus. Rivi- ja sarakepisteen
-skalaaritulo “palauttaa” alkuperäisen datan, tässä tapauksessa taulukon solun.</p>
+ideaalipisteet usein kauas ja pääkoordinaateissa esitetyt pisteet pakkautuvat kuvan
+keskelle. Toisaalta jos dataa tulkitaan asymmetrisesti kontribuutiokartta on
+hyvä vaihtoehto. Silloin rivipisteiden khii2-etäisyydet esitetään optimaalisesti
+ja sarakkeiden suuntavektoreille projisoiduilla pistellä on kaksoiskuva-tulkinta.</p>
+<p>Greenacren mukaan kartoilla voi tavoitella kolmea eri asiaa. Kuvassa voi esittää
+rivipisteiden etäisyydet, sarakepisteiden etäisyydet tai rivi- ja sarakepisteiden
+etäisyydet. Jäkimmäinen on kaksoiskuvien (biplot) ns. skalaaritulo-ominaisuus.
+Rivi- ja sarakepisteen skalaaritulo “palauttaa” alkuperäisen datan, tässä
+tapauksessa taulukon solun.</p>
 <p>Näistä vain kaksi voidaan optimaalisesti esittää yhtä aikaa.</p>
 <p><em>Symmetrisessä kartassa</em> khii2-etäisyydet rivipisteiden välillä ja sarakepisteiden
 välillä esitetään optimaalisesti. Rivi- ja sarakepisteiden välisiä etäisyyksiä ei
@@ -829,7 +835,7 @@ verteksin kulmapisteitä. Rivi- ja sarakepisteiden etäisyydet esitetään optim
 mutta sarakepisteiden etäisyyksillä ei ole suoraa tulkintaa,</p>
 <p><em>Kontribuutiokartta</em> on muunnelma asymmetrisestä kartasta. “Ääriprofiilit” vedetään
 kohti origoa kertomalla ne massojen neliöjuurilla. Näin kuva selkenee, ja “kutistetun”
-pisteen etäisyys origosta (“vektori”) kertoo sen kontribuution pääakseleille. Näiden pisteiden
+pisteen etäisyys origosta kertoo sen kontribuution pääakseleille. Näiden pisteiden
 välisillä etäisyyksillä ei ole suoraa tulkintaa.</p>
 <p>Jako standardi- ja pääkoordinaatteihin on suora seuraus korrespondenssianalyysin
 matemaattisesta ratkaisusta. Greenacre esittelee kaksoiskuvia käsittelevässä

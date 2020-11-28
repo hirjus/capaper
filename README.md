@@ -233,3 +233,5 @@ vielä 3.3.1 - 3.3.4 asti.
 **28.11.2020 Versio 1.1** Korjataan sisällön puutteita. Luku 3 tehty jaksoon "Kontribuutiot kartalla" asti.
 Poistettiin luvun 3.3. johdannon luonnostelu, jaksot päätasolle. Poistettiin jakso "barysentrinen periaate",
 tulkinta epäselvä.
+
+**28.11.2020** Luvun 3 sisältö korjattu.
