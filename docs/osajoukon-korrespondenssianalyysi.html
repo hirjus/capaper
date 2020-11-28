@@ -140,7 +140,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4" data-path="johdanto.html"><a href="johdanto.html#tärkeimmät-lähteet"><i class="fa fa-check"></i><b>1.4</b> Tärkeimmät lähteet</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Data</a><ul>
-<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#aineiston-rajaaminen-maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.1</b> Aineiston rajaaminen maat ja muuttujat</a></li>
+<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#aineiston-rajaaminen"><i class="fa fa-check"></i><b>2.1</b> Aineiston rajaaminen</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>3</b> Yksinkertainen korrespondenssianalyysi</a><ul>
 <li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä---kärsiikö-lapsi"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä - kärsiikö lapsi?</a></li>
@@ -201,12 +201,12 @@ kertoo aika yllätyksettömän ja ilmeisen tarinan. Kiinnostavammat yhteydet
 pysyvät piilossa ylemmissä dimensioissa. MCA-kartan perusongelma on se, että
 siinä yritetään esittää monia erityyppisiä yhteyksiä simultaanisesti ja nämä
 yhteydet eivät ole “isolated to particular dimensions”
-( <span class="citation">M. Greenacre ja Pardo (<a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d87" role="doc-biblioref">2006</a>)</span> , 198).</p>
+(Greenacre ja Pardo artikkelikokoelmassa <span class="citation">(M. Greenacre ja Blasius <a href="lähteet.html#ref-RefWorks:doc:5ab76b43e4b003f4468d1f07" role="doc-biblioref">2006</a>)</span>, s. 198).</p>
 <p>Osajoukon korrespondenssianalyysi (subset CA, subset MCA) on yksi vastaus tähän
 pulmaan. Teoreettiset perusteet on esitetty Greenacren ja Pardon artikkelissa
-<span class="citation">(M. Greenacre ja Pardo <a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d87" role="doc-biblioref">2006</a>)</span> ja sen laajennetussa versiossa (emt.),
-esimerkkiaineistona ISSP:n 1994 data. Selkeä oppikirjaesitys on CAiP (ss. 161-).</p>
-<p>Eräs selkeä sovelluskohde yhteiskuntatieteellisissä kyselyaineistoissa on
+<span class="citation">(M. Greenacre ja Pardo <a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d87" role="doc-biblioref">2006</a>)</span>. Artikkelin laajennetussa versiossa (emt.)
+esimerkkiaineistona on ISSP:n 1994 data. Selkeä oppikirjaesitys on CAiP (ss. 161-).</p>
+<p>Eräs sovelluskohde yhteiskuntatieteellisissä kyselyaineistoissa on
 puuttuvien vastausten analyysi, johon palataan seuraavassa luvussa.</p>
 <p>Osajoukon korrespondenssianlyysin idea on säilyttää koko aineiston massat ja
 khii2-etäisyyksien painot mutta analysoida vain osaa aineistosta. Koko aineiston
@@ -218,9 +218,9 @@ osajoukko on valittu. Osajoukon profiilit muuttuvat, niiden summa ei enään ole
 yksi ja barysentristä periaatetta ei voi suoraan käyttää täydentävän pisteen
 koordinaattien laskemiseen. Tässä esimerkissä emme voi suoraan ca-paketin avulla
 sijoittaa esimerkiksi maapisteitä kartoille.</p>
-<p>Kartan <a href="yhteisvaikutusmuuttujat.html#fig:maagaCA1map1">5.2</a> avulla on helppo jakaa aineisto aluksi vain kahteen ryhmään.
-Suomi, Tanska ja Saksa ovat pääakselin oikealla puolella.
-Bulgaria ja Unkari yhdessä Belgian kanssa ovat toinen ryhmä.</p>
+<p>Kartan <a href="yhteisvaikutusmuuttujat.html#fig:maagaCA1map1">5.2</a> avulla aineiston voi jakaa kahteen ryhmään.
+Suomi, Tanska ja Saksa ovat pääakselin oikealla puolella. Bulgaria ja Unkari
+ja Belgian kanssa ovat toinen ryhmä.</p>
 <div class="figure" style="text-align: center"><span id="fig:maagaCA2sub2map1"></span>
 <img src="JH_capaper_files/figure-html/maagaCA2sub2map1-1.png" alt="Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi" width="90%" />
 <p class="caption">
@@ -236,8 +236,8 @@ Kuva 6.2: Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi
 <p>Karttoja <a href="osajoukon-korrespondenssianalyysi.html#fig:maagaCA2sub2map1">6.1</a> ja <a href="osajoukon-korrespondenssianalyysi.html#fig:maagaCA2sub2map3">6.2</a> joutuu katsomaan
 aika tarkkaan ennenkuin uskoo, että akseleiden skaalaus on akateeminen pulma
 vailla käytännön merkitystä (kts.luku 3.3.4). Dataa analysoidaan graafisesti, ja kuvat
-<em>näyttävät</em> erilaisilta. Pääakselien inertioiden neliöjuuret ovat
-0.327 ja 0.158,
+<em>näyttävät</em> erilaisilta. Pääakselien inertioiden neliöjuuret eivät poikkea toisistaan
+huomattavasti( 0.327 ja 0.158 ), joten
 sarakkeiden etäisyyksiä voisi tulkita myös kontribuutiokuvista.</p>
 <div class="figure" style="text-align: center"><span id="fig:maagaCA2sub2map2"></span>
 <img src="JH_capaper_files/figure-html/maagaCA2sub2map2-1.png" alt="Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi" width="90%" />
@@ -245,7 +245,6 @@ sarakkeiden etäisyyksiä voisi tulkita myös kontribuutiokuvista.</p>
 Kuva 6.3: Ikä, sukupuoli ja maa:Tanska-Saksa-Suomi
 </p>
 </div>
-<p><strong>k</strong> Rivipisteiden tulkinta</p>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -313,8 +312,8 @@ on ryhmillä DEf1 (467) ja DEf6 (48), DEm4 (285). Tanskan havainnoista vanhimmat
 huonosti. Kaksi dimensiot selittävät osajoukon kokonaishajonnasta 92%, mutta muutaman
 ryhmän hajonta on muissa dimensioissa. Saksan naisten iäkkäin ikäluokka (DEf6)
 ja keski-ikäisen miehet (DEm4) vain näyttävät olevan lähekkäin origon tuntumassa,
-samoin muutama muu huonosti tasoon sijoitettu piste.</p>
-<p>Huonosti kuvatuista pisteistäkuva ei oikeastaan mitään muuta.</p>
+samoin muutama muu huonosti tasoon sijoitettu piste.Huonosti kuvatuista pisteistäkuva
+ei oikeastaan mitään muuta.</p>
 <p>Sarakkeet on esitetty kohtalaisen hyvin, ja symmetrisessä kartassa tärkeimmälle
 dimensioille projisodut sarakepisteet ovat odotetussa järjestyksessä.</p>
 <p>Kontribuutiokartasta nähdään, että tärkein kontrasti on tiukan erimielisyyden (E)
@@ -324,21 +323,26 @@ Samalla kuvasta näkee (ja numeerisist tuloksista voi vahvistaa), että S-piste 
 on lähempänä (kulma on pienempi) pystyakselia. Kontribuutio on suurempi (147 vs.
 71 x-akselille). Toisaalta x-akseli selittää selvästi suurimman osan kaikkien muiden
 sarakepisteiden inertiasta, ja y-akseli taas lähes täysin e-pisteen inertian.</p>
+<p>Kartasta <a href="osajoukon-korrespondenssianalyysi.html#fig:maagaCA2sub2map2">6.3</a> nähdään, että naisten ikäluokat ovat
+kaikissa maissa liberaalimpia kuin vastaavat miesten ikäluokat. Nuorin ikäluokka
+on konservatiisemmalla puolella ja samalla toisella dimensiolla maltillisemmalla
+puolella. Vanhemmat ikäluokat ovat konservatiivisempia.</p>
 <div class="figure" style="text-align: center"><span id="fig:maagaCA2sub3map1"></span>
-<img src="JH_capaper_files/figure-html/maagaCA2sub3map1-1.png" alt="Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari 1" width="90%" />
+<img src="JH_capaper_files/figure-html/maagaCA2sub3map1-1.png" alt="Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari" width="90%" />
 <p class="caption">
-Kuva 6.4: Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari 1
+Kuva 6.4: Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari
 </p>
 </div>
-<p>Ensimmäisen dimension tulkinta pysyy samana, mutta nyt molemmat erimieliset
-(E, e) vastauskategoriat ovat selvästi oikealla. Ne ovat lähes x-akselin päällä,
+<p>Belgian, Unkarin ja Bulgarian kartalla ensimmäisen dimension dimension tulkinta
+pysyy samana, mutta nyt molemmat erimieliset (E, e) vastauskategoriat ovat
+selvästi vasemmalla liberaalilla puolella. Ne ovat lähes x-akselin päällä,
 kun ensimmäisen osajoukon kartalla e-sarake oli oikealla ja alhaalla kontrastina
 S- ja s- vastauksille ja myös neutraalille vaihtoehdolle. Kartan toinen dimenisio
 erottelee nyt tiukasti ja lievemmin samaa mieltä olevat, neutraali vaihtoehto
 jää väliin.</p>
 <p>Belgian nuoremmat ikäluokat ovat liberaalilla puolella, ja kiinnostavasti
 kaksi vanhinta miesten ryhmää on pystysuunnassa kaikkein maltillisimpia.
-Bulgarian ja Unkarin pisteen ovat x-akselilla tiukasti konservatiivisa.
+Bulgarian ja Unkarin pisteen ovat tiukasti konservatiivisella puolella.
 Vaihtelua on maltillisemman ja jyrkemmän konservatiivisuuden välillä
 pystysuuntaan. Toisen dimension kontrasti on myös hieman yllättäen
 Bulgarian nuorimpien naisten (BGf1) Unkarin vanhimpiten naisten (HUf6)
@@ -362,12 +366,7 @@ Kuva 6.5: Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari 2
 kolmen akselin (E, S ja s) tasapainosemmalla vaikutuksella ratkaisuun. Konservatiiviset
 sarakepisteet ovat vaikuttavampia kuin E, maltillinen liberaali (s) ja neutraali vaihtoehto
 vaikuttavat vähemmän.</p>
-<p><strong>k</strong> Yksityiskohdat ovat kiinnostavia, mutta graafisen analyysin
-päätavoite on yleiskuva. Tässä ekspolratiivinen data-analyysi
-kuitenkin kulkee hieman eri polkuja kuin tavaniomainen tilastollisten
-mallien analyysi. Seuratataan minne data kuljettaa, etstiään uusia
-näkökulmia. Iän ja sukupuolen yhteys vastauksiin on rakenteeltaan erilainen,
-se ei ole ongelma vaan datan ominaisuus.</p>
+<p>Listataan vielä toisen osajoukon ratkaisun numeeriset tulokset.</p>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -426,16 +425,16 @@ se ei ole ongelma vaan datan ominaisuus.</p>
 ## 3 |      |  168  435  107 |  180 426  63 |   26   9   6 |
 ## 4 |    e |  261  640   65 | -138 639  57 |   -4   0   0 |
 ## 5 |    E |  234  966  368 | -426 965 494 |   10   1   1 |</code></pre>
-<p><strong>edit: tässä toistoa</strong></p>
 <p>Kahden osajoukon inertioiden summa on sama kuin koko aineiston
-( 0.144 + 0.12 = 0.263), Selitysasteet
-nousevat hieman, ja aineiston riippuvuuden rakenteesta saadaaan esiin selviä eroja.
-Osajoukkojen analyysi täydentää ja tarkentaa yleiskuvaa (@ref:fig:maagaCA1map1)</p>
+( 0.144 + 0.12 = 0.263).
+Selitysasteet nousevat hieman, ja aineiston riippuvuuden rakenteesta saadaaan esiin
+selviä eroja. Osajoukkojen analyysi täydentää ja tarkentaa
+yleiskuvaa (@ref:fig:maagaCA1map1).</p>
 <p>Belgian pisteistä osalla on huono kvaliteetti (BEf1, BEf5,BEm1, BEm2). Bulgaria ja
 Unkari hyvin esitetty. Belgia on pulmallinen tapaus, ehkä taas omissa dimensioissaan.
 Belgian poikkeavuus (annetulla aluejaolla) on kiinnostava havainto, korrespondenssianalyysin
-tavoite ei ole pelkästään kohtuullisen luotettava yleiskuva taulukon riippuvuuksista. Poikkeavat
-havainnot eivät ole ongelma, vaan datan ominaisuus.</p>
+tavoite ei ole pelkästään kohtuullisen luotettava yleiskuva taulukon riippuvuuksista.
+Poikkeavat havainnot eivät ole ongelma, vaan datan ominaisuus.</p>
 
 </div>
             </section>

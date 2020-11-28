@@ -12,11 +12,11 @@ yli 44-vuotiaita. Finannsikriisin vuonna 2008 toiseksi nuorin ikäluokka on ollu
 22-31 vuotiaita, ja kaksi vanhinta yli 51-vuotiaita. Pelkän ikävaikutuksen
 analyysi edellyttäisi vähintään kahden aineiston yhdistämistä.
 
-Jatkan esimerkkiä kolmen muuttujan yhteisvaikutusmuuttajalla, mukaan
+Kolmen muuttujan yhteisvaikutusmuuttajaan yhdistän vastaajan maan.
 myös maa. Käytännössä kolmen luokittelumuuttujan yhdistäminen tekee taulukosta
-jo hieman huteron, joissain soluissa havaintojen määrä pienenee. Tässä kaikissa
-soluissa on sentää viisi havaintoa tai enemmän. Pienten massojen ja harvinaisten
-luokkien vaikutukset on kuitenkin arvioitava, ne voivat joskus mutta onneksi
+jo huteron, joissain soluissa havaintojen määrä pienenee. Kaikissa
+soluissa on sentää viisi havaintoa tai enemmän. Pienten massojen profiilen ja harvinaisten
+kategorioiden vaikutukset on kuitenkin arvioitava, ne voivat joskus mutta onneksi
 harvoin määrittää sitä liikaa.
 
 ## Ikä ja sukupuoli
@@ -147,7 +147,7 @@ lines(gaTestCA1.rpc[7:12,1],gaTestCA1.rpc[7:12,2], col = "red")
 ```
 
 Ratkaisu on melko yksiulotteinen, ensimmäinen dimensio kuvaa 87 prosenttia
-kokonaisinertiasta. Dimenioiden tulkinta on suurinpiirtein sama kuin kuin
+kokonaisinertiasta. Dimensioiden tulkinta on suurinpiirtein sama kuin kuin
 edellisissä kartoissa, mutta S-sarake on kiusallisesti s-sarakkeen vasemmalla
 puolella. Numeerisista tuloksista näkee, että sarakkeiden s ja E osuus
 kokonaisinertiasta (sarake inr) on 768. Niiden kontribuutio x-akselille on
@@ -157,6 +157,7 @@ kuitenkin ovat aika hyvin esitettyjä (qlt), voidaan x- akseli tulkinta hieman
 karkeammin samaa mieltä - eri mieltä - tasolla samaksi liberaalien ja
 konservatiivisten asenteiden ulottuvuudeksi. Toinen dimensio kuvaa tiukempaa
 samanmielisyyttä (S), kontrastina neutraali (?) ja maltillinen erimielisyys (s).
+
 
 ```{r ikaspnumres1, echo=FALSE}
 
@@ -176,7 +177,7 @@ ja vanhimpien ikäryhmien sijainnin tulkita osittain toisen dimension (varma
 mielipide - epävarma mielipide) avulla.
 
 Selvästi kaikissa ikäluokissa miehet ovat konservatiimisempia kuin naiset.
-Nuorin ikäluokka on hieman vähemmän varma mielipiteistään kuin vanhin.
+Nuorin ikäluokka on vähemmän varma mielipiteistään kuin vanhin.
 Yksi mahdollinen selitys kartan tulkinnan ongelmille on se, että maiden väliset
 erot mielipiteissä ovat paljon suurempia kuin sukupuolten väliset maiden sisällä
 (ISSP 1994 aineisto, CAiP, s.126).
@@ -184,6 +185,10 @@ erot mielipiteissä ovat paljon suurempia kuin sukupuolten väliset maiden sisä
 
 ## Ikä, sukupuoli ja maa
 
+Ikäluokan, sukupuolen ja maan yhteisvaikutusmuuttuja lisää kuvapisteiden
+määrää. Kuvasta saa jotenkin selvää, kun sen suurentaa mutta pisteitä on selvästi
+liikaa. Joitain muuttujien nimiä voisi lyhentää, kuva-alaa voisi rajata joihinkin
+osiin mutta osajoukon korrespondenssianalyysi tarjoaa pätevimmän vaihtoehdon.
 
 
 ```{r maaga1, echo=FALSE}
@@ -213,36 +218,28 @@ plot(maagaCA1, main = "symmetrinen kartta 1",
 
 ```
 
-Kuvasta saa jotenkin selvää, kun sen suurentaa mutta pisteitä on selvästi liikaa.
-Joitain muuttujien nimiä voisi lyhentää, kuva-alaa voisi rajata joihinkin osiin
-mutta osajoukon korrespondenssianalyysi tarjoaa pätevimmän vaihtoehdon.
-
 
 Sarakkeiden järjestys vasemmalta oikealle ja ylhäältä alas on sama kuin edellisissä
 kartoissa. Dimenisoiden tulkinta on sama, osuus inertiasta pienenee x-akselilla
 noin 6 prosenttiyksikköä. Pisteiden järjestys liberaalista konservatiiviseen
-alkaa Tanskan ja Suomen pisteistä, sitten tulee Saksan ja Belgian pisteitä ja
-konservatiisimpia ovat oikeassa laidassa Unkarin ja Bulgarian osajoukot. Toisella
-akselilla maltillisia ja neutraaleja ovat hyvin karkeasti Suomen pisteet ja lähes
+alkaa Tanskan ja Suomen pisteistä, sitten tulevat Saksan ja Belgian pisteet ja
+konservatiisimpia ovat oikeassa laidassa Unkari ja Bulgaria. Toisella
+akselilla maltillisia ja neutraaleja ovat karkeasti Suomen pisteet ja lähes
 kaikki Saksan ja Belgian pisteet. Eri maiden osajoukkojen suhteita on hankalampi
 hahmottaa, erityisesti kartan oikealla laidalla.
 
-Numeeristen tulosten taulukko on pitkä, mutta kartan informaatio pitää tarkistaa.
-Numeeriset tulokset eivät ole pelkkää diagnostiikkaa ja kartatan esittämien
+Numeeristen tulosten taulukko on pitkä, mutta kartan informaatio pitää varmistaa.
+Numeeriset tulokset eivät ole pelkkää diagnostiikkaa ja kartan esittämien
 riippuvuuksien varmistamista. Niistä näkee myös tarkemmin mahdolliset kiinnostavat
-piirteet datassa. Regeressiomallien tulosten raporteissa diagnostiikka on enintään
-liitteenä, mutta eksploratiivisessa data-analyysissä se ohjaa analyysiä myös eteenpäin.
+piirteet datassa. Regeressiomallien tulosten raporteissa diagnostiikka on usein
+liitteenä, mutta eksploratiivisessa data-analyysissä se ohjaa analyysiä eteenpäin.
 
-Tässä voi nähdä myös todennäköisyysteoriaan perustuvan tilastollisen mallintamisen vahvan
-puolen, aineiston rakenne ja muuttujien yhteydet saadaan parhaassa tapauksesa esitettyä
-paljon tiiviimmin.
-
-
+Tässä voi nähdä myös todennäköisyysteoriaan perustuvan tilastollisen mallintamisen
+vahvan puolen, aineiston rakenne ja muuttujien yhteydet saadaan parhaassa
+tapauksesa esitettyä paljon tiiviimmin.
 
 
 ```{r maagaCA1num, eval = TRUE, echo = FALSE}
-
-# Vilkaistaan numeerisia tuloksia, kopioidaan tekstiin jos on tarpeellista
 
 # print(maagaCA1)
 
@@ -250,7 +247,7 @@ summary(maagaCA1)
 
 ```
 
-Sarakkeet on kohtailaisen hyvin esitetty, heikoimmin neutraali vaihtoehto (535).
+Sarakkeet on kohtailaisen hyvin esitetty, heikoimmin neutraali vaihtoehto (qlt = 535).
 Kun sen suhteellinen kontribuutio (cor) on vain 1 toisella dimensiolla jää
 loppuosa x-akselille. Maltillisuuden dimensiota määrittää e-sarakke (ctr = 646),
 ja vain sitä. Ensimmäistä dimensiota määrittää vahvimmin E-sarake (ctr = 645)
@@ -258,23 +255,22 @@ liberaaliin ja samaa mieltä olevien sarakkeet (s, S) konsertatiiviseen suuntaan
 
 
 Kun aineistossa on 72 riviä on inertian suhteellisen kontribuution keskiarvo
-noin 14. Tämän ylittäviä kontribuutiota on Bulgaria naisilla (BGf2, BGf3, BGf5
-ja BGf6) kaikilla konservatiiviseen suuntaan. Sama pätee Unkarin naisille, muuten 
+noin 14. Tämän ylittäviä kontribuutiota on Bulgarian naisilla (BGf2, BGf3, BGf5
+ja BGf6), kaikilla konservatiiviseen suuntaan. Sama pätee Unkarin naisille, muuten 
 naisten ikäluokat kontribuoivat yleensä liberaaliin suuntaan. Suomen pisteiden
-absoluuttiset kontribuutiot lähes pelkästään toiselle dimenisolle maltilliseen
+absoluuttiset kontribuutiot ovat lähes pelkästään toiselle dimenisolle maltilliseen
 suuntaan. Tanska taas kontribui vahvahsti jyrkempien mielipiteiden suuntaan.
 
-Kaikissa taulukon soluissa on vähintään viisi havaintoa, muutama pienen massan
-havainto kontribuoi kohtuullisen paljon. Kuvan laadun takia ryhmiä pitäisi
-yhdistellä.
 
 ## Stabiilisuus
 
 Tarkastelen tässä vain ratkaisustabiiliutta (solution stability). Siinä data on
 annettu, ja ratkaisun numeerisista tuloksista nähdään miten pisteet määritättävät
-akselit. Ulkoinen stabiilius on laajempi käsite, mikä on datan suhde esimerkiksi
-johonkin perusjoukkoon (CAiP, s. 225). Ratkaisu on stabiili niiden pisteiden
-suhteen jotka eivät vaikuta siihen.
+akselit.  Ratkaisu on stabiili niiden pisteiden suhteen jotka eivät vaikuta
+siihen.
+
+Ulkoinen stabiilius on laajempi käsite, siinä huomioidaan esimerkiksi
+datan suhde johonkin perusjoukkoon (CAiP, s. 225).
 
 Korrespondenssianalyysiä ja erityisesti khii2- etäisyysmittaa on arvosteltu siitä,
 että se on liian herkkä harvinaisille luokittelumuuttujan arvoille.
@@ -286,15 +282,15 @@ pisteellä on massa ja näillä ”outlayereilla” se on pieni. Niinpä niiden
 vaikutuskin on vaatimaton.
 
 Harvinaisten kategorioiden vaikututus voi olla suuri, joten numeerisista
-tuloksita on tarkistettava onko hyvin pienen massan pisteillä suuri kontribuutio
+tuloksista on tarkistettava onko hyvin pienen massan pisteillä suuri kontribuutio
 ratkaisuun. Käytännössä näin voi käydä esimerkiksi silloin, kun jonkun
 harvinaisen luokittelumuuttujan arvon havainnot ovat keskittyneet muutamaan
 profiiliin joissa niiden osuus on suuri (CAiP, s 298). Luvussa 7 nähdään, miten
-melko vähäinen määrä puuttuvia vastuaksia kasaantuu samaan vastaajien osajoukkoon
+melko vähäinen määrä puuttuvia vastauksia kasaantuu samaan vastaajien osajoukkoon
 ja mitä seurauksia sillä on.
 
 Stabiiliutta voi helposti kokeilla määrittelemällä joitain pisteitä täydentäviksi
-pisteiksi.
+pisteiksi. 
 
-Kartan \@ref(fig:maagaCA1map1) numeerisista tuloksista ei löydy pienen massan pisteitä joilla
-on merkittävä kontribuutio akseleihin.
+En data-analyysissä löytänyt kartan \@ref(fig:maagaCA1map1) numeerisista
+tuloksista pienen massan pisteitä joilla on merkittävä kontribuutio akseleihin.

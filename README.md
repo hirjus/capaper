@@ -238,3 +238,5 @@ tulkinta epäselvä.
 
 **28.11.2020** Luvun 3 sisältö korjattu. Luvun 4 sisältö korjattu ja hieman täydennetty,
 3d-kuvien lyhyt johdattelu puuttuu.
+
+**28.11.2020 Versio 1.3** Luvut 5 ja 6 editoitu. 

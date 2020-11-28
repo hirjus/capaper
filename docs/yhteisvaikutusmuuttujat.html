@@ -140,7 +140,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4" data-path="johdanto.html"><a href="johdanto.html#tärkeimmät-lähteet"><i class="fa fa-check"></i><b>1.4</b> Tärkeimmät lähteet</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Data</a><ul>
-<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#aineiston-rajaaminen-maat-ja-muuttujat"><i class="fa fa-check"></i><b>2.1</b> Aineiston rajaaminen maat ja muuttujat</a></li>
+<li class="chapter" data-level="2.1" data-path="data.html"><a href="data.html#aineiston-rajaaminen"><i class="fa fa-check"></i><b>2.1</b> Aineiston rajaaminen</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>3</b> Yksinkertainen korrespondenssianalyysi</a><ul>
 <li class="chapter" data-level="3.1" data-path="yksinkertainen-korrespondenssianalyysi.html"><a href="yksinkertainen-korrespondenssianalyysi.html#äiti-töissä---kärsiikö-lapsi"><i class="fa fa-check"></i><b>3.1</b> Äiti töissä - kärsiikö lapsi?</a></li>
@@ -202,11 +202,11 @@ Kaksin nuorinta ikäluokka on ollut 1990 alle 14-vuotiaita ja vanhin ikäluokka
 yli 44-vuotiaita. Finannsikriisin vuonna 2008 toiseksi nuorin ikäluokka on ollut
 22-31 vuotiaita, ja kaksi vanhinta yli 51-vuotiaita. Pelkän ikävaikutuksen
 analyysi edellyttäisi vähintään kahden aineiston yhdistämistä.</p>
-<p>Jatkan esimerkkiä kolmen muuttujan yhteisvaikutusmuuttajalla, mukaan
+<p>Kolmen muuttujan yhteisvaikutusmuuttajaan yhdistän vastaajan maan.
 myös maa. Käytännössä kolmen luokittelumuuttujan yhdistäminen tekee taulukosta
-jo hieman huteron, joissain soluissa havaintojen määrä pienenee. Tässä kaikissa
-soluissa on sentää viisi havaintoa tai enemmän. Pienten massojen ja harvinaisten
-luokkien vaikutukset on kuitenkin arvioitava, ne voivat joskus mutta onneksi
+jo huteron, joissain soluissa havaintojen määrä pienenee. Kaikissa
+soluissa on sentää viisi havaintoa tai enemmän. Pienten massojen profiilen ja harvinaisten
+kategorioiden vaikutukset on kuitenkin arvioitava, ne voivat joskus mutta onneksi
 harvoin määrittää sitä liikaa.</p>
 <div id="ikä-ja-sukupuoli" class="section level2">
 <h2><span class="header-section-number">5.1</span> Ikä ja sukupuoli</h2>
@@ -222,7 +222,7 @@ Kuva 5.1: Q1b: ikäluokka ja sukupuoli
 </p>
 </div>
 <p>Ratkaisu on melko yksiulotteinen, ensimmäinen dimensio kuvaa 87 prosenttia
-kokonaisinertiasta. Dimenioiden tulkinta on suurinpiirtein sama kuin kuin
+kokonaisinertiasta. Dimensioiden tulkinta on suurinpiirtein sama kuin kuin
 edellisissä kartoissa, mutta S-sarake on kiusallisesti s-sarakkeen vasemmalla
 puolella. Numeerisista tuloksista näkee, että sarakkeiden s ja E osuus
 kokonaisinertiasta (sarake inr) on 768. Niiden kontribuutio x-akselille on
@@ -277,38 +277,39 @@ ikäryhmät (paitsi f3) ovat ikäjärjestyksessä vasemmalta oikealle, voi nuori
 ja vanhimpien ikäryhmien sijainnin tulkita osittain toisen dimension (varma
 mielipide - epävarma mielipide) avulla.</p>
 <p>Selvästi kaikissa ikäluokissa miehet ovat konservatiimisempia kuin naiset.
-Nuorin ikäluokka on hieman vähemmän varma mielipiteistään kuin vanhin.
+Nuorin ikäluokka on vähemmän varma mielipiteistään kuin vanhin.
 Yksi mahdollinen selitys kartan tulkinnan ongelmille on se, että maiden väliset
 erot mielipiteissä ovat paljon suurempia kuin sukupuolten väliset maiden sisällä
 (ISSP 1994 aineisto, CAiP, s.126).</p>
 </div>
 <div id="ikä-sukupuoli-ja-maa" class="section level2">
 <h2><span class="header-section-number">5.2</span> Ikä, sukupuoli ja maa</h2>
+<p>Ikäluokan, sukupuolen ja maan yhteisvaikutusmuuttuja lisää kuvapisteiden
+määrää. Kuvasta saa jotenkin selvää, kun sen suurentaa mutta pisteitä on selvästi
+liikaa. Joitain muuttujien nimiä voisi lyhentää, kuva-alaa voisi rajata joihinkin
+osiin mutta osajoukon korrespondenssianalyysi tarjoaa pätevimmän vaihtoehdon.</p>
 <div class="figure" style="text-align: center"><span id="fig:maagaCA1map1"></span>
 <img src="JH_capaper_files/figure-html/maagaCA1map1-1.png" alt="Q1b: ikäluokka ja sukupuoli maittain" width="90%" />
 <p class="caption">
 Kuva 5.2: Q1b: ikäluokka ja sukupuoli maittain
 </p>
 </div>
-<p>Kuvasta saa jotenkin selvää, kun sen suurentaa mutta pisteitä on selvästi liikaa.
-Joitain muuttujien nimiä voisi lyhentää, kuva-alaa voisi rajata joihinkin osiin
-mutta osajoukon korrespondenssianalyysi tarjoaa pätevimmän vaihtoehdon.</p>
 <p>Sarakkeiden järjestys vasemmalta oikealle ja ylhäältä alas on sama kuin edellisissä
 kartoissa. Dimenisoiden tulkinta on sama, osuus inertiasta pienenee x-akselilla
 noin 6 prosenttiyksikköä. Pisteiden järjestys liberaalista konservatiiviseen
-alkaa Tanskan ja Suomen pisteistä, sitten tulee Saksan ja Belgian pisteitä ja
-konservatiisimpia ovat oikeassa laidassa Unkarin ja Bulgarian osajoukot. Toisella
-akselilla maltillisia ja neutraaleja ovat hyvin karkeasti Suomen pisteet ja lähes
+alkaa Tanskan ja Suomen pisteistä, sitten tulevat Saksan ja Belgian pisteet ja
+konservatiisimpia ovat oikeassa laidassa Unkari ja Bulgaria. Toisella
+akselilla maltillisia ja neutraaleja ovat karkeasti Suomen pisteet ja lähes
 kaikki Saksan ja Belgian pisteet. Eri maiden osajoukkojen suhteita on hankalampi
 hahmottaa, erityisesti kartan oikealla laidalla.</p>
-<p>Numeeristen tulosten taulukko on pitkä, mutta kartan informaatio pitää tarkistaa.
-Numeeriset tulokset eivät ole pelkkää diagnostiikkaa ja kartatan esittämien
+<p>Numeeristen tulosten taulukko on pitkä, mutta kartan informaatio pitää varmistaa.
+Numeeriset tulokset eivät ole pelkkää diagnostiikkaa ja kartan esittämien
 riippuvuuksien varmistamista. Niistä näkee myös tarkemmin mahdolliset kiinnostavat
-piirteet datassa. Regeressiomallien tulosten raporteissa diagnostiikka on enintään
-liitteenä, mutta eksploratiivisessa data-analyysissä se ohjaa analyysiä myös eteenpäin.</p>
-<p>Tässä voi nähdä myös todennäköisyysteoriaan perustuvan tilastollisen mallintamisen vahvan
-puolen, aineiston rakenne ja muuttujien yhteydet saadaan parhaassa tapauksesa esitettyä
-paljon tiiviimmin.</p>
+piirteet datassa. Regeressiomallien tulosten raporteissa diagnostiikka on usein
+liitteenä, mutta eksploratiivisessa data-analyysissä se ohjaa analyysiä eteenpäin.</p>
+<p>Tässä voi nähdä myös todennäköisyysteoriaan perustuvan tilastollisen mallintamisen
+vahvan puolen, aineiston rakenne ja muuttujien yhteydet saadaan parhaassa
+tapauksesa esitettyä paljon tiiviimmin.</p>
 <pre><code>## 
 ## Principal inertias (eigenvalues):
 ## 
@@ -403,28 +404,26 @@ paljon tiiviimmin.</p>
 ## 3 |      |  168  535   96 |  284 534  73 |  -11   1   1 |
 ## 4 |    e |  261  941  103 |  -45  20   3 | -310 921 646 |
 ## 5 |    E |  234 1000  471 | -714 962 645 |  141  37 119 |</code></pre>
-<p>Sarakkeet on kohtailaisen hyvin esitetty, heikoimmin neutraali vaihtoehto (535).
+<p>Sarakkeet on kohtailaisen hyvin esitetty, heikoimmin neutraali vaihtoehto (qlt = 535).
 Kun sen suhteellinen kontribuutio (cor) on vain 1 toisella dimensiolla jää
 loppuosa x-akselille. Maltillisuuden dimensiota määrittää e-sarakke (ctr = 646),
 ja vain sitä. Ensimmäistä dimensiota määrittää vahvimmin E-sarake (ctr = 645)
 liberaaliin ja samaa mieltä olevien sarakkeet (s, S) konsertatiiviseen suuntaan.</p>
 <p>Kun aineistossa on 72 riviä on inertian suhteellisen kontribuution keskiarvo
-noin 14. Tämän ylittäviä kontribuutiota on Bulgaria naisilla (BGf2, BGf3, BGf5
-ja BGf6) kaikilla konservatiiviseen suuntaan. Sama pätee Unkarin naisille, muuten
+noin 14. Tämän ylittäviä kontribuutiota on Bulgarian naisilla (BGf2, BGf3, BGf5
+ja BGf6), kaikilla konservatiiviseen suuntaan. Sama pätee Unkarin naisille, muuten
 naisten ikäluokat kontribuoivat yleensä liberaaliin suuntaan. Suomen pisteiden
-absoluuttiset kontribuutiot lähes pelkästään toiselle dimenisolle maltilliseen
+absoluuttiset kontribuutiot ovat lähes pelkästään toiselle dimenisolle maltilliseen
 suuntaan. Tanska taas kontribui vahvahsti jyrkempien mielipiteiden suuntaan.</p>
-<p>Kaikissa taulukon soluissa on vähintään viisi havaintoa, muutama pienen massan
-havainto kontribuoi kohtuullisen paljon. Kuvan laadun takia ryhmiä pitäisi
-yhdistellä.</p>
 </div>
 <div id="stabiilisuus" class="section level2">
 <h2><span class="header-section-number">5.3</span> Stabiilisuus</h2>
 <p>Tarkastelen tässä vain ratkaisustabiiliutta (solution stability). Siinä data on
 annettu, ja ratkaisun numeerisista tuloksista nähdään miten pisteet määritättävät
-akselit. Ulkoinen stabiilius on laajempi käsite, mikä on datan suhde esimerkiksi
-johonkin perusjoukkoon (CAiP, s. 225). Ratkaisu on stabiili niiden pisteiden
-suhteen jotka eivät vaikuta siihen.</p>
+akselit. Ratkaisu on stabiili niiden pisteiden suhteen jotka eivät vaikuta
+siihen.</p>
+<p>Ulkoinen stabiilius on laajempi käsite, siinä huomioidaan esimerkiksi
+datan suhde johonkin perusjoukkoon (CAiP, s. 225).</p>
 <p>Korrespondenssianalyysiä ja erityisesti khii2- etäisyysmittaa on arvosteltu siitä,
 että se on liian herkkä harvinaisille luokittelumuuttujan arvoille.
 Yhteenvetoartikkelissan <span class="citation">M. Greenacre (<a href="lähteet.html#ref-RefWorks:doc:5c768b09e4b02df9431e950a" role="doc-biblioref">2006</a>)</span> tarttuu ”vaikuttavien
@@ -433,16 +432,16 @@ poikkeavien havaintojen myyttiin”, ja pitää sitä lähes aina perusteettoman
 pisteellä on massa ja näillä ”outlayereilla” se on pieni. Niinpä niiden
 vaikutuskin on vaatimaton.</p>
 <p>Harvinaisten kategorioiden vaikututus voi olla suuri, joten numeerisista
-tuloksita on tarkistettava onko hyvin pienen massan pisteillä suuri kontribuutio
+tuloksista on tarkistettava onko hyvin pienen massan pisteillä suuri kontribuutio
 ratkaisuun. Käytännössä näin voi käydä esimerkiksi silloin, kun jonkun
 harvinaisen luokittelumuuttujan arvon havainnot ovat keskittyneet muutamaan
 profiiliin joissa niiden osuus on suuri (CAiP, s 298). Luvussa 7 nähdään, miten
-melko vähäinen määrä puuttuvia vastuaksia kasaantuu samaan vastaajien osajoukkoon
+melko vähäinen määrä puuttuvia vastauksia kasaantuu samaan vastaajien osajoukkoon
 ja mitä seurauksia sillä on.</p>
 <p>Stabiiliutta voi helposti kokeilla määrittelemällä joitain pisteitä täydentäviksi
 pisteiksi.</p>
-<p>Kartan <a href="yhteisvaikutusmuuttujat.html#fig:maagaCA1map1">5.2</a> numeerisista tuloksista ei löydy pienen massan pisteitä joilla
-on merkittävä kontribuutio akseleihin.</p>
+<p>En data-analyysissä löytänyt kartan <a href="yhteisvaikutusmuuttujat.html#fig:maagaCA1map1">5.2</a> numeerisista
+tuloksista pienen massan pisteitä joilla on merkittävä kontribuutio akseleihin.</p>
 
 </div>
 </div>

@@ -1004,7 +1004,7 @@ suomenkielinen versio [@RefWorks:doc:5bb90a0ae4b018435936a488] ja  muut
 kieliversiot voivat olla hyödyllisiä. Tiedonkeruun tarkoitus ja kyselyn
 suunnitelun ideat kerrotaan omassa raportissa [@RefWorks:doc:5f9439fde4b04741789a2187].
 
-## Aineiston rajaaminen maat ja muuttujat
+## Aineiston rajaaminen
 
 Olen valinnut laajasta aineistosta 25 maata ja joukon muuttujia. Maat on valittu
 niin, että ne ovat suhteellisen samankaltaisia ja valitut muuttujat ovat niissä
