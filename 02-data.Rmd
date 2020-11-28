@@ -1078,6 +1078,7 @@ on osa suomenkielistä lomaketta.
 
 
 ```{r suom-kys,echo=F, out.width='50%', fig.align='center',fig.cap='Suomenkielinen lomake'}
+
 knitr::include_graphics('img/substvar_fi_Q1Q2.png')
 
 ```
