@@ -226,5 +226,10 @@ tekstiä MCA-tulkinnoista.
   samoin teorialiitteessä. Lukujen 3.2 ja 3.3 saumakohdassa on siivottavaa enemmän. Tekstissä on toistoa ja oikeinkirjoitusta ei vielä ole tarkastettu.
 
 **26.11.2020** Johdantoluvusta korjattu pari kirjoitusvirhettä ja viitetietoa.
+
 **26.11.2020** Editoitu luvun 3.2 loppuun. Luku 3.3 muistiinpanoja. Korjailtu
 vielä 3.3.1 - 3.3.4 asti.
+
+**28.11.2020 Versio 1.1** Korjataan sisällön puutteita. Luku 3 tehty jaksoon "Kontribuutiot kartalla" asti.
+Poistettiin luvun 3.3. johdannon luonnostelu, jaksot päätasolle. Poistettiin jakso "barysentrinen periaate",
+tulkinta epäselvä.

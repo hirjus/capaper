@@ -1,0 +1,23 @@
+bookdown::gitbook:
+  #toc-depth: 2
+  css: style.css
+  fig_caption: true
+  split_bib: false # ei lähteitä sivun alareunaan
+  config:
+    download: null
+    #code_folding: hide # koodilohkojen koodi oletuksena piilossa - vaatii themen käyttöä, gitbookissa on jo
+bookdown::pdf_book:
+  #toc-depth: 2
+  includes:
+      in_header: Testpreamble.tex
+  #fig_caption: true tätä ei ole testidokkarissa
+  # latex_engine: pdflatex   TESTI 14.11.20
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::html_book:
+  toc: false 
+  #toc_depth: 2
+  fig_caption: true
+  code_folding: hide
+  split_by: none
