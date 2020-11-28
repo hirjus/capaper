@@ -43,11 +43,3 @@ two groups without strong additional assumptions about the underlying distributi
 of happiness. We expect that even if we achieve consensus on these assumptions,
 many comparisons will remain unranked.”  Korrespondenssianalyysillä vertailun
 voi tehdä ilman jakaumaoletuksia, katsoa miltä data näyttää.
-
-
-Tutkielma on tehty r-ohjelmistolla ja raportointi rmarkdown - koodilla. Teksti
-ja koodi ovat samassa dokumentissa, samoin analyysin tulokset. Ne voi tulostaa
-eri formaateissa, ja Github.com - palvelussa voi versionhallinnan lisäksi julkaista
-html-raportit. Ongelmiakin oli, ne ja teknisen ympäristön yksityiskohdat on
-kuvattu liitteessä 3.
-

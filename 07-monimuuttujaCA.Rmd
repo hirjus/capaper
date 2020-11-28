@@ -7,7 +7,8 @@ muuttujaryhmän sisäisiä suhteita.
 
 Esimerkkiaineistossa haastateltavien
 vastaukset substanssikysymyksiin ovat oma ryhmänsä ja taustamuuttujat toinen
-ryhmä. Kahden muuttujaryhmän välisiä suhteita voidaan tutkia rakentamalla yhdistetty matriisi useasta kahden muuttujan ristiintaulukoinnista. 
+ryhmä. Kahden muuttujaryhmän välisiä suhteita voidaan tutkia rakentamalla
+yhdistetty matriisi useasta kahden muuttujan ristiintaulukoinnista. 
 Tämä pinottujen ja yhdistettyjen (stacked and concatenated) taulukoiden
 menetelmä (CAiP s. 129) ei kerro muuttujaryhmien sisäisistä yhteyksistä,
 joita edellä analysoitiin vuorovaikutusmuuttujien avulla.
@@ -143,6 +144,7 @@ ovat yhtä vaatimattomia kuin Belgian (28) ja Saksan (29),
 (m =20, f = 17, a2 = 40, a6 = 83), samoin kontribuutiot akseleiden inertiaan.
 1. dimension kontribuutio (ctr) on suuri (>800) kaikilla paitsi nuorimmalla
 ikäryhmällä (a1) jolla 2. dimension selittää lähes puolet sen inertiasta (470).
+En esitä numeerisa tuloksia tarkemmin.
 
 Karttaa vertaa karttaan \@ref(fig:gaCA1map) jossa on esitetty iän ja sukupuolen
 yhteisvaikutusmuuttuja. Pinottu taulu on vaihtoehtoinen tapa, ja kartasta 
@@ -151,9 +153,9 @@ kuin naiset, iäkkäämmät ovat konservatiivisempia kuin nuoret. Nuorin ikäluo
 poikkeaa muista.
 
 
-**tämä poistetaan lopullisesta versiosta**
 
-```{r concatCA1num}
+
+```{r concatCA1num, echo=FALSE, eval=FALSE}
 
 summary(Concat1jh.CA1)
 
@@ -171,9 +173,8 @@ plot(Concat1jh.CA1, map = "rowgreen",
      #mass = c(TRUE, TRUE) ei oikein erotu kuvassa
      contrib =c("relative", "absolute"),
      arrows = c(FALSE, TRUE),
-     main = "Pinottu taulukko, kontribuutiokartta",
-     sub =  "    sarakkeet absoluuttinen kontribuutio, rivit suhteellinen,
-     taustamuuttujat a1-a6 ikäluokat, m = miehet, f = naiset"
+     main = "Pinottu taulukko, kontribuutiokartta (sarakkeet absoluutinen, rivit suhteellinen)",
+     sub =  "taustamuuttujat a1-a6 ikäluokat, m = miehet, f = naiset"
      )
 
 ```
@@ -196,7 +197,7 @@ S-vastauksen janalle se ei ikäluokista konservatiivisin. Ikäluokat a2 ja a6 ov
 
 
 Esimerkkiaineistossa ei ole puuttuvia tietoja. Ne olisivatkin
-aika pulmallisia, varianssin dekomponointi ei onnistu jos reunajakaumat ovat
+pulmallisia, varianssin dekomponointi ei onnistu jos reunajakaumat ovat
 alitaulukoissa selvästi erilaisia.
 
 
@@ -204,13 +205,11 @@ Matriisien yhdistely on monipuolinen laajennus. Eräs kiinnostava malli on
 ABBA, kahden rakenteeltaan samanlaisen matriisin yhdistäminen lohkoina. Nimi
 kertoo yhdistetyn matriisin rakenteen (block circulant matrix),
 päällekkäin pinotut A ja B liitetään toiseen pinottuun matriisiin B ja A.
-
 Matriiseilla on samat rivit ja sarakkeet, esimerkiksi miesten ja naisten
-vastausprofiilit yhteen kysymykseen aittain luokiteltuina.Kokonaisinertia
+vastausprofiilit yhteen kysymykseen maittain luokiteltuina.Kokonaisinertia
 saadaan dekomponoitua ryhmien sisäiseen ja väliseen hajontaan kahdelle kartalle.
 Toinen kuvaa maiden välisiä eroja ja toinen maiden sisäisiä sukupuolten välisiä
 eroja (CAiP ss. 177-)
-
 
 
 ## MCA - monimuuttujakorrespondenssianalyysi
@@ -243,9 +242,7 @@ Pelkissä kysymyksissä (Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b) puuttuvia tietoja on
 (”listwise delete”) on sitä huonompi vaihtoehto mitä enemmän muuttujia on.
 
 Kaikissa kysymyksissä on viisi vastausvaihtoehtoa ja kuudes kategoria puuttuvalle
-tiedolle. Analyysi kannattaa aloittaa tästä pulmasta, yksi hyvä ratkaisu on
-osajoukon MCA (subset MCA).
-
+tiedolle.
 
 
 ```{r 07mcaIsodat1, echo=F, include=F, error= TRUE}
@@ -508,10 +505,9 @@ plot.mjca(Qmuuttujat1.mca, labels = c(1,2),
 Inertian selitysosuudet ovat paljon pienempiä, ja ratkaisu
 on selvästi kaksiulotteinen. Puuttuvat vastaukset erottuvat omana ryhmänä, ja
 varsinaiset vastaukset ovat pakkautuneet y-akselin oikealle puolelle. Niiden erot
-näkyvät vain toisessa dimensiossa. Ensimmäinen dimensio kuvaa vastaamattomuutta
-(syystä tai toisesta) vs. kaikkia vastauksia. Kokonaisinertiaa on korjattu
-pienemmäksi (adjusted inetia, kts. liite 1),
-selitetyn inertian osuus on realistinen arvio.
+näkyvät vain toisessa dimensiossa. Ensimmäinen dimensio kuvaa vastaamattomuutta,
+kontrastina kaikki vastauskategoriat. Kokonaisinertiaa on korjattu
+pienemmäksi (ns. adjusted inetia, kts. liite 1).
 
 Pystyakselin suuntaan kontrasti näyttäisi olevan konservatiiviset ylhäällä,
 modernit ja liberaalimmat alhaalla. Pisteitä on vaikea erottaa toisistaan.
@@ -613,7 +609,7 @@ plot.mjca(Qmuuttujat2.mca, map = "rowprincipal",
           what = c("all","all"),labels = c(0,2),
           col = c("lightblue", "red"),
           main="Asymmetrinen kartta - osajoukko: ei puuttuvia vastauksia",
-          sub = "Kysymykset Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b, vastaukset S-s-?-e-E-P")
+          sub = "Kysymykset Q1a, Q1b, Q1c, Q1d, Q1e, Q2a, Q2b, vastaukset S-s-?-e-E")
 
 
 ```
@@ -632,17 +628,11 @@ omassa ryhmässään lähimpänä maltillisten ja neutraalien vastausten ryhmä�
 
 Karttaan voi hahmotella diagonaalin suuntaisen 
 akselin vahvojen mielipiteiden ryppäiden välille. Muut vastaukset ovat 
-mukaisesti näiden välisellä U-muotoisella linjalla (Guttman-efekti).
+mukaisesti näiden välisellä kaarevalla linjalla (Guttman-efekti).
 
-
-Osajoukon korrespondessianalyysin esitelleissä artikkeleissa
-([@RefWorks:doc:5a857a44e4b0ed2d44664d87] ja samasta teemasta laajentaen
-kokoomateoksessa [@RefWorks:doc:5ab76b43e4b003f4468d1f07], ss. 197-217.)
-Aineistona jälkimmäisessä tutkimuksessa on sama kysymyssarja kuin tässä 1994
-datasta. Kysymyksissä on jonkin verran eroja.
 
 @RefWorks:doc:5a857a43e4b0ed2d44664d7c (s. 139-) analysoi lähes samoja kysymyksiä
-ISSP-datalla 2012. Tulokset ovat hyvin samantapaisia. Karttaa \ref(fig:subsetMCA1map3)
+ISSP-datalla 2002. Tulokset ovat hyvin samantapaisia. Karttaa \ref(fig:subsetMCA1map3)
 vastaavan kuvan jatkoanalyysi on vasemman yläkulman pisteiden tarkempi analyysi.
 Greenacre havaitsee, että nämä neutraalit ja maltilliset vastaukset eivät ole
 hyvin esitettyjä kaksiulotteisella kartalla, vaan ne karkaavat korkeampiin

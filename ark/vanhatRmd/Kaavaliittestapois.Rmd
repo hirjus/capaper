@@ -1,0 +1,73 @@
+**edit: kaavaesimerkkejä - poistetaan lopullisesta versiosta**
+
+Korrespondenssianalyysin sovelluksissa tutkimusongelman ratkaisu on usein sopivan
+matriisin rakentaminen.
+
+
+
+\begin{equation}
+A = \begin{bmatrix}
+    a_{11} & a_{12} & \dots & a_{1k}\\
+    \vdots & \ddots & \\
+    \\
+    \vdots \\
+    a_{n1} & \dots  & \dots & a_{nk}
+    \end{bmatrix}
+\end{equation}
+
+Ehkäpä ABBA onnistuu paremmin tällä notaatiolla?
+
+\begin{equation}
+A = \begin{bmatrix}
+    A_{11} & B_{12}  \\
+    B_{21} & A_{22}
+    \end{bmatrix}
+\end{equation}
+
+
+\begin{equation}
+A = \begin{bmatrix}
+    A_{maa, Q1a} & A_{maa, Q1b}  \\
+    B_{gage, Q1a} & B_{gage, Q1b}
+    \end{bmatrix}
+\end{equation}
+
+
+
+**Pinotut tai yhdistetyt matriisit ("stacked and concatenated matrices")**
+
+Yksinkertainen korrespondenssianalyysi on kahden luokittelumuuttujan määrittämän
+taulukon analyysiä, mutta sitä voi soveltaa myös usean muuttujan analyysiin.
+Menetelmän matemaattinen perusta ja ratkaisualgoritmi (SVD) toimivat, tulkinta
+vain muuttuu.
+
+Yksinkertaisin laajennus on lisätä alkuperäisen taulukon alle toinen taulukko.
+Rivit ovat esimerkissä maittan summattuja vastauksia, ja niiden alle voidaan
+lisätä joku toinen luokittelumuuttuja. Havaintojen määrä yhditetyssä ("pinotussa")
+taulussa kaksinkertaistuu.
+
+Taulukoiden yhdistämisen idea on inertian dekomponointi. Yhdistetyn matriisin inertia
+voidaan eri tavoin esittää alimatriisien inertian summana. Tällöin jokaisen alimatriisin
+reunajakauman tulee olla sama, ja puuttuvat tiedot vääristävät tuloksia.
+
+Merkitään edellisten analyysien kuuden maan ja viiden vastausvaihtoehdon
+taulukkoa matriisilla $\boldsymbol{ A}_{I  J}$, missä $I$ on rivien ja $J$
+sarakkeiden lukumäärä. Taulukoidaan ikäluokan (1 - 6) ja sukupuolen ($f$ = nainen,
+$m$ = mies) vuorovaikutusmuuttuja ($f1,\dots , f6$ ja $m1,\dots , m6$) samojen
+vastausvaihtoehtojen kanssa. Jos tätä taulukkoa merkitään matriisilla
+$\boldsymbol{ B}_{I^{`}  J}$, voimme muodostaa yhdistetyn matriisin
+
+Rivien lukumäärä on molemmissa matriiseissa sama, koska luokkia sattuu olemaan
+kuusi sekä maa- että ikä- ja sukupuoli - luokittelumuuttujissa. Kun matriisit
+ovat dimensioiltaan ja myös muuttujien sisällön kannalta samankaltaiset, niitä
+kutsutaan yhteensopiviksi (``matched matrix''). Tällöin yksinkertaista
+korrespondenssianalyyisä voi soveltaa tutkimusongelmaan, jossa halutaan erotella
+jonkun ryhmän sisäinen vaihtelu ryhmien välisiestä vaihtelusta.
+(Greenacren ehdottama ABBA - analyysi).
+
+
+ABBA on erityistapaus yleisemmästä moniulotteisen taulukon (multiway table) analyysistä,
+jossa useita kahden muuttujan taulukoita ``pinotaan'' päällekkäin ja rinnakkain.
+Voimme ottaa yhden kysymyksen vastausten lisäksi analyysiin mukaan useamman
+kysymyksen vastaukset laajentamalla kahden päällekkäisen matriisin taulukkoa oikealle.
+**edit poistetava pätkä loppuu tähän**

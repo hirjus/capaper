@@ -33,13 +33,16 @@ $\boldsymbol{c}$ (= $(c_{1}, \dots, c_{J})$).
 Niitä vastaavat diagonaalimatriisit ovat $\boldsymbol{D_r}$ ja
 $\boldsymbol{D_c}$.
 
+Matriisin transpoosi merkitään yläindeksillä $T$ , ja  $\boldsymbol{1}$ on 
+sopivan dimension vektori jonka alkiot ovat ykkösiä.
+
 Korrespondenssianalyysin ratkaistaan singluaariarvohajoitelman avulla.
 
 Singulaariarvohajoitelma (singular value decomposition) tuottaa ratkaisun kun
 sitä sovelletaan standardoituun residuaalimatriisiin $\boldsymbol{S}$.
 
 \begin{equation}
-\boldsymbol{S} = \boldsymbol{D_r}^{-1/2}(\boldsymbol{P} - \boldsymbol{r}\boldsymbol{c}^T)\boldsymbol{D_c}^{-1/2}
+\boldsymbol{S} = \boldsymbol{D_r}^{-1/2}(\boldsymbol{P} - \boldsymbol{r}\boldsymbol{c}^T)\boldsymbol{D_c}^{-1/2} .
 (\#eq:svd1)
 \end{equation}
 
@@ -47,7 +50,7 @@ Residuaalimatriisi voidaan esittää myös ns. kontingenssi-suhdelukujen
 (contingency ratio) avulla kahdella tavalla.
 
 \begin{equation}
-\boldsymbol{D_r}^{-1} \boldsymbol{P} \boldsymbol{D_c}^{-1} = \left( \frac{p_{ij}} {r_{i} c{j}} \right)
+\boldsymbol{D_r}^{-1} \boldsymbol{P} \boldsymbol{D_c}^{-1} = \left( \frac{p_{ij}} {r_{i} c{j}} \right) ,
 (\#eq:contrat1)
 \end{equation}
 
@@ -67,11 +70,11 @@ Samat kaavat voi esittää myös alkiomuodossa:
 
 
 \begin{equation}
-s_{ij} = \frac{p_{ij}-r_{i}c_{j}} { \sqrt{r_{i}c_{j} } }
+s_{ij} = \frac{p_{ij}-r_{i}c_{j}} { \sqrt{r_{i}c_{j} } } ,
 (\#eq:contrat11)
 \end{equation}
 
-ja toinen
+
 \begin{equation}
 s_{ij} = \sqrt{r_{i}} \left( \frac{p_{ij}}{r_{i}c_{j}} \right) \sqrt{c_{j}} \;\;\; .
 (\#eq:contrat21)
@@ -80,12 +83,12 @@ s_{ij} = \sqrt{r_{i}} \left( \frac{p_{ij}}{r_{i}c_{j}} \right) \sqrt{c_{j}} \;\;
 Alkimuodosasa esitetyistä  kaavoista näkee rivi- ja sarakeratkaisujen sidoksen.
 Ratkaisujen duaalisuus on teoreettinen tulos, jonka voi perustella täsmällisesti
 algebrallisen geometrian avulla. Käytännössä rivi- ja sarekeongelman duaalisuus
- tarkoittaa sitä, että vain toinen ongelma on ratkaistava.
+tarkoittaa sitä, että vain toinen ongelma on ratkaistava.
 
 Singulaariarvohajoitelma (singular value decomposition, SVD) matriisille $\boldsymbol{S}$ on
 
 \begin{equation}
-\boldsymbol{S} = \boldsymbol{U} \boldsymbol{D_{\alpha}} \boldsymbol{V}^{T}
+\boldsymbol{S} = \boldsymbol{U} \boldsymbol{D_{\alpha}} \boldsymbol{V}^{T} ,
 (\#eq:svd2)
 \end{equation}
 
@@ -154,7 +157,10 @@ pilvestä.
 Korespondenssianalyysi ratkaisun akseleiden inertioita kutsutaan usein ominaisarvoiksi,
 mutta periaatteessa SVD-ratkaisulla saadaan singulaariarvot. Niiden neliöt ovat
 akseleiden inertioita. Ominaisarvojen ja sigulaariarvojen yhteys on läheinen ja
-riippuu diagonalisoitavan matriisin ominaisuuksista.
+riippuu diagonalisoitavan matriisin ominaisuuksista. Termiä "vektori" käytetään
+kartoista puhuttaessa, kun viitataan esimerkiksi origosta sarakepisteeseen
+piirrettyyn nuoleen. Myös janan synonyyminä käytetään yleisesti termiä vektori
+(kts. esim. [@RefWorks:doc:5b45eab2e4b0fb23161a7ff3]).
 
 
 Korrespondenssimatriisi $\boldsymbol{P}$ voidaan esittää matriisi- ja
@@ -170,8 +176,6 @@ p_ {ij}= r_{i}c_{j} \left(1 + \sum_{k=1}^{K} \sqrt{\lambda_{k}} \phi_{ik} \gamma
 (\#eq:reconstform2)
 \end{equation}
 
-Tässä viitataan s. 101 (13.4), 109 (14.9), ja 109-110 (14.10 ja 14.11).
-Palautuskavoilla on monta esitystapaa bilineaarisessa mallissa.
 
 Rivien ja sarakkeiden riippuvuutta kuvaavat transitioyhtälöt (transition equations).
 
@@ -229,79 +233,6 @@ olevat pisteet voivat olla alkuperäisessä avaruudessa kaukana toisistaan,
 jos niiden projektion laatu on huono.
 
 
-**edit: kaavaesimerkkejä - poistetaan lopullisesta versiosta**
-
-Korrespondenssianalyysin sovelluksissa tutkimusongelman ratkaisu on usein sopivan
-matriisin rakentaminen.
-
-
-
-\begin{equation}
-A = \begin{bmatrix}
-    a_{11} & a_{12} & \dots & a_{1k}\\
-    \vdots & \ddots & \\
-    \\
-    \vdots \\
-    a_{n1} & \dots  & \dots & a_{nk}
-    \end{bmatrix}
-\end{equation}
-
-Ehkäpä ABBA onnistuu paremmin tällä notaatiolla?
-
-\begin{equation}
-A = \begin{bmatrix}
-    A_{11} & B_{12}  \\
-    B_{21} & A_{22}
-    \end{bmatrix}
-\end{equation}
-
-
-\begin{equation}
-A = \begin{bmatrix}
-    A_{maa, Q1a} & A_{maa, Q1b}  \\
-    B_{gage, Q1a} & B_{gage, Q1b}
-    \end{bmatrix}
-\end{equation}
-
-
-
-**Pinotut tai yhdistetyt matriisit ("stacked and concatenated matrices")**
-
-Yksinkertainen korrespondenssianalyysi on kahden luokittelumuuttujan määrittämän
-taulukon analyysiä, mutta sitä voi soveltaa myös usean muuttujan analyysiin.
-Menetelmän matemaattinen perusta ja ratkaisualgoritmi (SVD) toimivat, tulkinta
-vain muuttuu.
-
-Yksinkertaisin laajennus on lisätä alkuperäisen taulukon alle toinen taulukko.
-Rivit ovat esimerkissä maittan summattuja vastauksia, ja niiden alle voidaan
-lisätä joku toinen luokittelumuuttuja. Havaintojen määrä yhditetyssä ("pinotussa")
-taulussa kaksinkertaistuu.
-
-Taulukoiden yhdistämisen idea on inertian dekomponointi. Yhdistetyn matriisin inertia
-voidaan eri tavoin esittää alimatriisien inertian summana. Tällöin jokaisen alimatriisin
-reunajakauman tulee olla sama, ja puuttuvat tiedot vääristävät tuloksia.
-
-Merkitään edellisten analyysien kuuden maan ja viiden vastausvaihtoehdon
-taulukkoa matriisilla $\boldsymbol{ A}_{I  J}$, missä $I$ on rivien ja $J$
-sarakkeiden lukumäärä. Taulukoidaan ikäluokan (1 - 6) ja sukupuolen ($f$ = nainen,
-$m$ = mies) vuorovaikutusmuuttuja ($f1,\dots , f6$ ja $m1,\dots , m6$) samojen
-vastausvaihtoehtojen kanssa. Jos tätä taulukkoa merkitään matriisilla
-$\boldsymbol{ B}_{I^{`}  J}$, voimme muodostaa yhdistetyn matriisin
-
-Rivien lukumäärä on molemmissa matriiseissa sama, koska luokkia sattuu olemaan
-kuusi sekä maa- että ikä- ja sukupuoli - luokittelumuuttujissa. Kun matriisit
-ovat dimensioiltaan ja myös muuttujien sisällön kannalta samankaltaiset, niitä
-kutsutaan yhteensopiviksi (``matched matrix''). Tällöin yksinkertaista
-korrespondenssianalyyisä voi soveltaa tutkimusongelmaan, jossa halutaan erotella
-jonkun ryhmän sisäinen vaihtelu ryhmien välisiestä vaihtelusta.
-(Greenacren ehdottama ABBA - analyysi).
-
-
-ABBA on erityistapaus yleisemmästä moniulotteisen taulukon (multiway table) analyysistä,
-jossa useita kahden muuttujan taulukoita ``pinotaan'' päällekkäin ja rinnakkain.
-Voimme ottaa yhden kysymyksen vastausten lisäksi analyysiin mukaan useamman
-kysymyksen vastaukset laajentamalla kahden päällekkäisen matriisin taulukkoa oikealle.
-**edit poistetava pätkä loppuu tähän**
 
 **Monimuuttujakorrespondenssianalyysi MCA**
 
@@ -314,7 +245,7 @@ Usean muuttujan analyysissä kohteena on joko indikaattorimatriisi $\boldsymbol{
 Burtin matriisi $\boldsymbol{B}$
 
 Indikaattorimatriisissa rivit ovat havaintoja ja sarakkeet luokittelumuuttujan arvoja.
-Havaintoa vastaa rivi nollia ja arvo 1 valitun vastausvaihtoehdon kohdalla. Tästä seuraa,
+Havaintoa vastaa rivi nollia ja 1 valitun vastausvaihtoehdon kohdalla. Tästä seuraa,
 että vain erilaiset vastaukset määrittävät rivien etäisyyksiä.
 
 Burtin matriisi on erikoistapaus yhdistetyistä matriiseista. Siihen on koottu kaikki tutkittavien

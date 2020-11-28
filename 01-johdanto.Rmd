@@ -40,11 +40,9 @@ Yksinkertainen kahden luokittelumuuttujan korrespondenssianalyysi antaa graafise
 analyysin ”...perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin
 muodot ovat saman algoritmin soveltamista toisen tyyppisiin datamatriiseihin,
 ja tulkintaa sovelletaan vastaavasti (with the consequent adaptation of the
-interpretation)”(@RefWorks:doc:5a857a44e4b0ed2d44664d84 s. 437).
-
-
-Tutkielma laajin osa on yksinkertaisen korrespondenssianalyysin tulosten ja
-peruskäsitteiden esittelyä.
+interpretation)”(@RefWorks:doc:5a857a44e4b0ed2d44664d84 s. 437).Tutkielma laajin
+osa on yksinkertaisen korrespondenssianalyysin tulosten ja peruskäsitteiden
+esittelyä.
 
 
 Toiseksi käytän laajaa ja laadukasta kansainvälisen haastattelututkimuksen aineistoa.
@@ -53,8 +51,8 @@ dataa on käytetty alan oppikirjoissa ja artikkeleissa esimerkkiaineistona.
 Laaja ja mutkikas aineisto antaa oikean kuvan data-analyysistä ja samalla ohjaa
 analyysin kulkua. Data yllättää aina. Menetelmän on taivuttava tarvittaessa
 uusiin suuntiin. Tutkielman data-analyysissä jouduin moneen kertaan miettimään
-mihin suuntaan kannattaisi edetä. Datan analyysi tuo esiin jotain sen
-ominaisuuksia, vaikka mitään sisällöllistä tutkimusongelmaa ei ole määritelty.
+mihin suuntaan kannattaisi edetä. Datan analyysi tuo esiin sen ominaisuuksia,
+vaikka mitään sisällöllistä tutkimusongelmaa ei ole määritelty.
 
 
 Kolmanneksi keskityn graafiseen analyysiin, kuvien tulkintaan.
@@ -100,7 +98,7 @@ matemaattista esitystapaa. @RefWorks:doc:5a857a43e4b0ed2d44664d75 esittelevät t
 lähestymistavan englanniksi. Lyhyt historiallinen katsaus
 ja menetelmä soveltamisen perusajatusten esittely
 valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita.
-Kirjassa esitellään myös hyvin perusteellisesti muutama empiirinen tutkimus.
+Kirjassa esitellään myös perusteellisesti muutama empiirinen tutkimus.
 
 
 Tarina on kiinnostava ja tärkeäkin osa tieteenhistoriaa, mutta eristys on päättynyt. 
@@ -108,9 +106,8 @@ Tarina on kiinnostava ja tärkeäkin osa tieteenhistoriaa, mutta eristys on pä�
 ## Tutkielman rakenne
 
 
-Datan esittelyn jälkeen CA:n peruskäsitteet esitellään yksikertaisen esimerkin
-avulla luvussa 3. 
-
+Datan esittelyn jälkeen esitellään korrespondenssianalyysin peruskäsitteet
+yksikertaisen esimerkinavulla luvussa 3. 
 
 Luvuissa 4 - 5 analyysiin lisätään täydentäviä pisteitä tulkinnan tueksi
 ja muodostetaan luokittelumuuttujien yhteisvaikutusmuuttujia (ikä ja sukupuoli).
@@ -122,7 +119,7 @@ tehdään osajoukon korrespondenssianalyysillä luvussa 6.
 
 Luvussa 7 esitellään lyhyesti kaksi tapaa tutkia useamman muuttujan yhteyksiä.
 Taulukoita yhdistämällä voidaan analysoida _kahden muuttujaryhmän välisiä yhteyksiä_.
-Monimuuttujakorrespondenssianalyysia sovelletaan isoon aineistoon ja tällaisten
+Monimuuttujakorrespondenssianalyysia (MCA) sovelletaan isoon aineistoon ja tällaisten
 aineistojen yleiseen ongelmaan, puuttuviin tietoihin. Menetelmällä tutkitaan
 _yhden muuttujajoukon sisäisiä yhteyksiä_.
 
@@ -156,9 +153,9 @@ ja muitakin saman tekijän artikkeleita on käytetty paljon. Kevään 2017
 kurssimateriaali[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca] ja laskuharjoitusten koodi
 on ollut hyödyllinen pikaopas peruskäsitteisiin ja r-toteutuksen ratkaisuihin.
 
-@RefWorks:doc:5ab76b43e4b003f4468d1f07 toimittama Carme-verkoston kolmas
-artikkelikokoelma  on ajantasainen perusteos.Perusteelliset artikkelit kattavat
-myös korrespondenssianalyysin tärkeimmät aiheet.
+Carme-verkoston kolmas artikkelikokoelma[@RefWorks:doc:5ab76b43e4b003f4468d1f07]
+on ajantasainen perusteos.Perusteelliset artikkelit kattavat myös
+korrespondenssianalyysin tärkeimmät aiheet.
 
 
 

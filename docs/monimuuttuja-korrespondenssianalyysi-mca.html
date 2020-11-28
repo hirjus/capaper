@@ -198,7 +198,8 @@ erilaisen muuttujaryhmän välisiä suhteita, toisessa yhden homogeenisen
 muuttujaryhmän sisäisiä suhteita.</p>
 <p>Esimerkkiaineistossa haastateltavien
 vastaukset substanssikysymyksiin ovat oma ryhmänsä ja taustamuuttujat toinen
-ryhmä. Kahden muuttujaryhmän välisiä suhteita voidaan tutkia rakentamalla yhdistetty matriisi useasta kahden muuttujan ristiintaulukoinnista.
+ryhmä. Kahden muuttujaryhmän välisiä suhteita voidaan tutkia rakentamalla
+yhdistetty matriisi useasta kahden muuttujan ristiintaulukoinnista.
 Tämä pinottujen ja yhdistettyjen (stacked and concatenated) taulukoiden
 menetelmä (CAiP s. 129) ei kerro muuttujaryhmien sisäisistä yhteyksistä,
 joita edellä analysoitiin vuorovaikutusmuuttujien avulla.</p>
@@ -263,52 +264,13 @@ kuvasta. Poikkeus on nuorin ikäluokka (a1, qlt = 501). Inertian osuudet (inr)
 ovat yhtä vaatimattomia kuin Belgian (28) ja Saksan (29),
 (m =20, f = 17, a2 = 40, a6 = 83), samoin kontribuutiot akseleiden inertiaan.
 1. dimension kontribuutio (ctr) on suuri (&gt;800) kaikilla paitsi nuorimmalla
-ikäryhmällä (a1) jolla 2. dimension selittää lähes puolet sen inertiasta (470).</p>
+ikäryhmällä (a1) jolla 2. dimension selittää lähes puolet sen inertiasta (470).
+En esitä numeerisa tuloksia tarkemmin.</p>
 <p>Karttaa vertaa karttaan <a href="yhteisvaikutusmuuttujat.html#fig:gaCA1map">5.1</a> jossa on esitetty iän ja sukupuolen
 yhteisvaikutusmuuttuja. Pinottu taulu on vaihtoehtoinen tapa, ja kartasta
 <a href="monimuuttuja-korrespondenssianalyysi-mca.html#fig:concat1map1">7.2</a> voi päätellä samat asiat: miehet ovat konservatiivisempia
 kuin naiset, iäkkäämmät ovat konservatiivisempia kuin nuoret. Nuorin ikäluokka
 poikkeaa muista.</p>
-<p><strong>tämä poistetaan lopullisesta versiosta</strong></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb7-1"></a><span class="kw">summary</span>(Concat1jh.CA1)</span></code></pre></div>
-<pre><code>## 
-## Principal inertias (eigenvalues):
-## 
-##  dim    value      %   cum%   scree plot               
-##  1      0.056877  77.2  77.2  *******************      
-##  2      0.010116  13.7  91.0  ***                      
-##  3      0.003923   5.3  96.3  *                        
-##  4      0.002711   3.7 100.0  *                        
-##         -------- -----                                 
-##  Total: 0.073628 100.0                                 
-## 
-## 
-## Rows:
-##      name   mass  qlt  inr    k=1 cor ctr    k=2 cor ctr  
-## 1  |   BE |   82  498   28 |   86 295  11 |  -71 203  41 |
-## 2  |   BG |   38  907  204 |  599 901 238 |   52   7  10 |
-## 3  |   DE |   70  498   29 |  -95 298  11 |  -78 200  43 |
-## 4  |   DK |   57  990  310 | -573 816 328 |  265 175 394 |
-## 5  |   FI |   45  987   75 | -225 419  40 | -262 568 309 |
-## 6  |   HU |   41  856  168 |  486 778 169 |  153  78  95 |
-## 7  |    m |  156  910   20 |   91 873  22 |  -19  37   5 |
-## 8  |    f |  178  910   17 |  -79 873  20 |   16  37   5 |
-## 9  |   a1 |   39  501    8 |  -22  31   0 |  -84 470  27 |
-## 10 |   a2 |   50  958   40 | -236 939  49 |  -34  19   6 |
-## 11 |   a3 |   56  958    7 |  -94 958   9 |   -1   0   0 |
-## 12 |   a4 |   63  841    6 |  -74 841   6 |   -1   0   0 |
-## 13 |   a5 |   62  868    5 |   71 801   6 |  -21  67   3 |
-## 14 |   a6 |   63  957   83 |  288 852  92 |  101 104  63 |
-## 
-## Columns:
-##     name   mass  qlt  inr    k=1 cor ctr    k=2 cor ctr  
-## 1 |    S |   99  786  147 |  268 661 126 |  117 125 134 |
-## 2 |    s |  238  843  172 |  205 787 175 |   55  56  70 |
-## 3 |      |  168  640   80 |  150 639  66 |   -6   1   1 |
-## 4 |    e |  261  970   97 |  -35  44   6 | -160 926 657 |
-## 5 |    E |  234 1000  504 | -390 962 628 |   77  38 138 |</code></pre>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb9-1"></a><span class="co"># 14 riviä, inertiakontribuution keskiarvo</span></span>
-<span id="cb9-2"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#cb9-2"></a><span class="co"># 1000/14 = 71 </span></span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:concat1map2"></span>
 <img src="JH_capaper_files/figure-html/concat1map2-1.png" alt="Q1b: Lapsi kärsii jos äiti käy työssä" width="90%" />
 <p class="caption">
@@ -329,14 +291,14 @@ suurin nuorimmassa ikäluokassa. Jos a1 - pisteen projisoi konservatiivisen
 S-vastauksen janalle se ei ikäluokista konservatiivisin. Ikäluokat a2 ja a6 ovat
 ääripäitä, muut ikäluokat sijoittuvat lähelle toisiaan mutta liberaalille puolelle.</p>
 <p>Esimerkkiaineistossa ei ole puuttuvia tietoja. Ne olisivatkin
-aika pulmallisia, varianssin dekomponointi ei onnistu jos reunajakaumat ovat
+pulmallisia, varianssin dekomponointi ei onnistu jos reunajakaumat ovat
 alitaulukoissa selvästi erilaisia.</p>
 <p>Matriisien yhdistely on monipuolinen laajennus. Eräs kiinnostava malli on
 ABBA, kahden rakenteeltaan samanlaisen matriisin yhdistäminen lohkoina. Nimi
 kertoo yhdistetyn matriisin rakenteen (block circulant matrix),
-päällekkäin pinotut A ja B liitetään toiseen pinottuun matriisiin B ja A.</p>
-<p>Matriiseilla on samat rivit ja sarakkeet, esimerkiksi miesten ja naisten
-vastausprofiilit yhteen kysymykseen aittain luokiteltuina.Kokonaisinertia
+päällekkäin pinotut A ja B liitetään toiseen pinottuun matriisiin B ja A.
+Matriiseilla on samat rivit ja sarakkeet, esimerkiksi miesten ja naisten
+vastausprofiilit yhteen kysymykseen maittain luokiteltuina.Kokonaisinertia
 saadaan dekomponoitua ryhmien sisäiseen ja väliseen hajontaan kahdelle kartalle.
 Toinen kuvaa maiden välisiä eroja ja toinen maiden sisäisiä sukupuolten välisiä
 eroja (CAiP ss. 177-)</p>
@@ -364,8 +326,7 @@ maa, ika, sp) ja seitsemän kysymystä, täydellinen havaintoja on 81 prosenttia
 14 prosentissa havaintoja (4554). Kaikkien puutteellisten havaintojen poistamien
 (”listwise delete”) on sitä huonompi vaihtoehto mitä enemmän muuttujia on.</p>
 <p>Kaikissa kysymyksissä on viisi vastausvaihtoehtoa ja kuudes kategoria puuttuvalle
-tiedolle. Analyysi kannattaa aloittaa tästä pulmasta, yksi hyvä ratkaisu on
-osajoukon MCA (subset MCA).</p>
+tiedolle.</p>
 <div class="figure" style="text-align: center"><span id="fig:MCA1map1"></span>
 <img src="JH_capaper_files/figure-html/MCA1map1-1.png" alt="MCA: Seitsemän kysymystä - 25 maata, kartta 1" width="90%" />
 <p class="caption">
@@ -375,10 +336,9 @@ Kuva 7.4: MCA: Seitsemän kysymystä - 25 maata, kartta 1
 <p>Inertian selitysosuudet ovat paljon pienempiä, ja ratkaisu
 on selvästi kaksiulotteinen. Puuttuvat vastaukset erottuvat omana ryhmänä, ja
 varsinaiset vastaukset ovat pakkautuneet y-akselin oikealle puolelle. Niiden erot
-näkyvät vain toisessa dimensiossa. Ensimmäinen dimensio kuvaa vastaamattomuutta
-(syystä tai toisesta) vs. kaikkia vastauksia. Kokonaisinertiaa on korjattu
-pienemmäksi (adjusted inetia, kts. liite 1),
-selitetyn inertian osuus on realistinen arvio.</p>
+näkyvät vain toisessa dimensiossa. Ensimmäinen dimensio kuvaa vastaamattomuutta,
+kontrastina kaikki vastauskategoriat. Kokonaisinertiaa on korjattu
+pienemmäksi (ns. adjusted inetia, kts. liite 1).</p>
 <p>Pystyakselin suuntaan kontrasti näyttäisi olevan konservatiiviset ylhäällä,
 modernit ja liberaalimmat alhaalla. Pisteitä on vaikea erottaa toisistaan.</p>
 <p>Karttaa voi parantaa lisäämällä siihen vastaajien pisteet.</p>
@@ -418,14 +378,9 @@ konsertvatiivista kulmaa. Molemmat “ääripäiden maltilliset” pisteet ovat 
 omassa ryhmässään lähimpänä maltillisten ja neutraalien vastausten ryhmää.</p>
 <p>Karttaan voi hahmotella diagonaalin suuntaisen
 akselin vahvojen mielipiteiden ryppäiden välille. Muut vastaukset ovat
-mukaisesti näiden välisellä U-muotoisella linjalla (Guttman-efekti).</p>
-<p>Osajoukon korrespondessianalyysin esitelleissä artikkeleissa
-(<span class="citation">(M. Greenacre ja Pardo <a href="lähteet.html#ref-RefWorks:doc:5a857a44e4b0ed2d44664d87" role="doc-biblioref">2006</a>)</span> ja samasta teemasta laajentaen
-kokoomateoksessa <span class="citation">(M. Greenacre ja Blasius <a href="lähteet.html#ref-RefWorks:doc:5ab76b43e4b003f4468d1f07" role="doc-biblioref">2006</a>)</span>, ss. 197-217.)
-Aineistona jälkimmäisessä tutkimuksessa on sama kysymyssarja kuin tässä 1994
-datasta. Kysymyksissä on jonkin verran eroja.</p>
+mukaisesti näiden välisellä kaarevalla linjalla (Guttman-efekti).</p>
 <p><span class="citation">Greenacre (<a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span> (s. 139-) analysoi lähes samoja kysymyksiä
-ISSP-datalla 2012. Tulokset ovat hyvin samantapaisia. Karttaa (fig:subsetMCA1map3)
+ISSP-datalla 2002. Tulokset ovat hyvin samantapaisia. Karttaa (fig:subsetMCA1map3)
 vastaavan kuvan jatkoanalyysi on vasemman yläkulman pisteiden tarkempi analyysi.
 Greenacre havaitsee, että nämä neutraalit ja maltilliset vastaukset eivät ole
 hyvin esitettyjä kaksiulotteisella kartalla, vaan ne karkaavat korkeampiin
