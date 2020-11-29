@@ -28,8 +28,7 @@ options(tinytex.verbose = TRUE)
 
 **Tämä luku poistetaan kun tutkielma on valmis**
 
-**Raportti yhtenä html-tiedostona** (https://hirjus.github.io/capaper/JH_capaper.html), ja kaikki toimii.
-Tässä liitteet, lähdeviitteet ja koodilistaus.
+**Raportti yhtenä html-tiedostona** (https://hirjus.github.io/capaper/JH_capaper.html)
 
 **PDF-tulostus oikuttelee ja kaatuu, mutta pdf-syntyy**. MikTeX vaihdettu TinyTeX-engineen
 ja pdflatex -> xelatex (15.11.20). PDF-tulostus kaatuu **luultavasti** koodilistaukseen.
