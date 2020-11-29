@@ -1,8 +1,8 @@
 # Yksinkertainen korrespondenssianalyysi
 
 Korrespondenssianalyysin peruskäsitteet ja muuttujien yhteyden graafisen analyysin
-periaatteet voi esittää kahden luokitelumuuttujan ristiintaulukoinnin eli
-kontigenssitaulun analyysin avulla. Kyse ei ole pelkästään helposta esimerkistä,
+periaatteet voi esittää kahden luokittelumuuttujan ristiintaulukoinnin eli
+kontingenssitaulun analyysin avulla. Kyse ei ole pelkästään helposta esimerkistä,
 vaan peruskäsitteet ja geometrisiin perusteisiin nojaava graafinen analyysi ovat
 oleellisilta osin samat myös monimutkaisemmissa menetelmän sovelluksissa
 [@RefWorks:doc:5a857a44e4b0ed2d44664d84].
@@ -21,7 +21,7 @@ väline on kuva, yleensä kaksiulotteinen kartta. Tulkinta ja erityisesti väär
 johtopäätösten välttäminen vaati kartan tulkinnan varmistamista ratkaisun
 numeerisista tuloksista. Kun analysoitava taulukko, sen rivien ja sarakkeiden
 riippuvuuksia kuvaava kartta ja kartan perustana olevat numeeriset tulokset
-esitetään yhdessä on helpompi ymmärtää tulkinnan perussäännöt.
+esitetään yhdessä, on helpompi ymmärtää tulkinnan perussäännöt.
 
 @RefWorks:doc:5a857a43e4b0ed2d44664d75 esittävät tulkinnan perussäännöt hieman
 eri korostuksella kuin Greenacre (CAiP). Yhteistä on graafisen analyysin tärkeys,
@@ -29,7 +29,7 @@ mutta ranskalaiset tutkijat korostavat numeeristen tulosten ensisijaisuuta.
 Analyysi pitää aloittaa tutkimalla numeerisen ratkaisun ominaisuuksia.
 Greenacren mielestä numeerisia tuloksia tarvitaan johtopäätösten varmistamiseen,
 ensin katsotaan karttaa. Eroa ei kannata liioitella, molempia tarvitaan.
-Eksploratiivisessa data-analyysissä näkökulmaa muutetaan kun datan ominaisuudet
+Eksploratiivisessa data-analyysissä näkökulmaa muutetaan, kun datan ominaisuudet
 tai omituisuudet havaitaan. Kun kartat ovat aina approksimaatiota, numeerisia
 tuloksia tarvitaan.
 
@@ -43,10 +43,10 @@ kokonaisuudeksi, ja niitä analysoidaan yhdessä luvussa 7. Yhden taulukon analy
 esittelee menetelmän, oikeassa tutkimuksessa pitää käyttää vähintään koko
 kysymyssarjaa.
 
-Havainnot joissa tieto vastauksesta puuttuu on poistettu aineistosta.
+Aineistosta on poistettu havainnot, joissa tieto vastauksesta puuttuu.
 Taustamuuttujia ovat vastaajan sukupuoli ja ikä. Taulukoissa vastausvaihtoehtojen
-tunnuksina käytetään samoja symboleja kuin kuvissa (E = täysin eri mielä,
-e = eri mieltä ? = ei samaa eikä eri mieltä, s = samaa mieltä, S = täysin samaa
+tunnuksina käytetään samoja symboleja kuin kuvissa (E = täysin eri mieltä,
+e = eri mieltä, ? = ei samaa eikä eri mieltä, s = samaa mieltä, S = täysin samaa
 mieltä).
 
 
@@ -447,7 +447,7 @@ Kahden luokittelumuuttujan riippuvuutta voidaan testata  $\chi^{2}$ - testillä.
 Riippumattomuushypoteesin mukainen odotettu solufrekvenssi on taulukon
 \@ref(tab:simpeCA-frekTa1) reunajakaumien alkioiden tulo.
 
-Testisuure saadaan laskemalla yhten jokaisen solun havaittujen ja odotetettujen
+Testisuure saadaan laskemalla yhteen jokaisen solun havaittujen ja odotettujen
 frekvenssien erotukset muodossa
 
 \begin{equation}
@@ -494,9 +494,9 @@ on
  \end{equation}
 
 
-Rivien $\chi^{2}$ - etäisyys  on painotettu euklidinen etäisyys, jossa painoina
+Rivien $\chi^{2}$ - etäisyys on painotettu euklidinen etäisyys, jossa painoina
 ovat riviprofiilin odotetut arvot. Ne ovat riippumattomuushypoteesin mukaisesti
-riviprofiilien keskiarvoprofiilin vastaavat alkioit $r_{i}$ .
+riviprofiilien keskiarvoprofiilin vastaavat alkiot $r_{i}$ .
 
 \begin{equation}
  \sqrt{\frac{(p_{11} - p_{31})^2} { r_{1}} + \dots + \frac{(p_{15} - p_{35})^2} {r_{5}}}
@@ -504,7 +504,7 @@ riviprofiilien keskiarvoprofiilin vastaavat alkioit $r_{i}$ .
 \end{equation}
 
 
-Inertia voidaa esittää rivien ja keskiarvorivin (sentroidin) $\chi^{2}$ -etäisyyksien
+Inertia voidaan esittää rivien ja keskiarvorivin (sentroidin) $\chi^{2}$ -etäisyyksien
 neliöiden painotettuna summana, jossa painoina ovat rivien massat $m_{i}$ ja
 summa lasketaan yli rivien ${i}$.
 
@@ -514,7 +514,7 @@ summa lasketaan yli rivien ${i}$.
 \end{equation}
 
 Korrespondenssianalyysin kolme peruskäsitteen "tripletti" -- _profiili_,
-_massa_ ja _$\chi^{2}$ - etäisyys_ -- on esitelty. "Triplettiä" täydentää "kvartetti",
+_massa_ ja _$\chi^{2}$ - etäisyys_ -- on esitelty. "Triplettiä" täydentää "kvartetti", 
 johon _inertia_ kuuluu.
 
 Rivi- ja sarakeprofiilien taulukoista huomaa, että keskiarvoprofiilien
@@ -568,8 +568,8 @@ plot(simpleCA1, map = "symmetric", mass = c(TRUE,TRUE),
 ```
 
 
-Akselien prosenttimerkinnät kertovat,kuinka paljon aineiston inertiasta eli
-hajonnasta on kaksiulotteisesssa projektiossa saatu kuvattua akseleille.
+Akselien prosenttimerkinnät kertovat, kuinka paljon aineiston inertiasta eli
+hajonnasta on kaksiulotteisessa projektiossa saatu kuvattua akseleille.
 
 Akselit ovat sisäkkäisiä (nested) Ensimmäinen akseli saa aina suurimman osan
 inertiasta, tässä 76 prosenttia. Kun toinen akseli kuvaa 15 prosenttia koko inertiasta,
@@ -578,12 +578,12 @@ on kartalla esitetty 91 prosenttia aineiston hajonnasta. Loput 9 prosenttia jä�
 perinteisen regressiomallin ”selitetty” vaihtelu ja ”jäännösvaihtelu”.
 
 Akselien tulkinta on korrespondenssianalyysin perustehtävä._Kontrastit_ määrittävät
-akselien tulkinnan . Benzacrin ohjeen mukaan ([@RefWorks:doc:5a857a43e4b0ed2d44664d75], s. 49)
+akselien tulkinnan. Benzacrin ohjeen mukaan ([@RefWorks:doc:5a857a43e4b0ed2d44664d75], s. 49)
 katsotaan mitä on oikealla ja mitä vasemmalla. Akselien tulkinta perustuu siihen,
-mitä mitä yhteistä on kaikilla elementeillä jotka ovat origon vasemmalla puolella
+mitä yhteistä on kaikilla elementeillä, jotka ovat origon vasemmalla puolella
 ja vastaavasti origon oikealla puolella. Samalla tavalla tulkitaan toinen akseli,
 mitä on ylhäällä ja alhaalla. Tulkinta tehdään akseleiden suuntaan. Kuvan tulkintaa
-ei aloiteta pisteidein etäisyyksiä vertailemalla.
+ei aloiteta pisteiden etäisyyksiä vertailemalla.
 
 Kun taulukon rivit ovat havaintoja ja sarakkeet muuttujia, akselien tulkinta
 tehdään muuttujien avulla. Vasemmalla on E ja oikealla puolella samanmieliset
@@ -591,12 +591,12 @@ vastaukset s ja S. Neutraali ”?” on s-vastausten vasemmalla puolella mutta
 kuitenkin oikealla. Kuvan perusteella ei voi sanoa kuinka paljon,
 kaikki erot ovat suhteellisia.
 
-Sarakkeet  ovat oikeassa järjestyksessä, mutta niiden koordinaatit
-x-akselilla eivät olen tasavälisiä. Jos muuttuja jostain syystä halutaaan
+Sarakkeet ovat oikeassa järjestyksessä, mutta niiden koordinaatit
+x-akselilla eivät olen tasavälisiä. Jos muuttuja jostain syystä halutaan
 esittää välimatka- tai suhdeasteikon muuttujana koordinaatti ensimmäisellä
 dimensiolla on yksi vaihtoehto.
 
-Ensimmäisen dimenosion tulkinta on aika selkeä. Toinen akseli on kontrasti
+Ensimmäisen dimension tulkinta on aika selkeä. Toinen akseli on kontrasti
 lievemmän tai maltillisemman erimielisyyden (e) ja muiden vastausten kanssa.
 Se on 1. dimension suuntaan kaikkein lähimpänä origoa. Hieman varovaisemmin
 akselin voi tulkita maltillisen ja jyrkemmän tai varmemman mielipiteen kontrastiksi.
@@ -604,11 +604,11 @@ akselin voi tulkita maltillisen ja jyrkemmän tai varmemman mielipiteen kontrast
 En jatkossa esitä kuvailevia akseleiden nimiä kuvissa, akseleiden tulkinta on
 analyysin ensimmäinen tehtävä.
 
-Maiden vertailu tehdään näiden akselien suuntaan. Sekä sarekepisteiden että
+Maiden vertailu tehdään näiden akselien suuntaan. Sekä sarakepisteiden että
 rivipisteiden keskinäiset välimatkat approksimoivat optimaalisesti niiden
 khii2-etäisyyksiä. Sarake- ja rivipisteiden välisillä etäisyyksillä ei ole
 mitään suoraa tulkintaa. Pisteiden etäisyydet samassa pistepilvessä ovat
-suhteellisia, Saksa on konsevatiivisempi kuin Suomi mutta emme tiedä kuinka paljon.
+suhteellisia, Saksa on konservatiivisempi kuin Suomi mutta emme tiedä kuinka paljon.
 Maiden järjestys oikealta vasemmalle on selkeä, Tanska on vasemmalla
 liberaalina ”ääripäänä”, oikealla taas Unkari ja Bulgaria. Pystyakselin suuntaan
 nähdään, että kaikkein ”maltillisin” mutta kuitenkin liberaali on Suomi,
@@ -644,16 +644,16 @@ sitten kun se tehty.
 
 Korrespondenssianalyysin sovelletaan yleisimmin frekvenssitaulujen analyysiin,
 lukumäärädataan (count data). Periaatteessa mikä tahansa data sopii, kunhan se
-voidaan järkevästi esittää suhteelisina lukumäärinä (relative amounts), siis
+voidaan järkevästi esittää suhteellisina lukumäärinä (relative amounts), siis
 suhdeasteikon (ratio scale) muuttujana. Tässä oleellista on tulkittavuus
 tutkimusongelman näkökulmasta. Välttämätön ehto on sama mittayksikkö: lukumäärä,
 rahayksikkö, pituusmitta kelpaavat. (CAiP s. 15). Taulukon lukujen on oltava
 ei-negatiivisia (positiivisia, nolla sallittu).
 
 Rajat ovat joustavia, kun mukaan otetaan erilaiset uudelleenskaalaukset
-ja transformaatiot. Tämä oli menetelmän perusidea jo Benzecrillä(CAiP ch 26, s. 201).
+ja transformaatiot. Tämä oli menetelmän perusidea jo Benzecrillä (CAiP, s. 201).
 
-Menetelmää sovelletaan profiileihin jotka painotetaan massoilla, ja
+Menetelmää sovelletaan profiileihin, jotka painotetaan massoilla, ja
 profiilien etäisyyksiä mitataan khii2-etäisyysmitalla. Jos datan voi esittää
 tässä muodossa, menetelmää voi käyttää.
 
@@ -661,14 +661,14 @@ tässä muodossa, menetelmää voi käyttää.
 ## Asymmetrinen kartta ja ideaalipisteet
 
 Symmetrisessä kartassa \@ref(fig:simpleCA1map1) molemmat pisteparvet on esitetty
-pääkoordinaateissa (prinipal coordinates) ikäänkuin päällekkäin, samassa kuvassa.
+pääkoordinaateissa (principal coordinates) ikään kuin päällekkäin, samassa kuvassa.
 
 Toinen vaihtoehto on asymmetrinen kartta, jossa toinen pistejoukko esitetään
 standardikoordinaateissa ja toinen pääkoordinaateissa. Asymmetrisessä
 kartassa \@ref(fig:G1-3asymm2) sarakkeet on esitetty standardikoordinaateissa
 ja rivit pääkoordinaateissa.
 
-Sarakepisteitä kutsutaan ideaalipisteiksi, ne edustavat kuviteellisia maita joissa
+Sarakepisteitä kutsutaan ideaalipisteiksi, ne edustavat kuvitteellisia maita joissa
 kaikki vastaukset ovat samoja. Matemaattisesti kartalle projisoidut ideaalipisteet
 ovat (tässä esimerkissä) neliulotteisen avaruuden verteksin (monikulmion)
 kärkipisteitä. Rivipisteet ovat tämän verteksin sisällä.
@@ -724,7 +724,7 @@ Rivipisteiden ja sarakkeiden _kontribuutiot_ voidaan myös esittämien värisäv
 
 Kun kartalla pistejoukon inertia kuvataan akseleille, on jokaisella pisteellä oma
 osuutensa akseleiden kuvaamasta inertiasta. _Absoluuttinen kontribuutio_ kertoo rivin
-tai  sarakkeen osuuden akselin inertiasta. Vaikutuksessa on mukana pisteen massa.
+tai sarakkeen osuuden akselin inertiasta. Vaikutuksessa on mukana pisteen massa.
 
 _Suhteellinen kontribuutio_ kertoo akselin osuuden pisteen inertiasta.
 Tämä tunnusluku kuvaa pisteen projektion laatua, kuinka hyvin se on kartalla esitetty.
@@ -740,7 +740,7 @@ Kartta sopii niin pienen kuin suuren inertian tilanteisiin
 Absoluuttisten kontribuutioiden jakautumista akseleille voi varovaisesti päätellä
 sarakevektorin ja akseleiden välisistä kulmista. Mitä lähempänä sarakevektori on
 akselia, sitä suurempi on sen osuus akselin inertiasta. Samanlaisia päätelmiä
-voi tehdä myös rivipisteistä hahmottamalla  niistä janan origoon.
+voi tehdä myös rivipisteistä hahmottamalla niistä janan origoon.
 
 Käsitteisiin palataan tarkemmin seuraavissa luvuissa ja teorialiitteessä, ja liian
 tarkkaan karttaa ei kannata tutkia. Numeeriset tulokset ovat yksityiskohdissa
@@ -759,8 +759,8 @@ plot(simpleCA1, map = "rowgreen",
 ```
 
 Sarakkeista ratkaisuun vaikuttaa selvästi eniten E, ja juuri ensimmäiseen
-dimensioon joka selittää suurimman osan kokonaisinertiasta. Toista dimensiota määrittää
-vahviten e, mutta myös kaikki muut sarakkeet x-akselin yläpuolella. Samaa mieltä
+dimensioon, joka selittää suurimman osan kokonaisinertiasta. Toista dimensiota määrittää
+vahvimmin e, mutta myös kaikki muut sarakkeet x-akselin yläpuolella. Samaa mieltä
 olevien (S ja s) vaikutus näyttäisi jakautuvan selvimmin molemmille dimensioille.
 
 Vaikka massojen suhteellisia eroja ei kovin helposti pistekoosta erota, se näkyy
@@ -791,7 +791,7 @@ pisteet. Kontribuutioiden graafinen tarkastelu antaa myös yleiskuvan, jonka voi
 varmistaa numeerisista tuloksista.
 
 
-Kaikki edellä esitetyt pääättelyt perustuvat tietysti kaksiulotteideen projektioon.
+Kaikki edellä esitetyt päättelyt perustuvat tietysti kaksiulotteiseen projektioon.
 Jos pisteet on esitetty hyvin eli niiden inertiasta (poikkeamasta keskiarvosta)
 suuri osa on kuvattu kartalle, rivipiste on sitä lähempänä ideaalipistettä mitä
 suurempi ideaalipisteen osuus on sen profiilissa.
@@ -856,9 +856,8 @@ kartasta \@ref(fig:G1-3asymmContrib1).
 
 En ole vakioinut vertailtavien ryhmien (tässä maat) suhteellisia osuuksia. Syy on
 yksinkertainen: esittelen menetelmää sen perusmuodossa ilman kovin täsmällisiä
-tutkimusongelmia. Oikeiden tutkimuskymysten vastausia pitää tietysti etsiä järkevillä
-massojen skaalauksella. Korrespondenssianalyysi on inertian dekomponointia,
-jakamista osiin.
+tutkimusongelmia. Oikeiden tutkimuskysymysten vastauksia pitää tietysti etsiä järkevillä massojen skaalauksella. Korrespondenssianalyysi on inertian
+dekomponointia, jakamista osiin.
 
 
 ## Karttojen erot
@@ -882,16 +881,16 @@ kiistana, käytännön sovelluksissa sillä ei ole merkitystä.
 @RefWorks:doc:5c754c6de4b0947789165cde kommentoi skaalausta perusteellisesti,
 kiista on ollut aika sitkeä mutta lienee laantunut.
 
-Symmetinen kartta hyvä vaihtoehto, sillä asymmetrisessä skaalaus vie
+Symmetrinen kartta hyvä vaihtoehto, sillä asymmetrisessä kartassa skaalaus vie
 ideaalipisteet usein kauas ja pääkoordinaateissa esitetyt pisteet pakkautuvat kuvan
-keskelle. Toisaalta jos dataa tulkitaan asymmetrisesti kontribuutiokartta on
+keskelle. Jos dataa tulkitaan asymmetrisesti kontribuutiokartta on
 hyvä vaihtoehto. Silloin rivipisteiden khii2-etäisyydet esitetään optimaalisesti
 ja sarakkeiden suuntavektoreille projisoiduilla pistellä on kaksoiskuva-tulkinta.
 
 
 Greenacren mukaan kartoilla voi tavoitella kolmea eri asiaa. Kuvassa voi esittää
 rivipisteiden etäisyydet, sarakepisteiden etäisyydet tai rivi- ja sarakepisteiden
-etäisyydet. Jäkimmäinen on kaksoiskuvien (biplot) ns. skalaaritulo-ominaisuus.
+etäisyydet. Jälkimmäinen on kaksoiskuvien (biplot) ns. skalaaritulo-ominaisuus.
 Rivi- ja sarakepisteen skalaaritulo "palauttaa" alkuperäisen datan, tässä
 tapauksessa taulukon solun.
 
@@ -899,7 +898,7 @@ Näistä vain kaksi voidaan optimaalisesti esittää yhtä aikaa.
 
 _Symmetrisessä kartassa_ khii2-etäisyydet rivipisteiden välillä ja sarakepisteiden
 välillä esitetään optimaalisesti. Rivi- ja sarakepisteiden välisiä etäisyyksiä ei
-esitetä optimaalisesti, mutta ne voidaan tulkita kohtalaisen hyvin jos pääakselien
+esitetä optimaalisesti, mutta ne voidaan tulkita kohtalaisen hyvin, jos pääakselien
 inertioiden neliöjuuret eivät ole liian erisuuruisia.
 
 _Asymmetrisessä kartassa_ pääkoordinaateissa esitetyn pistejoukon etäisyydet
@@ -922,11 +921,11 @@ Koordinaattien yhteys voidaan esittää kahtena yksinkertaistettuna kaavana
 ( @RefWorks:doc:5b8175eee4b08da192f99a35, s.174 ):
 
 \begin{equation}
-  pääkoordinaatit = standardikoordinatit \times \sqrt{pääakselien \: inertiat}
+  pääkoordinaatit = standardikoordinaatit \times \sqrt{pääakselien \: inertiat}
     (\#eq:pcfromstd1)
 \end{equation}
 
 \begin{equation}
-  kontribuutiokoordinaatit = \sqrt{massat} \times  standardikoordinatit
+  kontribuutiokoordinaatit = \sqrt{massat} \times  standardikoordinaatit
     (\#eq:kontribfromstd1)
 \end{equation}

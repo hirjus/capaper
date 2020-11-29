@@ -935,8 +935,8 @@ validate_that(length(levels(ISSP2012jh1d.dat$urbrum)) == 6)
 
 
 Käytän tutkielmassa International Social Survey - projektin (ISSP) vuoden 2012
-kyselytutkimusta “Perhe , työ ja sukupuoliroolit”(International Social Survey
-Programme: Family and Changing Gender Roles IV). Tutkimuksen aikasempien
+kyselytutkimusta “Perhe, työ ja sukupuoliroolit” (International Social Survey
+Programme: Family and Changing Gender Roles IV). Tutkimuksen aikaisempien
 toteutusten dataa on käytetty tutkielman tärkeimmissä lähteissä esimerkkidatana.
 
 
@@ -950,7 +950,7 @@ kansainvälisessä vertailevassa tutkimuksessa. Järjestön julkaisuluettelossa 
 vuodessa [@RefWorks:doc:5c0543a5e4b077eba1dc3cd8].
 
 
-Data ja dokumetaatio on vapaasti saatavilla saksalaisen GESIS-tutkimuslaitoksen
+Data ja dokumentaatio on vapaasti saatavilla saksalaisen GESIS-tutkimuslaitoksen
 ylläpitämästä data-arkistosta
 (https://www.gesis.org/en/issp/home). Suomessa tutkimuksen data ja dokumentaatio
 löytyvät Tampereen yliopiston Aila-tietoarkistosta
@@ -958,7 +958,7 @@ löytyvät Tampereen yliopiston Aila-tietoarkistosta
 
 GESIS-instituutin ”datakatalogista”(https://zacat.gesis.org) 
 löytää kätevästi kaiken dokumentaation ja datan[@RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a],
-mutta edes saksalaiset eivät voi estää www-sivustojen innokaita uudistajia.
+mutta edes saksalaiset eivät voi estää www-sivustojen innokkaita uudistajia.
 Monet linkit lähdeluettelossa vievät GESIS-arkistosivulle,
 josta löytyy pitkä lista pdf-dokumentteja.
 
@@ -989,11 +989,8 @@ knitr::kable(ISSPdocsT.tbl, booktab = TRUE,
 ```
 
 
-
-
 Tätä kirjoittaessa (10.11.2020) ISSP 2012 - aineisto löytyy osoitteesta
 [https://zacat.gesis.org/webview/index.jsp?object=http://zacat.gesis.org/obj/fStudy/ZA5900].
-
 
 
 Koodikirja ("Variable report") [@RefWorks:doc:5bb9041be4b06677e5e61f83] selostaa
@@ -1002,7 +999,7 @@ tarkasti tietosisällön. Tutkimuksen seurantaraportti ("Study Monitoring Report
 toteutettiin. Kyselylomake [@RefWorks:doc:5bb9044fe4b0dfeb95352229], 
 suomenkielinen versio [@RefWorks:doc:5bb90a0ae4b018435936a488] ja  muut
 kieliversiot voivat olla hyödyllisiä. Tiedonkeruun tarkoitus ja kyselyn
-suunnitelun ideat kerrotaan omassa raportissa [@RefWorks:doc:5f9439fde4b04741789a2187].
+suunnittelun ideat kerrotaan omassa raportissa [@RefWorks:doc:5f9439fde4b04741789a2187].
 
 ## Aineiston rajaaminen
 
@@ -1087,7 +1084,7 @@ knitr::include_graphics('img/substvar_fi_Q1Q2.png')
 Valituista taustamuuttujista monet on kerätty haastattelulla. 
 Tiedonkeruu, otantamenetelmät ja yksikkövastauskadon (unit non-response, otokseen
 valitulta ei saada mitään tietoja) huomioiminen on tehty joka
-maassa omalla tavallaan. Aineistoissa on mukana painot joilla tulokset voidaan
+maassa omalla tavallaan. Aineistoissa on mukana painot, joilla tulokset voidaan
 korottaa perusjoukon tasolle, mutta kansainvälisiä vertailupainoja ei syystä tai
 toisesta ole. Taustamuuttujat kuten koulutustaso on harmonisoitu
 vertailukelpoisiksi.
@@ -1123,10 +1120,10 @@ Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa kut
 Helsingissä 2017[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca] ja ainakin kahdessa
 oppikirjassaan([@RefWorks:doc:5a857a43e4b0ed2d44664d7c],
 [@RefWorks:doc:5a857a43e4b0ed2d44664d78]).
-ISSP - aineisto vuodelta 1989 on käytetty myös neljän singuaariarvohajoitelmaan
+ISSP - aineisto vuodelta 1989 on käytetty myös neljän singulaariarvohajoitelmaan
 perustuvan menetelmän vertailuun[@RefWorks:doc:5b6f159ce4b0bc0f31734b76]. Blasius
 ja Thiessen ([@RefWorks:doc:5b15542ee4b0e2616bc42dca]) arvioivat aineiston laatua
-ja ja maiden vertailtavuutta vuoden 1994 aineistolla.
+ja maiden vertailtavuutta vuoden 1994 aineistolla.
 
 Sukupuoliroolien (gender roles) ja niihin liittyvien asenteiden vertailevaa
 kansainvälistä (cross-cultural) tutkimusta on tehty paljon. Tutkimusongelman

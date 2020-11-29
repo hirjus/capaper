@@ -189,7 +189,7 @@ img {
 <div id="header">
 <h1 class="title">Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä</h1>
 <h4 class="author"><em>Jussi Hirvonen</em></h4>
-<h4 class="date"><em>Versio 1.4, tulostettu 2020-11-29</em></h4>
+<h4 class="date"><em>Versio 1.5, tulostettu 2020-11-29</em></h4>
 </div>
 <div id="alkutoimia" class="section level1 unnumbered">
 <h1>Alkutoimia</h1>
@@ -241,7 +241,7 @@ ymmärryksen lisääminen.</p>
 analyysin ”…perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin
 muodot ovat saman algoritmin soveltamista toisen tyyppisiin datamatriiseihin,
 ja tulkintaa sovelletaan vastaavasti (with the consequent adaptation of the
-interpretation)”(<span class="citation">Greenacre ja Hastie (<a href="#ref-RefWorks:doc:5a857a44e4b0ed2d44664d84" role="doc-biblioref">1987</a>)</span> s. 437).Tutkielma laajin
+interpretation)”(<span class="citation">Greenacre ja Hastie (<a href="#ref-RefWorks:doc:5a857a44e4b0ed2d44664d84" role="doc-biblioref">1987</a>)</span> s. 437). Tutkielman laajin
 osa on yksinkertaisen korrespondenssianalyysin tulosten ja peruskäsitteiden
 esittelyä.</p>
 <p>Toiseksi käytän laajaa ja laadukasta kansainvälisen haastattelututkimuksen aineistoa.
@@ -271,7 +271,7 @@ tutkijaverkosto CARME (Correspondence analysis and related methods network)
 järjesti ensimmäisen konferenssin 1991 (<a href="http://www.carme-n.org" class="uri">http://www.carme-n.org</a>).</p>
 <p>Korrespondenssianalyysi esitellään oppikirjoissa muiden menetelmien rinnalla.
 Hyviä esimerkkejä ovat ekologisen datan monimuuttujamenetelmien <span class="citation">(M. Greenacre ja Primicerio <a href="#ref-RefWorks:doc:5b8175eee4b08da192f99a35" role="doc-biblioref">2013</a>)</span>,
-kaksoisikuvien <span class="citation">(Greenacre <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span> ja
+kaksoiskuvien <span class="citation">(Greenacre <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span> ja
 “koostumusdatan” (compositional data) <span class="citation">(Greenacre <a href="#ref-RefWorks:doc:5f934955e4b08d20366a5bd1" role="doc-biblioref">2018</a>)</span>
 kirjat. Suomessa korrespondenssianalyysi esitellään ainakin kahdessa oppikirjassa
 (<span class="citation">Mustonen (<a href="#ref-RefWorks:doc:5a857a44e4b0ed2d44664d95" role="doc-biblioref">1995</a>)</span> , <span class="citation">Vehkalahti (<a href="#ref-RefWorks:doc:5a857a44e4b0ed2d44664da4" role="doc-biblioref">2008</a>)</span>).</p>
@@ -325,7 +325,7 @@ ja muitakin saman tekijän artikkeleita on käytetty paljon. Kevään 2017
 kurssimateriaali<span class="citation">(M. Greenacre <a href="#ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca" role="doc-biblioref">2017</a>)</span> ja laskuharjoitusten koodi
 on ollut hyödyllinen pikaopas peruskäsitteisiin ja r-toteutuksen ratkaisuihin.</p>
 <p>Carme-verkoston kolmas artikkelikokoelma<span class="citation">(M. Greenacre ja Blasius <a href="#ref-RefWorks:doc:5ab76b43e4b003f4468d1f07" role="doc-biblioref">2006</a>)</span>
-on ajantasainen perusteos.Perusteelliset artikkelit kattavat myös
+on ajantasainen perusteos. Perusteelliset artikkelit kattavat myös
 korrespondenssianalyysin tärkeimmät aiheet.</p>
 <p>Data on ensin luettava ohjelman ymmärtämään muotoon, ja erilaiset muunnokset kannattaa
 tehdä heti kun data luetaan. <span class="citation">McNamara ja Horton (<a href="#ref-RefWorks:doc:5c3759c2e4b0085b307c82b5" role="doc-biblioref">2018</a>)</span> kertovat,
@@ -336,8 +336,8 @@ miten luokittelumuuttujia pitää R-koodissa käsitellä.</p>
 <div id="data" class="section level1">
 <h1><span class="header-section-number">Luku 2</span> Data</h1>
 <p>Käytän tutkielmassa International Social Survey - projektin (ISSP) vuoden 2012
-kyselytutkimusta “Perhe , työ ja sukupuoliroolit”(International Social Survey
-Programme: Family and Changing Gender Roles IV). Tutkimuksen aikasempien
+kyselytutkimusta “Perhe, työ ja sukupuoliroolit” (International Social Survey
+Programme: Family and Changing Gender Roles IV). Tutkimuksen aikaisempien
 toteutusten dataa on käytetty tutkielman tärkeimmissä lähteissä esimerkkidatana.</p>
 <p>Länsi-Saksan ja USA:n tutkimuslaitosten yhteistyö vakiintui ISSP-organisaatioksi
 1984 (<a href="http://www.issp.org" class="uri">http://www.issp.org</a>). Vuonna 2015 neljän perustajajäsenen joukko oli kasvanut 49 maahan.
@@ -347,14 +347,14 @@ USA:n edustajana mukana ollut Tom W. Smith näkee aineistojen arvon juuri
 kansainvälisessä vertailevassa tutkimuksessa. Järjestön julkaisuluettelossa oli
 2012 yli 5200 julkaisua. Viime vuosina luetteloon on lisätty noin 400 julkaisua
 vuodessa <span class="citation">(Smith <a href="#ref-RefWorks:doc:5c0543a5e4b077eba1dc3cd8" role="doc-biblioref">2015</a>)</span>.</p>
-<p>Data ja dokumetaatio on vapaasti saatavilla saksalaisen GESIS-tutkimuslaitoksen
+<p>Data ja dokumentaatio on vapaasti saatavilla saksalaisen GESIS-tutkimuslaitoksen
 ylläpitämästä data-arkistosta
 (<a href="https://www.gesis.org/en/issp/home" class="uri">https://www.gesis.org/en/issp/home</a>). Suomessa tutkimuksen data ja dokumentaatio
 löytyvät Tampereen yliopiston Aila-tietoarkistosta
 (<a href="https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&amp;study_language=fi" class="uri">https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&amp;study_language=fi</a>).</p>
 <p>GESIS-instituutin ”datakatalogista”(<a href="https://zacat.gesis.org" class="uri">https://zacat.gesis.org</a>)
 löytää kätevästi kaiken dokumentaation ja datan<span class="citation">(ISSP <a href="#ref-RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a" role="doc-biblioref">2016</a>)</span>,
-mutta edes saksalaiset eivät voi estää www-sivustojen innokaita uudistajia.
+mutta edes saksalaiset eivät voi estää www-sivustojen innokkaita uudistajia.
 Monet linkit lähdeluettelossa vievät GESIS-arkistosivulle,
 josta löytyy pitkä lista pdf-dokumentteja.</p>
 <p>Taulukkoon <a href="#tab:ISSPdocsTable">2.1</a> on koottu neljän tärkeimmän dokumentin
@@ -409,7 +409,7 @@ tarkasti tietosisällön. Tutkimuksen seurantaraportti (“Study Monitoring Repo
 toteutettiin. Kyselylomake <span class="citation">(”ISSP 2012 - Family and Changing Gender Roles IV Basic Questionnaire” <a href="#ref-RefWorks:doc:5bb9044fe4b0dfeb95352229" role="doc-biblioref">2011</a>)</span>,
 suomenkielinen versio <span class="citation">(Tilastokeskus <a href="#ref-RefWorks:doc:5bb90a0ae4b018435936a488" role="doc-biblioref">2012</a>)</span> ja muut
 kieliversiot voivat olla hyödyllisiä. Tiedonkeruun tarkoitus ja kyselyn
-suunnitelun ideat kerrotaan omassa raportissa <span class="citation">(Scholz ym. <a href="#ref-RefWorks:doc:5f9439fde4b04741789a2187" role="doc-biblioref">2014</a>)</span>.</p>
+suunnittelun ideat kerrotaan omassa raportissa <span class="citation">(Scholz ym. <a href="#ref-RefWorks:doc:5f9439fde4b04741789a2187" role="doc-biblioref">2014</a>)</span>.</p>
 <div id="aineiston-rajaaminen" class="section level2">
 <h2><span class="header-section-number">2.1</span> Aineiston rajaaminen</h2>
 <p>Olen valinnut laajasta aineistosta 25 maata ja joukon muuttujia. Maat on valittu
@@ -522,7 +522,7 @@ Kuva 2.1: Suomenkielinen lomake
 <p>Valituista taustamuuttujista monet on kerätty haastattelulla.
 Tiedonkeruu, otantamenetelmät ja yksikkövastauskadon (unit non-response, otokseen
 valitulta ei saada mitään tietoja) huomioiminen on tehty joka
-maassa omalla tavallaan. Aineistoissa on mukana painot joilla tulokset voidaan
+maassa omalla tavallaan. Aineistoissa on mukana painot, joilla tulokset voidaan
 korottaa perusjoukon tasolle, mutta kansainvälisiä vertailupainoja ei syystä tai
 toisesta ole. Taustamuuttujat kuten koulutustaso on harmonisoitu
 vertailukelpoisiksi.</p>
@@ -550,10 +550,10 @@ Analyysivaiheessa koodi muuttuu hauraammaksi.</p>
 Helsingissä 2017<span class="citation">(M. Greenacre <a href="#ref-RefWorks:doc:5b6ef091e4b0984fd9b8c0ca" role="doc-biblioref">2017</a>)</span> ja ainakin kahdessa
 oppikirjassaan(<span class="citation">(Greenacre <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span>,
 <span class="citation">(M. J. Greenacre <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>).
-ISSP - aineisto vuodelta 1989 on käytetty myös neljän singuaariarvohajoitelmaan
+ISSP - aineisto vuodelta 1989 on käytetty myös neljän singulaariarvohajoitelmaan
 perustuvan menetelmän vertailuun<span class="citation">(Greenacre <a href="#ref-RefWorks:doc:5b6f159ce4b0bc0f31734b76" role="doc-biblioref">2003</a>)</span>. Blasius
 ja Thiessen (<span class="citation">(Blasius ja Thiessen <a href="#ref-RefWorks:doc:5b15542ee4b0e2616bc42dca" role="doc-biblioref">2006</a>)</span>) arvioivat aineiston laatua
-ja ja maiden vertailtavuutta vuoden 1994 aineistolla.</p>
+ja maiden vertailtavuutta vuoden 1994 aineistolla.</p>
 <p>Sukupuoliroolien (gender roles) ja niihin liittyvien asenteiden vertailevaa
 kansainvälistä (cross-cultural) tutkimusta on tehty paljon. Tutkimusongelman
 sisällöllisten ja teoreettisen kysymysten nykytilaa kuvaa tuore artikkeli
@@ -570,8 +570,8 @@ data kolmelta kierrokselta (1988,1994,2002).</p>
 <div id="yksinkertainen-korrespondenssianalyysi" class="section level1">
 <h1><span class="header-section-number">Luku 3</span> Yksinkertainen korrespondenssianalyysi</h1>
 <p>Korrespondenssianalyysin peruskäsitteet ja muuttujien yhteyden graafisen analyysin
-periaatteet voi esittää kahden luokitelumuuttujan ristiintaulukoinnin eli
-kontigenssitaulun analyysin avulla. Kyse ei ole pelkästään helposta esimerkistä,
+periaatteet voi esittää kahden luokittelumuuttujan ristiintaulukoinnin eli
+kontingenssitaulun analyysin avulla. Kyse ei ole pelkästään helposta esimerkistä,
 vaan peruskäsitteet ja geometrisiin perusteisiin nojaava graafinen analyysi ovat
 oleellisilta osin samat myös monimutkaisemmissa menetelmän sovelluksissa
 <span class="citation">(Greenacre ja Hastie <a href="#ref-RefWorks:doc:5a857a44e4b0ed2d44664d84" role="doc-biblioref">1987</a>)</span>.</p>
@@ -588,14 +588,14 @@ väline on kuva, yleensä kaksiulotteinen kartta. Tulkinta ja erityisesti väär
 johtopäätösten välttäminen vaati kartan tulkinnan varmistamista ratkaisun
 numeerisista tuloksista. Kun analysoitava taulukko, sen rivien ja sarakkeiden
 riippuvuuksia kuvaava kartta ja kartan perustana olevat numeeriset tulokset
-esitetään yhdessä on helpompi ymmärtää tulkinnan perussäännöt.</p>
+esitetään yhdessä, on helpompi ymmärtää tulkinnan perussäännöt.</p>
 <p><span class="citation">LeRoux ja Rouanet (<a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>)</span> esittävät tulkinnan perussäännöt hieman
 eri korostuksella kuin Greenacre (CAiP). Yhteistä on graafisen analyysin tärkeys,
 mutta ranskalaiset tutkijat korostavat numeeristen tulosten ensisijaisuuta.
 Analyysi pitää aloittaa tutkimalla numeerisen ratkaisun ominaisuuksia.
 Greenacren mielestä numeerisia tuloksia tarvitaan johtopäätösten varmistamiseen,
 ensin katsotaan karttaa. Eroa ei kannata liioitella, molempia tarvitaan.
-Eksploratiivisessa data-analyysissä näkökulmaa muutetaan kun datan ominaisuudet
+Eksploratiivisessa data-analyysissä näkökulmaa muutetaan, kun datan ominaisuudet
 tai omituisuudet havaitaan. Kun kartat ovat aina approksimaatiota, numeerisia
 tuloksia tarvitaan.</p>
 <div id="äiti-töissä---kärsiikö-lapsi" class="section level2">
@@ -607,10 +607,10 @@ pitäisi tietää missä lapsi on ja mitä hän tekee. Kysymykset on kuitenkin s
 kokonaisuudeksi, ja niitä analysoidaan yhdessä luvussa 7. Yhden taulukon analyysi
 esittelee menetelmän, oikeassa tutkimuksessa pitää käyttää vähintään koko
 kysymyssarjaa.</p>
-<p>Havainnot joissa tieto vastauksesta puuttuu on poistettu aineistosta.
+<p>Aineistosta on poistettu havainnot, joissa tieto vastauksesta puuttuu.
 Taustamuuttujia ovat vastaajan sukupuoli ja ikä. Taulukoissa vastausvaihtoehtojen
-tunnuksina käytetään samoja symboleja kuin kuvissa (E = täysin eri mielä,
-e = eri mieltä ? = ei samaa eikä eri mieltä, s = samaa mieltä, S = täysin samaa
+tunnuksina käytetään samoja symboleja kuin kuvissa (E = täysin eri mieltä,
+e = eri mieltä, ? = ei samaa eikä eri mieltä, s = samaa mieltä, S = täysin samaa
 mieltä).</p>
 <p>Frekvenssitaulukossa <a href="#tab:simpeCA-frekTa1">3.1</a> on esitetty vastausten suhteellinen jakauma,
 lukumäärät on jaettu havaintojen lukumäärällä (8143). Korrespondenssianalyysissä
@@ -892,7 +892,7 @@ havaintojen lukumäärä ei vaikuta tulkintaan periaatteessa mitenkään.</p>
 <p>Kahden luokittelumuuttujan riippuvuutta voidaan testata <span class="math inline">\(\chi^{2}\)</span> - testillä.
 Riippumattomuushypoteesin mukainen odotettu solufrekvenssi on taulukon
 <a href="#tab:simpeCA-frekTa1">3.1</a> reunajakaumien alkioiden tulo.</p>
-<p>Testisuure saadaan laskemalla yhten jokaisen solun havaittujen ja odotetettujen
+<p>Testisuure saadaan laskemalla yhteen jokaisen solun havaittujen ja odotettujen
 frekvenssien erotukset muodossa</p>
 <p><span class="math display" id="eq:khii21">\[\begin{equation}
   \chi^{2} = \frac{(havaittu - odotettu)^2} {odotettu}.
@@ -928,12 +928,12 @@ on</p>
  \end{equation}\]</span></p>
 <p>Rivien <span class="math inline">\(\chi^{2}\)</span> - etäisyys on painotettu euklidinen etäisyys, jossa painoina
 ovat riviprofiilin odotetut arvot. Ne ovat riippumattomuushypoteesin mukaisesti
-riviprofiilien keskiarvoprofiilin vastaavat alkioit <span class="math inline">\(r_{i}\)</span> .</p>
+riviprofiilien keskiarvoprofiilin vastaavat alkiot <span class="math inline">\(r_{i}\)</span> .</p>
 <p><span class="math display" id="eq:euclid2">\[\begin{equation}
  \sqrt{\frac{(p_{11} - p_{31})^2} { r_{1}} + \dots + \frac{(p_{15} - p_{35})^2} {r_{5}}}
  \tag{3.5}
 \end{equation}\]</span></p>
-<p>Inertia voidaa esittää rivien ja keskiarvorivin (sentroidin) <span class="math inline">\(\chi^{2}\)</span> -etäisyyksien
+<p>Inertia voidaan esittää rivien ja keskiarvorivin (sentroidin) <span class="math inline">\(\chi^{2}\)</span> -etäisyyksien
 neliöiden painotettuna summana, jossa painoina ovat rivien massat <span class="math inline">\(m_{i}\)</span> ja
 summa lasketaan yli rivien <span class="math inline">\({i}\)</span>.</p>
 <p><span class="math display" id="eq:inert2">\[\begin{equation}
@@ -967,40 +967,40 @@ on yleisin ja useiden ohjelmistojen oletuskartta.</p>
 Kuva 3.3: Q1b: lapsi kärsii jos äiti on töissä
 </p>
 </div>
-<p>Akselien prosenttimerkinnät kertovat,kuinka paljon aineiston inertiasta eli
-hajonnasta on kaksiulotteisesssa projektiossa saatu kuvattua akseleille.</p>
+<p>Akselien prosenttimerkinnät kertovat, kuinka paljon aineiston inertiasta eli
+hajonnasta on kaksiulotteisessa projektiossa saatu kuvattua akseleille.</p>
 <p>Akselit ovat sisäkkäisiä (nested) Ensimmäinen akseli saa aina suurimman osan
 inertiasta, tässä 76 prosenttia. Kun toinen akseli kuvaa 15 prosenttia koko inertiasta,
 on kartalla esitetty 91 prosenttia aineiston hajonnasta. Loput 9 prosenttia jää
 3. ja 4. dimensiolle. Nämä ”selitysosuudet” ovat samantapainen laskelma kuin
 perinteisen regressiomallin ”selitetty” vaihtelu ja ”jäännösvaihtelu”.</p>
 <p>Akselien tulkinta on korrespondenssianalyysin perustehtävä._Kontrastit_ määrittävät
-akselien tulkinnan . Benzacrin ohjeen mukaan (<span class="citation">(LeRoux ja Rouanet <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>)</span>, s. 49)
+akselien tulkinnan. Benzacrin ohjeen mukaan (<span class="citation">(LeRoux ja Rouanet <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>)</span>, s. 49)
 katsotaan mitä on oikealla ja mitä vasemmalla. Akselien tulkinta perustuu siihen,
-mitä mitä yhteistä on kaikilla elementeillä jotka ovat origon vasemmalla puolella
+mitä yhteistä on kaikilla elementeillä, jotka ovat origon vasemmalla puolella
 ja vastaavasti origon oikealla puolella. Samalla tavalla tulkitaan toinen akseli,
 mitä on ylhäällä ja alhaalla. Tulkinta tehdään akseleiden suuntaan. Kuvan tulkintaa
-ei aloiteta pisteidein etäisyyksiä vertailemalla.</p>
+ei aloiteta pisteiden etäisyyksiä vertailemalla.</p>
 <p>Kun taulukon rivit ovat havaintoja ja sarakkeet muuttujia, akselien tulkinta
 tehdään muuttujien avulla. Vasemmalla on E ja oikealla puolella samanmieliset
 vastaukset s ja S. Neutraali ”?” on s-vastausten vasemmalla puolella mutta
 kuitenkin oikealla. Kuvan perusteella ei voi sanoa kuinka paljon,
 kaikki erot ovat suhteellisia.</p>
 <p>Sarakkeet ovat oikeassa järjestyksessä, mutta niiden koordinaatit
-x-akselilla eivät olen tasavälisiä. Jos muuttuja jostain syystä halutaaan
+x-akselilla eivät olen tasavälisiä. Jos muuttuja jostain syystä halutaan
 esittää välimatka- tai suhdeasteikon muuttujana koordinaatti ensimmäisellä
 dimensiolla on yksi vaihtoehto.</p>
-<p>Ensimmäisen dimenosion tulkinta on aika selkeä. Toinen akseli on kontrasti
+<p>Ensimmäisen dimension tulkinta on aika selkeä. Toinen akseli on kontrasti
 lievemmän tai maltillisemman erimielisyyden (e) ja muiden vastausten kanssa.
 Se on 1. dimension suuntaan kaikkein lähimpänä origoa. Hieman varovaisemmin
 akselin voi tulkita maltillisen ja jyrkemmän tai varmemman mielipiteen kontrastiksi.</p>
 <p>En jatkossa esitä kuvailevia akseleiden nimiä kuvissa, akseleiden tulkinta on
 analyysin ensimmäinen tehtävä.</p>
-<p>Maiden vertailu tehdään näiden akselien suuntaan. Sekä sarekepisteiden että
+<p>Maiden vertailu tehdään näiden akselien suuntaan. Sekä sarakepisteiden että
 rivipisteiden keskinäiset välimatkat approksimoivat optimaalisesti niiden
 khii2-etäisyyksiä. Sarake- ja rivipisteiden välisillä etäisyyksillä ei ole
 mitään suoraa tulkintaa. Pisteiden etäisyydet samassa pistepilvessä ovat
-suhteellisia, Saksa on konsevatiivisempi kuin Suomi mutta emme tiedä kuinka paljon.
+suhteellisia, Saksa on konservatiivisempi kuin Suomi mutta emme tiedä kuinka paljon.
 Maiden järjestys oikealta vasemmalle on selkeä, Tanska on vasemmalla
 liberaalina ”ääripäänä”, oikealla taas Unkari ja Bulgaria. Pystyakselin suuntaan
 nähdään, että kaikkein ”maltillisin” mutta kuitenkin liberaali on Suomi,
@@ -1028,26 +1028,26 @@ sitten kun se tehty.</p>
 <p><strong>Vaatimukset datalle</strong></p>
 <p>Korrespondenssianalyysin sovelletaan yleisimmin frekvenssitaulujen analyysiin,
 lukumäärädataan (count data). Periaatteessa mikä tahansa data sopii, kunhan se
-voidaan järkevästi esittää suhteelisina lukumäärinä (relative amounts), siis
+voidaan järkevästi esittää suhteellisina lukumäärinä (relative amounts), siis
 suhdeasteikon (ratio scale) muuttujana. Tässä oleellista on tulkittavuus
 tutkimusongelman näkökulmasta. Välttämätön ehto on sama mittayksikkö: lukumäärä,
 rahayksikkö, pituusmitta kelpaavat. (CAiP s. 15). Taulukon lukujen on oltava
 ei-negatiivisia (positiivisia, nolla sallittu).</p>
 <p>Rajat ovat joustavia, kun mukaan otetaan erilaiset uudelleenskaalaukset
-ja transformaatiot. Tämä oli menetelmän perusidea jo Benzecrillä(CAiP ch 26, s. 201).</p>
-<p>Menetelmää sovelletaan profiileihin jotka painotetaan massoilla, ja
+ja transformaatiot. Tämä oli menetelmän perusidea jo Benzecrillä (CAiP, s. 201).</p>
+<p>Menetelmää sovelletaan profiileihin, jotka painotetaan massoilla, ja
 profiilien etäisyyksiä mitataan khii2-etäisyysmitalla. Jos datan voi esittää
 tässä muodossa, menetelmää voi käyttää.</p>
 </div>
 <div id="asymmetrinen-kartta-ja-ideaalipisteet" class="section level2">
 <h2><span class="header-section-number">3.3</span> Asymmetrinen kartta ja ideaalipisteet</h2>
 <p>Symmetrisessä kartassa <a href="#fig:simpleCA1map1">3.3</a> molemmat pisteparvet on esitetty
-pääkoordinaateissa (prinipal coordinates) ikäänkuin päällekkäin, samassa kuvassa.</p>
+pääkoordinaateissa (principal coordinates) ikään kuin päällekkäin, samassa kuvassa.</p>
 <p>Toinen vaihtoehto on asymmetrinen kartta, jossa toinen pistejoukko esitetään
 standardikoordinaateissa ja toinen pääkoordinaateissa. Asymmetrisessä
 kartassa <a href="#fig:G1-3asymm2">3.4</a> sarakkeet on esitetty standardikoordinaateissa
 ja rivit pääkoordinaateissa.</p>
-<p>Sarakepisteitä kutsutaan ideaalipisteiksi, ne edustavat kuviteellisia maita joissa
+<p>Sarakepisteitä kutsutaan ideaalipisteiksi, ne edustavat kuvitteellisia maita joissa
 kaikki vastaukset ovat samoja. Matemaattisesti kartalle projisoidut ideaalipisteet
 ovat (tässä esimerkissä) neliulotteisen avaruuden verteksin (monikulmion)
 kärkipisteitä. Rivipisteet ovat tämän verteksin sisällä.</p>
@@ -1108,8 +1108,8 @@ Kuva 3.6: Q1b: lapsi kärsii jos äiti on töissä
 </p>
 </div>
 <p>Sarakkeista ratkaisuun vaikuttaa selvästi eniten E, ja juuri ensimmäiseen
-dimensioon joka selittää suurimman osan kokonaisinertiasta. Toista dimensiota määrittää
-vahviten e, mutta myös kaikki muut sarakkeet x-akselin yläpuolella. Samaa mieltä
+dimensioon, joka selittää suurimman osan kokonaisinertiasta. Toista dimensiota määrittää
+vahvimmin e, mutta myös kaikki muut sarakkeet x-akselin yläpuolella. Samaa mieltä
 olevien (S ja s) vaikutus näyttäisi jakautuvan selvimmin molemmille dimensioille.</p>
 <p>Vaikka massojen suhteellisia eroja ei kovin helposti pistekoosta erota, se näkyy
 epäsuorasti Saksan melko vahvana kontribuutiona. Bulgarian pieni kontribuutio
@@ -1128,7 +1128,7 @@ Kuva 3.7: Q1b: lapsi kärsii jos äiti on töissä
 <p>Massojen ja kontribuutioiden esittäminen kartoilla näyttää selkeimmin poikkeavat
 pisteet. Kontribuutioiden graafinen tarkastelu antaa myös yleiskuvan, jonka voi
 varmistaa numeerisista tuloksista.</p>
-<p>Kaikki edellä esitetyt pääättelyt perustuvat tietysti kaksiulotteideen projektioon.
+<p>Kaikki edellä esitetyt päättelyt perustuvat tietysti kaksiulotteiseen projektioon.
 Jos pisteet on esitetty hyvin eli niiden inertiasta (poikkeamasta keskiarvosta)
 suuri osa on kuvattu kartalle, rivipiste on sitä lähempänä ideaalipistettä mitä
 suurempi ideaalipisteen osuus on sen profiilissa.</p>
@@ -1170,9 +1170,8 @@ Kuva 3.9: Q1b: lapsi kärsii jos äiti on töissä
 kartasta <a href="#fig:G1-3asymmContrib1">3.6</a>.</p>
 <p>En ole vakioinut vertailtavien ryhmien (tässä maat) suhteellisia osuuksia. Syy on
 yksinkertainen: esittelen menetelmää sen perusmuodossa ilman kovin täsmällisiä
-tutkimusongelmia. Oikeiden tutkimuskymysten vastausia pitää tietysti etsiä järkevillä
-massojen skaalauksella. Korrespondenssianalyysi on inertian dekomponointia,
-jakamista osiin.</p>
+tutkimusongelmia. Oikeiden tutkimuskysymysten vastauksia pitää tietysti etsiä järkevillä massojen skaalauksella. Korrespondenssianalyysi on inertian
+dekomponointia, jakamista osiin.</p>
 </div>
 <div id="karttojen-erot" class="section level2">
 <h2><span class="header-section-number">3.6</span> Karttojen erot</h2>
@@ -1191,20 +1190,20 @@ niillä ei käytännössä ole merkitystä. Siksi hän pitää skaalausdebattia 
 kiistana, käytännön sovelluksissa sillä ei ole merkitystä.
 <span class="citation">Greenacre (<a href="#ref-RefWorks:doc:5c754c6de4b0947789165cde" role="doc-biblioref">1989</a>)</span> kommentoi skaalausta perusteellisesti,
 kiista on ollut aika sitkeä mutta lienee laantunut.</p>
-<p>Symmetinen kartta hyvä vaihtoehto, sillä asymmetrisessä skaalaus vie
+<p>Symmetrinen kartta hyvä vaihtoehto, sillä asymmetrisessä kartassa skaalaus vie
 ideaalipisteet usein kauas ja pääkoordinaateissa esitetyt pisteet pakkautuvat kuvan
-keskelle. Toisaalta jos dataa tulkitaan asymmetrisesti kontribuutiokartta on
+keskelle. Jos dataa tulkitaan asymmetrisesti kontribuutiokartta on
 hyvä vaihtoehto. Silloin rivipisteiden khii2-etäisyydet esitetään optimaalisesti
 ja sarakkeiden suuntavektoreille projisoiduilla pistellä on kaksoiskuva-tulkinta.</p>
 <p>Greenacren mukaan kartoilla voi tavoitella kolmea eri asiaa. Kuvassa voi esittää
 rivipisteiden etäisyydet, sarakepisteiden etäisyydet tai rivi- ja sarakepisteiden
-etäisyydet. Jäkimmäinen on kaksoiskuvien (biplot) ns. skalaaritulo-ominaisuus.
+etäisyydet. Jälkimmäinen on kaksoiskuvien (biplot) ns. skalaaritulo-ominaisuus.
 Rivi- ja sarakepisteen skalaaritulo “palauttaa” alkuperäisen datan, tässä
 tapauksessa taulukon solun.</p>
 <p>Näistä vain kaksi voidaan optimaalisesti esittää yhtä aikaa.</p>
 <p><em>Symmetrisessä kartassa</em> khii2-etäisyydet rivipisteiden välillä ja sarakepisteiden
 välillä esitetään optimaalisesti. Rivi- ja sarakepisteiden välisiä etäisyyksiä ei
-esitetä optimaalisesti, mutta ne voidaan tulkita kohtalaisen hyvin jos pääakselien
+esitetä optimaalisesti, mutta ne voidaan tulkita kohtalaisen hyvin, jos pääakselien
 inertioiden neliöjuuret eivät ole liian erisuuruisia.</p>
 <p><em>Asymmetrisessä kartassa</em> pääkoordinaateissa esitetyn pistejoukon etäisyydet
 kuvataan optimaalisesti, standardikoordinaateissa esitetyt pisteet ovat “ääriprofiileja”,
@@ -1221,11 +1220,11 @@ yhteyden ratkaisualgoritmiin, singulaariarvohajoitelmaan.</p>
 <p>Koordinaattien yhteys voidaan esittää kahtena yksinkertaistettuna kaavana
 ( <span class="citation">M. Greenacre ja Primicerio (<a href="#ref-RefWorks:doc:5b8175eee4b08da192f99a35" role="doc-biblioref">2013</a>)</span>, s.174 ):</p>
 <p><span class="math display" id="eq:pcfromstd1">\[\begin{equation}
-  pääkoordinaatit = standardikoordinatit \times \sqrt{pääakselien \: inertiat}
+  pääkoordinaatit = standardikoordinaatit \times \sqrt{pääakselien \: inertiat}
     \tag{3.7}
 \end{equation}\]</span></p>
 <p><span class="math display" id="eq:kontribfromstd1">\[\begin{equation}
-  kontribuutiokoordinaatit = \sqrt{massat} \times  standardikoordinatit
+  kontribuutiokoordinaatit = \sqrt{massat} \times  standardikoordinaatit
     \tag{3.8}
 \end{equation}\]</span></p>
 
@@ -1235,8 +1234,8 @@ yhteyden ratkaisualgoritmiin, singulaariarvohajoitelmaan.</p>
 <h1><span class="header-section-number">Luku 4</span> Täydentävät pisteet</h1>
 <p>Kartat ovat analyysin väline, ja usein on hyödyllistä esittää kuvassa
 lisäinformaatiota tulkinnan avuksi. Täydentävät pisteet (supplementary points,
-CAiP s. 89-) ovat rivejä tai sarakkeita jotka lisätään karttaan. Mikä tahansa
-rivi tai sarake voidaan voidaan lisätä kuvaan, jos se on järkevästi vertailukelpoinen
+CAiP s. 89-) ovat rivejä tai sarakkeita, jotka lisätään karttaan. Mikä tahansa
+rivi tai sarake voidaan lisätä kuvaan, jos se on järkevästi vertailukelpoinen
 kartan määrittäneiden profiilien kanssa.</p>
 <p>Tällainen piste on kartan laskennassa <em>passiivinen</em>, sillä on sijainti kartalla
 mutta ei massaa eikä vaikutusta inertiaan. Passiivisilla pisteillä ei ole vaikutusta
@@ -1253,23 +1252,23 @@ määrittämälle kartalle. Jo sisällöllisistä syistä pienen massan pisteide
 kannattaa harkita, ne sijaitsevat kaukana origosta ja huonontavat kuvan laatua.</p>
 <p>Kolmas mahdollisuus on jakaa pistejoukkoja osajoukkoihin ja esittää niiden
 summaprofiili täydentävänä pisteenä. Summaprofiili on osiensa painotettu
-(barysentrinen) keskiarvo. Kun se esiteteään passiivisena pisteenä, havaintoja ei
+(barysentrinen) keskiarvo. Kun se esitetään passiivisena pisteenä, havaintoja ei
 oteta ratkaisuun kahta kertaa. Profiilien yhdistämiseen liittyy
 korrespondenssianalyysin tärkein ominaisuus, jakaumaekvivalenssi (<em>distributional
 equivalence</em>). Se on ollut menetelmän kehittämisen tärkein tavoiteltu ominaisuus,
 Profiileiltaan samanlaiset rivit voidaan yhdistää, analyysin tulokset
-eivät muutu. Khii2-etäisyysmitta on ainoa etäisyysmitta joka toteuttaa tämän
+eivät muutu. Khii2-etäisyysmitta on ainoa etäisyysmitta, joka toteuttaa tämän
 periaatteen.</p>
 <p><span class="citation">LeRoux ja Rouanet (<a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>)</span> esittelevät
 menetelmän matemaattiset perusteet ja jakaumaekvivalenssin perusteellisesti.
-Havainnolinen esitys löytyy Greenacren oppikirjasta(CAiP).</p>
+Havainnollinen esitys löytyy Greenacren oppikirjasta (CAiP).</p>
 <p>Täydentävien profiilien lisääminen vaatii jo yksinkertaisia matriisioperaatioita.
 Korrespondenssianalyysi on käytännössä matriisien muokkausta tutkimusongelman
 tarpeisiin.</p>
 <div id="saksan-ja-belgian-alueet" class="section level2">
 <h2><span class="header-section-number">4.1</span> Saksan ja Belgian alueet</h2>
 <p>Saksan ja Belgian aineistossa on mukana aluejako: entiset itä- ja länsi-Saksa
-(dE,dW), Flanders (bF), Wallonia (bW) ja Bryssel (bB).</p>
+(dE,dW), Flanderi (bF), Vallonia (bW) ja Bryssel (bB).</p>
 <table>
 <caption><span id="tab:BeDealueTable1">Taulukko 4.1: </span>Q1b vastaukset, Saksan ja Belgian alueet</caption>
 <thead>
@@ -1376,8 +1375,8 @@ tarpeisiin.</p>
 </tr>
 </tbody>
 </table>
-<p>Aineistoon lisätään passiviisina riveinä Saksan ja Belgian maaprofiilit (DE, BE).
-Maiden massoja ei skaalta yhtä suuriksi, otoskoot vaikuttavat ratkaisuun.</p>
+<p>Aineistoon lisätään passiiviisina riveinä Saksan ja Belgian maaprofiilit (DE, BE).
+Maiden massoja ei skaalata yhtä suuriksi, otoskoot vaikuttavat ratkaisuun.</p>
 <div class="figure" style="text-align: center"><span id="fig:suppointCA2map1"></span>
 <img src="JH_capaper_files/figure-html/suppointCA2map1-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
 <p class="caption">
@@ -1390,21 +1389,21 @@ lähempänä länsi-Saksan pistettä. Jos karttaa vertaa kuvaan <a href="#fig:si
 ei eroja juuri ole. Saksan ja Belgian osien sijoittuminen on kiinnostava.
 Itäinen Saksa on selvästi liberaalilla puolella, ensimmäisellä dimensiolla lähinnä Tanskaa.
 Läntinen Saksa on ensimmäisellä dimensiolla konservatiivisella puolella Belgian maapisteen
-tasolla. Belgian alueista Wallonia (bW) on liberaalilla puolella mutta kaikkein eniten oikealla.
-Bryssel ja Flander ovat konservatiivisella puolella, toinen länsi-Saksaa
+tasolla. Belgian alueista Vallonia (bW) on liberaalilla puolella mutta kaikkein eniten oikealla.
+Bryssel ja Flanderi ovat konservatiivisella puolella, toinen länsi-Saksaa
 liberaalimpi ja toinen konservatiivisempi. Belgian osat hajoavat toiseen suuntaan kuin Saksan,
-liberaalein Flanders on myös kaikkein maltillisin ja Bryssel vastaavasti
+liberaalein Flanderi on myös kaikkein maltillisin ja Bryssel vastaavasti
 tiukempien mielipiteiden puolella. Sarakepisteiden suhteelliset sijainnit
 toisiinsa nähden eivät oleellisesti muutu.</p>
-<p>Bryssel ja Wallonia näyttävä olevan hyvin lievästi U-muotoisen maapisteiden
+<p>Bryssel ja Vallonia näyttävä olevan hyvin lievästi U-muotoisen maapisteiden
 parven sisällä. Tämä kaariefekti tai <em>Guttman-efekti</em> on kartoissa yleinen.
 Se on tavallaan ratkaisun geometriasta. Rivipisteiden pilvi on
 sarakkeiden ideaalipisteiden virittämän verteksin sisällä, ja ainoa reitti
-verteksin kulmasta toiseen kulkee tasolla kaarveasti (CAiP, s. 127).
+verteksin kulmasta toiseen kulkee tasolla kaarevasti (CAiP, s. 127).
 Voi myös sanoa, että kaariefektin taustalla on järjestysasteikon muuttujan
 korrelaatio (<span class="citation">(LeRoux ja Rouanet <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>)</span>, s. 220). Kaaren sisäpisteet
-ovat usein polarisoituneita ensimmäisen dimension “ääripää-vastausten” välillä.
-Tässä vaikutus on heikko, taulukossa <a href="#tab:BeDealueTable1">4.1</a> ei mitää selvää
+ovat usein polarisoituneita ensimmäisen dimension “ääripäävastausten” välillä.
+Tässä vaikutus on heikko, taulukossa <a href="#tab:BeDealueTable1">4.1</a> ei mitään selvää
 polarisaatiota näy.</p>
 <div class="figure" style="text-align: center"><span id="fig:suppointCA2map2"></span>
 <img src="JH_capaper_files/figure-html/suppointCA2map2-1.png" alt="Q1b: Saksan ja  Belgian aluejako " width="90%" />
@@ -1413,7 +1412,7 @@ Kuva 4.2: Q1b: Saksan ja Belgian aluejako
 </p>
 </div>
 <p>Kontribuutiokartasta täydentävät pisteet on jätetty pois, ne eivät vaikuta ratkaisuun.
-Saksan ja Belgian osien massat ovat tietenkin pienemepiä.</p>
+Saksan ja Belgian osien massat ovat tietenkin pienempiä.</p>
 <p>Sarakkeiden kontribuutiot ovat samantapaiset kuin alkuperäisessä kartassa
 <a href="#fig:G1-3asymmContrib1">3.6</a>. Rivipisteiden kontribuutioista
 osa on selvästi pienempiä, erityisesti länsi-Saksa kaksi Belgian aluetta (bB, bF).
@@ -1431,7 +1430,7 @@ profiilipisteiden hajontaa ideaalipisteiden verteksin sisällä. Maksimi-inertia
 saavutetaan kun profiilit ovat verteksien kärkipisteissä, jokaisessa profiilissa
 on vain yksi luokittelumuuttujan arvo. Inertia on sama kuin ratkaisun dimensio,
 tässä esimerkissä 4(sarakkeiden lukumäärä - 1). Numeeristen tulosten esittelyn tärkein
-lähde on (CAiP, luku 11 ja liitte B).</p>
+lähde on (CAiP, luku 11 ja liite B).</p>
 <p>R-paketti “ca” listaa numeeriset tulokset suppeasti (print) ja laajemmin
 (summary). Alla on laajempi tulostus.</p>
 <p>Ensimmäisenä on listattu kokonaisinertia pääakseleittain. Tässä suhteelliset luvut
@@ -1473,24 +1472,24 @@ tuhannella tai esitetty “permills” (summa on 1000).</p>
 <p>Rivi- ja sarakeprofiileista esitetään samat tiedot. Ensimmäisessä kolmen
 sarakkeen joukossa kerrotaan pisteen massa, laatu (qlt) ja inertiakontribuutio.</p>
 <p>Inertiakontribuutio (inr) on suhteellinen osuus kokonaisinertiasta. Aktiivisia rivejä on 9,
-joten tasaisesti jaettu inetia olisi noin 110. Tanska, Bulgaria ja Unkari “selittävät”
+joten tasaisesti jaettu inertia olisi noin 110. Tanska, Bulgaria ja Unkari “selittävät”
 suurimman osan inertiasta. Belgian ja Saksan alueiden kontribuutiot ovat pieniä.
 Nämä inertiaosuudet ovat osuuksia kokonaisinertiasta alkuperäisessä neljässä
 ulottuvuudessa.</p>
-<p>Laatu kertoo miten hyvin piste on esitetty kartalla, miten suuri osa sen
+<p>Laatu kertoo, miten hyvin piste on esitetty kartalla, miten suuri osa sen
 inertiasta on esitetty kartalla. Kaksiulotteinen kartta kuten tässä on yleisin
 valinta, laatu kerrotaan valitulle dimensioiden määrälle. Laatu ei riipu massasta,
 vaan pisteen ja kartan akseleiden välisistä kulmista (kts. teorialiite). Saksan
-osien ero laadussa on iso,itä-Saksalla se on erittäin hyvä ja länsi-Saksalla huono.
-Belgian alueista Wallonia on kehtoiten esitetty, ja vain Flandersin laatu on
+osien ero laadussa on iso, itä-Saksalla se on erittäin hyvä ja länsi-Saksalla huono.
+Belgian alueista Vallonia on huonoimmin esitetty, ja vain Flanderin laatu on
 kohtuullisen hyvä. Kovin hyvä ei ole täydentävien maapisteidenkään laatu.</p>
-<p>Kaksi seuraavaa kolmen sarakkeen ryhmää kertovat tulokset valituille dimenisoille
-eli ratkaisulle. Molempien dimensioiden (“k=1”, “k=2” ) pääkoordinaattattien
+<p>Kaksi seuraavaa kolmen sarakkeen ryhmää kertovat tulokset valituille dimensioille
+eli ratkaisulle. Molempien dimensioiden (“k=1”, “k=2”) pääkoordinaattien
 (x 1000) lisäksi raportoidaan dimension <em>suhteellinen kontribuutio</em> pisteen
 inertiaan (“cor”). Nämä tunnusluvut summautuvat laaduksi (qlt),
 ja ne voidaan tulkita korrelaation neliöiksi (kts. teorialiite).</p>
 <p>Erityisesti Belgian alueiden projektion laatu on huonompi ensimmäisellä dimensiolla.
-Itä-Saksa ja Bulgaria taas ovat hyvin esittyjä vain ensimmäisellä dimensiolla
+Itä-Saksa ja Bulgaria taas ovat hyvin esitettyjä vain ensimmäisellä dimensiolla
 eivätkä juuri ollenkaan korreloi toisen dimension kanssa.</p>
 <p>Pisteen <em>absoluuttinen kontribuutio</em> kertoo sen osuuden dimension inertiasta
 (summa 1000). E-sarake “selittää” ensimmäisen dimension inertiasta noin 66
@@ -1499,11 +1498,11 @@ riippuu massasta ja siitä paljonko piste poikkeaa koko aineiston keskiarvopiste
 <p>Numeerisista tuloksista voidaan varmistaa akseleiden tulkinta sarakkeiden avulla.
 Sarakkeet ovat hyvin esitettyjä tasossa, ainoastaan neutraali vaihtoehto on
 heikommin kuvattu mutta sillä ei ollut roolia tulkinnassa.</p>
-<p>E-sarakkeen vaikutuksen suunta ensimmäisella dimensiolla näkyy pääkoordinaatin
+<p>E-sarakkeen vaikutuksen suunta ensimmäisellä dimensiolla näkyy pääkoordinaatin
 etumerkistä (k1 = -663), ja sen kontrastina ovat S- ja s- sarakkeet positiiviseen
 suuntaan. Toinen dimensio on kontrasti S- ja e-sarakkeiden välillä ja ne selittävät
 akselin inertian. Kaikki tämä voitiin päätellä kuvasta, ja numeeriset tulokset
-vahvistavat tulkinnan. Sarake S on ainoa jonka kontribuutio on merkittävä
+vahvistavat tulkinnan. Sarake S on ainoa, jonka kontribuutio on merkittävä
 molemmille dimensioille.</p>
 <p>Jos pisteen kontribuutio akselille on iso, akselin suhteellinen kontribuutio (cor)
 pisteen inertiaan on suuri. Kääntäen tämä ei päde, piste voi olla akselilla hyvin
@@ -1512,15 +1511,15 @@ esitetty mutta kontribuutio on silti pieni.</p>
 <div id="esimerkki-kolmiulotteisesta-kartasta" class="section level2">
 <h2><span class="header-section-number">4.3</span> Esimerkki kolmiulotteisesta kartasta</h2>
 <p>Belgian ja länsi-Saksan pisteet on esitetty huonosti kaksiulotteisella kartalla.
-Kolmiulotteinen ratkaisu näyttää miten ne sijoittuvat kolmannnen akselin suunnassa.
+Kolmiulotteinen ratkaisu näyttää miten ne sijoittuvat kolmannen akselin suunnassa.
 Tässä tarkastelu on vain diagnostiikkaa. Toisenlainen esimerkki on tutkimus Ranskan
-poliitiikan dimensiosta (“French political space”) 1990-luvun lopulla
+politiikan dimensiosta (“French political space”) 1990-luvun lopulla
 <span class="citation">(LeRoux ja Rouanet <a href="#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>, 365)</span>. Siinä Ranskan poliittiset
 puolueet sijoitetaan kolmelle sisällöllisesti perustellulle dimensiolle.</p>
-<p>Kolmannen dimension hajonnan voi esittää kahten karttana.</p>
-<p>Ensimmäisen ja kolmannen dimesion kuvassa näkyy pisteparven hajonta tärkeimmän
+<p>Kolmannen dimension hajonnan voi esittää kahtena karttana.</p>
+<p>Ensimmäisen ja kolmannen dimension kuvassa näkyy pisteparven hajonta tärkeimmän
 dimension ympärillä. Sarakepisteiden järjestys säilyy samana, samoin maapisteiden
-oikealta vasemmalle. Kaikki pisteet paitsi Wallonia hajoavat kolmannen akselin
+oikealta vasemmalle. Kaikki pisteet paitsi Vallonia hajoavat kolmannen akselin
 suuntaan. Belgian kahden pisteen (bB ja bF) eron havaitsee helposti, samoin Unkarin
 ja Bulgarian.</p>
 <div class="figure" style="text-align: center"><span id="fig:suppointCA3map2"></span>
@@ -1536,12 +1535,12 @@ Kuva 4.4: Q1b: Saksan ja Belgian aluejako
 </p>
 </div>
 <p>Toisen ja kolmannen dimension kartalla on esitetty noin viidesosa kokonaisinertiasta.
-Tässäkin kuvassa Brysselin (bB) ja Unkarin pisteet ovat kontrastina Flanderisin,
+Tässäkin kuvassa Brysselin (bB) ja Unkarin pisteet ovat kontrastina Flanderin,
 Bulgarian ja Tanskan pisteille.</p>
-<p>Diagnostisisessa tarkastelussa on helpompaa käyttää dynaamisia kolmiulotteisia
+<p>Diagnostisessa tarkastelussa on helpompaa käyttää dynaamisia kolmiulotteisia
 kuvia. R-ympäristössä saa grafiikkaikkunaan tulostettua kolmiulotteisen kuvan,
 jota voi käännellä ja katsoa eri kulmista. Näin saa paljon helpommin käsityksen
-kolmannen dimenison hajonnasta.</p>
+kolmannen dimension hajonnasta.</p>
 <p>Tässä on tyydyttävä kahteen kuvakaappaukseen.</p>
 <div class="figure" style="text-align: center"><span id="fig:3dklippi1"></span>
 <img src="img/3dSymMap_1.PNG" alt="Saksan ja  Belgian aluejako - 3d-kuva1" width="90%" />

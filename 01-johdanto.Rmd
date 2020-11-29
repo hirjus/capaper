@@ -40,7 +40,7 @@ Yksinkertainen kahden luokittelumuuttujan korrespondenssianalyysi antaa graafise
 analyysin ”...perussäännöt tulkinnalle. Kaikki muut korrespondenssianalyysin
 muodot ovat saman algoritmin soveltamista toisen tyyppisiin datamatriiseihin,
 ja tulkintaa sovelletaan vastaavasti (with the consequent adaptation of the
-interpretation)”(@RefWorks:doc:5a857a44e4b0ed2d44664d84 s. 437).Tutkielma laajin
+interpretation)”(@RefWorks:doc:5a857a44e4b0ed2d44664d84 s. 437). Tutkielman laajin
 osa on yksinkertaisen korrespondenssianalyysin tulosten ja peruskäsitteiden
 esittelyä.
 
@@ -78,7 +78,7 @@ järjesti ensimmäisen konferenssin 1991 (http://www.carme-n.org).
 
 Korrespondenssianalyysi esitellään oppikirjoissa muiden menetelmien rinnalla.
 Hyviä esimerkkejä ovat ekologisen datan monimuuttujamenetelmien [@RefWorks:doc:5b8175eee4b08da192f99a35],
-kaksoisikuvien [@RefWorks:doc:5a857a43e4b0ed2d44664d7c] ja
+kaksoiskuvien [@RefWorks:doc:5a857a43e4b0ed2d44664d7c] ja
 "koostumusdatan" (compositional data) [@RefWorks:doc:5f934955e4b08d20366a5bd1]
 kirjat. Suomessa korrespondenssianalyysi esitellään ainakin kahdessa oppikirjassa
 (@RefWorks:doc:5a857a44e4b0ed2d44664d95 , @RefWorks:doc:5a857a44e4b0ed2d44664da4).
@@ -154,7 +154,7 @@ kurssimateriaali[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca] ja laskuharjoitusten ko
 on ollut hyödyllinen pikaopas peruskäsitteisiin ja r-toteutuksen ratkaisuihin.
 
 Carme-verkoston kolmas artikkelikokoelma[@RefWorks:doc:5ab76b43e4b003f4468d1f07]
-on ajantasainen perusteos.Perusteelliset artikkelit kattavat myös
+on ajantasainen perusteos. Perusteelliset artikkelit kattavat myös
 korrespondenssianalyysin tärkeimmät aiheet.
 
 
