@@ -1,10 +1,9 @@
 # Täydentävät pisteet
 
-Kartat ovat analyysin väline, ja usein on hyödyllistä esittää kuvassa
-lisäinformaatiota tulkinnan avuksi. Täydentävät pisteet (supplementary points,
-CAiP s. 89-) ovat rivejä tai sarakkeita, jotka lisätään karttaan. Mikä tahansa 
-rivi tai sarake voidaan lisätä kuvaan, jos se on järkevästi vertailukelpoinen
-kartan määrittäneiden profiilien kanssa.
+Edellisessä luvussa kuviin listättiin informaatiota värisävyinä (kontribuutiot)
+ja rivi- ja sarakepisteiden kokoa muuntelemalla (massat). Täydentävät pisteet
+(supplementary points,CAiP s. 89-) ovat rivejä tai sarakkeita, jotka lisätään
+karttaan. Mikä tahansa rivi tai sarake voidaan lisätä kuvaan, jos se on järkevästi vertailukelpoinen kartan määrittäneiden profiilien kanssa.
 
 Tällainen piste on kartan laskennassa _passiivinen_, sillä on sijainti kartalla
 mutta ei massaa eikä vaikutusta inertiaan. Passiivisilla pisteillä ei ole vaikutusta
@@ -27,7 +26,7 @@ summaprofiili täydentävänä pisteenä. Summaprofiili on osiensa painotettu
 (barysentrinen) keskiarvo. Kun se esitetään passiivisena pisteenä, havaintoja ei
 oteta ratkaisuun kahta kertaa. Profiilien yhdistämiseen liittyy
 korrespondenssianalyysin tärkein ominaisuus, jakaumaekvivalenssi (_distributional
-equivalence_). Se on ollut menetelmän kehittämisen tärkein tavoiteltu ominaisuus,
+equivalence_). Se on ollut menetelmän kehittämisen tärkein tavoiteltu ominaisuus.
 Profiileiltaan samanlaiset rivit voidaan yhdistää, analyysin tulokset
 eivät muutu. Khii2-etäisyysmitta on ainoa etäisyysmitta, joka toteuttaa tämän
 periaatteen.
@@ -43,9 +42,8 @@ tarpeisiin.
 
 ## Saksan ja Belgian alueet
 
-Saksan ja Belgian aineistossa on mukana aluejako: entiset itä- ja länsi-Saksa
+Saksan ja Belgian aineistossa on mukana aluejako: entiset Itä- ja Länsi-Saksa
 (dE,dW), Flanderi (bF), Vallonia (bW) ja Bryssel (bB).
-
 
 
 ```{r BeDealueTable1, echo=F, eval=T}
@@ -127,12 +125,12 @@ plot(suppointCA2, main = "Symmetrinen kartta 1 ",
 
 Saksan ja Belgian täydentävät pisteet ovat osiensa barysentrisiä keskiarvoja,
 etäisyys on sitä pienempi mitä suurempi on osuus. Saksan piste sijaitsee siksi
-lähempänä länsi-Saksan pistettä. Jos karttaa vertaa kuvaan \@ref(fig:simpleCA1map1)
+lähempänä Länsi-Saksan pistettä. Jos karttaa vertaa kuvaan \@ref(fig:simpleCA1map1)
 ei eroja juuri ole. Saksan ja Belgian osien sijoittuminen on kiinnostava.
 Itäinen Saksa on selvästi liberaalilla puolella, ensimmäisellä dimensiolla lähinnä Tanskaa.
 Läntinen Saksa on ensimmäisellä dimensiolla konservatiivisella puolella Belgian maapisteen
 tasolla. Belgian alueista Vallonia (bW) on liberaalilla puolella mutta kaikkein eniten oikealla.
-Bryssel ja Flanderi ovat konservatiivisella puolella, toinen länsi-Saksaa
+Bryssel ja Flanderi ovat konservatiivisella puolella, toinen Länsi-Saksaa
 liberaalimpi ja toinen konservatiivisempi. Belgian osat hajoavat toiseen suuntaan kuin Saksan,
 liberaalein Flanderi on myös kaikkein maltillisin ja Bryssel vastaavasti
 tiukempien mielipiteiden puolella. Sarakepisteiden suhteelliset sijainnit
@@ -167,7 +165,7 @@ Saksan ja Belgian osien massat ovat tietenkin pienempiä.
 
 Sarakkeiden kontribuutiot ovat samantapaiset kuin alkuperäisessä kartassa
 \@ref(fig:G1-3asymmContrib1). Rivipisteiden kontribuutioista
-osa on selvästi pienempiä, erityisesti länsi-Saksa kaksi Belgian aluetta (bB, bF).
+osa on selvästi pienempiä, erityisesti Länsi-Saksa kaksi Belgian aluetta (bB, bF).
 Kuvan perusteella ei voi sanoa johtuuko tämä pelkästään massojen pienentymisestä.
 
 Unkarin ja Bulgarian kontribuutiot muuttuvat eri suuntiin, Unkarin pienenee ja
@@ -180,15 +178,15 @@ Bulgarian kasvaa.
 Korrespondenssianalyysin numeeriset tulokset ovat tärkeitä tulkinnan varmistamiselle
 ja antavat tarkemman kuvan ratkaisusta. Nämä tulokset ovat erilaisia kokonaisinertian
 dekomponointeja. Kokonaisinertia (total inertia) profiilien ja keskiarvoprofiilin
-khii2-etäisyyksien massoilla painotettu summa \@ref(eq:inert2). Se kuvaa
+khii2-etäisyyksien massoilla painotettu summa (kaava \@ref(eq:inert2)). Se kuvaa
 profiilipisteiden hajontaa ideaalipisteiden verteksin sisällä. Maksimi-inertia
 saavutetaan kun profiilit ovat verteksien kärkipisteissä, jokaisessa profiilissa
 on vain yksi luokittelumuuttujan arvo. Inertia on sama kuin ratkaisun dimensio,
-tässä esimerkissä 4(sarakkeiden lukumäärä - 1). Numeeristen tulosten esittelyn tärkein 
-lähde on (CAiP, luku 11 ja liite B).
+tässä esimerkissä 4 (sarakkeiden lukumäärä - 1). Numeeristen tulosten esittelyn tärkein 
+lähde on CAiP, luku 11 ja liite B.
 
 R-paketti "ca" listaa numeeriset tulokset suppeasti (print) ja laajemmin
-(summary). Alla on laajempi tulostus.
+(summary). Alla on laajempi tulostus tutkielman esimerkin tilanteesta.
 
 ```{r suppointCA2numres1,echo=FALSE, eval=FALSE}
 
@@ -217,10 +215,14 @@ Nämä inertiaosuudet ovat osuuksia kokonaisinertiasta alkuperäisessä neljäss
 ulottuvuudessa.
 
 Laatu kertoo, miten hyvin piste on esitetty kartalla, miten suuri osa sen
-inertiasta on esitetty kartalla. Kaksiulotteinen kartta kuten tässä on yleisin 
+inertiasta on esitetty kartalla. Pisteen inertia on sen massalla painotettu poikkeama
+aineiston keskiarvosta, ja jos tämä poikkeama saadaan kartassa näkymään piste on
+esitetty hyvin.
+
+Kaksiulotteinen kartta, kuten tässä, on yleisin 
 valinta, laatu kerrotaan valitulle dimensioiden määrälle. Laatu ei riipu massasta,
 vaan pisteen ja kartan akseleiden välisistä kulmista (kts. teorialiite). Saksan 
-osien ero laadussa on iso, itä-Saksalla se on erittäin hyvä ja länsi-Saksalla huono.
+osien ero laadussa on iso, Itä-Saksalla se on erittäin hyvä ja Länsi-Saksalla huono.
 Belgian alueista Vallonia on huonoimmin esitetty, ja vain Flanderin laatu on
 kohtuullisen hyvä. Kovin hyvä ei ole täydentävien maapisteidenkään laatu.
 
@@ -241,7 +243,7 @@ riippuu massasta ja siitä paljonko piste poikkeaa koko aineiston keskiarvopiste
 
 Numeerisista tuloksista voidaan varmistaa akseleiden tulkinta sarakkeiden avulla.
 Sarakkeet ovat hyvin esitettyjä tasossa, ainoastaan neutraali vaihtoehto on
-heikommin kuvattu mutta sillä ei ollut roolia tulkinnassa.
+heikommin kuvattu, mutta sillä ei ollut roolia tulkinnassa.
 
 E-sarakkeen vaikutuksen suunta ensimmäisellä dimensiolla näkyy pääkoordinaatin
 etumerkistä (k1 = -663), ja sen kontrastina ovat S- ja s- sarakkeet positiiviseen
@@ -267,7 +269,7 @@ suppointCA3 <- ca(~maa3 + Q1b,ISSP2012esim1.dat, nd = 3)
 ```
 
 
-Belgian ja länsi-Saksan pisteet on esitetty huonosti kaksiulotteisella kartalla.
+Belgian ja Länsi-Saksan pisteet on esitetty huonosti kaksiulotteisella kartalla.
 Kolmiulotteinen ratkaisu näyttää miten ne sijoittuvat kolmannen akselin suunnassa.
 Tässä tarkastelu on vain diagnostiikkaa. Toisenlainen esimerkki on tutkimus Ranskan
 politiikan dimensiosta ("French political space") 1990-luvun lopulla
@@ -285,7 +287,7 @@ plot(suppointCA3, dim = c(1,2),
 ```
 
 
-Ensimmäisen ja kolmannen dimension kuvassa näkyy pisteparven hajonta tärkeimmän
+Ensimmäisen ja kolmannen dimension kuvassa (Kuva 4.3) näkyy pisteparven hajonta tärkeimmän
 dimension ympärillä. Sarakepisteiden järjestys säilyy samana, samoin maapisteiden
 oikealta vasemmalle. Kaikki pisteet paitsi Vallonia hajoavat kolmannen akselin
 suuntaan. Belgian kahden pisteen (bB ja bF) eron havaitsee helposti, samoin Unkarin
@@ -307,7 +309,7 @@ plot(suppointCA3, dim = c(2,3),
 ```
 
 
-Toisen ja kolmannen dimension kartalla on esitetty noin viidesosa kokonaisinertiasta.
+Toisen ja kolmannen dimension kartalla (Kuva 4.4) on esitetty noin viidesosa kokonaisinertiasta.
 Tässäkin kuvassa Brysselin (bB) ja Unkarin pisteet ovat kontrastina Flanderin, 
 Bulgarian ja Tanskan pisteille.
 
@@ -316,7 +318,7 @@ kuvia. R-ympäristössä saa grafiikkaikkunaan tulostettua kolmiulotteisen kuvan
 jota voi käännellä ja katsoa eri kulmista. Näin saa paljon helpommin käsityksen
 kolmannen dimension hajonnasta.
 
-Tässä on tyydyttävä kahteen kuvakaappaukseen.
+Tässä on tyydyttävä kahteen kuvakaappaukseen (ks. alla kuvat 4.5 ja 4.6).
 
 
 ```{r 3dklippi1, echo=FALSE, fig.cap="Saksan ja  Belgian aluejako - 3d-kuva1", out.width = "90%",fig.align = "center"}

@@ -9,19 +9,19 @@ oleellisilta osin samat myös monimutkaisemmissa menetelmän sovelluksissa
 
 Greenacren oppikirjat ovat hyvä esimerkki
 perusteellisesta yksinkertaisen taulukon analyysin esitystavasta.
-@RefWorks:doc:5a857a43e4b0ed2d44664d75 ranskalaisen perinteen mukaisesti
+@RefWorks:doc:5a857a43e4b0ed2d44664d75 korostavat ranskalaisen perinteen mukaisesti
 matemaattista teoriaperustaa, mutta menetelmän peruskäsitteet ja tulkinnat
 esitellään yksinkertaisella esimerkillä. @RefWorks:doc:5a857a44e4b0ed2d44664d95
-käyttää samaa Fisherin Cairness-aineistoa korrespondenssianalyysin esittelyyn
+käyttää samaa Fisherin Cairness-aineistoa korrespondenssianalyysin esittelyyn.
 
-Esitän tässä jaksossa korrespondenssianalyysin peruskäsitteet intuitiivisesti,
+Esitän tässä luvussa korrespondenssianalyysin peruskäsitteet intuitiivisesti,
 matemaattiset yksityiskohdat löytyvät liitteestä 1. Kun taulukko on
 pieni, johtopäätökset voi helposti tarkastaa datasta. Datan analyysin tärkein
 väline on kuva, yleensä kaksiulotteinen kartta. Tulkinta ja erityisesti väärien
 johtopäätösten välttäminen vaati kartan tulkinnan varmistamista ratkaisun
-numeerisista tuloksista. Kun analysoitava taulukko, sen rivien ja sarakkeiden
+numeerisista tuloksista. Analysoitava taulukko, sen rivien ja sarakkeiden
 riippuvuuksia kuvaava kartta ja kartan perustana olevat numeeriset tulokset
-esitetään yhdessä, on helpompi ymmärtää tulkinnan perussäännöt.
+esitetään yhdessä. Näin tulkinnan perussäännöt on helpompi ymmärtää.
 
 @RefWorks:doc:5a857a43e4b0ed2d44664d75 esittävät tulkinnan perussäännöt hieman
 eri korostuksella kuin Greenacre (CAiP). Yhteistä on graafisen analyysin tärkeys,
@@ -43,7 +43,7 @@ kokonaisuudeksi, ja niitä analysoidaan yhdessä luvussa 7. Yhden taulukon analy
 esittelee menetelmän, oikeassa tutkimuksessa pitää käyttää vähintään koko
 kysymyssarjaa.
 
-Aineistosta on poistettu havainnot, joissa tieto vastauksesta puuttuu.
+Tässä tutkielmassa käytetystä aineistosta on poistettu havainnot, joissa tieto vastauksesta puuttuu.
 Taustamuuttujia ovat vastaajan sukupuoli ja ikä. Taulukoissa vastausvaihtoehtojen
 tunnuksina käytetään samoja symboleja kuin kuvissa (E = täysin eri mieltä,
 e = eri mieltä, ? = ei samaa eikä eri mieltä, s = samaa mieltä, S = täysin samaa
@@ -269,6 +269,7 @@ _rivi- ja sarakemassoiksi_.
 
 
 ```{r simpeCA-frekTa1, echo = FALSE}
+
 taulu2 <- ISSP2012esim1.dat %>% tableX(maa, Q1b, type = "cell_perc")
 knitr::kable(taulu2,digits = 2, booktabs = TRUE,
              caption = "Kysymyksen Q1b vastaukset, suhteelliset frekvenssit")
@@ -283,6 +284,7 @@ vastausten (havaintojen) summariveistä termiä "sample".
 
 
 ```{r simpeCA-rprosTa1, echo = FALSE}
+
 taulu3 <- ISSP2012esim1.dat %>% tableX(maa,Q1b,type = "row_perc")
 
 knitr::kable(taulu3,digits = 2, booktabs = TRUE,
@@ -293,6 +295,7 @@ knitr::kable(taulu3,digits = 2, booktabs = TRUE,
 Sarakeprosentit antavat toisen näkökulmaan samaan dataan.
 
 ```{r  simpeCA-cprosTa1, echo = FALSE}
+
 taulu4 <- ISSP2012esim1.dat %>% tableX(maa,Q1b,type = "col_perc")
 
 knitr::kable(taulu4,digits = 2, booktabs = TRUE,
@@ -437,7 +440,7 @@ poikkeava keskiarvorivistä paljon, samoin Bulgaria.
 Bulgarian massa on kuitenkin aineiston pienin (11,31 %), Tanskan taas
 kohtalainen (17 %).
 Sarakeprofiilikuvassa \@ref(fig:g1-2kuva1) täysin eri mieltä - vastaus (E) on
-selvästi erilainen ja sen massa on suuri (23%). Kaikki luvut ovat suhteellisia,
+selvästi erilainen ja sen massa on suuri (23 %). Kaikki luvut ovat suhteellisia,
 havaintojen lukumäärä ei vaikuta tulkintaan periaatteessa mitenkään.
 
 
@@ -477,7 +480,7 @@ deskriptiivistä data-analyysiä.
 
 
 Tunnusluku $\phi^{2}$ on korrespondenssianalyysissä _kokonaisinertia_ (total
-inertia). Se kuvaa, kuinka paljon varianssia taulukossa on ja on riippumaton
+inertia). Se kuvaa, kuinka paljon varianssia taulukossa on ja inertia on riippumaton
 havaintojen lukumäärästä. Tilastotieteessä tunnusluvulla on useita vaihtoehtoisia
 nimiä (esim. mean square contingency coefficient) ja sen neliöjuurta kutsutaan
 $\phi$ - kertoimeksi.
@@ -519,7 +522,7 @@ johon _inertia_ kuuluu.
 
 Rivi- ja sarakeprofiilien taulukoista huomaa, että keskiarvoprofiilien
 alkiot ovat massoja. Rivien keskiarvoprofiilin alkiot ovat sarakemassoja, ja sama
-pätee sarakkeille. Tämä rivi- ja sarakeongelmien duaalisuus on yksinkertaisen
+pätee riveille. Tämä rivi- ja sarakeongelmien duaalisuus on yksinkertaisen
 korrespondenssianalyysin keskeinen idea (CAiP, s. 57). Rivi- tai sarakeongelman
 ratkaisu tuottaa saman tuloksen.
 
@@ -527,7 +530,7 @@ Ratkaisun dimensio on sarakkeiden tai rivien lukumäärä vähennettynä yhdell�
 pienempi kahdesta vaihtoehdosta. Se on myös kokonaisinertian teoreettinen maksimi.
 
 Korrespondenssianalyysi on läheistä sukua pääkomponenttianalyysille. Etäisyysmitta on
-khii2-etäisyys (käytän tekstissä tätä kirjoitusasua) ja ovat massat ovat mukana
+khii2-etäisyys (käytän tekstissä tätä kirjoitusasua) ja tässä massat ovat mukana
 painoina. Ratkaisussa etsitään haluttu yleensä kaksiulotteinen ratkaisu (taso),
 joka minimoi pisteiden khii2-etäisyyksien poikkeamien summan eli
 on mahdollisimman lähellä pisteitä. Alkuperäisen täyden dimension (full space)
@@ -571,14 +574,14 @@ plot(simpleCA1, map = "symmetric", mass = c(TRUE,TRUE),
 Akselien prosenttimerkinnät kertovat, kuinka paljon aineiston inertiasta eli
 hajonnasta on kaksiulotteisessa projektiossa saatu kuvattua akseleille.
 
-Akselit ovat sisäkkäisiä (nested) Ensimmäinen akseli saa aina suurimman osan
+Akselit ovat sisäkkäisiä (nested). Ensimmäinen akseli saa aina suurimman osan
 inertiasta, tässä 76 prosenttia. Kun toinen akseli kuvaa 15 prosenttia koko inertiasta,
 on kartalla esitetty 91 prosenttia aineiston hajonnasta. Loput 9 prosenttia jää
 3. ja 4. dimensiolle. Nämä ”selitysosuudet” ovat samantapainen laskelma kuin
 perinteisen regressiomallin ”selitetty” vaihtelu ja ”jäännösvaihtelu”.
 
-Akselien tulkinta on korrespondenssianalyysin perustehtävä._Kontrastit_ määrittävät
-akselien tulkinnan. Benzacrin ohjeen mukaan ([@RefWorks:doc:5a857a43e4b0ed2d44664d75], s. 49)
+Akselien tulkinta on korrespondenssianalyysin perustehtävä. _Kontrastit_ määrittävät
+akselien tulkinnan. Benzacrin ohjeen mukaan ( @RefWorks:doc:5a857a43e4b0ed2d44664d75, s.49)
 katsotaan mitä on oikealla ja mitä vasemmalla. Akselien tulkinta perustuu siihen,
 mitä yhteistä on kaikilla elementeillä, jotka ovat origon vasemmalla puolella
 ja vastaavasti origon oikealla puolella. Samalla tavalla tulkitaan toinen akseli,
@@ -601,8 +604,8 @@ lievemmän tai maltillisemman erimielisyyden (e) ja muiden vastausten kanssa.
 Se on 1. dimension suuntaan kaikkein lähimpänä origoa. Hieman varovaisemmin
 akselin voi tulkita maltillisen ja jyrkemmän tai varmemman mielipiteen kontrastiksi.
 
-En jatkossa esitä kuvailevia akseleiden nimiä kuvissa, akseleiden tulkinta on
-analyysin ensimmäinen tehtävä.
+En jatkossa esitä kuvailevia akseleiden nimiä kuvissa, akseleiden tulkinta olisi
+kumminkin analyysin ensimmäinen tehtävä.
 
 Maiden vertailu tehdään näiden akselien suuntaan. Sekä sarakepisteiden että
 rivipisteiden keskinäiset välimatkat approksimoivat optimaalisesti niiden
@@ -647,7 +650,7 @@ lukumäärädataan (count data). Periaatteessa mikä tahansa data sopii, kunhan 
 voidaan järkevästi esittää suhteellisina lukumäärinä (relative amounts), siis
 suhdeasteikon (ratio scale) muuttujana. Tässä oleellista on tulkittavuus
 tutkimusongelman näkökulmasta. Välttämätön ehto on sama mittayksikkö: lukumäärä,
-rahayksikkö, pituusmitta kelpaavat. (CAiP s. 15). Taulukon lukujen on oltava
+rahayksikkö, pituusmitta kelpaavat (CAiP s. 15). Taulukon lukujen on oltava
 ei-negatiivisia (positiivisia, nolla sallittu).
 
 Rajat ovat joustavia, kun mukaan otetaan erilaiset uudelleenskaalaukset
@@ -660,15 +663,15 @@ tässä muodossa, menetelmää voi käyttää.
 
 ## Asymmetrinen kartta ja ideaalipisteet
 
-Symmetrisessä kartassa \@ref(fig:simpleCA1map1) molemmat pisteparvet on esitetty
+Symmetrisessä kartassa (Kuva \@ref(fig:simpleCA1map1)) molemmat pisteparvet on esitetty
 pääkoordinaateissa (principal coordinates) ikään kuin päällekkäin, samassa kuvassa.
 
 Toinen vaihtoehto on asymmetrinen kartta, jossa toinen pistejoukko esitetään
 standardikoordinaateissa ja toinen pääkoordinaateissa. Asymmetrisessä
-kartassa \@ref(fig:G1-3asymm2) sarakkeet on esitetty standardikoordinaateissa
+kartassa (Kuva \@ref(fig:G1-3asymm2)) sarakkeet on esitetty standardikoordinaateissa
 ja rivit pääkoordinaateissa.
 
-Sarakepisteitä kutsutaan ideaalipisteiksi, ne edustavat kuvitteellisia maita joissa
+Sarakepisteitä kutsutaan ideaalipisteiksi, ne edustavat kuvitteellisia maita, joissa
 kaikki vastaukset ovat samoja. Matemaattisesti kartalle projisoidut ideaalipisteet
 ovat (tässä esimerkissä) neliulotteisen avaruuden verteksin (monikulmion)
 kärkipisteitä. Rivipisteet ovat tämän verteksin sisällä.
@@ -716,11 +719,12 @@ kuva on käytännöllinen. Kyselytutkimusaineistoissa näin ei yleensä ole.
 
 ## Kontribuutiot kartalla
 
-Kartassa \@ref(fig:simpleCA1map1) on esitetty myös pisteiden massat. Tässä aineistossa
+Kartassa (Kuva \@ref(fig:simpleCA1map1)) on esitetty myös pisteiden massat. Tässä aineistossa
 pisteiden tai sarakesymbolien kokoerot eivät kovin selvästi erotu, mutta yleiskuvan
 ne kertovat.
 
-Rivipisteiden ja sarakkeiden _kontribuutiot_ voidaan myös esittämien värisävynä.
+Rivipisteiden ja sarakkeiden _kontribuutiot_ voidaan esittää kartalla
+värisävyinä.
 
 Kun kartalla pistejoukon inertia kuvataan akseleille, on jokaisella pisteellä oma
 osuutensa akseleiden kuvaamasta inertiasta. _Absoluuttinen kontribuutio_ kertoo rivin
@@ -867,25 +871,27 @@ yllättäen sen "...tulkinta on edelleen menetelmän kaikkein kiistanalaisin asp
 (CAiP s.295, @RefWorks:doc:5c768b09e4b02df9431e950a).
 
 
-Sarake- ja rivisteet esitetään siinä ikään kuin päällekkäin, samassa koordinaatistossa.
+Sarake- ja rivipisteet esitetään siinä ikään kuin päällekkäin, samassa koordinaatistossa.
 Niiden pääkoordinaatit ovat kuitenkin eri pistejoukoista tai avaruuksista. Asymmetrisessä
 kartassa pisteet ovat samassa avaruudessa, ja ero on Greenacren mukaan vain skaalaus.
 Asymmetrisessä kartassa standardikoordinaateissa esitetyt ideaalipisteet skaalataan
-pääakselien suunnassa vastaavilla pääakselien inertioiden neliöjuurilla. Siten pisteiden
-suuntavektorit niin pääkoordinaateissa kuin standardikoordinaateissa ovat lähes samat
-kun akselien inertioiden (principal inertias) neliöjuuret eivät ole liian erisuuruisia.
+pääakselien suunnassa vastaavilla pääakselien inertioiden neliöjuurilla.
+
+Kun akselien inertioiden (principal inertias) neliöjuuret eivät ole liian erisuuruisia,
+ideaalipisteiden suuntavektorit ovat lähes saman suuntaisia pääkoordinaateissa ja
+standardikoordinaateissa.
 
 Jos pääinertioiden neliöjuuret ovat hyvin eri suuruisia, tulkintaongelmia voi tulla, mutta
-niillä ei käytännössä ole merkitystä. Siksi hän pitää skaalausdebattia akateemisena
+niillä ei käytännössä ole merkitystä. Siksi Greenacre pitää skaalausdebattia akateemisena
 kiistana, käytännön sovelluksissa sillä ei ole merkitystä.
 @RefWorks:doc:5c754c6de4b0947789165cde kommentoi skaalausta perusteellisesti,
 kiista on ollut aika sitkeä mutta lienee laantunut.
 
-Symmetrinen kartta hyvä vaihtoehto, sillä asymmetrisessä kartassa skaalaus vie
+Symmetrinen kartta on hyvä vaihtoehto, sillä asymmetrisessä kartassa skaalaus vie
 ideaalipisteet usein kauas ja pääkoordinaateissa esitetyt pisteet pakkautuvat kuvan
 keskelle. Jos dataa tulkitaan asymmetrisesti kontribuutiokartta on
 hyvä vaihtoehto. Silloin rivipisteiden khii2-etäisyydet esitetään optimaalisesti
-ja sarakkeiden suuntavektoreille projisoiduilla pistellä on kaksoiskuva-tulkinta.
+ja sarakkeiden suuntavektoreille projisoiduilla pistellä on kaksoiskuvatulkinta.
 
 
 Greenacren mukaan kartoilla voi tavoitella kolmea eri asiaa. Kuvassa voi esittää
@@ -894,7 +900,7 @@ etäisyydet. Jälkimmäinen on kaksoiskuvien (biplot) ns. skalaaritulo-ominaisuu
 Rivi- ja sarakepisteen skalaaritulo "palauttaa" alkuperäisen datan, tässä
 tapauksessa taulukon solun.
 
-Näistä vain kaksi voidaan optimaalisesti esittää yhtä aikaa.
+Edellä mainituista tavoitteista vain kaksi voidaan optimaalisesti esittää yhtä aikaa.
 
 _Symmetrisessä kartassa_ khii2-etäisyydet rivipisteiden välillä ja sarakepisteiden
 välillä esitetään optimaalisesti. Rivi- ja sarakepisteiden välisiä etäisyyksiä ei
@@ -918,7 +924,7 @@ yhteyden ratkaisualgoritmiin, singulaariarvohajotelmaan.
 
 
 Koordinaattien yhteys voidaan esittää kahtena yksinkertaistettuna kaavana
-( @RefWorks:doc:5b8175eee4b08da192f99a35, s.174 ):
+(@RefWorks:doc:5b8175eee4b08da192f99a35, s.174):
 
 \begin{equation}
   pääkoordinaatit = standardikoordinaatit \times \sqrt{pääakselien \: inertiat}

@@ -3,7 +3,7 @@
 
 Korrespondenssianalyysi on deskriptiivinen data-analyysin menetelmä, joka
 soveltuu erityisesti luokitteluasteikon muuttujien yhteyksien analyysiin.
-Yksinkertainen esimerkki on kahden luokittelumuuttuja taulukko. Yksinkertainen
+Yksinkertainen esimerkki on kahden luokittelumuuttujan taulukko. Yksinkertainen
 korrespondenssianalyysi esittää taulukon rivien ja sarakkeiden riippuvuuden
 graafisesti, kaksiulotteisena karttana. Kahden muuttujan analyysin perusideat
 soveltuvat myös useamman muuttujan yhteyksien kuvaamiseen.
@@ -85,8 +85,8 @@ kirjat. Suomessa korrespondenssianalyysi esitellään ainakin kahdessa oppikirja
 
 
 Korrespondenssianalyysi ja koulukunta syntyi ja vakiintui Ranskassa Jean - Paul Benzecrin
-(1932-2019) ympärille 60-luvulla.  70-luku oli “loistavan eristyksen” aikaa,
-“Analyse des Donnees” -liikkeen kultainen kausi Ranskassa mutta ei muualla.
+(1932-2019) ympärille 60-luvulla. Ranskassa 70-luku oli “Analyse des Donnees” -liikkeen
+kultainen kausi. Kansaivälisesti se oli kuitenkin “loistavan eristyksen” aikaa.
 Vasta 80-luvulla menetelmä ylitti kielimuurin, ehkä osittain menetelmää
 soveltaneen sosiologi Pierre Bourdieun kansainvälisesti tunnettujen tutkimusten
 ansiosta. Benzecrin oppilaista Greenacre on oppikirjoillaan vaikuttanut paljon
@@ -101,19 +101,19 @@ valaisevat ranskaa taitamattomalle data-analyysin koulukunnan ideoita.
 Kirjassa esitellään myös perusteellisesti muutama empiirinen tutkimus.
 
 
-Tarina on kiinnostava ja tärkeäkin osa tieteenhistoriaa, mutta eristys on päättynyt. 
+Eristys on päättynyt, ja tarina on kiinnostava osa tieteenhistoriaa.
 
 ## Tutkielman rakenne
 
 
 Datan esittelyn jälkeen esitellään korrespondenssianalyysin peruskäsitteet
-yksikertaisen esimerkinavulla luvussa 3. 
+yksikertaisen esimerkin avulla luvussa 3. 
 
 Luvuissa 4 - 5 analyysiin lisätään täydentäviä pisteitä tulkinnan tueksi
 ja muodostetaan luokittelumuuttujien yhteisvaikutusmuuttujia (ikä ja sukupuoli).
 
 
-Kolmen muuttujan yhteisvaikutusmuuttujan (maa, sukupuoli ja ikäluokka) analyysi
+Kolmen yhteisvaikutusmuuttujan (maa, sukupuoli ja ikäluokka) analyysi
 tehdään osajoukon korrespondenssianalyysillä luvussa 6.
 
 
@@ -124,10 +124,8 @@ aineistojen yleiseen ongelmaan, puuttuviin tietoihin. Menetelmällä tutkitaan
 _yhden muuttujajoukon sisäisiä yhteyksiä_.
 
  
-Luvussa 8 kerrotaan, mistä alettiin ja mitä tuloksia saatiin.
-
-
-Tutkielmassa on kolme liitettä.
+Luvussa 8 sisältää yhteenvedon. Varsinaisten kahdeksan luvun lisäksi tutkielmassa
+on kolme liitettä.
 
 
 Liite 1 esittelee tiiviisti menetelmän teorian.
@@ -135,11 +133,11 @@ Korrespondenssianalyysin numeerisia tuloksia havainnollistetaan kuvalla, ja
 monimuuttujakorrespondenssianalyysin (MCA) käsitteitä esitellään hieman enemmän.
 MCA:n teoriaa ei käsitellä laajemmin, mutta tulkinnan ongelmat esitellään lyhyesti.
 
-Tutkielma on tehty R-tilastohjelmalla, ja korrespondenssianalyyseissä on käytetty
+Tutkielma on tehty R-tilasto-ohjelmalla, ja korrespondenssianalyyseissä on käytetty
 ca-pakettia( @ca2007 ).  
 
 Tutkielman koodi on julkaistu Github-palvelussa (https://github.com/hirjus/capaper),
-samoin tutkielman käsikirjoitus ( https://hirjus.github.io/capaper/  )
+samoin tutkielman käsikirjoitus (https://hirjus.github.io/capaper/ )
 ja alustava data-analyysi.
 
 Tekninen ympäristö on kuvattu tarkemmin liitteessä 2, myös sen ongelmat.
@@ -150,13 +148,12 @@ Liitteessä 3 on listattu tutkielman R-koodi.
 
 Tutkielman tärkein lähde on [@RefWorks:doc:5a857a43e4b0ed2d44664d78] (jatkossa CAiP),
 ja muitakin saman tekijän artikkeleita on käytetty paljon. Kevään 2017
-kurssimateriaali[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca] ja laskuharjoitusten koodi
+kurssimateriaali [@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca] ja laskuharjoitusten koodi
 on ollut hyödyllinen pikaopas peruskäsitteisiin ja r-toteutuksen ratkaisuihin.
 
-Carme-verkoston kolmas artikkelikokoelma[@RefWorks:doc:5ab76b43e4b003f4468d1f07]
+Carme-verkoston kolmas artikkelikokoelma [@RefWorks:doc:5ab76b43e4b003f4468d1f07]
 on ajantasainen perusteos. Perusteelliset artikkelit kattavat myös
 korrespondenssianalyysin tärkeimmät aiheet.
-
 
 
 Data on ensin luettava ohjelman ymmärtämään muotoon, ja erilaiset muunnokset kannattaa

@@ -1,7 +1,7 @@
 # Monimuuttujakorrespondenssianalyysi (MCA)
 
 Usean muuttujan samanaikainen analyysi voidaan korrespondenssianalyysissä
-jakaa kahteen erialaiseen tutkimusasetelmaan.  Ensimmäisessä tutkitaan kahden
+jakaa kahteen erilaiseen tutkimusasetelmaan.  Ensimmäisessä tutkitaan kahden
 erilaisen muuttujaryhmän välisiä suhteita, toisessa yhden homogeenisen
 muuttujaryhmän sisäisiä suhteita.
 
@@ -25,12 +25,14 @@ kaikki aineiston havainnot ja useita vastausmuuttujia, puuttuvat tiedot ovat
 mukana yhtenä luokittelumuuttujan arvona.
 
 Yksinkertaisen korrespondenssianalyysin yleistys usean muuttujan samanaikaiseen
-analyysiin ei ole aivan yksikertainen asia. Silti MCA toimii käytännössä usein
-hyvin juuri kyselytutkimusten analyysissä. Vaikka geometrinen tulkinta ei ole
-läheskään niin selkeä kuin yksinkertaisessa korrespondenssianalyysissä,
-skaalaustulkinta on pätevä. MCA-kartat esittävät luokittelumuuttujien arvot
-optimaalisesti, kartalla esitettyjen havaintopisteiden hajonta on maksimaalinen
-[@RefWorks:doc:5a857a44e4b0ed2d44664d84 , s. 447, kts. myös Liite 1].
+analyysiin ei ole aivan yksikertainen asia. Geometrinen tulkinta ei ole
+läheskään niin selkeä kuin yksinkertaisessa korrespondenssianalyysissä. 
+Silti MCA toimii käytännössä usein hyvin juuri kyselytutkimusten analyysissä. 
+MCA-kartat esittävät luokittelumuuttujien arvot kartalla optimaalisesti. 
+Jokainen rivipiste (havainto) sijoittuu kartalle valitsemiensa 
+vastausvaihtoehtojen keskiarvopisteeseen. MCA-kartalla nämä luokittelumuuttujien
+arvoja vastaavat sarakepisteet maksimoivat rivipisteiden hajonnan
+kartalla [@RefWorks:doc:5a857a44e4b0ed2d44664d84 , s. 444-445].
 
 
 ## Pinotut ja yhdistetyt taulukot
@@ -45,7 +47,7 @@ ja yhden taustamuuttujan parittaisten suhteiden analyysiä, yksi pari kerrallaan
 Pierre Bourdieun tunnettu tutkimus La Distiction (1979) sovelsi tätä menetelmää.
 Ranskan väestö luokitellaan ammattiryhmiin ja taulukoidaan useiden elämäntapaa
 kuvaavien muuttujien kanssa. Taulukot yhdistetään pinoamalla ne
-päällekkäin ( @RefWorks:doc:5ab76b43e4b003f4468d1f07 , s.21).
+päällekkäin (@RefWorks:doc:5ab76b43e4b003f4468d1f07 , s.21).
 
 
 ```{r stackedimg1, out.width='50%', echo=FALSE, fig.align='center',fig.cap='Pinotut ja yhdistetyt taulut - periaate'}
@@ -125,7 +127,7 @@ plot(Concat1jh.CA1,
 ```
 
 
-Tulkinta ei muutu, eikä maapisteiden sijaintikaan.
+Kuvassa 7.2 on esitetty pinotun taulukon kartta. Tulkinta ei muutu, eikä maapisteiden sijaintikaan.
 
 Koko aineiston kartassa ikäluokkapisteet ja sukupuolipisteet ovat pakkautuneet
 maapisteitä tiiviimmin origon ympärille. Ikäluokkapisteiden (koko aineiston
@@ -146,7 +148,7 @@ ovat yhtä vaatimattomia kuin Belgian (28) ja Saksan (29),
 ikäryhmällä (a1) jolla 2. dimension selittää lähes puolet sen inertiasta (470).
 En esitä numeerisia tuloksia tarkemmin.
 
-Karttaa \@ref(fig:concat1map1) voi verrata karttaan \@ref(fig:gaCA1map) jossa on esitetty iän ja sukupuolen yhteisvaikutusmuuttuja. Pinottu taulu on vaihtoehtoinen tapa, ja kartasta 
+Karttaa \@ref(fig:concat1map1) voi verrata karttaan \@ref(fig:gaCA1map), jossa on esitetty iän ja sukupuolen yhteisvaikutusmuuttuja. Pinottu taulu on vaihtoehtoinen tapa, ja kartasta 
 \@ref(fig:concat1map1) voi päätellä samat asiat: miehet ovat konservatiivisempia
 kuin naiset, iäkkäämmät ovat konservatiivisempia kuin nuoret. Nuorin ikäluokka
 poikkeaa muista.
@@ -178,7 +180,7 @@ plot(Concat1jh.CA1, map = "rowgreen",
 
 ```
 
-Kontribuutionkartan sarakkeista E-sarake (täysin eri mieltä) määrittää akseleita
+Kontribuutionkartan (Kuva 7.3) sarakkeista E-sarake (täysin eri mieltä) määrittää akseleita
 vahvasti, kontrastina kaksi konservatiivista vastausta (S ja s) ja myös
 neutraali vaihtoehto (e). Numeeriset tulokset kertovat, että ikäluokat
 vaikuttavat juuri ensimmäiseen tärkeimpään dimensioon.
@@ -208,7 +210,7 @@ Matriiseilla on samat rivit ja sarakkeet, esimerkiksi miesten ja naisten
 vastausprofiilit yhteen kysymykseen maittain luokiteltuina. Kokonaisinertia
 saadaan dekomponoitua ryhmien sisäiseen ja väliseen hajontaan kahdelle kartalle.
 Toinen kuvaa maiden välisiä eroja ja toinen maiden sisäisiä sukupuolten välisiä
-eroja (CAiP ss. 177-)
+eroja (CAiP ss. 177-).
 
 
 ## Monimuuttujakorrespondenssianalyysi (MCA)
@@ -224,11 +226,11 @@ sarakkeet ovat luokittelumuuttujan arvoja (kategorioita) ja rivit yksittäisiä
 vastausprofiileja. Profiilissa on rivi nollia ja ykkösiä, 1 valitun vaihtoehdon
 sarakkeessa.
 
-En tässä jaksossa esitä numeerisia tuloksia, niiden tutkimisella voi jatkaa
+En tässä jaksossa esitä numeerisia tuloksia, mutta niiden tutkimisella voi jatkaa
 analyysiä.
 
 Tavoite on tutkia seitsemän kysymyksen vastausvaihtoehtojen yhteyksiä,
-miten ne asettuvat kaksiulotteiselle kartalle. Aikaisemmissa jaksoissa etsittiin
+miten ne asettuvat kaksiulotteiselle kartalle. Aikaisemmissa luvuissa etsittiin
 yhteyksistä uusia piirteitä ja tarkennettiin analyysiä. Nyt hahmotetaan ison
 aineiston muuttujien välisiä yhteyksiä ja erityisesti puuttuvien tietojen ongelmaa.
 
@@ -501,7 +503,7 @@ plot.mjca(Qmuuttujat1.mca, labels = c(1,2),
 
 ```
 
-Inertian selitysosuudet ovat paljon pienempiä, ja ratkaisu
+Kuvasta 7.4 nähdään, että inertian selitysosuudet ovat paljon pienempiä, ja ratkaisu
 on selvästi kaksiulotteinen. Puuttuvat vastaukset erottuvat omana ryhmänä, ja
 varsinaiset vastaukset ovat pakkautuneet y-akselin oikealle puolelle. Niiden erot
 näkyvät vain toisessa dimensiossa. Ensimmäinen dimensio kuvaa vastaamattomuutta,
@@ -526,7 +528,7 @@ plot.mjca(Qmuuttujat1.mca, what = c("all","all"),labels = c(0,2),
 
 ```
 
-Jokainen havainto on sarakevektoreiden keskiarvopiste. Sarakevektoreita ei voi
+Kuvassa 7.5 jokainen havainto on sarakevektoreiden keskiarvopiste. Sarakevektoreita ei voi
 tulkita yhtä selkeästi kuin yksinkertaisessa korrespondenssianalyysissä. Ne eivät
 edusta kysymystä vaan kysymyksen yhtä vastauskategoriaa.
 
@@ -540,7 +542,7 @@ kysymykseen on jätetty vastaamatta.
 
 Osajoukon MCA sopii hyvin sekä puuttuvien tietojen että täydellisten vastausten
 analyysiin. Asymmetrisessä kartassa sarakkeet skaalautuvat pois origosta, ja
-näkyvät paremmin. Kuvaan on piirretty havaintopisteet, joista voi hahmottaa
+näkyvät paremmin. Kuvaan 7.6 on piirretty havaintopisteet, joista voi hahmottaa
 havaintojen sijoittumista kartalla.
 
 
@@ -631,7 +633,7 @@ mukaisesti näiden välisellä kaarevalla linjalla (Guttman-efekti).
 
 
 @RefWorks:doc:5a857a43e4b0ed2d44664d7c (s. 139-) analysoi lähes samoja kysymyksiä
-ISSP-datalla 2002. Tulokset ovat hyvin samantapaisia. Karttaa \ref(fig:subsetMCA1map3)
+ISSP-datalla 2002. Tulokset ovat hyvin samantapaisia. Karttaa \@ref(fig:subsetMCA1map3)
 vastaavan kuvan jatkoanalyysi on vasemman yläkulman pisteiden tarkempi analyysi.
 Greenacre havaitsee, että nämä neutraalit ja maltilliset vastaukset eivät ole
 hyvin esitettyjä kaksiulotteisella kartalla, vaan ne karkaavat korkeampiin

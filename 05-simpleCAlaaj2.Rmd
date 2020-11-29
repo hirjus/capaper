@@ -2,12 +2,12 @@
 
 Yksinkertaisin tapa tutkia taustamuuttujien yhteisvaikutuksia on yhdistää kaksi
 muuttujaa uudeksi luokittelumuuttujaksi (“interactive coding”). Miehet ja naiset
-on luokiteltu kuuteen ikäluokkaan (1=15-25, 2 =26-35, 3=36-45, 4=46-55, 5=56-65,
+on seuraavaksi luokiteltu kuuteen ikäluokkaan (1=15-25, 2 =26-35, 3=36-45, 4=46-55, 5=56-65,
 6= 66 tai vanhempi). 
 
 Poikkileikkausaineistossa vastaajan ikä kertoo myös ikäluokan (kohortin).
 Vastaajat ovat kokeneet kaksi suurta mullistusten vuotta elämänsä eri vaiheissa.
-Kaksin nuorinta ikäluokka on ollut 1990 alle 14-vuotiaita ja vanhin ikäluokka
+Kaksi nuorinta ikäluokkaa on ollut 1990 alle 14-vuotiaita ja vanhin ikäluokka
 yli 44-vuotiaita. Finanssikriisin vuonna 2008 toiseksi nuorin ikäluokka on ollut
 22-31 vuotiaita, ja kaksi vanhinta yli 51-vuotiaita. Pelkän ikävaikutuksen
 analyysi edellyttäisi vähintään kahden aineiston yhdistämistä.
@@ -16,8 +16,8 @@ Kolmen muuttujan yhteisvaikutusmuuttajaan yhdistän vastaajan maan.
 myös maa. Käytännössä kolmen luokittelumuuttujan yhdistäminen tekee taulukosta
 jo huteron, joissain soluissa havaintojen määrä pienenee. Kaikissa
 soluissa on sentään viisi havaintoa tai enemmän. Pienten massojen profiilien ja harvinaisten
-kategorioiden vaikutukset on kuitenkin arvioitava, ne voivat joskus mutta onneksi
-harvoin määrittää sitä liikaa.
+kategorioiden vaikutukset on kuitenkin arvioitava, ne voivat joskus, mutta onneksi
+harvoin, määrittää sitä liikaa.
 
 ## Ikä ja sukupuoli
 
@@ -85,7 +85,7 @@ Ikäjakauma painottuu kaikissa maissa jonkin verran vanhempiin ikäluokkiin.
 Nuorempien ikäluokkien osuus on (alle 26-vuotiaat ja alle 26-35 - vuotiaat)
 varsinkin Bulgariassa (BG) ja Unkarissa (HU) pieni.
 
-Ikäluokilla on luonnollinen järjestys, niiden pisteet voi yhdistää nuorimmasta
+Ikäluokilla on luonnollinen järjestys, niiden pisteet voidaan yhdistää nuorimmasta
 vanhimpaan.
 
 ```{r CAlaaj2-ga, echo=FALSE}
@@ -149,7 +149,7 @@ lines(gaTestCA1.rpc[7:12,1],gaTestCA1.rpc[7:12,2], col = "red")
 Ratkaisu on melko yksiulotteinen, ensimmäinen dimensio kuvaa 87 prosenttia
 kokonaisinertiasta. Dimensioiden tulkinta on suurin piirtein sama kuin 
 edellisissä kartoissa, mutta S-sarake on kiusallisesti s-sarakkeen vasemmalla
-puolella. Numeerisista tuloksista näkee, että sarakkeiden s ja E osuus
+puolella. Numeerisista tuloksista näkee (ks. tuloste alla), että sarakkeiden s ja E osuus
 kokonaisinertiasta (sarake inr) on 768. Niiden kontribuutio x-akselille on
 yhteensä vielä suurempi (849). Muut sarakkeet taas kontribuoivat y-akselin
 inertiaan, mutta sen osuus kokonaisinertiasta on vain 9 prosenttia. Kun sarakkeet
@@ -186,7 +186,7 @@ erot mielipiteissä ovat paljon suurempia kuin sukupuolten väliset maiden sisä
 ## Ikä, sukupuoli ja maa
 
 Ikäluokan, sukupuolen ja maan yhteisvaikutusmuuttuja lisää kuvapisteiden
-määrää. Kuvasta saa jotenkin selvää, kun sen suurentaa mutta pisteitä on selvästi
+määrää. Kuvasta \@ref(fig:maagaCA1map1) saa jotenkin selvää, kun sen suurentaa mutta pisteitä on selvästi
 liikaa. Joitain muuttujien nimiä voisi lyhentää, kuva-alaa voisi rajata joihinkin
 osiin mutta osajoukon korrespondenssianalyysi tarjoaa pätevimmän vaihtoehdon.
 
@@ -213,8 +213,7 @@ maagaCA1 <- ca(~maaga + Q1b,ISSP2012esim1b.dat)
 ```{r maagaCA1map1,echo=FALSE, fig.cap = "Q1b: ikäluokka ja sukupuoli maittain",fig.asp = 1, out.width = "90%",fig.align = "center"}
 
 par(cex = 0.5)
-plot(maagaCA1, main = "symmetrinen kartta 1",
-                sub = "cex=0.5")
+plot(maagaCA1, main = "symmetrinen kartta 1" )
 
 ```
 
@@ -228,7 +227,7 @@ akselilla maltillisia ja neutraaleja ovat karkeasti Suomen pisteet ja lähes
 kaikki Saksan ja Belgian pisteet. Eri maiden osajoukkojen suhteita on hankalampi
 hahmottaa, erityisesti kartan oikealla laidalla.
 
-Numeeristen tulosten taulukko on pitkä, mutta kartan informaatio pitää varmistaa.
+Numeeristen tulosten taulukko on pitkä (ks. alle), mutta kartan informaatio pitää varmistaa.
 Numeeriset tulokset eivät ole pelkkää diagnostiikkaa ja kartan esittämien
 riippuvuuksien varmistamista. Niistä näkee myös tarkemmin mahdolliset kiinnostavat
 piirteet datassa. Regressiomallien tulosten raporteissa diagnostiikka on usein
@@ -247,7 +246,8 @@ summary(maagaCA1)
 
 ```
 
-Sarakkeet on kohtalaisen hyvin esitetty, heikoimmin neutraali vaihtoehto (qlt = 535).
+Tuloksista nähdään, että sarakkeet on kohtalaisen hyvin esitetty, heikoimmin
+neutraali vaihtoehto (qlt = 535).
 Kun sen suhteellinen kontribuutio (cor) on vain 1 toisella dimensiolla jää
 loppuosa x-akselille. Maltillisuuden dimensiota määrittää e-sarake (ctr = 646),
 ja vain sitä. Ensimmäistä dimensiota määrittää vahvimmin E-sarake (ctr = 645)
@@ -274,11 +274,11 @@ datan suhde johonkin perusjoukkoon (CAiP, s. 225).
 
 Korrespondenssianalyysiä ja erityisesti khii2- etäisyysmittaa on arvosteltu siitä,
 että se on liian herkkä harvinaisille luokittelumuuttujan arvoille.
-Yhteenvetoartikkelissan @RefWorks:doc:5c768b09e4b02df9431e950a tarttuu ”vaikuttavien
+Yhteenvetoartikkelissaan @RefWorks:doc:5c768b09e4b02df9431e950a tarttuu ”vaikuttavien
 poikkeavien havaintojen myyttiin”, ja pitää sitä lähes aina perusteettomana.
 
 Harvinaiset kategoriat ovat usein kartalla kaukana origosta, mutta jokaisella
-pisteellä on massa ja näillä ”outlayereilla” se on pieni. Niinpä niiden
+pisteellä on massa ja näillä poikkeavilla havainnoilla (outlier) se on pieni. Niinpä niiden
 vaikutuskin on vaatimaton.
 
 Harvinaisten kategorioiden vaikutus voi olla suuri, joten numeerisista

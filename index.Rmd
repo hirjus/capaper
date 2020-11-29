@@ -1,7 +1,7 @@
 ---
 title: "Korrespondenssianalyysi - graafinen ja geometrinen data-analyysin menetelmä"
 author: "Jussi Hirvonen"
-date: "Versio 2.0, tulostettu `r Sys.Date()`"
+date: "Versio 2.1, tulostettu `r Sys.Date()`"
 output: pdf_document
 description: Tutkielma korrespondenssianalyysistä graafisena data-analyysin menetelmänä.
 documentclass: book
@@ -25,7 +25,7 @@ options(tinytex.verbose = TRUE)
 
 ```
 
-**29.11.2020 Oikoluettu valmis versio**
+**29.11.2020 Oikoluettu valmis versio - versio 2.1 viimeiset korjaukset**
 
 **Tämä luku poistetaan kun tutkielma on valmis**
 
@@ -36,14 +36,6 @@ ja pdflatex -> xelatex (15.11.20). PDF-tulostus kaatuu **luultavasti** koodilist
 Pandoc ei osaa rivittää koodia oikein tms. Koodilistauksen poistaminen ei auta, syystä tai toisesta.
 
 **Suunnitelma: PDF html-raportista -> pdfExchange-ohjelmalla sivunumerot ja kansilehdet**
-
-**22.11.2020 luonnos kansilehdeksi, sisällysluetteloksi ja tiivistelmän aihio**
-
-(https://hirjus.github.io/capaper/GraduKansilehti1.pdf)
-(https://hirjus.github.io/capaper/wordTOC.pdf)
-(https://hirjus.github.io/capaper/GtiivisTesti1.pdf)
-
-Tiivistelmästä löytyy uudempi pohja, jota käytetään.
 
 
 RefWorksistä tuotu jhca2020.bib-tiedosto tarkistettu ja korjailtu virheet. Ei enään ladata uutta (21.11.2020),

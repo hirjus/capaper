@@ -39,7 +39,7 @@ sopivan dimension vektori, jonka alkiot ovat ykkösiä.
 Korrespondenssianalyysin ratkaistaan singulaariarvohajotelman
 (singular value decomposition, SVD) avulla.
 
-Singulaariarvohajotelma tuottaa ratkaisun kun
+Singulaariarvohajotelma tuottaa ratkaisun, kun
 sitä sovelletaan standardoituun residuaalimatriisiin $\boldsymbol{S}$.
 
 \begin{equation}
@@ -84,7 +84,7 @@ s_{ij} = \sqrt{r_{i}} \left( \frac{p_{ij}}{r_{i}c_{j}} \right) \sqrt{c_{j}} \;\;
 Alkiomuodossa esitetyistä kaavoista näkee rivi- ja sarakeratkaisujen sidoksen.
 Ratkaisujen duaalisuus on teoreettinen tulos, jonka voi perustella täsmällisesti
 algebrallisen geometrian avulla. Käytännössä rivi- ja sarakeongelman duaalisuus
-tarkoittaa sitä, että vain toinen ongelma on ratkaistava
+tarkoittaa sitä, että vain toinen ongelma on ratkaistava.
 
 Singulaariarvohajotelma matriisille $\boldsymbol{S}$ on
 
@@ -215,7 +215,7 @@ yhdistää barysentrinen painotetun keskiarvon riippuvuus, mutta mukana ovat ska
 
 **Pisteet ja projektio aliavaruuteen**
 
-Kuva on kurssimateriaaleista[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca].
+Kuva on kurssimateriaaleista [@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca].
 
 ```{r projectionimg1, out.width='70%', echo = F, fig.align='center',fig.cap='Pisteen projektio aliavaruuteen'}
 

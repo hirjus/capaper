@@ -245,3 +245,9 @@ tulkinta epäselvä.
 
 **29.11.2020 Versio 1.5** Oikoluettu luvut 1-4.
 **29.11.2020 Versio 2.0** Oikoluettu kaikki - valmis versio.
+**29.11.2020** Tehdään "tulostusversio" ilman sisällysluetteloa ja muita tietoja.
+Vaidetaan index.Rmd, _output.yml , päivitetään ja tulostetaan
+pdf-tiedosto. Palautetaan alkuperäiset index.Rmd ja yml-tiedosto takaisin.
+Tehtiin työasemassa paikallisesti, ei päivityksiä githubiin.
+
+**29.11.2020 Versio 2.1Viimeiset muutokset ja korjaukset.** 

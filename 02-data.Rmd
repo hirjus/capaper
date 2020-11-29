@@ -943,7 +943,7 @@ toteutusten dataa on käytetty tutkielman tärkeimmissä lähteissä esimerkkida
 Länsi-Saksan ja USA:n tutkimuslaitosten yhteistyö vakiintui ISSP-organisaatioksi
 1984 (http://www.issp.org). Vuonna 2015 neljän perustajajäsenen joukko oli kasvanut 49 maahan.
 Vertailevan tutkimuksen aineistoja on kerätty monista teemoista, perhearvoista
-ja naisten työmarkkina-asemasta neljä kertaa (1988, 1994,2002,2012).
+ja naisten työmarkkina-asemasta neljä kertaa (1988, 1994, 2002, 2012).
 USA:n edustajana mukana ollut Tom W. Smith näkee aineistojen arvon juuri
 kansainvälisessä vertailevassa tutkimuksessa. Järjestön julkaisuluettelossa oli
 2012 yli 5200 julkaisua. Viime vuosina luetteloon on lisätty noin 400 julkaisua
@@ -957,7 +957,7 @@ löytyvät Tampereen yliopiston Aila-tietoarkistosta
 (https://services.fsd.uta.fi/catalogue/FSD2820?tab=summary&study_language=fi).
 
 GESIS-instituutin ”datakatalogista”(https://zacat.gesis.org) 
-löytää kätevästi kaiken dokumentaation ja datan[@RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a],
+löytää kätevästi kaiken dokumentaation ja datan [@RefWorks:doc:5b6c7f6ce4b0e4e15164ab1a],
 mutta edes saksalaiset eivät voi estää www-sivustojen innokkaita uudistajia.
 Monet linkit lähdeluettelossa vievät GESIS-arkistosivulle,
 josta löytyy pitkä lista pdf-dokumentteja.
@@ -1003,12 +1003,12 @@ suunnittelun ideat kerrotaan omassa raportissa [@RefWorks:doc:5f9439fde4b0474178
 
 ## Aineiston rajaaminen
 
-Olen valinnut laajasta aineistosta 25 maata ja joukon muuttujia. Maat on valittu
+Olen rajannut laajasta aineistosta 25 maata ja joukon muuttujia. Maat on valittu
 niin, että ne ovat suhteellisen samankaltaisia ja valitut muuttujat ovat niissä
 samanlaisia. Kysymyksissä on jonkin verran pieniä eroja, mutta joissain
 tapauksissa ero on merkittävä. Esimerkiksi Espanja on jostain syystä jättänyt
 tässä käytetyistä muuttujista ns. neutraalin (”en samaa enkä eri mieltä”)
-vastausvaihtoehdon pois, joten Espanja jää pois.
+vastausvaihtoehdon pois, joten jätin Espanjan pois tutkielmani analyyseistä.
 
 Substanssimuuttujat ovat yksi ”kysymyspatteri”, jolla luodataan asenteita
 naisten roolista työmarkkinoilla. Aiheen pysyvää ajankohtaisuutta kuvaa hyvin
@@ -1093,18 +1093,16 @@ Tutkimuksen kohdeperusjoukko on 18-vuotiaat tai sitä vanhemmat,
 poikkeuksina Suomi (15 - 74 vuotiaat), Islanti, Japani, Etelä-Afrikka ja Venezuela.
 
 Jos ohitetaan pienet erot kysymyksissä ja vastausvaihtoehdoissa jäljelle jää
-erävastauskato, kyselytutkimusten ominaisuus. Monista eri syistä joihinkin kysymyksiin
+erävastauskato. Erävastauskadolla tarkoitetann tilannetta, jossa joihinkin kysymyksiin
 ei vastata. Esimerkiksi Ranskassa yli 20 prosenttia kieltäytyi vastaamasta lasten
-lukumäärää kysyttäessä (HHCHILDR), ja aika moni myös muissa perherakenteeseen
-liittyvissä kysymyksissä. Tässä tutkielmassa monimuuttujakorrespondenssianalyysiä
-käytetään tämän ongelman tai datan ominaisuuden analyysiin.
+lukumäärää kysyttäessä (HHCHILDR), ja aika moni kieltäytyi vastaamasta myös muihin perherakenteeseen liittyviin kysymyksiin. Tässä tutkielmassa monimuuttujakorrespondenssianalyysiä käytetään puuttuneisuuden analyysiin.
 
 Poistin aineistosta havainnot, joissa tieto iästä tai sukupuolesta puuttuu
 (32969-32823 = 146 havaintoa).
 
 Aineiston luokittelu- ja järjestysasteikon muuttujat muunnetaan R-ohjelmiston
 factor-tietotyypiksi. Teen muunnokset useammassa vaiheessa heti kun data on
-luettu SPSS-tiedosta. Käsittelyssä koitan noudattaa helposti toistettavan
+luettu SPSS-tiedosta. Käsittelyssä pyrin noudattamaan helposti toistettavan
 tutkimuksen periaatteita [@RefWorks:doc:5c3759c2e4b0085b307c82b5]. 
 Koodi ei saisi olla kovin virhealtista (”haurasta”) ja tarkistuksia tehdään
 paljon. Data-analyysin ja ehkä erityisesti korrespondenssianalyysin idea on
@@ -1117,12 +1115,12 @@ Analyysivaiheessa koodi muuttuu hauraammaksi.
 
 
 Michael Greenacre on käyttänyt aineistoa eri vuosilta luentomateriaaleissa kuten
-Helsingissä 2017[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca] ja ainakin kahdessa
-oppikirjassaan([@RefWorks:doc:5a857a43e4b0ed2d44664d7c],
+Helsingissä 2017 [@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca] ja ainakin kahdessa
+oppikirjassaan ([@RefWorks:doc:5a857a43e4b0ed2d44664d7c],
 [@RefWorks:doc:5a857a43e4b0ed2d44664d78]).
-ISSP - aineisto vuodelta 1989 on käytetty myös neljän singulaariarvohajoitelmaan
-perustuvan menetelmän vertailuun[@RefWorks:doc:5b6f159ce4b0bc0f31734b76]. Blasius
-ja Thiessen ([@RefWorks:doc:5b15542ee4b0e2616bc42dca]) arvioivat aineiston laatua
+ISSP - aineistoa vuodelta 1989 on käytetty myös neljän singulaariarvohajoitelmaan
+perustuvan menetelmän vertailuun [@RefWorks:doc:5b6f159ce4b0bc0f31734b76]. Blasius
+ja Thiessen [@RefWorks:doc:5b15542ee4b0e2616bc42dca] arvioivat aineiston laatua
 ja maiden vertailtavuutta vuoden 1994 aineistolla.
 
 Sukupuoliroolien (gender roles) ja niihin liittyvien asenteiden vertailevaa
@@ -1136,8 +1134,4 @@ työllisyyspolitiikka ja menetelmänä monimuuttuja-korrespondenssianalyysi (MCA
 Havaituille kehityssuunnille etsitään toisessa vaiheessa selityksiä. Aineistona
 on viisi kansainväliseen vertailuun soveltuvaa aineistoa, yhtenä niistä ISSP:n
 data kolmelta kierrokselta (1988,1994,2002).
-
-
-
-
 
