@@ -161,9 +161,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3" data-path="yhteisvaikutusmuuttujat.html"><a href="yhteisvaikutusmuuttujat.html#stabiilisuus"><i class="fa fa-check"></i><b>5.3</b> Stabiilisuus</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="osajoukon-korrespondenssianalyysi.html"><a href="osajoukon-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>6</b> Osajoukon korrespondenssianalyysi</a></li>
-<li class="chapter" data-level="7" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html"><i class="fa fa-check"></i><b>7</b> Monimuuttuja-korrespondenssianalyysi (MCA)</a><ul>
-<li class="chapter" data-level="7.1" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#pinotut-ja-yhdistetyt-taulukot"><i class="fa fa-check"></i><b>7.1</b> Pinotut ja yhdistetyt taulukot</a></li>
-<li class="chapter" data-level="7.2" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#mca---monimuuttujakorrespondenssianalyysi"><i class="fa fa-check"></i><b>7.2</b> MCA - monimuuttujakorrespondenssianalyysi</a></li>
+<li class="chapter" data-level="7" data-path="monimuuttujakorrespondenssianalyysi-mca.html"><a href="monimuuttujakorrespondenssianalyysi-mca.html"><i class="fa fa-check"></i><b>7</b> Monimuuttujakorrespondenssianalyysi (MCA)</a><ul>
+<li class="chapter" data-level="7.1" data-path="monimuuttujakorrespondenssianalyysi-mca.html"><a href="monimuuttujakorrespondenssianalyysi-mca.html#pinotut-ja-yhdistetyt-taulukot"><i class="fa fa-check"></i><b>7.1</b> Pinotut ja yhdistetyt taulukot</a></li>
+<li class="chapter" data-level="7.2" data-path="monimuuttujakorrespondenssianalyysi-mca.html"><a href="monimuuttujakorrespondenssianalyysi-mca.html#monimuuttujakorrespondenssianalyysi-mca-1"><i class="fa fa-check"></i><b>7.2</b> Monimuuttujakorrespondenssianalyysi (MCA)</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="yhteenveto.html"><a href="yhteenveto.html"><i class="fa fa-check"></i><b>8</b> Yhteenveto</a></li>
 <li class="chapter" data-level="" data-path="lähteet.html"><a href="lähteet.html"><i class="fa fa-check"></i>Lähteet</a></li>
@@ -192,29 +192,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="liite-2-tekninen-ympäristö-ja-bookdown-paketti" class="section level1 unnumbered">
 <h1>Liite 2: Tekninen ympäristö ja Bookdown-paketti</h1>
-<p>Analysoin aineistona r-paketilla ca, vaihtoehdoista voi mainita ranskalaisten kehittämän
+<p>Analysoin aineistoa r-paketilla ca, vaihtoehdoista voi mainita ranskalaisten kehittämän
 FactoMineR - paketin ja muitakin löytyy. Korrespondenssianalyysin voi tehdä myös monella
 muulla ohjelmistolla (esim. Survo, SAS ja SPSS). Greenacre ei ole tyytyväinen SPSS:n
-toteutukseen: “In SPSS’s CA program in the Categories module,an alternative biplot
+toteutukseen: “In SPSS’s CA program in the Categories module, an alternative biplot
 is given that has not been illustrated in this book, called the”symmetrical normalization“,
 which may be confused with the symmetric map described in this book. It is not exactly the
 same thing, however,since it uses standard coordinates scaled by the square roots of the singular
-values (i.e. fourth roots of the principal inertias) instead of the singularvalues themselves.
+values (i.e. fourth roots of the principal inertias) instead of the singular values themselves.
 Curiously, the symmetric map, one of the most popular display options of
 French researchers, has never been available in SPSS (module Categories),
 and it is still not possible in IBM SPSS version 20 to obtain a joint map of the rows
-and columns in principalcoordinates”(CAiP, s. 296). En ole tarkastanut onko pitääkö kritiikki
+and columns in principal coordinates”(CAiP, s. 296). En ole tarkastanut onko pitääkö kritiikki
 yhä paikkansa.</p>
 <p><strong>Bookdown</strong></p>
 <p>Bookdown-paketti laajentaa R-ohjelmiston julkaisuominaisuuksia <span class="citation">(Xie <a href="lähteet.html#ref-RefWorks:doc:5b6b36dde4b09b7ec442bf8b" role="doc-biblioref">2016</a>)</span>.
 Sen avulla voi tuottaa monipuolisesti julkaisuja samalla lähdekoodilla eri formaatteihin.</p>
-<p>Html-formaatti sopii mainiosti data-analyysiin, taulukkoita ja kuvia ei tarvitse asetella paperikoon
+<p>Html-formaatti sopii mainiosti data-analyysiin, taulukoita ja kuvia ei tarvitse asetella paperikoon
 mukaan sivuille. PDF-formaatilla on omat etunsa, koko dokumentti on yksi tiedosto. Olen
 käyttänyt bookdown-pakettia vailla suurempia ongelmia. Jos ongelmia tulee, niiden syiden
-selvittämien ei ole helppoa. Kuva <a href="liite-2-tekninen-ympäristö-ja-bookdown-paketti.html#fig:L3bdprocess1">8.2</a> näyttää bookdownin julkaisuprosessin
+selvittämien ei ole helppoa. Kuva <a href="liite-2-tekninen-ympäristö-ja-bookdown-paketti.html#fig:L3bdprocess1">8.2</a> näyttää bookdown-paketin julkaisuprosessin
 vaiheet. PDF on ongelmallinen, tässä projektissa pdf-tulostus lakkasi toimimasta
-kaksi kertaa. Tutkielman pdf-versio on tulosetettu selaimella, html-tiedosto on
-bookdown-paketin tulostustvaihtoehto html_book.</p>
+kaksi kertaa. Tutkielman pdf-versio on tulostettu selaimella bookdown-paketin
+tulostustvaihtoehdolla “html_book”.</p>
 <p>Ongelmat ovat varmasti ratkaistavissa, ja bookdown-paketti tai sen muokatut
 versiot ovat laajassa käytössä monissa yliopistoissa. Kyse on vain
 LateX-osaamattomuudesta tai ymmärtämättömyydestä.</p>
@@ -232,14 +232,13 @@ Kuva 8.2: Tulostiedoston prosessointi
 <p>RStudio-sovelluksen ja käyttämäni TeX-versiot ovat</p>
 <p>RStudio Version 1.3.1093, latex engine xelatex</p>
 <p>XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX)</p>
-<p>Bookdown-asetuksissa käyntin latex-muunnokseen aluksi pdflatex-valintaa ja
-vaihdoin sen myöhemmin xelatex-vaihtoehtoon.
-Ero ei ole merkittävä.</p>
+<p>Bookdown-asetuksissa käytin latex-muunnokseen aluksi pdflatex-valintaa ja
+vaihdoin sen myöhemmin xelatex-vaihtoehtoon. Ero ei ole merkittävä.</p>
 <p>TeX-jakeluna käytin bookdown-paketin kehittäjän suosittelemaa
 TinyTeX - versiota (<a href="https://yihui.org/tinytex/" class="uri">https://yihui.org/tinytex/</a>) ja
-r-pakettia tinytex.Niiden etu on tarvittavien LaTex-pakettien
+r-pakettia tinytex. Niiden etu on tarvittavien LaTex-pakettien
 automaattinen asentaminen.</p>
-<p>R-ympäristön tarkemmat tietot:</p>
+<p>R-ympäristön tarkemmat tiedot:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="liite-2-tekninen-ympäristö-ja-bookdown-paketti.html#cb7-1"></a><span class="kw">sessionInfo</span>()</span></code></pre></div>
 <pre><code>## R version 3.6.3 (2020-02-29)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)

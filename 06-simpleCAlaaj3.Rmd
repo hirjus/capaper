@@ -1,9 +1,9 @@
 # Osajoukon korrespondenssianalyysi
 
 Graafisessa data-analyysissä kuvien on oltava selkeitä, mutta
-korrespondenssianalyysin ja monimuutujakorrespondenssianalyysin kartat ovat usein
-liian täynnä pisteitä. Ongelmaa voi lievenätää jättämällä pois ratkaisuun vain
-vähän vaikutttavia pisteitä, keksimällä mahdollisimman lyhyitä symboleja
+korrespondenssianalyysin kartat ovat usein
+liian täynnä pisteitä. Ongelmaa voi lieventää jättämällä pois ratkaisuun vain
+vähän vaikuttavia pisteitä, keksimällä mahdollisimman lyhyitä symboleja
 muuttujille tai rajaamalla kuvaa. Ongelma on kuitenkin syvempi, usein kartta
 kertoo aika yllätyksettömän ja ilmeisen tarinan. Kiinnostavammat yhteydet
 pysyvät piilossa ylemmissä dimensioissa.  MCA-kartan perusongelma on se, että
@@ -27,13 +27,13 @@ sentroidi säilyy kartan keksipisteenä. Osajoukkojen inertioiden summa on koko
 aineiston inertia.
 
 Osajoukon voi valita havaintojen tai muuttujien suhteen. Täydentäviä pisteitä
-voi helposti lisätä kartalle , jos ne eivät kuulu siihen joukkoon josta
-osajoukko on valittu.  Osajoukon profiilit muuttuvat, niiden summa ei enään ole
+voi helposti lisätä kartalle, jos ne eivät kuulu siihen joukkoon josta
+osajoukko on valittu.  Osajoukon profiilit muuttuvat, niiden summa ei enää ole
 yksi ja barysentristä periaatetta ei voi suoraan käyttää täydentävän pisteen
 koordinaattien laskemiseen. Tässä esimerkissä emme voi suoraan ca-paketin avulla
 sijoittaa esimerkiksi maapisteitä kartoille.
 
-Kartan \@ref(fig:maagaCA1map1) avulla  aineiston voi jakaa kahteen ryhmään.
+Kartan \@ref(fig:maagaCA1map1) avulla aineiston voi jakaa kahteen ryhmään.
 Suomi, Tanska ja Saksa ovat pääakselin oikealla puolella. Bulgaria ja Unkari
 ja Belgian kanssa ovat toinen ryhmä.
 
@@ -72,10 +72,10 @@ plot(maagaCA2sub2, map = "rowgreen",
 ```
 
 Karttoja \@ref(fig:maagaCA2sub2map1) ja \@ref(fig:maagaCA2sub2map3) joutuu katsomaan
-aika tarkkaan ennenkuin uskoo, että akseleiden skaalaus on akateeminen pulma
-vailla käytännön merkitystä (kts.luku 3.3.4). Dataa analysoidaan graafisesti, ja kuvat
+aika tarkkaan ennen kuin uskoo, että akseleiden skaalaus on akateeminen pulma
+vailla käytännön merkitystä (kts. luku 3.4). Dataa analysoidaan graafisesti, ja kuvat
 _näyttävät_ erilaisilta. Pääakselien inertioiden neliöjuuret eivät poikkea toisistaan 
-huomattavasti( `r round(sqrt(0.10709),3)` ja `r round(sqrt(0.02498),3)` ), joten 
+huomattavasti ( `r round(sqrt(0.10709),3)` ja `r round(sqrt(0.02498),3)` ), joten 
 sarakkeiden etäisyyksiä voisi tulkita myös kontribuutiokuvista.
 
 
@@ -120,23 +120,23 @@ on ryhmillä DEf1 (467) ja DEf6 (48), DEm4 (285). Tanskan havainnoista vanhimmat
 huonosti. Kaksi dimensiot selittävät osajoukon kokonaishajonnasta 92%, mutta muutaman
 ryhmän hajonta on muissa dimensioissa. Saksan naisten iäkkäin ikäluokka (DEf6)
 ja keski-ikäisen miehet (DEm4) vain näyttävät olevan lähekkäin origon tuntumassa,
-samoin muutama muu huonosti tasoon sijoitettu piste.Huonosti kuvatuista pisteistäkuva
+samoin muutama muu huonosti tasoon sijoitettu piste. Huonosti kuvatuista pisteistä kuva
 ei oikeastaan mitään muuta.
 
 Sarakkeet on esitetty kohtalaisen hyvin, ja symmetrisessä kartassa tärkeimmälle
-dimensioille projisodut sarakepisteet ovat odotetussa järjestyksessä.
+dimensioille projisoidut sarakepisteet ovat odotetussa järjestyksessä.
 
 Kontribuutiokartasta nähdään, että tärkein kontrasti on tiukan erimielisyyden (E)
 ja kaikkien muiden vastausvaihtoehtojen välillä. Epävarmojen tai maltillisten (e)
 kontrasti hallitsee toista dimensiota, erityisesti S- ja s- kategorioiden kanssa.
-Samalla kuvasta näkee (ja numeerisist tuloksista voi vahvistaa), että S-piste on
+Samalla kuvasta näkee (ja numeerisista tuloksista voi vahvistaa), että S-piste on
 on lähempänä (kulma on pienempi) pystyakselia. Kontribuutio on suurempi (147 vs.
 71 x-akselille). Toisaalta x-akseli selittää selvästi suurimman osan kaikkien muiden
 sarakepisteiden inertiasta, ja y-akseli taas lähes täysin e-pisteen inertian.
 
 Kartasta \@ref(fig:maagaCA2sub2map2) nähdään, että naisten ikäluokat ovat
 kaikissa maissa liberaalimpia kuin vastaavat miesten ikäluokat. Nuorin ikäluokka
-on konservatiisemmalla puolella ja samalla toisella dimensiolla maltillisemmalla
+on konservatiivisemmalla puolella ja samalla toisella dimensiolla maltillisemmalla
 puolella. Vanhemmat ikäluokat ovat konservatiivisempia.
 
 
@@ -158,7 +158,6 @@ maagaCA2sub3 <- ca(~maaga + Q1b,ISSP2012esim1b.dat,subsetrow = BEBGHUsubset)
 
 
 
-
 ```{r  maagaCA2sub3map1,echo=F, fig.cap= "Ikä, sukupuoli ja maa: Belgia-Bulgaria - Unkari", fig.asp = 1, out.width = "90%",fig.align = "center"}
 
 par(cex = 0.6)
@@ -172,26 +171,26 @@ plot(maagaCA2sub3,
 
 ```
 
-Belgian, Unkarin ja Bulgarian kartalla ensimmäisen dimension dimension tulkinta
+Belgian, Unkarin ja Bulgarian kartalla ensimmäisen dimension tulkinta
 pysyy samana, mutta nyt molemmat erimieliset (E, e) vastauskategoriat ovat
 selvästi vasemmalla liberaalilla puolella. Ne ovat lähes x-akselin päällä,
 kun ensimmäisen osajoukon kartalla e-sarake oli oikealla ja alhaalla kontrastina
-S- ja s- vastauksille ja myös neutraalille vaihtoehdolle. Kartan toinen dimenisio
+S- ja s- vastauksille ja myös neutraalille vaihtoehdolle. Kartan toinen dimensio
 erottelee nyt tiukasti ja lievemmin samaa mieltä olevat, neutraali vaihtoehto
 jää väliin. 
 
 Belgian nuoremmat ikäluokat ovat liberaalilla puolella, ja kiinnostavasti
 kaksi vanhinta miesten ryhmää on pystysuunnassa kaikkein maltillisimpia.
-Bulgarian ja Unkarin pisteen ovat  tiukasti konservatiivisella puolella.
+Bulgarian ja Unkarin pisteen ovat tiukasti konservatiivisella puolella.
 Vaihtelua on maltillisemman ja jyrkemmän konservatiivisuuden välillä
 pystysuuntaan. Toisen dimension kontrasti on myös hieman yllättäen 
-Bulgarian nuorimpien naisten (BGf1) Unkarin vanhimpiten naisten (HUf6)
+Bulgarian nuorimpien naisten (BGf1) Unkarin vanhimpien naisten (HUf6)
 välillä.
 
 Kuvan \@ref(fig:maagaCA2sub2map2) tapaan ei Bulgarian ja Unkarin
 ikäluokkia kannata yhdistää. Järjestys toki löytyy, mutta ei ollenkaan
-niin selkeä. Saksan naisten ikäluokkakuva alkaa erkaantua hieman Suomen ja Taskan
-hyvin samanalaisista kuvioista. Saksan miehillä on jo eroja paljon toisen
+niin selkeä. Saksan naisten ikäluokkakuva alkaa erkaantua hieman Suomen ja Tanskan
+hyvin samanlaisista kuvioista. Saksan miehillä on jo eroja paljon toisen
 dimension suuntaan, Unkarin ja Bulgarian osajoukkojen erot ovat lähes
 pelkästään pystysuoria.
 
@@ -214,7 +213,7 @@ plot(maagaCA2sub3, map = "rowgreen",
 ```
 
 Kontribuutiokartta \ref(fig:maagaCA2sub3map2) eroaa kartasta \ref(fig:maagaCA2sub2map3)
-kolmen akselin (E, S ja s) tasapainosemmalla vaikutuksella ratkaisuun. Konservatiiviset
+kolmen akselin (E, S ja s) erilaisella vaikutuksella ratkaisuun. Konservatiiviset
 sarakepisteet ovat vaikuttavampia kuin E, maltillinen liberaali (s) ja neutraali vaihtoehto
 vaikuttavat vähemmän.
 
@@ -233,13 +232,13 @@ Listataan vielä toisen osajoukon ratkaisun numeeriset tulokset.
 
 ```
 
-Kahden osajoukon inertioiden  summa on sama kuin koko aineiston
+Kahden osajoukon inertioiden summa on sama kuin koko aineiston
 ( `r round(0.143551,3)` + `r round(0.119602,3)` =  `r round((0.143551 + 0.119602),3)`).
-Selitysasteet nousevat hieman, ja aineiston riippuvuuden rakenteesta saadaaan esiin
+Selitysasteet nousevat hieman, ja aineiston riippuvuuden rakenteesta saadaan esiin
 selviä eroja. Osajoukkojen analyysi täydentää ja tarkentaa
 yleiskuvaa (\@ref:fig:maagaCA1map1).
 
-Belgian pisteistä osalla on  huono kvaliteetti (BEf1, BEf5,BEm1, BEm2). Bulgaria ja
+Belgian pisteistä osalla on huono kvaliteetti (BEf1, BEf5, BEm1, BEm2). Bulgaria ja
 Unkari hyvin esitetty. Belgia on pulmallinen tapaus, ehkä taas omissa dimensioissaan.
 Belgian poikkeavuus (annetulla aluejaolla) on kiinnostava havainto, korrespondenssianalyysin
 tavoite ei ole pelkästään kohtuullisen luotettava yleiskuva taulukon riippuvuuksista.

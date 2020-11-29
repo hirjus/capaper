@@ -914,7 +914,7 @@ välisillä etäisyyksillä ei ole suoraa tulkintaa.
 Jako standardi- ja pääkoordinaatteihin on suora seuraus korrespondenssianalyysin
 matemaattisesta ratkaisusta. Greenacre esittelee kaksoiskuvia käsittelevässä
 kirjassaan [@RefWorks:doc:5a857a43e4b0ed2d44664d7c] selkeästi koordinaattien
-yhteyden ratkaisualgoritmiin, singulaariarvohajoitelmaan.
+yhteyden ratkaisualgoritmiin, singulaariarvohajotelmaan.
 
 
 Koordinaattien yhteys voidaan esittää kahtena yksinkertaistettuna kaavana

@@ -161,9 +161,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3" data-path="yhteisvaikutusmuuttujat.html"><a href="yhteisvaikutusmuuttujat.html#stabiilisuus"><i class="fa fa-check"></i><b>5.3</b> Stabiilisuus</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="osajoukon-korrespondenssianalyysi.html"><a href="osajoukon-korrespondenssianalyysi.html"><i class="fa fa-check"></i><b>6</b> Osajoukon korrespondenssianalyysi</a></li>
-<li class="chapter" data-level="7" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html"><i class="fa fa-check"></i><b>7</b> Monimuuttuja-korrespondenssianalyysi (MCA)</a><ul>
-<li class="chapter" data-level="7.1" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#pinotut-ja-yhdistetyt-taulukot"><i class="fa fa-check"></i><b>7.1</b> Pinotut ja yhdistetyt taulukot</a></li>
-<li class="chapter" data-level="7.2" data-path="monimuuttuja-korrespondenssianalyysi-mca.html"><a href="monimuuttuja-korrespondenssianalyysi-mca.html#mca---monimuuttujakorrespondenssianalyysi"><i class="fa fa-check"></i><b>7.2</b> MCA - monimuuttujakorrespondenssianalyysi</a></li>
+<li class="chapter" data-level="7" data-path="monimuuttujakorrespondenssianalyysi-mca.html"><a href="monimuuttujakorrespondenssianalyysi-mca.html"><i class="fa fa-check"></i><b>7</b> Monimuuttujakorrespondenssianalyysi (MCA)</a><ul>
+<li class="chapter" data-level="7.1" data-path="monimuuttujakorrespondenssianalyysi-mca.html"><a href="monimuuttujakorrespondenssianalyysi-mca.html#pinotut-ja-yhdistetyt-taulukot"><i class="fa fa-check"></i><b>7.1</b> Pinotut ja yhdistetyt taulukot</a></li>
+<li class="chapter" data-level="7.2" data-path="monimuuttujakorrespondenssianalyysi-mca.html"><a href="monimuuttujakorrespondenssianalyysi-mca.html#monimuuttujakorrespondenssianalyysi-mca-1"><i class="fa fa-check"></i><b>7.2</b> Monimuuttujakorrespondenssianalyysi (MCA)</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="yhteenveto.html"><a href="yhteenveto.html"><i class="fa fa-check"></i><b>8</b> Yhteenveto</a></li>
 <li class="chapter" data-level="" data-path="lähteet.html"><a href="lähteet.html"><i class="fa fa-check"></i>Lähteet</a></li>
@@ -196,8 +196,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>Korrespondenssianalyysin perusyhtälöt ja kaavat</h2>
 <p>Perusyhtälöt on esitetty teoksen “Correspondece Analysis in Practice”<span class="citation">(M. J. Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d78" role="doc-biblioref">2017</a>)</span>
 liitteen “Theory of Correspondece Analysis” mukaisesti.</p>
-<p>Datamatriisilla <span class="math inline">\(\boldsymbol{N}\)</span> on <span class="math inline">\(I\)</span> riviä ja <span class="math inline">\(J\)</span> sarakketta (<span class="math inline">\(I x J\)</span> ).
-Alkiot ovat ei-negatiivisia (eli nollat sallittuja) ja samassa mitta-asteikossa.
+<p>Datamatriisilla <span class="math inline">\(\boldsymbol{N}\)</span> on <span class="math inline">\(I\)</span> riviä ja <span class="math inline">\(J\)</span> saraketta (<span class="math inline">\(I x J\)</span>).
+Alkiot ovat ei-negatiivisia ja samassa mitta-asteikossa.
 Jos mitta-asteikko on intervalli- tai suhdeasteikko, mittayksiköiden on oltava
 samoja (esim. euroja, metrejä). Tietyin ehdoin myös negatiiviset luvut ovat
 sallittuja <span class="citation">(LeRoux ja Rouanet <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d75" role="doc-biblioref">2004</a>, 60)</span>.</p>
@@ -210,10 +210,11 @@ sallittuja <span class="citation">(LeRoux ja Rouanet <a href="lähteet.html#ref-
 <span class="math inline">\(\boldsymbol{c}\)</span> (= <span class="math inline">\((c_{1}, \dots, c_{J})\)</span>).
 Niitä vastaavat diagonaalimatriisit ovat <span class="math inline">\(\boldsymbol{D_r}\)</span> ja
 <span class="math inline">\(\boldsymbol{D_c}\)</span>.</p>
-<p>Matriisin transpoosi merkitään yläindeksillä <span class="math inline">\(T\)</span> , ja <span class="math inline">\(\boldsymbol{1}\)</span> on
-sopivan dimension vektori jonka alkiot ovat ykkösiä.</p>
-<p>Korrespondenssianalyysin ratkaistaan singluaariarvohajoitelman avulla.</p>
-<p>Singulaariarvohajoitelma (singular value decomposition) tuottaa ratkaisun kun
+<p>Matriisin transpoosi merkitään yläindeksillä <span class="math inline">\(T\)</span>, ja <span class="math inline">\(\boldsymbol{1}\)</span> on
+sopivan dimension vektori, jonka alkiot ovat ykkösiä.</p>
+<p>Korrespondenssianalyysin ratkaistaan singulaariarvohajotelman
+(singular value decomposition, SVD) avulla.</p>
+<p>Singulaariarvohajotelma tuottaa ratkaisun kun
 sitä sovelletaan standardoituun residuaalimatriisiin <span class="math inline">\(\boldsymbol{S}\)</span>.</p>
 <p><span class="math display" id="eq:svd1">\[\begin{equation}
 \boldsymbol{S} = \boldsymbol{D_r}^{-1/2}(\boldsymbol{P} - \boldsymbol{r}\boldsymbol{c}^T)\boldsymbol{D_c}^{-1/2} .
@@ -231,9 +232,9 @@ sitä sovelletaan standardoituun residuaalimatriisiin <span class="math inline">
 \end{equation}\]</span></p>
 <p>Toinen esitystapa on hyödyllinen, kun tarkastellaan CA:n yhteyksiä muihin
 läheisiin menetelmiin. Näitä ovat esimerkiksi “suhteellisten osuuksien datan”
-analyysi (log ratio analysis of compositiona data),moniulotteinen skaalaus,
+analyysi (log ratio analysis of compositiona data), moniulotteinen skaalaus,
 lineaarinen diskriminanttianalyysi, kanoninen korrelaatioanalyysi,
-pääkomponettianalyysi, kaksoiskuvat ja muut SVD-hajoitelmaan perustuvat dimensioden
+pääkomponenttianalyysi, kaksoiskuvat ja muut SVD-hajotelmaan perustuvat dimensioiden
 vähentämisen menetelmät.</p>
 <p>Samat kaavat voi esittää myös alkiomuodossa:</p>
 <p><span class="math display" id="eq:contrat11">\[\begin{equation}
@@ -244,11 +245,11 @@ s_{ij} = \frac{p_{ij}-r_{i}c_{j}} { \sqrt{r_{i}c_{j} } } ,
 s_{ij} = \sqrt{r_{i}} \left( \frac{p_{ij}}{r_{i}c_{j}} \right) \sqrt{c_{j}} \;\;\; .
 \tag{8.5}
 \end{equation}\]</span></p>
-<p>Alkimuodosasa esitetyistä kaavoista näkee rivi- ja sarakeratkaisujen sidoksen.
+<p>Alkiomuodossa esitetyistä kaavoista näkee rivi- ja sarakeratkaisujen sidoksen.
 Ratkaisujen duaalisuus on teoreettinen tulos, jonka voi perustella täsmällisesti
-algebrallisen geometrian avulla. Käytännössä rivi- ja sarekeongelman duaalisuus
-tarkoittaa sitä, että vain toinen ongelma on ratkaistava.</p>
-<p>Singulaariarvohajoitelma (singular value decomposition, SVD) matriisille <span class="math inline">\(\boldsymbol{S}\)</span> on</p>
+algebrallisen geometrian avulla. Käytännössä rivi- ja sarakeongelman duaalisuus
+tarkoittaa sitä, että vain toinen ongelma on ratkaistava</p>
+<p>Singulaariarvohajotelma matriisille <span class="math inline">\(\boldsymbol{S}\)</span> on</p>
 <p><span class="math display" id="eq:svd2">\[\begin{equation}
 \boldsymbol{S} = \boldsymbol{U} \boldsymbol{D_{\alpha}} \boldsymbol{V}^{T} ,
 \tag{8.6}
@@ -256,7 +257,7 @@ tarkoittaa sitä, että vain toinen ongelma on ratkaistava.</p>
 <p>missä <span class="math inline">\(\boldsymbol{D_{\alpha}}\)</span> on diagonaalimatriisi, jonka alkiot ovat
 singulaariarvot suuruusjärjestyksessä <span class="math inline">\(\alpha_{1}\geq \alpha_{1} \geq \cdots\)</span>.</p>
 <p>Matriisit <span class="math inline">\(\boldsymbol{U}\)</span> ja <span class="math inline">\(\boldsymbol{V}\)</span> ovat ortogonaalisia
-singulaarivektoreiden matriiseja. Singulaariarvohajoitelman merkitys dimensioiden
+singulaarivektoreiden matriiseja. Singulaariarvohajotelman merkitys dimensioiden
 vähentämiselle perustuu Eckart - Young - teoreemaan. Teoreema kertoo
 että saamme pienimmän neliösumman <span class="math inline">\(m\)</span> - ulotteisen approksimaation matriisille
 <span class="math inline">\(\boldsymbol{S}\)</span> matriisien <span class="math inline">\(\boldsymbol{U}\)</span> ja <span class="math inline">\(\boldsymbol{V}\)</span>
@@ -265,7 +266,7 @@ ensimmäisten sarakkeiden ja ensimmäisten singulaariarvojen avulla.</p>
 \boldsymbol{S}_{(m)} = \boldsymbol{U}_{(m)} \boldsymbol{D}_{\alpha(m)} \boldsymbol{V}_{(m)}^{T}
 \tag{8.7}
 \end{equation}\]</span></p>
-<p>Korrrespondenssianalyysin ratkaisualgoritmissa tätä tulosta on muokattava niin,
+<p>Korrespondenssianalyysin ratkaisualgoritmissa tätä tulosta on muokattava niin,
 että rivien ja sarakkeiden massat huomioidaan pienimmän neliösumman
 approksimaatiossa painoina.</p>
 <p>Näin saadaan standardikoordinaatit ja pääkoordinaatit riveille ja
@@ -295,13 +296,13 @@ sarakkeille.</p>
 \lambda_{k} = \alpha_{k}^2, \: k = 1,\dots,K,
 K = min \{ I-1, J-1 \}
 \end{equation}\]</span></p>
-<p>Ratkaisun dimenisio on myös maksimi-inertia. Tässä aineistossa ja vastaavissa
+<p>Ratkaisun dimensio on myös maksimi-inertia. Tässä aineistossa ja vastaavissa
 kyselytutkimusdatoissa inertia on yleensä paljon maksimia pienempi. Asymmetrisissä
-kartoissa ideaalipisteet ovat kaukana origon lähelle pakkauteesta havaintojen
+kartoissa ideaalipisteet ovat kaukana origon lähelle pakkautuneesta havaintojen
 pilvestä.</p>
-<p>Korespondenssianalyysi ratkaisun akseleiden inertioita kutsutaan usein ominaisarvoiksi,
+<p>Korrespondenssianalyysi ratkaisun akseleiden inertioita kutsutaan usein ominaisarvoiksi,
 mutta periaatteessa SVD-ratkaisulla saadaan singulaariarvot. Niiden neliöt ovat
-akseleiden inertioita. Ominaisarvojen ja sigulaariarvojen yhteys on läheinen ja
+akseleiden inertioita. Ominaisarvojen ja singulaariarvojen yhteys on läheinen ja
 riippuu diagonalisoitavan matriisin ominaisuuksista. Termiä “vektori” käytetään
 kartoista puhuttaessa, kun viitataan esimerkiksi origosta sarakepisteeseen
 piirrettyyn nuoleen. Myös janan synonyyminä käytetään yleisesti termiä vektori
@@ -352,9 +353,9 @@ Kuva 8.1: Pisteen projektio aliavaruuteen
 </div>
 <p>Kuvassa on esitetty korrespondenssianalyysin ratkaisun minimointiongelma. Pisteen
 projektio on sitä parempi mitä pienempi kulma on sentroidista pisteeseen
-piirtetyn janan ja pisteen projektion välillä. COR - tunnusluku ca-funktion
+piirretyn janan ja pisteen projektion välillä. cor-tunnusluku ca-funktion
 numeerisissa tuloksissa tämän kulman kosinin neliö. Pisteen kuvauksen laatu (qlt)
-ca-tuloksissa on valitun approsimaation akseleiden kvaliteettien (COR) summa.</p>
+ca-tuloksissa on valitun approksimaation akseleiden kvaliteettien (cor) summa.</p>
 <p>Kuvasta voi myös hahmottaa sen periaatteen, että projektiossa kaukana olevat
 pisteet ovat kaukana myös alkuperäisessä avaruudessa. Projektiossa lähekkäin
 olevat pisteet voivat olla alkuperäisessä avaruudessa kaukana toisistaan,
@@ -362,18 +363,18 @@ jos niiden projektion laatu on huono.</p>
 <p><strong>Monimuuttujakorrespondenssianalyysi MCA</strong></p>
 <p>Usean muuttujan korrespondenssianalyysissä tutkitaan usean muuttujan välisiä yhteyksiä.
 Kartan tulkinnan apuna siihen voidaan lisätä havaintojen sijaan niiden keskiarvopisteitä
-ja niille simuloituja luottamusellipsejä. Kuvien pääongelma on liian suuri määärä pisteitä,
-ja analyysin lopputulos on usein mahdollisimman yksinkertainen kartta.</p>
+ja niille simuloituja luottamusellipsejä. Kuvien pääongelma on liian suuri määrä pisteitä,
+ja analyysin tavoite on usein mahdollisimman yksinkertainen kartta.</p>
 <p>Usean muuttujan analyysissä kohteena on joko indikaattorimatriisi <span class="math inline">\(\boldsymbol{Z}\)</span> tai
 Burtin matriisi <span class="math inline">\(\boldsymbol{B}\)</span></p>
 <p>Indikaattorimatriisissa rivit ovat havaintoja ja sarakkeet luokittelumuuttujan arvoja.
 Havaintoa vastaa rivi nollia ja 1 valitun vastausvaihtoehdon kohdalla. Tästä seuraa,
 että vain erilaiset vastaukset määrittävät rivien etäisyyksiä.</p>
 <p>Burtin matriisi on erikoistapaus yhdistetyistä matriiseista. Siihen on koottu kaikki tutkittavien
-muuttujien pareittan muodostetut taulukot. Diagonaalilla ovat muuttujien ristiintaulukoinnit
+muuttujien pareittain muodostetut taulukot. Diagonaalilla ovat muuttujien ristiintaulukoinnit
 itsensä kanssa. Ratkaisu riippuu vain näistä parittaisista taulukoista. Burtin matriisi on
 kätevä välivaihe matriisien yhdistelyssä.</p>
-<p>Molemmat matriisit paisuttavat keinotekoisesti kokonaisinertiaa, ja esimerkikisi kaksiulotteisen kartan
+<p>Molemmat matriisit paisuttavat keinotekoisesti kokonaisinertiaa, ja esimerkiksi kaksiulotteisen kartan
 selitetyn inertian osuudet jäävät melko pieniksi. Ratkaisuna on inertian oikaisu tai korjaus
 (adjusted inertia), jossa mm. poistetaan kokonaisinertialaskelmista Burtin matriisin
 diagonaalilla olevat alimatriisit. Näillä korjauksilla ei ole vaikutusta kartan pisteiden
@@ -389,12 +390,12 @@ However, the scaling interpretation remains attractive in this case; the display
 are graphical representations of optimal scale values for the categories.”</p>
 <p>Greenacre jatkaa samasta aiheesta artikkelikokoelmassa
 <span class="citation">(M. Greenacre ja Blasius <a href="lähteet.html#ref-RefWorks:doc:5ab76b43e4b003f4468d1f07" role="doc-biblioref">2006</a> , s. 41, s. 61)</span>: “Yleistys useammalle
-kuin kahdelle muuttujalle ei ole ilmeinen eikä hyvin määritelty”. Siti MCA
+kuin kahdelle muuttujalle ei ole ilmeinen eikä hyvin määritelty”. Silti MCA
 onnistuu esittämään hyvin kiinnostavia yhteyksiä muuttujien välillä (“succesfully
 recovers interesting patterns of association”). Kriittisyys ei kuitenkaan
 estä häntä soveltamasta MCA-analyysiä. Tulkitsen tämän niin, että menetelmää voi
 aivan hyvin soveltaa, mutta geometrista tulkintaa ei voi suoraan siirtää CA-kartoista
-MCA.karttoihin. Greenacre esittelee perusteellisesti MCA-sovelluksia kaksoiskuvia
+MCA-karttoihin. Greenacre esittelee perusteellisesti MCA-sovelluksia kaksoiskuvia
 käsittelevässä kirjassaan <span class="citation">(Greenacre <a href="lähteet.html#ref-RefWorks:doc:5a857a43e4b0ed2d44664d7c" role="doc-biblioref">2010</a>)</span>. Ehkä
 korrespondenssianalyysin matemaattinen teoria ei ole vielä täysin valmis?</p>
 </div>

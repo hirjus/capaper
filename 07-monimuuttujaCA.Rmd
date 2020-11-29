@@ -1,4 +1,4 @@
-# Monimuuttuja-korrespondenssianalyysi (MCA)
+# Monimuuttujakorrespondenssianalyysi (MCA)
 
 Usean muuttujan samanaikainen analyysi voidaan korrespondenssianalyysissä
 jakaa kahteen erialaiseen tutkimusasetelmaan.  Ensimmäisessä tutkitaan kahden
@@ -16,7 +16,7 @@ joita edellä analysoitiin vuorovaikutusmuuttujien avulla.
 Toinen asetelma on keskenään homogeenisten muuttujien välisten suhteiden analyysi.
 Monimuuttujakorrespondenssianalyysi (multiple correspondence analysis, MCA)
 soveltuu hyvin kyselytutkimusten vastausten analyysiin. MCA - kartoilla voidaan
-esitttää myös havainnot yksittäiset havainnot, mutta usein on järkevämpää
+esittää myös havainnot, mutta usein on järkevämpää
 käyttää kartalla taustamuuttujien keskiarvopisteitä. Keskiarvopisteisiin voi simuloimalla lisätä
 luottamusellipsit (CAiP, s. 299).
 
@@ -26,7 +26,7 @@ mukana yhtenä luokittelumuuttujan arvona.
 
 Yksinkertaisen korrespondenssianalyysin yleistys usean muuttujan samanaikaiseen
 analyysiin ei ole aivan yksikertainen asia. Silti MCA toimii käytännössä usein
-hyvin juuri kyseltutkimusten analyysissä. Vaikka geometrinen tulkinta ei ole
+hyvin juuri kyselytutkimusten analyysissä. Vaikka geometrinen tulkinta ei ole
 läheskään niin selkeä kuin yksinkertaisessa korrespondenssianalyysissä,
 skaalaustulkinta on pätevä. MCA-kartat esittävät luokittelumuuttujien arvot
 optimaalisesti, kartalla esitettyjen havaintopisteiden hajonta on maksimaalinen
@@ -56,7 +56,7 @@ knitr::include_graphics('img/stacked1.png')
 
 Seuraavassa esimerkissä "selitettäviä" luokittelumuuttujia on vain yksi. Tällainen
 pinotun taulun analyysi on eräänlainen kaikkien siihen kuuluvien taulukoiden 
-"keskiarvokartta" (CAiP, s 136). Kysymyksen Q1b vastauksten ristiintaulkointi
+"keskiarvokartta" (CAiP, s 136). Kysymyksen Q1b vastausten ristiintaulukointi
 ikäluokan ja sukupuolen kanssa liitetään maarivien taulukkoon.
 
 Pisteiden määrä kartoilla kasvaa, ja muuttujanimiä joudutaan tiivistämään.
@@ -129,13 +129,13 @@ Tulkinta ei muutu, eikä maapisteiden sijaintikaan.
 
 Koko aineiston kartassa ikäluokkapisteet ja sukupuolipisteet ovat pakkautuneet
 maapisteitä tiiviimmin origon ympärille. Ikäluokkapisteiden (koko aineiston
-keskiarvot) selvä kontrasti on vanhimman (a6)ja toiseksi
-nuorimman välillä 1. dimenision suuntaan. 
+keskiarvot) selvä kontrasti on vanhimman (a6) ja toiseksi
+nuorimman välillä 1. dimension suuntaan. 
 
-Ikäluokkapisteet ovat koko aineiston keskiarvopisteitä, niiden sijantia voi
+Ikäluokkapisteet ovat koko aineiston keskiarvopisteitä, niiden sijaintia voi
 tulkita pistejoukko kerrallaan kuten maapisteidenkin. Naispiste on tiukassa
 nipussa ikäluokkien a3 ja a4 kanssa aivan origon vasemmalla puolella. Miesten
-keskiarvopiste on hieman origosta oikealle,yhdessä ikäluokan a5 kanssa.
+keskiarvopiste on hieman origosta oikealle, yhdessä ikäluokan a5 kanssa.
 
 
 Lisäpisteet on hyvin esitetty, niiden etäisyyksiä voi luotettavasti arvioida
@@ -144,10 +144,9 @@ ovat yhtä vaatimattomia kuin Belgian (28) ja Saksan (29),
 (m =20, f = 17, a2 = 40, a6 = 83), samoin kontribuutiot akseleiden inertiaan.
 1. dimension kontribuutio (ctr) on suuri (>800) kaikilla paitsi nuorimmalla
 ikäryhmällä (a1) jolla 2. dimension selittää lähes puolet sen inertiasta (470).
-En esitä numeerisa tuloksia tarkemmin.
+En esitä numeerisia tuloksia tarkemmin.
 
-Karttaa vertaa karttaan \@ref(fig:gaCA1map) jossa on esitetty iän ja sukupuolen
-yhteisvaikutusmuuttuja. Pinottu taulu on vaihtoehtoinen tapa, ja kartasta 
+Karttaa \@ref(fig:concat1map1) voi verrata karttaan \@ref(fig:gaCA1map) jossa on esitetty iän ja sukupuolen yhteisvaikutusmuuttuja. Pinottu taulu on vaihtoehtoinen tapa, ja kartasta 
 \@ref(fig:concat1map1) voi päätellä samat asiat: miehet ovat konservatiivisempia
 kuin naiset, iäkkäämmät ovat konservatiivisempia kuin nuoret. Nuorin ikäluokka
 poikkeaa muista.
@@ -179,7 +178,7 @@ plot(Concat1jh.CA1, map = "rowgreen",
 
 ```
 
-Kontribuutionkartan sarekkeista E-sarake (täysin eri mieltä) määrittää akseleita
+Kontribuutionkartan sarakkeista E-sarake (täysin eri mieltä) määrittää akseleita
 vahvasti, kontrastina kaksi konservatiivista vastausta (S ja s) ja myös
 neutraali vaihtoehto (e). Numeeriset tulokset kertovat, että ikäluokat
 vaikuttavat juuri ensimmäiseen tärkeimpään dimensioon.
@@ -197,7 +196,7 @@ S-vastauksen janalle se ei ikäluokista konservatiivisin. Ikäluokat a2 ja a6 ov
 
 
 Esimerkkiaineistossa ei ole puuttuvia tietoja. Ne olisivatkin
-pulmallisia, varianssin dekomponointi ei onnistu jos reunajakaumat ovat
+pulmallisia, varianssin dekomponointi ei onnistu, jos reunajakaumat ovat
 alitaulukoissa selvästi erilaisia.
 
 
@@ -206,15 +205,15 @@ ABBA, kahden rakenteeltaan samanlaisen matriisin yhdistäminen lohkoina. Nimi
 kertoo yhdistetyn matriisin rakenteen (block circulant matrix),
 päällekkäin pinotut A ja B liitetään toiseen pinottuun matriisiin B ja A.
 Matriiseilla on samat rivit ja sarakkeet, esimerkiksi miesten ja naisten
-vastausprofiilit yhteen kysymykseen maittain luokiteltuina.Kokonaisinertia
+vastausprofiilit yhteen kysymykseen maittain luokiteltuina. Kokonaisinertia
 saadaan dekomponoitua ryhmien sisäiseen ja väliseen hajontaan kahdelle kartalle.
 Toinen kuvaa maiden välisiä eroja ja toinen maiden sisäisiä sukupuolten välisiä
 eroja (CAiP ss. 177-)
 
 
-## MCA - monimuuttujakorrespondenssianalyysi
+## Monimuuttujakorrespondenssianalyysi (MCA)
 
-MCA on yhdistettyjen (”pinottujen”)  taulukoiden erikoistapaus, samantyyppiset
+MCA on yhdistettyjen (”pinottujen”) taulukoiden erikoistapaus, samantyyppiset
 muuttujat taulukoidaan keskenään. Tulos riippuu siis vain muuttujien
 parittaisista yhteyksistä.
 
@@ -403,6 +402,7 @@ MCAdata1jh.dat <- MCAdata1jh.dat %>% mutate(a1 = Q1am,
 
 ```
 
+
 ```{r 07MCAdataTarkistus,echo=FALSE, error= TRUE, include=FALSE}
 
 # Tarkistustuksia datalle
@@ -435,7 +435,6 @@ MCAdata1jh.dat <- MCAdata1jh.dat %>% mutate(a1 = Q1am,
 #MCAdata1jh.dat %>% tableX(maa, E, type = "row_perc")
 
 ```
-
 
 
 
@@ -532,7 +531,7 @@ tulkita yhtä selkeästi kuin yksinkertaisessa korrespondenssianalyysissä. Ne e
 edusta kysymystä vaan kysymyksen yhtä vastauskategoriaa.
 
 Pistepilven muoto näyttää, miten pienenevä joukko vastaajia lähestyy kiilana
-puuttivien tietojen pisteitä. Kaikkiin kysymyksiin vastanneet ovat massana kuvan
+puuttuvien tietojen pisteitä. Kaikkiin kysymyksiin vastanneet ovat massana kuvan
 oikeassa laidassa. Pistepilvet oikealta vasemmalle kuvaavat kuinka moneen
 kysymykseen on jätetty vastaamatta.
 
@@ -540,7 +539,7 @@ kysymykseen on jätetty vastaamatta.
 **Osajoukon MCA**
 
 Osajoukon MCA sopii hyvin sekä puuttuvien tietojen että täydellisten vastausten
-analyysiin. Asymmetrisessä kartassa sarakkeet skaalautuvat  pois orgiosta ja
+analyysiin. Asymmetrisessä kartassa sarakkeet skaalautuvat pois origosta, ja
 näkyvät paremmin. Kuvaan on piirretty havaintopisteet, joista voi hahmottaa
 havaintojen sijoittumista kartalla.
 
@@ -614,15 +613,15 @@ plot.mjca(Qmuuttujat2.mca, map = "rowprincipal",
 
 ```
 
-Kontrasti on  "ääripäiden" välillä, vahvat mielipiteet (S ja E) hallitsevat vasenta
+Kontrasti on "ääripäiden" välillä, vahvat mielipiteet (S ja E) hallitsevat vasenta
 alakulmaa ja oikeaa laitaa x-akselin tuntumassa. Maltilliset vastaukset ja
 neutraali vaihtoehto ovat ylhäällä vasemmalla. Liberaalit vastaukset ovat oikealla
 ylhäällä ja jokaiselle löytää vastinparin vasemmalta alhaalta, konservatiivien
-kulmasta.Konservatiivisten vastausten joukosta lähimpänä liberaalia ryvästä on
+kulmasta. Konservatiivisten vastausten joukosta lähimpänä liberaalia ryvästä on
 "e1S" ("Kotirouvana oleminen on aivan yhtä antoisaa kuin ansiotyön tekeminen"
 - täysin samaa mieltä). Vastaavasti "a2S" ("Sekä miehen että naisen tulee
 osallistua perheen toimeentulon hankkimiseen" - täysin samaa mieltä) on lähimpänä
-konsertvatiivista kulmaa. Molemmat "ääripäiden maltilliset" pisteet ovat myös
+konservatiivista kulmaa. Molemmat "ääripäiden maltilliset" pisteet ovat myös
 omassa ryhmässään lähimpänä maltillisten ja neutraalien vastausten ryhmää.
 
 
@@ -636,10 +635,10 @@ ISSP-datalla 2002. Tulokset ovat hyvin samantapaisia. Karttaa \ref(fig:subsetMCA
 vastaavan kuvan jatkoanalyysi on vasemman yläkulman pisteiden tarkempi analyysi.
 Greenacre havaitsee, että nämä neutraalit ja maltilliset vastaukset eivät ole
 hyvin esitettyjä kaksiulotteisella kartalla, vaan ne karkaavat korkeampiin
-ulottuvuuksiin, "dimenisions of middleness".
+ulottuvuuksiin ("dimensions of middleness").
 
 Tässä aineistossa kolmiulotteinen MCA antaa samantapaisia viitteitä, mutta vain osa
-keskikategeorioista on huonosti esitetty myös siinä. Huono kvaliteeetti on vain 
+keskikategorioista on huonosti esitetty myös siinä. Huono kvaliteetti on vain 
 osalla sarakkeita (e1? 475, c1? 71 ja b1? 573).
 
 

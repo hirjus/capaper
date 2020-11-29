@@ -13,8 +13,8 @@
 Perusyhtälöt on esitetty teoksen "Correspondece Analysis in Practice"[@RefWorks:doc:5a857a43e4b0ed2d44664d78]
 liitteen "Theory of Correspondece Analysis" mukaisesti.
 
-Datamatriisilla $\boldsymbol{N}$ on $I$ riviä ja $J$ sarakketta ($I x J$ ).
-Alkiot ovat ei-negatiivisia (eli nollat sallittuja) ja samassa mitta-asteikossa.
+Datamatriisilla $\boldsymbol{N}$ on $I$ riviä ja $J$ saraketta ($I x J$).
+Alkiot ovat ei-negatiivisia ja samassa mitta-asteikossa.
 Jos mitta-asteikko on intervalli- tai suhdeasteikko, mittayksiköiden on oltava
 samoja (esim. euroja, metrejä). Tietyin ehdoin myös negatiiviset luvut ovat
 sallittuja [@RefWorks:doc:5a857a43e4b0ed2d44664d75 s. 60].
@@ -24,21 +24,22 @@ Taulukon alkioiden summa on
 $\sum_{i} \sum_{j}n_{ij} = n$, missä $i = 1, \dots , I$ ja $j = 1, \dots , J$.
 
 
-Korrespondenssimatriisi  $\boldsymbol{P}$ saadaan jakamalla matriisin
-$\boldsymbol{N}$  alkiot niiden summalla $n$ .
+Korrespondenssimatriisi $\boldsymbol{P}$ saadaan jakamalla matriisin
+$\boldsymbol{N}$ alkiot niiden summalla $n$ .
 
-Merkitään matriisin  $\boldsymbol{P}$  rivisummien vektoria
+Merkitään matriisin $\boldsymbol{P}$ rivisummien vektoria
 $\boldsymbol{r}$ (= $(r_{1}, \dots, r_{I})$) ja sarakesummien vektoria
 $\boldsymbol{c}$ (= $(c_{1}, \dots, c_{J})$).
 Niitä vastaavat diagonaalimatriisit ovat $\boldsymbol{D_r}$ ja
 $\boldsymbol{D_c}$.
 
-Matriisin transpoosi merkitään yläindeksillä $T$ , ja  $\boldsymbol{1}$ on 
-sopivan dimension vektori jonka alkiot ovat ykkösiä.
+Matriisin transpoosi merkitään yläindeksillä $T$, ja $\boldsymbol{1}$ on 
+sopivan dimension vektori, jonka alkiot ovat ykkösiä.
 
-Korrespondenssianalyysin ratkaistaan singluaariarvohajoitelman avulla.
+Korrespondenssianalyysin ratkaistaan singulaariarvohajotelman
+(singular value decomposition, SVD) avulla.
 
-Singulaariarvohajoitelma (singular value decomposition) tuottaa ratkaisun kun
+Singulaariarvohajotelma tuottaa ratkaisun kun
 sitä sovelletaan standardoituun residuaalimatriisiin $\boldsymbol{S}$.
 
 \begin{equation}
@@ -61,9 +62,9 @@ Residuaalimatriisi voidaan esittää myös ns. kontingenssi-suhdelukujen
 
 Toinen esitystapa on hyödyllinen, kun tarkastellaan CA:n yhteyksiä muihin
 läheisiin menetelmiin. Näitä ovat esimerkiksi "suhteellisten osuuksien datan"
- analyysi (log ratio analysis of compositiona data),moniulotteinen skaalaus,
+ analyysi (log ratio analysis of compositiona data), moniulotteinen skaalaus,
 lineaarinen diskriminanttianalyysi, kanoninen korrelaatioanalyysi,
-pääkomponettianalyysi, kaksoiskuvat ja muut SVD-hajoitelmaan perustuvat dimensioden
+pääkomponenttianalyysi, kaksoiskuvat ja muut SVD-hajotelmaan perustuvat dimensioiden
 vähentämisen menetelmät.
 
 Samat kaavat voi esittää myös alkiomuodossa:
@@ -80,12 +81,12 @@ s_{ij} = \sqrt{r_{i}} \left( \frac{p_{ij}}{r_{i}c_{j}} \right) \sqrt{c_{j}} \;\;
 (\#eq:contrat21)
 \end{equation}
 
-Alkimuodosasa esitetyistä  kaavoista näkee rivi- ja sarakeratkaisujen sidoksen.
+Alkiomuodossa esitetyistä kaavoista näkee rivi- ja sarakeratkaisujen sidoksen.
 Ratkaisujen duaalisuus on teoreettinen tulos, jonka voi perustella täsmällisesti
-algebrallisen geometrian avulla. Käytännössä rivi- ja sarekeongelman duaalisuus
-tarkoittaa sitä, että vain toinen ongelma on ratkaistava.
+algebrallisen geometrian avulla. Käytännössä rivi- ja sarakeongelman duaalisuus
+tarkoittaa sitä, että vain toinen ongelma on ratkaistava
 
-Singulaariarvohajoitelma (singular value decomposition, SVD) matriisille $\boldsymbol{S}$ on
+Singulaariarvohajotelma matriisille $\boldsymbol{S}$ on
 
 \begin{equation}
 \boldsymbol{S} = \boldsymbol{U} \boldsymbol{D_{\alpha}} \boldsymbol{V}^{T} ,
@@ -97,10 +98,10 @@ singulaariarvot suuruusjärjestyksessä $\alpha_{1}\geq \alpha_{1} \geq \cdots$.
 
 
 Matriisit $\boldsymbol{U}$ ja $\boldsymbol{V}$ ovat ortogonaalisia
-singulaarivektoreiden matriiseja. Singulaariarvohajoitelman merkitys dimensioiden
+singulaarivektoreiden matriiseja. Singulaariarvohajotelman merkitys dimensioiden
 vähentämiselle perustuu Eckart - Young - teoreemaan. Teoreema kertoo
 että saamme pienimmän neliösumman $m$ - ulotteisen approksimaation matriisille
-$\boldsymbol{S}$  matriisien $\boldsymbol{U}$ ja $\boldsymbol{V}$
+$\boldsymbol{S}$ matriisien $\boldsymbol{U}$ ja $\boldsymbol{V}$
 ensimmäisten sarakkeiden ja ensimmäisten singulaariarvojen avulla.
 
 \begin{equation}
@@ -108,7 +109,7 @@ ensimmäisten sarakkeiden ja ensimmäisten singulaariarvojen avulla.
 (\#eq:svd3)
 \end{equation}
 
-Korrrespondenssianalyysin ratkaisualgoritmissa tätä tulosta on muokattava niin,
+Korrespondenssianalyysin ratkaisualgoritmissa tätä tulosta on muokattava niin,
 että rivien ja sarakkeiden massat huomioidaan pienimmän neliösumman
 approksimaatiossa painoina.
 
@@ -149,14 +150,14 @@ Pääakseleiden inertiat (principal inertias) $\lambda_{k}$
 K = min \{ I-1, J-1 \}
 \end{equation}
 
-Ratkaisun dimenisio on myös maksimi-inertia. Tässä aineistossa ja vastaavissa
+Ratkaisun dimensio on myös maksimi-inertia. Tässä aineistossa ja vastaavissa
 kyselytutkimusdatoissa inertia on yleensä paljon maksimia pienempi. Asymmetrisissä
-kartoissa ideaalipisteet ovat kaukana origon lähelle pakkauteesta havaintojen
+kartoissa ideaalipisteet ovat kaukana origon lähelle pakkautuneesta havaintojen
 pilvestä.
 
-Korespondenssianalyysi ratkaisun akseleiden inertioita kutsutaan usein ominaisarvoiksi,
+Korrespondenssianalyysi ratkaisun akseleiden inertioita kutsutaan usein ominaisarvoiksi,
 mutta periaatteessa SVD-ratkaisulla saadaan singulaariarvot. Niiden neliöt ovat
-akseleiden inertioita. Ominaisarvojen ja sigulaariarvojen yhteys on läheinen ja
+akseleiden inertioita. Ominaisarvojen ja singulaariarvojen yhteys on läheinen ja
 riippuu diagonalisoitavan matriisin ominaisuuksista. Termiä "vektori" käytetään
 kartoista puhuttaessa, kun viitataan esimerkiksi origosta sarakepisteeseen
 piirrettyyn nuoleen. Myös janan synonyyminä käytetään yleisesti termiä vektori
@@ -221,11 +222,12 @@ Kuva on kurssimateriaaleista[@RefWorks:doc:5b6ef091e4b0984fd9b8c0ca].
 knitr::include_graphics('img/CAquality.png')
 
 ```
+
 Kuvassa on esitetty korrespondenssianalyysin ratkaisun minimointiongelma. Pisteen
 projektio on sitä parempi mitä pienempi kulma on sentroidista pisteeseen
-piirtetyn janan ja pisteen projektion välillä. COR - tunnusluku ca-funktion
+piirretyn janan ja pisteen projektion välillä. cor-tunnusluku ca-funktion
 numeerisissa tuloksissa tämän kulman kosinin neliö. Pisteen kuvauksen laatu (qlt)
-ca-tuloksissa on valitun approsimaation akseleiden kvaliteettien (COR) summa.
+ca-tuloksissa on valitun approksimaation akseleiden kvaliteettien (cor) summa.
 
 Kuvasta voi myös hahmottaa sen periaatteen, että projektiossa kaukana olevat
 pisteet ovat kaukana myös alkuperäisessä avaruudessa. Projektiossa lähekkäin
@@ -238,8 +240,8 @@ jos niiden projektion laatu on huono.
 
 Usean muuttujan korrespondenssianalyysissä tutkitaan usean muuttujan välisiä yhteyksiä.
 Kartan tulkinnan apuna siihen voidaan lisätä havaintojen sijaan niiden keskiarvopisteitä
-ja niille simuloituja luottamusellipsejä. Kuvien pääongelma on liian suuri määärä pisteitä,
-ja analyysin lopputulos on usein mahdollisimman yksinkertainen kartta.
+ja niille simuloituja luottamusellipsejä. Kuvien pääongelma on liian suuri määrä pisteitä,
+ja analyysin tavoite on usein mahdollisimman yksinkertainen kartta.
 
 Usean muuttujan analyysissä kohteena on joko indikaattorimatriisi $\boldsymbol{Z}$ tai
 Burtin matriisi $\boldsymbol{B}$
@@ -249,11 +251,11 @@ Havaintoa vastaa rivi nollia ja 1 valitun vastausvaihtoehdon kohdalla. Tästä s
 että vain erilaiset vastaukset määrittävät rivien etäisyyksiä.
 
 Burtin matriisi on erikoistapaus yhdistetyistä matriiseista. Siihen on koottu kaikki tutkittavien
-muuttujien pareittan muodostetut taulukot. Diagonaalilla ovat muuttujien ristiintaulukoinnit
+muuttujien pareittain muodostetut taulukot. Diagonaalilla ovat muuttujien ristiintaulukoinnit
 itsensä kanssa. Ratkaisu riippuu vain näistä parittaisista taulukoista. Burtin matriisi on
 kätevä välivaihe matriisien yhdistelyssä.
 
-Molemmat matriisit paisuttavat keinotekoisesti kokonaisinertiaa, ja esimerkikisi kaksiulotteisen kartan
+Molemmat matriisit paisuttavat keinotekoisesti kokonaisinertiaa, ja esimerkiksi kaksiulotteisen kartan
 selitetyn inertian osuudet jäävät melko pieniksi. Ratkaisuna on inertian oikaisu tai korjaus
 (adjusted inertia), jossa mm. poistetaan kokonaisinertialaskelmista Burtin matriisin
 diagonaalilla olevat alimatriisit. Näillä korjauksilla ei ole vaikutusta kartan pisteiden
@@ -272,12 +274,12 @@ are graphical representations of optimal scale values for the categories.”
 
 Greenacre jatkaa samasta aiheesta artikkelikokoelmassa
 [@RefWorks:doc:5ab76b43e4b003f4468d1f07 , s. 41, s. 61]: "Yleistys useammalle
-kuin kahdelle muuttujalle ei ole ilmeinen eikä hyvin määritelty". Siti MCA
+kuin kahdelle muuttujalle ei ole ilmeinen eikä hyvin määritelty". Silti MCA
 onnistuu esittämään hyvin kiinnostavia yhteyksiä muuttujien välillä (“succesfully
 recovers interesting patterns of association”). Kriittisyys ei kuitenkaan
 estä häntä soveltamasta MCA-analyysiä. Tulkitsen tämän niin, että menetelmää voi
 aivan hyvin soveltaa, mutta geometrista tulkintaa ei voi suoraan siirtää CA-kartoista
-MCA.karttoihin. Greenacre esittelee perusteellisesti MCA-sovelluksia kaksoiskuvia
+MCA-karttoihin. Greenacre esittelee perusteellisesti MCA-sovelluksia kaksoiskuvia
 käsittelevässä kirjassaan [@RefWorks:doc:5a857a43e4b0ed2d44664d7c]. Ehkä
 korrespondenssianalyysin matemaattinen teoria ei ole vielä täysin valmis?
 
@@ -285,18 +287,18 @@ korrespondenssianalyysin matemaattinen teoria ei ole vielä täysin valmis?
 
 # Liite 2: Tekninen ympäristö ja Bookdown-paketti {-}
 
-Analysoin aineistona r-paketilla ca, vaihtoehdoista voi mainita ranskalaisten kehittämän
+Analysoin aineistoa r-paketilla ca, vaihtoehdoista voi mainita ranskalaisten kehittämän
 FactoMineR - paketin ja muitakin löytyy. Korrespondenssianalyysin voi tehdä myös monella
 muulla ohjelmistolla (esim. Survo, SAS ja SPSS). Greenacre ei ole tyytyväinen SPSS:n 
-toteutukseen: "In SPSS's CA program in the Categories module,an alternative biplot
+toteutukseen: "In SPSS's CA program in the Categories module, an alternative biplot
 is given that has not been illustrated in this book, called the ”symmetrical normalization",
 which may be confused with the symmetric map described in this book. It is not exactly the
 same thing, however,since it uses standard coordinates scaled by the square roots of the singular
-values (i.e. fourth roots of the principal inertias) instead of the singularvalues themselves.
+values (i.e. fourth roots of the principal inertias) instead of the singular values themselves.
 Curiously, the symmetric map, one of the most popular display options of
 French researchers, has never been available in SPSS (module Categories),
 and it is still not possible in IBM SPSS version 20 to obtain a joint map of the rows
-and columns in principalcoordinates"(CAiP, s. 296). En ole tarkastanut onko pitääkö kritiikki
+and columns in principal coordinates"(CAiP, s. 296). En ole tarkastanut onko pitääkö kritiikki
 yhä paikkansa.
 
 
@@ -305,13 +307,13 @@ yhä paikkansa.
 Bookdown-paketti laajentaa R-ohjelmiston julkaisuominaisuuksia [@RefWorks:doc:5b6b36dde4b09b7ec442bf8b].
 Sen avulla voi tuottaa monipuolisesti julkaisuja samalla lähdekoodilla eri formaatteihin.
 
-Html-formaatti sopii mainiosti data-analyysiin, taulukkoita ja kuvia ei tarvitse asetella paperikoon
+Html-formaatti sopii mainiosti data-analyysiin, taulukoita ja kuvia ei tarvitse asetella paperikoon
 mukaan sivuille. PDF-formaatilla on omat etunsa, koko dokumentti on yksi tiedosto. Olen
 käyttänyt bookdown-pakettia vailla suurempia ongelmia. Jos ongelmia tulee, niiden syiden 
-selvittämien ei ole helppoa. Kuva \@ref(fig:L3bdprocess1) näyttää bookdownin julkaisuprosessin
+selvittämien ei ole helppoa. Kuva \@ref(fig:L3bdprocess1) näyttää bookdown-paketin julkaisuprosessin
 vaiheet. PDF on ongelmallinen, tässä projektissa pdf-tulostus lakkasi toimimasta
-kaksi kertaa. Tutkielman pdf-versio on tulosetettu selaimella, html-tiedosto on 
-bookdown-paketin tulostustvaihtoehto html_book.
+kaksi kertaa. Tutkielman pdf-versio on tulostettu selaimella bookdown-paketin 
+tulostustvaihtoehdolla "html_book".
 
 Ongelmat ovat varmasti ratkaistavissa, ja bookdown-paketti tai sen muokatut
 versiot ovat laajassa käytössä monissa yliopistoissa. Kyse on vain
@@ -345,16 +347,15 @@ RStudio Version 1.3.1093, latex engine xelatex
 XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX)
 
 
-Bookdown-asetuksissa käyntin latex-muunnokseen aluksi pdflatex-valintaa ja
-vaihdoin sen myöhemmin xelatex-vaihtoehtoon.
-Ero ei ole merkittävä.
+Bookdown-asetuksissa käytin latex-muunnokseen aluksi pdflatex-valintaa ja
+vaihdoin sen myöhemmin xelatex-vaihtoehtoon. Ero ei ole merkittävä.
 
 TeX-jakeluna käytin bookdown-paketin kehittäjän suosittelemaa
 TinyTeX - versiota (https://yihui.org/tinytex/) ja
-r-pakettia tinytex.Niiden etu on tarvittavien LaTex-pakettien
+r-pakettia tinytex. Niiden etu on tarvittavien LaTex-pakettien
 automaattinen asentaminen.
 
-R-ympäristön tarkemmat tietot:
+R-ympäristön tarkemmat tiedot:
 
 ```{r Renviron1, echo=TRUE}
 

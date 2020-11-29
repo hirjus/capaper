@@ -244,3 +244,4 @@ tulkinta epäselvä.
 **28.11.2020 Versio 1.4** Koko dokumentti editoitu.
 
 **29.11.2020 Versio 1.5** Oikoluettu luvut 1-4.
+**29.11.2020 Versio 2.0** Oikoluettu kaikki - valmis versio.
